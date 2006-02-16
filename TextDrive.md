@@ -36,3 +36,5 @@ In your SSH window, type Ctrl-C to kill the Python script and run:
 This will run your web.py app as a daemon, so you can log out and it will stay running.
 
 To make sure that the server starts your script back up when it reboots, go into webmin, click "Scheduled Cron Jobs", click "Create a new scheduled cron job", and add this as the command. Click the radio button next to "Simple schedule..." and select "When system boots" from the drop down menu. Then click "Create".
+
+(Note: My server hasn't rebooted yet, so I haven't gotten a chance to test that this works.)
