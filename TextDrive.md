@@ -5,14 +5,13 @@ title: Using web.py on TextDrive
 
 # Using web.py on TextDrive
 
-TextDrive graciously provided me with a free shared hosting account to try to get web.py running on their system. I'm keeping notes on what I did here.
+[TextDrive](http://textdrive.com/) graciously provided me with a free shared hosting account to try to get web.py running on their system. I'm keeping notes on what I did here.
 
 I got assigned `aaronsw.textdriven.com` on the server `cardero.textdrive.com` -- you should replace these in my instructions with whatever your server names are.
 
 ## Getting it up
 
 First, [file a support ticket](http://help.textdrive.com/index.php?pg=request) requesting a port to run web.py on. Apparently filing such a ticket [is standard practice](http://help.textdrive.com/index.php?pg=kb.page&id=106) for running web apps on TextDrive. You'll get back a number, which we'll call `8048` (obviously you'll want to replace this with the actual number you get).
-
 Second, SSH to `aaronsw.textdriven.com` and run:
 
     cd web/public/
