@@ -22,4 +22,4 @@ Second, SSH to `aaronsw.textdriven.com` and run:
 
 Now check `http://aaronsw.textdriven.com:8048/` -- you should see your script working.
 
-Now you can log into your webmin (`https://webmin.cardero.textdrive.com/`), click "Apache Webserver", click "Aliases and Redirects", and scroll down to "Map local to remote URLs".
+Now you can log into your webmin (`https://webmin.cardero.textdrive.com/`), click "Apache Webserver", click "Aliases and Redirects", and scroll down to "Map local to remote URLs". Add a line with / in the first box, check the second radio button, and put `http://aaronsw.textdriven.com:8048/`
