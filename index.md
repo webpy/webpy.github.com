@@ -3,8 +3,7 @@ layout: default
 title: 
 ---
 
-**Home:** [web.py: makes web apps](http://webpy.org/) - external
+**Home:** [web.py: makes web apps](http://webpy.org/)
 
 * [web.py-friendly hosts](/hosts)
-
-* [web.py-mail list](http://groups.google.com/group/webpy/) - external
+* [web.py-mail list](http://groups.google.com/group/webpy/)
