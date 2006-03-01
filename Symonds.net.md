@@ -18,11 +18,12 @@ Note that the Python installation on Symonds.net did not have the following modu
 
 Follow the instructions on your host:
 
-* change directory into the newly created domain
+* change directory into the newly created domain, e.g : `cd deepak`
 * `wget http://webpy.org/web.py`
 * `wget http://www.saddi.com/software/flup/dist/flup-r1839.tar.gz`
 * `tar zxvf flup-r1839.tar.gz`
 * `mv flup-r1839/flup/ ./flup`
+
 On your local machine, as superuser :
 
 * Download Cheetah from <http://sourceforge.net/project/showfiles.php?group_id=28961&package_id=20864&release_id=391008> and extract it.
