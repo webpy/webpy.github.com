@@ -39,6 +39,7 @@ After that, include the following in the `.htaccess` file inside the folder you 
      Addhandler cgi-script py
      </Files>
 You might also want to include some URL redirection directives like :
+
       RewriteEngine on
       RewriteRule    ^status$ status.py/status
 
