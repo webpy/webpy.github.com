@@ -5,7 +5,20 @@ title: code samples
 
 # code samples
 
-* [minimal todo-list engine](/../src/todo-list)
+### simple samples:
+
+* [simple todo-list engine](/../src/todo-list)
+
 * [simple blog engine](http://k4ml.com/wiki/python/webpy/simpleblog)
+
 * [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
+
+### tips and tricks:
+
 * [simple sessions with flup](http://webpy.org/track/wiki/SessionsWithFlup)
+
+### real web apps:
+
+* [ibrouter](http://delaunay.org/antoine/i): a photo gallery system ([src](http://trac.delaunay.org/browser/srv/www.delaunay.org/antoine/i/))
+
+* [webme](http://wm.justos.org/txt.intro): a blogging and podcasting system ([src](http://wm.justos.org/static/download/webme-0.2.0.tar.gz))
