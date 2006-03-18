@@ -13,7 +13,7 @@ title: code samples
 
 * [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
 
-* [another simple wiki engine](/../src/another_simple_wiki)
+* [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
 
 ### tips and tricks:
 
