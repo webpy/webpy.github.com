@@ -13,6 +13,8 @@ title: code samples
 
 * [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
 
+* [another simple wiki engine](/../src/another_simple_wiki)
+
 ### tips and tricks:
 
 * [simple sessions with flup](http://webpy.org/track/wiki/SessionsWithFlup)
