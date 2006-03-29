@@ -43,4 +43,4 @@ You might also want to include some URL redirection directives like :
       RewriteEngine on
       RewriteRule    ^status$ status.py/status
 
-After this, you should be able to view your web.py app like [here](http://nimbupani.com/deepak/status).
+After this, you should be able to view your web.py app like [here](http://deepak.jois.name/status).
