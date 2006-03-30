@@ -15,6 +15,8 @@ title: code samples
 
 * [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
 
+* [alternate version of tutorial code using SQLite and SQLObject](http://schwarzwald.infogami.com/blog/webpysqlobject)
+
 ### tips and tricks:
 
 * [simple sessions with flup](http://webpy.org/track/wiki/SessionsWithFlup)
