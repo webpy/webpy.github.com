@@ -19,6 +19,10 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [pусский](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
 
+* [FAQ](/FAQ):
+    * [english](http://webpy.org/faq)
+    * [日本語](http://kinneko.googlepages.com/webpy_faq)
+
 
 * [code samples](/src)
 
