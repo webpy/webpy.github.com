@@ -11,10 +11,14 @@ If you want it all happily redirected with mod_rewrite on dreamhost:
 
 Where index.fcgi is whatever your fcgi filename is.
 
-# BEGIN
-<IfModule mod_rewrite.c>RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule (.*) /index.fcgi/$1 [L]
-</IfModule># END
+  # BEGIN  
+  <IfModule mod_rewrite.c>  
+  RewriteEngine On  
+  RewriteBase /  
+  RewriteCond %{REQUEST_FILENAME} !-f  
+  RewriteCond %{REQUEST_FILENAME} !-d  
+  RewriteRule (.*) /index.fcgi/$1 [L]  
+  </IfModule>  
+  # END  
+
+Well the wiki hates me, and I'm too lazy to figure out why.  So edit this, copy/paste this code, and then you are good.  Or fix this wiki entry, so it doesn't eat the _ and do all this stupid italics.
