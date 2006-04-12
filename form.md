@@ -36,5 +36,5 @@ And sample formtest.html:
 
     <form name="main" method="post"> 
     $if not form.valid: <p class="error">Try again, cowpoke:</p>
-    $:form.render() 
-    </form>
+    $:form.render()
+    <input type="submit" value="Save" />    </form>
