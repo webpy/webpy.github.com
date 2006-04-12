@@ -7,7 +7,7 @@ title: code samples
 
 ### simple samples:
 
-* [simple todo-list engine](/../src/todo-list)
+* [simple todo-list engine](/src/todo-list)
 
 * [simple blog engine](http://k4ml.com/wiki/python/webpy/simpleblog)
 
