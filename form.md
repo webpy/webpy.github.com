@@ -5,7 +5,7 @@ title: form
 
 # form
 
-Here's a sample script using the form library:
+Here's a sample script using the new form library:
 
     import web, form, template
     render = template.render('templates/')
