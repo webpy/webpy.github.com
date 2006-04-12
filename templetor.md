@@ -185,3 +185,13 @@ page. The Python code prints out the result.
 _Where did `markdown` come from? It wasn't passed as an argument._ You 
 can pass a list of functions and variables to the template compiler to 
 be made globally available to templates. 
+
+Here's an example:
+
+    import template
+    render = template.render('templates/')
+    template.Template.globals['len'] = len
+    
+    print render.base(render.message('Hello, world!'))
+
+The first line imports templetor. The second says that our templates are in the directory `templates/`. The third give all our templates access to the `len` function. The fourth grabs the template `message.html`, passes it the argument `'Hello, world!'`, passes the result of rendering it to the template `base.html` and prints the result. (If your templates don't end in `.html` or `.xml`, templetor will still find them, but it won't do its automatic HTML-encoding.)
