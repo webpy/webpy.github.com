@@ -19,18 +19,17 @@ account at my hosting provider:
 
 So, I just made a quick decorator for `web.handler`.
 
-##Stuff to Note:
+###Stuff to Note:
 
 This expects to be working behind a proxy but that can easily be corrected.
 
-More work could be done to allow on `web.render` and the class names so
-the code you create for sites setup like this can be more easily made into
+More work could be done to allow on `web.render` and the class names sothe code you create for sites setup like this can be more easily made into
 standalone sites later on.
 
 The /static directory is currently still shared between all sites.
 
 
-##The Code
+###The Code
 
      #
      ## URL MAPPING
@@ -47,11 +46,16 @@ The /static directory is currently still shared between all sites.
          '/','index_3',
      )
 
+     #vhost mapping: {domain:url_mapping}
+
      vhosts={'test.org':urls_1,
              'www.test.org':urls_2,
              'another-url.org':urls_3
              }
-     
+
+     #
+     ## VHOSTING DECORATOR
+     #     
      def vhostrr(vhosts=vhosts):
          def decorator(func): 
              def proxyfunc(*args, **kw):
