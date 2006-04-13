@@ -19,8 +19,8 @@ account at my hosting provider:
 
 So, I just made a quick decorator for `web.handler`.
 
-Stuff to Note:
---------------
+##Stuff to Note:
+
 This expects to be working behind a proxy but that can easily be corrected.
 
 More work could be done to allow on `web.render` and the class names so
@@ -30,8 +30,7 @@ standalone sites later on.
 The /static directory is currently still shared between all sites.
 
 
-The Code
---------
+##The Code
 
      #
      ## URL MAPPING
