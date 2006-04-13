@@ -25,6 +25,8 @@ title: code samples
 
 * [tricks with template.py](/template tricks)
 
+* [quick vhosting hack](/quick vhosting hack)
+
 ### real web apps:
 
 * [ibrouter](http://delaunay.org/antoine/i): a photo gallery system ([src](http://trac.delaunay.org/browser/srv/www.delaunay.org/antoine/i/))
