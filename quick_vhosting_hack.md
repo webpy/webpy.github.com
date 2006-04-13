@@ -6,22 +6,33 @@ title: quick vhosting hack
 # quick vhosting hack
 
 Here is a 10 minute hack with lots of room for improvement but I think its
-pretty useful. I made this to allow serving of multiple
+pretty useful. I made this to allow the serving of multiple
 sites from a single webpy app.
 
 I created this because I would like to run a few small sites but my cheep
 account at my hosting provider:
 
- * only allows 40MB to be used by persistant processes. 
- * I need a special apache's mod_proxy setup by the admin for each webpy
-   instance I run.
+ * Only allows 40MB to be used by persistant processes. 
+ * Only allows *one* persistant process.
+ * Multiple instances of webpy would require multiple ports to be proxied with apache's mod_proxy
+   and this configuration can only be done by the server admin.
+
+So, I just made a quick decorator for `web.handler`.
+
+Stuff to Note:
+--------------
+This expects to be working behind a proxy but that can easily be corrected.
+
+More work could be done to allow on `web.render` and the class names so
+the code you create for sites setup like this can be more easily made into
+standalone sites later on.
+
+The /static directory is currently still shared between all sites.
 
 
-So, I just made a quick decorator for `web.handler`. Note that this
-expects to be working behind a proxy but that can easily be corrected.
+The Code
+--------
 
-
-     
      #
      ## URL MAPPING
      #
@@ -36,8 +47,6 @@ expects to be working behind a proxy but that can easily be corrected.
      urls_3=(
          '/','index_3',
      )
-
-
 
      vhosts={'test.org':urls_1,
              'www.test.org':urls_2,
@@ -61,8 +70,7 @@ expects to be working behind a proxy but that can easily be corrected.
                  return func(mapping=mapping, *args, **kw)
              return proxyfunc
          return decorator
-     
-     
+          
      ########################################################################
      # Site 1:
      ########################################################################
@@ -84,8 +92,6 @@ expects to be working behind a proxy but that can easily be corrected.
          def GET(self):
              web.render('../templates_3/main.html')
 
-     
-     
      #
      ## RUN APPLICATION
      #
