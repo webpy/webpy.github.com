@@ -73,14 +73,14 @@ expects to be working behind a proxy but that can easily be corrected.
      ########################################################################
      # Site 2:
      ########################################################################
-     class index_1:
+     class index_2:
          def GET(self):
              web.render('../templates_2/main.html')
      
      ########################################################################
      # Site 3:
      ########################################################################
-     class index_1:
+     class index_3:
          def GET(self):
              web.render('../templates_3/main.html')
 
