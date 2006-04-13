@@ -23,7 +23,8 @@ So, I just made a quick decorator for `web.handler`.
 
 This expects to be working behind a proxy but that can easily be corrected.
 
-More work could be done to allow on `web.render` and the class names sothe code you create for sites setup like this can be more easily made into
+More work could be done on `web.render` and the page class names so
+the code you create for sites in this setup can be more easily made into
 standalone sites later on.
 
 The /static directory is currently still shared between all sites.
