@@ -109,4 +109,4 @@ The /static directory is currently still shared between all sites.
          #web.run(urls, web.reloader, session_mw)
          
          #apply the vhostrr "decorator" remotely
-         web.run(vhostrr()(web.handle), web.reloader, session_mw)
+         web.run(vhostrr()(web.handle), web.reloader)
