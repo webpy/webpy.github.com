@@ -30,7 +30,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 * [related projects](/related)
 
-* [and more...](/Documentation)
+* [and more...](/Documentation)  (Reference, Samples, FAQ, Tricks)
 
 
 ### web.py community:
