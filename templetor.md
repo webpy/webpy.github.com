@@ -195,3 +195,10 @@ Here's an example:
     print render.base(render.message('Hello, world!'))
 
 The first line imports templetor. The second says that our templates are in the directory `templates/`. The third give all our templates access to the `len` function. The fourth grabs the template `message.html`, passes it the argument `'Hello, world!'`, passes the result of rendering it to the template `base.html` and prints the result. (If your templates don't end in `.html` or `.xml`, templetor will still find them, but it won't do its automatic HTML-encoding.)
+
+## Turning Off Filter
+By default `template.render` will use `web.websafe` filter to do HTML-encoding. To turn it off, put a : after the $ as in:
+
+    $:form.render()
+
+Output from form.render() will be display as is.
