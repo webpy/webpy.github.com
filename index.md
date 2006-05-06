@@ -20,7 +20,8 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
     * [简体中文](http://www.keli.info/static/webpy-tutorial.html)
 
-<br />* [FAQ](/FAQ):
+<br />
+* [FAQ](/FAQ):
     * [english](http://webpy.org/faq)
     * [日本語](http://kinneko.googlepages.com/webpy_faq)
 
