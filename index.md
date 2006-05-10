@@ -22,6 +22,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 * [FAQ](/FAQ):
     * [english](http://webpy.org/faq)
+    * [español](/faq/es)
     * [日本語](http://kinneko.googlepages.com/webpy_faq)
 
 * [code samples](/src)
