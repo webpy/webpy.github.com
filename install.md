@@ -7,7 +7,8 @@ title: install
 
 To install web.py, download:
     
-    <http://webpy.org/web.py>
+    http://webpy.org/web.py
+
 into the directory where your application is. Or, to make it accessible to all applications, to your Python site-packages directory. To find where that is, run:
     
     python -c "import sys; print[x for x in sys.path if x.endswith('site-packages')][-1]"
