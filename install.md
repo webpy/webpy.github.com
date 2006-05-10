@@ -59,6 +59,8 @@ Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py s
     web.runwsgi = web.runfcgi
     
 
+[Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
+
 ### mod_python
 
 mod_python installs are a little more complicated:
