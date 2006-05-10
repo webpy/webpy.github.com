@@ -10,7 +10,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 ### web.py documentation:
 
-* [installation](http://webpy.org/install)
+* [[install|installation]
 
 * [tutorial](/tutorial):
     * [english](http://webpy.org/tutorial)
