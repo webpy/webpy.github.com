@@ -11,8 +11,8 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 ### web.py documentation:
 
 * [installation](/install)
-    * [english](/installation)
-    * [español](/installation/es)
+    * [english](/install)
+    * [español](/install/es)
 
 * [tutorial](/tutorial):
     * [english](http://webpy.org/tutorial)
