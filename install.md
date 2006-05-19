@@ -85,7 +85,7 @@ In your `.htaccess`, add:
     
     AddHandler python-program .py
     PythonHandler wsgiref.modpython_gateway::handler
-    PythonOption application codep::main
+    PythonOption wsgi.application codep::main
     
 
 You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
