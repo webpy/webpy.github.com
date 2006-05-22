@@ -20,14 +20,44 @@ El servidor web que inicias cuando ejecutas un programa en web.py, es algo muy a
 
 ### FastCGI
 
+Lighttpd con soporte FastCGI lo más recomendable para montar web.py en un sitio en producción. Sitios como [reddit.com][3] soportan millones de peticiones y está funcionando con Lighttpd + FastCGI.
+
+   [3]: http://reddit.com/
+
+Al inicio de su code.py añade:
+
+    #!/usr/bin/env python
+
+Y ejecute chmod +x code.py
 
 
 #### lighttpd
 
+Su configuración lighttpd puede ser parecida a:
 
+     server.modules = ("mod_fastcgi", "mod_rewrite")
+     server.document-root = "/path/to/root/"     fastcgi.server = ( "/code.py" =>     (( "socket" => "/tmp/fastcgi.socket",
+        "bin-path" => "/path/to/root/code.py",
+        "max-procs" => 1
+     ))
+     )
+    
+     url.rewrite-once = (
+       "^/favicon.ico$" => "/static/favicon.ico",
+       "^/static/(.*)$" => "/static/$1",
+       "^/(.*)$" => "/code.py/$1",
+     )
+    
 
 #### Apache
 
+Si deseas utilizar FastCGI con Apache en lugar de otra opción, tienes que instalar mod_fastcgi y usar .htaccess así: 
+
+    <Files code.py>    SetHandler fastcgi-script
+    </Files>
+Desafortunadamente, con Apache no pasa como con lighttpd, y tenemos que decirle de forma explícita que interactuamos con el servidor FastCGI, así que tenemos que añadir este código para decirle a web.py que usamos el servidor FastCGI:
+
+    web.runwsgi = web.runfcgi
 
 
 ### mod_python
