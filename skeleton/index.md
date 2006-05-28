@@ -69,7 +69,7 @@ Here's the skeleton of a typical web.py app (as of 0.2):
     $def with (page, title=None)
     <html><head>        <title>my site\
     $if title: : $title\
-    </title>    </head><body>    <h1>my site</h1>
+    </title>    </head><body>    <h1><a href="/">my site</a></h1>
     $:page
     
     </body></html>
