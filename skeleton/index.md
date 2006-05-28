@@ -11,6 +11,7 @@ Here's the skeleton of a typical web.py app:
 
     import web
     import view, config
+    from view import render
 
     urls = (
         '/', 'index'    )
@@ -26,7 +27,7 @@ Here's the skeleton of a typical web.py app:
 
     import web
     web.db_parameters = dict(dbn='postgres', db='appname', user='username', pw='')
-    web.internalerror = web.debugerror
+    web.webapi.internalerror = web.debugerror
     middleware = [web.reloader]
 
 ## db.py
@@ -38,10 +39,10 @@ Here's the skeleton of a typical web.py app:
 
 ## view.py
 
-    import web, template
+    import web
     import db
 
-    render = template.render('templates/')
+    render = web.template.render('templates/')
 
     def listing(**k):
         l = db.listing(**k)
