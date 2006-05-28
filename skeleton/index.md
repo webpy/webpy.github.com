@@ -5,7 +5,7 @@ title: skeleton
 
 # skeleton
 
-Here's the skeleton of a typical web.py app:
+Here's the skeleton of a typical web.py app (as of 0.2):
 
 ## code.py
 
@@ -21,7 +21,7 @@ Here's the skeleton of a typical web.py app:
             print render.base(view.listing())
 
     if __name__ == "__main__":
-        web.run(urls, *config.middleware)
+        web.run(urls, globals(), *config.middleware)
 
 ## config.py
 
