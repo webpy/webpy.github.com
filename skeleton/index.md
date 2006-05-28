@@ -26,7 +26,7 @@ Here's the skeleton of a typical web.py app (as of 0.2):
 ## config.py
 
     import web
-    web.db_parameters = dict(dbn='postgres', db='appname', user='username', pw='')
+    web.config.db_parameters = dict(dbn='postgres', db='appname', user='username', pw='')
     web.webapi.internalerror = web.debugerror
     middleware = [web.reloader]
 
