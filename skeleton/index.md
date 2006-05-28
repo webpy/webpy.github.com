@@ -48,7 +48,7 @@ Here's the skeleton of a typical web.py app (as of 0.2):
         l = db.listing(**k)
         return render.listing(l)
     
-    template.Template.globals.update(dict(
+    web.template.Template.globals.update(dict(
       datestr = web.datestr,
       render = render
     ))
