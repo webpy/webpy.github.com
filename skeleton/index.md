@@ -68,7 +68,7 @@ Here's the skeleton of a typical web.py app (as of 0.2):
     <html><head>        <title>my site\
     $if title: : $title\
     </title>    </head><body>    <h1>my site</h1>
-    $page
+    $:page
     
     </body></html>
 ## templates/listing.html
