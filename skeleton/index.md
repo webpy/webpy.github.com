@@ -29,6 +29,7 @@ Here's the skeleton of a typical web.py app (as of 0.2):
     web.config.db_parameters = dict(dbn='postgres', db='appname', user='username', pw='')
     web.webapi.internalerror = web.debugerror
     middleware = [web.reloader]
+    cache = False
 
 ## db.py
 
@@ -41,8 +42,9 @@ Here's the skeleton of a typical web.py app (as of 0.2):
 
     import web
     import db
+    import config
 
-    render = web.template.render('templates/')
+    render = web.template.render('templates/', cache=config.cache)
 
     def listing(**k):
         l = db.listing(**k)
