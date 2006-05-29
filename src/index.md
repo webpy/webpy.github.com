@@ -7,6 +7,8 @@ title: code samples
 
 ### simple samples:
 
+* [skeleton code](http://webpy.infogami.com/skeleton)
+
 * [simple todo-list engine](/src/todo-list) | [new version](http://domimob.infogami.com/wiki/tidy) (uses template.py and form.py)
 
 * [simple blog engine](http://k4ml.com/wiki/python/webpy/simpleblog)
