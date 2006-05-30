@@ -45,6 +45,7 @@ Your lighttpd config can be something like:
        "^/(.*)$" => "/code.py/$1",
      )
     
+With some versions of lighttpd, it is important to ensure the "check-local" property of the fastcgi.server entry is set to "false", especially if your `code.py` is located outside of the document root.
 
 #### Apache
 
