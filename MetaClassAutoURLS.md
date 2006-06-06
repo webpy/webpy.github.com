@@ -44,4 +44,4 @@ One of the disadvantages of this approach is that for large applications, the ur
         def POST(self):
             pass
 
-Of course, this is a simple example that leaves a lot to be desired (handling attrs lacking a urls key, for instance), but it should get you on your way.
+Of course, this is a simple example that leaves a lot to be desired (handling attrs lacking a url key, for instance), but it should get you on your way.
