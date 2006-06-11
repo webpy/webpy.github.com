@@ -25,6 +25,7 @@ title: code samples
 
 * [simple authentication method](http://webpy.org/track/wiki/SimpleAuthenticationMethod)
 
+
 * [tricks with template.py](/template tricks)
 
 * [quick vhosting hack](/quick vhosting hack)
@@ -38,3 +39,5 @@ title: code samples
 * [webme](http://wm.justos.org/txt.intro): a blogging and podcasting system ([src](http://wm.justos.org/static/download/webme-0.2.0.tar.gz))
 
 * [webr](http://www.antrix.net/stuff/webr): a [flickr](http://flickr.com) powered photo gallery
+
+* [colr.org (v5)](http://www.colr.org/): A site for playing with colors.
