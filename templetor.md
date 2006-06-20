@@ -117,24 +117,6 @@ the first character after the `$` is a space (so `complicatedfunc`
 above doesn't write anything to the screen like it might without the 
 space). 
 
-## Definitions 
-
-    $def present(name, title): 
-        $if title == "President": 
-            <h1>$name</h1> 
-        $else: 
-            <h2>$name ($title)</h2> 
-
-That's right, `def` is here too. It can be called in a variable 
-substitution like any other function (it returns a string, obviously). 
-
-    $var what: 
-        Eat me, fool! 
-        (the story of my life) 
-
-`var` acts sort of like `def` except it creates a string, not a 
-function that returns a string. 
-
 ## Python integration 
 
 A template begins with a line like this: 
