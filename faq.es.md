@@ -5,8 +5,6 @@ title: Preguntas frecuentes
 
 # Preguntas frecuentes
 
-# Preguntas frecuentes sobre web.py
-
 La existencia de una pregunta en esta lista usualmente significa que hay una mala idea que será arreglada pronto.
 
 ## ¿Porque son las URLs una sola lista larga?
