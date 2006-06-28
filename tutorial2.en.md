@@ -1,9 +1,9 @@
 ---
 layout: default
-title: tutorial2.en
+title: web.py 0.2 tutorial
 ---
 
-# tutorial2.en
+# web.py 0.2 tutorial
 
 ## Starting
 
