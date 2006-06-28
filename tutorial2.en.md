@@ -28,7 +28,7 @@ Now we need to tell web.py our URL structure. Let's start out with something sim
     url = (
       '/', 'index'    )
 
-The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (The `\d+` matches a sequence of digits. The parentheses say to capture that piece of the match for later on.) The second part is the name of a class to send the request to, like `index`, `view, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
+The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (The `\d+` matches a sequence of digits. The parentheses say to capture that piece of the match for later on.) The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
 
 This line says we want the URL `/` (i.e. the front page) to be handled by the class named `index`.
 
