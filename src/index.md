@@ -23,7 +23,7 @@ title: code samples
 
 * [simple sessions with flup](/sessions) [(old link)](http://webpy.org/track/wiki/SessionsWithFlup)
 
-* [simple authentication method](http://webpy.org/track/wiki/SimpleAuthenticationMethod)
+* [simple authentication with flup](/authentication) [(old link)](http://webpy.org/track/wiki/SimpleAuthenticationMethod)
 
 
 * [tricks with template.py](/template tricks)
