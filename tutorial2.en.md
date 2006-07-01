@@ -131,7 +131,7 @@ And an initial row:
 Back in `code.py`, change `index.GET` to:
 
     def GET(self):
-        todos = web.select('todos')
+        todos = web.select('todo')
         print render.index(todos)
 
 and change back the URL handler to take just `/`.
