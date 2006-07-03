@@ -168,6 +168,6 @@ Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.
 
 `web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
 
-You can find the full details on these and all the web.py functions in [the documentation](/documentation).
+You can find the full details on these and all the web.py functions in [the documentation](http://webpy.org/documentation).
 
 This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
