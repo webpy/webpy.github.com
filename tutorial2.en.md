@@ -62,11 +62,12 @@ web.py also has a few tools to help us with debugging. Before the last line, add
 
     web.webapi.internalerror = web.debugerror
 
-This will give your more helpful error messages. And on the last line add `web.reloader` so that it reads:
+This will give you more helpful error messages. And on the last line add `web.reloader` so that it reads:
 
     if __name__ == "__main__": web.run(urls, globals(), web.reloader)
+
     
-This tells web.py to use the web.reloader "middleware" (middleware is a wrapper function to add some functionality to your web server) which reloads your files whenever you edit them, so that you can see the changes in your web browser right away. (For some serious changes, though, you'll still have to restart the server.) You'll probably want to take this out when you make your site public, but it's great while developing. There's also `web.profiler`, which outputs information about how much time each function at the end of each web page, so that you can make your code faster.
+This tells web.py to use the web.reloader "middleware" (middleware is a wrapper function to add some functionality to your web server) which reloads your files whenever you edit them, so that you can see the changes in your web browser right away. (For some serious changes, though, you'll still have to restart the server.) You'll probably want to take this out when you make your site public, but it's great while developing. There's also `web.profiler`, which outputs information about how much time each function took at the end of each web page, so that you can make your code faster.
 
 ## Templating
 
