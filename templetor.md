@@ -183,4 +183,4 @@ By default `template.render` will use `web.websafe` filter to do HTML-encoding. 
 
     $:form.render()
 
-Output from form.render() will be display as is.
+Output from form.render() will be displayed as is.
