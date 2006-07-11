@@ -45,3 +45,7 @@ One of the disadvantages of this approach is that for large applications, the ur
             pass
 
 Of course, this is a simple example that leaves a lot to be desired (handling attrs lacking a url key, for instance), but it should get you on your way.
+
+* * *
+
+**AaronSw writes:** That's a clever idea. One improvement might be to have the classes inherit from a class with the metaclass set, so you don't have that unsightly `__metaclass__` every time.
