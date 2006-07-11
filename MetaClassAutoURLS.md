@@ -49,3 +49,7 @@ Of course, this is a simple example that leaves a lot to be desired (handling at
 * * *
 
 **AaronSw writes:** That's a clever idea. One improvement might be to have the classes inherit from a class with the metaclass set, so you don't have that unsightly `__metaclass__` every time.
+
+* * *
+
+May be it's better to do it with decorators?
