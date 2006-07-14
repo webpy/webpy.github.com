@@ -92,3 +92,25 @@ In your `.htaccess`, add:
 You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
 Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll see an error message like `A server error occurred. Please contact the administrator.`
+
+### CGI
+
+Note: You'll still need `flup` installed.
+
+Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
+    
+    import cgitb; cgitb.enable()
+    import sys
+    
+    # ... import web etc here...
+    
+    def cgidebugerror():
+        """                                                                         
+        """        _wrappedstdout = sys.stdout
+    
+        sys.stdout = web._oldstdout
+        cgitb.handler()
+    
+        sys.stdout = _wrappedstdout
+    
+    web.internalerror = cgidebugerror
