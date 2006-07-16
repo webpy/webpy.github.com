@@ -18,6 +18,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [english](http://webpy.org/tutorial)
     * [español](/tutorial/es)
     * português: [1](http://www.writely.com/View.aspx?docid=bbcm927cd2fmj) [2](http://www.writely.com/View.aspx?docid=bbcnjdbhbfh6n) [3](http://www.writely.com/View.aspx?docid=bccxp4cgw36p3)
+    * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [pусский](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
     * [简体中文](http://www.keli.info/static/webpy-tutorial.html)
