@@ -5,6 +5,8 @@ title: form
 
 # form
 
+#fpp
+
 Here's a sample script using the new form library:
 
     import web, form, template
