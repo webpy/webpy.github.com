@@ -53,3 +53,32 @@ Of course, this is a simple example that leaves a lot to be desired (handling at
 * * *
 
 May be it's better to do it with decorators?
+
+* * *
+
+I couldn't figure out how to get this to work with URL classes in separate files, so I did something a little different, based on [this Python Cookbook recipe][http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/436873]:
+
+    import os, web
+    
+    urls = [ ]
+    
+    for aaa in os.listdir(os.getcwd()):
+        module_name, ext = os.path.splitext(aaa)
+        if module_name.startswith('cgi_') and ext == '.py':
+            module = __import__(module_name)
+            urls.append(module.url[0])
+            urls.append(module_name + "." + module.url[1])
+    
+    if __name__ == "__main__":
+        web.run(urls)
+
+And then e.g. cgi_hello.py (in the same directory) would be:
+
+    import web
+    url = ('/(.*)', 'hello')
+    
+    class hello:
+        def GET(self, name):
+            i = web.input(times=1)
+            if not name: name = 'world'            for c in xrange(int(i.times)): print 'Hello,', name+'!'
+Is this a terrible way to do it?
