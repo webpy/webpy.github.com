@@ -56,7 +56,7 @@ May be it's better to do it with decorators?
 
 * * *
 
-I couldn't figure out how to get this to work with URL classes in separate files, so I did something a little different, based on [this Python Cookbook recipe][http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/436873]:
+I couldn't figure out how to get this to work with URL classes in separate files, so I did something a little different, based on [this Python Cookbook recipe](http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/436873):
 
     import os, web
     
