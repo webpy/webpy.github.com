@@ -71,6 +71,7 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
     <IfModule mod_rewrite.c>      RewriteEngine on
       RewriteBase /
       RewriteCond %{REQUEST_URI} !^/icons
+      RewriteCond %{REQUEST_URI} !^/favicons.ico$
       RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
       RewriteRule ^(.*)$ code.py/$1 [PT]
     </IfModule>
@@ -111,6 +112,7 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
     <IfModule mod_rewrite.c>      RewriteEngine on
       RewriteBase /
       RewriteCond %{REQUEST_URI} !^/icons
+      RewriteCond %{REQUEST_URI} !^/favicons.ico$
       RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
       RewriteRule ^(.*)$ code.py/$1 [PT]
     </IfModule>
