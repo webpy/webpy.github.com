@@ -66,7 +66,7 @@ Add this to your `.htaccess`:
     Options +ExecCGI
     AddHandler cgi-script .py
 
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make thinks work without having to enter the name of the script, you need to add the following rewriting rules to the `.htaccess` file:
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter the name of the script, you'll need to add the following rewriting rules to the `.htaccess` file:
 
     <IfModule mod_rewrite.c>      RewriteEngine on
       RewriteBase /
@@ -106,7 +106,7 @@ Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py s
     
     web.runwsgi = web.runfcgi
     
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make thinks work without having to enter the name of the script, you need to add the following rewriting rules to the `.htaccess` file:
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter the name of the script, you'll need to add the following rewriting rules to the `.htaccess` file:
 
     <IfModule mod_rewrite.c>      RewriteEngine on
       RewriteBase /
