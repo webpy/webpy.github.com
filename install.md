@@ -116,6 +116,8 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
       RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
       RewriteRule ^(.*)$ code.py/$1 [PT]
     </IfModule>
+If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
 #### .. with mod_python
