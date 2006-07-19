@@ -25,7 +25,7 @@ Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to 
 
 The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious.
 
-web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, much like Java Servlets. To run web.py with FastCGI, SCGI or AJP, you will need to install [flup](http://www.saddi.com/software/flup/dist/), which provides WSGI interfaces for those APIs.
+web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, much like Java Servlets. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://www.saddi.com/software/flup/dist/), which provides WSGI interfaces for those APIs.
 
 ### FastCGI
 
@@ -69,8 +69,7 @@ If you want to use FastCGI with Apache instead, just install `mod_fastcgi` and u
 Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py script to act as a FastCGI server so you have to tell web.py explicitly. Add this to `code.py`:
     
     
-    web.runwsgi = web.runfcgi
-    
+    web.runwsgi = web.runfcgi    
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
