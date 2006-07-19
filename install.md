@@ -1,9 +1,9 @@
 ---
 layout: default
-title: install
+title: Install
 ---
 
-# install
+# Install
 
 To install web.py, download:
     
@@ -12,6 +12,15 @@ To install web.py, download:
 into the directory where your application is. Or, to make it accessible to all applications, to your Python site-packages directory. To find where that is, run:
     
     python -c "import sys; print[x for x in sys.path if x.endswith('site-packages')][-1]"
+## Development
+
+webpy comes with a built-in webserver. Put your all code into `code.py` and start the server like this:
+
+     $ python code.py
+     Launching server: http://0.0.0.0:8080/
+
+Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page.
+
 ## Production
 
 The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious.
