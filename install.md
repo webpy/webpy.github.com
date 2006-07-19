@@ -19,11 +19,13 @@ webpy comes with a built-in webserver. Put your code into `code.py` and start th
      $ python code.py
      Launching server: http://0.0.0.0:8080/
 
-Specify another port using `python code.py 1234`. Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page.
+Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page. To specify another port, use `python code.py 1234`. 
 
 ## Production
 
 The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious.
+
+web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, much like Java Servlets. To run web.py with FastCGI, SCGI or AJP, you will need to install [flup](http://www.saddi.com/software/flup/dist/), which provides WSGI interfaces for those APIs.
 
 ### FastCGI
 
