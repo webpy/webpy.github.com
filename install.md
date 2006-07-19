@@ -16,8 +16,7 @@ into the directory where your application is. Or, to make it accessible to all a
 
 webpy comes with a built-in webserver. Put your code into `code.py` and start the server like this:
 
-     $ python code.py
-     Launching server: http://0.0.0.0:8080/
+     python code.py
 
 Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page. To specify another port, use `python code.py 1234`. 
 
@@ -69,7 +68,8 @@ If you want to use FastCGI with Apache instead, just install `mod_fastcgi` and u
 Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py script to act as a FastCGI server so you have to tell web.py explicitly. Add this to `code.py`:
     
     
-    web.runwsgi = web.runfcgi    
+    web.runwsgi = web.runfcgi
+    
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
@@ -105,7 +105,20 @@ Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll s
 
 ### CGI
 
-Note: You'll still need `flup` installed.
+Add this to your `.htaccess`:
+
+    Options +ExecCGI
+    AddHandler cgi-script .py
+
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the urls list you defined does not match anything). To make thinks work as they should, you need to add the following rewriting rules to the `.htaccess` file:
+
+    <IfModule mod_rewrite.c>      RewriteEngine on
+      RewriteBase /
+      RewriteCond %{REQUEST_URI} !^/icons
+      RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
+      RewriteRule ^(.*)$ code.py/$1 [PT]
+    </IfModule>
+If the `code.py` is in the subfolder myapp/, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
 
 Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
     
