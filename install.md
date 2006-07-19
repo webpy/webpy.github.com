@@ -14,12 +14,12 @@ into the directory where your application is. Or, to make it accessible to all a
     python -c "import sys; print[x for x in sys.path if x.endswith('site-packages')][-1]"
 ## Development
 
-webpy comes with a built-in webserver. Put your all code into `code.py` and start the server like this:
+webpy comes with a built-in webserver. Put your code into `code.py` and start the server like this:
 
      $ python code.py
      Launching server: http://0.0.0.0:8080/
 
-Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page.
+Specify another port using `python code.py 1234`. Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page.
 
 ## Production
 
