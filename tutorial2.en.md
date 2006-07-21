@@ -144,7 +144,7 @@ Edit `index.html` so that it reads:
         <li id="t$todo.id">$todo.title</li>    </ul>
 Visit your site again and you should see your one todo item: "Learn web.py". Congratulations! You've made a full application that reads from the database. Now let's let it write to the database as well.
 
-At the end of `view.html`, add:
+At the end of `index.html`, add:
 
     <form method="post" action="add">    <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>    </form>
 And change your URLs list to read:
