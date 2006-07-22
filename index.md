@@ -8,6 +8,8 @@ title:
 
 _Think about the ideal way to write a web app. Write the code to make it happen._ [**Aaron Swartz**](http://en.wikipedia.org/wiki/Aaron_Swartz)
 
+**Note:** Due to spam, you must now log in on the side to edit. Sorry.
+
 ### web.py documentation:
 
 * [installation](/install)
