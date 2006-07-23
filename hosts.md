@@ -11,3 +11,4 @@ How to's on getting web.py on the folowing hosts
 * [Symonds.net](/Symonds.net)
 * [dreamhost](/dreamhost)
 * [apinc.org](http://apinc.org/)
+* [godaddy.com](/godaddy.com)
