@@ -14,3 +14,5 @@ Don't forget to chmod +x your Python scripts.
 
 Otherwise, things are working fine for me, so far.  
 
+Getting Cheetah to work the way I wish it would is another matter...
+
