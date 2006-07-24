@@ -18,3 +18,5 @@ Otherwise, things are working fine for me, so far.
 
 Getting Cheetah to work the way I wish it would is another matter...
 
+Updated: July 24, 2006
+
