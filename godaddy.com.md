@@ -5,7 +5,7 @@ title: godaddy.com
 
 # godaddy.com
 
-I signed up for the Deluxe Linux account. I don't know anything about the Windows account. Presumably, the virtual and dedicated Linux accounts are also possible.
+I signed up for the Deluxe Linux account. I don't know anything about the Windows account, although I do run Windows on my client machine. Presumably, the virtual and dedicated Linux accounts are also possible.
 
 Godaddy has support for Python and MySQL (albeit an older version).
 
