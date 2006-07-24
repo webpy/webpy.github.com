@@ -11,4 +11,4 @@ How to's on getting web.py on the folowing hosts
 * [Symonds.net](/Symonds.net)
 * [dreamhost](/dreamhost)
 * [apinc.org](http://apinc.org/)
-* godaddy.com - Install flup and Cheetah in local directoy, MySQL is an older. (more coming, how do I create another page?)
+* godaddy.com - Install flup and Cheetah in local directoy, MySQL is older. (more coming, another page?)
