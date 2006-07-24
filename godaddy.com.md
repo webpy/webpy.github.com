@@ -14,5 +14,7 @@ Godaddy has support for Python and MySQL (albeit an older version).
 3) The version of MySQL is 4.0.*, so the "todo" table from the tutorial will need to be massaged (coming soon).
 4) Log into your Account Manager to get the exact address for the MySQL database. It will be something like mysql##.secureserver.com. The exact value of ## will differ.  
 
+Don't forget to chmod +x your Python scripts.  
+
 Otherwise, things are working for me, so far.  
 
