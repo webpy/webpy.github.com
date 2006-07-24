@@ -16,5 +16,5 @@ Godaddy has support for Python and MySQL (albeit an older version).
 
 Don't forget to chmod +x your Python scripts.  
 
-Otherwise, things are working for me, so far.  
+Otherwise, things are working fine for me, so far.  
 
