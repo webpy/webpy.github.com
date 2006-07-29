@@ -8,7 +8,7 @@ title: web.py templating system (codename: templetor)
 There are almost as many Python templating systems as there are web 
 frameworks (and, indeed, it seems like many templating systems are 
 adopting web framework-like features), so it is with some trepidation 
-that I work on a new one. Sadly, again I find that my requirement are 
+that I work on a new one. Sadly, again I find that my requirements are 
 met by nothing else: 
 
 1. The templating system has to _look_ decent. No `<%#foo#%>` crud. 
