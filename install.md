@@ -22,7 +22,7 @@ Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to 
 
 ## Production
 
-The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, similar to Java Servlets sharing a common interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://www.saddi.com/software/flup/dist/), which provides WSGI interfaces for those APIs.
+The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, similar to Java's Servlet interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://www.saddi.com/software/flup/dist/), which provides WSGI interfaces for those APIs.
 
 For all the CGI variants, add this to the top of your `code.py`:
 
@@ -59,23 +59,13 @@ With some versions of lighttpd, it is important to ensure the "check-local" prop
 
 #### .. with CGI
 
-CGI is easy to configure, but performs the worst.
-
+CGI is easy to configure, but is not suitable for high-performance websites.
 Add this to your `.htaccess`:
 
     Options +ExecCGI
     AddHandler cgi-script .py
 
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter the name of the script, you'll need to add the following rewriting rules to the `.htaccess` file:
-
-    <IfModule mod_rewrite.c>      RewriteEngine on
-      RewriteBase /
-      RewriteCond %{REQUEST_URI} !^/icons
-      RewriteCond %{REQUEST_URI} !^/favicon.ico$
-      RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
-      RewriteRule ^(.*)$ code.py/$1 [PT]
-    </IfModule>
-If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
 
 Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
     
@@ -107,26 +97,14 @@ Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py s
     
     web.runwsgi = web.runfcgi
     
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter the name of the script, you'll need to add the following rewriting rules to the `.htaccess` file:
-
-    <IfModule mod_rewrite.c>      RewriteEngine on
-      RewriteBase /
-      RewriteCond %{REQUEST_URI} !^/icons
-      RewriteCond %{REQUEST_URI} !^/favicon.ico$
-      RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
-      RewriteRule ^(.*)$ code.py/$1 [PT]
-    </IfModule>
-If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
 #### .. with mod_python
 
-mod_python performs as well as FastCGI, but is quite hard to configure.
+mod_python performs as well as FastCGI, but is not as straight-forward to configure.
 
-mod_python installs are a little more complicated:
-    
-    
     svn co svn://svn.eby-sarna.com/svnroot/wsgiref/
     cd wsgiref
     python setup.py install # as root
@@ -151,3 +129,16 @@ In your `.htaccess`, add:
 You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
 Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll see an error message like `A server error occurred. Please contact the administrator.`
+
+#### mod_rewrite Rules for Apache
+
+Add the following rules to the `.htaccess` file:
+
+    <IfModule mod_rewrite.c>      RewriteEngine on
+      RewriteBase /
+      RewriteCond %{REQUEST_URI} !^/icons
+      RewriteCond %{REQUEST_URI} !^/favicon.ico$
+      RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
+      RewriteRule ^(.*)$ code.py/$1 [PT]
+    </IfModule>
+If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
