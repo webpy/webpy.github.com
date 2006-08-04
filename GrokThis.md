@@ -5,6 +5,6 @@ title: GrokThis
 
 # GrokThis
 
-[http://grokthis.com](http://grokthis.com)
+[http://grokthis.net](http://grokthis.net)
 
-It seems their traditional, advanced, and VPS plans all support web.py
+It seems their [http://www.grokthis.net/Hosting/traditional.html](traditional), [http://www.grokthis.net/Hosting/advanced.html](advanced), and [http://www.grokthis.net/Hosting/vps.html](VPS) plans all support web.py
