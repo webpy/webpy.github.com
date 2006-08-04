@@ -12,4 +12,4 @@ How to's on getting web.py on the folowing hosts
 * [dreamhost](/dreamhost)
 * [apinc.org](http://apinc.org/)
 * [godaddy.com](/godaddy.com)
-* [GrokThis](http://grokthis.com)
+* [GrokThis](/GrokThis)
