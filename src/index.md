@@ -32,6 +32,8 @@ title: code samples
 
 * [using a metaclass to automate setting urls](/MetaClassAutoURLS)
 
+* [test your web application with paste](/testing)
+
 ### real web apps:
 
 * [ibrouter](http://delaunay.org/antoine/i): a photo gallery system ([src](http://trac.delaunay.org/browser/srv/www.delaunay.org/antoine/i/))
