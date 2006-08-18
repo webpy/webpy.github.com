@@ -17,7 +17,10 @@ a simple example (making sure the helloworld app works correctly).
     class hello:
         def GET(self, name):
             i = web.input(times=1)
-            if not name: name = 'world'            for c in xrange(int(i.times)): print 'Hello,', name+'!'
+            if not name: name = 'world'            for c in xrange(int(i.times)): 
+                web.output('Hello,' + name+'!') # you must use web.output
+                                                # instead of print
+
     #if __name__ == "__main__": web.run(urls)  # don't run as usual
 
 
