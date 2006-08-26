@@ -45,3 +45,5 @@ title: code samples
 * [webr](http://www.antrix.net/stuff/webr): a [flickr](http://flickr.com) powered photo gallery
 
 * [colr.org (v5)](http://www.colr.org/): A site for playing with colors.
+
+* [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item.
