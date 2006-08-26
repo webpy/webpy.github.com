@@ -17,6 +17,8 @@ title: code samples
 
 * [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
 
+* [simple del.icio.us clone](http://webpy.infogami.com/src/lecker)
+
 * [alternate version of tutorial code using SQLite and SQLObject](http://schwarzwald.infogami.com/blog/webpysqlobject)
 
 ### tips and tricks:
