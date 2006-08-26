@@ -24,6 +24,8 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [pусский](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
     * [简体中文](http://www.keli.info/static/webpy-tutorial.html)
+    * [english 0.2](http://webpy.infogami.com/tutorial2.en)
+    * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
 
 * FAQ:
     * [english](http://webpy.org/faq)
