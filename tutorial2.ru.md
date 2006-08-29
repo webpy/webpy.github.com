@@ -134,7 +134,7 @@ Cоздадим каталог для наших темплейтов (назо�
     CREATE TABLE todo (
         id unique AUTO_INCREMENT primary key,
         title text,
-        created timestam default now(),
+        created timestam default now()
     );
 
 и вставьте в нее строчку с примером:
