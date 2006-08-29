@@ -13,9 +13,10 @@ Here's a sample script using the new form library:
     myform = form.Form( 
         form.Textbox("boe"), 
         form.Textbox("bax", 
-            form.notnull, 
-            form.Validator('Must be more than 5', lambda x:int(x)>5)), 
-        form.Textarea('moe'), 
+            form.notnull,
+            form.regexp('\d+', 'Must be a digit'),
+            form.Validator('Must be more than 5', lambda x:int(x)>5)),
+        form.Textarea('moe'),
         form.Checkbox('curly'), 
         form.Dropdown('french', ['mustard', 'fries', 'wine'])) 
 
