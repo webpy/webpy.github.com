@@ -1,7 +1,9 @@
 ---
 layout: default
-title: tutorial2
+title: web.py 0.2 tutorial
 ---
 
-# tutorial2
+# web.py 0.2 tutorial
+
+* [english](/tutorial2.en)
 
