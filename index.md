@@ -27,6 +27,9 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [english 0.2](http://webpy.infogami.com/tutorial2.en)
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
 
+* [tutorial2](/tutorial2)
+    * [english](/tutorial2.en)
+
 * FAQ:
     * [english](http://webpy.org/faq)
     * [español](/faq/es)
