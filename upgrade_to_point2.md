@@ -9,7 +9,7 @@ If you are migrating form the "one big file" version of web.py to the .2 version
 
 ### web.run()
 
-Most importantly, thanks to Guido, change the run line from:
+Most importantly,upvars() was removed.  We have to change the run line from:
 
     if __name__ == '__main__': web.run(urls, web.reloader)
 
