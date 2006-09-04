@@ -15,7 +15,7 @@ Most importantly,upvars() was removed.  We have to change the run line from:
 
 to:
 
-    if __name__ == "__main__": web.run(urls, globals())
+    if __name__ == "__main__": web.run(urls, globals(), web.reloader)
 
 
 ### web.config
