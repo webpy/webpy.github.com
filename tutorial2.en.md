@@ -11,6 +11,8 @@ So you know Python and want to make a website. web.py provides the code to make 
 
 If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). For details, see the [webpy.org](http://webpy.org/).
 
+If you have an existing web.py project, take a look at the [upgrade](http://webpy.infogami.com/upgrade_to_point2) page for info on migrating.
+
 Let's get started.
 
 ## URL Handling
