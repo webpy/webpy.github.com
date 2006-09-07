@@ -114,6 +114,9 @@ restart apache and then start your code.py in the command below:
 
     python code.py 127.0.0.1:8080 scgi
 
+and open you browser,visit 127.0.0.1
+It's ok! 
+
 #### .. with mod_python
 
 mod_python performs as well as FastCGI, but is not as straight-forward to configure.
