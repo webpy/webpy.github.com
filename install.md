@@ -101,6 +101,19 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
+#### .. with SCGI
+https://www.mems-exchange.org/software/scgi/
+download mod_scgi source here: http://www.mems-exchange.org/software/files/mod_scgi/
+windows apache user: 
+edit your httpd.conf:
+
+    LoadModule scgi_module Modules/mod_scgi.so
+    SCGIMount / 127.0.0.1:8080
+
+restart apache and then start your code.py in the command below:
+
+    python code.py 127.0.0.1:8080 scgi
+
 #### .. with mod_python
 
 mod_python performs as well as FastCGI, but is not as straight-forward to configure.
