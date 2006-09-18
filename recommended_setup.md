@@ -12,7 +12,8 @@ web.py recommends the following software:
 
 ##Databases:
   [postgresql](http://www.postgresql.org/download/) [BSD] with [psycopg2](http://initd.org/pub/software/psycopg/)[BSD] as the python client
-  [mysql](http://dev.mysql.com/downloads/mysql/5.0.html) [GPL] with [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307)[CNRI] as the python client
+  
+[mysql](http://dev.mysql.com/downloads/mysql/5.0.html) [GPL] with [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307)[CNRI] as the python client
 
 ##CGI/FastCGI/SCGI:
   [flup](http://dev.mysql.com/downloads/mysql/5.0.html) [BSD]
