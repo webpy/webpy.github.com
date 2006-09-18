@@ -1,9 +1,9 @@
 ---
 layout: default
-title: recommended setup
+title: #Recommended Setup
 ---
 
-# recommended setup
+# #Recommended Setup
 
 web.py recommends the following software:
 
