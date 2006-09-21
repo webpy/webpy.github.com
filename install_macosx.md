@@ -55,15 +55,13 @@ Adapted from [macdevlog](http://macdevlog.com/webpy01-install.html)
 
     To create a postgre user and group, we are going to use netinfo.  According to reports, Mas OS X 10.5 Leopard will be stripped of netinfo.  These commands are likely to be Tiger only.
     
-    The following instructions come from the [user comment on the PostgreSQL documentation page on setting up a postgre user and group](http://www.postgresql.org/docs/8.1/interactive/runtime.html).  Props to Emerson Farrugia.
-    
     First, find an unused userID and groupID.  typically anything in the 200s or 300s will be unused on most Mac OS X non-server systems.  Let's assumes uid 206 and gid 207
     If you need to check which uid and gid are in use, the following netinfo commands can be used:
     
         nireport / /users name uid
         nireport / /groups name gid
     
-    back to making users and groups:
+    Make the users and groups:
     
         sudo niutil -create / /groups/postgres
         sudo niutil -createprop / /groups/postgres gid 207
@@ -105,8 +103,6 @@ Adapted from [macdevlog](http://macdevlog.com/webpy01-install.html)
         
 12. Hardening PostgreSQL
 
-    Anytime you install a database, you need to set certain passwords.  If you keep the db open, it's a huge security risk.  
-    
     During most of these steps, we shell into root.  Be careful or your could break something.
 
         cd /Users/Shared/PostgreSQL/
@@ -129,6 +125,7 @@ Adapted from [macdevlog](http://macdevlog.com/webpy01-install.html)
         exit
     
     Done with root.  All that remains is to assign passwords to the username.  Have you have ever had that dream where you go to school or work but have forgotten your pants?.  Skipping this step is kind of like that part of the dream where the cute girl is laughing and pointing at your open port.  Make sure the command outputs 'ALTER ROLE' to verify success.
+
         sudo -u postgres /opt/local/lib/postgresql81/bin/psql -c "alter user postgres with password 'changeme1'"        sudo -u postgres /opt/local/lib/postgresql81/bin/psql -c "alter user webpy with password 'changeme2'"            
     Time to reload and restart pgSQL
 
@@ -136,15 +133,15 @@ Adapted from [macdevlog](http://macdevlog.com/webpy01-install.html)
 
 ---
             
-You are now ready to dance in your pants.  You can follow the [webpy tutorial](http://webpy.org/tutorial) as long as you make the following change:    
+You can follow the [webpy tutorial](http://webpy.org/tutorial) as long as you make the following change:    
     
     web.db_parameters = dict(dbn='postgres', user='webpy', pw='changeme2', db='webpydb')
 
 Also, you can use the following command to send database SELECT and INSERT querys:
 
-    /opt/local/lib/postgresql81/bin//psql webpy webpy SOME_QUERY
+    /opt/local/lib/postgresql81/bin/psql webpy webpy SOME_QUERY
 
-We have intentionally not installed a webserver or the WSGI module.  These two items are for production deployment.  You won't not need them if you are just taking a quick look at web.py.  If you do want to play with around with a simple server setup, the following commands will get you started.
+These folowing  two items are for production deployment.  You won't not need them if you are just taking a quick look at web.py.  If you do want to play with around with a simple server setup, the following commands will get you started.
 
     sudo port install lighttpd
     curl -O http://www.saddi.com/software/flup/dist/flup-r2028.tar.gz
@@ -159,7 +156,3 @@ References:
 
 
 [macports]: http://macports.org/
-[macbizlog]: http://macbizlog.com/
-[macdevlog]: http://macdevlog.com/
-[NNN]: http://ranchero.com/netnewswire/
-[NG]: http://www.newsgator.com/
