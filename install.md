@@ -55,6 +55,8 @@ Your lighttpd config can be something like:
     
 With some versions of lighttpd, it is important to ensure the "check-local" property of the fastcgi.server entry is set to "false", especially if your `code.py` is located outside of the document root.
 
+If you get error messages about not being able to import flup, install it by typing "easy_install flup" at the command line.
+
 ### Apache
 
 #### .. with CGI
