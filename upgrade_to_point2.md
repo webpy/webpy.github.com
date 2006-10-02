@@ -5,11 +5,18 @@ title: Upgrade to web.py 0.2
 
 # Upgrade to web.py 0.2
 
-If you are migrating form the "one big file" version of web.py to the .2 version, you have to make some changed to your code.  
+If you are migrating from the "one big file" version of web.py to the .2 version, you have to make some changed to your code.  
+
+
+### Downloading web.py 0.2
+
+From the command line, cd to the directory you wish to install web.py and run the following command:
+
+    svn export http://webpy.org/svn/trunk/web/ 
 
 ### web.run()
 
-Most importantly,upvars() was removed.  We have to change the run line from:
+Most importantly, upvars() was removed.  We have to change the run line from:
 
     if __name__ == '__main__': web.run(urls)
 
