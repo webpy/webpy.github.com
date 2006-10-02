@@ -23,7 +23,7 @@ to:
 If you use a db, change `web.db_parameters` and `web.db_printing` to `web.config.db_paramters` and `web.config.db_printing` respectively.
 
 
-### debuging
+### debugging
 
 web.py 0.1:
 
