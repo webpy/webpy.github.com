@@ -14,6 +14,8 @@ From the command line, cd to the directory you wish to install web.py and run th
 
     svn export http://webpy.org/svn/trunk/web/ 
 
+Remove web.py and web.pyc from the loadpath.
+
 ### web.run()
 
 Most importantly, upvars() was removed.  We have to change the run line from:
