@@ -41,3 +41,16 @@ web.py 0.2
 
     web.webapi.internalerror = web.debugerror
     if __name__ == "__main__": web.run(urls, globals(), web.reloader)
+
+### fastcgi with apache
+
+web.py 0.1:
+
+    web.runwsgi = web.runfcgi
+
+web.py 0.2:
+
+    def runfcgi_apache(func):
+      web.wsgi.runfcgi(func, None)
+
+    web.wsgi.runwsgi = runfcgi_apache
