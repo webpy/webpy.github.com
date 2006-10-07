@@ -5,7 +5,7 @@ title: Upgrade to web.py 0.2
 
 # Upgrade to web.py 0.2
 
-If you are migrating from the "one big file" version of web.py to the .2 version, you have to make some changed to your code.  
+If you are migrating from the "one big file" version of web.py to the .2 version, you have to make some changes to your code.  
 
 
 ### Downloading web.py 0.2
