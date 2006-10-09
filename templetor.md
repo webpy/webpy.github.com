@@ -111,6 +111,8 @@ whichever is first.
             $ continue 
         And there's $x... 
 
+**Body of loops have to be indented with exactly 4 spaces.**
+
 Code begins with a `$` and a space and goes until the next `$` or the 
 end of the line, whichever comes first. Nothing ever gets output if 
 the first character after the `$` is a space (so `complicatedfunc` 
