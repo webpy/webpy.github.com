@@ -121,12 +121,18 @@ space).
 
 ## Python integration 
 
-A template begins with a line like this: 
+A template begins with a line like this:
 
     $def with (name, title, company='BigCo') 
 
 which declares that the template takes those arguments. (The `with` 
 keyword is special, like `def` or `if`.) 
+
+**Don't forget to put spaces in the definition**
+
+The following *will not work*:
+
+    $def with (name,title,company='BigCo')
 
 Inside Python, the template looks like a function that takes these 
 arguments. It returns a storage object with the special property that 
