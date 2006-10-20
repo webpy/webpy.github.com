@@ -17,7 +17,7 @@ you can see this below
     def init(urllist):
         global dispatcher
         for it in range(len(urllist)/2):
-            dispatcher.register_function(urllist[it], urllist[it+1])
+            dispatcher.register_function(urllist[it+1], urllist[it])
 
     class rpc:
         def GET(self):
@@ -34,3 +34,21 @@ you can see this below
             response = dispatcher._marshaled_dispatch(web.webapi.data())
             web.header('Content-length', str(len(response)))
             print response
+
+Now look at simple usage pattern
+
+    import web
+    import webxml
+    
+    def multiply(x,y):
+        return x*y
+    
+    xmlrpcurls = (
+        'mult', multiply
+        # Look! First parameter is a public name, second is a lambda value, not string!
+    )
+    urls = (
+        '/rpc/', 'webxml.rpc'    )
+
+    webxml.init(xmlrpcurls)
+    if __name__ == "__main__": web.run(urls, globals())
