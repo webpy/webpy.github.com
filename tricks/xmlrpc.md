@@ -35,6 +35,7 @@ you can see this below
             web.header('Content-length', str(len(response)))
             print response
 
+This library slightly based on xmlrpc Django code, but rewriten from scratch at last stage.
 Now look at simple usage pattern
 
     import web
