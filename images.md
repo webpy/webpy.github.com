@@ -12,7 +12,7 @@ First let your urls extend beyound images:
     import web
     
     urls = (
-    '/images/(.*)', images #this is where the image folder is located....
+    '/images/(.*)', 'images' #this is where the image folder is located....
     )
 
 Now create the class that will handle them:
