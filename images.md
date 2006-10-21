@@ -12,7 +12,7 @@ First let your urls extend beyound images:
     import web
     
     urls = (
-    '/images/(.*)', images
+    '/images/(.*)', images #this is where the image folder is located....
     )
 
 Now create the class that will handle them:
@@ -24,6 +24,8 @@ Now create the class that will handle them:
             cType = {
                 "png":"images/png",
                 "jpg":"image/jpeg",
-                "gif":"image/gif"            }
+                "gif":"image/gif",
+                "icon":"image/x-icon"            }
+            
             web.header("Content-Type", cType[ext]) # Set the Header
             print open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
