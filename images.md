@@ -1,11 +1,11 @@
 ---
 layout: default
-title: images
+title: Serving Images
 ---
 
-# images
+# Serving Images
 
-## Starting
+## Basic Directory Set-up
 
 First let your urls extend beyound images:
 
@@ -15,6 +15,7 @@ First let your urls extend beyound images:
     '/images/(.*)', 'images' #this is where the image folder is located....
     )
 
+## Basic Image Class
 Now create the class that will handle them:
 
     class images:
