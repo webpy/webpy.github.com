@@ -36,7 +36,7 @@ title: code samples
 
 * [test your web application with paste](/testing)
 
-* [Serving Images](/Serving Images) (http://webpy.infogami.com/images)
+* [Serving Images](/images)
 
 ### real web apps:
 
