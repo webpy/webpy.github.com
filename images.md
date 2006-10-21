@@ -26,7 +26,7 @@ Now create the class that will handle them:
                 "png":"images/png",
                 "jpg":"image/jpeg",
                 "gif":"image/gif",
-                "icon":"image/x-icon"            }
+                "ico":"image/x-icon"            }
             
             web.header("Content-Type", cType[ext]) # Set the Header
             print open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
