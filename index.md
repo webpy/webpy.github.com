@@ -32,6 +32,8 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [english](/tutorial2.en)
     * [upgrading from 0.1 to 0.2](http://webpy.infogami.com/upgrade_to_point2)
 
+* [documentation](/documentation)
+
 * [template.py tutorial](/templetor)
 
 * FAQ:
