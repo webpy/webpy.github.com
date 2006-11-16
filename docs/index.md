@@ -418,6 +418,7 @@ title: documentation
          'bar'
 `strips(text, remove)`
    : removes the string `remove` from the both sides of `text` 
+ 
          >>> strips("foobarfoo", "foo")
          'bar'
 `class TimeoutError(Exception): pass def timelimit(timeout):`
