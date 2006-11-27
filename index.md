@@ -48,7 +48,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 * [related projects](/related)
 
-* [and more...](/Documentation)  (Reference, Samples, FAQ, Tricks)
+* [and more...](/Documentation)  (Reference, Samples, Tricks)
 
 
 ### web.py community:
