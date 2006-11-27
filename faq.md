@@ -5,7 +5,7 @@ title: faq
 
 # faq
 
-99. How do I use template.py templates?
+99. **How do I use template.py templates?**
 
     For basic doc and some code snippets, see [template.py doc](/templetor)
 
@@ -15,4 +15,7 @@ title: faq
             print homepage()
 
     
-99. next question...
+99. **Why are the urls just one long list?**
+
+    If they were a dictionary, they wouldn't be ordered. If it was a list of tuples, then it'd be a lot more typing.
+
