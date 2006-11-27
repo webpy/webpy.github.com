@@ -30,11 +30,11 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 * [tutorial for version 0.2](/tutorial2)
     * [english](/tutorial2.en)
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
+    * [template.py tutorial](/templetor)
     * [upgrading from 0.1 to 0.2](http://webpy.infogami.com/upgrade_to_point2)
 
 * [code documentation](/docs)
 
-* [template.py tutorial](/templetor)
 
 * FAQ:
     * [english](http://webpy.org/faq)
