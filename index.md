@@ -17,7 +17,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
         * [mac os x](/install_macosx)
     * [español](/install/es)
 
-* [tutorial (old version)](/tutorial):
+* [tutorials (old version)](/tutorial):
     * [english](http://webpy.org/tutorial)
     * [español](/tutorial/es)
     * português: [1](http://www.writely.com/View.aspx?docid=bbcm927cd2fmj) [2](http://www.writely.com/View.aspx?docid=bbcnjdbhbfh6n) [3](http://www.writely.com/View.aspx?docid=bccxp4cgw36p3)
@@ -27,7 +27,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
     * [简体中文](http://www.keli.info/static/webpy-tutorial.html)
     
 
-* [tutorial for version 0.2](/tutorial2)
+* [tutorials for version 0.2](/tutorial2)
     * [english](/tutorial2.en)
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
     * [template.py tutorial](/templetor)
