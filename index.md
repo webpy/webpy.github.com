@@ -14,7 +14,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 * [installation](/install)
     * [english](/install)
-        * [mac os x](/install_macosx)
+    * [mac os x](/install_macosx)
     * [español](/install/es)
 
 * [tutorials (old version)](/tutorial):
