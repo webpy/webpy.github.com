@@ -16,7 +16,7 @@ web.py recommends the following software:
 *  [mysql](http://dev.mysql.com/downloads/mysql/5.0.html) [GPL] with [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307)[CNRI] as the python client
 
 ##CGI/FastCGI/SCGI:
-*  [flup](http://dev.mysql.com/downloads/mysql/5.0.html) [BSD]
+*  [flup](http://trac.saddi.com/flup) [BSD]
 
 ##Connection Pooling:
 *  [DBUtils](http://www.w4py.org/downloads/DBUtils/) [CNRI]
