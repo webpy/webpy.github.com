@@ -48,6 +48,7 @@ title: code samples
 
 * [colr.org (v5)](http://www.colr.org/): A site for playing with colors. (see [rewrite](http://www.colr.org/rewrite.html))
 
-* [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item.
+* [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item. ([src](http://svn.natalian.org/projects/todo/))
+
 
 * [pyctures](http://auriga.wearlab.de/~alb/pyctures/): a small web gallery written with web.py
