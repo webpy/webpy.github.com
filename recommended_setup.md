@@ -22,7 +22,7 @@ web.py recommends the following software:
 *  [DBUtils](http://www.w4py.org/downloads/DBUtils/) [CNRI]
 
 ##Templates:
+*  template.py [built-in] [doc](http://webpy.infogami.com/templetor)
 *  [Cheetah](http://dl.sourceforge.net/cheetahtemplate/Cheetah-1.0.tar.gz) 1.0 [BSD]
-
 ##User Input:
 *  [python-markdown](http://www.freewisdom.org/projects/python-markdown/markdown.py) [BSD] 
