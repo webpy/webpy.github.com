@@ -9,9 +9,15 @@ To install web.py, download:
     
     http://webpy.org/web.py-0.2.tar.gz
 
-and extract it into the directory where your application is. Or, to make it accessible to all applications, copy it to your Python site-packages directory. To find where that is, run:
+extract it and copy the _web_ folder into a directory where your application is. Or, to make it accessible to all applications, run:
     
-    python -c "import sys; print[x for x in sys.path if x.endswith('site-packages')][-1]"
+    python setup.py install
+
+Note: on some unix like systems you may need to switch to root or run:
+
+    sudo python setup.py install
+
+
 ## Development
 
 webpy comes with a built-in webserver.  Learn how write an application by following the [tutorial](http://webpy.infogami.com/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
@@ -141,7 +147,8 @@ In your `.htaccess`, add:
     
     AddHandler python-program .py
     PythonHandler wsgiref.modpython_gateway::handler
-    PythonOption wsgi.application codep::main    
+    PythonOption wsgi.application codep::main
+    
 
 You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
