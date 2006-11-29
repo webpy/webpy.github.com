@@ -5,7 +5,7 @@ title: documentation
 
 # documentation
 
-## debugerror.py
+<a name="debugerror_py"></a>## debugerror.py
 <a name="djangoerror"></a>`djangoerror()`
 <a name="debugerror"></a>`debugerror()`
    : A replacement for `internalerror` that presents a nice page with lots
@@ -14,7 +14,7 @@ title: documentation
      (Based on the beautiful 500 page from [Django](http://djangoproject.com/), 
      designed by [Wilson Miner](http://wilsonminer.com/).)
 
-## request.py
+<a name="request_py"></a>## request.py
 <a name="handle"></a>`handle(mapping, fvars=None)`
    : Call the appropriate function based on the url to function mapping in `mapping`.
      If no module for the function is specified, look up the function in `fvars`. If
@@ -61,7 +61,7 @@ title: documentation
      `middleware` is a list of WSGI middleware which is applied to the resulting WSGI
      function.
 
-## wsgi.py
+<a name="wsgi_py"></a>## wsgi.py
 <a name="runfcgi"></a>`runfcgi(func, addr=('localhost', 8000))`
    : Runs a WSGI function as a FastCGI server.
 
@@ -72,22 +72,22 @@ title: documentation
    : Runs a WSGI-compatible `func` using FCGI, SCGI, or a simple web server,
      as appropriate based on context and `sys.argv`.
 
-## template.py
+<a name="template_py"></a>## template.py
 <a name="class ParseError"></a>`class ParseError(Exception): pass class Parser:`
 <a name="class TemplateParser"></a>`class TemplateParser(Parser)`
 <a name="class Stowage"></a>`class Stowage(storage)`
 <a name="class WTF"></a>`class WTF(AssertionError): pass class SecurityError(Exception):`
    : The template seems to be trying to do something naughty.
 
-<a name="class Templat"></a>`class Template`
-<a name="class Handl"></a>`class Handle`
+<a name="class Template"></a>`class Template`
+<a name="class Handle"></a>`class Handle`
 <a name="class Fill"></a>`class Fill(Handle)`
-<a name="class rende"></a>`class render`
+<a name="class render"></a>`class render`
 <a name="frender"></a>`frender(fn, *a, **kw)`
 <a name="test"></a>`test()`
-## __init__.py
+<a name="__init___py"></a>## __init__.py
 <a name="main"></a>`main()`
-## http.py
+<a name="http_py"></a>## http.py
 <a name="prefixurl"></a>`prefixurl(base='')`
    : Sorry, this function is really difficult to explain.
      Maybe some other time.
@@ -127,14 +127,14 @@ title: documentation
    : A function decorator to run a long-running function as a background thread.
 
 <a name="backgrounder"></a>`backgrounder(func)`
-<a name="class Reloade"></a>`class Reloader`
+<a name="class Reloader"></a>`class Reloader`
    : Before every request, checks to see if any loaded modules have changed on 
      disk and, if so, reloads them.
 
 <a name="profiler"></a>`profiler(app)`
    : Outputs basic profiling information at the bottom of each response.
 
-## cheetah.py
+<a name="cheetah_py"></a>## cheetah.py
 <a name="upvars"></a>`upvars(level=2)`
    : Guido van Rossum sez: don't use this function.
 
@@ -159,7 +159,7 @@ title: documentation
      Requires [Cheetah](http://cheetahtemplate.org/).
 
 <a name="class WebSafe"></a>`class WebSafe(Filter)`
-## utils.py
+<a name="utils_py"></a>## utils.py
 <a name="class Storage"></a>`class Storage(dict)`
    : A Storage object is like a dictionary except `obj.foo` can be used
      in addition to `obj['foo']`.
@@ -241,7 +241,7 @@ title: documentation
      executing in a separate thread. (There seems to be no way to kill a thread.)
  
      inspired by <http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/473878>
-<a name="class Memoiz"></a>`class Memoize`
+<a name="class Memoize"></a>`class Memoize`
    : 'Memoizes' a function, caching its return values for each input.
      
          >>> import time
@@ -274,7 +274,7 @@ title: documentation
          >>> list(group([1,2,3,4], 2))
          [1, 2], [3, 4](/1, 2], [3, 4)
 
-<a name="class IterBette"></a>`class IterBetter`
+<a name="class IterBetter"></a>`class IterBetter`
    : Returns an object that can be used as an iterator 
      but can also be used via __getitem__ (although it 
      cannot go backwards -- that is, you cannot request 
@@ -387,7 +387,7 @@ title: documentation
 <a name="dateify"></a>`dateify(datestring)`
    : Formats a numified `datestring` properly.
 
-<a name="class CaptureStdou"></a>`class CaptureStdout`
+<a name="class CaptureStdout"></a>`class CaptureStdout`
    : Captures everything `func` prints to stdout and returns it instead.
      
          >>> def idiot():
@@ -395,7 +395,7 @@ title: documentation
          'foo\\n'     
      **WARNING:** Not threadsafe!
 
-<a name="class Profil"></a>`class Profile`
+<a name="class Profile"></a>`class Profile`
    : Profiles `func` and returns a tuple containing its output
      and a string with human-readable profiling information.
          
@@ -424,7 +424,7 @@ title: documentation
      Then you can run `python test/stuff.py` and get the results of 
      all the tests.
 
-<a name="class ThreadedDic"></a>`class ThreadedDict`
+<a name="class ThreadedDict"></a>`class ThreadedDict`
    : Takes a dictionary that maps threads to objects. 
      When a thread tries to get or set an attribute or item 
      of the threadeddict, it passes it on to the object 
@@ -461,7 +461,7 @@ title: documentation
  
      (requires [markdown.py](http://webpy.org/markdown.py))
 
-## webapi.py
+<a name="webapi_py"></a>## webapi.py
 <a name="badrequest"></a>`badrequest()`
    : Return a `400 Bad Request` error.
 
@@ -478,8 +478,7 @@ title: documentation
    : Adds the header `hdr: value` with the response.
      
      If `unique` is True and a header with that name already exists,
-     it doesn't add a new one. If `unique` is None and a header with
-     that name already exists, it replaces it with this one.
+     it doesn't add a new one. If `unique` is None and a header with     that name already exists, it replaces it with this one.
 
 <a name="output"></a>`output(string_)`
    : Appends `string_` to the response.
@@ -517,9 +516,9 @@ title: documentation
 <a name="wsgifunc"></a>`wsgifunc(func, *middleware)`
    : Returns a WSGI-compatible function from a webpy-function.
 
-## form.py
+<a name="form_py"></a>## form.py
 <a name="attrget"></a>`attrget(obj, attr, value=None)`
-<a name="class For"></a>`class Form`
+<a name="class Form"></a>`class Form`
 <a name="class Input"></a>`class Input(object)`
 <a name="class Textbox"></a>`class Textbox(Input)`
 <a name="class Password"></a>`class Password(Input)`
@@ -529,9 +528,9 @@ title: documentation
 <a name="class Checkbox"></a>`class Checkbox(Input)`
 <a name="class Button"></a>`class Button(Input)`
 <a name="class Hidden"></a>`class Hidden(Input)`
-<a name="class Validato"></a>`class Validator`
+<a name="class Validator"></a>`class Validator`
 <a name="class regexp"></a>`class regexp(Validator)`
-## db.py
+<a name="db_py"></a>## db.py
 <a name="class UnknownParamstyle"></a>`class UnknownParamstyle(Exception)`
    : raised for unsupported db paramstyles
      
@@ -557,7 +556,7 @@ title: documentation
          'NULL'         >>> sqlify(True)
          "'t'"         >>> sqlify(3)
          '3'
-<a name="class SQLQuer"></a>`class SQLQuery`
+<a name="class SQLQuery"></a>`class SQLQuery`
    : You can pass this sort of thing as a clause in any db function.
      Otherwise, you can pass a dictionary to the keyword argument `vars`
      and the function will call reparam for you.
@@ -645,7 +644,7 @@ title: documentation
      
          >>> name = 'Joe'         >>> delete('foo', where='name = $name', vars=locals(), _test=True)
          <sql: "DELETE FROM foo WHERE name = 'Joe'">
-## net.py
+<a name="net_py"></a>## net.py
 <a name="validipaddr"></a>`validipaddr(address)`
    : returns True if `address` is a valid IPv4 address
 
@@ -700,7 +699,7 @@ title: documentation
          >>> websafe("<'&\\">")
          '<'&">'         >>> websafe(None)
          ''
-## httpserver.py
+<a name="httpserver_py"></a>## httpserver.py
 <a name="runsimple"></a>`runsimple(func, server_address=("0.0.0.0", 8080))`
    : Runs a simple HTTP server hosting WSGI app `func`. The directory `static/` 
      is hosted statically.
