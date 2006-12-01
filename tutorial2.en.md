@@ -88,6 +88,8 @@ Or you can use web.py's templating language to add code to your HTML:
     $else:
         <em>Hello</em>, world!
 
+**Note: Four spaces are currently required for indentation!**
+
 As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the $def statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
 
 Now go back to `code.py`. Under the first line, add:
