@@ -25,4 +25,4 @@ web.py recommends the following software:
 *  template.py [built-in] [(doc)](http://webpy.infogami.com/templetor)
 *  [Cheetah](http://dl.sourceforge.net/cheetahtemplate/Cheetah-1.0.tar.gz) 1.0 [BSD] [(doc)](http://www.cheetahtemplate.org/learn.html)
 ##User Input:
-*  [python-markdown](http://www.freewisdom.org/projects/python-markdown/) [BSD] [(doc)](http://www.freewisdom.org/projects/python-markdown/)
+*  [python-markdown](http://sourceforge.net/project/showfiles.php?group_id=153041) [BSD] [(doc)](http://www.freewisdom.org/projects/python-markdown/)
