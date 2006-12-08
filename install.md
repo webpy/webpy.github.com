@@ -17,6 +17,7 @@ Note: on some unix like systems you may need to switch to root or run:
 
     sudo python setup.py install
 
+see [recomended setup](/recommended_setup).
 
 ## Development
 
