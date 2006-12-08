@@ -18,8 +18,12 @@ web.py recommends the following software:
 ##CGI/FastCGI/SCGI:
 *  [flup](http://trac.saddi.com/flup) [BSD]
 
+Use `easy_install flup` to install flup.
+
 ##Connection Pooling:
 *  [DBUtils](http://www.w4py.org/downloads/DBUtils/) [CNRI] [(doc)](http://www.webwareforpython.org/DBUtils/Docs/UsersGuide.html)
+
+Use `easy_install DBUtils` to install DBUtils.
 
 ##Templates:
 *  template.py [built-in] [(doc)](http://webpy.infogami.com/templetor)
