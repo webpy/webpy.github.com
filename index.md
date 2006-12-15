@@ -30,6 +30,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 * [tutorials for version 0.2](/tutorial2)
     * [english](/tutorial2.en)
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
+    * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
     * [form.py (short) tutorial](/form)
     * [upgrading from 0.1 to 0.2](http://webpy.infogami.com/upgrade_to_point2)
@@ -55,7 +56,6 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 ### web.py community:
 
 * [**web site**](http://webpy.org/): home of the web.py project
-
 * [**wiki**](http://webpy.infogami.com): home of the web.py community
 
 * [**mail list**](http://groups.google.com/group/webpy/ "web.py google group"): home of the web.py discussion
