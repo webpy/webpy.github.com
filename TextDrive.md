@@ -41,3 +41,7 @@ To make sure that the server starts your script back up when it reboots, go into
 ## Making it fast
 
 For reasons I don't quite understand lighttpd proxying to web.py is faster than running web.py directly. So if you want your server to support more serious loads, you should run a simple lighttpd instance on port 8048 and have it talk to web.py through FastCGI.
+
+## Install Cheetah
+
+Installing Cheetah on TextDrive is quite straight forward. Check [here](http://thetruedelight.blogspot.com/2006/12/how-to-install-cheetah-on-textdrive.html) to see the full installation script. 
