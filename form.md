@@ -7,8 +7,10 @@ title: form
 
 Here's a sample script using the new form library:
 
-    import web, form, template
-    render = template.render('templates/')
+    import web
+    from web import form
+
+    render = web.template.render('templates/')
 
     myform = form.Form( 
         form.Textbox("boe"), 
