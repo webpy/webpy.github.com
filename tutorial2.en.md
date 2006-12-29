@@ -9,7 +9,7 @@ title: web.py 0.2 tutorial
 
 So you know Python and want to make a website. web.py provides the code to make that easy.
 
-If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). For details, see the [webpy.org](http://webpy.org/).
+If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). For details, see [webpy.org](http://webpy.org/).
 
 If you have an existing web.py project, take a look at the [upgrade](http://webpy.infogami.com/upgrade_to_point2) page for info on migrating.
 
@@ -19,7 +19,7 @@ Let's get started.
 
 The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
 
-To get started with your web.py application, open up a new text file (let's call it `code.py`) and type:
+To get started with your web.py application, open up a new text file (let's call it 'code.py') and type:
 
     import web
 
@@ -60,7 +60,7 @@ You now have your web.py application running a real web server on your computer.
 
 ## Developing
 
-web.py also has a few tools to help us with debugging. Before the last line, add:
+web.py also has a few tools to help us with debugging. Before the 'if __name__' on last line, add:
 
     web.webapi.internalerror = web.debugerror
 
@@ -112,6 +112,8 @@ and change the definition of `index.GET` to:
     def GET(self, name):
 
 and delete the line setting name. Visit `/` and it should say hello to the world. Visit `/Joe` and it should say hello to Joe.
+
+**Note: web.py also retroactively supports [Cheetah templates](http://www.cheetahtemplate.org/).  Read the former [tutorial](http://webpy.org/tutorial) for more information.
 
 ## Databasing
 
