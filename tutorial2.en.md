@@ -75,6 +75,8 @@ This tells web.py to use the web.reloader "middleware" (middleware is a wrapper 
 
 Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
 
+**Note: web.py currently also supports [Cheetah templates](http://www.cheetahtemplate.org/).  Read the former [tutorial](http://webpy.org/tutorial) for more information.
+
 Let's make a new directory for our templates (we'll call it `templates`). Inside, make a new file whose name ends with HTML (we'll call it `index.html`). Now, inside, you can just write normal HTML:
 
     <em>Hello</em>, world!
@@ -112,8 +114,6 @@ and change the definition of `index.GET` to:
     def GET(self, name):
 
 and delete the line setting name. Visit `/` and it should say hello to the world. Visit `/Joe` and it should say hello to Joe.
-
-**Note: web.py also retroactively supports [Cheetah templates](http://www.cheetahtemplate.org/).  Read the former [tutorial](http://webpy.org/tutorial) for more information.
 
 ## Databasing
 
