@@ -29,10 +29,13 @@ Here's a sample script using the new form library:
 
         def POST(self): 
             form = myform() 
-            if not form.validates():
+            if not form.validates(): 
                 print render.formtest(form)
             else:
-                print "when libraries compete, you win!"
+                # form.d.boe and form['boe'].data are equivalent ways of
+                # extracting the validated arguments from the form.
+                print "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].data)
+
 And sample formtest.html: 
 
     $def with (form)
