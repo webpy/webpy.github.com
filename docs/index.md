@@ -9,7 +9,7 @@ title: documentation
 <a name="djangoerror"></a>`djangoerror()`
 <a name="debugerror"></a>`debugerror()`
    : A replacement for `internalerror` that presents a nice page with lots
-     of debug information for the programmer.
+     of debug information for the programmer.  An easy way to use is to put this after your "import web" line: `web.webapi.internalerror = web.debugerror`
  
      (Based on the beautiful 500 page from [Django](http://djangoproject.com/), 
      designed by [Wilson Miner](http://wilsonminer.com/).)
@@ -76,8 +76,7 @@ title: documentation
 <a name="class ParseError"></a>`class ParseError(Exception): pass class Parser:`
 <a name="class TemplateParser"></a>`class TemplateParser(Parser)`
 <a name="class Stowage"></a>`class Stowage(storage)`
-<a name="class WTF"></a>`class WTF(AssertionError): pass class SecurityError(Exception):`
-   : The template seems to be trying to do something naughty.
+<a name="class WTF"></a>`class WTF(AssertionError): pass class SecurityError(Exception):`   : The template seems to be trying to do something naughty.
 
 <a name="class Template"></a>`class Template`
 <a name="class Handle"></a>`class Handle`
@@ -478,7 +477,8 @@ title: documentation
    : Adds the header `hdr: value` with the response.
      
      If `unique` is True and a header with that name already exists,
-     it doesn't add a new one. If `unique` is None and a header with     that name already exists, it replaces it with this one.
+     it doesn't add a new one. If `unique` is None and a header with
+     that name already exists, it replaces it with this one.
 
 <a name="output"></a>`output(string_)`
    : Appends `string_` to the response.
