@@ -8,7 +8,7 @@ title: Django style multiple apps with web.py
 Here is a hack to support decoupling urls for multiple applications using web.py
 
 
-support we have two applications `blog` and `wiki` and we want to put them in same project.
+suppose we have two applications `blog` and `wiki` and we want to put them in same project.
 
 This is the main driver.
 
