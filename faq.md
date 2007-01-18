@@ -19,3 +19,6 @@ title: faq
 
     If they were a dictionary, they wouldn't be ordered. If it was a list of tuples, then it'd be a lot more typing.
 
+99. **Where can I go for additional help?**
+
+    Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
