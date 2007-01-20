@@ -18,6 +18,7 @@ First let your urls extend beyound images:
 ## Basic Image Class
 Now create the class that will handle them:
 
+    import os
     class images:
         def GET(self,name):
             ext = name.split(".")[-1] # Gather extension
@@ -27,6 +28,9 @@ Now create the class that will handle them:
                 "jpg":"image/jpeg",
                 "gif":"image/gif",
                 "ico":"image/x-icon"            }
-            
-            web.header("Content-Type", cType[ext]) # Set the Header
-            print open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
+
+            if name in os.listdir('images'):  # Security
+                web.header("Content-Type", cType[ext]) # Set the Header
+                print open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
+            else:
+                web.notfound()
