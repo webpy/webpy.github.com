@@ -32,15 +32,15 @@ Here's a sample script using the new form library:
             if not form.validates(): 
                 print render.formtest(form)
             else:
-                # form.d.boe and form['boe'].data are equivalent ways of
+                # form.d.boe and form['boe'].value are equivalent ways of
                 # extracting the validated arguments from the form.
-                print "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].data)
+                print "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
 
 And sample formtest.html: 
 
     $def with (form)
 
     <form name="main" method="post"> 
-    $if not form.valid: <p class="error">Try again, cowpoke:</p>
+    $if not form.valid: <p class="error">Try again, AmeriCAN:</p>
     $:form.render()
-    <input type="submit" value="Save" />    </form>
+    <input type="submit" />    </form>
