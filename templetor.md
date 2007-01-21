@@ -140,7 +140,7 @@ evaluating it as a string returns the value of the body of the
 template. The elements in the storage object are the results of the 
 `def`s and the `set`s. 
 
-Perhaps an example will make this clearer. Here's a template: 
+Perhaps an example will make this clearer. Here's a template, "entry": 
 
     $def with (post) 
 
@@ -150,7 +150,7 @@ Perhaps an example will make this clearer. Here's a template:
 
     <p class="byline">by $post.author</p> 
 
-Here's another: 
+Here's another; "base": 
 
     $def with (self) 
     <html><head> 
@@ -161,12 +161,12 @@ Here's another:
     $self 
     </body></html> 
 
-Now let's say we compile both from within Python, the first as `page`, 
+Now let's say we compile both from within Python, the first as `entry`, 
 the second as `base`. Here's how we might use them: 
 
-    print base(page(post)) 
+    print base( entry( post ) ) 
 
-`page` takes the argument post and returns an object whose string 
+`entry` takes the argument post and returns an object whose string 
 value is a bit of HTML showing the post with its title in the property 
 `title`. `base` takes this object and places the title in the 
 appropriate place and displays the page itself in the body of the 
