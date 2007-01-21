@@ -115,6 +115,8 @@ and change the definition of `index.GET` to:
 
 and delete the line setting name. Visit `/` and it should say hello to the world. Visit `/Joe` and it should say hello to Joe.
 
+If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
+
 ## Databasing
 
 Above your `web.run` line add:
