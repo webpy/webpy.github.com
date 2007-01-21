@@ -458,7 +458,7 @@ title: documentation
      outside HTML input, so that only the things supported by Markdown
      can be used. Also converts raw URLs to links.
  
-     (requires [markdown.py](http://webpy.org/markdown.py))
+     (requires [markdown.py](http://www.freewisdom.org/projects/python-markdown/))
 
 <a name="webapi_py"></a>## webapi.py
 <a name="badrequest"></a>`badrequest()`
