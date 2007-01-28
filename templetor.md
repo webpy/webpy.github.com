@@ -142,7 +142,7 @@ template. The elements in the storage object are the results of the
 
 Perhaps an example will make this clearer. Here's a template, "entry": 
 
-    $def with (post) 
+    $def with (post)
 
     $var title: $post.title 
 
@@ -152,7 +152,7 @@ Perhaps an example will make this clearer. Here's a template, "entry":
 
 Here's another; "base": 
 
-    $def with (self) 
+    $def with (self)
     <html><head> 
       <title>$self.title</title> 
     </head><body> 
@@ -164,7 +164,7 @@ Here's another; "base":
 Now let's say we compile both from within Python, the first as `entry`, 
 the second as `base`. Here's how we might use them: 
 
-    print base( entry( post ) ) 
+    print base( entry( post ) )
 
 `entry` takes the argument post and returns an object whose string 
 value is a bit of HTML showing the post with its title in the property 
