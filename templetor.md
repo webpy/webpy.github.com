@@ -123,7 +123,7 @@ space).
 
 A template begins with a line like this:
 
-    $def with (name, title, company='BigCo') 
+    $def with (name, title, company='BigCo')
 
 which declares that the template takes those arguments. (The `with` 
 keyword is special, like `def` or `if`.) 
