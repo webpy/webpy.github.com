@@ -29,7 +29,6 @@ title: faq
 
             def my_notfound(): 
                 print "MY OWN NOT FOUND" 
-            
             web.webapi.notfound = my_notfound 
 
 
