@@ -22,3 +22,15 @@ title: faq
 99. **Where can I go for additional help?**
 
     Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
+
+99. **How can I change the default "not found" page?
+
+    You can write your own custom notfound handler and assign it to web.webapi.notfound
+
+            def my_notfound(): 
+                print "MY OWN NOT FOUND" 
+            
+            web.webapi.notfound = my_notfound 
+
+
+
