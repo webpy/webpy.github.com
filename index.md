@@ -39,7 +39,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 
 * FAQ:
-    * [english](http://webpy.org/faq)
+    * [english](http://webpy.infogami.com/faq)
     * [español](/faq/es)
     * [русский](/faq/ru)
     * [日本語](http://kinneko.googlepages.com/webpy_faq)
