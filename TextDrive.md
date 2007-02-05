@@ -29,7 +29,7 @@ Now check `http://aaronsw.textdriven.com/` -- you should see your script working
 
 ## Install Cheetah
 
-Installing Cheetah on TextDrive is quite straight forward. Check [here](http://thetruedelight.blogspot.com/2006/12/how-to-install-cheetah-on-textdrive.html) to see the full installation script. 
+Installing Cheetah on TextDrive is quite straight forward. Check [here](http://thetruedelight.blogspot.com/2006/12/how-to-install-cheetah-on-textdrive_19.html) to see the full installation script. 
 
 ## Keeping it up
 
