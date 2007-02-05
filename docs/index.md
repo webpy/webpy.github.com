@@ -510,7 +510,7 @@ title: documentation
 <a name="unload"></a>`unload()`
    : Unloads the context for the thread.
      
-     You can ask for a function to be run at loadtime by
+     You can ask for a function to be run at unloadtime by
      adding it ot the dictionary `unloadhooks`.
 
 <a name="wsgifunc"></a>`wsgifunc(func, *middleware)`
