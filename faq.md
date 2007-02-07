@@ -41,6 +41,6 @@ title: faq
 
     To make in sort that this will be run default when you fire up 'python'. Make a file called '~/.pythonstartup.py' and put the import line in it. Then set the 'PYTHONSTARTUP' environment variable to point to that file.
 
-    With my bash, i do it like folling; edit ~/.bashrc and add:
+    With my bash, i do it like following; edit ~/.bashrc and add:
 
-            export PYTHONSTARTUP=/home/david/.pythonstartup.py
+            export PYTHONSTARTUP=~/.pythonstartup.py
