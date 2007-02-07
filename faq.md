@@ -23,7 +23,7 @@ title: faq
 
     Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
 
-99. **How can I change the default "not found" page?
+99. **How can I change the default "not found" page?**
 
     You can write your own custom notfound handler and assign it to web.webapi.notfound
 
@@ -31,5 +31,16 @@ title: faq
                 print "MY OWN NOT FOUND" 
             web.webapi.notfound = my_notfound 
 
+99. **How can i get auto completion in python after loading the webpy module?**
 
+    You probably have discover that the auto completion no more work once you import the webpy module in ipython. You can still use 'python' with auto completion feature. Try it out directly. Fire up 'python':
 
+            import readline, rlcompleter; readline.parse_and_bind("tab: complete")
+
+    and tab it! :-)
+
+    To make in sort that this will be run default when you fire up 'python'. Make a file called '~/.pythonstartup.py' and put the import line in it. Then set the 'PYTHONSTARTUP' environment variable to point to that file.
+
+    With my bash, i do it like folling; edit ~/.bashrc and add:
+
+            export PYTHONSTARTUP=/home/david/.pythonstartup.py
