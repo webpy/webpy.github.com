@@ -33,7 +33,7 @@ title: faq
 
 99. **How can i get auto completion in python after loading the webpy module?**
 
-    You probably have discover that the auto completion no more work once you import the webpy module in ipython. You can still use 'python' with auto completion feature. Try it out directly. Fire up 'python':
+    In IPython, after importing webpy auto completion may no longer work. You can still use 'python' with auto completion feature. Try it out directly. Fire up 'python':
 
             import readline, rlcompleter; readline.parse_and_bind("tab: complete")
 
