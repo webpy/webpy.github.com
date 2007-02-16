@@ -126,6 +126,8 @@ title: documentation
    : A function decorator to run a long-running function as a background thread.
 
 <a name="backgrounder"></a>`backgrounder(func)`
+   : Run a long-running function as a background thread.
+
 <a name="class Reloader"></a>`class Reloader`
    : Before every request, checks to see if any loaded modules have changed on 
      disk and, if so, reloads them.
@@ -277,8 +279,7 @@ title: documentation
    : Returns an object that can be used as an iterator 
      but can also be used via __getitem__ (although it 
      cannot go backwards -- that is, you cannot request 
-     `iterbetter[0]` after requesting `iterbetter[1]`).
-     
+     `iterbetter[0]` after requesting `iterbetter[1]`).     
          >>> import itertools
          >>> c = iterbetter(itertools.count())
          >>> c[1]
