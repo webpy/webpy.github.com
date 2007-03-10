@@ -130,14 +130,21 @@ It's ok!
 
 mod_python performs as well as FastCGI, but is not as straight-forward to configure.
 
-    svn co svn://svn.eby-sarna.com/svnroot/wsgiref/
-    cd wsgiref
-    python setup.py install # as root
-    cd /usr/lib/python2.3/site-packages/wsgiref/ # or whatever the path
-    wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
-    
+For Python 2.5 do this:
 
-(Note: be sure not to install wsgiref as an easy_install egg or Apache won't be happy.)
+    cd /usr/lib/python2.5/wsgiref
+    # or in windows: cd /python2.5/lib/wsgiref
+    wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
+    # or fetch the file from that address using your browser
+
+For Python <2.5 do this:
+
+    cd /usr/lib/python2.4/site-packages
+    # or in windows: cd /python2.4/lib/site-packages
+    svn co svn://svn.eby-sarna.com/svnroot/wsgiref/wsgiref
+    cd wsgiref
+    wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
+    # or fetch the file from that address using your browser  
 
 Rename your `code.py` to something like `codep.py` and add:
     
