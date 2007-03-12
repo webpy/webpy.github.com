@@ -19,7 +19,7 @@ Python has many templating engines, each emphasizing different features and appr
 
 ### Trac - web.py integration
 
-Trac is a nice project management web tool that is fast becoming the de-facto standard in the free software world. Trac has it's own framework, but there are many similarities and it uses WSGI. It would be nice to be able to write components for Trac using web.py, as well as host Trac and other web.py applications side-by-side.
+Trac is a nice project management web tool that is fast becoming the de-facto standard in the free software world. Trac has its own framework, but there are many similarities and it uses WSGI. It would be nice to be able to write components for Trac using web.py, as well as host Trac and other web.py applications side-by-side.
 
 ### javascript form support
 
