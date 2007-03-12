@@ -17,10 +17,6 @@ The current templating system, and even Adam Atlas's rewrite, doesn't perfectly 
 
 Python has many templating engines, each emphasizing different features and approaches. Web.py currently supports Cheetah and Templator (its built-in engine). It would be nice to be able to be able to use the same model (a 'render' object which responds to template names, outputs the content-type, etc) with other engines (like Genshi, Clearsilver, Kid and others). Turbogears has some code doing similar stuff that can be canibalized.
 
-### Trac - web.py integration
-
-Trac is a nice project management web tool that is fast becoming the de-facto standard in the free software world. Trac has its own framework, but there are many similarities and it uses WSGI. It would be nice to be able to write components for Trac using web.py, as well as host Trac and other web.py applications side-by-side.
-
 ### javascript form support
 
 It's annoying to have to fill out a form.py form, only to get it back to find that it's been incorrectly filled out. This project would be to add metadata to web.py validators to allow them to be implemented in JavaScript (for `notnull` and `regexp`, this should be trivial) and then update the forms so that they work like [this qweb example][q] -- giving the user immediate feedback when they've failed a requirement.
