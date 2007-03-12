@@ -13,6 +13,14 @@ Here are ideas for web.py projects to take on if you have some free time, say, t
 
 The current templating system, and even Adam Atlas's rewrite, doesn't perfectly conform to the spec. For example, it doesn't support arbitrary Python code execution within a template. This project would be to take the templating system the final mile and fix the remaining bugs and unimplemented features.
 
+### Engine-agnostic templating
+
+Python has many templating engines, each emphasizing different features and approaches. Web.py currently supports Cheetah and Templator (its built-in engine). It would be nice to be able to be able to use the same model (a 'render' object which responds to template names, outputs the content-type, etc) with other engines (like Genshi, Clearsilver, Kid and others). Turbogears has some code doing similar stuff that can be canibalized.
+
+### Trac - web.py integration
+
+Trac is a nice project management web tool that is fast becoming the de-facto standard in the free software world. Trac has it's own framework, but there are many similarities and it uses WSGI. It would be nice to be able to write components for Trac using web.py, as well as host Trac and other web.py applications side-by-side.
+
 ### javascript form support
 
 It's annoying to have to fill out a form.py form, only to get it back to find that it's been incorrectly filled out. This project would be to add metadata to web.py validators to allow them to be implemented in JavaScript (for `notnull` and `regexp`, this should be trivial) and then update the forms so that they work like [this qweb example][q] -- giving the user immediate feedback when they've failed a requirement.
@@ -22,6 +30,10 @@ It's annoying to have to fill out a form.py form, only to get it back to find th
 ### user accounts
 
 web.py has long been lacking a user account system. The goal would be to build something simple and flexible enough that it could be plugged into all sorts of database backends and UI front ends, but still handle the details of HMACs and OpenID and stuff like that. If you're interested in this project, work with the mailing list to come up with a clear spec before you get started.
+
+### Built-in session middleware
+
+Sessions are a useful abstraction for web applications. Flup comes with some simple session middleware, but it doesn't back to databases (which is very useful if your deployment scenario relies on multiple web servers using the same DB server). It would be nice if web.py would come with a built-in, file or DB -backed session facility.
 
 ### other
 
@@ -58,3 +70,7 @@ IRC is nice for asking questions because you can get answers in real-time. But i
 ### WikiDebate
 
 Wikipedia is great when you want to know the facts of a subject, but often you don't want the facts, you want the arguments. The goal of the WikiDebate project would be to develop a new site that was more of a cross between a threaded discussion and Wikipedia. Instead of simply having an edit war over which are the real facts, the site would capture the structure of real arguments on the subject, with the back-and-forth of claim and refutation. Ideally, pointless online arguments could be moved into this system and real progress could be made, instead of hashing the same points out over and over again.
+
+### webpy.org
+
+When people fish for a Python web framework, the first thing they encounter is the framework's website. They check how good (and easy to use) the documentation is, how easy it is to report bugs and interact with the developers, and those who aren't very technical just check how warm and fuzzy the website makes them feel. Web.py's website is not doing very well on the warm-and fuzzyness effort, it's distributed between a static page (decent design, but sparse), a wiki (on a commercial service, developed using web.py itself but looking pretty generic), a Trac site (which needs lots of love if it is to be at all useful) and a mailing list. The challenge is to both do a better job at marketing _and_ getting real value out of the effort (by making it easier for people collaborate of developing and supporting web.py).
