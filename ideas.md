@@ -55,6 +55,18 @@ Every hit to the server contains within it a wealth of information -- user IP, c
 
 ## web apps
 
+### startupideas.org
+
+A bunch of people come up with fairly good ideas for new web apps to build. A bunch of people are fairly good at building them. But, as far as I can tell, these groups aren't very good at talking to each other. This would be a simple web.py site where people could submit their new website ideas, other people could vote and comment on them, and developers could sign up to implement them. It's all about bringing people together. To build websites.
+
+### teh communicator
+
+IRC is nice for asking questions because you can get answers in real-time. But it's bad because it requires special client software, has pretty useless archives, and if no one answers your question in real-time then it doesn't get answered. "teh communicator" (just a code name) is a project to develop a new website that uses AJAX push to give you the realtime feel of IRC on a website (using web.py's `untwisted` module) but stores conversations in a database so that they're nicely archived, threaded, and you can keep track of which ones have already been answered.
+
+### WikiDebate
+
+Wikipedia is great when you want to know the facts of a subject, but often you don't want the facts, you want the arguments. The goal of the WikiDebate project would be to develop a new site that was more of a cross between a threaded discussion and Wikipedia. Instead of simply having an edit war over which are the real facts, the site would capture the structure of real arguments on the subject, with the back-and-forth of claim and refutation. Ideally, pointless online arguments could be moved into this system and real progress could be made, instead of hashing the same points out over and over again.
+
 ### webpy.org
 
 When people fish for a Python web framework, the first thing they encounter is the framework's website. They check how good (and easy to use) the documentation is, how easy it is to report bugs and interact with the developers, and those who aren't very technical just check how warm and fuzzy the website makes them feel. Web.py's website is not doing very well on the warm-and fuzzyness effort, it's distributed between a static page (decent design, but sparse), a wiki (on a commercial service, developed using web.py itself but looking pretty generic), a Trac site (which needs lots of love if it is to be at all useful) and a mailing list. The challenge is to both do a better job at marketing _and_ getting real value out of the effort (by making it easier for people collaborate of developing and supporting web.py).
