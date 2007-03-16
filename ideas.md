@@ -70,3 +70,9 @@ Wikipedia is great when you want to know the facts of a subject, but often you d
 ### webpy.org
 
 When people fish for a Python web framework, the first thing they encounter is the framework's website. They check how good (and easy to use) the documentation is, how easy it is to report bugs and interact with the developers, and those who aren't very technical just check how warm and fuzzy the website makes them feel. Web.py's website is not doing very well on the warm-and fuzzyness effort, it's distributed between a static page (decent design, but sparse), a wiki (on a commercial service, developed using web.py itself but looking pretty generic), a Trac site (which needs lots of love if it is to be at all useful) and a mailing list. The challenge is to both do a better job at marketing _and_ getting real value out of the effort (by making it easier for people collaborate of developing and supporting web.py).
+
+## web.py community
+
+### PyWeek for web.py
+
+[PyWeek](http://www.pyweek.org/) is a contest challenging entrants to design, build, and complete a game starting from scratch in only one week.  Web.py could start with a similar model and rule set and invite interested parties to take a simple idea for a web app (possibly connected to startupideas.org?) and turn it into a functioning application in a specified amount of time.  Judgment and prizes aren't the point, we want to inspire folks with some free time to pick up the tools and just start using them.
