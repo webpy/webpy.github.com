@@ -162,6 +162,20 @@ You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
 Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll see an error message like `A server error occurred. Please contact the administrator.`
 
+#### .. with mod_wsgi
+
+mod\_wsgi is a new Apache module which [typically outperforms mod\_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) for hosting WSGI applications, and is very easy to set up. (Just note that it is still very young, and it will likely be a while before it is as well-tested and sturdy as mod_python.)
+
+At the end of your `code.py`, add:
+
+    application = web.wsgifunc(web.webpyfunc(urls, globals()))
+
+mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) to expose a WSGI application in Apache's URL hierarchy, but one simple way would be to add the following to your .htaccess:
+
+    <Files code.py>        SetHandler wsgi-script
+    </Files>
+It should then be accessible at `http://example.com/code.py/` as usual.
+
 #### mod_rewrite Rules for Apache
 
 Add the following rules to the `.htaccess` file:
