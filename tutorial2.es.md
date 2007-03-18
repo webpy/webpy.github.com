@@ -20,16 +20,15 @@ Ya podemos comenzar.
 
 ## URL Handling
 
-La parte más importante de cualquier sitio web es la estructura de sus [URLs](http://es.wikipedia.org/wiki/URL). Los URLs de tu sitio web, no son simplemente "cosas" que los visitantes al web miran y envían por correo-e a sus amigos, ellos también proveen un modelo mental de como su sitio web funciona. En sitios populares (en inglés), tales como [del.icio.us](http://del.icio.us/), los URLs inclusive parte del interfase con el usuario. web.py facilita definir buenos URLs.
+La parte más importante de cualquier sitio web es la estructura de sus [URLs](http://es.wikipedia.org/wiki/URL). Los URLs de tu sitio web, no son simplemente "cosas" que los visitantes al web miran y envían por correo-e a sus amigos, ellos también proveen un modelo mental de como su sitio web funciona. En sitios populares (en inglés), tales como [del.icio.us](http://del.icio.us/), los URLs son inclusive parte del interfase con el usuario. web.py facilita definir buenos URLs.
 
-
-To get started with your web.py application, open up a new text file (let's call it 'code.py') and type:
+Para comenzar una aplicación con web.py, abra un nuevo archivo de texto (vamos a llamarlo 'code.py') y tipee:
 
     import web
 
-This imports the web.py module.
+Esto importa el modulo web.py.
 
-Now we need to tell web.py our URL structure. Let's start out with something simple:
+A continuación, deberá decirle a web.py cual será la estructura de URLs. Se puede comenzar con algo sencillo como:
 
     urls = (
       '/', 'index'    )
