@@ -20,7 +20,8 @@ Ya podemos comenzar.
 
 ## URL Handling
 
-The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
+La parte más importante de cualquier sitio web es la estructura de sus [URLs](http://es.wikipedia.org/wiki/URL). Los URLs de tu sitio web, no son simplemente "cosas" que los visitantes al web miran y envían por correo-e a sus amigos, ellos también proveen un modelo mental de como su sitio web funciona. En sitios populares (en inglés), tales como [del.icio.us](http://del.icio.us/), los URLs inclusive parte del interfase con el usuario. web.py facilita definir buenos URLs.
+
 
 To get started with your web.py application, open up a new text file (let's call it 'code.py') and type:
 
@@ -61,7 +62,7 @@ Now notice that although I've been talking a lot here, we only really have five 
 
 You now have your web.py application running a real web server on your computer. Visit that URL and you should see "Hello, world!" (You can add an IP address/port after the "code.py" bit to control where web.py launches the server. You can also tell it to run a `fastcgi` or `scgi` server.)
 
-## Developing
+## Desarrollando
 
 web.py also has a few tools to help us with debugging. Before the 'if __name__' on last line, add:
 
@@ -74,7 +75,7 @@ This will give you more helpful error messages. And on the last line add `web.re
     
 This tells web.py to use the web.reloader "middleware" (middleware is a wrapper function to add some functionality to your web server) which reloads your files whenever you edit them, so that you can see the changes in your web browser right away. (For some serious changes, though, you'll still have to restart the server.) You'll probably want to take this out when you make your site public, but it's great while developing. There's also `web.profiler`, which outputs information about how much time each function took at the end of each web page, so that you can make your code faster.
 
-## Templating
+## Uso de Plantillas.
 
 Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
 
@@ -120,7 +121,7 @@ and delete the line setting name. Visit `/` and it should say hello to the world
 
 If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
 
-## Databasing
+## Base de Datos
 
 Above your `web.run` line add:
 
