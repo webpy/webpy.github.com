@@ -33,11 +33,12 @@ A continuación, deberá decirle a web.py cual será la estructura de URLs. Se p
     urls = (
       '/', 'index'    )
 
-The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (The `\d+` matches a sequence of digits. The parentheses say to capture that piece of the match for later on.) The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
+La primera partes es una [expresión regular](http://osteele.com/tools/rework/) que coincide con un URL, como `/`, `/help/faq`, `/item/(\d+)`, etc. (El `\d+` coincide con una secuencia de dígitos). La segunda parte es el nombre de una clase que será llamada, cuando el URL de una página coincida con al expresión regular.
 
-This line says we want the URL `/` (i.e. the front page) to be handled by the class named `index`.
+Esta linea dice que queremos que el URL } `/` (ej: la página principal) debe ser manejada por la clase llamada `index`.
 
-Now we need to write the `index` class. While most people don't notice it just browsing around, your browser uses a language known as HTTP for communicating with the World Wide Web. The details aren't important, but the basic idea is that Web visitors ask web servers to perform certain functions (like `GET` or `POST`) on URLs (like `/` or `/foo?f=1`). 
+Por lo tanto, todo lo que se require es escribir la clase `index`.  Aunque la mayoría de las personas no lo notan, su visualizador de web (browser), utiliza un lenguaje conocido como HTTP para comunicarse con el World Wide Web. Los detalles no son relevantes, pero la idea básica es que los visitantes a su sitio web, le solicitan al servidor de web que realice una función especifica (como `GET` o `POST`) con los URLs (como en `/` o `/foo?f=1`).
+
 
 `GET` is the one we're all familiar with, the one used to request the text of a web page. When you type `harvard.edu` into your web browser, it literally asks the Harvard web server to `GET /`.  The second-most famous, `POST`, is often used when submitting certain kids of forms, like a request to purchase something. You use `POST` whenever the act of submitting a request _does something_ (like charge your credit card and process an order). This is key, because `GET` URLs can be passed around and indexed by search engines, which you definitely want for most of your pages but definitely _don't_ want for things like processing orders (imagine if Google tried to buy everything on your site!).
 
