@@ -35,7 +35,7 @@ A continuación, deberá decirle a web.py cual será la estructura de URLs. Se p
 
 La primera partes es una [expresión regular](http://osteele.com/tools/rework/) que coincide con un URL, como `/`, `/help/faq`, `/item/(\d+)`, etc. (El `\d+` coincide con una secuencia de dígitos). La segunda parte es el nombre de una clase que será llamada, cuando el URL de una página coincida con al expresión regular.
 
-Esta linea dice que queremos que el URL } `/` (ej: la página principal) debe ser manejada por la clase llamada `index`.
+Esta linea dice que queremos que el URL `/` (ej: la página principal) debe ser manejada por la clase llamada `index`.
 
 Por lo tanto, todo lo que se require es escribir la clase `index`.  Aunque la mayoría de las personas no lo notan, su visualizador de web (browser), utiliza un lenguaje conocido como HTTP para comunicarse con el World Wide Web. Los detalles no son relevantes, pero la idea básica es que los visitantes a su sitio web, le solicitan al servidor de web que realice una función especifica (como `GET` o `POST`) con los URLs (como en `/` o `/foo?f=1`).
 
@@ -181,6 +181,6 @@ Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.
 
 `web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
 
-You can find the full details on these and all the web.py functions in [the documentation](http://webpy.infogami.com/docs).
+Usted puede encontrar todos los detalles sobre lo tratado en este tutorial y lo relacionado a las funciones de web.py en [la documentación](http://webpy.infogami.com/docs).
 
-This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
+Con esto se termina este tutorial. Dele una lectura a la documentación, donde encontrará gran cantidad de material e información de lo que puede hacer con web.py
