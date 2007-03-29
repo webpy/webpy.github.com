@@ -44,3 +44,15 @@ And sample formtest.html:
     $if not form.valid: <p class="error">Try again, AmeriCAN:</p>
     $:form.render()
     <input type="submit" />    </form>
+The forms support several additional attributes.  For example:
+
+    myform = form.Form(
+        form.textbox("firstname",
+            class_="textEntry", #gives a class name to the text box -- note the underscore
+            pre="pre", #directly before the text box
+            post="post", #directly after the text box
+            description="please enter your name", #describes field, defaults to form name ("firstname")
+            value="bob", #default value
+            id="nameid", #specify the id
+        )
+            
