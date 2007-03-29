@@ -48,6 +48,7 @@ The forms support several additional attributes.  For example:
 
     myform = form.Form(
         form.textbox("firstname",
+            form.notnull, #put validators first followed by optional attributes
             class_="textEntry", #gives a class name to the text box -- note the underscore
             pre="pre", #directly before the text box
             post="post", #directly after the text box
