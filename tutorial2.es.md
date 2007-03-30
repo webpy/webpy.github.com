@@ -123,13 +123,13 @@ If you wish to learn more about web.py templates, vist the [templetor page](/tem
 
 ## Base de Datos
 
-Above your `web.run` line add:
+Antes de la linea 'web.run' incluir:
 
     web.config.db_parameters = dict(dbn='postgres', user='username', pw='password', db='dbname')
 
-(Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` to `mysql`.)
+(Cambie los valores --particularmente `username`, `password`, y `dbname` -- para que coincida con su configuración. Los usuarios de MySQL deberán cambiar 'dbn' a 'mysql'.)
 
-Create a simple table in your database:
+Cree una tabla sencilla en su base de datos:
 
     CREATE TABLE todo (
       id serial primary key,
@@ -137,11 +137,11 @@ Create a simple table in your database:
       created timestamp default now(),
       done boolean default 'f'    );
 
-And an initial row:
+E incluya un registro (fila):
 
     INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Back in `code.py`, change `index.GET` to:
+Vuelva al código `code.py`, modifique `index.GET` a:
 
     def GET(self):
         todos = web.select('todo')
