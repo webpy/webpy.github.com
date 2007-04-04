@@ -93,7 +93,7 @@ whichever is first.
 
 ## Code 
 
-**NOTE:** This feature has not been implemented in the current web.py implementation of templetor.
+**NOTE: This feature has not been implemented in the current web.py implementation of templetor.**
 
     Sometimes you just need to break out the Python. 
 
