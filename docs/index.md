@@ -703,7 +703,7 @@ title: documentation
 <a name="httpserver_py"></a>## httpserver.py
 <a name="runsimple"></a>`runsimple(func, server_address=("0.0.0.0", 8080))`
    : Runs a simple HTTP server hosting WSGI app `func`. The directory `static/` 
-     is hosted statically.
+     is hosted statically. This means that URLs such as `http://127.0.0.1/static/style.css` and `http://127.0.0.1/static/ajax.js` will map to `static/style.css` and `static/ajax.js` respectively.
  
      Based on [WsgiServer][ws] from [Colin Stewart][cs].
      
