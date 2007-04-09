@@ -24,7 +24,8 @@ Here's a sample script using the new form library:
 
     class index: 
         def GET(self): 
-            form = myform() 
+            form = myform()
+            ### make sure you create a copy of the form by calling it (line above)--otherwise changes will appear globally
             print render.formtest(form)
 
         def POST(self): 
