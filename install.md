@@ -68,6 +68,15 @@ If you get error messages about not being able to import flup, install it by typ
 
 #### .. with CGI
 
+
+Add the following to `httpd.conf` or `apache2.conf`.
+
+    Alias /foo/static/ /path/to/static
+    ScriptAlias /foo/ /path/to/code.py
+
+
+#### .. with CGI using .htaccess
+
 CGI is easy to configure, but is not suitable for high-performance websites.
 Add this to your `.htaccess`:
 
@@ -145,6 +154,7 @@ For Python <2.5 do this:
     cd wsgiref
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
+
 
 Rename your `code.py` to something like `codep.py` and add:
     
