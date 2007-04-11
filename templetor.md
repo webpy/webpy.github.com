@@ -72,7 +72,8 @@ newline suppression (above).
 
 Also, we're very careful about spacing -- all the lines will render 
 with no spaces at the beginning. (Open question: what if you want 
-spaces at the beginning?) 
+spaces at the beginning?)  Also, a trailing space might break your
+code.
 
 There are a couple changes from Python: `for` and `while` now take an 
 `else` clause that gets called if the loop is never evaluated. 
