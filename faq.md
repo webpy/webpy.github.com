@@ -19,6 +19,10 @@ title: faq
 
     If they were a dictionary, they wouldn't be ordered. If it was a list of tuples, then it'd be a lot more typing.
 
+99. **How do I serve static files such as JavaScripts or images like PNG and JPG with the web.py server?**
+
+    Create a directory (also known as a folder) called `static` in the location of the script that runs the web.py server. Then place the static files you wish to server in the `static` folder. For example, the URL `http://localhost/static/logo.png` will send the image `./static/logo.png` to the client.
+
 99. **Where can I go for additional help?**
 
     Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
