@@ -51,7 +51,7 @@ Many database-backed web sites display various sorts of items -- news stories, u
 
 ### stats package
 
-Every hit to the server contains within it a wealth of information -- user IP, cookies, browser information, referrers -- but for most people, all this data is largely thrown a way. For the most part, people still use the same log analysis tools developed in the early 1990s. What about a system that used the power of modern databases to let you explore this log information in a meaningful way? Click on a particular URL and see how its traffic has changed over time, how it compares with other URLs on the site, what referrers have linked to it and what those referrers say about it. Click on a particular IP and see its entire path through the site, watching came from and where it got stuck. And so on. I've got _lots_ of ideas for this if you're interested in building it.
+Every hit to the server contains within it a wealth of information -- user IP, cookies, browser information, referrers -- but for most people, all this data is largely thrown a way. For the most part, people still use the same log analysis tools developed in the early 1990s. What about a system that used the power of modern databases to let you explore this log information in a meaningful way? Click on a particular URL and see how its traffic has changed over time, how it compares with other URLs on the site, what referrers have linked to it and what those referrers say about it. Click on a particular IP and see its entire path through the site, watching where it came from and where it got stuck. And so on. I've got _lots_ of ideas for this if you're interested in building it.
 
 ## web apps
 
