@@ -58,3 +58,11 @@ The forms support several additional attributes.  For example:
             id="nameid", #specify the id
         )
             
+In addition to validation on individual inputs, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
+
+    signup = form.Form(
+        form.Textbox('username'),
+        form.Password('password'),
+        form.Password('password_again'),
+        validators = [form.Validator("Passwords didn't match.", lambda i: i.password == i.password_again)]
+    )
