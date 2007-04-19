@@ -102,6 +102,8 @@ This tells web.py to look for templates in your templates directory. Then change
 
     name = 'Bob'    print render.index(name)
 
+('index' is the name of the template and 'name' is the argument passed to it)
+
 Visit your site and it should say hello to Bob. 
 
 **Development tip:** Add , `cache=False` to the end of your `render` call to have web.py reload your templates every time you visit the page.
