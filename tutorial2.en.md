@@ -121,6 +121,8 @@ If you wish to learn more about web.py templates, vist the [templetor page](/tem
 
 ## Databasing
 
+Note, before you can start using a database, make sure you have the appropriate database library.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgre use [psycopg2](http://initd.org/pub/software/psycopg/).
+
 Above your `web.run` line add:
 
     web.config.db_parameters = dict(dbn='postgres', user='username', pw='password', db='dbname')
