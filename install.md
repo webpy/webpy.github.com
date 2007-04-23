@@ -64,6 +64,17 @@ With some versions of lighttpd, it is important to ensure the "check-local" prop
 
 If you get error messages about not being able to import flup, install it by typing "easy_install flup" at the command line.
 
+Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable.  This will cause your fastcgi.server configuration above to look something like this:
+     
+    fastcgi.server = ( "/code.py" =>    (( "socket" => "/tmp/fastcgi.socket",
+       "bin-path" => "/path/to/root/code.py",
+       "max-procs" => 1,
+       "bin-environment" => (
+         "REAL_SCRIPT_NAME" => ""       ),
+       "check-local" => "disable"    ))
+    )
+    
+
 ### Apache
 
 #### .. with CGI
