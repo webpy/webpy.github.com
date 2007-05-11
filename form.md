@@ -57,6 +57,14 @@ The forms support several additional attributes.  For example:
             value="bob", #default value
             id="nameid", #specify the id
         )
+
+In addition to the attributes above, any html attributes can be entered in the same manner.  For example:
+    
+    myform2 = form.Form(
+        form.textbox('phonenumber',
+            size="12",
+            maxlength="12"        )
+    )
             
 In addition to validation on individual inputs, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
 
