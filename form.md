@@ -12,6 +12,8 @@ Here's a sample script using the new form library:
 
     render = web.template.render('templates/')
 
+    urls = ('/', 'index')
+
     myform = form.Form( 
         form.Textbox("boe"), 
         form.Textbox("bax", 
@@ -36,6 +38,10 @@ Here's a sample script using the new form library:
                 # form.d.boe and form['boe'].value are equivalent ways of
                 # extracting the validated arguments from the form.
                 print "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
+
+    if __name__=="__main__":
+        web.internalerror = web.debugerror
+        web.run(urls, globals(), web.reloader)
 
 And sample formtest.html: 
 
