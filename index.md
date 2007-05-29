@@ -55,7 +55,7 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 ### web.py community
 
-* **[mail list**](http://groups.google.com/group/webpy/ "web.py google group")**: home of the web.py discussion
+* **[mail list](http://groups.google.com/group/webpy/ "web.py google group")**: home of the web.py discussion
 
 * **[irc channel](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net")**: home of the web.py talk
 
