@@ -6,7 +6,7 @@ title:
 **[web.py: makes web apps](http://webpy.org/)**
 ------------------------------------------
 
-_Think about the ideal way to write a web app. Write the code to make it happen._ [**Aaron Swartz**](http://en.wikipedia.org/wiki/Aaron_Swartz)
+_Think about the ideal way to write a web app. Write the code to make it happen._ **[Aaron Swartz](http://en.wikipedia.org/wiki/Aaron_Swartz)((
 
 **Note:** Due to spam, you must now log in on the side to edit. Sorry.
 
@@ -53,15 +53,11 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 * [tricks](/tricks)
 
 
-### web.py community:
+### web.py community
 
-* [**web site**](http://webpy.org/): home of the web.py project
+* **[mail list**](http://groups.google.com/group/webpy/ "web.py google group")**: home of the web.py discussion
 
-* [**wiki**](http://webpy.infogami.com): home of the web.py community
-
-* [**mail list**](http://groups.google.com/group/webpy/ "web.py google group"): home of the web.py discussion
-
-* [**irc channel**](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net"): home of the web.py talk
+* **[irc channel](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net")**: home of the web.py talk
 
 ### web.py development:
 
