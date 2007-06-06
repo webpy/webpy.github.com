@@ -61,8 +61,8 @@ _Think about the ideal way to write a web app. Write the code to make it happen.
 
 ### web.py development:
 
-* [trac development site](http://webpy.org/track/)
-
 * [subversion repository](http://webpy.org/svn/)
+
+* [http://launchpad.net/webpy](launchpad site)
 
 * [todo](/todo)
