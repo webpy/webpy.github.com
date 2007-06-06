@@ -21,7 +21,7 @@ see [recomended setup](/recommended_setup).
 
 ## Development
 
-webpy comes with a built-in webserver.  Learn how write an application by following the [tutorial](http://webpy.infogami.com/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
+webpy comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.infogami.com/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
 
      python code.py
 
