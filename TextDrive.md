@@ -44,4 +44,4 @@ To make sure that the server starts your script back up when it reboots, go into
 
 ## Making it fast
 
-For reasons I don't quite understand lighttpd proxying to web.py is faster than running web.py directly. So if you want your server to support more serious loads, you should run a simple lighttpd instance on port 8048 and have it talk to web.py through FastCGI. [Here](http://help.textdrive.com/index.php?pg=kb.page&id=252) is a TextDrive knowledge base article on setting up lighttpd.
+For reasons I don't quite understand lighttpd proxying to web.py is faster than running web.py directly. So if you want your server to support more serious loads, you should run a simple lighttpd instance on port 8048 and have it talk to web.py through FastCGI. TextDrive has a [knowledge base article](http://help.textdrive.com/index.php?pg=kb.page&id=252) on setting up lighttpd.
