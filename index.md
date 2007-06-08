@@ -146,9 +146,9 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 ### web.py community
 
-* **[mail list](http://groups.google.com/group/webpy/ "web.py google group")**: home of the web.py discussion
+* [**mail list**](http://groups.google.com/group/webpy/ "web.py google group"): home of the web.py discussion
 
-* **[irc channel](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net")**: home of the web.py talk
+* [**irc channel**](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net"): home of the web.py talk
 
 ### web.py development:
 
