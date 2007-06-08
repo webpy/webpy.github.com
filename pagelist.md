@@ -5,4 +5,4 @@ title: Page List
 
 # Page List
 
-{{PageList("/")}}
+{{PageList()}}
