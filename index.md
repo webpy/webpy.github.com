@@ -3,12 +3,103 @@ layout: default
 title: 
 ---
 
-**[web.py: makes web apps](http://webpy.org/)**
-------------------------------------------
+## About
 
-_Think about the ideal way to write a web app. Write the code to make it happen._ **[Aaron Swartz](http://en.wikipedia.org/wiki/Aaron_Swartz)**
+**web.py** is a web framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
+    
+      import web
+            
+      urls = (
+          '/(.*)', 'hello'
+      )
+    
+      class hello:        
+          def GET(self, name):
+              i = web.input(times=1)
+              if not name: name = 'world'
+              for c in xrange(int(i.times)): print 'Hello,', name+'!'
+    
+      if __name__ == "__main__": web.run(urls, globals())
+            
 
-**Note:** Due to spam, you must now log in on the side to edit. Sorry.
+A complete web.py application
+
+## Get Started
+
+web.py 0.21 was released 2007-05-28: [web.py-0.21.tar.gz][16]
+
+   [16]: web.py-0.21.tar.gz
+
+To always have the latest version of web.py, run:
+    
+    svn co http://webpy.org/svn/trunk/web/
+
+Upgrading from an older version? Be sure to [read the upgrade guide][17].
+
+   [17]: http://webpy.infogami.com/upgrade_to_point2
+
+## Who uses web.py?
+
+[![reddit mascot][18]][19]
+
+   [18]: static/redditino.png
+   [19]: http://reddit.com/
+
+[reddit.com][20], one of the top 1000 sites according to Alexa, uses web.py to serve its millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explains founder Steve Huffman. (Disclosure: web.py creator Aaron Swartz was also a founder of reddit.)
+
+   [20]: http://reddit.com/
+
+[Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
+
+   [21]: http://yandex.ru
+
+[LShift][22] has used web.py to build websites for [Expro][23] and [publisher Dorling Kindersley][24]. "web.py allows us to do what we do best," they report. "It does the webapp thing brilliantly, and without requiring us to compromise on flexibility and originality."
+
+   [22]: http://www.lshift.net/
+   [23]: http://exproretail.com/
+   [24]: http://travel.dk.com/
+
+## Buzz
+
+"We completed our server rewrite a few days ago with web.py and it was everything we could have wished for."  
+- Sam Hsiung, [YouOS][25]
+
+   [25]: http://www.youos.com/
+
+"Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."  
+- Adam Atlas
+
+"very nicely written and concise (not to mention it's written by Aaron Swartz, whose coding skills are very trustable), and doesn't get in my way"   
+- Jonas Galvez, Blogamundo [#][26]
+
+   [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
+
+"the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
+- [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) with it
+
+   [27]: http://delaunay.org/antoine/
+   [28]: http://delaunay.org/antoine/i
+   [29]: http://hg.delaunay.org/hacking
+
+"Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
+- Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]
+
+   [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
+
+"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"   
+- Guido van Rossum, creator of Python [#][31]
+
+   [31]: http://www.artima.com/weblogs/viewpost.jsp?thread=146503
+
+"suffice to say I think Aaron is headed in the right direction."   
+- Harry Fuecks: [a simple wiki with web.py][32]
+
+   [32]: http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/
+
+"a very fascinating moment for me. The feelings just like the first time I wrote my php script ... it sure have let me learn python in the fun way. Good work aaron !"   
+- Kamal [simple blog in webpy, learning python the fun way][33]
+
+   [33]: http://www.k4ml.com/node/165
 
 ### web.py documentation:
 
