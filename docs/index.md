@@ -6,6 +6,7 @@ title: documentation
 # documentation
 
 <a name="debugerror_py"></a>## debugerror.py
+
 <a name="djangoerror"></a>`djangoerror()`
 <a name="debugerror"></a>`debugerror()`
    : A replacement for `internalerror` that presents a nice page with lots
@@ -15,6 +16,7 @@ title: documentation
      designed by [Wilson Miner](http://wilsonminer.com/).)
 
 <a name="request_py"></a>## request.py
+
 <a name="handle"></a>`handle(mapping, fvars=None)`
    : Call the appropriate function based on the url to function mapping in `mapping`.
      If no module for the function is specified, look up the function in `fvars`. If
@@ -62,6 +64,7 @@ title: documentation
      function.
 
 <a name="wsgi_py"></a>## wsgi.py
+
 <a name="runfcgi"></a>`runfcgi(func, addr=('localhost', 8000))`
    : Runs a WSGI function as a FastCGI server.
 
@@ -73,6 +76,7 @@ title: documentation
      as appropriate based on context and `sys.argv`.
 
 <a name="template_py"></a>## template.py
+
 <a name="class ParseError"></a>`class ParseError(Exception): pass class Parser:`
 <a name="class TemplateParser"></a>`class TemplateParser(Parser)`
 <a name="class Stowage"></a>`class Stowage(storage)`
@@ -84,9 +88,13 @@ title: documentation
 <a name="class render"></a>`class render`
 <a name="frender"></a>`frender(fn, *a, **kw)`
 <a name="test"></a>`test()`
+
 <a name="__init___py"></a>## __init__.py
+
 <a name="main"></a>`main()`
+
 <a name="http_py"></a>## http.py
+
 <a name="prefixurl"></a>`prefixurl(base='')`
    : Sorry, this function is really difficult to explain.
      Maybe some other time.
@@ -136,6 +144,7 @@ title: documentation
    : Outputs basic profiling information at the bottom of each response.
 
 <a name="cheetah_py"></a>## cheetah.py
+
 <a name="upvars"></a>`upvars(level=2)`
    : Guido van Rossum sez: don't use this function.
 
@@ -160,7 +169,9 @@ title: documentation
      Requires [Cheetah](http://cheetahtemplate.org/).
 
 <a name="class WebSafe"></a>`class WebSafe(Filter)`
+
 <a name="utils_py"></a>## utils.py
+
 <a name="class Storage"></a>`class Storage(dict)`
    : A Storage object is like a dictionary except `obj.foo` can be used
      in addition to `obj['foo']`.
@@ -462,6 +473,7 @@ title: documentation
      (requires [markdown.py](http://www.freewisdom.org/projects/python-markdown/))
 
 <a name="webapi_py"></a>## webapi.py
+
 <a name="badrequest"></a>`badrequest()`
    : Return a `400 Bad Request` error.
 
@@ -518,6 +530,7 @@ title: documentation
    : Returns a WSGI-compatible function from a webpy-function.
 
 <a name="form_py"></a>## form.py
+
 <a name="attrget"></a>`attrget(obj, attr, value=None)`
 <a name="class Form"></a>`class Form`
 <a name="class Input"></a>`class Input(object)`
@@ -531,7 +544,10 @@ title: documentation
 <a name="class Hidden"></a>`class Hidden(Input)`
 <a name="class Validator"></a>`class Validator`
 <a name="class regexp"></a>`class regexp(Validator)`
+
+
 <a name="db_py"></a>## db.py
+
 <a name="class UnknownParamstyle"></a>`class UnknownParamstyle(Exception)`
    : raised for unsupported db paramstyles
      
@@ -645,7 +661,9 @@ title: documentation
      
          >>> name = 'Joe'         >>> delete('foo', where='name = $name', vars=locals(), _test=True)
          <sql: "DELETE FROM foo WHERE name = 'Joe'">
+
 <a name="net_py"></a>## net.py
+
 <a name="validipaddr"></a>`validipaddr(address)`
    : returns True if `address` is a valid IPv4 address
 
@@ -700,7 +718,9 @@ title: documentation
          >>> websafe("<'&\\">")
          '<'&">'         >>> websafe(None)
          ''
+
 <a name="httpserver_py"></a>## httpserver.py
+
 <a name="runsimple"></a>`runsimple(func, server_address=("0.0.0.0", 8080))`
    : Runs a simple HTTP server hosting WSGI app `func`. The directory `static/` 
      is hosted statically. This means that URLs such as `http://127.0.0.1/static/style.css` and `http://127.0.0.1/static/ajax.js` will map to `static/style.css` and `static/ajax.js` respectively.
