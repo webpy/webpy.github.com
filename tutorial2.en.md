@@ -67,7 +67,6 @@ web.py also has a few tools to help us with debugging. Before the 'if __name__' 
 This will give you more helpful error messages. And on the last line add `web.reloader` so that it reads:
 
     if __name__ == "__main__": web.run(urls, globals(), web.reloader)
-
     
 This tells web.py to use the web.reloader "middleware" (middleware is a wrapper function to add some functionality to your web server) which reloads your files whenever you edit them, so that you can see the changes in your web browser right away. (For some serious changes, though, you'll still have to restart the server.) You'll probably want to take this out when you make your site public, but it's great while developing. There's also `web.profiler`, which outputs information about how much time each function took at the end of each web page, so that you can make your code faster.
 
@@ -100,7 +99,8 @@ Now go back to `code.py`. Under the first line, add:
 
 This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
 
-    name = 'Bob'    print render.index(name)
+    name = 'Bob'    
+    print render.index(name)
 
 ('index' is the name of the template and 'name' is the argument passed to it)
 
