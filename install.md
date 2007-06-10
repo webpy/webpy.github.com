@@ -48,7 +48,9 @@ FastCGI with lighttpd is the recommended way of using web.py in production. [red
 Your lighttpd config can be something like:
     
      server.modules = ("mod_fastcgi", "mod_rewrite")
-     server.document-root = "/path/to/root/"     fastcgi.server = ( "/code.py" =>     (( "socket" => "/tmp/fastcgi.socket",
+     server.document-root = "/path/to/root/"     
+     fastcgi.server = ( "/code.py" =>     
+     (( "socket" => "/tmp/fastcgi.socket",
         "bin-path" => "/path/to/root/code.py",
         "max-procs" => 1
      ))
