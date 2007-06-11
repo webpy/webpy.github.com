@@ -216,7 +216,8 @@ title: documentation
          >>> storify({'a':storage(value=1)}).a
          1
          >>> storify({'a':storage(value=1)}, a={}).a
-         <Storage {'value': 1}>         >>> storify({}, a={}).a
+         <Storage {'value': 1}>
+         >>> storify({}, a={}).a
          {}
 
 <a name="rstrips"></a>`rstrips(text, remove)`
