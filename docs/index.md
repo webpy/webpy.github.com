@@ -278,7 +278,8 @@ title: documentation
      
          >>> t, m = re_subm('g(oo+)fball', r'f\\1lish', 'goooooofball')
          >>> t
-         'foooooolish'         >>> m.groups()
+         'foooooolish'
+         >>> m.groups()
          ('oooooo',)
 
 <a name="group"></a>`group(seq, size)`
@@ -351,7 +352,8 @@ title: documentation
    : Returns `lst[ind]` if it exists, `default` otherwise.
      
          >>> listget(['a'], 0)
-         'a'         >>> listget(['a'], 1)
+         'a'
+         >>> listget(['a'], 1)
          >>> listget(['a'], 1, 'b')
          'b'
 <a name="intget"></a>`intget(integer, default=None)`
@@ -369,7 +371,8 @@ title: documentation
          >>> from datetime import datetime, timedelta
          >>> d = datetime(1970, 5, 1)
          >>> datestr(d, now=d)
-         '0 microseconds ago'         >>> for t, v in {
+         '0 microseconds ago'
+         >>> for t, v in {
          ...   timedelta(microseconds=1): '1 microsecond ago',
          ...   timedelta(microseconds=2): '2 microseconds ago',
          ...   -timedelta(microseconds=1): '1 microsecond from now',
@@ -382,8 +385,10 @@ title: documentation
          ... }.iteritems():
          ...     assert datestr(d, now=d+t) == v
          >>> datestr(datetime(1970, 1, 1), now=d)
-         'January  1'         >>> datestr(datetime(1969, 1, 1), now=d)
-         'January  1, 1969'         >>> datestr(datetime(1970, 6, 1), now=d)
+         'January  1'
+         >>> datestr(datetime(1969, 1, 1), now=d)
+         'January  1, 1969'
+         >>> datestr(datetime(1970, 6, 1), now=d)
          'June  1, 1970'
 <a name="numify"></a>`numify(string)`
    : Removes all non-digit characters from `string`.
@@ -403,7 +408,8 @@ title: documentation
    : Captures everything `func` prints to stdout and returns it instead.
      
          >>> def idiot():
-         ...     print "foo"         >>> capturestdout(idiot)()
+         ...     print "foo"
+         >>> capturestdout(idiot)()
          'foo\\n'     
      **WARNING:** Not threadsafe!
 
@@ -457,11 +463,14 @@ title: documentation
    : Converts an integer to base 36 (a useful scheme for human-sayable IDs).
      
          >>> to36(35)
-         'z'         >>> to36(119292)
-         '2k1o'         >>> int(to36(939387374), 36)
+         'z'
+         >>> to36(119292)
+         '2k1o'
+         >>> int(to36(939387374), 36)
          939387374
          >>> to36(0)
-         '0'         >>> to36(-393)
+         '0'
+         >>> to36(-393)
          Traceback (most recent call last):
              ... 
          ValueError: must supply a positive integer
@@ -571,8 +580,10 @@ title: documentation
    : converts `obj` to its proper SQL version
      
          >>> sqlify(None)
-         'NULL'         >>> sqlify(True)
-         "'t'"         >>> sqlify(3)
+         'NULL'
+         >>> sqlify(True)
+         "'t'"
+         >>> sqlify(3)
          '3'
 <a name="class SQLQuery"></a>`class SQLQuery`
    : You can pass this sort of thing as a clause in any db function.
@@ -609,14 +620,17 @@ title: documentation
      instead of interpolating.
      
          >>> query("SELECT * FROM foo", _test=True)
-         <sql: 'SELECT * FROM foo'>         >>> query("SELECT * FROM foo WHERE x = $x", vars=dict(x='f'), _test=True)
-         <sql: "SELECT * FROM foo WHERE x = 'f'">         >>> query("SELECT * FROM foo WHERE x = " + sqlquote('f'), _test=True)
+         <sql: 'SELECT * FROM foo'>
+         >>> query("SELECT * FROM foo WHERE x = $x", vars=dict(x='f'), _test=True)
+         <sql: "SELECT * FROM foo WHERE x = 'f'">
+         >>> query("SELECT * FROM foo WHERE x = " + sqlquote('f'), _test=True)
          <sql: "SELECT * FROM foo WHERE x = 'f'">
 <a name="sqllist"></a>`sqllist(lst)`
    : Converts the arguments for use in something like a WHERE clause.
      
          >>> sqllist(['a', 'b'])
-         'a, b'         >>> sqllist('a')
+         'a, b'
+         >>> sqllist('a')
          'a'
 <a name="sqlors"></a>`sqlors(left, lst)`
    : `left is a SQL clause like `tablename.arg = ` 
@@ -625,15 +639,19 @@ title: documentation
      for each item in the lst.
  
          >>> sqlors('foo = ', [])
-         <sql: '2+2=5'>         >>> sqlors('foo = ', [1])
-         <sql: 'foo = 1'>         >>> sqlors('foo = ', 1)
-         <sql: 'foo = 1'>         >>> sqlors('foo = ', [1,2,3])
+         <sql: '2+2=5'>
+         >>> sqlors('foo = ', [1])
+         <sql: 'foo = 1'>
+         >>> sqlors('foo = ', 1)
+         <sql: 'foo = 1'>
+         >>> sqlors('foo = ', [1,2,3])
          <sql: '(foo = 1 OR foo = 2 OR foo = 3)'>
 <a name="sqlwhere"></a>`sqlwhere(dictionary, grouping=' AND ')`
    : Converts a `dictionary` to an SQL WHERE clause `SQLQuery`.
      
          >>> sqlwhere({'cust_id': 2, 'order_id':3})
-         <sql: 'order_id = 3 AND cust_id = 2'>         >>> sqlwhere({'cust_id': 2, 'order_id':3}, grouping=', ')
+         <sql: 'order_id = 3 AND cust_id = 2'>
+         >>> sqlwhere({'cust_id': 2, 'order_id':3}, grouping=', ')
          <sql: 'order_id = 3, cust_id = 2'>
 <a name="select"></a>`select(tables, vars=None, what='*', where=None, order=None, group=None, limit=None, offset=None, _test=False):`
    : Selects `what` from `tables` with clauses `where`, `order`, 
@@ -641,7 +659,8 @@ title: documentation
      Otherwise, each clause can be a SQLQuery.
      
          >>> select('foo', _test=True)
-         <sql: 'SELECT * FROM foo'>         >>> select(['foo', 'bar'], where="foo.bar_id = bar.id", limit=5, _test=True)
+         <sql: 'SELECT * FROM foo'>
+         >>> select(['foo', 'bar'], where="foo.bar_id = bar.id", limit=5, _test=True)
          <sql: 'SELECT * FROM foo, bar WHERE foo.bar_id = bar.id LIMIT 5'>
 <a name="insert"></a>`insert(tablename, seqname=None, _test=False, **values)`
    : Inserts `values` into `tablename`. Returns current sequence ID.
@@ -654,13 +673,15 @@ title: documentation
    : Update `tables` with clause `where` (interpolated using `vars`)
      and setting `values`.
      
-         >>> joe = 'Joseph'         >>> update('foo', where='name = $joe', name='bob', age=5,
+         >>> joe = 'Joseph'
+         >>> update('foo', where='name = $joe', name='bob', age=5,
          ...   vars=locals(), _test=True)
          <sql: "UPDATE foo SET age = 5, name = 'bob' WHERE name = 'Joseph'">
 <a name="delete"></a>`delete(table, where=None, using=None, vars=None, _test=False)`
    : Deletes from `table` with clauses `where` and `using`.
      
-         >>> name = 'Joe'         >>> delete('foo', where='name = $name', vars=locals(), _test=True)
+         >>> name = 'Joe'
+         >>> delete('foo', where='name = $name', vars=locals(), _test=True)
          <sql: "DELETE FROM foo WHERE name = 'Joe'">
 
 <a name="net_py"></a>## net.py
@@ -678,7 +699,8 @@ title: documentation
    : returns either (ip_address, port) or "/path/to/socket" from string_
      
          >>> validaddr('/path/to/socket')
-         '/path/to/socket'         >>> validaddr('8000')
+         '/path/to/socket'
+         >>> validaddr('8000')
          ('0.0.0.0', 8000)
          >>> validaddr('127.0.0.1')
          ('127.0.0.1', 8080)
@@ -693,8 +715,10 @@ title: documentation
    : Quotes a string for use in a URL.
      
          >>> urlquote('://?f=1&j=1')
-         '%3A//%3Ff%3D1%26j%3D1'         >>> urlquote(None)
-         ''         >>> urlquote(u'\u203d')
+         '%3A//%3Ff%3D1%26j%3D1'
+         >>> urlquote(None)
+         ''
+         >>> urlquote(u'\u203d')
          '%E2%80%BD'
 <a name="httpdate"></a>`httpdate(date_obj)`
    : Formats a datetime object for use in HTTP headers.
@@ -717,7 +741,8 @@ title: documentation
    : Converts `val` so that it's safe for use in HTML.
      
          >>> websafe("<'&\\">")
-         '<'&">'         >>> websafe(None)
+         '<'&">'
+         >>> websafe(None)
          ''
 
 <a name="httpserver_py"></a>## httpserver.py
