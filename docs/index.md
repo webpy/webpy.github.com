@@ -107,6 +107,7 @@ title: documentation
    : Outputs a `Last-Modified` header for `datetime`.
 
 <a name="modified"></a>`modified(date=None, etag=None)`
+
 <a name="redirect"></a>`redirect(url, status='301 Moved Permanently')`
    : Returns a `status` redirect to the new URL. 
      `url` is joined with the base URL so that things like 
