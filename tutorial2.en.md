@@ -175,12 +175,16 @@ Now add another class:
 
 (Notice how we're using `POST` for this?)
 
-`web.input` gives you access to any variables the user submitted through a form. `web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that ID.
+`web.input` gives you access to any variables the user submitted through a form. In order to access dat from multiple identically named items in a list format (e.g.: a series of checkboxes all with the attribute name="name") use:
+
+    post_data=web.input(name=[])
+
+`web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that ID.
 
 Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.rollback()` rolls it back. `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
 
 `web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
 
-You can find the full details on these and all the web.py functions in [the documentation](http://webpy.infogami.com/docs).
+You can find the full details on these and all the web.py functions in [the documentation](http://new.webpy.org/docs).
 
 This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
