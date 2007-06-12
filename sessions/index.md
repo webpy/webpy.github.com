@@ -106,7 +106,7 @@ The main session object will always be created as webpy starts. However the user
                     pass
     
             def retreive( self, id ):
-                    '''return ( id, ip, data ) or maybe dictionary'''
+                    '''return ( id, ip, data, time ) or maybe dictionary'''
                     pass
     
             def remove( self, id ):
