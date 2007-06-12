@@ -7,6 +7,9 @@ title: DBHandler for Sessions
 
 # DBHandler
 
+The DBHandler will provide Handler-interface to db storage.
+It will store pickled data, session id & client's IP address in db. Also retreiving & removing requested data by id will be implemented. On request the DBHandler will perform a generall clean up -> delete old session rows (cleanup(timeout)).
+
 
     class Handler:
             '''abstract handler class'''
@@ -21,7 +24,7 @@ title: DBHandler for Sessions
                     pass
     
             def retreive( self, id ):
-                    '''return ( id, ip, data ) or maybe dictionary'''
+                    '''return ( id, ip, data, time ) or maybe dictionary'''
                     pass
     
             def remove( self, id ):
@@ -34,12 +37,6 @@ title: DBHandler for Sessions
     
             def clean( self, timeout ):
                     '''removes all expired sessions'''
-                    pass
-    # class
-    
-    def FileHandler( Handler ):
-            def __init__( self ):
-                    '''takes dir where to create session files'''
                     pass
     # class
 
