@@ -80,3 +80,13 @@ In addition to validation on individual inputs, form.py supports entire form val
         form.Password('password_again'),
         validators = [form.Validator("Passwords didn't match.", lambda i: i.password == i.password_again)]
     )
+
+Once the form data has been posted, it can easily be put into a database (if the database scheme has names consistent with your webpy form).  For example:
+
+    def POST(self):
+        f = myform()
+        if f.validates():
+            web.insert('data_table', **f.d)
+        #don't do web.insert('data_table', **web.input()) because malicious data could be submitted too
+        else:
+            render.foo(f)
