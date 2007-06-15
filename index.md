@@ -40,11 +40,6 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 ## Who uses web.py?
 
-[![reddit mascot][18]][19]
-
-   [18]: static/redditino.png
-   [19]: http://reddit.com/
-
 [reddit.com][20], one of the top 1000 sites according to Alexa, uses web.py to serve its millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explains founder Steve Huffman. (Disclosure: web.py creator Aaron Swartz was also a founder of reddit.)
 
    [20]: http://reddit.com/
