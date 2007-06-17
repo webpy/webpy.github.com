@@ -30,7 +30,10 @@ The main session object will always be created as webpy starts. However the user
         handler : DBHandler()
     }
 
-    web.config.handler_parameters : { file_dir : '/tmp' } # optional handler settings
+    web.config.handler_parameters : {
+        file_dir : '/tmp',
+        db_table : 'session_data' # table name
+    } # optional handler settings
 
 
     
