@@ -19,13 +19,13 @@ The main session object will always be created as webpy starts. However the user
     
     # settings
     web.config.session_parameters = {
-        session_timeout : 600,
-        session_id_seed : 'web.py',
+        timeout : 600,
+        id_seed : 'web.py',
         regenerate_id : True, # boolean, on every request regenerate id and set again cookie
         generator : False, # if False, use default generator
 
         ignore_change_ip : True, # boolean, if the pair ( id, ip ) doesn't match the db, then fail/raise exception/...
-        ignore_session_expiration : False,
+        ignore_expiration : False,
 
         handler : DBHandler()
     }
