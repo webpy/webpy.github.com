@@ -130,7 +130,7 @@ The main session object will always be created as webpy starts. However the user
     # class
 
 # Notes
- * data will be stored in Session object member variable _data and passed as "pickled" (ASCII protocol) variables to Handler object
+ * data will be stored in Session object member variable _data and passed as Storage variables to Handler object (internally in a Handler class they will be stored as "pickled" data)
  * session id will be just a hash of some variables ([semi]random) and a seed
  * Session object will use web.ctx.session_parameters
  * DBHandler will need an extra table in the db
