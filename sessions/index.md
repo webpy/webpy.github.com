@@ -27,10 +27,11 @@ The main session object will always be created as webpy starts. However the user
         ignore_change_ip : True, # boolean, if the pair ( id, ip ) doesn't match the db, then fail/raise exception/...
         ignore_session_expiration : False,
 
-        handler : DBHandler(),
-
-        handler_parameters : { file_dir : '/tmp' } # optional handler settings
+        handler : DBHandler()
     }
+
+    web.config.handler_parameters : { file_dir : '/tmp' } # optional handler settings
+
 
     
     class Session( Storage ):
