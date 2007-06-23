@@ -508,9 +508,15 @@ title: documentation
    : Appends `string_` to the response.
 
 <a name="flush"></a>`flush()`
+
 <a name="input"></a>`input(*requireds, **defaults)`
    : Returns a `storage` object with the GET and POST arguments. 
      See `storify` for how `requireds` and `defaults` work.
+
+     Where list is a set of checkboxes names list and file is an uploaded file:
+     >>> post_data = web.input(list=[], file={})
+     <Storage {field:value, list:[value1, value2], file:FieldStorage('file', 'backgroud_10.jpg','data'}}>
+     
 
 <a name="data"></a>`data()`
    : Returns the data sent with the request.
