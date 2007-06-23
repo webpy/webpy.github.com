@@ -513,9 +513,9 @@ title: documentation
    : Returns a `storage` object with the GET and POST arguments. 
      See `storify` for how `requireds` and `defaults` work.
 
-     Where list is a set of checkboxes names list and file is an uploaded file:
+     Where `list` is a set of checkboxes with identical `name`s list and `file` is an uploaded file:
      >>> post_data = web.input(list=[], file={})
-     <Storage {field:value, list:[value1, value2], file:FieldStorage('file', 'backgroud_10.jpg','data'}}>
+     <Storage {field:value, list:[value1, value2], file:FieldStorage('file', 'filename','filedata'}}>
      
 
 <a name="data"></a>`data()`
