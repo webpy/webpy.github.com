@@ -55,4 +55,6 @@ TODO:
  * Session object will use web.ctx.session_parameters
  * DBHandler will need an extra table in the db
  * [DBHandler specs](/sessions/dbhandler)
+ * [prototype](/sessions/prototype)
+ * [Google Summer of Code project](/sessions/gsoc)
 
