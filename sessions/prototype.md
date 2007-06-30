@@ -15,6 +15,7 @@ title: Prototype
     
     # settings
     web.config.session_parameters = {
+        use_flag : False, # will the session be used? if not then the Session object will not be created
         timeout : 600,
         id_seed : 'web.py',
         regenerate_id : True, # boolean, on every request regenerate id and set again cookie
@@ -26,10 +27,10 @@ title: Prototype
         handler : DBHandler()
     }
 
-    web.config.handler_parameters : {
+    web.config.handler_parameters = { # optional handler settings
         file_dir : '/tmp',
         db_table : 'session_data' # table name
-    } # optional handler settings
+    }
 
 
     
