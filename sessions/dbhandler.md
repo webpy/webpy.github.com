@@ -44,7 +44,7 @@ It will store pickled data, session id & client's IP address in db. Also retreiv
  * DBHandler will need an extra table in the db (where <name> == web.config.handler_parameters.db_table):
 
       CREATE TABLE <name> (
-        id CHAR(41) UNIQUE NOT NULL,
+        id CHAR(129) UNIQUE NOT NULL,
         ip CHAR(16) NOT NULL,
         touched int NOT NULL,
         data TEXT
