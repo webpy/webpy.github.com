@@ -14,7 +14,16 @@ The session functionality will rely on a two-layer implementation: Session -> Ha
 
 ## Implementation details
 
-The Session class is a derivate of Storage. It will include these "public" methods:
+### Session class
+The Session class is a derivate of Storage.
+
+#### Private variables
+ * _generator - reference to user-supplied "unique random number generator" or just to default session generator function
+ * _handler - reference to user-choosen Handler
+ * _id - current session id
+ * _data - internal Storage object for session data
+
+#### Public methods
 
  * start() - it will start the session, regenerate id, set cookies, retreive data if the session isn't new; it will call \_identity(), \_verify(), \_generator(), \_retreive()
  * get_id() - it will return current session id
@@ -22,7 +31,7 @@ The Session class is a derivate of Storage. It will include these "public" metho
  * save() - it will save session data using the _store()
  * destroy() - it will remove the session (cookies & data); it will call _remove()
 
-The Session class will include these "private" methods:
+#### Private methods
 
  * _generate\_id() - it will be an implicit session id generator; it will probably _only_ make a hash of ip, time, seed, microtime
  * _identify() - it will identify the session id (through client cookie                s)
@@ -31,30 +40,38 @@ The Session class will include these "private" methods:
  * _retreive() - a simple wrapper around Handler.retreive(); data will be awaited **unpickled**
  * _remove() - a simple wrapper around Handler.remove()
 
-The Session class will depend on web.config.session_parameters to better specify developer requirements:
+#### Main session parameters
+web.config.session_parameters - Storage object:
 
+ * cookie_name - name of the cookie which will transfer the session id; default value: 'webpy'
  * timeout - number of second after a not-updated session will be considered expired; default value: 600
  * id_seed - a seed-string that will be used in the default Session._generator(); default value: 'web.py'
  * regenerate_id - should the session id be regenerated and set again with a cookie on every request?; default value: True
  * generator - a function to generate _random_ session ids, if False, the implicit generator (Session.\_generate\_id()) will be used; default value: False
  * ignore_change_ip - if the pair ( id, ip ) doesn't match the retreived data from Handler objcet, then fail/raise exception/...; default value: False
  * ignore_expiration - should the session expiration be ignored?; default value: False
- * handler - a Handler-like object to provide persistence for Session class; default value: DBHandler()
+ * handler - a Handler-like object to provide persistence for Session class; default value: 'db'
 
-TODO:
-    web.config.handler_parameters : {
-        file_dir : '/tmp',
-        db_table : 'session_data' # table name
-    } # optional handler settings
-  Handler
-  DBHandler
+### Handler class
+An abstract class which defines a interface to store/retreive/remove session data.
+
+#### Public methods
+ * store() - it will store the session data (& pickle them before that); if the argument _old\_id_ is set, it will look for an already storaged session data and if they are present overwrite them or else store as new
+ * retreive() - it will retreive storaged data, if there aren't any for given _id_, it will return empty Storage object
+ * remove() - it will remove storaged data for given _id_
+ * clean() - optional function (may not be available for any Handler implementation [CookieHandler]), it will remove all session data, which been updated longer then before given _timeout_
+
+### Handler parameters
+web.config.handler_parameters as Storage object will include additional parameters that are necessary for various Handlers
+
+ * file_dir - directory used to store session data (by FileHandler); default value: '/tmp'
+ * db_table - table storing session data (used by DBHandler); default value: 'session_data'
 
 ## Notes
  * data will be stored in Session object member variable _data and passed as Storage variables to Handler object (internally in a Handler class they will be stored as "pickled" data)
  * session id will be just a hash of some variables ([semi]random) and a seed
  * Session object will use web.ctx.session_parameters
  * DBHandler will need an extra table in the db
- * [DBHandler specs](/sessions/dbhandler)
- * [prototype](/sessions/prototype)
+ * [DBHandler](/sessions/dbhandler)
  * [Google Summer of Code project](/sessions/gsoc)
 
