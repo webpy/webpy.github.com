@@ -48,7 +48,7 @@ web.config.session_parameters - Storage object:
  * id_seed - a seed-string that will be used in the default Session._generator(); default value: 'web.py'
  * regenerate_id - should the session id be regenerated and set again with a cookie on every request?; default value: True
  * generator - a function to generate _random_ session ids, if False, the implicit generator (Session.\_generate\_id()) will be used; default value: False
- * ignore_change_ip - if the pair ( id, ip ) doesn't match the retreived data from Handler objcet, then fail/raise exception/...; default value: False
+ * ignore_change_ip - if the pair ( _id_, _ip_) doesn't match the retreived data from Handler objcet, then fail/raise exception/...; default value: False
  * ignore_expiration - should the session expiration be ignored?; default value: False
  * handler - a Handler-like object to provide persistence for Session class; default value: 'db'
 
@@ -57,7 +57,7 @@ An abstract class which defines a interface to store/retreive/remove session dat
 
 #### Public methods
  * store() - it will store the session data (& pickle them before that); if the argument _old\_id_ is set, it will look for an already storaged session data and if they are present overwrite them or else store as new
- * retreive() - it will retreive storaged data, if there aren't any for given _id_, it will return empty Storage object
+ * retreive() - it will retreive storaged data *unpickled* in a Storage object ( _id_, _ip_, _time_, _data_), if there aren't any for given _id_, it will return empty Storage object
  * remove() - it will remove storaged data for given _id_
  * clean() - optional function (may not be available for any Handler implementation [CookieHandler]), it will remove all session data, which been updated longer then before given _timeout_
 
