@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Google Summer of Code: web.py - Session managment
+title: Google Summer of Code: web.py - Session management
 ---
 
-# Google Summer of Code: web.py - Session managment
+# Google Summer of Code: web.py - Session management
 
 ## Schedule
  * May 28 - June 9 (1st & 2nd week): getting familiar with SVN/Bazaar, internals of web.py, flup and jonpy's sessions; creating a DDL for storing sessions
