@@ -44,6 +44,7 @@ The Session class is a derivate of Storage.
 web.config.session_parameters - Storage object:
 
  * cookie_name - name of the cookie which will transfer the session id; default value: 'webpy'
+ * cookie_domain - cookie domain for the setcookie() when setting session id cookie; default value: None
  * timeout - number of second after a not-updated session will be considered expired; default value: 600
  * id_seed - a seed-string that will be used in the default Session._generator(); default value: 'web.py'
  * regenerate_id - should the session id be regenerated and set again with a cookie on every request?; default value: True
