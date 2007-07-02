@@ -16,7 +16,7 @@ It will store pickled data, session id & client's IP address in db. Also retreiv
             def __init__( self ):
                     pass
     
-            def store( self, ip, id, data ):
+            def store( self, id, ip, data ):
                     '''takes
                             ip - client ip, probably number
                             id - string
