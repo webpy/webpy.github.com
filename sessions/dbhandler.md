@@ -22,7 +22,7 @@ DBHandler is a derivate of Handler.
  * clean() - optional function (may not be available for any Handler implementation [CookieHandler]), it will remove all session data, which been updated longer then before given timeout (DELETE)
 
 ### Requirements
-DBHandler will need an extra table in the db (where <name> == web.config.handler_parameters.db_table):
+DBHandler will need an extra table in the db (where \<name\> == web.config.handler_parameters.db_table):
 
       CREATE TABLE <name> (
         id CHAR(129) UNIQUE NOT NULL,
