@@ -9,7 +9,7 @@ title: DBHandler for Sessions
 
 ## Summary
 The DBHandler will provide Handler-interface to db storage.
-It will store pickled data, session id & client's IP address in db. Also retreiving & removing requested data by id will be implemented. On request the DBHandler will perform a generall clean up -> delete old session rows (cleanup(timeout)).
+It will store pickled data, session id & client's IP address in db. Also retreiving & removing requested data by id will be implemented. On request the DBHandler will perform a generall clean up -> delete old session rows (clean(timeout)).
 
 ## Implementation details
 
