@@ -15,12 +15,13 @@ The session functionality will rely on a two-layer implementation: Session -> Ha
 ## Implementation details
 
 ### Session class
-The Session class is a derivate of Storage.
+The Session class is a derivate of Storage. It will store as a dict anyhow called variable, but through the Storage interface only variables not named as internal private variables.
 
 #### Private variables
  * _generator - reference to user-supplied "unique random number generator" or just to default session generator function
  * _handler - reference to user-choosen Handler
  * _id - current session id
+ * _old_id - used if the sesion regenerates id
  * _data - internal Storage object for session data
 
 #### Public methods
