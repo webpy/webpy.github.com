@@ -5,7 +5,7 @@ title: DBHandler for Sessions
 
 # DBHandler for Sessions
 
-# DBHandler
+# Specification
 
 ## Summary
 The DBHandler will provide Handler-interface to db storage.
