@@ -77,3 +77,6 @@ web.config.handler_parameters as Storage object will include additional paramete
  * [DBHandler](/sessions/dbhandler)
  * [Google Summer of Code project](/sessions/gsoc)
 
+# Example
+[soon](/sessions/example)
+
