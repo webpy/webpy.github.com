@@ -147,7 +147,7 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 ### web.py development:
 
-* [subversion repository](http://webpy.org/svn/)
+* [subversion repository](http://webpy.org/svn/) | [follow commits](http://groups.google.com/group/webpy-commits/)
 
 * [launchpad site](http://launchpad.net/webpy)
 
