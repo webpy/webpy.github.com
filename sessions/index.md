@@ -76,8 +76,8 @@ web.config.handler_parameters as Storage object will include additional paramete
  * DBHandler will need an extra table in the db
  * [DBHandler](/sessions/dbhandler)
  * [Google Summer of Code project](/sessions/gsoc)
- * [bazaar branch](http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch)
+ * bazaar branch: http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch
 
 # Example
-[test](/sessions/example)
+[try out](/sessions/example)
 
