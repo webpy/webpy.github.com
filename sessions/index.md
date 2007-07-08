@@ -5,6 +5,10 @@ title: Sessions (GSoC)
 
 # Sessions (GSoC)
 
+# Usage
+[example](/sessions/example)
+
+
 # Specification
 ## Summary
 The main session object will be created depending on the configuration. However the user/developer will choose it's usage. If needed the user will call start() method and there by inicializing handlers, variables from db-config like variables. The session will be implemented as storage object. Session identification will mostly rely on client cookies (optionally also on client IP address). All data will be stored/retrieved through handler object (DB-, file-, cookie?- based). Save/commit & destroy methods will be created. The user will have the option to set various option including expiration timeout, handler, session id generator (a default will be provided).
@@ -77,7 +81,3 @@ web.config.handler_parameters as Storage object will include additional paramete
  * [DBHandler](/sessions/dbhandler)
  * [Google Summer of Code project](/sessions/gsoc)
  * bazaar branch: http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch
-
-# Example
-[try out](/sessions/example)
-
