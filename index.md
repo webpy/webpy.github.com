@@ -28,7 +28,7 @@ A complete web.py application
 
 web.py 0.21 was released 2007-05-28: [web.py-0.21.tar.gz][16]
 
-   [16]: web.py-0.21.tar.gz
+   [16]: static/web.py-0.21.tar.gz
 
 To always have the latest version of web.py, run:
     
