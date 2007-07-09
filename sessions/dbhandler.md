@@ -27,6 +27,7 @@ DBHandler will need an extra table in the db (where \<name\> == web.config.handl
       CREATE TABLE <name> (
         id CHAR(129) UNIQUE NOT NULL,
         ip CHAR(16) NOT NULL,
+        created int NOT NULL,
         touched int NOT NULL,
         data TEXT
       );
