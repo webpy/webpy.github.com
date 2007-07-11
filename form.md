@@ -5,7 +5,7 @@ title: form
 
 # form
 
-### Example
+## Example
 Here's a sample script using the new form library:
 
     import web
@@ -53,29 +53,8 @@ And sample formtest.html:
     $:form.render()
     <input type="submit" />    </form>
 
-### Form Features
-The forms support several additional attributes.  For example:
-
-    myform = form.Form(
-        form.textbox("firstname",
-            form.notnull, #put validators first followed by optional attributes
-            class_="textEntry", #gives a class name to the text box -- note the underscore
-            pre="pre", #directly before the text box
-            post="post", #directly after the text box
-            description="please enter your name", #describes field, defaults to form name ("firstname")
-            value="bob", #default value
-            id="nameid", #specify the id
-        )
-
-In addition to the attributes above, any html attributes can be entered in the same manner.  For example:
-    
-    myform2 = form.Form(
-        form.textbox('phonenumber',
-            size="12",
-            maxlength="12"        )
-    )
-            
-In addition to validation on individual inputs, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
+## Form Features
+In addition individual input validators, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
 
     signup = form.Form(
         form.Textbox('username'),
@@ -94,7 +73,26 @@ Once the form data has been posted, it can easily be put into a database (if the
         else:
             render.foo(f)
 
-### Special Input Features
+## Input Features
+The form inputs support several additional attributes.  For example:
+
+    form.textbox("firstname",
+        form.notnull, #put validators first followed by optional attributes
+        class_="textEntry", #gives a class name to the text box -- note the underscore
+        pre="pre", #directly before the text box
+        post="post", #directly after the text box
+        description="please enter your name", #describes field, defaults to form name ("firstname")
+        value="bob", #default value
+        id="nameid", #specify the id
+    )
+
+In addition to the attributes above, any html attributes can be entered in the same manner.  For example:
+    
+    myform2 = form.Form(
+        form.textbox('phonenumber',
+            size="12",
+            maxlength="12"        )
+    )
 
 **Dropdown**
 
