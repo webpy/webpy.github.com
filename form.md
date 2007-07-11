@@ -5,6 +5,7 @@ title: form
 
 # form
 
+### Example
 Here's a sample script using the new form library:
 
     import web
@@ -51,6 +52,8 @@ And sample formtest.html:
     $if not form.valid: <p class="error">Try again, AmeriCAN:</p>
     $:form.render()
     <input type="submit" />    </form>
+
+### Form Features
 The forms support several additional attributes.  For example:
 
     myform = form.Form(
@@ -90,3 +93,11 @@ Once the form data has been posted, it can easily be put into a database (if the
         #don't do web.insert('data_table', **web.input()) because malicious data could be submitted too
         else:
             render.foo(f)
+
+### Special Input Features
+
+**Dropdown**
+
+Dropdown inputs allow a unique description and value for each item in the dropdown list.  To do this, create the dropdown list with tuples like this:
+    
+    form.Dropdown('mydrop', [('value1', 'description1'), ('value2', 'description2')])
