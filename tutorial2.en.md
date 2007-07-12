@@ -152,7 +152,8 @@ and change back the URL handler to take just `/`.
 Edit `index.html` so that it reads:
 
     $def with (todos)
-    <ul>    $for todo in todos:
+    <ul>
+    $for todo in todos:
         <li id="t$todo.id">$todo.title</li>    </ul>
 Visit your site again and you should see your one todo item: "Learn web.py". Congratulations! You've made a full application that reads from the database. Now let's let it write to the database as well.
 
