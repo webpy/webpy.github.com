@@ -51,11 +51,13 @@ web.config.session_parameters - Storage object:
  * cookie_name - name of the cookie which will transfer the session id; default value: 'webpy'
  * cookie_domain - cookie domain for the setcookie() when setting session id cookie; default value: None
  * timeout - number of second after a not-updated session will be considered expired; default value: 600
+ * max_age - the maximum age a session can reach; default value: 24 * 60 * 60 (1day)
  * id_seed - a seed-string that will be used in the default Session._generator(); default value: 'web.py'
  * regenerate_id - should the session id be regenerated and set again with a cookie on every request?; default value: True
  * generator - a function to generate _random_ session ids, if False, the implicit generator (Session.\_generate\_id()) will be used; default value: False
  * ignore_change_ip - if the pair ( _id_, _ip_) doesn't match the retreived data from Handler objcet, then fail/raise exception/...; default value: False
  * ignore_expiration - should the session expiration be ignored?; default value: False
+ * ignore_old_age - should the session be checked for max_age?; default value: True
  * handler - a Handler-like object to provide persistence for Session class; default value: 'db'
 
 ### Handler class
