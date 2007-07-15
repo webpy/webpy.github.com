@@ -73,11 +73,13 @@ web.config.handler_parameters as Storage object will include additional paramete
  * file_dir - directory used to store session data (by FileHandler); default value: '/tmp'
  * db_table - table storing session data (used by DBHandler); default value: 'session_data'
 
+## Implemented *Handler specs
+ * [DBHandler](/sessions/dbhandler)
+ * [FileHandler](/sessions/filehandler)
+ * [CookieHandler](/sessions/cookiehandler) - *DANGEROUS, UNSECURE, EXPERIMENTAL*
+
 ## Notes
  * data will be stored in Session object member variable _data and passed as Storage variables to Handler object (internally in a Handler class they will be stored as "pickled" data)
  * session id will be just a hash of some variables ([semi]random) and a seed
- * Session object will use web.ctx.session_parameters
- * DBHandler will need an extra table in the db
- * [DBHandler](/sessions/dbhandler)
  * [Google Summer of Code project](/sessions/gsoc)
  * bazaar branch: http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch
