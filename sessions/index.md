@@ -73,10 +73,12 @@ web.config.handler_parameters as Storage object will include additional paramete
  * file_dir - directory used to store session data (by FileHandler); default value: '/tmp'
  * db_table - table storing session data (used by DBHandler); default value: 'session_data'
 
-## Implemented *Handler specs
+
+### *Handler specs
  * [DBHandler](/sessions/dbhandler)
  * [FileHandler](/sessions/filehandler)
  * [CookieHandler](/sessions/cookiehandler) - *DANGEROUS, UNSECURE, EXPERIMENTAL*
+
 
 ## Notes
  * data will be stored in Session object member variable _data and passed as Storage variables to Handler object (internally in a Handler class they will be stored as "pickled" data)
