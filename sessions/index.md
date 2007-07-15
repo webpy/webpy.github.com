@@ -77,7 +77,7 @@ web.config.handler_parameters as Storage object will include additional paramete
 ### *Handler specs
  * [DBHandler](/sessions/dbhandler)
  * [FileHandler](/sessions/filehandler)
- * [CookieHandler](/sessions/cookiehandler) - *DANGEROUS, UNSECURE, EXPERIMENTAL*
+ * [CookieHandler](/sessions/cookiehandler) - **DANGEROUS, UNSECURE, EXPERIMENTAL**
 
 
 ## Notes
