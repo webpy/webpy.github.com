@@ -24,7 +24,7 @@ The Session class is a derivate of Storage. It will store as a dict anyhow calle
 #### Private variables
  * _handler - reference to user-choosen Handler
  * _id - current session id
- * \_old\_id - used if the sesion regenerates id
+ * \_old\_id - used if the session regenerates id
  * _data - internal Storage object for session data
 
 #### Public methods
