@@ -5,7 +5,15 @@ title: Google Summer of Code: web.py - Session management
 
 # Google Summer of Code: web.py - Session management
 
-## Schedule
+## Currently
+tracking on [launchpad.net bugs](https://bugs.launchpad.net/~karol.tarcak/?field.searchtext=&orderby=-importance&search=Search&field.status%3Alist=New&field.status%3Alist=Incomplete&field.status%3Alist=Confirmed&field.status%3Alist=Triaged&field.status%3Alist=In+Progress&assignee_option=any&field.assignee=&field.bug_reporter=&field.bug_contact=&field.status_upstream-empty-marker=1&field.omit_dupes.used=&field.omit_dupes=on&field.has_patch.used=&field.tag=&field.has_cve.used=)
+
+ * testing
+ * FileHandler - clean()
+ * CookieHandler?
+ * online migration between handlers?
+
+## OLD Schedule - DONE
  * May 28 - June 9 (1st & 2nd week): getting familiar with SVN/Bazaar, internals of web.py, flup and jonpy's sessions; creating a DDL for storing sessions
  * June 10 - June 17 (3rd): creating DBHandler class
  * June 18 - July 8 (4th - 6th): creating Session class's identify/verify methods
