@@ -13,7 +13,7 @@ tracking on [launchpad.net bugs](https://bugs.launchpad.net/~karol.tarcak/?field
  * CookieHandler?
  * online migration between handlers?
 
-## OLD Schedule - DONE
+## OLD Schedule - [DONE](https://bugs.launchpad.net/~karol.tarcak/)
  * May 28 - June 9 (1st & 2nd week): getting familiar with SVN/Bazaar, internals of web.py, flup and jonpy's sessions; creating a DDL for storing sessions
  * June 10 - June 17 (3rd): creating DBHandler class
  * June 18 - July 8 (4th - 6th): creating Session class's identify/verify methods
