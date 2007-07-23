@@ -22,7 +22,6 @@ The session functionality will rely on a two-layer implementation: Session -> Ha
 The Session class is a derivate of Storage. It will store as a dict anyhow called variable, but through the Storage interface only variables not named as internal private variables.
 
 #### Private variables
- * _generator - reference to user-supplied "unique random number generator" or just to default session generator function
  * _handler - reference to user-choosen Handler
  * _id - current session id
  * \_old\_id - used if the sesion regenerates id
@@ -38,7 +37,7 @@ The Session class is a derivate of Storage. It will store as a dict anyhow calle
 
 #### Private methods
 
- * _generate\_id() - it will be an implicit session id generator; it will probably _only_ make a hash of ip, time, seed, microtime
+ * _generate\_id() - it will _only_ make a hash of ip, time, seed or it will call user supplied generator
  * _identify() - it will identify the session id (through client cookie                s)
  * _verify() - it will verify the session id with retreived data from handler object i.e. check for expiration, IP change (headers change?)
  * _store() - a simple wrapper around Handler.store(); data will be passed **unpickled**
@@ -73,6 +72,7 @@ An abstract class which defines a interface to store/retreive/remove session dat
 web.config.handler_parameters as Storage object will include additional parameters that are necessary for various Handlers
 
  * file_dir - directory used to store session data (by FileHandler); default value: '/tmp'
+ * file_prefix - prefix to session data files; default value: 'sess'
  * db_table - table storing session data (used by DBHandler); default value: 'session_data'
 
 
