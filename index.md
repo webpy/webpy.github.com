@@ -70,11 +70,13 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
    [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
 "the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
-- [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) with it
+- [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) and [an agenda][34] ([source][35]) with it
 
    [27]: http://delaunay.org/antoine/
    [28]: http://delaunay.org/antoine/i
-   [29]: http://hg.delaunay.org/hacking
+   [29]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/ibrouteur/;style=gitweb
+   [34]: http://metagenda.org
+   [35]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/glocal/;style=gitweb
 
 "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
 - Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]
