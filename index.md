@@ -44,6 +44,8 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
    [20]: http://reddit.com/
 
+[colr.org](http://colr.org), a color scheme picking site, is built in web.py.
+
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
    [21]: http://yandex.ru
