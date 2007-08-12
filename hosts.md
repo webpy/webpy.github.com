@@ -13,3 +13,4 @@ How to's on getting web.py on the folowing hosts
 * [apinc.org](http://apinc.org/)
 * [godaddy.com](/godaddy.com)
 * [GrokThis](/GrokThis)
+* [kimsufi](/kimsufi)
