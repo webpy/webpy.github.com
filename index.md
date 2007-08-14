@@ -56,6 +56,10 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
    [23]: http://exproretail.com/
    [24]: http://travel.dk.com/
 
+[micropledge][m], a web app that collects funding for software ideas, is built in web.py. "We've enjoyed fitting in with its minimalist approach," says developer Ben Hoyt.
+
+   [m]: http://micropledge.com/
+
 ## Buzz
 
 "We completed our server rewrite a few days ago with web.py and it was everything we could have wished for."  
