@@ -6,16 +6,14 @@ title: Change log
 # Change log
 
 <dl>
-
-<dt>trunk</dt> 
-<dd>compatibility with new DBUtils API (122112)</dd> 
-<dd>fix reloading (118683)</dd> 
-<dd>fix compatibility between `changequery` and `redirect` (118234)</dd> 
-<dd>fix relative URI in `web.redirect` (118236)</dd> 
-<dd>fix `ctx._write` support in built-in HTTP server (121908)</dd> 
-<dd>fix `numify` strips things after '.'s (118644)</dd> 
-<dd>fix various unicode isssues (114703, 120644, 124280)</dd> 
-
+<dt>trunk</dt>
+<dd>compatibility with new DBUtils API (<a href="https://bugs.launchpad.net/webpy/+bug/122112">122112</a>)</dd>
+<dd>fix reloading (<a href="https://bugs.launchpad.net/webpy/+bug/118683">118683</a>)</dd>
+<dd>fix compatibility between `changequery` and `redirect` (<a href="https://bugs.launchpad.net/webpy/+bug/118234">118234</a>)</dd>
+<dd>fix relative URI in `web.redirect` (<a href="https://bugs.launchpad.net/webpy/+bug/118236">118236</a>)</dd>
+<dd>fix `ctx._write` support in built-in HTTP server (<a href="https://bugs.launchpad.net/webpy/+bug/121908">121908</a>)</dd>
+<dd>fix `numify` strips things after '.'s (<a href="https://bugs.launchpad.net/webpy/+bug/118644">118644</a>)</dd>
+<dd>fix various unicode isssues (<a href="https://bugs.launchpad.net/webpy/+bug/114703">114703</a>, <a href="https://bugs.launchpad.net/webpy/+bug/120644">120644</a>, <a href="https://bugs.launchpad.net/webpy/+bug/124280">124280</a>)</dd>
 
 <dt>2007-05-28: 0.21</dt>
 <dd><strong>security fix:</strong> prevent bad characters in headers</dd>
