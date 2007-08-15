@@ -6,6 +6,17 @@ title: Change log
 # Change log
 
 <dl>
+
+<dt>trunk</dt> 
+<dd>compatibility with new DBUtils API (122112)</dd> 
+<dd>fix reloading (118683)</dd> 
+<dd>fix compatibility between `changequery` and `redirect` (118234)</dd> 
+<dd>fix relative URI in `web.redirect` (118236)</dd> 
+<dd>fix `ctx._write` support in built-in HTTP server (121908)</dd> 
+<dd>fix `numify` strips things after '.'s (118644)</dd> 
+<dd>fix various unicode isssues (114703, 120644, 124280)</dd> 
+
+
 <dt>2007-05-28: 0.21</dt>
 <dd><strong>security fix:</strong> prevent bad characters in headers</dd>
 <dd>support for cheetah template reloading                    </dd>
@@ -19,6 +30,7 @@ title: Change log
 <dd>new CherryPy wsgi server                                  </dd>
 <dd>new nested transactions                                   </dd>
 <dd>new sqlliteral                                            </dd>
+
 <dt>2006-05-09: 0.138</dt>
 <dd>New function: <code>intget</code></dd>
 <dd>New function: <code>datestr</code></dd>
