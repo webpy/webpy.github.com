@@ -86,4 +86,5 @@ web.config.handler_parameters as Storage object will include additional paramete
  * data will be stored in Session object member variable _data and passed as Storage variables to Handler object (internally in a Handler class they will be stored as "pickled" data)
  * session id will be just a hash of some variables ([semi]random) and a seed
  * [Google Summer of Code project](/sessions/gsoc)
+ * [installation instructions](/sessions/install)
  * bazaar branch: http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch
