@@ -7,6 +7,9 @@ title: CookieHandler for Sessions
 
 # Specification
 
+see [project blog post](http://planet-soc.com/node/2158)
+
+
 ## Summary
 
 
