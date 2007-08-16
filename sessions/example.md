@@ -32,6 +32,13 @@ put this in code.py and run _python code.py_
     
     class index:
         def GET(self, rest):
+                # if you are going to use FileHandler
+                #web.config.session_parameters.handler = 'file'
+                # set the file prefix
+                #web.config.handler_parameters.file_prefix = 'sess'
+                # and directory
+                #web.config.handler_parameters.file_dir = '/tmp'
+
                 if rest == 'logout':
                         web.ctx.session.start()
                         web.ctx.session.destroy()
