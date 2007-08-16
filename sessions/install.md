@@ -16,4 +16,4 @@ title: Installation
 3) enjoy
 
 ## Stable
-currently awaiting [GSoC](http://webpy.org/session/gsoc) end, after a merge it should be distributen within project's tarball
+currently awaiting [GSoC](/sessions/gsoc) end, after a merge it should be distributen within project's tarball
