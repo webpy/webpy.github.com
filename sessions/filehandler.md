@@ -12,7 +12,7 @@ The FileHandler will provide Handler-interface to file storage. It will store pi
 
 ## Implementation details
 
-FileHandler is a derivate of Handler.
+FileHandler is a derivate of Handler. All files will be created in the directory  web.config.handler_parameters.file_dir with prefix web.config.handler_parameters.file_prefix.
 
 ### Public methods
  * store() - it will store the session data (& pickle them before that); if the argument _old_id is set, it will look for an already storaged session data, it will create locks on both old & new session files, it will try to retreive time of the old session creation; after the pickle data is stored, the lock will be released; it will call \_acquire_lock(), \_release\_lock() and \_session\_file()
