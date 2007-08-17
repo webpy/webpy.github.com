@@ -29,7 +29,7 @@ The Session class is a derivate of Storage. It will store as a dict anyhow calle
 
 #### Public methods
 
- * start() - it will start the session, regenerate id, set cookies, retreive data if the session isn't new; it will call \_identity(), \_verify(), \_generator(), \_retreive()
+ * start() - it will start the session, regenerate id, set cookies, retreive data if the session isn't new; it will call \_identity(), \_verify(), \_generate\_id(), \_retreive()
  * get_id() - it will return current session id
  * cleanup() - it will clean expired sessions depending on the provided interface by choosen Handler object (cookie based will do nothing); it will call Handler.clean() with the user preset timeout
  * save() - it will save session data using the _store()
