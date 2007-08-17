@@ -85,4 +85,4 @@ web.config.handler_parameters as Storage object will include additional paramete
 ## Notes
  * [Google Summer of Code project](/sessions/gsoc)
  * [installation instructions](/sessions/install)
- * bazaar branch: http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch
+ * [bazaar](http://bazaar-vcs.org/) branch: http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch
