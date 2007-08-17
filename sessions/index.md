@@ -70,11 +70,11 @@ An abstract class which defines a interface to store/retreive/remove session dat
 
 ### Handler parameters
 web.config.handler_parameters as Storage object will include additional parameters that are necessary for various Handlers
-
- * file_dir - directory used to store session data (by FileHandler); default value: '/tmp'
+#### DBHandler
+ * db_table - table storing session data; default value: 'session_data'
+#### FileHandler
+ * file_dir - directory used to store session data; default value: '/tmp'
  * file_prefix - prefix to session data files; default value: 'sess'
- * db_table - table storing session data (used by DBHandler); default value: 'session_data'
-
 
 ### *Handler specs
  * [DBHandler](/sessions/dbhandler)
