@@ -34,7 +34,6 @@ This example is a simple counter using [DBHandler](/sessions/DBHandler); put thi
     
                 print 'click: ', s.click
 
-    web.webapi.internalerror = web.debugerror
-    
+
     if __name__ == '__main__':
         web.run(urls, globals(), web.reloader)
