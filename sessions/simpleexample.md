@@ -5,31 +5,33 @@ title: Very simple session example
 
 # Very simple session example
 
-import web
+put this in code.py and run python code.py
 
-web.config.db_parameters = {
-                            'dbn' : 'postgres',
-                            'host' : 'localhost',
-                            'user' : 'web',
-                            'pw' : 'web',
-                            'db' : 'web'
-                    }
+    import web
 
-urls = (
-    '/', 'index'
-)
+    web.config.db_parameters = {
+                                'dbn' : 'postgres',
+                                'host' : 'localhost',
+                                'user' : 'web',
+                                'pw' : 'web',
+                                'db' : 'web'
+                        }
 
-class index:
-    def GET(self):
-        s = web.ctx.session
-        s.start()
+    urls = (
+        '/', 'index'
+    )
 
-        try:
-            s.click += 1
-        except AttributeError:
-            s.click = 1
+    class index:
+        def GET(self):
+            s = web.ctx.session
+            s.start()
 
-        print 'click: ', s.click
+            try:
+                s.click += 1
+            except AttributeError:
+                s.click = 1
 
-if __name__ == '__main__':
-    web.run(urls, globals(), web.reloader)
+            print 'click: ', s.click
+
+    if __name__ == '__main__':
+        web.run(urls, globals(), web.reloader)
