@@ -201,13 +201,15 @@ It should then be accessible at `http://example.com/code.py/` as usual.
 
 #### mod_rewrite Rules for Apache
 
-Add the following rules to the `.htaccess` file:
+If you want webpy to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
 
-    <IfModule mod_rewrite.c>      RewriteEngine on
+    <IfModule mod_rewrite.c>      
+      RewriteEngine on
       RewriteBase /
       RewriteCond %{REQUEST_URI} !^/icons
       RewriteCond %{REQUEST_URI} !^/favicon.ico$
       RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
       RewriteRule ^(.*)$ code.py/$1 [PT]
     </IfModule>
+
 If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
