@@ -9,8 +9,7 @@ title: CookieHandler for Sessions
 
 see [project blog post](http://planet-soc.com/node/2158)
 
-bazaar branch at http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch webpy
-
+bazaar branch at http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.cookie
 ## Summary
 
 
