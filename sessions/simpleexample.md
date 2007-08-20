@@ -32,6 +32,7 @@ put this in code.py and run python code.py
                 s.click = 1
 
             print 'click: ', s.click
+            s.save()
 
     if __name__ == '__main__':
         web.run(urls, globals(), web.reloader)
