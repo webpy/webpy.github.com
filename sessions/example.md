@@ -106,6 +106,8 @@ put this in code.py and run _python code.py_
     
                 print '<a href="/logout">destroy session</a>'
                 print '<br>'
+
+                s.save()
     
                 print '<!--'
                 print web.ctx
