@@ -161,7 +161,7 @@ Here's another; "base":
     </head><body> 
     <h1>$self.title</h1> 
 
-    :$self 
+    $:self 
     </body></html> 
 
 Now let's say we compile both from within Python, the first as `entry`, 
@@ -178,7 +178,7 @@ page. The Python code prints out the result.
 _Where did `markdown` come from? It wasn't passed as an argument._ You 
 can pass a list of functions and variables to the template compiler to 
 be made globally available to templates.
-_Why :$self?_ See below
+_Why $:self?_ See below
 
 Here's an example:
 
