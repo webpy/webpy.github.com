@@ -8,7 +8,7 @@ title: Google Summer of Code: web.py - Session management
 [project blog](http://planet-soc.com/blog/77) at [planet-soc.com](http://planet-soc.com/)
 
 ## Post GSoC work
- * WSGI - WORKING
+ * WSGI
  * online migration between handlers?
 
 
