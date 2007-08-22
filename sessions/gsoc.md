@@ -7,14 +7,14 @@ title: Google Summer of Code: web.py - Session management
 
 [project blog](http://planet-soc.com/blog/77) at [planet-soc.com](http://planet-soc.com/)
 
-# Currently
-tracking on [launchpad.net bugs](https://bugs.launchpad.net/~karol.tarcak/?field.searchtext=&orderby=-importance&search=Search&field.status%3Alist=New&field.status%3Alist=Incomplete&field.status%3Alist=Confirmed&field.status%3Alist=Triaged&field.status%3Alist=In+Progress&assignee_option=any&field.assignee=&field.bug_reporter=&field.bug_contact=&field.status_upstream-empty-marker=1&field.omit_dupes.used=&field.omit_dupes=on&field.has_patch.used=&field.tag=&field.has_cve.used=)
-
- * FileHandler - DONE
- * CookieHandler - see project blog [first](http://planet-soc.com/node/2158) and second post - DONE
+## Post GSoC work
  * WSGI - WORKING
  * online migration between handlers?
 
+
+## End of GSoC
+ * FileHandler
+ * CookieHandler - see project blog [first](http://planet-soc.com/node/2158) and second post
 
 
 ## OLD Schedule - [DONE](https://bugs.launchpad.net/~karol.tarcak/)
