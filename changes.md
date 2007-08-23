@@ -6,7 +6,7 @@ title: Change log
 # Change log
 
 <dl>
-<dt>trunk</dt>
+<dt>2007-08-23: 0.22</dt>
 <dd>compatibility with new DBUtils API (<a href="https://bugs.launchpad.net/webpy/+bug/122112">122112</a>)</dd>
 <dd>fix reloading (<a href="https://bugs.launchpad.net/webpy/+bug/118683">118683</a>)</dd>
 <dd>fix compatibility between `changequery` and `redirect` (<a href="https://bugs.launchpad.net/webpy/+bug/118234">118234</a>)</dd>
