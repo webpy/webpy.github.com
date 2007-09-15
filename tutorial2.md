@@ -9,3 +9,4 @@ title: web.py 0.2 tutorial
 * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
 * [Español](/tutorial2.es)
 * [Русский](/tutorial2.ru)
+* [日本語](/tutorial2.ja)
