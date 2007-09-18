@@ -13,7 +13,7 @@ title: Installation
 
     bzr branch http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.branch webpy
 
-to get the cookie handler branch run
+to get the CookieHandler (EXPERIMENTAL) branch run
 
     bzr branch http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.cookie webpy_cookie
 
