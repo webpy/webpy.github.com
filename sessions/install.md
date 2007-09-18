@@ -20,4 +20,4 @@ to get the cookie handler branch run
 3) enjoy
 
 ## Stable
-currently awaiting [GSoC](/sessions/gsoc) end, after a merge it should be distributen within project's tarball
+merged with the trunk; it should be distributen within the next stable project tarball
