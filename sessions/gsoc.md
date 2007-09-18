@@ -14,7 +14,7 @@ title: Google Summer of Code: web.py - Session management
 
 ## End of GSoC
  * FileHandler
- * CookieHandler - see project blog [first](http://planet-soc.com/node/2158) and second post
+ * CookieHandler - see project blog [first](http://planet-soc.com/node/2158) and [second](http://planet-soc.com/node/2477) post
 
 
 ## OLD Schedule - [DONE](https://bugs.launchpad.net/~karol.tarcak/)
