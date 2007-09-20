@@ -44,6 +44,8 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
    [20]: http://reddit.com/
 
+[jottit.com](http://jottit.com) is built with web.py.  Jottit makes getting a website as easy as filling out a textbox.
+
 [colr.org](http://colr.org), a color scheme picking site, is built in web.py.
 
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
@@ -61,6 +63,10 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
    [m]: http://micropledge.com/
 
 ## Buzz
+
+"In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
+- Lloyd Dalton, [colr.org](http://colr.org)
+
 
 "We completed our server rewrite a few days ago with web.py and it was everything we could have wished for."  
 - Sam Hsiung, [YouOS][25]
