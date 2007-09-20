@@ -195,7 +195,9 @@ At the end of your `code.py`, add:
 
 mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) to expose a WSGI application in Apache's URL hierarchy, but one simple way would be to add the following to your .htaccess:
 
-    <Files code.py>        SetHandler wsgi-script
+    <Files code.py>        
+        SetHandler wsgi-script
+        Options ExecCGI
     </Files>
 It should then be accessible at `http://example.com/code.py/` as usual.
 
