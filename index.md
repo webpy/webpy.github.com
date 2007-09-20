@@ -32,7 +32,7 @@ web.py 0.22 was released 2007-08-23: [web.py-0.22.tar.gz][16]
 
 To always have the latest version of web.py, run:
     
-    svn co http://webpy.org/svn/trunk/web/
+    bzr get http://webpy.org/bzr/webpy.dev
 
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
@@ -155,7 +155,7 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 ### web.py development:
 
-* [subversion repository](http://webpy.org/svn/) | [follow commits](http://groups.google.com/group/webpy-commits/)
+* [bazaar repository](http://webpy.org/bzr/webpy.dev) | [follow commits](http://groups.google.com/group/webpy-commits/)
 
 * [launchpad site](http://launchpad.net/webpy)
 
