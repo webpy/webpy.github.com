@@ -7,7 +7,7 @@ title: Install
 
 To install web.py, download:
     
-    http://webpy.org/static/web.py-0.21.tar.gz
+    http://webpy.org/static/web.py-0.22.tar.gz
 
 extract it and copy the _web_ folder into a directory where your application is. Or, to make it accessible to all applications, run:
     
@@ -18,6 +18,11 @@ Note: on some unix like systems you may need to switch to root or run:
     sudo python setup.py install
 
 see [recomended setup](/recommended_setup).
+
+Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall).  Once [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) is properly setup:
+
+
+    easy_install web.py
 
 ## Development
 
