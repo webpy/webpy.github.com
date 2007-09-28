@@ -161,7 +161,7 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 ### web.py development:
 
-* [bazaar repository](http://webpy.org/bzr/webpy.dev) | [follow commits](http://groups.google.com/group/webpy-commits/)
+* [bazaar repository](http://webpy.org/bzr/webpy.dev) | [follow commits](https://code.edge.launchpad.net/~anandology/webpy/webpy.dev/+subscribe)
 
 * [launchpad site](http://launchpad.net/webpy)
 
