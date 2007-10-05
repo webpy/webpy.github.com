@@ -44,7 +44,7 @@ Here's a sample script using the new form library:
         web.internalerror = web.debugerror
         web.run(urls, globals(), web.reloader)
 
-And sample formtest.html: 
+And sample formtest.html (place this in the *templates* subdirectory): 
 
     $def with (form)
 
