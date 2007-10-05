@@ -58,6 +58,11 @@ Now notice that although I've been talking a lot here, we only really have five 
 
 You now have your web.py application running a real web server on your computer. Visit that URL and you should see "Hello, world!" (You can add an IP address/port after the "code.py" bit to control where web.py launches the server. You can also tell it to run a `fastcgi` or `scgi` server.)
 
+**Note:** You can specify the port number to use on the command line like this
+if you can't or don't want to use the default:
+
+    $ python code.py 1234
+
 ## Developing
 
 web.py also has a few tools to help us with debugging. Before the 'if __name__' on last line, add:
