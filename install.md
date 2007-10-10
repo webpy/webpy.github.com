@@ -192,7 +192,7 @@ Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll s
 
 #### .. with mod_wsgi
 
-mod\_wsgi is a new Apache module which [typically outperforms mod\_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) for hosting WSGI applications, and is very easy to set up. (Just note that it is still very young, and it will likely be a while before it is as well-tested and sturdy as mod_python.)
+mod\_wsgi is a new Apache module which [typically outperforms mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) for hosting WSGI applications, and is very easy to set up.
 
 At the end of your `code.py`, add:
 
@@ -200,7 +200,7 @@ At the end of your `code.py`, add:
 
 mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) to expose a WSGI application in Apache's URL hierarchy, but one simple way would be to add the following to your .htaccess:
 
-    <Files code.py>        
+    <Files code.py>
         SetHandler wsgi-script
         Options ExecCGI
     </Files>
