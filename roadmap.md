@@ -151,11 +151,10 @@ unittest:
 
      class HelloWorldTest(unittest.TestCase): 
          def testHelloWorld(self): 
-             response = app.request('GET', '/') 
-             self.assertEquals(response.data, 'hello, world!') 
-             self.assertEquals(response.headers['Content-Type'],   
-'text/plain') 
-             self.assertEquals(response.status, '200 OK') 
+             response = app.request('GET', '/')
+             self.assertEquals(response.data, 'hello, world!')
+             self.assertEquals(response.headers['Content-Type'], 'text/plain')
+             self.assertEquals(response.status, '200 OK')
 
      if __name__ == "__main__": 
          unittest.main() 
