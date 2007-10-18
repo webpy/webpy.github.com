@@ -5,6 +5,8 @@ title: Roadmap
 
 # Roadmap
 
+[[discussion](http://groups.google.com/group/webpy/browse_thread/thread/b8505370cef1c37c/9e65f5d621c47913)]
+
 Next release of web.py will be version 0.3. As you number suggests it   
 will be major release. There will be some changes to API, which   
 breaks the backward compatability. But I promise, it is not going to   
