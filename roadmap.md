@@ -13,6 +13,7 @@ breaks the backward compatability. But I promise, it is not going to
 change very much. 
 
 Major changes will be 
+
      * return instead of print 
      * moving away from globals 
      * better db api 
