@@ -165,4 +165,6 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 * [launchpad site](http://launchpad.net/webpy)
 
+* [roadmap](/roadmap)
+
 * [todo](/todo)
