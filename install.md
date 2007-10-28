@@ -77,7 +77,8 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
        "bin-path" => "/path/to/root/code.py",
        "max-procs" => 1,
        "bin-environment" => (
-         "REAL_SCRIPT_NAME" => ""       ),
+         "REAL_SCRIPT_NAME" => ""
+       ),
        "check-local" => "disable"    ))
     )
     
