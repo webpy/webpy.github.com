@@ -73,13 +73,16 @@ If you get error messages about not being able to import flup, install it by typ
 
 Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable.  This will cause your fastcgi.server configuration above to look something like this:
      
-    fastcgi.server = ( "/code.py" =>    (( "socket" => "/tmp/fastcgi.socket",
+    fastcgi.server = ( "/code.py" =>
+    ((
+       "socket" => "/tmp/fastcgi.socket",
        "bin-path" => "/path/to/root/code.py",
        "max-procs" => 1,
        "bin-environment" => (
          "REAL_SCRIPT_NAME" => ""
        ),
-       "check-local" => "disable"    ))
+       "check-local" => "disable"
+    ))
     )
     
 
