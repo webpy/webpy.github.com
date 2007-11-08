@@ -62,6 +62,8 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
    [m]: http://micropledge.com/
 
+The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
+
 ## Buzz
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
