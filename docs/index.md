@@ -5,7 +5,6 @@ title: documentation
 
 # documentation
 
-
 ## __init__.py
 
 `main()`
@@ -244,6 +243,7 @@ title: documentation
    : Outputs a `Last-Modified` header for `datetime`.
 
 `modified(date=None, etag=None)`
+
 `redirect(url, status='301 Moved Permanently')`
    : Returns a `status` redirect to the new URL. 
      `url` is joined with the base URL so that things like 
