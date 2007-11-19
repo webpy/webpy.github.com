@@ -170,3 +170,5 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [roadmap](/roadmap)
 
 * [todo](/todo)
+
+<img src="http://webpy.org/static/webpy-green.png" />
