@@ -48,3 +48,7 @@ title: faq
     With my bash, i do it like following; edit ~/.bashrc and add:
 
             export PYTHONSTARTUP=~/.pythonstartup.py
+
+99. **Why can't I access the database?**
+
+    If you're trying to access the database from a non-web-serving thread (e.g. you created a new thread or you never started serving web pages) then you need to run `web.load()`. Sorry, this will be fixed in web.py 0.3.
