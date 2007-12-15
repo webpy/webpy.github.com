@@ -32,7 +32,8 @@ web.py 0.22 was released 2007-08-23: [web.py-0.22.tar.gz][16]
 
 To always have the latest version of web.py, run:
     
-    bzr get http://webpy.org/bzr/webpy.dev
+    bzr get http://webpy.org/bzr/webpy.dev/
+    ln -s `pwd`/webpy.dev/web .
 
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
