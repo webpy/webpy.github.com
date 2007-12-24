@@ -76,64 +76,64 @@ Isso diz ao web.py que use o "middleware" web.reloader (middleware é uma funç�
 
 ## Templating
 
-Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
+Escrever HTML de dentro do Python pode tornar-se um empecilho; é muito mais divertido escrever código Python de dentro do HTML. Por sorte, o web.py torna isso bastante fácil.
 
-**Note:** Old versions of web.py used [Cheetah templates](http://www.cheetahtemplate.org/). You are, of course, welcome to use that or any other software with web.py, but it is no longer officially supported.
+**Nota:** Versões antigas do web.py usavam [Cheetah templates](http://www.cheetahtemplate.org/). Você é, é claro, livre para usar esse ou qualquer outro software com o web.py, mas ele não é mais suportado oficialmente.
 
-Let's make a new directory for our templates (we'll call it `templates`). Inside, make a new file whose name ends with HTML (we'll call it `index.html`). Now, inside, you can just write normal HTML:
+Vamos criar um novo diretório para nossos templates (vamos chamá-lo de `templates`). Dentro dele, crie um novo arquivo cujo nome termine em HTML (vamos chamá-lo de `index.html`). Agora, dentro dele, você pode escrever código HTML normal:
 
-    <em>Hello</em>, world!
+    <em>Olá</em>, mundo!
 
-Or you can use web.py's templating language to add code to your HTML:
+Ou você pode usar a linguagem de templates do web.py para adicionar código ao seu HTML:
 
-    $def with (name)
+    $def with (nome)
     
-    $if name:
-        I just wanted to say <em>hello</em> to $name.
+    $if nome:
+        Eu só queria dizer <em>olá</em> para $nome.
     $else:
-        <em>Hello</em>, world!
+        <em>Olá</em>, mundo!
 
-**Note: Currently, four spaces are required for indentation.**
+**Nota: Atualmente, é necessário usar quatro espaços para a indentação.**
 
-As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the $def statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
+Como você pode ver, os templates parecem-se bastante com arquivos Python, exceto pela instrução `def with` no começo (ela diz com que parâmetros o template é chamado) e os `$`s colocados na frente de qualquer código.  Atualmente, o template.py requer que a instrução $def seja a primeira linha do arquivo.  Além disso, note que o web.py "escapa" as variáveis que forem usadas -- de modo que se, por alguma razão, o valor da variável `nome` conntém algum código HTML, ela será devidamente "escapada" e aparecerá como texto puro. Se você não deseja esse comportamento, use `$:nome` em vez de `$nome`.
 
-Now go back to `code.py`. Under the first line, add:
+Agora volte ao `codigo.py`. Abaixo da primeira linha, insira:
 
     render = web.template.render('templates/')
 
-This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
+Isso manda o web.py procurar por templates no seu diretório `templates`. Então altere a função `index.GET` para:
 
-    name = 'Bob'    
-    print render.index(name)
+    nome = 'João'
+    print render.index(nome)
 
-('index' is the name of the template and 'name' is the argument passed to it)
+('index' é o nome do template, e 'nome' é o parâmetro passado para ele)
 
-Visit your site and it should say hello to Bob. 
+Visite seu site e ele deverá dizer olá para o João.
 
-**Development tip:** Add , `cache=False` to the end of your `render` call to have web.py reload your templates every time you visit the page.
+**Dica para o desenvolvimento:** Adicione `cache=False` ao final da sua chamada a `render` para que o web.py recarregue seus templates toda vez que você entrar na sua página.
 
-Now change your URL line to:
+Agora mude sua URL para:
 
     '/(.*)', 'index'
-and change the definition of `index.GET` to:
+e troque a definição de `index.GET` para:
 
-    def GET(self, name):
+    def GET(self, nome):
 
-and delete the line setting name. Visit `/` and it should say hello to the world. Visit `/Joe` and it should say hello to Joe.
+e apague a linha que define `nome`. Visite `/` e a página deverá dizer olá ao mundo. Visite `/José` e ela deverá dizer olá ao José.
 
-If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
+Se você quer aprender mais sobre os templates do web.py, visite a página do [templetor](/templetor) (em inglês).
 
-## Databasing
+## Bancos de dados
 
-Note: Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgre use [psycopg2](http://initd.org/pub/software/psycopg/).
+Nota: Antes de poder começar a usar um banco de dados, certifique-se de que tem a biblioteca correspondente instalada. Para bancos de dados MySQL, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307); para o Postgres, use o [psycopg2](http://initd.org/pub/software/psycopg/).
 
-Above your `web.run` line add:
+Acima da sua linha `web.run`, adicione:
 
-    web.config.db_parameters = dict(dbn='postgres', user='username', pw='password', db='dbname')
+    web.config.db_parameters = dict(dbn='postgres', user='nome_do_usuario', pw='senha', db='nome_do_banco_de_dados')
 
-(Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` to `mysql`.)
+(Modifique isto -- especialmente `nome_do_usuario`, `senha`, and `nome_do_banco_de_dados` -- para os valores correspondentes à sua configuração. Usuários do MySQL também devem trocar `dbn` por `mysql`.)
 
-Create a simple table in your database:
+Crie uma tabela simples no seu banco de dados:
 
     CREATE TABLE todo (
       id serial primary key,
@@ -141,36 +141,36 @@ Create a simple table in your database:
       created timestamp default now(),
       done boolean default 'f'    );
 
-And an initial row:
+E uma linha inicial:
 
-    INSERT INTO todo (title) VALUES ('Learn web.py');
+    INSERT INTO todo (title) VALUES ('Aprender web.py');
 
-Back in `code.py`, change `index.GET` to:
+Voltando ao `codigo.py`, modifique a função `index.GET` para:
 
     def GET(self):
         todos = web.select('todo')
         print render.index(todos)
 
-and change back the URL handler to take just `/`.
+e modifique o tratador de URLs de volta para simplesmente `/`.
 
-Edit `index.html` so that it reads:
+Edite o `index.html` de modo que ele se torne:
 
     $def with (todos)
     <ul>
     $for todo in todos:
         <li id="t$todo.id">$todo.title</li>    </ul>
-Visit your site again and you should see your one todo item: "Learn web.py". Congratulations! You've made a full application that reads from the database. Now let's let it write to the database as well.
+Visite novamente seu site, e você deverá ver uma tarefa na lista: "Aprender web.py". Parabéns! Você fez uma aplicação completa que lê dados de um banco de dados. Agora vamos também gravar dados no banco de dados.
 
-At the end of `index.html`, add:
+No final de `index.html`, insira:
 
-    <form method="post" action="add">    <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>    </form>
-And change your URLs list to read:
+    <form method="post" action="add">    <p><input type="text" name="title" /> <input type="submit" value="Adicionar" /></p>    </form>
+E modifique sua lista de URLs para que fique assim:
 
     '/', 'index',
     '/add', 'add'
-(You've got to be very careful about those commas.  If you omit them, Python adds the strings together and sees `'/index/addadd'` instead of your list of URLs!)
+(Você deve ser muito cuidadoso com essas vírgulas.  Se você as omitir, o Python juntará as strings e verá `'/index/addadd'` no lugar da sua lista de URLs!)
 
-Now add another class:
+Agora adicione outra classe:
 
     class add:
         def POST(self):
@@ -178,18 +178,18 @@ Now add another class:
             n = web.insert('todo', title=i.title)
     	    web.seeother('/')
 
-(Notice how we're using `POST` for this?)
+(Viu como estamos usando o método `POST` para isso?)
 
-`web.input` gives you access to any variables the user submitted through a form. In order to access dat from multiple identically named items in a list format (e.g.: a series of checkboxes all with the attribute name="name") use:
+`web.input` lhe dá acesso às variáveis que o usuário enviou através de um formulário.  Para obter dados de elementos com nomes idênticos em formato de lista (por exemplo, uma série de caixas de verificação com o atributo name="nome"), use:
 
-    post_data=web.input(name=[])
+    post_data=web.input(nome=[])
 
-`web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that ID.
+`web.insert` insere valores na tabela `todo` do banco de dados e lhe devolve o ID da nova linha. `seeother` redireciona os usuários para esse ID.
 
-Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.rollback()` rolls it back. `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
+Rapidinhas: `web.transact()` inicia uma transação. `web.commit()` confirma a transação e armazena os dados; `web.rollback()` desfaz as alterações. `web.update` funciona como `web.insert`, recebendo (em vez de devolver) um ID (ou uma string com uma sentença `WHERE`) após o nome da tabela.
 
-`web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
+`web.input`, `web.query` e outras funções do web.py devolvem "Objetos de armazenamento", que são como dicionários mas também permitem que você use `d.foo` além de `d['foo']`. Isso realmente deixa certos códigos mais limpos.
 
-You can find the full details on these and all the web.py functions in [the documentation](http://new.webpy.org/docs).
+Você pode encontrar todos os detalhes sobre essas e todas as outras funções do web.py na [documentação](http://new.webpy.org/docs) (em inglês).
 
-This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
+Isso termina o tutorial por enquanto. Dê uma olhada na documentação para ver o monte de coisas legais que você pode fazer com o web.py.
