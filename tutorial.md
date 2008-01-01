@@ -12,4 +12,4 @@ title: web.py tutorial
 * [pусский](http://bobuk.infogami.com/webpytrans)
 * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
 
-Visit the [lastest tutorial](tutorial2).
+Visit the [latest tutorial](tutorial2).
