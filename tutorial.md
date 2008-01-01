@@ -11,3 +11,5 @@ title: web.py tutorial
 * [français](http://sunfox.org/tutoriel-web-py-fr/)
 * [pусский](http://bobuk.infogami.com/webpytrans)
 * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
+
+Visit the [lastest tutorial](tutorial2).
