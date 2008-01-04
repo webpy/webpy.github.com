@@ -19,7 +19,7 @@ Let's get started.
 
 The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
 
-To get started with your web.py application, open up a new text file (let's call it 'code.py') and type:
+To get started with your web.py application, open up a new text file (let's call it `code.py`) and type:
 
     import web
 
@@ -65,7 +65,7 @@ if you can't or don't want to use the default:
 
 ## Developing
 
-web.py also has a few tools to help us with debugging. Before the 'if __name__' on last line, add:
+web.py also has a few tools to help us with debugging. Before the `if __name__` on last line, add:
 
     web.webapi.internalerror = web.debugerror
 
@@ -96,7 +96,7 @@ Or you can use web.py's templating language to add code to your HTML:
 
 **Note: Currently, four spaces are required for indentation.**
 
-As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the $def statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
+As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the `$def` statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
 
 Now go back to `code.py`. Under the first line, add:
 
@@ -116,6 +116,7 @@ Visit your site and it should say hello to Bob.
 Now change your URL line to:
 
     '/(.*)', 'index'
+
 and change the definition of `index.GET` to:
 
     def GET(self, name):
@@ -126,7 +127,7 @@ If you wish to learn more about web.py templates, vist the [templetor page](/tem
 
 ## Databasing
 
-Note: Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgre use [psycopg2](http://initd.org/pub/software/psycopg/).
+**Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
 
 Above your `web.run` line add:
 
@@ -159,16 +160,22 @@ Edit `index.html` so that it reads:
     $def with (todos)
     <ul>
     $for todo in todos:
-        <li id="t$todo.id">$todo.title</li>    </ul>
+        <li id="t$todo.id">$todo.title</li>
+    </ul>
+
 Visit your site again and you should see your one todo item: "Learn web.py". Congratulations! You've made a full application that reads from the database. Now let's let it write to the database as well.
 
 At the end of `index.html`, add:
 
-    <form method="post" action="add">    <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>    </form>
+    <form method="post" action="add">
+    <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>
+    </form>
+
 And change your URLs list to read:
 
     '/', 'index',
     '/add', 'add'
+
 (You've got to be very careful about those commas.  If you omit them, Python adds the strings together and sees `'/index/addadd'` instead of your list of URLs!)
 
 Now add another class:
@@ -185,7 +192,7 @@ Now add another class:
 
     post_data=web.input(name=[])
 
-`web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that ID.
+`web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that URL.
 
 Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.rollback()` rolls it back. `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
 
