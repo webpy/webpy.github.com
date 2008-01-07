@@ -5,7 +5,7 @@ title: web.select
 
 # web.select
 
-## db.py
+in db.py
 
 `select(tables, vars=None, what='*', where=None, order=None, group=None, limit=None, offset=None, _test=False):`
    : Selects `what` from `tables` with clauses `where`, `order`, 
