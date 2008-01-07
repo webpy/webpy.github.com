@@ -1,16 +1,9 @@
 ---
 layout: default
-title:  - api reference - web.select
+title: web.select
 ---
 
-#  - api reference - web.select
-
-## __init__.py
-
-`main()`
-
-## cheetah.py
-
+# web.select
 
 ## db.py
 
@@ -19,9 +12,15 @@ title:  - api reference - web.select
      `group`, `limit`, and `offset`. Uses vars to interpolate. 
      Otherwise, each clause can be a SQLQuery.
      
-         >>> select('foo', _test=True)
-         <sql: 'SELECT * FROM foo'>
-         >>> select(['foo', 'bar'], where="foo.bar_id = bar.id", limit=5, _test=True)
-         <sql: 'SELECT * FROM foo, bar WHERE foo.bar_id = bar.id LIMIT 5'>
+## examples
+### script
+    refs = web.select('refs', None, '*', "references_id = " + str(resume.references_id))
+    this selects '*' from the 'refs' table where references_id = the given resume.references_id
+
+### command line 
+    >>> select('foo', _test=True)
+    <sql: 'SELECT * FROM foo'>
+    >>> select(['foo', 'bar'], where="foo.bar_id = bar.id", limit=5, _test=True)
+    <sql: 'SELECT * FROM foo, bar WHERE foo.bar_id = bar.id LIMIT 5'>
 
 
