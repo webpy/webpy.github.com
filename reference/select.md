@@ -1,9 +1,9 @@
 ---
 layout: default
-title: select
+title: web.select
 ---
 
-# select
+# web.select
 
 `select(tables, vars=None, what='*', where=None, order=None, group=None, limit=None, offset=None, _test=False):`
 
