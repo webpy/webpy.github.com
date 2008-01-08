@@ -58,7 +58,7 @@ renders as all one line.
 
     That's all, folks. 
 
-All your old Python friends are here: `if`, `while`, `for`, `else`. `break`, `continue`, and `pass` also act as you'd 
+All your old Python friends are here: `if`, `while`, `for`, `else`, `break`, `continue`, and `pass` also act as you'd 
 expect. (Obviously, you can't have variables named any of these.) The 
 Python code starts at the `$` and ends at the `:`. The `$` has to be 
 at the beginning of the line, but that's not such a burden because of 
