@@ -13,7 +13,7 @@ web.input() contains a Storage object of all submitted form data.
 ## examples
 
 ## images
-example by dmpayton
+example by dmpayton. allows you to insert an image into a mysql blob column
 
     class upload: 
         def POST(self): 
@@ -23,10 +23,11 @@ example by dmpayton
 
     class view: 
         def GET(self, id): 
-        image = fn.oneResult(web.select('image', where="image_id='%d'" % 
-    id, limit=1)) 
-        web.header('Content-type', image['mime']) 
-        print image['data']
+            image = fn.oneResult(web.select('image', where="image_id='%d'" 
+    % id, limit=1)) 
+            web.header('Content-type', image['mime']) 
+            print image['data'].tostring() 
+
 
 
 
