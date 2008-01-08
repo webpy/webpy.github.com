@@ -5,12 +5,21 @@ title: select
 
 # select
 
-
 `select(tables, vars=None, what='*', where=None, order=None, group=None, limit=None, offset=None, _test=False):`
-   : Selects `what` from `tables` with clauses `where`, `order`, 
+
+Selects `what` from `tables` with clauses `where`, `order`, 
      `group`, `limit`, and `offset`. Uses vars to interpolate. 
      Otherwise, each clause can be a SQLQuery.
-     
+    
+
+## parameters
+
+`tables
+a table as a str()
+
+`vars
+
+
 ## examples
 ### script
     refs = web.select('refs', None, '*', "references_id = " + str(resume.references_id))
