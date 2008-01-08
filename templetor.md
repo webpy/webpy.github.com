@@ -56,15 +56,9 @@ renders as all one line.
     $else: 
         Keep on, you can do it. 
 
-    $try: 
-        $get(input) 
-    $except: 
-        Couldn't find it. 
-
     That's all, folks. 
 
-All your old Python friends are here: `if`, `while`, `for`, `try`, 
-`except`, `else`. `break`, `continue`, and `pass` also act as you'd 
+All your old Python friends are here: `if`, `while`, `for`, `else`. `break`, `continue`, and `pass` also act as you'd 
 expect. (Obviously, you can't have variables named any of these.) The 
 Python code starts at the `$` and ends at the `:`. The `$` has to be 
 at the beginning of the line, but that's not such a burden because of 
