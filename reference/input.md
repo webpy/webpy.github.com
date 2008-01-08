@@ -5,12 +5,24 @@ title: web.input()
 
 # web.input()
 
-web.input() contains a Storage object of all submitted form data.
+`web.input` gives you access to any variables the user submitted through a form. 
+
+<b>returns:</b> Storage object
+
 
 ## Checkboxes
+In order to access data from multiple identically named items in a list format (e.g.: a series of checkboxes all with the attribute name="name") use:
 
+## basic usage
 
-## examples
+        class add:
+            def POST(self):
+                i = web.input()
+                n = web.insert('todo', title=i.title)
+    	        web.seeother('/')
+
+(Notice how we're using `POST` for this?)
+
 
 ## images
 example by dmpayton. allows you to insert an image into a mysql blob column
