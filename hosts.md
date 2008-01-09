@@ -7,6 +7,7 @@ title: hosts
 
 How to's on getting web.py on the folowing hosts
 
+* [WebFaction](/WebFaction)
 * [TextDrive](/TextDrive)
 * [Symonds.net](/Symonds.net)
 * [dreamhost](/dreamhost)
