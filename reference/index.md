@@ -16,6 +16,6 @@ title: API Reference
 
 
 ## Cookbook
-+ <a href="/cookbook/authentication">Logins + Authentication</a>
-+ <a href="/cookbook/mysql">MySQL Database</a>
-+ <a href="/cookbook/postgresql">PostgreSQL Database</a>
++ <a href="/reference/authentication">Logins + Authentication</a>
++ <a href="/reference/mysql">MySQL Database</a>
++ <a href="/reference/postgresql">PostgreSQL Database</a>
