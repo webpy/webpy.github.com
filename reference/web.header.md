@@ -1,7 +1,9 @@
 ---
 layout: default
-title: 
+title: web.header()
 ---
+
+# web.header()
 
 # web.header()
 
