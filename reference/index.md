@@ -7,6 +7,7 @@ title: API Reference
 
 ## Built-in Methods
 
++ <a href="/reference/web.header">web.header()</a>
 + <a href="/reference/input">web.input()</a>
 + <a href="/reference/web.insert">web.insert()</a>
 + <a href="/reference/select">web.select()</a>
