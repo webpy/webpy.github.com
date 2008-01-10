@@ -14,6 +14,7 @@ title: API Reference
 + <a href="/reference/select">web.select()</a>
 + <a href="/reference/render">web.template.render()</a>
 + <a href="/reference/web.webapi.notfound">web.webapi.notfound</a>
++ <a href="/reference/web.ctx.get">web.ctx.get()</a>
 
 
 ## Cookbook
