@@ -8,6 +8,7 @@ title: API Reference
 ## Built-in Methods
 
 + <a href="/reference/web.ctx.get">web.ctx.get()</a>
++ <a href="/reference/web.cookies">web.cookies()</a>
 + <a href="/reference/web.header">web.header()</a>
 + <a href="/reference/input">web.input()</a>
 + <a href="/reference/web.insert">web.insert()</a>
