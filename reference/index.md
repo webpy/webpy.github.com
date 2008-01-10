@@ -14,6 +14,7 @@ title: API Reference
 + <a href="/reference/web.insert">web.insert()</a>
 + <a href="/reference/web.query">web.query()</a>
 + <a href="/reference/select">web.select()</a>
++ <a href="/reference/web.setcookies">web.setcookies()</a>
 + <a href="/reference/render">web.template.render()</a>
 + <a href="/reference/web.webapi.notfound">web.webapi.notfound</a>
 
