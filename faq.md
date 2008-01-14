@@ -56,3 +56,7 @@ title: faq
 99. **Can I iterate over an IterBetter multiple times?**
 
     No. Do `ib = list(ib)` first to turn it from an IterBetter into a list.
+
+99. **I stumbled over a bug in web.py. Where can I file it?**
+
+    Go to the [webpy launchpad site](https://launchpad.net/webpy), login (or register if you have to) and click on "report a bug".
