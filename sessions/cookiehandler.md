@@ -19,7 +19,7 @@ CookieHandler is a derivate of Handler.
 
 ### Public methods
  * store() -
- * retreive() -
+ * retrieve() -
  * remove() -
  * clean() - it will do nothing, it's not possible to implement
 
