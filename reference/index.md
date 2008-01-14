@@ -12,6 +12,7 @@ title: API Reference
 + <a href="/reference/web.header">web.header()</a>
 + <a href="/reference/input">web.input()</a>
 + <a href="/reference/web.insert">web.insert()</a>
++ <a href="/reference/web.output">web.output()</a>
 + <a href="/reference/web.query">web.query()</a>
 + <a href="/reference/web.redirect">web.redirect()</a>
 + <a href="/reference/select">web.select()</a>
