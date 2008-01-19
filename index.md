@@ -27,9 +27,9 @@ A complete web.py application
 
 ## Get Started
 
-web.py 0.22 was released 2007-08-23: [web.py-0.22.tar.gz][16]
+web.py 0.23 was released 2008-01-19: [web.py-0.23.tar.gz][16]
 
-   [16]: static/web.py-0.22.tar.gz
+   [16]: static/web.py-0.23.tar.gz
 
 To always have the latest version of web.py, run:
     
