@@ -6,6 +6,18 @@ title: Change log
 # Change log
 
 <dl>
+<dt>2008-01-19: 0.23</dt>
+<dd>fix: for web.background gotcha (<a href="http://bugs.launchpad.net/webpy/+bug/133079">133079</a>)</dd>
+<dd>fix: for postgres unicode bug (<a href="http://bugs.launchpad.net/webpy/+bug/177265">177265</a>)</dd>
+<dd>fix: web.profile behavior in python 2.5 (<a href="http://bugs.launchpad.net/webpy/+bug/133080">133080</a>)</dd>
+<dd>fix: only uppercase HTTP methods are allowed. (<a href="http://bugs.launchpad.net/webpy/+bug/176415">176415</a>)</dd><dd>fix: transaction error in with statement (<a href="http://bugs.launchpad.net/webpy/+bug/125118">125118</a>)</dd><dd>fix: fix in web.reparam (<a href="http://bugs.launchpad.net/webpy/+bug/162085">162085</a>)</dd><dd>fix: various unicode issues (<a href="http://bugs.launchpad.net/webpy/+bug/137042">137042</a>, <a href="http://bugs.launchpad.net/webpy/+bug/180510">180510</a>, <a href="http://bugs.launchpad.net/webpy/+bug/180549">180549</a>, <a href="http://bugs.launchpad.net/webpy/+bug/180653">180653</a>)</dd>
+<dd>new: support for https</dd>
+<dd>new: support for secure cookies</dd>
+<dd>new: sendmail</dd>
+<dd>new: htmlunquote</dd>
+</dl>
+
+<dl>
 <dt>2007-08-23: 0.22</dt>
 <dd>compatibility with new DBUtils API (<a href="https://bugs.launchpad.net/webpy/+bug/122112">122112</a>)</dd>
 <dd>fix reloading (<a href="https://bugs.launchpad.net/webpy/+bug/118683">118683</a>)</dd>
