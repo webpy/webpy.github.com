@@ -1,13 +1,15 @@
 ---
 layout: default
-title: documentation
+title: web.py 0.23 documentation
 ---
 
-# documentation
+# web.py 0.23 documentation
 
 ## __init__.py
 
 `main()`
+   : 
+
 
 ## cheetah.py
 
@@ -35,6 +37,8 @@ title: documentation
      Requires [Cheetah](http://cheetahtemplate.org/).
 
 `class WebSafe(Filter)`
+   : 
+
 
 ## db.py
 
@@ -127,8 +131,10 @@ title: documentation
      
          >>> sqllist(['a', 'b'])
          'a, b'
-         >>> sqllist('a')
-         'a'
+         >>> sqllist('foo')
+         'foo'
+         >>> sqllist(u'foo')
+         u'foo'
 
 `sqlors(left, lst)`
    : `left is a SQL clause like `tablename.arg = ` 
@@ -191,6 +197,8 @@ title: documentation
 ## debugerror.py
 
 `djangoerror()`
+   : 
+
 `debugerror()`
    : A replacement for `internalerror` that presents a nice page with lots
      of debug information for the programmer.
@@ -198,36 +206,59 @@ title: documentation
      (Based on the beautiful 500 page from [Django](http://djangoproject.com/), 
      designed by [Wilson Miner](http://wilsonminer.com/).)
 
+`emailerrors(email_address, olderror)`
+   : Wraps the old `internalerror` handler (pass as `olderror`) to 
+     additionally email all errors to `email_address`, to aid in 
+     debugging production websites.
+     
+     Emails contain a normal text traceback as well as an
+     attachment containing the nice `debugerror` page.
+
 
 ## form.py
 
 `attrget(obj, attr, value=None)`
+   : 
 
 `class Form`
+   : 
 
 `class Input(object)`
+   : 
 
 `class Textbox(Input)`
+   : 
 
 `class Password(Input)`
+   : 
 
 `class Textarea(Input)`
+   : 
 
 `class Dropdown(Input)`
+   : 
 
 `class Radio(Input)`
+   : 
 
 `class Checkbox(Input)`
+   : 
 
 `class Button(Input)`
+   : 
 
 `class Hidden(Input)`
+   : 
 
 `class File(Input)`
+   : 
 
 `class Validator`
+   : 
 
 `class regexp(Validator)`
+   : 
+
 
 ## http.py
 
@@ -243,11 +274,12 @@ title: documentation
    : Outputs a `Last-Modified` header for `datetime`.
 
 `modified(date=None, etag=None)`
+   : 
 
 `redirect(url, status='301 Moved Permanently')`
    : Returns a `status` redirect to the new URL. 
      `url` is joined with the base URL so that things like 
-     `redirect("about")` will work properly.
+     `redirect("about") will work properly.
 
 `found(url)`
    : A `302 Found` redirect.
@@ -278,9 +310,14 @@ title: documentation
      query string created using the arguments.
 
 `background(func)`
-   : A function decorator to run a long-running function as a background thread.
+   : A function decorator to run a long-running function as a background thread. 
+     GOTCHA in postgres: Until the foreground task ends, any db access by background 
+     task will necessarily get old data from before the foreground task started
+     because psycopg2 begins a transaction in the foreground task until it quits.
 
 `backgrounder(func)`
+   : 
+
 `class Reloader`
    : Before every request, checks to see if any loaded modules have changed on 
      disk and, if so, reloads them.
@@ -363,6 +400,12 @@ title: documentation
          >>> htmlquote("<'&\\">")
          '&lt;&#39;&amp;&quot;&gt;'
 
+`htmlunquote(text)`
+   : Decodes `text` that's HTML quoted.
+ 
+         >>> htmlunquote('&lt;&#39;&amp;&quot;&gt;')
+         '<\\'&">'
+
 `websafe(val)`
    : Converts `val` so that it's safe for use in UTF-8 HTML.
      
@@ -426,17 +469,126 @@ title: documentation
 ## template.py
 
 `class ParseError(Exception): pass class Parser:`
+   : 
+
 `class TemplateParser(Parser)`
+   : 
+
 `class Stowage(storage)`
+   : 
+
 `class WTF(AssertionError): pass class SecurityError(Exception):`
    : The template seems to be trying to do something naughty.
 
 `class Template`
+   : 
+
 `class Handle`
+   : 
+
 `class Fill(Handle)`
+   : 
+
 `class render`
+   : 
+
 `frender(fn, *a, **kw)`
+   : 
+
 `test()`
+   : r"""Doctest for testing template module. 
+
+         >>> t = Template
+         >>> t('1')()
+         '1\n'
+         >>> t('$def with ()\n1')()
+         '1\n'
+         >>> t('$def with (a)\n$a')(1)
+         '1\n'
+         >>> t('$def with (a=0)\n$a')(1)
+         '1\n'
+         >>> t('$def with (a=0)\n$a')(a=1)
+         '1\n'
+         >>> t('$if 1: 1')()
+         '1\n'
+         >>> t('$if 1:\n    1')()
+         '1\n'
+         >>> t('$if 0: 0\n$elif 1: 1')()
+         '1\n'
+         >>> t('$if 0: 0\n$elif None: 0\n$else: 1')()
+         '1\n'
+         >>> t('$if (0 < 1) and (1 < 2): 1')()
+         '1\n'
+         >>> t('$for x in [1, 2, 3]: $x')()
+         '1\n2\n3\n'
+         >>> t('$for x in []: 0\n$else: 1')()
+         '1\n'
+         >>> t('$def with (a)\n$while a and a.pop(): 1')([1, 2, 3])
+         '1\n1\n1\n'
+         >>> t('$while 0: 0\n$else: 1')()
+         '1\n'
+         >>> t('$ a = 1\n$a')()
+         '1\n'
+         >>> t('$# 0')()
+         ''
+         >>> t('$def with (d)\n$for k, v in d.iteritems(): $k')({1: 1})
+         '1\n'
+         >>> t('$def with (a)\n$(a)')(1)
+         '1\n'
+         >>> t('$def with (a)\n$a')(1)
+         '1\n'
+         >>> t('$def with (a)\n$a.b')(storage(b=1))
+         '1\n'
+         >>> t('$def with (a)\n$a[0]')([1])
+         '1\n'
+         >>> t('${0 or 1}')()
+         '1\n'
+         >>> t('$ a = [1]\n$a[0]')()
+         '1\n'
+         >>> t('$ a = {1: 1}\n$a.keys()[0]')()
+         '1\n'
+         >>> t('$ a = []\n$if not a: 1')()
+         '1\n'
+         >>> t('$ a = {}\n$if not a: 1')()
+         '1\n'
+         >>> t('$ a = -1\n$a')()
+         '-1\n'
+         >>> t('$ a = "1"\n$a')()
+         '1\n'
+         >>> t('$if 1 is 1: 1')()
+         '1\n'
+         >>> t('$if not 0: 1')()
+         '1\n'
+         >>> t('$if 1:\n    $if 1: 1')()
+         '1\n'
+         >>> t('$ a = 1\n$a')()
+         '1\n'
+         >>> t('$ a = 1.\n$a')()
+         '1.0\n'
+         >>> t('$({1: 1}.keys()[0])')()
+         '1\n'
+         >>> t('$for x in [1, 2, 3]:\n\t$x')()
+         '    1\n    2\n    3\n'
+         >>> t('$def with (a)\n$:a')(1)
+         '1\n'
+         >>> t('$def with (a)\n$a')(u'\u203d')
+         '\xe2\x80\xbd\n'
+         >>> t(u'$def with (a)\n$a $:a')(u'\u203d')
+         '\xe2\x80\xbd \xe2\x80\xbd\n'
+         >>> t(u'$def with ()\nfoo')()
+         'foo\n'
+         >>> def f(x): return x
+         ...
+         >>> t(u'$def with (f)\n$:f("x")')(f)
+         'x\n'
+         >>> t(u'$def with (f)\n$:f(x="x")')(f)
+         'x\n'
+         >>> x = t('$var foo: bar')()
+         >>> str(x)
+         ''
+         >>> x.foo
+         'bar\n'
+
 
 ## utils.py
 
@@ -775,6 +927,17 @@ title: documentation
  
      (requires [markdown.py](http://webpy.org/markdown.py))
 
+`sendmail(from_address, to_address, subject, message, headers=None, **kw)`
+   : Sends the email message `message` with mail and envelope headers
+     for from `from_address_` to `to_address` with `subject`. 
+     Additional email headers can be specified with the dictionary 
+     `headers.
+ 
+     If `web.config.smtp_server` is set, it will send the message
+     to that SMTP server. Otherwise it will look for 
+     `/usr/lib/sendmail`, the typical location for the sendmail-style
+     binary.
+
 
 ## webapi.py
 
@@ -800,6 +963,8 @@ title: documentation
    : Appends `string_` to the response.
 
 `flush()`
+   : 
+
 `input(*requireds, **defaults)`
    : Returns a `storage` object with the GET and POST arguments. 
      See `storify` for how `requireds` and `defaults` work.
@@ -807,7 +972,7 @@ title: documentation
 `data()`
    : Returns the data sent with the request.
 
-`setcookie(name, value, expires="", domain=None)`
+`setcookie(name, value, expires="", domain=None, secure=False)`
    : Sets a cookie.
 
 `cookies(*requireds, **defaults)`
@@ -831,19 +996,6 @@ title: documentation
 
 `wsgifunc(func, *middleware)`
    : Returns a WSGI-compatible function from a webpy-function.
-
-
-## wsgi.py
-
-`runfcgi(func, addr=('localhost', 8000))`
-   : Runs a WSGI function as a FastCGI server.
-
-`runscgi(func, addr=('localhost', 4000))`
-   : Runs a WSGI function as an SCGI server.
-
-`runwsgi(func)`
-   : Runs a WSGI-compatible `func` using FCGI, SCGI, or a simple web server,
-     as appropriate based on context and `sys.argv`.
 
 `ctx`
    :     A `storage` object containing various information about the request:
@@ -883,3 +1035,15 @@ title: documentation
     
     `output`
        : A string to be used as the response.
+## wsgi.py
+
+`runfcgi(func, addr=('localhost', 8000))`
+   : Runs a WSGI function as a FastCGI server.
+
+`runscgi(func, addr=('localhost', 4000))`
+   : Runs a WSGI function as an SCGI server.
+
+`runwsgi(func)`
+   : Runs a WSGI-compatible `func` using FCGI, SCGI, or a simple web server,
+     as appropriate based on context and `sys.argv`.
+
