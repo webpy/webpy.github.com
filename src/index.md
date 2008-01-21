@@ -50,4 +50,4 @@ title: code samples
 * [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item (CRUD). ([src](http://svn.natalian.org/projects/todo/))
 
 
-* [pyctures](http://auriga.wearlab.de/~alb/pyctures/): a small web gallery written with web.py
+* [pyctures](http://auriga.wearlab.de/~alb/pyctures/): a small web gallery written with web.py ([src] (http://auriga.wearlab.de/~alb/pyctures/files/0.20/))
