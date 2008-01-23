@@ -70,6 +70,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [t]: http://taskodone.com/
 
+[Damiga][d] is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: friends, celebrities, even fictional characters. It's also a place where you can see how the world feels about you.  
+
+   [d]: http://damiga.com/
+
 ## Buzz
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
