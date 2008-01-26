@@ -30,7 +30,7 @@ Now we need to tell web.py our URL structure. Let's start out with something sim
     urls = (
       '/', 'index'    )
 
-The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (The `\d+` matches a sequence of digits. The parentheses say to capture that piece of the match for later on.) The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
+The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (i.e. `\d+` would match a sequence of digits). The parentheses say to capture that piece of the matched data for use later on. The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
 
 This line says we want the URL `/` (i.e. the front page) to be handled by the class named `index`.
 
@@ -133,9 +133,9 @@ Above your `web.run` line add:
 
     web.config.db_parameters = dict(dbn='postgres', user='username', pw='password', db='dbname')
 
-(Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` to `mysql`.)
+(Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` definition to `mysql`.)
 
-Create a simple table in your database:
+Using your database engines admin interface, create a simple table in your database:
 
     CREATE TABLE todo (
       id serial primary key,
@@ -147,15 +147,17 @@ And an initial row:
 
     INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Back in `code.py`, change `index.GET` to:
+Return to editing `code.py` and change `index.GET` to the following, replacing the entire function:
 
     def GET(self):
         todos = web.select('todo')
         print render.index(todos)
 
-and change back the URL handler to take just `/`.
+and change back the URL handler to take just `/` as in:
 
-Edit `index.html` so that it reads:
+    '/', 'index',
+
+Edit and replace the entire contents of `index.html` so that it reads:
 
     $def with (todos)
     <ul>
@@ -188,13 +190,15 @@ Now add another class:
 
 (Notice how we're using `POST` for this?)
 
-`web.input` gives you access to any variables the user submitted through a form. In order to access dat from multiple identically named items in a list format (e.g.: a series of checkboxes all with the attribute name="name") use:
+`web.input` gives you access to any variables the user submitted through a form. 
+
+Note: In order to access data from multiple identically-named items, in a list format (e.g.: a series of check-boxes all with the attribute name="name") use:
 
     post_data=web.input(name=[])
 
 `web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that URL.
 
-Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.rollback()` rolls it back. `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
+Some quick additional notes: `web.transact()` starts a transaction. `web.commit()` commits it; `web.rollback()` rolls it back. `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
 
 `web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
 
