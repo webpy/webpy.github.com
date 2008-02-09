@@ -48,7 +48,9 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [jottit.com](http://jottit.com) is built with web.py.  Jottit makes getting a website as easy as filling out a textbox.
 
-[colr.org](http://colr.org), a color scheme picking site, is built in web.py.
+[colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
+
+[grouplite.com](http://www.grouplite.com) uses web.py.
 
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
