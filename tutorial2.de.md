@@ -36,24 +36,24 @@ Der zweite Teil ist der Name der Klasse an welche die Anfrage geschickt wird, be
 
 Diese Zeile sagt das wir die URL `/` (die Startseite) mit der Klasse namens `index` bearbeiten wollen.
 
-Nun müssen wir die `index`-Klasse schreiben. Die meisten Leute bemerken es beim Surfen nicht, aber der Browser verwendet eine Sprache, die als HTTP bekannt ist, zur Kommunikation mit dem WWW. Die Details dazu sind nicht wichtig, aber die eigentliche Idee ist, das die Besucher den Webserver auffordern, bestimmte Funktionen (wie eta `GET` oder `POST`) an URLs (wie `/` oder `/foo?f=1`) auszuführen.
+Nun müssen wir die `index`-Klasse schreiben. Die meisten Leute bemerken es beim Surfen nicht, aber der Browser verwendet eine Sprache, die als HTTP bekannt ist, zur Kommunikation mit dem WWW. Die Details dazu sind nicht wichtig, aber die eigentliche Idee ist, dass die Besucher den Webserver auffordern, bestimmte Funktionen (wie eta `GET` oder `POST`) an URLs (wie `/` oder `/foo?f=1`) auszuführen.
 
-`GET` ist die bekannteste Funktion. Sie wird verwendet, um den Text oder Inhalt einer Webseite anzufordern. Wenn du in deinem Browser `harvard.edu` eintippst dann forderst du im wahrsten Sinne des Wortes den Harvard Webserver auf "to `GET /`". Am zweit bekanntesten ist `POST`. POST wird oft verwendet, wenn man ein Formular abschickt, wie zum Beispiel eine Anfrage etwas zu kaufen. Du benutzt `POST` immer dann, wenn das Abschicken der Anfrage etwas bewirkt (wenn du die Kreditkarte belastest oder eine Bestellung aufgibst). Das ist sehr wichtig, denn `GET` URLs können herum gereicht werden und von Suchmaschinen indexiert werden. Das ist zwar etwas, was du für einen Großteil deiner Seite willst, aber bestimmt _nicht_ für Dinge wie Bestellungen aufgeben. (Stell dir vor, Google würde versuchen alles auf deiner Seite zu kaufen).
+`GET` ist die bekannteste Funktion. Sie wird verwendet, um den Text oder Inhalt einer Webseite anzufordern. Wenn du in deinem Browser `harvard.edu` eintippst, dann forderst du im wahrsten Sinne des Wortes den Harvard Webserver auf "to `GET /`". Am zweit bekanntesten ist `POST`. POST wird oft verwendet, wenn man ein Formular abschickt, wie zum Beispiel eine Anfrage etwas zu kaufen. Du benutzt `POST` immer dann, wenn das Abschicken der Anfrage etwas bewirkt (wenn du die Kreditkarte belastest oder eine Bestellung aufgibst). Das ist sehr wichtig, denn `GET` URLs können herum gereicht werden und von Suchmaschinen indexiert werden. Das ist zwar etwas, was du für einen Großteil deiner Seite willst, aber bestimmt _nicht_ für Dinge wie Bestellungen aufgeben. (Stell dir vor, Google würde versuchen alles auf deiner Seite zu kaufen).
 
 
-In unserem web.py-Quellcode können wir die zwei Funktionen unterscheiden:
+In unserem web.py-Quellcode können wir diese zwei Funktionen unterscheiden:
 
     class index:
         def GET(self):
             print "Hello, world!"
 
-Diese `GET`-Funktion wird nun aufgeruft wenn jemand eine `GET` Anfrage an `/` schickt.
+Die `GET`-Funktion wird nun aufgerufen, wenn jemand eine `GET` Anfrage an `/` schickt.
 
-Gut, nun müssen wir nur noch eine Zeile hinzufügen, um web.py zu sagen das es Webseiten zur Verfügung stellen soll.
+Gut, nun müssen wir nur noch eine Zeile hinzufügen, um web.py zu sagen, dass es Webseiten zur Verfügung stellen soll.
 
     if __name__ == "__main__": web.run(urls, globals())
 
-Das sagt web.py, dass es die URLs die wir oben definiert haben bereitstellen soll, indem es die Klassen aufruft, die wir in der Datei global definiert haben.
+Das sagt web.py, dass es die URLs, die wir oben definiert haben bereitstellen soll, indem es die Klassen aufruft, die wir in der Datei global definiert haben.
 
 Nun, obwohl du bereits viel gelesen hast, haben wir eigentlich nur etwa fünf Zeilen geschrieben. Das ist eigentlich auch alles, was du für eine komplette web.py-Applikation brauchst.
 
@@ -71,7 +71,7 @@ Dann wird deine web.py-Applikation einen Webserver auf deinem Computer laufen la
 
 ## Developing
 
-Web.py hat ebenso ein paar Tools die uns beim Debugging helfen. Füge in der letzten Zeile vor `if __name__` folgendes hinzu:
+Web.py hat ebenso ein paar Tools, die uns beim Debugging helfen. Füge in der letzten Zeile vor `if __name__` folgendes hinzu:
 
     web.webapi.internalerror = web.debugerror
 
@@ -79,7 +79,7 @@ Das wird dir hilfreiche Fehlermeldungen liefern. Außerdem musst du in der letzt
 
     if __name__ == "__main__": web.run(urls, globals(), web.reloader)
 
-Das sagt web.py, dass es web.reloader verwenden soll. web.reloader ist eine "middleware" (eine Funktion, die bestimmte Funktionalitäten zu dem Webserver hinzufügt). Diese lädt die Dateien jedesmal neu, nachdem du diese verändert hast. Dadurch sieht du die Änderungen sofort im Browser, ohne den Server neu zu starten. (Bei größeren Änderungen kann es trotzdem sein, dass du den Server neustarten musst). Wahrscheinlich wirst du das wieder herausnehmen wollen wenn du deine Seite Online stellst, aber zum Entwickeln ist es großartig. Außerdem gibt es noch `web.profiler`, das zeigt dir am Ende jeder Webseite Informationen darüber, wie lange jede Funktion gebraucht hat, sodass du dein Programm schneller machen kannst. 
+Das sagt web.py, dass es web.reloader verwenden soll. web.reloader ist eine "middleware" (eine Funktion, die bestimmte Funktionalitäten zu dem Webserver hinzufügt). Diese lädt die Dateien jedesmal neu, nachdem du diese verändert hast. Dadurch sieht du die Änderungen sofort im Browser, ohne den Server neu zu starten. (Bei größeren Änderungen kann es trotzdem sein, dass du den Server neustarten musst). Wahrscheinlich wirst du das wieder herausnehmen wollen wenn du deine Seite Online stellst, aber zum Entwickeln ist es großartig. Außerdem gibt es noch den `web.profiler`, der zeigt dir am Ende jeder Webseite Informationen darüber, wie lange jede Funktion gebraucht hat, sodass du dein Programm schneller machen kannst. 
     
 ## Templating
 
