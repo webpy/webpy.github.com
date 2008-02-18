@@ -7,7 +7,7 @@ title: Web.py Cookbook
 
 Cookbook style documentation for web.py 0.3. 
 
-Topics:
+Recipies:
 
 * [Hello World](/cookbook/helloworld)
 * [Working with Session](/cookbook/sessions)
