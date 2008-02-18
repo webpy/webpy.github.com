@@ -15,7 +15,7 @@ This can be done using application processors.
 
     app = web.application(urls, gloabals)
     render = web.template.render('templates/')
-   
+    
     def layout_processor(handle):
         result = handle()
         return render.layout(result)
