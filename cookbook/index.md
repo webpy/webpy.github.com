@@ -10,7 +10,7 @@ Cookbook style documentation for web.py 0.3.
 Topics:
 
 * [Hello World](/cookbook/helloworld)
-* [Working with Session](/cookbook/session)
+* [Working with Session](/cookbook/sessions)
 * [Sending Mail](/cookbook/sendmail)
 * [Using Site Layout Templates](/cookbook/layout_template)
 
