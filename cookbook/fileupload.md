@@ -5,11 +5,11 @@ title: File Upload Recipe
 
 # File Upload Recipe
 
-### Problem
+## Problem
 
 File uploads can be a little tricky if you're not familiar with form uploads, or CGI in general.
 
-### Solution
+## Solution
 
     import web
     
@@ -37,7 +37,7 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
     if __name__ == "__main__":
         app.run()
 
-### Hang ups
+## Hang ups
 
 A couple of things to watch out for:
 
