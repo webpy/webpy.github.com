@@ -13,6 +13,8 @@ Recipes:
 * [Working with Session](/cookbook/sessions)
 * [Sending Mail](/cookbook/sendmail)
 * [Using Site Layout Templates](/cookbook/layout_template)
+* [File Upload](/cookbook/fileupload)
+
 
 Requests:
 
