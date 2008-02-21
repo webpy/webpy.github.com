@@ -5,7 +5,6 @@ title: API Reference
 
 # API Reference
 
-## Built-in Methods
 
 + <a href="/reference/web.ctx.get">web.ctx.get()</a>
 + <a href="/reference/web.cookies">web.cookies()</a>
