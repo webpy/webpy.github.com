@@ -21,8 +21,3 @@ title: API Reference
 + <a href="/reference/web.update">web.update()</a>
 + <a href="/reference/web.webapi.notfound">web.webapi.notfound</a>
 
-
-## Cookbook
-+ <a href="/reference/authentication">Logins + Authentication</a>
-+ <a href="/reference/mysql">MySQL Database</a>
-+ <a href="/reference/postgresql">PostgreSQL Database</a>
