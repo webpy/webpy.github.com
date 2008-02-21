@@ -42,6 +42,8 @@ title: web.py 0.23 documentation
 
 ## db.py
 
+Supports Firebird, MySQL, PostgreSQL, and SQLite.
+
 `class UnknownParamstyle(Exception)`
    : raised for unsupported db paramstyles
      
@@ -221,10 +223,14 @@ title: web.py 0.23 documentation
    : 
 
 `class Form`
-   : 
+   : __init__(self, *inputs, **kw)
+     `inputs` is a list of form objects.
+     The only keyword accepted is "validators" which is a list of Validator objects.
 
 `class Input(object)`
-   : 
+   : __init__(self, name, *validators, **attrs)
+     `name` is the name of the object. It is the default value for the "description" attribute for the HTML form element.
+     The keywords, stored in the dictionary `attrs`, accepted are: "description", "value", "pre", "post", "id", and "class_"
 
 `class Textbox(Input)`
    : 
