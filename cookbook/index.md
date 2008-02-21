@@ -18,5 +18,5 @@ Recipes:
 
 Requests:
 
-* [web.background|How to properly use web.background](/cookbook/background)
+* [How to properly use web.background](/cookbook/web.background)
 
