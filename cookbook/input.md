@@ -28,7 +28,7 @@ Sometimes you may want to specify a default variable, in case none is given.  Th
 Note that the web.input() values will be strings even if there are numbers passed to it.  
 
 
-What if you pass several of the same variable names (like in a <select mulitple="multiple"><option>foo</option><option>bar</option><option>baz</option></select> scenario)?  You need to let web.input know to expect multiple inputs, or it will clobber all but one.  Pass the default value of a list to web.input and it will work correctly.  For example, going to http://example.com?id=10&id=20:
+What if you pass several of the same variable names (like in a <select mulitple="multiple" size="3"><option>foo</option><option>bar</option><option>baz</option></select> scenario)?  You need to let web.input know to expect multiple inputs, or it will clobber all but one.  Pass the default value of a list to web.input and it will work correctly.  For example, going to http://example.com?id=10&id=20:
 
     class SomePage:
         def GET(self):
