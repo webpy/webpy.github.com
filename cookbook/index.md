@@ -16,6 +16,7 @@ Recipes:
 * [Using Site Layout Templates](/cookbook/layout_template)
 * [File Upload](/cookbook/fileupload)
 * [Seeother and Redirect](/cookbook/redirect+seeother)
+* [web.ctx](/cookbook/ctx)
 
 Requests:
 
