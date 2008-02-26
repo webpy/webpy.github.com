@@ -15,7 +15,7 @@ Recipes:
 * [Sending Mail](/cookbook/sendmail)
 * [Using Site Layout Templates](/cookbook/layout_template)
 * [File Upload](/cookbook/fileupload)
-
+* [Seeother and Redirect](/cookbook/redirect+seeother)
 
 Requests:
 
