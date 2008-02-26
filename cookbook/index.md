@@ -17,7 +17,9 @@ Recipes:
 * [File Upload](/cookbook/fileupload)
 * [Seeother and Redirect](/cookbook/redirect+seeother)
 * [web.ctx](/cookbook/ctx)
-* [Accessing user input through web.input()](/cookbook/input)
+* [Accessing user input through web.input](/cookbook/input)
+
+
 Requests:
 
 * [How to properly use web.background](/cookbook/web.background)
