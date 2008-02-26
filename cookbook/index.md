@@ -5,7 +5,7 @@ title: Web.py Cookbook
 
 # Web.py Cookbook
 
-Cookbook style documentation for web.py 0.3. 
+Cookbook style documentation for web.py 0.3. Note that some of these features aren't available in previous versions.  Currently version 0.3 is the development branch.
 
 ##Basics:
 * [Hello World](/cookbook/helloworld)
@@ -28,7 +28,7 @@ Cookbook style documentation for web.py 0.3.
 
 ##Database:
 
-##Deployment
+##Deployment:
 
 
 Requests:
