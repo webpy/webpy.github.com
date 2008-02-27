@@ -69,3 +69,4 @@ Offsets start returning results after a certain point; they're often used with l
 The _test variable lets you see the SQL produced by the statement:
 
     results = db.select('mytable', offset=10, _test=True) 
+    ><sql: 'SELECT * FROM mytable OFFSET 10'>
