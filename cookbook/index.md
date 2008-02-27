@@ -7,6 +7,17 @@ title: Web.py Cookbook
 
 Cookbook style documentation for web.py 0.3. Note that some of these features aren't available in previous versions.  Currently version 0.3 is the development branch.
 
+In terms of formatting, please try to use a cookbook-like format...that is:
+###Problem:
+foo
+
+###Solution:
+bar
+
+Note that the urls don't need "web" in them -- just "/cookbook/select" , not "/cookbook/web.select".  
+
+Finally, this documentation is for version 0.3, so please only add code that you know works with the new version.
+
 ##Basics:
 * [Hello World](/cookbook/helloworld)
 * [Serving Static Files](/cookbook/staticfiles)
