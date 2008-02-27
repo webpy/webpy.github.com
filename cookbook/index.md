@@ -31,6 +31,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 ##User Input:
 * [File Upload](/cookbook/fileupload)
 * [Accessing user input through web.input](/cookbook/input)
+* Using basic forms (requested)
 
 ##Database:
 * Mutliple databases (requested)
