@@ -10,19 +10,19 @@ Esta es la versión en español del tutorial en [Inglés](http://webpy.infogami.
 
 ## Iniciando.
 
-Usted conoce Python y quiere hacer un sitio web. web.py le provee con el código para hacerlo fácilmente.
+Si usted conoce Python y quiere hacer un sitio web, web.py le provee con el código para hacerlo fácilmente.
 
-Si usted quiere hacer todo el tutorial, usted necesita tener instalado Python, web.py, flup, psycopg2 y Postgres (o una base de datos equivalente y el driver de Python correspondiente). Para mayores detalles, ir a [webpy.org](http://www.webpy.org).
+Si quiere seguir todo el tutorial, necesitará tener instalado Python, web.py, flup, psycopg2 y Postgres (o una base de datos equivalente y el driver de Python correspondiente). Para más detalles, consulte [webpy.org](http://www.webpy.org).
 
 Si usted ya tiene funcionando un proyecto con otra versión de web.py, dele un vistazo a la información sobre migración en la [página](http://webpy.infogami.com/upgrade_to_point2) de actualización.
 
 Ya podemos comenzar.
 
-## URL Handling
+## Manejo de URLs
 
-La parte más importante de cualquier sitio web es la estructura de sus [URLs](http://es.wikipedia.org/wiki/URL). Los URLs de tu sitio web, no son simplemente "cosas" que los visitantes al web miran y envían por correo-e a sus amigos, ellos también proveen un modelo mental de como su sitio web funciona. En sitios populares (en inglés), tales como [del.icio.us](http://del.icio.us/), los URLs son inclusive parte del interfase con el usuario. web.py facilita definir buenos URLs.
+La parte más importante de cualquier sitio web es la estructura de sus [URLs](http://es.wikipedia.org/wiki/URL). Las URLs de su sitio web no son simplemente "cosas" que los visitantes al web miran y envían por correo electrónico a sus amigos, sino que también proveen un modelo mental de como su sitio web funciona. En sitios populares (en inglés), tales como [del.icio.us](http://del.icio.us/), las URLs son inclusive parte del interfaz con el usuario. web.py facilita definir buenos URLs.
 
-Para comenzar una aplicación con web.py, abra un nuevo archivo de texto (vamos a llamarlo 'code.py') y tipee:
+Para comenzar una aplicación con web.py, abra un nuevo archivo de texto (vamos a llamarlo 'code.py') y escriba:
 
     import web
 
@@ -33,36 +33,36 @@ A continuación, deberá decirle a web.py cual será la estructura de URLs. Se p
     urls = (
       '/', 'index'    )
 
-La primera partes es una [expresión regular](http://osteele.com/tools/rework/) que coincide con un URL, como `/`, `/help/faq`, `/item/(\d+)`, etc. (El `\d+` coincide con una secuencia de dígitos). La segunda parte es el nombre de una clase que será llamada, cuando el URL de una página coincida con al expresión regular.
+La primera partes es una [expresión regular](http://osteele.com/tools/rework/) que coincide con una URL, como `/`, `/help/faq`, `/item/(\d+)`, etc. (El `\d+` coincide con una secuencia de dígitos). La segunda parte es el nombre de la clase que será llamada cuando el URL de una página coincida con al expresión regular.
 
 Esta linea dice que queremos que el URL `/` (ej: la página principal) debe ser manejada por la clase llamada `index`.
 
-Por lo tanto, todo lo que se require es escribir la clase `index`.  Aunque la mayoría de las personas no lo notan, su visualizador de web (browser), utiliza un lenguaje conocido como HTTP para comunicarse con el World Wide Web. Los detalles no son relevantes, pero la idea básica es que los visitantes a su sitio web, le solicitan al servidor de web que realice una función especifica (como `GET` o `POST`) con los URLs (como en `/` o `/foo?f=1`).
+Por lo tanto, todo lo que se require es escribir la clase `index`. Aunque la mayoría de las personas no lo saben, su navegador web, utiliza un lenguaje conocido como HTTP para comunicarse con la World Wide Web. Los detalles no son relevantes, pero la idea básica es que los visitantes de su sitio web le solicitan al servidor de web que realice una función especifica (como `GET` o `POST`) con las URLs (como en `/` o `/foo?f=1`).
 
 
-`GET` is the one we're all familiar with, the one used to request the text of a web page. When you type `harvard.edu` into your web browser, it literally asks the Harvard web server to `GET /`.  The second-most famous, `POST`, is often used when submitting certain kids of forms, like a request to purchase something. You use `POST` whenever the act of submitting a request _does something_ (like charge your credit card and process an order). This is key, because `GET` URLs can be passed around and indexed by search engines, which you definitely want for most of your pages but definitely _don't_ want for things like processing orders (imagine if Google tried to buy everything on your site!).
+`GET` es el que nos resulta familiar a todos, es el que se usa para pedir el texto de una página web. Cuando escribe `harvard.edu` en su navegador web, éste le pide literarmente al servidor web de Harvard que `GET /`. El segundo más famoso, `POST`, se usa a menudo para enviar ciertos tipos de formularios, como una petición de compra de algún artículo. Usted usa `POST` siempre que el acto de enviar un formulario _hace algo_ (como utilizar su tarjeta de crédito y procesar un recibo). Esta es la clave, porque las `GET` URLs pueden circular y se indexadas por los motores de búsqueda, lo que realmente quieres para la mayoría de tus páginas pero, definitivamente, _no quieres_ que procesen recibos (¡imagina que Google intentase comprar todo lo que hay en tu sitio web!).
 
-In our web.py code, we make the distinction between the two clear:
+En el código de nuestro web.py, distinguiremos las dos claramente:
 
     class index:
         def GET(self):
             print "Hello, world!"
-This `GET` function will now get called by web.py anytime some makes a `GET` request for `/`.
+Esta función `GET` será llamada por web.py siempre que alguien realice una petición `GET` de `/`.
 
-Alright, now we just need to finish up with a final line telling web.py to start serving web pages:
+Bien, ahora sólo tenemos que acabar con una linea final que le diga a web.py que empiece a servir páginas web:
 
     if __name__ == "__main__": web.run(urls, globals())
 
-This tells web.py to serve the URLs we listed above, looking up the classes in the global namespace of this file.
+Esto le dice a web.py que sirva las URLs que listamos arriba, buscando las clases en el espacio de nombres global de este archivo.
 
-Now notice that although I've been talking a lot here, we only really have five or so lines of code. That's all you need to make a complete web.py application. If you go to your command line and type:
+Ahora fíjese en que, aunque hemos hablado un montón, sólo hemos escrito unas cinco lineas de código. Es todo lo que necesitas para construir una aplicación web.py completa. Si abre su linea de comandos y escribe:
 
     $ python code.py
     Launching server: http://0.0.0.0:8080/
 
-You now have your web.py application running a real web server on your computer. Visit that URL and you should see "Hello, world!" (You can add an IP address/port after the "code.py" bit to control where web.py launches the server. You can also tell it to run a `fastcgi` or `scgi` server.)
+Ahora su aplicación web.py está ejecutando un servidor web real en su ordenador. Si visita esa URL debería ver "Hello, world!" (Puede añadir una dirección IP y un puerto después de las lineas de "code.py" para controlar dónde lanza web.py el servidor. También puede indicarle que ejecute un servidor `fastcgi` o `scgi`.)
 
-## Desarrollando
+## Desarrollo
 
 web.py also has a few tools to help us with debugging. Before the 'if __name__' on last line, add:
 
@@ -141,7 +141,7 @@ E incluya un registro (fila):
 
     INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Vuelva al código `code.py`, modifique `index.GET` a:
+Vuelva al código `code.py`, modifique `index.GET` por:
 
     def GET(self):
         todos = web.select('todo')
