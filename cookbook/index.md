@@ -31,8 +31,9 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * loadhooks/unloadhooks (requested)
 * How to properly use web.background (requested)
 
-##Sessions:
+##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
+* [Working with Cookies](/cookbook/cookies)
 * User authentication (requested)
 
 ##Utils:
