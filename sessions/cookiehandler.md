@@ -12,6 +12,12 @@ see [project blog post](http://planet-soc.com/node/2158)
 bazaar branch at http://bazaar.launchpad.net/~karol.tarcak/webpy/webpy.sessions.cookie
 ## Summary
 
+## How to generate a RSA key file
+
+    import web
+    web.session.generate_key('some_rsa_file', 1024)
+
+
 
 ## Implementation details
 
