@@ -9,7 +9,7 @@ title: Sessions
 
 How to use sessions in web.py.
 
-### Solution
+### Solution - FOR 0.3!!
 
 The `web.session` module provides session support. Here is a simple application to count using sessions.
 
