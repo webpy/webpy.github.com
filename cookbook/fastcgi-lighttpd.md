@@ -31,10 +31,10 @@ conf-enabled/
 
 Enabling and disabling modules could be done by provided
 /usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
-
+<b>
 For web py you should enable mod_fastcgi and mod_rewrite, thus run:  
 /usr/sbin/lighty-enable-mod  
-and supply <b>fastcgi</b>
+and supply fastcgi</b>
 </pre>
 
 Below are instructions for the following files:
