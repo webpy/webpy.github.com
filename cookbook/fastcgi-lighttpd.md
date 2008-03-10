@@ -34,7 +34,7 @@ server.username = "postgres"
 
 <code>conf-enabled/10-fastcgi.conf</code>
 
-<pre>  
+<pre>
 server.modules   += ( "mod_fastcgi" )
 server.modules   += ( "mod_rewrite" )
 
