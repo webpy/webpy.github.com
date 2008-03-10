@@ -40,9 +40,9 @@ For web py you should enable mod_fastcgi and mod_rewrite, thus run: <code>/usr/s
 (mode_rewrite will be enabled within <code>10-fastcgi.conf</code> file as you will see in a moment).
 
 ##Below are instructions for the following files:
-* /etc/lighttpd/lighttpd.conf  
-* /etc/lighttpd/conf-available/10-fastcgi.conf  
-* code.py  
+* <code>/etc/lighttpd/lighttpd.conf</code>
+* <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+* <code>code.py</code>
 
 <code>/etc/lighttpd/lighttpd.conf</code>
 
