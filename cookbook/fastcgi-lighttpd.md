@@ -34,10 +34,9 @@ server.username = "postgres"
 
 <code>conf-enabled/10-fastcgi.conf</code>
 
-<pre>
-  
-  server.modules   += ( "mod_fastcgi" )
-  server.modules   += ( "mod_rewrite" )
+<pre>  
+server.modules   += ( "mod_fastcgi" )
+server.modules   += ( "mod_rewrite" )
 
  fastcgi.server = ( "/code.py" =>
  (( "socket" => "/tmp/fastcgi.socket",
