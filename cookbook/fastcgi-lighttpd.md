@@ -62,7 +62,7 @@ In my case I used postgresql and therefore runs lighttpd as postgres in order to
 server.username = "postgres"
 </pre>
 
-<code>conf-enabled/10-fastcgi.conf</code>
+<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 
 <pre>
 server.modules   += ( "mod_fastcgi" )
