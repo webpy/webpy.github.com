@@ -7,6 +7,11 @@ title: Webpy + LightTTPD with FastCGi
 
 The following applies to lighttpd version 1.4.18
 
+Note:
+* You may replace <code>code.py</code> with your own file name.
+* <code>/path-to/webpy-app</code> found below refers to the path to the directory contains your <code>code.py</code>
+* <code>/path-to/webpy-app/code.py</code> is the full path to your **python file**
+
 If you are not certain what version yo uare running simply type: <code>lighttpd -v</code> at your console.
 
 Note: Earlier version of lighttpd may organize the .conf files differently. Yet, the same principles applied to them as well.
@@ -53,7 +58,7 @@ server.modules              = (
             "mod_accesslog",
             "mod_compress",
 )
-server.document-root       = "/path/to/webpy/app/root-dir"
+server.document-root       = "/path-to/webpy-app"
 </pre>
 
 In my case I used postgresql and therefore runs lighttpd as postgres in order to grant permissions to the database, therefore I added the line:
@@ -70,7 +75,7 @@ server.modules   += ( "mod_rewrite" )
 
  fastcgi.server = ( "/code.py" =>
  (( "socket" => "/tmp/fastcgi.socket",
-    "bin-path" => "/path/to/code.py",
+    "bin-path" => "/path-to/webpy-app/code.py",
     "max-procs" => 1,
    "bin-environment" => (
      "REAL_SCRIPT_NAME" => ""
