@@ -9,7 +9,7 @@ The following applies to lighttpd version 1.4.18
 
 If you are not certain what version yo uare running simply type: <code>lighttpd -v</code> at your console.
 
-Note: Earlier version of lighttpd may organize the .conf files differently but the same principles applied to them as well.
+Note: Earlier version of lighttpd may organize the .conf files differently. Yet, the same principles applied to them as well.
 
 ###ligghttpd Configuration under Debian GNU/Linux
 
