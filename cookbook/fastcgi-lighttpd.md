@@ -7,7 +7,32 @@ title: Webpy + LightTTPD with FastCGi
 
 The following applies to lighttpd version 1.4.18
 
-Earlier version may organize the xxx.conf files differently but the same principles applied to them as well.
+Earlier version may organize the .conf files differently but the same principles applied to them as well.
+
+ligghttpd Configuration under Debian GNU/Linux
+==============================================
+
+<pre>
+Files and Directories in /etc/lighttpd:
+---------------------------------------
+
+lighttpd.conf:
+         main configuration file
+
+conf-available/
+        This directory contains a series of .conf files. These files contain
+        configuration directives necessary to load and run webserver modules.
+        If you want to create your own files they names should be
+        build as nn-name.conf where "nn" is two digit number (number
+        is used to find order for loading files)
+
+conf-enabled/
+        To actually enable a module for lighttpd, it is necessary to create a
+        symlink in this directory to the .conf file in conf-available/.
+
+Enabling and disabling modules could be done by provided
+/usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
+<pre>
 
 Below are instructions for the following files:  
   * lighttpd.conf  
