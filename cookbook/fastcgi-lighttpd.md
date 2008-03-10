@@ -7,7 +7,7 @@ title: Webpy + LightTTPD with FastCGi
 
 The following applies to lighttpd version 1.4.18
 
-Note:
+##Note:  
 * You may replace <code>code.py</code> with your own file name.
 * <code>/path-to/webpy-app</code> found below refers to the path to the directory contains your <code>code.py</code>
 * <code>/path-to/webpy-app/code.py</code> is the full path to your **python file**
