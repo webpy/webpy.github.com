@@ -57,7 +57,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * Query (requested)
 
 ##Deployment:
-* Fastcgi deployment through lighttpd (requested)
+* [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
 * Fastcgi deployment through Apache (requested)
 * mod_python deployment through Apache (requested)
 * nginx deployment (requested)
