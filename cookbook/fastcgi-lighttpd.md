@@ -32,7 +32,7 @@ conf-enabled/
 
 Enabling and disabling modules could be done by provided
 /usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
-<pre>
+</pre>
 
 Below are instructions for the following files:  
   * lighttpd.conf  
