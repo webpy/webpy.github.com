@@ -7,9 +7,11 @@ title: Webpy + LightTTPD with FastCGi
 
 The following applies to lighttpd version 1.4.18
 
-Earlier version of lighttpd may organize the .conf files differently but the same principles applied to them as well.
+If you are not certain what version yo uare running simply type: <code>lighttpd -v</code> at your console.
 
-##ligghttpd Configuration under Debian GNU/Linux
+Note: Earlier version of lighttpd may organize the .conf files differently but the same principles applied to them as well.
+
+###ligghttpd Configuration under Debian GNU/Linux
 
 <pre>
 Files and Directories in /etc/lighttpd:
