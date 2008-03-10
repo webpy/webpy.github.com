@@ -91,8 +91,8 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-<code>/code.py</code>
-at the top of the file add:
+<code>/code.py</code>  
+At the top of the file add:
 
 <pre>
 #!/usr/bin/env python
