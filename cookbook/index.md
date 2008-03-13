@@ -63,4 +63,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * mod_python deployment through Apache (requested)
 * nginx deployment (requested)
 
+##Subdomains:
+* [Subdomains and how to access the username](/Subdomains and how to access the username) (requested)
+
 
