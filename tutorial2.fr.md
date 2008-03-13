@@ -6,9 +6,9 @@ title: web.py 0.2 tutorial
 # web.py 0.2 tutorial
 
 ## Installation
-Vous  connaissez Python et vous voulez construire un site web. Web.py founit le code pour faire cela d'une maniére simple.
+Vous  connaissez Python et vous voulez construire un site web. Web.py founit le code pour faire cela d'une manière simple.
 
-Si vous voulez faire l’ensemble de ce tutoriel vous devrez installer Python, web.py, flup, psycopg2 et Postgres (ou une autre base de donnée avec son driver pour Python, par exemple : MySQL et mysqldb). Pour plus de détails voir le site de [webpy.org](http://webpy.org/).
+Si vous voulez faire l’ensemble de ce tutoriel vous devrez installer Python, web.py, flup, psycopg2 et Postgres (ou une autre base de données avec son driver pour Python, par exemple : MySQL et mysqldb). Pour plus de détails voir le site de [webpy.org](http://webpy.org/).
 
 Si vous avez un projet web.py existant, regardez la page de [upgrade](http://webpy.infogami.com/upgrade_to_point2) pour plus d’informations sur la migration vers la nouvelle version.
 
@@ -31,13 +31,13 @@ Maintenant on implémente la structure de nos URLs, on commence par quelque chos
 
 La première partie est l’[expression régulière](http://osteele.com/tools/rework/)  qui représente un chemin. Par exemple : ‘/’, ‘/aide/faq’, ‘/article/(\d+)’, etc. Le \d+ représente une séquence de chiffres. Les parenthèses (..) servent à capturer les éléments retournés pour plus tard. La deuxième partie est le nom d’une classe à laquelle envoyer la requête, comme view, welcomes.hello (qui utilise la classe hello du module welcomes), ou bien get_\1. \1 est remplacé par la première capture de l’expression régulière. Toutes captures restantes seront passées à la fonction.
 
-La ligne ('/', 'index') dis qu’on a besoin de l’URL ‘/’ (i.e la page d’accueille) qui sera prit en charge  par la classe nommé ‘index’.
+La ligne ('/', 'index') dis qu’on a besoin de l’URL ‘/’ (i.e la page d’accueil) qui sera prit en charge  par la classe nommé ‘index’.
 
 Maintenant on écrit le code de la classe index:
 
     class index:
         def GET(self):
-            print " Bonjour, monde !
+            print " Bonjour, monde !"
 
 Comme vous avez pu le deviner, `GET` est appelé par web.py lorsque quelqu’un appelle la méthode HTTP GET sur votre URL ‘/’ (c’est-à-dire quand ils la visitent avec un navigateur web). La dernière ligne renvoie le texte brut “Bonjour, monde !” au visiteur.
 
