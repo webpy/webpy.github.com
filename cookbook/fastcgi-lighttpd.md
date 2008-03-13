@@ -5,7 +5,7 @@ title: Webpy + LightTTPD with FastCGi
 
 # Webpy + LightTTPD with FastCGi
 
-The following applies to lighttpd version 1.4.18
+The following applies on lighttpd version 1.4.18
 
 ##Note:  
 * You may replace <code>code.py</code> with your own file name.
