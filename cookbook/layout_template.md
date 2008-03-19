@@ -12,8 +12,9 @@ How to support layout template in web.py applications.
 ### Solution
 
 This can be done using application processors.
-
-    app = web.application(urls, gloabals)
+    
+    urls = ( ... )
+    app = web.application(urls, globals())
     render = web.template.render('templates/')
     
     def layout_processor(handle):
