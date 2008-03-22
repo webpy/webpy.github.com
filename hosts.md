@@ -15,3 +15,4 @@ How to's on getting web.py on the folowing hosts
 * [godaddy.com](/godaddy.com)
 * [GrokThis](/GrokThis)
 * [kimsufi](/kimsufi)
+* [DevelopmentIsland](/DevelopmentIsland)
