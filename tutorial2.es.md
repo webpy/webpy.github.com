@@ -64,16 +64,15 @@ Ahora su aplicación web.py está ejecutando un servidor web real en su ordenado
 
 ## Desarrollo
 
-web.py also has a few tools to help us with debugging. Before the 'if __name__' on last line, add:
+web.py tiene algunas herramientas que nos ayudaran a debuggear. Antes de 'if __name__' en la ultima linea debemos agregar:
 
     web.webapi.internalerror = web.debugerror
 
-This will give you more helpful error messages. And on the last line add `web.reloader` so that it reads:
+Esto nos dara mas informacion sobre los errores sucedidos. Y en la ultima linea debemos agregar `web.reloader` para que se vea de la siguiente forma:
 
     if __name__ == "__main__": web.run(urls, globals(), web.reloader)
 
-    
-This tells web.py to use the web.reloader "middleware" (middleware is a wrapper function to add some functionality to your web server) which reloads your files whenever you edit them, so that you can see the changes in your web browser right away. (For some serious changes, though, you'll still have to restart the server.) You'll probably want to take this out when you make your site public, but it's great while developing. There's also `web.profiler`, which outputs information about how much time each function took at the end of each web page, so that you can make your code faster.
+Esto le avisa a web.py que utilice web.reloader "middleware" (middleware es una funcion wrapper para agregarle mas funcionalidad al servidor web que hagamos) el cual recarga todos los archivos cada vez que los editemos, y de esta manera veremos los cambios en el navegador web directamente (aunque para algunos cambios mayores, habra que reiniciar al servidor de todas formas).  Probablemente quieras sacar esto cuando hagas publico al sitio, pero es realmente util cuando lo estemos desarrollando. Tambien hay un `web.profiler`, el cual da informacion sobre cuanto tiempo tomo cada funcion al final de cada pagina, para tener en cuenta a la hora de optimizar al codigo.
 
 ## Uso de Plantillas.
 
