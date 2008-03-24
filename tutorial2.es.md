@@ -77,49 +77,54 @@ This tells web.py to use the web.reloader "middleware" (middleware is a wrapper 
 
 ## Uso de Plantillas.
 
-Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
+Escribir HTML dentro de Python puede volverse un problema, es mucho mas divertido escribir Python dentro de HTML. Por suerte web.py hace que esto sea realmente facil
 
-**Note: web.py currently also supports [Cheetah templates](http://www.cheetahtemplate.org/).  Read the former [tutorial](http://webpy.org/tutorial) for more information.
+**Nota: web.py actualmente soporta [Cheetah templates](http://www.cheetahtemplate.org/).  Lea al  [tutorial](http://webpy.org/tutorial) principal para mas informacion.
 
-Let's make a new directory for our templates (we'll call it `templates`). Inside, make a new file whose name ends with HTML (we'll call it `index.html`). Now, inside, you can just write normal HTML:
+Primero debemos crear un directorio para nuestras plantillas (lo vamos a llamar `templates`). 
+Dentro crearemos un archivo con extension .html (lo vamos a llamar `index.html`)
+Ahora, simplemente podemos empezar a escribir HTML:
 
-    <em>Hello</em>, world!
+    <em>Hola</em>, mundo!
 
-Or you can use web.py's templating language to add code to your HTML:
+O podemos usar web.py para escribir al codigo dentro del HTML:
 
-    $def with (name)
+    $def with (nombre)
     
-    $if name:
-        I just wanted to say <em>hello</em> to $name.
+    $if nombre:
+        Solo queria decirle <em>hola</em> a $nombre.
     $else:
-        <em>Hello</em>, world!
+        <em>Hola</em>, mundo!
 
-**Note: Currently, four spaces are required for indentation.**
+**Nota: Actualmente, cuatro espacios son requeridos para indentacion.**
 
-As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the $def statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
+Como podemos ver, las plantillas se asemejan bastante al codigo en Python, excepto que la declaracion `def with` al principio (avisando que puede ser llamado `with`) y por el `$` antes de cada linea de codigo Python. Actualmente, template.py requiere la declaracion $def como primer linea del archivo. Tambien,  notar que web.py automaticamente escapa a cualquier variable usada aqui, por lo que si por alguna razon `nombre` se le setea algun valor que contenga HTML, esta va a ser escapada y sera mostrada como texto plano. Si queremos que esto no suceda, debemos utilizar `$:nombre` en lugar de `$nombre`.
 
-Now go back to `code.py`. Under the first line, add:
+Ahora, volviendo a `code.py`. Debajo de la primer linea, agregamos:
 
     render = web.template.render('templates/')
 
-This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
+Esto le dice a web.py que revise a las plantillas de tu directorio templates.Entonces cambiamos `index.GET` a:
 
-    name = 'Bob'    print render.index(name)
+    nombre = 'Roberto'
+    print render.index.(nombre)
 
-Visit your site and it should say hello to Bob. 
+Visitamos el sitio y este deberia decirle hola a Roberto.
 
-**Development tip:** Add , `cache=False` to the end of your `render` call to have web.py reload your templates every time you visit the page.
+**Tip de desarrollo:** Agregar `cache=False` al final de tu llamada `render` hace que nuestras plantillas no sean guardadas en la memoria cache.
 
-Now change your URL line to:
+Ahora cambiamos la linea URL a:
 
     '/(.*)', 'index'
-and change the definition of `index.GET` to:
 
-    def GET(self, name):
+y cambiamos la definicion de `index.GET` a :
 
-and delete the line setting name. Visit `/` and it should say hello to the world. Visit `/Joe` and it should say hello to Joe.
+    def GET(self, nombre):
+
+y borramos la linea seteando nombre. Con visitar `/` deberia saludar a todo el mundo, y al visitar `/Juan` solamente deberia saludar a Juan.
 
 If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
+Si desea conocer mas sobre las plantillas en web.py, visite la [pagina templetor](/templetor).
 
 ## Base de Datos
 
