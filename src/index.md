@@ -39,7 +39,7 @@ title: code samples
 
 ### real web apps:
 
-* [redditriver.com](http://redditriver.com): a mobile version of reddit.com ([src](http://www.catonmat.net/download/redditriver-dot-com-python-source-code.zip))
+* [redditriver.com](http://redditriver.com): a mobile version of reddit.com ([src](http://www.catonmat.net/download/redditriver-dot-com-python-source-code.zip) and [how it was written](http://www.catonmat.net/blog/designing-redditriver-dot-com-website/))
 
 * [ibrouter](http://delaunay.org/antoine/i): a photo gallery system ([src](http://trac.delaunay.org/browser/srv/www.delaunay.org/antoine/i/))
 
