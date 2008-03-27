@@ -39,6 +39,8 @@ title: code samples
 
 ### real web apps:
 
+* [redditriver.com](http://redditriver.com): a mobile version of reddit.com ([src](http://www.catonmat.net/download/redditriver-dot-com-python-source-code.zip))
+
 * [ibrouter](http://delaunay.org/antoine/i): a photo gallery system ([src](http://trac.delaunay.org/browser/srv/www.delaunay.org/antoine/i/))
 
 * [webme](http://wm.justos.org/txt.intro): a blogging and podcasting system ([src](http://wm.justos.org/static/download/webme-0.2.0.tar.gz))
