@@ -206,7 +206,7 @@ mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/Conf
 
     <Files code.py>
         SetHandler wsgi-script
-        Options ExecCGI
+        Options ExecCGI FollowSymLinks
     </Files>
 It should then be accessible at `http://example.com/code.py/` as usual.
 
