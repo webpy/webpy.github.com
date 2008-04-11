@@ -64,6 +64,6 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * nginx deployment (requested)
 
 ##Subdomains:
-* [Subdomains and how to access the username](/Subdomains and how to access the username) (requested)
+* Subdomains and how to access the username (requested)
 
 
