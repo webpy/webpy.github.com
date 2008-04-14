@@ -217,6 +217,8 @@ If you get an "ImportError: No module named web" in your apache error.log file, 
     os.chdir('/var/www/webpy/')
     import web
 
+Also, you might want to read the "Application Working Directory" section from [Common problems with WSGI applications](http://code.google.com/p/modwsgi/wiki/ApplicationIssues).
+
 It should then be accessible at `http://example.com/code.py/` as usual.
 
 #### mod_rewrite Rules for Apache
