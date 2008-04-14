@@ -211,10 +211,10 @@ mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/Conf
 
 If you get an "ImportError: No module named web" in your apache error.log file, you could try setting the absolute path in code.py before importing web:
 
-    import sys
-    sys.path.append('/var/www/webpy/')
-    import os
-    os.chdir('/var/www/webpy/')
+    import sys, os
+    abspath = os.path.dirname(__file__)
+    sys.path.append(abspath)
+    os.chdir(abspath)
     import web
 
 Also, you might want to read the "Application Working Directory" section from [Common problems with WSGI applications](http://code.google.com/p/modwsgi/wiki/ApplicationIssues).
