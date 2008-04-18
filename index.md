@@ -78,9 +78,11 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 ## Buzz
 
+"[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
+ - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
+
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
 - Lloyd Dalton, [colr.org](http://colr.org)
-
 
 "We completed our server rewrite a few days ago with web.py and it was everything we could have wished for."  
 - Sam Hsiung, [YouOS][25]
