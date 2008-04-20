@@ -23,7 +23,7 @@ The insert statement takes the following keyword arguments:
 tablename
 seqname   
 _test  
-\ **values
+\**values
  
 
 
