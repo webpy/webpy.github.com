@@ -181,7 +181,7 @@ For Python <2.5 do this:
 
 Rename your `code.py` to something like `codep.py` and add:
     
-    main = web.wsgifunc(web.webpyfunc(urls))
+    main = web.wsgifunc(web.webpyfunc(urls, globals()))
 
 In your `.htaccess`, add:
     
