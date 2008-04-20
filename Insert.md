@@ -23,7 +23,7 @@ The insert statement takes the following keyword arguments:
 tablename
 seqname   
 _test  
- **values
+\ **values
  
 
 
@@ -39,5 +39,5 @@ The _test variable lets you see the SQL produced by the statement:
     results = db.select('mytable', offset=10, _test=True) 
     ><sql: 'SELECT * FROM mytable OFFSET 10'>
 
-##**values
-The a set of named arguments that represent the fields in your table. If values are not given, the database may create default values or issue a warning.
+##\**values
+A set of named arguments that represent the fields in your table. If values are not given, the database may create default values or issue a warning.
