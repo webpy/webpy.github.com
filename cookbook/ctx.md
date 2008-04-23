@@ -17,9 +17,9 @@ Using the web.ctx makes this possible. First a little architecture:  web.ctx is 
 For this reason, web.ctx holds variables for each request that contain specific information to each request, such the client environment variable.  Assuming you want to determine what the referring page was for a user accessing a page:
 
     class SomePage:
-        GET(self):
+        def GET(self):
             user_came_from = web.ctx.env.get('HTTP_REFERER', 'http://google.com')
-            web.seeother(user_came_from)
+            raise web.seeother(user_came_from)
 
 This code uses the environment variable, and gets the HTTP_REFERER variable; if there isn't one, it defaults to google.com.  Then, it redirects them to wherever they came from.
 
