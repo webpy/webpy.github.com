@@ -76,7 +76,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [d]: http://damiga.com/
 
-[Fotosaur.us][f], an unbelievably rad image bookmarking app.
+[Fotosaur.us][f], an unbelievably rad image bookmarking app, was written with web.py.
 
    [f]: http://fotosaur.us
 
