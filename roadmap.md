@@ -92,7 +92,7 @@ automatiacally using metaclasses.
 
 ### web.subdir_application 
 Application to delegate requests based on subdir. 
-This allows reuse of code easily by taking some exiting app and   
+This allows reuse of code easily by taking some existing app and   
 mounting it at a directory. 
 
      import wiki 
