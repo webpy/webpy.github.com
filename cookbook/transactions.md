@@ -12,7 +12,7 @@ How to use database transactions
 
 ### Solution
 
-The web.DB class has a method `transaction` which returns a transaction object. The transaction object can be used to commit or rollback a transaction.
+The database object has a method `transaction` which starts a new transaction and returns the transaction object. The transaction object can be used to commit or rollback that transaction.
 
     import web
 
