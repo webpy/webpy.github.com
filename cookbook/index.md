@@ -56,7 +56,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * Delete (requested)
 * [Insert: Adding entries to a database](/Insert) 
 * Query (requested)
-* [Working with transations](/trasactions)
+* [Working with transations](/cookbook/trasactions)
 
 ##Deployment:
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
