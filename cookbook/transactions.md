@@ -27,7 +27,8 @@ The database object has a method `transaction` which starts a new transaction an
     else:
         t.commit()
 
-With python 2.5+, transaction can be used as with statement also.
+With python 2.5+, transaction can be used as with statement also.  
+
     from __future__ import with_statement
     
     db = web.databse(dbn="postgres", db="webpy", user="foo", pw="")
