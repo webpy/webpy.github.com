@@ -80,6 +80,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [f]: http://fotosaur.us
 
+[URIs.us][u] is service for creating short urls
+
+   [u]: http://uris.us 
+
 ## Buzz
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
