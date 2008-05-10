@@ -135,6 +135,8 @@ Above your `web.run` line add:
 
 (Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` definition to `mysql`.)
 
+If you're running a web application, that's all you need to do -- web.py will automatically handle connecting and disconnecting from the database. But if you're working from the command line or starting your own thread, you need to call `web.load()` to connect and `web.unload()` to disconnect.
+
 Using your database engines admin interface, create a simple table in your database:
 
     CREATE TABLE todo (
