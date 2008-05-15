@@ -43,6 +43,7 @@ In our web.py code, we make the distinction between the two clear:
     class index:
         def GET(self):
             print "Hello, world!"
+
 This `GET` function will now get called by web.py anytime some makes a `GET` request for `/`.
 
 Alright, now we just need to finish up with a final line telling web.py to start serving web pages:
@@ -113,15 +114,23 @@ Visit your site and it should say hello to Bob.
 
 **Development tip:** Add , `cache=False` to the end of your `render` call to have web.py reload your templates every time you visit the page.
 
-Now change your URL line to:
+But let's say we want to let people enter their own name in. Replace the two lines we added above with:
+
+    i = web.input(name=None)
+    print render.index(i.name)
+
+Visit `/` and it should say hello to the world. Visit `/?name=Joe` and it should say hello to Joe.
+
+Of course, having that `?` in the URL is kind of ugly. Instead, change your URL line at the top to:
 
     '/(.*)', 'index'
 
 and change the definition of `index.GET` to:
 
     def GET(self, name):
+        print render.index(name)
 
-and delete the line setting name. Visit `/` and it should say hello to the world. Visit `/Joe` and it should say hello to Joe.
+and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
 
 If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
 
