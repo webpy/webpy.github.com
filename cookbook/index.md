@@ -56,7 +56,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Update: Updating entries in a database](/cookbook/update)
 * Delete (requested)
 * [Insert: Adding entries to a database](/Insert) 
-* Query (requested)
+* [Query: Advanced database queries](/cookbook/query)
 * [How to use database transactions](/cookbook/transactions)
 
 ##Deployment:
