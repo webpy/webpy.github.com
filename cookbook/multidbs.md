@@ -5,6 +5,11 @@ title: Multiple Databases
 
 # Multiple Databases
 
+## Problem
+You want to access multiple databases in a single project.
+
+## Solution
+
 webpy 0.3 supports multiple databases by removing the database from a part of the "web" module, and making it a more typical object.  For example:
 
     import web
