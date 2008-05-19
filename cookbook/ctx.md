@@ -23,7 +23,7 @@ Example
     class example:
         def GET(self):
             referer = web.ctx.env.get('HTTP_REFERER', 'http://google.com')
-            return web.seeother(referer)
+            raise web.seeother(referer)
 
 This code uses `web.ctx.env` to access the `HTTP_REFERER` environment variable. If there isn't one, it defaults to google.com. Finally, it redirects the user to the page they came from.
 
