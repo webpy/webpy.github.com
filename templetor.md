@@ -190,3 +190,7 @@ By default `template.render` will use `web.websafe` filter to do HTML-encoding. 
     $:form.render()
 
 Output from form.render() will be displayed as is.
+
+    $:fooBar    $# fooBar = <span>lorem ipsum</span>
+
+Output from variable in template will be displayed as is.
