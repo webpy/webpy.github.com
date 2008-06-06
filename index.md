@@ -170,6 +170,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * cookbook:
       * [日本語](/cookbook/ja)
+      * [english](/cookbook)
 
 * [code samples](/src)
 
