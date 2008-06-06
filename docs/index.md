@@ -595,6 +595,7 @@ Supports Firebird, MySQL, PostgreSQL, and SQLite.
          >>> x.foo
          'bar\n'
 
+see also [template.py doc](/templetor)
 
 ## utils.py
 
