@@ -40,7 +40,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 ##Utils:
 * [Sending Mail](/cookbook/sendmail)
-* [Sending Mail Using Gmail](/sendmail_with_gmail)
+* [Sending Mail Using Gmail](/cookbook/sendmail_using_gmail)
 
 ##Templates:
 * [Using Site Layout Templates](/cookbook/layout_template)
