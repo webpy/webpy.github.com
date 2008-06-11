@@ -23,8 +23,7 @@ that we need to specify username and password of gmail account in
 Once this configuration is set, `web.sendmail` can be used to send
 mail using the gmail account. Gmail signs all these mails.
 
-    web.sendmail('cookbook@gmail.com', 'user@example.com', 'subject',
-'message')
+    web.sendmail('cookbook@gmail.com', 'user@example.com', 'subject', 'message')
 
 Read [GMail: Configuring other mail clients][1] for more details.
 
