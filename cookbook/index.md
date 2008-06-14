@@ -31,7 +31,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 ##Advanced
 * [web.ctx](/cookbook/ctx)
 * loadhooks/unloadhooks (requested)
-* How to properly use web.background (requested)
+* [How to use web.background](/cookbook/background)
 
 ##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
