@@ -45,6 +45,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 ##Templates:
 * [Using Site Layout Templates](/cookbook/layout_template)
 * [Alternating Style](/cookbook/alternating_style)
+* [Use Mako template engine in webpy](/cookbook/template_mako)
 
 ##User Input:
 * [File Upload](/cookbook/fileupload)
