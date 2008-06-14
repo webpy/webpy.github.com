@@ -28,3 +28,9 @@ Values of cc and bcc can be list as well.
 
     web.sendmail('cookbook@webpy.org', 'user@example.com', 'subject', 'message', cc='user1@example.com', bcc='user2@example.com')
 
+Addition header can be passed to `web.sendmail` via 'headers' tuple.
+
+    web.sendmail('cookbook@webpy.org', 'user@example.com', 'subject', 'message',
+            cc='user1@example.com', bcc='user2@example.com',
+            headers=({'User-Agent': 'webpy.sendmail', 'X-Mailer': 'webpy.sendmail',})
+            )
