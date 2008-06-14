@@ -38,6 +38,8 @@ You need to install both Mako and webpy(0.3) first: http://www.makotemplates.org
     class hello:
         def GET(self, name):
             return render.hello(name=name)
+            # Another way:
+            #return render.hello(**locals())
 
     if __name__ == "__main__":
         app.run()
