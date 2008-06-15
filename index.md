@@ -168,6 +168,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [español](/faq/es)
     * [русский](/faq/ru)
     * [日本語](http://kinneko.googlepages.com/webpy_faq)
+    * [日本語(webpy.org)](/faq/ja)
 
 * cookbook:
       * [日本語](/cookbook/ja)
