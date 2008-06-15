@@ -22,7 +22,7 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 -------------------------------------------------
 
 ##Basics:
-* [Hello World](/helloworld)
+* [Hello World](/helloworld/ja)
 * [staticファイルについて](/staticfiles)
 * [Seeother(HTTP/1.1 コード : 303)とRedirect](/redirect+seeother)
 * サブアプリケーションの使い方について
