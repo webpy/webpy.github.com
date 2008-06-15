@@ -1,7 +1,9 @@
 ---
 layout: default
-title: 
+title: クックブック
 ---
+
+# クックブック
 
 web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 古いバージョンでは利用可能ではない説明があります。
@@ -23,7 +25,7 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 
 ##Basics:
 * [Hello World](/helloworld/ja)
-* [staticファイルについて](/staticfiles)
+* [staticファイル(js、css、画像など)について](/staticfiles/ja)
 * [Seeother(HTTP/1.1 コード : 303)とRedirect](/redirect+seeother)
 * サブアプリケーションの使い方について
 * [Serving XML](/cookbok/xmlfiles)
