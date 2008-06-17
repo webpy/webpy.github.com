@@ -6,7 +6,7 @@ title: Use Cheetah template engine in webpy
 # Use Cheetah template engine in webpy
 
 ### Problem
-How to use Mako template engine in webpy?
+How to use Cheetah template engine in webpy?
 
 ### Solution
 
