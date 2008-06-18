@@ -5,6 +5,7 @@ title: using subapplications
 
 # using subapplications
 
+
         class blog:
             def GET(self, path):
                 return "blog " + path
