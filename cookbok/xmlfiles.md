@@ -6,7 +6,8 @@ title: Serving XML
 # Serving XML
 
 ### Problem
-How to server XML files correctly?
+
+How to serve XML files correctly?
 
 This is needed when you have a third-party application posting data to your service and expecting some kind of XML response.
 
