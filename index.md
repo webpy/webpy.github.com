@@ -140,6 +140,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [english](/install)
     * [mac os x](/install_macosx)
     * [español](/install/es)
+    * [日本語](/install/ja)
 
 * [tutorials for version 0.2 (latest)](/tutorial2)
     * [english](/tutorial2.en)
