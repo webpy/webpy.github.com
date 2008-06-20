@@ -1,9 +1,9 @@
 ---
 layout: default
-title: CGI deployment on Apache
+title: Apache + CGIの配置
 ---
 
-# CGI deployment on Apache
+# Apache + CGIの配置
 
 ここでは、web.pyアプリケーションを作成、実行するために必要となる簡単な手順を説明します。
 
