@@ -26,45 +26,44 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 ##Basics:
 * [Hello World](/helloworld/ja)
 * [staticファイル(js、css、画像など)について](/staticfiles/ja)
-* [Seeother(HTTP/1.1 コード : 303)とRedirect](/redirect+seeother)
+* [Seeother(HTTP/1.1 コード : 303)とRedirect](/redirect+seeother/ja)
 * サブアプリケーションの使い方について
-* [Serving XML](/cookbok/xmlfiles)
+* [Serving XML](/xmlfiles/ja)
 
 ##Advanced
-* [web.ctx](/ctx)
+* [web.ctx](/ctx/ja)
 * loadhooks/unloadhooks (requested)
-* [How to properly use web.background (requested)](/background)
+* [How to properly use web.background (requested)](/background/ja)
 
 ##Sessions and user state:
-* [Session機能](/sessions)
-* [Cookies機能](/cookies)
+* [Session機能](/sessions/ja)
+* [Cookies機能](/cookies/ja)
 * ユーザ認証 (requested)
 
 ##Utils:
-* [メール送信](/sendmail)
+* [メール送信](/sendmail/ja)
 
 ##Templates:
-* [Using Site Layout Templates](/layout_template)
-* [Alternating Style](/alternating_style)
+* [Using Site Layout Templates](/layout_template/ja)
+* [Alternating Style](/alternating_style/ja)
 
 ##User Input:
-* [ファイルアップロード](/fileupload)
-* [web.inputからユーザ入力情報へのアクセス](/input)
+* [ファイルアップロード](/fileupload/ja)
+* [web.inputからユーザ入力情報へのアクセス](/input/ja)
 * 基本的なフォームの使用 (requested)
 
 ##Database:
-* [複数データベース](/multidbs)
-* [Select: データ照会](/select)
-* [Update: データ更新](/update)
+* [複数データベース](/multidbs/ja)
+* [Select: データ照会](/select/ja)
+* [Update: データ更新](/update/ja)
 * Delete (requested)
-* [Insert: データ追加](/Insert) 
-* [Query: 問い合わせ(SQL文の発行)](/query)
-* [トランザクションの使用](/cookbook/transactions)
-
+* [Insert: データ追加](/insert/ja) 
+* [Query: 問い合わせ(SQL文の発行)](/query/ja)
+* [トランザクションの使用](/transactions/ja)
 ##Deployment:
-* [lighttpd + Fastcgiの配置](/fastcgi-lighttpd)
+* [lighttpd + Fastcgiの配置](/fastcgi-lighttpd/ja)
 * Apache + Fastcgiの配置 (requested)
-* [Apache + CGIの配置](/cgi-apache)
+* [Apache + CGIの配置](/cgi-apache/ja)
 * Apache +mod_pythonの配置 (requested)
 * nginx(ロードバランサ)の配置 (requested)
 
