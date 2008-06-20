@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Apache + CGIの配置
+title: CGI deployment on Apache
 ---
 
-# Apache + CGIの配置
+# CGI deployment on Apache
 
-ここでは、web.pyアプリケーションを作成、実行するために必要となる簡単な手順を説明します。
+Here are the simple steps needed to create and run an web.py application.
 
-* web.pyとflupsをインストールします。
+* Install web.py and flups
 
-* 下記のドキュメント通りにアプリケーションを作成します。
+* Create the application as documented
 
         if __name__ == "__main__":
             web.run(urls, globals())
 
-この例では、`app.py`という名前で、`/www/app`の中に配置し、`http://serever/app/app.py`でアクセスできる必要があります。
+For our example, let it be named `app.py`, located in `/www/app` and we need it accessible as `http://server/app/app.py`.
 
-* Apacheを設定します。(ここでは、バージョン2.2を例にします)
+* Configure Apache (version 2.2 in this example)
 
         ScriptAlias /app "/www/app/"
         <Directory "/www/app/">
@@ -25,5 +25,4 @@ title: Apache + CGIの配置
                 Allow from all
         </Directory>
 
-これで完了です。あなたのアプリケーションは`http://server/app/app.py`からアクセスができます。このアプリケーションで扱えるその他のURLは、例えば、
-`http://server/app/app.py/myurl`のように、このURLの末尾に付け加えます。
+That's it. Your application is accessible via `http://server/app/app.py/`. Additional URLs handled by the application are added to the end of the URL, for examples `http://server/app/app.py/myurl`.
