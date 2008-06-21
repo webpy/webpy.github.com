@@ -30,3 +30,23 @@ Steps:
             Order deny,allow
             Allow from all
         </Directory>
+
+* Write 'code.py':
+
+        import web
+
+        urls = (
+            '/(.*)', 'hello',
+            )
+
+        class hello:
+            def GET(self, name):
+                return name
+
+        application = web.application(urls, globals()).wsgifunc()
+
+* Point your browser to 'http://your_server_name/appname' to verify whether it works for you.
+
+For mod_wsgi performance, please refer to mod_wsgi wiki page:
+
+    http://code.google.com/p/modwsgi/wiki/PerformanceEstimates
