@@ -26,6 +26,8 @@ Steps:
 
         WSGIScriptAlias /appname /var/www/webpy-app/code.py
 
+        AddType text/html .py
+
         <Directory /var/www/webpy-app/>
             Order deny,allow
             Allow from all
