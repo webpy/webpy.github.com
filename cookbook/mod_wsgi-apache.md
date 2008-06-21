@@ -16,15 +16,13 @@ Note:
 
 Steps:
 * Download and install mod_wsgi from its website: http://code.google.com/p/modwsgi/. It will install a '.so' module in /usr/lib64/httpd/modules/.
-* Setup Apache to load mod_wsgi module in httpd.conf:
+* Configure Apache to load mod_wsgi module and your project in httpd.conf:
 
-    LoadModule wsgi_module modules/mod_wsgi.so
+        LoadModule wsgi_module modules/mod_wsgi.so
 
-* Setup Apache to 
+        WSGIScriptAlias /appname /var/www/webpy-app/code.py
 
-    WSGIScriptAlias /appname /var/www/webpy-app/code.py
-
-    <Directory /var/www/webpy-app/>
-        Order deny,allow
-        Allow from all
-    </Directory>
+        <Directory /var/www/webpy-app/>
+            Order deny,allow
+            Allow from all
+        </Directory>
