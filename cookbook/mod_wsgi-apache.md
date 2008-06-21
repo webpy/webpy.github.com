@@ -31,7 +31,7 @@ Steps:
             Allow from all
         </Directory>
 
-* Write 'code.py':
+* Sample file 'code.py':
 
         import web
 
