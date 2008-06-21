@@ -15,7 +15,11 @@ Note:
 * /var/www/webpy-app/code.py is the full path to your python file
 
 Steps:
-* Download and install mod_wsgi from its website: http://code.google.com/p/modwsgi/. It will install a '.so' module in /usr/lib64/httpd/modules/.
+
+* Download and install mod_wsgi from its website: http://code.google.com/p/modwsgi/. It will install a '.so' module in Apache module directory. e.g.
+
+        /usr/lib64/httpd/modules/
+
 * Configure Apache to load mod_wsgi module and your project in httpd.conf:
 
         LoadModule wsgi_module modules/mod_wsgi.so
