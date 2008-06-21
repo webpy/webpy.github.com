@@ -65,6 +65,8 @@ See section 'Application Working Directory' of:
 
 You can use relative paths in order to make it easier too. e.g.
 
+    import os
+
     render = render_mako(
             directories=[os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),],
             input_encoding='utf-8',
