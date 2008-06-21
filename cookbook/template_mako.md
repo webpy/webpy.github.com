@@ -49,3 +49,24 @@ Template file:
     ## File: templates/hello.html
 
     您好：${name}
+
+###Note:
+
+if you use Apache + mod_wsgi to deploy webpy apps, you may get the similar error msg in your apache error log:
+
+    [Sat Jun 21 21:56:22 2008] [error] [client 192.168.122.1] TopLevelLookupException: Cant locate template for uri 'index.html'
+
+You have to specify location of templates as absolute path as no
+guarantees as to what current working directory will be.
+
+See section 'Application Working Directory' of:
+
+    http://code.google.com/p/modwsgi/wiki/ApplicationIssues
+
+You can use relative paths in order to make it easier too. e.g.
+
+    render = render_mako(
+            directories=[os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),],
+            input_encoding='utf-8',
+            output_encoding='utf-8',
+            )
