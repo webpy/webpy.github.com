@@ -24,7 +24,7 @@ Steps:
 
         LoadModule wsgi_module modules/mod_wsgi.so
 
-        WSGIScriptAlias /appname /var/www/webpy-app/code.py
+        WSGIScriptAlias /appname /var/www/webpy-app/code.py/
 
         AddType text/html .py
 
