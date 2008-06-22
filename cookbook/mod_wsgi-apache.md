@@ -26,6 +26,7 @@ Steps:
 
         WSGIScriptAlias /appname /var/www/webpy-app/code.py/
 
+        Alias /appname/static /var/www/webpy-app/static
         AddType text/html .py
 
         <Directory /var/www/webpy-app/>
