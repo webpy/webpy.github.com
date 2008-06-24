@@ -267,7 +267,7 @@ To make the template execution safe, the following are not allowed in the templa
 <a name="upgrading"></a>
 # Upgrading from web.py 0.2 templates
 
-The new implementation is mostly compatible with the earlier implementation. However some cases might not work.
+The new implementation is mostly compatible with the earlier implementation. However some cases might not work because of the following reasons.
 
 * The new system expects 4 spaces as indentation in statements.
 * Template output is always storage like `TemplateResult` object, however converting it to `unicode` or `str` gives the result as unicode/string.
