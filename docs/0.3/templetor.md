@@ -124,10 +124,6 @@ Use `$$` to get `$` in the output.
 The template system supports `for`, `while`, `if`, `elif` and `else`.
 Just like in python, body of the statement is indented.
 
-<div class="warning">
-Please note that Templetor expects 4 spaces as indentation.
-</div>
-
     $for x in range(10): 
         I like $i
 
@@ -269,7 +265,6 @@ To make the template execution safe, the following are not allowed in the templa
 
 The new implementation is mostly compatible with the earlier implementation. However some cases might not work because of the following reasons.
 
-* The new system expects 4 spaces as indentation in statements.
 * Template output is always storage like `TemplateResult` object, however converting it to `unicode` or `str` gives the result as unicode/string.
 * Reassigning a global value will not work. The following will not work if x is a global.
     
