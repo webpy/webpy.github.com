@@ -78,7 +78,7 @@ Special character `$` is used to specify python expressions. Expression can be e
 Sometimes you may want to define new variables and re-assign some variables.
     
     $ bug = get_bug(id)
-    <h1>bug.title</h1>
+    <h1>$bug.title</h1>
     <div>
         $bug.description
     <div>
@@ -124,10 +124,10 @@ Use `$$` to get `$` in the output.
 The template system supports `for`, `while`, `if`, `elif` and `else`.
 Just like in python, body of the statement is indented.
 
-    $for x in range(10): 
+    $for i in range(10): 
         I like $i
 
-    $for x in range(10): I like $i
+    $for i in range(10): I like $i
         
     $while a:
         hello $a.pop()
