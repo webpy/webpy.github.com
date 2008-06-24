@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Templator: The web.py templating system
+title: Templetor: The web.py templating system
 ---
 
-# Templator: The web.py templating system
+# Templetor: The web.py templating system
 
 # Introduction
 
