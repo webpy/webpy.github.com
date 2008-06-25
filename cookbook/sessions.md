@@ -38,4 +38,16 @@ The session object is loaded with the session data before handling the request a
 
 The optional `initializer` argument to Session specifies the initial session.
 
+You can use `DBStore` instead of `DiskStore` if you prefer to store sessions in database instead of disk. For using DBStore you need to have a table with the following schema.
 
+     create table sessions (
+        session_id char(128) UNIQUE NOT NULL,
+        atime datetime NOT NULL default current_timestamp,
+        data text
+    );
+
+And you need to pass `db` object and session table name to the constructor of `DBStore`.
+
+    db = web.database(dbn='postgres', db='mydatabase', user='myname', pw='')
+    store = DBStore(db, 'sessions')
+    session = web.session.Session(app, store, initializer={'count': 0})
