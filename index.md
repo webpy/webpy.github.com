@@ -84,6 +84,12 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [u]: http://uris.us 
 
+
+[xykra] [f] is a 160 Python lines wiki
+
+   [f]: http://xykra.org
+
+
 ## Buzz
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
