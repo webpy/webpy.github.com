@@ -5,7 +5,7 @@ title: Webpy + Apache with mod_wsgi
 
 # Webpy + Apache with mod_wsgi
 
-The following steps was tested on Apache-2.2.3 (Red Hat Enterprise Linux 5.2, x86_64), mod_wsgi-2.0.
+The following steps were tested on Apache-2.2.3 (Red Hat Enterprise Linux 5.2, x86_64), mod_wsgi-2.0.
 
 Note:
 
