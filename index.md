@@ -50,6 +50,8 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
+[ChiefMall](http://www.chiefmall.com/), a contractor search too, was built with web.py.
+
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
