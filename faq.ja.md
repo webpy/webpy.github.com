@@ -59,13 +59,13 @@ title: faq
 
     'Python' を実行した時、デフォルトで何か処理を行いたい場合は、'~/.pythonstartup.py' ファイルに記述します。そのファイルに前述した import文を記述し、環境変数に 'PYTHONSTARTUP' を追加します。
 
-    With my bash, i do it like following; edit ~/.bashrc and add:
+    私はbashで以下のようにしています。~/.bashrcを編集し、以下の行を足します。
 
             export PYTHONSTARTUP=~/.pythonstartup.py
 
 99. **データベースにアクセスできません、どうしてですか?**
 
-    If you're trying to access the database from a non-web-serving thread (e.g. you created a new thread or you never started serving web pages) then you need to run `web.load()`. Sorry, this will be fixed in web.py 0.3.
+    Web-servingスレッド以外のスレッドからデータベースにアクセスする場合（例えば、新しいスレッドを作ったとか、Webページのserveを開始しなかった場合とか）には、`web.load()`を実行する必要があります。web.py 0.3では修正される予定です。ごめんなさい。
 
 99. **Can I iterate over an IterBetter multiple times?**
 
