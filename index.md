@@ -87,9 +87,9 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
    [u]: http://uris.us 
 
 
-[xykra] [f] is a minimalist (160 Python lines) wiki.
+[xykra] [x] is a minimalist (160 Python lines) wiki.
 
-   [f]: http://xykra.org
+   [x]: http://xykra.org
 
 
 ## Buzz
