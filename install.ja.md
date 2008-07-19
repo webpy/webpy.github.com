@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Install
+title: インストール
 ---
 
-# Install
+# インストール
 
 web.pyをダウンロードします。
     
