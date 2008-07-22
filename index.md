@@ -198,6 +198,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [**irc channel**](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net"): home of the web.py talk
 
+* [powered by web.py buttons](http://luke.jottit.com/webpy_logo)
+
 ### web.py development:
 
 * [bazaar repository](http://webpy.org/bzr/webpy.dev) | [follow commits](https://code.edge.launchpad.net/~anandology/webpy/webpy.dev/+subscribe)
