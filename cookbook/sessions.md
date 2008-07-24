@@ -49,5 +49,5 @@ You can use `DBStore` instead of `DiskStore` if you prefer to store sessions in 
 And you need to pass `db` object and session table name to the constructor of `DBStore`.
 
     db = web.database(dbn='postgres', db='mydatabase', user='myname', pw='')
-    store = DBStore(db, 'sessions')
+    store = web.session.DBStore(db, 'sessions')
     session = web.session.Session(app, store, initializer={'count': 0})
