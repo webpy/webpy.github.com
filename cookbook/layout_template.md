@@ -7,19 +7,17 @@ title: Site Layout Template
 
 ### Problem
 
-How to support layout template in web.py applications.
+How do I use a site-wide base template that displays across every page? (In other frameworks, this is called template inheritance.)
 
 ### Solution
 
-This can be done using application processors.
+This can be done using the base attribute:
     
-    urls = ( ... )
-    app = web.application(urls, globals())
-    render = web.template.render('templates/')
+    render = web.template.render('templates/', base='layout')
     
-    def layout_processor(handle):
-        result = handle()
-        return render.layout(result)
+Now if you do something like `render.foo()` it will render the `templates/foo.html` template and then wrap it in the `templates/layout.html` template.
 
-    app.add_processor(layout_processor)
+If you don't want to use the base template for something, just create a second render object without the base attribute, like:
 
+    render_plain = web.template.render('templates/')
+    
