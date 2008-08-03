@@ -12,9 +12,13 @@ This is a work-in-progress
 
 ## TODO: Show/hide complete code at the end of sections
 
-## TODO: move over to install?
+TODO: move the next paragraph over to install?
 
 To create a website with web.py you need to know the Python programming language and have it installed. Installation instructions for Python can be found at [http://python.org/]. If you don't know if Python is installed on your system, open a terminal and type `python`. A great starting point to learn Python is the official [tutorial] (http://docs.python.org/tut/tut.html). If you are new to programming in general, [Think Python] (http://www.greenteapress.com/thinkpython/) is a wonderful book to understand key concepts in programming. 
+
+## TOC
+
+TODO: ...
 
 
 ## Prerequisites
@@ -60,7 +64,9 @@ To finish your web.py application insert the following code at the end of your c
 
 `app.run()` starts the web application to serve requested pages.
 
-Complete code:
+### Complete code
+
+hello.py
 
     import web
     
@@ -112,7 +118,9 @@ Note: Currently you need to restart your application to see any changes. Try to 
 
 Future changes can now be seen instantly, although you might need to reload a page in your browser.
 
-Complete code:
+### Complete code
+
+hello.py
 
     import web
     
@@ -148,7 +156,9 @@ Then change your `Hello` class as follows:
 
 Open the page and reload it several times. You will see that the page is dynamically created at each request.
 
-Complete code:
+### Complete code
+
+hello.py
 
     import time
     import web
@@ -184,7 +194,9 @@ Until now your classes returned only simple strings. Let's add some HTML. This c
 
 Note that your page now has a custom title and HTML formatted content.
 
-Complete code:
+### Complete code
+
+hello.py
 
     import web
     
@@ -210,11 +222,94 @@ Complete code:
         app.run()
 
 
-## HTML with templates
+## HTML with site layout templates
 
-Imagine a larger site with many pages. If all HTML for these pages is embedded into your Python code, things get messy and your code unmaintainable. Also reusing parts of your HTML code for other pages would be difficult. Therefore web.py lets you define templates that can be shared between your pages.
+Imagine a larger site with many pages. If all HTML for these pages is embedded into your Python code, things get messy and your code unmaintainable. Also reusing parts of your HTML code for other pages would be difficult. Therefore web.py lets you define site layout templates that can be shared between your pages.
 
+First create a directory `templates` next to your `hello.py` file. Create a file `layout.html` and save it in `templates`. This file will contain the HTML markup that is used to render your page. Start with the following basic template:
 
+     $def with (page)
+    
+    <html>
+    <head>
+    <title>Template demo</title>
+    </head>
+    <body>
+    <p>You are visiting page <b>$page</b>.</p>
+    </body>
+    </html>
+    
+Besides defining a page structure, this template will use the Python variable `page` wherever `$page` is used. When using this template you will need to pass some value to the template as an argument.
+
+Next add a so-called layout processor to your application. A layout processor will tell your application which template it should use:
+
+    app = web.application(urls, globals(), web.reloader)
+    
+    render = web.template.render('templates/')  # 'templates/' is your template directory
+    
+    def layout_processor(handle):
+        result = handle()
+        return render.layout(result)  # 'layout' is your template's file name
+    
+    app.add_processor(layout_processor)
+    
+One last step. Modify your `Hello` and `Bye` classes to return the name of the current page:
+
+    class Hello:
+        def GET(self):
+            return "Hello"
+    
+    class Bye:
+        def GET(self):
+            return "Bye"
+
+Open the page in your browser. web.py fetches your template and inserts the name of the current page whereever your template contains `$page`.
+
+### Complete code
+
+hello.py
+
+    import web
+    
+    urls = (
+      '/', 'Hello',
+      '/bye/', 'Bye')
+    
+    app = web.application(urls, globals(), web.reloader)
+    
+    render = web.template.render('templates/')
+    
+    def layout_processor(handle):
+        result = handle()
+        return render.layout(result)
+    
+    app.add_processor(layout_processor)
+    
+    class Hello:
+        def GET(self):
+            return "Hello"
+    
+    class Bye:
+        def GET(self):
+            return "Bye"
+    
+    if __name__ == "__main__":
+        app.run()
+        
+templates/layout.html
+
+    $def with (page)
+    
+    <html>
+    <head>
+    <title>Template demo</title>
+    </head>
+    <body>
+    <p>You are visiting page <b>$page</b>.</p>
+    </body>
+    </html>
+
+    
 ## Static content
 
 Now that your application serves HTML formatted content, you probably want to include static files like images or css style files. To achieve this create a directeory called `static` next to your `hello.py` file. Put a picture file (here called `logo.png`) in your `static` directory. Then include the file on your page:
@@ -223,7 +318,9 @@ Now that your application serves HTML formatted content, you probably want to in
         def GET(self):
             return """<img src="./static/logo.png">"""
 
-Complete code:
+### Complete code
+
+hello.py
 
     import web
     
