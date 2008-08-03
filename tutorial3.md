@@ -222,7 +222,7 @@ hello.py
         app.run()
 
 
-    ## HTML with site layout templates (USING layout_processor())
+## HTML with site layout templates (USING layout_processor())
     
     Imagine a larger site with many pages. If all HTML for these pages is embedded into your Python code, things get messy and your code unmaintainable. Also reusing parts of your HTML code for other pages would be difficult. Therefore web.py lets you define site layout templates that can be shared between your pages.
     
