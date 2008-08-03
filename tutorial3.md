@@ -7,15 +7,20 @@ title: web.py 0.3 tutorial
 
 This is a work-in-progress
 
+
 ## TODO: `web.webapi.internalerror = web.debugerror` in 0.3?
+
 ## TODO: Show/hide complete code at the end of sections
+
 ## TODO: move over to install?
 
 To create a website with web.py you need to know the Python programming language and have it installed. Installation instructions for Python can be found at [http://python.org/]. If you don't know if Python is installed on your system, open a terminal and type `python`. A great starting point to learn Python is the official [tutorial] (http://docs.python.org/tut/tut.html). If you are new to programming in general, [Think Python] (http://www.greenteapress.com/thinkpython/) is a wonderful book to understand key concepts in programming. 
 
+
 ## Prerequisites
 
 This tutorial assumes that both Python and web.py are installed on your system. If this is not the case, please follow the [installation instructions] (http://webpy.org/install) before you continue.
+
 
 ## Hello Web in web.py
 
@@ -83,6 +88,7 @@ Open this address with your web browser. That's it. Congrats! You can stop your 
 
 Note: You can also visit your site at `http://localhost:8080/`
 
+
 ## Having multiple pages
 
 In this part you will learn how to manage multiple pages. Let's add another class to your 'Hello Web' application:
@@ -127,6 +133,7 @@ Complete code:
     if __name__ == "__main__":
         app.run()
 
+
 ## Dynamic content
 
 Until now your pages contained only static strings that did not change between your visits. Add the current time stamp to your page. Import Python's `time` module:
@@ -139,7 +146,7 @@ Then change your `Hello` class as follows:
         def GET(self):
             return "The time is:    " + time.ctime()
 
-Open the page and reload it several times. You will see that the page is dynamically created for each visit.
+Open the page and reload it several times. You will see that the page is dynamically created at each request.
 
 Complete code:
 
@@ -157,6 +164,7 @@ Complete code:
     
     if __name__ == "__main__":
         app.run()
+
 
 ## HTML in Python
 
@@ -201,7 +209,32 @@ Complete code:
     if __name__ == "__main__":
         app.run()
 
+
 ## HTML with templates
 
 Imagine a larger site with many pages. If all HTML for these pages is embedded into your Python code, things get messy and your code unmaintainable. Also reusing parts of your HTML code for other pages would be difficult. Therefore web.py lets you define templates that can be shared between your pages.
 
+
+## Static content
+
+Now that your application serves HTML formatted content, you probably want to include static files like images or css style files. To achieve this create a directeory called `static` next to your `hello.py` file. Put a picture file (here called `logo.png`) in your `static` directory. Then include the file on your page:
+
+    class Hello:
+        def GET(self):
+            return """<img src="./static/logo.png">"""
+
+Complete code:
+
+    import web
+    
+    urls = (
+      '/', 'Hello')
+    
+    app = web.application(urls, globals(), web.reloader)
+    
+    class Hello:
+        def GET(self):
+            return """<img src="./static/logo.png">"""
+    
+    if __name__ == "__main__":
+        app.run()
