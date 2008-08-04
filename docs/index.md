@@ -285,7 +285,7 @@ Supports Firebird, MySQL, PostgreSQL, and SQLite.
 `redirect(url, status='301 Moved Permanently')`
    : Returns a `status` redirect to the new URL. 
      `url` is joined with the base URL so that things like 
-     `redirect("about") will work properly.
+     `redirect("about")` will work properly.
 
 `found(url)`
    : A `302 Found` redirect.
