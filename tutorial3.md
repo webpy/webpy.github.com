@@ -537,5 +537,27 @@ hello.py
         app.run()
 
 
+## Sessions [cookbook] (http://webpy.org/cookbook/sessions)
+
+ATTENTION: Sessions should not be used with `autoreloader=True`! It is a bug.
+
+Many sites need to distinguish its visitors. Imagine you want to show the user the number of pages he visited on your page. Each visitor has a unique number. To allow separate tracking web.py uses so called sessions. Each visitor gets his very own session object in which his unique number is saved. First create a session object in `hello.py`. Put this line after your `app` is initialized:
+
+    session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'count': 0})
+
+This creates a session object. The first parameter is simply the application the session object is used for. `web.session.DiskStore('sessions')` tells web.py to store sessions on disk (database storage is possible as well, see this [cookbook] (http://webpy.org/cookbook/sessions) entry). The third optional parameter initializes the session data dictionary for each user. Here each session object starts with zero visited pages (`count`). web.py creates a directory `sessions` to store session data on disk. Modify your classes in `hello.py` like this:
+
+    class Hello:
+        def GET(self):
+            session.count += 1
+            return "You visited " + str(session.count) + " pages."
+    
+    class Bye:
+        def GET(self):
+            session.kill()
+            return ("Bye, web!")
+            
+Each time you visit `Hello`, the number of pages you visited is incremented (`session.count += 1`). If you visit `Bye` the session is killed (`session.kill()`). The next time you visit `Hello`, a new session will be created and the counter will be zero again.
+
 ## User authentication
 
