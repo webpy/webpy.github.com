@@ -222,7 +222,7 @@ hello.py
         app.run()
 
 
-## HTML with site layout templates (USING layout_processor())
+    ## HTML with site layout templates (USING layout_processor())
     
     Imagine a larger site with many pages. If all HTML for these pages is embedded into your Python code, things get messy and your code unmaintainable. Also reusing parts of your HTML code for other pages would be difficult. Therefore web.py lets you define site layout templates that can be shared between your pages.
     
@@ -330,7 +330,7 @@ First create a directory `templates` next to your `hello.py` file. Create a file
 
 Create a second template `bye.html`:
 
-    $def with (title, page, number)
+    $def with (title, page, *numbers)
     
     <html>
     <head>
@@ -338,13 +338,17 @@ Create a second template `bye.html`:
     </head>
     <body>
     <p>You are visiting page <b>$page</b>.</p>
-    <p>The answer to all questions is: $number</p>
+    <p>Find the answer to all questions below:
+    $for number in numbers:
+        <p>$number</p>
     </body>
     </html>
 
-Besides defining a page structure, these templates will use variables (e.g. `title`). The first line `def with (title, page, number)` will tell web.py that this template needs to be called with three arguments. Wherever `$title` is used the actual value of `title` is inserted.
+Besides defining a page structure, these templates will use variables. The first line of `hello.html` (`def with (title, page, number)`) will tell web.py that this template needs to be called with three arguments. Wherever `$title` is used in the template the actual value of `title` is inserted.
 
-Now insert the following line before your class definitions to tell web.py where your templates are located:
+Arguments of `bye.html` are `title`, `page` and an arbitrary number of numbers (`*numbers`). All arguments beside `title` and `page` are put into the list `numbers`. This list is then iterated (`$for number in numbers:`) and each number (`number`) is written in its own paragraph. You see that `$` is not only used to access template variables but also to evaluate (safe) Python code like `for` loops or `if` statements.
+
+Now insert the following line before your class definitions to create a so called template renderer. The location of your templates is passed to the renderer as an argument:
 
     render = web.template.render('templates/')
 
@@ -356,7 +360,7 @@ Next modify your classes to render your pages using the two different templates:
     
     class Bye:
         def GET(self):
-            return render.bye("Templates demo", "Bye", "42")
+            return render.bye("Templates demo", "Bye", "14", "8", "25", "42", "19")
     
 Open the pages in your browser. web.py fetches your templates and dynamically inserts the values that you passed to your templates.
 
@@ -376,12 +380,12 @@ hello.py
     
     class Hello:
         def GET(self):
-            return render.hello("Templates demo", "Hello", "A long time ago...")
+            return render.hello("Templates demo", "Hello", "A long time ago...", "bla")
     
     class Bye:
         def GET(self):
-            return render.bye("Templates demo", "Bye", "42")
-    
+            return render.bye("Templates demo", "Bye", "14", "8", "25", "42", "19")
+            
     if __name__ == "__main__":
         app.run()
         
@@ -401,15 +405,17 @@ templates/hello.html
 
 templates/bye.html
 
-    $def with (title, page, number)
-
+    $def with (title, page, *numbers)
+    
     <html>
     <head>
     <title>$title</title>
     </head>
     <body>
     <p>You are visiting page <b>$page</b>.</p>
-    <p>The answer to all questions is: $number</p>
+    <p>Find the answer to all questions below:
+    $for number in numbers:
+        <p>$number</p>
     </body>
     </html>
 
