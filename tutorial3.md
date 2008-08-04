@@ -25,6 +25,8 @@ TODO: ...
 
 This tutorial assumes that both Python and web.py are installed on your system. If this is not the case, please follow the [installation instructions] (http://webpy.org/install) before you continue.
 
+Furthermore, basic HTML knowledge is needed to understand some examples.
+
 
 ## Hello Web in web.py
 
@@ -537,9 +539,20 @@ hello.py
         app.run()
 
 
+## User input (HTML forms and the `POST` method)
+
+Until now `GET` functions were introduced to serve pages but there was no way a user could send data back to your application. A function called `POST` will allow this. To use `POST` you need to create form fields on your page where a user can input his data. Let's make `hello.py` return a page that contains HTML forms using web.py `form` module. To reduce typing add the following import statement:
+
+    from web import form
+
+Now modify the `GET` method of your class `Hello` to return a form:
+
+TODO: ...
+
+
 ## Sessions [cookbook] (http://webpy.org/cookbook/sessions)
 
-ATTENTION: Sessions should not be used with `autoreloader=True`! It is a bug.
+ATTENTION: Sessions should not be used with `web.reloader`! It is a bug.
 
 Many sites need to distinguish its visitors. Imagine you want to show the user the number of pages he visited on your page. Each visitor has a unique number. To allow separate tracking web.py uses so called sessions. Each visitor gets his very own session object in which his unique number is saved. First create a session object in `hello.py`. Put this line after your `app` is initialized:
 
@@ -559,5 +572,44 @@ This creates a session object. The first parameter is simply the application the
             
 Each time you visit `Hello`, the number of pages you visited is incremented (`session.count += 1`). If you visit `Bye` the session is killed (`session.kill()`). The next time you visit `Hello`, a new session will be created and the counter will be zero again.
 
+### Complete code
+
+hello.py
+
+    import web
+    
+    urls = (
+      '/', 'Hello',
+      '/bye/', 'Bye')
+    
+    app = web.application(urls, globals())
+    session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'count': 0})
+    
+    class Hello:
+        def GET(self):
+            session.count += 1
+            return "You visited " + str(session.count) + " pages."
+    
+    class Bye:
+        def GET(self):
+            session.kill()
+            return ("Bye, web!")
+    
+    if __name__ == "__main__":
+        app.run()
+
+
 ## User authentication
 
+Note: This example is for demonstration only. It is not secure and should not be used on a production site.
+
+User authentication is always needed when you want to provide anything user specific. Sessions keep track of the current visit but they will not allow you to identify a user. Most often user authentication is done by providing functions to login and logout a user. Additionally, users often are able to register or delete an account.
+
+TODO: ...
+
+
+## Deployment
+
+Advantages / disadvantages of different solutions: App Engine, Servers...
+
+TODO: ...
