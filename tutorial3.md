@@ -316,37 +316,35 @@ Imagine a larger site with many pages. If all HTML for these pages is embedded i
 
 First create a directory `templates` next to your `hello.py` file. Create a file `hello.html` and save it in `templates`. This file will contain the HTML markup that is used to render your page. Start with the following basic template:
 
-    $def with (title, page, content)
-    
+    $def with (title, name, content)
     <html>
     <head>
     <title>$title</title>
     </head>
     <body>
-    <p>You are visiting page <b>$page</b>.</p>
+    <p>You are visiting page <b>$name</b>.</p>
     <p>$content</p>
     </body>
     </html>
 
 Create a second template `bye.html`:
 
-    $def with (title, page, *numbers)
-    
+    $def with (title, name, *numbers)
     <html>
     <head>
     <title>$title</title>
     </head>
     <body>
-    <p>You are visiting page <b>$page</b>.</p>
+    <p>You are visiting page <b>$name</b>.</p>
     <p>Find the answer to all questions below:
     $for number in numbers:
         <p>$number</p>
     </body>
     </html>
 
-Besides defining a page structure, these templates will use variables. The first line of `hello.html` (`def with (title, page, number)`) will tell web.py that this template needs to be called with three arguments. Wherever `$title` is used in the template the actual value of `title` is inserted.
+Besides defining a page structure, these templates will use variables. The first line of `hello.html` (`def with (title, name, number)`) will tell web.py that this template needs to be called with three arguments. Wherever `$title` is used in the template the actual value of `title` is inserted.
 
-Arguments of `bye.html` are `title`, `page` and an arbitrary number of numbers (`*numbers`). All arguments beside `title` and `page` are put into the list `numbers`. This list is then iterated (`$for number in numbers:`) and each number (`number`) is written in its own paragraph. You see that `$` is not only used to access template variables but also to evaluate (safe) Python code like `for` loops or `if` statements.
+Arguments of `bye.html` are `title`, `name` and an arbitrary number of numbers (`*numbers`). All arguments beside `title` and `name` are put into the list `numbers`. This list is then iterated (`$for number in numbers:`) and each number (`number`) is written in its own paragraph. You see that `$` is not only used to access template variables but also to evaluate (safe) Python code like `for` loops or `if` statements.
 
 Now insert the following line before your class definitions to create a so called template renderer. The location of your templates is passed to the renderer as an argument:
 
@@ -391,28 +389,26 @@ hello.py
         
 templates/hello.html
 
-    $def with (title, page, content)
-    
+    $def with (title, name, content)
     <html>
     <head>
     <title>$title</title>
     </head>
     <body>
-    <p>You are visiting page <b>$page</b>.</p>
+    <p>You are visiting page <b>$name</b>.</p>
     <p>$content</p>
     </body>
     </html>
 
 templates/bye.html
 
-    $def with (title, page, *numbers)
-    
+    $def with (title, name, *numbers)
     <html>
     <head>
     <title>$title</title>
     </head>
     <body>
-    <p>You are visiting page <b>$page</b>.</p>
+    <p>You are visiting page <b>$name</b>.</p>
     <p>Find the answer to all questions below:
     $for number in numbers:
         <p>$number</p>
@@ -424,6 +420,94 @@ templates/bye.html
 
 The previous example defined two templates but both had duplicate code. In most cases your pages share a lot of common code like a navigation bar or a footer. Let's create a file `base.html` which contains all the code your pages share with each other:
 
+    $def with (page)
+    <html>
+    <head>
+    <title>$page.title</title>
+    </head>
+    <body>
+    <p>You are visiting page <b>$page.name</b>.</p>
+    $:page
+    </body>
+    </html>
+
+This base template receives only one variable `page`. `$page.title` is a placeholder for a variable named `title` defined in a child template. `$:page` is a placeholder for everything else that you put in your child template. Modify `hello.html` to be a child template:
+
+    $def with (title, name, content)
+    $var title:$title
+    $var name:$name
+    <p>$content</p>
+
+The previously duplicated code for the HTML body, the page title and the current page information is gone. Instead `$var title:$title` tells the base template to use the local `title` as `$page.title`. The remaining line `<p>$content</p>` will be available in the base template as `$:page`.
+
+Modify `bye.html` accordingly:
+
+    $def with (title, name, *numbers)
+    $var title:$title
+    $var name:$name
+    <p>Find the answer to all questions below:</p>
+    $for number in numbers:
+        <p>$number</p>
+
+The last step is to tell web.py to use `base.html` as the base template. Use the following code (you might need to replace your previous code):
+
+    render = web.template.render('templates/', base='base')
+
+Both `hello.html` and `bye.html` will now use `base.html`.
+
+### Complete code
+
+hello.py
+
+    import web
+    
+    urls = (
+      '/', 'Hello',
+      '/bye/', 'Bye')
+    
+    app = web.application(urls, globals(), web.reloader)
+    
+    render = web.template.render('templates/', base='base')
+    
+    class Hello:
+        def GET(self):
+            return render.hello("Templates demo", "Hello", "A long time ago...")
+    
+    class Bye:
+        def GET(self):
+            return render.bye("Templates demo", "Bye", "14", "8", "25", "42", "19")
+    
+    if __name__ == "__main__":
+        app.run()
+
+base.html
+
+    $def with (page)
+    <html>
+    <head>
+    <title>$page.title</title>
+    </head>
+    <body>
+    <p>You are visiting page <b>$page.name</b>.</p>
+    $:page
+    </body>
+    </html>
+
+hello.html
+
+    $def with (title, name, content)
+    $var title:$title
+    $var name:$name
+    <p>$content</p>
+
+bye.html
+
+    $def with (title, name, *numbers)
+    $var title:$title
+    $var name:$name
+    <p>Find the answer to all questions below:</p>
+    $for number in numbers:
+        <p>$number</p>
 
 
 ## Static content
@@ -451,3 +535,7 @@ hello.py
     
     if __name__ == "__main__":
         app.run()
+
+
+## User authentication
+
