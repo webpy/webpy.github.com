@@ -452,15 +452,103 @@ hello.py
         app.run()
 
 
-## User input (HTML forms and the `POST` method)
+## User input (HTML forms and the `POST` method) [cookbook] (http://webpy.org/form)
 
 Until now `GET` functions were introduced to serve pages but there was no way a user could send data back to your application. A function called `POST` will allow this. To use `POST` you need to create form fields on your page where a user can input his data. Let's make `hello.py` return a page that contains HTML forms using web.py `form` module. To reduce typing add the following import statement:
 
     from web import form
 
-Now modify the `GET` method of your class `Hello` to return a form:
+Now define a form before your classes in `hello.py`. This example only uses a single input field. Visit the [cookbook] (http://webpy.org/form) for more advanced types. The following code gives you a text box with validation of the input:
 
-TODO: ...
+    myform = form.Form( 
+        form.Textbox('number',
+                     form.notnull,
+                     form.regexp('-?\d+', 'Not a number.'),
+                     form.Validator('Not greater 10.', lambda x: int(x)>10),
+                     description='Enter a number greater 10:'
+                     ))
+
+`form.Textbox()` creates an HTML text box. The first parameter specifies its name: `'number'`.  Most often you will want to validate the input of a user instantly and allow him to correct errors. `form.notnull` makes it a required field that cannot be left empty. `form.regexp()` matches the input with the given regular expression. Here it is checked if the input is a number. `form.Validator()` additionally checks if the input is a number greater ten. And finally, `description` is the text that is printed in front of the text box.
+
+TODO: Am I wrong? The regexp could match a number greater 10 instead of the Validator. The Validator will not validate for anything NAN which makes the regexp useless.
+
+Now make your template `hello.html` accept and display a form:
+
+    $def with (form)
+    <form name="test" method="POST"> 
+    $if not form.valid: <p>Sorry, your input was invalid.</p>
+    $:form.render()
+    <input type="submit" value="Check" />
+    </form>
+
+Notice that the template will print an error message if the form input is invalid.
+
+And finally your `Hello` class needs the following `GET` and `POST` methods:
+
+    class Hello:
+        def GET(self):
+            form = myform()
+            return render.form(form)
+    
+        def POST(self): 
+            form = myform() 
+            if not form.validates(): 
+                return render.form(form)
+            else:
+                number = form['number'].value
+                if int(number) % 2 == 0:
+                    return "Your number %s is even." % number
+                else:
+                    return "Your number %s is odd." % number
+
+When you visit `Hello` in your browser, the `GET` method creates an instance of your form and returns the rendered page. Enter a number greater 10 and press the `check` button. Now the `POST` method is invoked to process your input. Because the `GET` and `POST` methods cannot access the same form instance a new one is created. `form.validates()` checks the input you entered. But how does it know what you have entered? By default the `validates()` method fetches your input from `web.input()` where it is stored as soon as you press the `check` button. In case your input is invalid, the form is returned again. Else `form['number'].value` is retrieved which is the number you entered and your application will tell you if you entered an even or odd number.
+
+### Complete code
+
+hello.py 
+
+    import web
+    from web import form
+    
+    urls = (
+      '/', 'Hello')
+    
+    app = web.application(urls, globals(), web.reloader)
+    render = web.template.render('templates/')
+    
+    myform = form.Form( 
+        form.Textbox('number',
+                     form.notnull,
+                     form.regexp('-?\d+', 'Not a number.'),
+                     form.Validator('Not greater 10.', lambda x: int(x)>10),
+                     description='Enter a number greater 10:'
+                     ))
+    
+    class Hello:
+        def GET(self):
+            form = myform()
+            return render.form(form)
+    
+        def POST(self): 
+            form = myform() 
+            if not form.validates(): 
+                return render.form(form)
+            else:
+                number = form['number'].value
+                if int(number) % 2:
+                    return "Your number %s is odd." % number
+                else:
+                    return "Your number %s is even." % number
+    
+    if __name__ == "__main__":
+        app.run()
+
+hello.html
+
+    $def with (title, name, content)
+    $var title:$title
+    $var name:$name
+    <p>$content</p>
 
 
 ## Sessions [cookbook] (http://webpy.org/cookbook/sessions)
@@ -523,6 +611,6 @@ TODO: ...
 
 ## Deployment
 
-Advantages / disadvantages of different solutions: App Engine, Servers...
+Advantages / disadvantages of different solutions: App Engine, servers...
 
 TODO: ...
