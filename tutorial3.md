@@ -8,9 +8,7 @@ title: web.py 0.3 tutorial
 This is a work-in-progress
 
 
-## TODO: `web.webapi.internalerror = web.debugerror` in 0.3?
-
-## TODO: PEP 8 compatible?
+## TODO: app.internalerror = web.debugerror
 
 ## TODO: Show/hide complete code at the end of sections
 
@@ -38,28 +36,28 @@ Before you are able to use the tools web.py provides, you need to import the web
 
     import web
 
-In web.py web pages are mapped to Python classes. Let's create the code for the first page which is here called `Hello`:
+In web.py web pages are mapped to Python classes. Let's create the code for the first page which is here called `hello`:
 
-    class Hello:
+    class hello:
         def GET(self):
             return "Hello, Web!"
 
-The `Hello` class has a function named `GET` which returns "Hello, Web!". Why `GET`?
+The `hello` class has a function named `GET` which returns "Hello, Web!". Why `GET`?
 
 When you open a web page, your browser asks for the content of that page. This request is called the `GET` method. web.py uses the same terminology. The string your `GET` method returns is displayed in your browser.
 
 Although the code for your first page is written, it cannot yet be opened in a browser. Let's proceed with mapping a web address (URL) to your class. Insert the following code after the import statement:
 
     urls = (
-      '/', 'Hello')
+      '/', 'hello')
 
-This tells web.py to map the root of your website (like http://webpy.org/) to your Python class named `Hello`.
+This tells web.py to map the root of your website (like http://webpy.org/) to your Python class named `hello`.
 
 Next create an instance of a web.py application. This instance will be the mediator between your classes and the web. It will handle browser requests and serve your pages. (In short: It will do everything that you really don't want to care about.) Use the following code:
 
     app = web.application(urls, globals())
 
-Note that `web.application()` gets called with two arguments. Your URL mapping (`urls`) and your global namespace which contains your `Hello` class (`globals()`).
+Note that `web.application()` gets called with two arguments. Your URL mapping (`urls`) and your global namespace which contains your `hello` class (`globals()`).
 
 To finish your web.py application insert the following code at the end of your code:
 
@@ -75,11 +73,11 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello')
+      '/', 'hello')
 
     app = web.application(urls, globals())
     
-    class Hello:
+    class hello:
         def GET(self):
             return 'Hello, web!'
     
@@ -103,17 +101,17 @@ Note: You can also visit your site at `http://localhost:8080/`
 
 In this part you will learn how to manage multiple pages. Let's add another class to your 'Hello Web' application:
 
-    class Bye:
+    class bye:
         def GET(self):
             return 'Bye, web!'
 
 As mentioned above, each page needs a unique address. Modify your list of URLs as follows:
 
     urls = (
-      '/', 'Hello',
-      '/bye/', 'Bye')
+      '/', 'hello',
+      '/bye/', 'bye')
 
-This will make your class `Bye` respond to requests at `/bye/`. Now start your application and open `http://localhost:8080/bye/` in your browser.
+This will make your class `bye` respond to requests at `/bye/`. Now start your application and open `http://localhost:8080/bye/` in your browser.
 
 Note: Currently you need to restart your application to see any changes. Try to pass a third argument to `web.application` and restart your application:
 
@@ -129,16 +127,16 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello',
-      '/bye/', 'Bye')
+      '/', 'hello',
+      '/bye/', 'bye')
     
     app = web.application(urls, globals(), web.reloader)
     
-    class Hello:
+    class hello:
         def GET(self):
             return time.ctime()
     
-    class Bye:
+    class bye:
         def GET(self):
             return 'Bye, web!'
     
@@ -152,9 +150,9 @@ Until now your pages contained only static strings that did not change between y
 
     import time
 
-Then change your `Hello` class as follows:
+Then change your `hello` class as follows:
 
-    class Hello:
+    class hello:
         def GET(self):
             return "The time is:    " + time.ctime()
 
@@ -168,11 +166,11 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello')
+      '/', 'hello')
     
     app = web.application(urls, globals(), web.reloader)
     
-    class Hello:
+    class hello:
         def GET(self):
             return "The time is:    " + time.ctime()
     
@@ -182,9 +180,9 @@ hello.py
 
 ## HTML in Python
 
-Until now your classes returned only simple strings. Let's add some HTML. This can be done directly from inside your `hello.py`. Replace your class `Hello` with this code:
+Until now your classes returned only simple strings. Let's add some HTML. This can be done directly from inside your `hello.py`. Replace your class `hello` with this code:
 
-    class Hello:
+    class hello:
         def GET(self):
             return """<html>
     <head>
@@ -205,12 +203,12 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello',
-      '/bye/', 'Bye')
+      '/', 'hello',
+      '/bye/', 'bye')
     
     app = web.application(urls, globals(), web.reloader)
     
-    class Hello:
+    class hello:
         def GET(self):
             return """<html>
     <head>
@@ -269,11 +267,11 @@ Now insert the following line before your class definitions to create a so calle
 
 Next modify your classes to render your pages using the two different templates:
 
-    class Hello:
+    class hello:
         def GET(self):
             return render.hello("Templates demo", "Hello", "A long time ago...")
     
-    class Bye:
+    class bye:
         def GET(self):
             return render.bye("Templates demo", "Bye", "14", "8", "25", "42", "19")
     
@@ -286,18 +284,18 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello',
-      '/bye/', 'Bye')
+      '/', 'hello',
+      '/bye/', 'bye')
     
     app = web.application(urls, globals(), web.reloader)
     
     render = web.template.render('templates/')
     
-    class Hello:
+    class hello:
         def GET(self):
             return render.hello("Templates demo", "Hello", "A long time ago...", "bla")
     
-    class Bye:
+    class bye:
         def GET(self):
             return render.bye("Templates demo", "Bye", "14", "8", "25", "42", "19")
             
@@ -379,18 +377,18 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello',
-      '/bye/', 'Bye')
+      '/', 'hello',
+      '/bye/', 'bye')
     
     app = web.application(urls, globals(), web.reloader)
     
     render = web.template.render('templates/', base='base')
     
-    class Hello:
+    class hello:
         def GET(self):
             return render.hello("Templates demo", "Hello", "A long time ago...")
     
-    class Bye:
+    class bye:
         def GET(self):
             return render.bye("Templates demo", "Bye", "14", "8", "25", "42", "19")
     
@@ -431,7 +429,7 @@ bye.html
 
 Now that your application serves HTML formatted content, you probably want to include static files like images or css style files. To achieve this create a directeory called `static` next to your `hello.py` file. Put a picture file (here called `logo.png`) in your `static` directory. Then include the file on your page:
 
-    class Hello:
+    class hello:
         def GET(self):
             return """<img src="./static/logo.png">"""
 
@@ -442,11 +440,11 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello')
+      '/', 'hello')
     
     app = web.application(urls, globals(), web.reloader)
     
-    class Hello:
+    class hello:
         def GET(self):
             return """<img src="./static/logo.png">"""
     
@@ -483,9 +481,9 @@ Now make your template `hello.html` accept and display a form:
 
 Notice that the template will print an error message if the form input is invalid.
 
-And finally your `Hello` class needs the following `GET` and `POST` methods:
+And finally your `hello` class needs the following `GET` and `POST` methods:
 
-    class Hello:
+    class hello:
         def GET(self):
             my_form = number_form()
             return render.hello(my_form)
@@ -501,7 +499,7 @@ And finally your `Hello` class needs the following `GET` and `POST` methods:
                 else:
                     return "Your number %s is even." % number
 
-When you visit `Hello` in your browser, the `GET` method creates an instance of your form and returns the rendered page. Enter a number greater 10 and press the `Check` button. Now the `POST` method is invoked to process your input. Because the `GET` and `POST` methods cannot access the same form instance a new one is created. `form.validates()` checks the input you entered. But how does it know what you have entered? By default the `validates()` method fetches your input from `web.input()` where it is stored as soon as you press the `Check` button. In case your input is invalid, the form is returned again. Else `my_form['number'].value` is retrieved which is the number you entered and your application will tell you if you entered an even or odd number.
+When you visit `hello` in your browser, the `GET` method creates an instance of your form and returns the rendered page. Enter a number greater 10 and press the `Check` button. Now the `POST` method is invoked to process your input. Because the `GET` and `POST` methods cannot access the same form instance a new one is created. `form.validates()` checks the input you entered. But how does it know what you have entered? By default the `validates()` method fetches your input from `web.input()` where it is stored as soon as you press the `Check` button. In case your input is invalid, the form is returned again. Else `my_form['number'].value` is retrieved which is the number you entered and your application will tell you if you entered an even or odd number.
 
 Now go back and try some invalid input. First leave the text field blank and press `Check`. You will be informed that you left a required field blank. Enter some text and you will get a "Not a number" message. This is due to the regular expression check. And finally try some number that is not greater than ten. The form input will not be validated and you are advised to enter a number greater ten.
 
@@ -513,7 +511,7 @@ hello.py
     from web import form
     
     urls = (
-      '/', 'Hello')
+      '/', 'hello')
     
     app = web.application(urls, globals(), web.reloader)
     render = web.template.render('templates/')
@@ -526,7 +524,7 @@ hello.py
                      description='Enter a number greater 10:'
                      ))
     
-    class Hello:
+    class hello:
         def GET(self):
             my_form = number_form()
             return render.hello(my_form)
@@ -565,17 +563,17 @@ Many sites need to distinguish its visitors. Imagine you want to show the user t
 
 This creates a session object. The first parameter is simply the application the session object is used for. `web.session.DiskStore('sessions')` tells web.py to store sessions on disk (database storage is possible as well, see this [cookbook] (http://webpy.org/cookbook/sessions) entry). The third optional parameter initializes the session data dictionary for each user. Here each session object starts with zero visited pages (`count`). web.py creates a directory `sessions` to store session data on disk. Modify your classes in `hello.py` like this:
 
-    class Hello:
+    class hello:
         def GET(self):
             session.count += 1
             return "You visited " + str(session.count) + " pages."
     
-    class Bye:
+    class bye:
         def GET(self):
             session.kill()
             return ("Bye, web!")
             
-Each time you visit `Hello`, the number of pages you visited is incremented (`session.count += 1`). If you visit `Bye` the session is killed (`session.kill()`). The next time you visit `Hello`, a new session will be created and the counter will be zero again.
+Each time you visit `hello`, the number of pages you visited is incremented (`session.count += 1`). If you visit `bye` the session is killed (`session.kill()`). The next time you visit `hello`, a new session will be created and the counter will be zero again.
 
 ### Complete code
 
@@ -584,18 +582,19 @@ hello.py
     import web
     
     urls = (
-      '/', 'Hello',
-      '/bye/', 'Bye')
+      '/', 'hello',
+      '/bye/', 'bye')
     
     app = web.application(urls, globals())
-    session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'count': 0})
+    session = web.session.Session(app, web.session.DiskStore('sessions'),
+                                  initializer={'count': 0})
     
-    class Hello:
+    class hello:
         def GET(self):
             session.count += 1
             return "You visited " + str(session.count) + " pages."
     
-    class Bye:
+    class bye:
         def GET(self):
             session.kill()
             return ("Bye, web!")
@@ -606,12 +605,115 @@ hello.py
 
 ## User authentication
 
-Note: This example is for demonstration only. It is not secure and should not be used on a production site.
+Note: This example is insecure!
+
+TODO: Secure authentication
 
 User authentication is always needed when you want to provide anything user specific. Sessions keep track of the current visit but they will not allow you to identify a user. Most often user authentication is done by providing functions to login and logout a user. Additionally, users often are able to register or delete their account.
 
-TODO: ...
+### Complete code
 
+hello.py
+
+    import web
+    from web import form
+    
+    users = {'Kermit': 'frog',
+             'ET': 'eetee'}
+    
+    urls = ('/', 'hello',
+            '/logout/', 'logout',
+            '/register/', 'register')
+      
+    app = web.application(urls, globals())
+    render = web.template.render('templates/')
+    session = web.session.Session(app, web.session.DiskStore('sessions'),
+                                  initializer={'user': 'anonymous'})
+    
+    signin_form = form.Form(form.Textbox('username',
+                                         form.Validator('Unkown username.',
+                                                        lambda x: x in users.keys()),
+                                         description='Username:'),
+                            form.Password('password',
+                                          description='Password:'),
+                            validators = [form.Validator("Username and password didn't match.",
+                                          lambda x: users[x.username] == x.password)])
+    
+    signup_form = form.Form(form.Textbox('username',
+                                         form.Validator('Username already exists.',
+                                                        lambda x: x not in users.keys()),
+                                         description='Username:'),
+                            form.Password('password',
+                                          description='Password:'),
+                            form.Password('password_again',
+                                          description='Repeat your password:'),
+                            validators = [form.Validator("Passwords didn't match.",
+                                          lambda i: i.password == i.password_again)])
+    
+    
+    class hello:
+        def GET(self):
+            my_signin = signin_form()
+            return render.hello(session.user, my_signin)
+    
+        def POST(self): 
+            my_signin = signin_form() 
+            if not my_signin.validates(): 
+                return render.hello(session.user, my_signin)
+            else:
+                #print my_signin['button']
+                session.user = my_signin['username'].value
+                return render.hello(session.user, my_signin)
+    
+    
+    class logout:
+        def GET(self):
+            session.kill()
+            raise web.seeother('/')
+    
+    
+    class register:
+        def GET(self):
+            my_signup = signup_form()
+            return render.signup(my_signup)
+            
+        def POST(self):
+            my_signup = signup_form()
+            if not my_signup.validates(): 
+                return render.signup(my_signup)
+            else:
+                username = my_signup['username'].value
+                password = my_signup['password'].value
+                print username, password
+                users[username] = password
+                raise web.seeother('/')
+    
+    if __name__ == "__main__":
+        app.run()
+        
+hello.html
+
+    $def with (user, form)
+    $if user == 'anonymous':
+        <p>You are not logged in.</p>
+        <p>
+          <form name="test" method="POST"> 
+          $:form.render()
+          <input type="submit" name="button" value="Login" />
+          </form>
+        </p>
+        <p><a href="./register/">Register</a></p>
+    $else:
+        <p>You are logged in as: $user</p>
+        <p><a href="./logout/">Logout</a></p>
+
+signup.html
+
+    $def with (form)
+    <form name="test" method="POST"> 
+    $:form.render()
+    <input type="submit" value="Register" />
+    </form>
 
 ## Deployment
 
