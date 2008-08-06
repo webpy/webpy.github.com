@@ -194,3 +194,18 @@ Output from form.render() will be displayed as is.
     $:fooBar    $# fooBar = <span>lorem ipsum</span>
 
 Output from variable in template will be displayed as is.
+
+## Including / nesting templates
+If you want to nest one template within another, you nest the `render()` calls, and then include the variable (unfiltered) in the page.
+In your handler:
+    
+    print render.foo(render.bar())
+
+Then in the template `foo.html`:
+    
+    $def with (bar)
+    html goes here
+    $:bar
+    more html
+
+This replaces the `$:bar` with the output of the `render.bar()` call (which is why it must be `$:`/unfiltered, so that you get un-encoded HTML (unless you want something else of course)).
