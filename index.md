@@ -91,6 +91,9 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [x]: http://xykra.org
 
+[Edgarest] [y] is built with web.py.Edgarest provides fast, intuitive search of SEC Filings.
+
+   [y]: http://edgarest.com
 
 ## Buzz
 
