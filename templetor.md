@@ -201,6 +201,11 @@ In your handler:
     
     print render.foo(render.bar())
 
+or (to make things a little more clear):
+
+    barhtml = render.bar()
+    print render.foo(barhtml)
+
 Then in the template `foo.html`:
     
     $def with (bar)
@@ -208,4 +213,18 @@ Then in the template `foo.html`:
     $:bar
     more html
 
-This replaces the `$:bar` with the output of the `render.bar()` call (which is why it must be `$:`/unfiltered, so that you get un-encoded HTML (unless you want something else of course)).
+This replaces the `$:bar` with the output of the `render.bar()` call (which is why it must be `$:`/unfiltered, so that you get un-encoded HTML (unless you want something else of course)).  You can pass variables in, in the same way:
+
+    print render.foo(render.bar(baz), qux)
+
+In the template bar (`bar.html`):
+
+    $def with (baz)
+    bar stuff goes here + baz
+
+In template foo (`foo.html`):
+    
+    $def with (bar, qux)
+    html goes here
+    $:bar
+    Value of qux is $qux
