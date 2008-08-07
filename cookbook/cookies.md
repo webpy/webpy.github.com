@@ -37,7 +37,7 @@ The third (and optional) argument to `web.setcookie()`, "expires", allows you to
 ####Overview
 There are two methods to retrieve cookies, depending on the desired reaction to a missing cookie.
 #####Way 1 (raises exception if cookie is not found):
-    web.cookies().get(cookieName)  # returns the value directly, but raises an exception
+    web.cookies().get(cookieName)  
         #cookieName is the name of the cookie submitted by the browser
 #####Way 2 (avoids exception by setting default value for cookie if not found):
     foo = web.cookies(cookieName=defaultValue)
