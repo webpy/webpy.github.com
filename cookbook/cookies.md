@@ -15,15 +15,11 @@ Web.py *comes* with an easy to use method for setting/getting cookies.
 ####Overview
     setcookie(name, value, expires="", domain=None, secure=False): 
        
-  *name* `(string)` - The actual name of the cookie, as stored by the browser, and returned to the server.
-
-  *value* `(string)` - The value you want stored under that name.
-
-  *expires* `(int)` - Optionally, is the time in seconds until the browser should expire the cookie.  Note: this must be an integer, not a string.
-
-  *domain* `(string)` - The domain the cookie is valid for. By default, set to the host accessed, this allows you to set the domain, rather than just a host (such as `.webpy.org`).
-
-  *secure* `(bool)`- If True, require that the cookie only be sent over HTTP/S.
+* *name* `(string)` - The actual name of the cookie, as stored by the browser, and returned to the server.
+* *value* `(string)` - The value you want stored under that name.
+* *expires* `(int)` - Optionally, is the time in seconds until the browser should expire the cookie.  Note: this must be an integer, not a string.
+* *domain* `(string)` - The domain the cookie is valid for. By default, set to the host accessed, this allows you to set the domain, rather than just a host (such as `.webpy.org`).
+* *secure* `(bool)`- If True, require that the cookie only be sent over HTTP/S.
 
 ####Example
 `web.setcookie()` can be used to set the cookie for a user, like this:
