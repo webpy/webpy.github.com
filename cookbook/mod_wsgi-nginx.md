@@ -20,3 +20,8 @@ After compiling and installing nginx with mod_wsgi, you can easily get a web.py 
             wsgi_pass /path/to/your/webpy/app     
          }
     }
+
+
+Helpful links:
+http://nginx.net/
+http://wiki.codemongers.com/NginxNgxWSGIModule
