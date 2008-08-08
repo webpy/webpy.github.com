@@ -7,13 +7,13 @@ title: deploying web.py with nginx and mod_wsgi
 
 It is possible to deploy web.py with nginx using a mod_wsgi similar to the module for Apache.
 
-After compiling and installing nginx with mod_wsgi, you can easily get a web.py app up and running with the following config:
+After compiling and installing nginx with mod_wsgi, you can easily get a web.py app up and running with the following config (edit the paths and settings with your own):
 
 
     wsgi_python_executable  /usr/bin/python;
     server {
-        listen 0.0.0.0;
-        server_name domain_name.com www.domain_name.com;
+        listen 80;
+        server_name www.domain_name.com domain_name.com;
 
         include /etc/nginx/wsgi_vars;
         location / {
