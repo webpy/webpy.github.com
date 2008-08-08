@@ -15,14 +15,15 @@ After compiling and installing nginx with mod_wsgi, you can easily get a web.py 
     server {
         listen 80;
         server_name www.domain_name.com domain_name.com;
+        root /path/to/your/webpy
 
         include /etc/nginx/wsgi_vars;
         location / {
-            wsgi_pass /path/to/your/webpy/app     
+            wsgi_pass /path/to/your/webpy/app.py     
          }
     }
 
-*Note: This is a snippet of the relevant information to setup mod_wsgi for your web app and NOT a full config.
+*Note: This is a snippet of the relevant information to setup mod_wsgi for your web app and NOT a full config for running nginx.
 
 Helpful links:<br />
 [ nginx website](http://nginx.net/ )<br />
