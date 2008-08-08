@@ -68,6 +68,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [CGI deployment through Apache](/cookbook/cgi-apache)
 * mod_python deployment through Apache (requested)
 * [mod_wsgi deployment through Apache](/cookbook/mod_wsgi-apache )
+* [mod_wsgi deployment through Nginx](/cookbook/mod_wsgi-nginx )
 * nginx deployment (requested)
 
 ##Subdomains:
