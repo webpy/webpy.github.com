@@ -11,6 +11,7 @@ After compiling and installing nginx with mod_wsgi, you can easily get a web.py 
 
 
     wsgi_python_executable  /usr/bin/python;
+
     server {
         listen 80;
         server_name www.domain_name.com domain_name.com;
