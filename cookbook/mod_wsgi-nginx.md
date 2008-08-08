@@ -24,6 +24,6 @@ After compiling and installing nginx with mod_wsgi, you can easily get a web.py 
 
 *Note: This is a snippet of the relevant information to setup mod_wsgi for your web app and NOT a full config.
 
-Helpful links:
-http://nginx.net/
-http://wiki.codemongers.com/NginxNgxWSGIModule
+Helpful links:<br />
+[ nginx website](http://nginx.net/ )<br />
+[ mod_wsgi wiki](http://wiki.codemongers.com/NginxNgxWSGIModule )
