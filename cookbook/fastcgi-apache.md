@@ -65,9 +65,33 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
  ps aux | grep code.py
 </code>
 
+#Troubleshooting
 
+<br>
+###Check your apache error log for information!
+
+<br>
+##Common problems
+<br>
+
+###File permissions. 
+You might see error code 255 in your logs.
+Ensure the directory is readable and that code. py is executable:
+
+<code>
+chmod +x code.py
+</code>
+
+###404 Not Found. 
+Is your Alias path correct in your apache configuration?
+
+###Other problems
+Web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing. 
+Did you add this line?
+<pre>
+ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
+</pre>
 #Misc
-
 After updating your application you may need to restart your web server to see the changes.
 
 
