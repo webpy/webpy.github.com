@@ -563,7 +563,7 @@ hello.html
 
 ## Sessions [cookbook] (http://webpy.org/cookbook/sessions)
 
-ATTENTION: Sessions should not be used with `web.reloader`! It is a bug.
+ATTENTION: Sessions cannot be used with `web.reloader` at the time of this writing! It is a known bug.
 
 Many sites need to distinguish its visitors. Imagine you want to show the user the number of pages he visited on your page. Each visitor has a unique number. To allow separate tracking web.py uses so called sessions. Each visitor gets his very own session object in which his unique number is saved. First create a session object in `hello.py`. Put this line after your `app` is initialized:
 
