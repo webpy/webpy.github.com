@@ -10,6 +10,12 @@ This is a work-in-progress
 
 ## TODO: app.internalerror = web.debugerror
 
+## TODO: '$user' vs. '$:user' and '$var user:$user' vs. '$var user:$user\'
+
+## TODO: '/page/(\d+)', 'page',
+
+## TODO: Multiple submit buttons
+
 ## TODO: Show/hide complete code at the end of sections
 
 TODO: move the next paragraph over to install?
@@ -501,6 +507,8 @@ And finally your `hello` class needs the following `GET` and `POST` methods:
 
 When you visit `hello` in your browser, the `GET` method creates an instance of your form and returns the rendered page. Enter a number greater 10 and press the `Check` button. Now the `POST` method is invoked to process your input. Because the `GET` and `POST` methods cannot access the same form instance a new one is created. `form.validates()` checks the input you entered. But how does it know what you have entered? By default the `validates()` method fetches your input from `web.input()` where it is stored as soon as you press the `Check` button. In case your input is invalid, the form is returned again. Else `my_form['number'].value` is retrieved which is the number you entered and your application will tell you if you entered an even or odd number.
 
+Note: You cannot access form values before having validated the form!
+
 Now go back and try some invalid input. First leave the text field blank and press `Check`. You will be informed that you left a required field blank. Enter some text and you will get a "Not a number" message. This is due to the regular expression check. And finally try some number that is not greater than ten. The form input will not be validated and you are advised to enter a number greater ten.
 
 ### Complete code
@@ -661,7 +669,6 @@ hello.py
             if not my_signin.validates(): 
                 return render.hello(session.user, my_signin)
             else:
-                #print my_signin['button']
                 session.user = my_signin['username'].value
                 return render.hello(session.user, my_signin)
     
@@ -684,7 +691,6 @@ hello.py
             else:
                 username = my_signup['username'].value
                 password = my_signup['password'].value
-                print username, password
                 users[username] = password
                 raise web.seeother('/')
     
