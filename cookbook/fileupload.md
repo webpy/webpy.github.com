@@ -29,7 +29,7 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
             x = web.input(myfile={})
             web.debug(x['myfile'].value) # This is the file contents
             web.debug(x['myfile'].filename) # This is the filename
-            raise web.seeother('/upload')
+            web.seeother('/upload')
 
 
     if __name__ == "__main__":
