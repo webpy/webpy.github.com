@@ -470,8 +470,8 @@ Now define a form before your classes in `hello.py`. This example only uses a si
         form.Textbox('number',
                      form.notnull,
                      form.regexp('^-?\d+$', 'Not a number.'),
-                     form.Validator('Not greater 10.', lambda x: int(x)>10),
-                     description='Enter a number greater 10:'
+                     form.Validator('Not greater than 10.', lambda x: int(x)>10),
+                     description='Enter a number greater than 10:'
                      ))
 
 `form.Textbox()` creates an HTML text box. The first parameter specifies its name: `'number'`.  Most often you will want to validate the input of a user instantly and allow him to correct errors. `form.notnull` makes it a required field that cannot be left empty. `form.regexp()` matches the input with the given regular expression. Here it is checked if the input is a number. `form.Validator()` additionally checks if the input is a number greater ten. And finally, `description` is the text that is printed in front of the text box.
