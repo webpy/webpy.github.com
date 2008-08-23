@@ -17,7 +17,7 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
     
     class Upload:
         def GET(self):
-            return """<html><head></head><body>
+            print """<html><head></head><body>
     <form method="POST" enctype="multipart/form-data" action="">
     <input type="file" name="myfile" />
     <br/>
