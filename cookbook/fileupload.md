@@ -17,7 +17,7 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
     
     class Upload:
         def GET(self):
-            print """<html><head></head><body>
+            return """<html><head></head><body>
     <form method="POST" enctype="multipart/form-data" action="">
     <input type="file" name="myfile" />
     <br/>
@@ -29,11 +29,12 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
             x = web.input(myfile={})
             web.debug(x['myfile'].value) # This is the file contents
             web.debug(x['myfile'].filename) # This is the filename
-            web.seeother('/upload')
+            raise web.seeother('/upload')
 
 
     if __name__ == "__main__":
-        web.run(urls, globals())
+       app = web.application(urls, globals()) 
+       app.run()
 
 ## Hang ups
 
