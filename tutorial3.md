@@ -613,11 +613,7 @@ hello.py
 
 ## User authentication
 
-Note: This example is insecure!
-
-TODO: Secure authentication
-
-User authentication is always needed when you want to provide anything user specific. Sessions keep track of the current visit but they will not allow you to identify a user. Most often user authentication is done by providing functions to login and logout a user. Additionally, users often are able to register or delete their account.
+This is an example of user authentication using a session cookie, the most common method.  Most often user authentication is done by providing functions to login and logout a user. Additionally, users often are able to register or delete their account.
 
 ### Complete code
 
@@ -626,26 +622,43 @@ hello.py
     import web
     from web import form
     
-    users = {'Kermit': 'frog',
-             'ET': 'eetee'}
+    import random
+    from hashlib import sha1
+    
+    # A simple user object that doesn't store passwords in plain text
+    # see http://en.wikipedia.org/wiki/Salt_(cryptography)
+    class PasswordHash(object):
+        def __init__(self, password_):
+            self.salt = str(random.getrandbits(80))
+            self.saltedpw = sha1(password_ + self.salt).hexdigest()
+        def check_password(self, password_):
+            """checks if the password is correct"""
+            return self.saltedpw == sha1(password_ + self.salt).hexdigest()
+    
+    # Note: a secure application would never store passwords in plaintext in the source code
+    users = {
+        'Kermit' : PasswordHash('frog'), 
+        'ET' : PasswordHash('eetee'),  
+        'falken' : PasswordHash('joshua') } 
+    
     
     urls = ('/', 'hello',
             '/logout/', 'logout',
             '/register/', 'register')
-      
+    
     app = web.application(urls, globals())
     render = web.template.render('templates/')
     session = web.session.Session(app, web.session.DiskStore('sessions'),
                                   initializer={'user': 'anonymous'})
     
     signin_form = form.Form(form.Textbox('username',
-                                         form.Validator('Unkown username.',
+                                         form.Validator('Unknown username.',
                                                         lambda x: x in users.keys()),
                                          description='Username:'),
                             form.Password('password',
                                           description='Password:'),
                             validators = [form.Validator("Username and password didn't match.",
-                                          lambda x: users[x.username] == x.password)])
+                                          lambda x: users[x.username].check_password(x.password)) ])
     
     signup_form = form.Form(form.Textbox('username',
                                          form.Validator('Username already exists.',
@@ -683,7 +696,7 @@ hello.py
         def GET(self):
             my_signup = signup_form()
             return render.signup(my_signup)
-            
+    
         def POST(self):
             my_signup = signup_form()
             if not my_signup.validates(): 
@@ -691,7 +704,7 @@ hello.py
             else:
                 username = my_signup['username'].value
                 password = my_signup['password'].value
-                users[username] = password
+                users[username] = PasswordHash(password)
                 raise web.seeother('/')
     
     if __name__ == "__main__":
