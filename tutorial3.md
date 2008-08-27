@@ -629,7 +629,7 @@ hello.py
     # see http://en.wikipedia.org/wiki/Salt_(cryptography)
     class PasswordHash(object):
         def __init__(self, password_):
-            self.salt = str(random.getrandbits(80))
+            self.salt = "".join(chr(random.randint(33,127)) for x in xrange(64))
             self.saltedpw = sha1(password_ + self.salt).hexdigest()
         def check_password(self, password_):
             """checks if the password is correct"""
