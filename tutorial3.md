@@ -12,8 +12,6 @@ This is a work-in-progress
 
 ## TODO: '$user' vs. '$:user' and '$var user:$user' vs. '$var user:$user\'
 
-## TODO: '/page/(\d+)', 'page',
-
 ## TODO: Multiple submit buttons
 
 ## TODO: Show/hide complete code at the end of sections
@@ -150,39 +148,58 @@ hello.py
         app.run()
 
 
-## Dynamic content
+## Dynamic pages
 
-Until now your pages contained only static strings that did not change between your visits. Add the current time stamp to your page. Import Python's `time` module:
+The examples shown above are simple; all it does it display the same message, every time.  Suppose you want your app to greet people by name?
 
-    import time
+### A dynamic "Hello, world!" -- using GET and POST variables
 
-Then change your `hello` class as follows:
+Change the "hello" class above so it looks like this:
 
     class hello:
         def GET(self):
-            return "The time is:    " + time.ctime()
+            i = web.input(name = 'web')
+            return 'Hello, ' + web.websafe(i.name) + '!'
+        
+Run the script, and then go to http://0.0.0.0:8080/?name=Luke .  You should see "Hello, Luke!."
 
-Open the page and reload it several times. You will see that the page is dynamically created at each request.
+Here is what is happening:
 
-### Complete code
+When you add the "?name=Luke" to the end of your web request, you are passing the variable "name" to the web server, with a value of "Luke."
 
-hello.py
+The line `i = web.input(name = "web")` creates a Storage object (a fancy type of Python dictionary) that contains all variables passed into it.  You can also do this by just calling `i = web.input()`.  Here, by putting `name = 'web'` into the call, we tell it to use the string "web" as a default, in case the user didn't pass in a "name" variable at all.
 
-    import time
+We read the "name" value from i by just saying `i.name`.  It's also possible to do `i['name']`; use the syntax you prefer.
+
+Finally, we pass i.name through the `web.websafe` function before returning it to the user.  If your page is being served as HTML, rather than text, then this is an important security step to protect against [cross-site scripting attacks](http://en.wikipedia.org/wiki/Cross-site_scripting).  (As we will see, web.py's form templates offer built-in protection to those attacks).
+
+### Another dynamic "Hello, world!" -- parsing URL strings
+
+Making the user type in something like "http://localhost:8080/?name=Luke" is so 1996; wouldn't it be nicer if we could just get the user to enter "http://localhost:8080/Luke"?
+
+Try this code:
+
     import web
     
     urls = (
-      '/', 'hello')
+      '/(.*)', 'hello')
     
-    app = web.application(urls, globals(), web.reloader)
+    app = web.application(urls, globals())
     
     class hello:
-        def GET(self):
-            return "The time is:    " + time.ctime()
+        def GET(self, name):
+            return 'Hello, ' + web.websafe(name) + '!'
     
     if __name__ == "__main__":
         app.run()
 
+Notice that two things have changed:
+
+ 1. The urls has a "(.*)" thing in it
+ 2. The `GET` method now takes two parameters
+ 3. There's no more `web.input` call.
+
+As you can see, web.py is parsing the URL for you, based on a [regular expression](http://docs.python.org/lib/re-syntax.html) that you provide in the `urls` tuple.
 
 ## HTML in Python
 
