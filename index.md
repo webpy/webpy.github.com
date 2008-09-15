@@ -46,7 +46,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [20]: http://reddit.com/
 
-[jottit.com](http://jottit.com) is built with web.py.  Jottit makes getting a website as easy as filling out a textbox.
+[watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
@@ -69,6 +69,8 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
    [m]: http://micropledge.com/
 
 The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
+
+[jottit.com](http://jottit.com) is built with web.py.  Jottit makes getting a website as easy as filling out a textbox. 
 
 [Tasko][t] is built with web.py. Tasko is an online task management tool which  uses a plain text file format to store all the information.
 
