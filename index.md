@@ -97,6 +97,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [y]: http://edgarest.com
 
+[Wklej.to] [z] is a nopaste/Pastebin app with Free and Open api, and of course with desktop plugins and clients.
+
+   [z]: http://wklej.to
+
 ## Buzz
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
