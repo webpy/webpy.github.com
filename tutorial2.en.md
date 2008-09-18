@@ -28,7 +28,8 @@ This imports the web.py module.
 Now we need to tell web.py our URL structure. Let's start out with something simple:
 
     urls = (
-      '/', 'index'    )
+      '/', 'index',
+      '',  'index'    )
 
 The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (i.e. `\d+` would match a sequence of digits). The parentheses say to capture that piece of the matched data for use later on. The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
 
