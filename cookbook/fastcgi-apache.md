@@ -12,6 +12,7 @@ title: Web.py using FastCGI and Apache 2
 * [Flup](http://trac.saddi.com/flup)
 
 #Apache Configuration
+Replace 'myapp' with your app's directory name/path
     LoadModule rewrite_module modules/mod_rewrite.so
     LoadModule fcgid_module modules/mod_fcgid.so
 
