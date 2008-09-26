@@ -35,7 +35,7 @@ Replace '/var/www/myapp/' with the path to your apps directory
            RewriteCond %{REQUEST_URI} !^/favicon.ico$
            RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
            RewriteRule ^(.*)$ code.py/$1 [PT]
-    </IfModule>
+        </IfModule>
     </Directory>
 
     <Directory "/var/www/myapp/static">
