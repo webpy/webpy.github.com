@@ -11,6 +11,7 @@ title: Web.py using FastCGI and Apache 2
 * [mod_rewrite](http://httpd.apache.org/docs/2.0/rewrite/)
 * [Flup](http://trac.saddi.com/flup)
 
+Note, on CentOS compiling mod_fcgid requires apache-devel be installed.
 #Apache Configuration
 Replace '/var/www/myapp/' with the path to your apps directory
 
