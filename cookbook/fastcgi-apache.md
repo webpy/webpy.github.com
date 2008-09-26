@@ -18,22 +18,31 @@ title: Web.py using FastCGI and Apache 2
     SocketPath /tmp/fcgidsock
     SharememPath /tmp/fcgid_shm
 
-    Alias / "/var/www/myapp/code.py/"
+    Alias /static "/var/www/myapp/static"
+    Alias / "/var/www/myapp/"
     <Directory "/var/www/myapp/">
         allow from all
         SetHandler fcgid-script    
-        Options ExecCGI
+        Options +ExecCGI
         AllowOverride None
+        <IfModule mod_rewrite.c>      
+           RewriteEngine on
+           RewriteBase /
+           RewriteCond %{REQUEST_URI} !^/icons
+           RewriteCond %{REQUEST_URI} !^/favicon.ico$
+           RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
+           RewriteRule ^(.*)$ code.py/$1 [PT]
+    </IfModule>
     </Directory>
 
-    <IfModule mod_rewrite.c>      
-        RewriteEngine on
-        RewriteBase /
-        RewriteCond %{REQUEST_URI} !^/icons
-        RewriteCond %{REQUEST_URI} !^/favicon.ico$
-        RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
-        RewriteRule ^(.*)$ code.py/$1 [PT]
-    </IfModule>
+  <Directory "/var/www/myapp/static">
+      allow from all
+      AllowOverride None
+      Options -ExecCGI
+            SetHandler None
+  </Directory>
+
+
 
 
 #Hello World
