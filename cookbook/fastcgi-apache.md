@@ -38,12 +38,12 @@ Replace '/var/www/myapp/' with the path to your apps directory
     </IfModule>
     </Directory>
 
-  <Directory "/var/www/myapp/static">
-      allow from all
-      AllowOverride None
-      Options -ExecCGI
-            SetHandler None
-  </Directory>
+    <Directory "/var/www/myapp/static">
+          allow from all
+          AllowOverride None
+          Options -ExecCGI
+          SetHandler None
+      </Directory>
 
 
 
