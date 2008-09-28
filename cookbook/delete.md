@@ -24,9 +24,9 @@ Note that you have to pass a "where" clause, even if you want to delete everythi
 
 The delete statement takes the following keyword arguments:
 
-    *where
-    *vars
-    *_test
+* where
+* vars
+* _test
 
 
 ###where
