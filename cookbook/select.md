@@ -22,14 +22,14 @@ Once the database is defined as such, performing selects can be performed like t
 
 The select statement takes the following keyword arguments:
 
-*vars
-*what
-*where
-*order
-*group
-*limit
-*offset
-*_test
+* vars
+* what
+* where
+* order
+* group
+* limit
+* offset
+* _test
 
 ###vars
 The vars variable is used to populate the rest of the statements.  For example:
