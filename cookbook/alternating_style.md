@@ -27,3 +27,17 @@ Solution: Give templetor access to the `int` built-in and use modulo to test.
             even
         ">$track.title</li>
     </ul>
+
+
+## New Templetor ##
+
+In the new implementation of templetor (which will be the default when version .3 is released), within any template loop you have access to a $loop variable.  This works like so:
+
+
+    <ul>
+    $for foo in foos:
+        <li class="$loop.parity">
+        $foo
+        </li>
+    </ul>
+
