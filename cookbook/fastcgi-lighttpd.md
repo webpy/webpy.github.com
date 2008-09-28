@@ -97,3 +97,9 @@ At the top of the file add:
 <pre>
 #!/usr/bin/env python
 </pre>
+
+and don't forget to make it executable (otherwise you will get a "permission denied" error):
+
+<pre>
+$ chmod 755 /path-to/webpy-app/code.py
+</pre>
