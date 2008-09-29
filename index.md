@@ -33,8 +33,8 @@ web.py 0.23 was released 2008-01-19: [web.py-0.23.tar.gz][16]
 
 To always have the latest version of web.py, run:
     
-    bzr get http://webpy.org/bzr/webpy.dev/
-    ln -s `pwd`/webpy.dev/web .
+    git clone git://github.com/webpy/webpy.git
+    ln -s `pwd`/webpy/web .
 
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
