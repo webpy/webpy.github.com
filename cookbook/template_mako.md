@@ -10,7 +10,7 @@ How to use Mako template engine in webpy?
 
 ### Solution
 
-You need to install both Mako and webpy(0.3) first: http://www.makotemplates.org/. And then try out the following code snippet:
+You need to install both Mako and webpy(0.3) first: [http://www.makotemplates.org/](http://www.makotemplates.org/). And then try out the following code snippet:
 
     # encoding: utf-8
     # File: code.py
