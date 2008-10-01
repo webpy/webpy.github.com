@@ -13,3 +13,4 @@ title: web.py 0.2 tutorial
 * [日本語](/tutorial2.ja)
 * [Deutsch](/tutorial2.de)
 * [Français](/tutorial2.fr)
+* [Polish](/tutorial2.pl)
