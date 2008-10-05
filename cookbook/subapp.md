@@ -14,7 +14,7 @@ How do you include an application defined in another file in your application?
 In `blog.py`:
 
     urls = (
-      "", "reblog,
+      "", "reblog",
       "/(.*)", "blog"
     )
 
