@@ -10,7 +10,7 @@ How to use Cheetah template engine in webpy?
 
 ### Solution
 
-You need to install both Cheetah and webpy(0.3) first: http://www.cheetahtemplate.org/. And then try out the following code snippet:
+You need to install both Cheetah and webpy(0.3) first: [http://www.cheetahtemplate.org/](http://www.cheetahtemplate.org/). And then try out the following code snippet:
 
     # encoding: utf-8
     # File: code.py
