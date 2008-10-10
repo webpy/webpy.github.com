@@ -101,6 +101,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [z]: http://wklej.to
 
+[Sysinternals CD] [z] integrates webpy and postgresql to render an automated website
+
+   [z]: http://sysinternals.xykra.org
+
 ## Buzz
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
