@@ -168,6 +168,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
     * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
+    * [templetor (简体中文)](http://gamexg-cw.cn/2008/10/15/webpy-%E6%96%87%E6%A1%A3%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%EF%BC%9Awebpy-%E6%A8%A1%E6%9D%BF%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81%E5%90%8D%E7%A7%B0templetor/)
     * [form.py (short) tutorial](/form)
     * [upgrading from 0.1 to 0.2](http://webpy.infogami.com/upgrade_to_point2)
     * [日本語](/tutorial2.ja)
