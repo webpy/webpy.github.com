@@ -42,7 +42,7 @@ You can use `DBStore` instead of `DiskStore` if you prefer to store sessions in 
 
      create table sessions (
         session_id char(128) UNIQUE NOT NULL,
-        atime datetime NOT NULL default current_timestamp,
+        atime timestamp NOT NULL default current_timestamp,
         data text
     );
 
