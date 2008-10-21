@@ -17,18 +17,25 @@ you can see this below
     def init(urllist):
         global dispatcher
         for it in range(len(urllist)/2):
-            dispatcher.register_function(urllist[it+1], urllist[it])
+            #dispatcher.register_function(urllist[it+1], urllist[it])
+            dispatcher.register_function(urllist[(it*2)+1], urllist[(it*2)])
 
     class rpc:
         def GET(self):
             global dispatcher
             methods = dispatcher.system_listMethods()
             web.header('Content-Type', 'text/html')
-            print "<body><h1>Error!</h1>"            print "Method GET is not alowed for XMLRPC requests"            print "List of available methods:"            print "<ul>"            for method in methods:
+            print "<body><h1>Error!</h1>"
+            print "Method GET is not alowed for XMLRPC requests"
+            print "List of available methods:"
+            print "<ul>"
+            for method in methods:
                 sig = dispatcher.system_methodSignature(method)
                 help =  dispatcher.system_methodHelp(method)
                 print "<li><b>%s</b>: [%s] %s</li>" % (method, sig, help)
-            print "</ul>"            print "Be careful"            print "</body>"
+            print "</ul>"
+            print "Be careful"
+            print "</body>"
         def POST(self):
             global dispatcher
             response = dispatcher._marshaled_dispatch(web.webapi.data())
