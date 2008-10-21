@@ -12,7 +12,7 @@ you can see this below
 
     import web
     from SimpleXMLRPCServer import SimpleXMLRPCDispatcher
-    dispatcher = SimpleXMLRPCDispatcher()
+    dispatcher = SimpleXMLRPCDispatcher(allow_none = False, encoding = "UTF-8")
 
     def init(urllist):
         global dispatcher
