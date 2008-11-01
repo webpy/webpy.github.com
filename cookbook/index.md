@@ -32,7 +32,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [web.ctx](/cookbook/ctx)
 * loadhooks/unloadhooks (requested)
 * [How to use web.background](/cookbook/background)
-* [cookbook/custom_notfound|Custom NotFound message]]
+* [Custom NotFound message](/cookbook/custom_notfound)
 ##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
 * [Working with Cookies](/cookbook/cookies)
