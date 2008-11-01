@@ -36,6 +36,8 @@ To always have the latest version of web.py, run:
     git clone git://github.com/webpy/webpy.git
     ln -s `pwd`/webpy/web .
 
+Or download the latest version as [zip](http://github.com/webpy/webpy/zipball/master) or [tarball](http://github.com/webpy/webpy/tarball/master).
+
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
    [17]: http://webpy.infogami.com/upgrade_to_point2
