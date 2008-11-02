@@ -23,14 +23,14 @@ web.py application allows adding processors which can do some processing before 
 
 Load hooks and unload hooks can be used to do actions at begining and end of requests.
 
-   def my_loadhook():
+    def my_loadhook():
         print "my load hook"
 
-   def my_unloadhook():
+    def my_unloadhook():
         print "my unload hook"
 
-   app.add_procerssor(web.loadhook(my_loadhook))
-   app.add_procerssor(web.unloadhook(my_unloadhook))
+    app.add_procerssor(web.loadhook(my_loadhook))
+    app.add_procerssor(web.unloadhook(my_unloadhook))
 
 
 
