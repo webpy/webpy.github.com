@@ -30,7 +30,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 ##Advanced
 * [web.ctx](/cookbook/ctx)
-* loadhooks/unloadhooks (requested)
+* [Application processors, loadhooks and unloadhooks](/cookbook/application_processors)
 * [How to use web.background](/cookbook/background)
 * [Custom NotFound message](/cookbook/custom_notfound)
 ##Sessions and user state:
