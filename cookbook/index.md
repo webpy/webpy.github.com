@@ -33,8 +33,10 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Application processors, loadhooks and unloadhooks](/cookbook/application_processors)
 * [How to use web.background](/cookbook/background)
 * [Custom NotFound message](/cookbook/custom_notfound)
+
 ##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
+* [Using session with reloader](/cookbook/sessions_with_reloader)
 * [Working with Cookies](/cookbook/cookies)
 * User authentication (requested)
 
