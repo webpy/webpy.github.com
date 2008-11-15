@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Q&A
+title: FAQ
 ---
 
-# Q&A
+# FAQ
 
 99. **How do I use template.py templates?**
 
