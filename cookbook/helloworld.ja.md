@@ -5,11 +5,11 @@ title: Hello World!
 
 # Hello World!
 
-### 問題点
+## 問題点
 
 web.py を使用して'Hello, world!'を表示させたいのですが？
 
-### 解決手段
+## 解決手段
 
     import web
 
