@@ -1,9 +1,9 @@
 ---
 layout: default
-title: faq
+title: Q&A
 ---
 
-# faq
+# Q&A
 
 99. **How do I use template.py templates?**
 
@@ -57,10 +57,10 @@ title: faq
 
     No. Do `ib = list(ib)` first to turn it from an IterBetter into a list.
 
-99. **How do I debug print to the console?**
+99. **どのようにデバッグ文をコンソールに出力しますか？**
 
-    web.debug("I will get printed to the console and not the body of the webpage")
+    web.debug("デバッグ文")
 
-99. **I stumbled over a bug in web.py. Where can I file it?**
+99. **もしwebpyの不具合(バグ)を見つけた場合どこで報告すればいいのですか？**
 
-    Go to the [webpy launchpad site](https://launchpad.net/webpy), login (or register if you have to) and click on "report a bug".
+    [ここ(webpy launchpad site)](https://launchpad.net/webpy)からバグ報告することができます。ログインが必要な場合は登録を行ってからバグ報告をしてください。
