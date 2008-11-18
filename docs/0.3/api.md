@@ -6,6 +6,7 @@ title: API documentation
 # API documentation
 
 * <a href="#web.application">web.application</a>
+* <a href="#web.contrib.template">web.contrib.template</a>
 * <a href="#web.db">web.db</a>
 * <a href="#web.debugerror">web.debugerror</a>
 * <a href="#web.form">web.form</a>
@@ -114,6 +115,55 @@ Converts an unload hook into an application processor.
     >>> def f(): "something done after handling request"
     ...
     >>> app.add_processor(unloadhook(f))    
+
+<a name="web.contrib.template"></a>
+## web.contrib.template
+
+<code class="head">class cache</code>: 
+Cache for any rendering interface.
+
+Example:
+
+    render = cache(render_cheetah("templates/"))
+    render.hello(name='cache')
+
+<code class="head">class render_cheetah</code>: 
+Rendering interface to Cheetah Templates.
+
+Example:
+
+    render = render_cheetah('templates')
+    render.hello(name="cheetah")
+
+<code class="head">class render_genshi</code>: 
+Rendering interface genshi templates.
+Example:
+
+for xml/html templates.
+
+    render = render_genshi(['templates/'])
+    render.hello(name='genshi')
+
+For text templates:
+
+    render = render_genshi(['templates/'], type='text')
+    render.hello(name='genshi')
+
+<code class="head">class render_jinja</code>: 
+Rendering interface to Jinja2 Templates
+
+Example:
+
+    render= render_jinja('templates')
+    render.hello(name='jinja2')
+
+<code class="head">class render_mako</code>: 
+Rendering interface to Mako Templates.
+
+Example:
+
+    render = render_mako(directories=['templates'])
+    render.hello(name="mako")
 
 <a name="web.db"></a>
 ## web.db
@@ -1421,16 +1471,8 @@ A `307 Temporary Redirect` redirect.
 
 A configuration object for various aspects of web.py.
 
-`db_parameters`
-   : A dictionary containing the parameters to be passed to `connect`
-     when `load()` is called.
-`db_printing`
-   : Set to `True` if you would like SQL queries and timings to be
-     printed to the debug output.
-`session_parameters`
-   : A dictionary containing session parameters
-    cookie_name, cookie_domain, timeout, 
-    ignore_change_ip, ignore_expiry, expired_message
+`debug`
+   : when True, enables reloading, disabled template caching and sets internalerror to debugerror.
 
 <code class="head">cookies(*requireds, **defaults)</code>: 
 Returns a `storage` object with all the cookies in it.
