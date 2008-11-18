@@ -5,6 +5,12 @@ title: API documentation
 
 # API documentation
 
+
+<style type="text/css">
+    .content {margin: 10px;}
+    .head {margin: -10px;}
+</style>
+    
 * <a href="#web.application">web.application</a>
 * <a href="#web.db">web.db</a>
 * <a href="#web.debugerror">web.debugerror</a>
@@ -22,11 +28,11 @@ title: API documentation
 <a name="web.application"></a>
 ## web.application
 
-`class Reloader`: 
+<code class="head">class Reloader</code>: 
 Checks to see if any loaded modules have changed on disk and, 
 if so, reloads them.
 
-`class application`: 
+<code class="head">class application</code>: 
 Application to delegate requests based on path.
 
     >>> urls = ("/hello", "hello")
@@ -37,7 +43,7 @@ Application to delegate requests based on path.
     >>> app.request("/hello").data
     'hello'
 
-`class auto_application(application)`: 
+<code class="head">class auto_application(application)</code>: 
 Application similar to `application` but urls are constructed 
 automatiacally using metaclass.
 
@@ -53,7 +59,7 @@ automatiacally using metaclass.
     >>> app.request('/foo/bar').data
     'foo'
 
-`autodelegate(prefix='')`: 
+<code class="head">autodelegate(prefix='')</code>: 
 Returns a method that takes one argument and calls the method named prefix+arg,
 calling `notfound()` if there isn't one. Example:
 
@@ -70,7 +76,7 @@ calling `notfound()` if there isn't one. Example:
 If a user visits `/prefs/password/change` then `GET_password(self, '/change')`
 is called.
 
-`loadhook(h)`: 
+<code class="head">loadhook(h)</code>: 
 Converts a load hook into an application processor.
 
     >>> app = auto_application()
@@ -78,7 +84,7 @@ Converts a load hook into an application processor.
     ...
     >>> app.add_processor(loadhook(f))
 
-`class subdir_application`: 
+<code class="head">class subdir_application</code>: 
 Application to delegate requests based on path.
 
     >>> urls = ("/hello", "hello")
@@ -89,7 +95,7 @@ Application to delegate requests based on path.
     >>> app.request("/hello").data
     'hello'
 
-`class subdomain_application(application)`: 
+<code class="head">class subdomain_application(application)</code>: 
 Application to delegate requests based on the host.
 
     >>> urls = ("/hello", "hello")
@@ -107,7 +113,7 @@ Application to delegate requests based on the host.
     >>> response.data
     'not found'
 
-`unloadhook(h)`: 
+<code class="head">unloadhook(h)</code>: 
 Converts an unload hook into an application processor.
 
     >>> app = auto_application()
@@ -118,26 +124,26 @@ Converts an unload hook into an application processor.
 <a name="web.db"></a>
 ## web.db
 
-`class DB`: 
+<code class="head">class DB</code>: 
 Database
 
-`class FirebirdDB(DB)`: 
+<code class="head">class FirebirdDB(DB)</code>: 
 Firebird Database.
     
 
-`class MSSQLDB(DB)`: 
+<code class="head">class MSSQLDB(DB)</code>: 
 None
 
-`class MySQLDB(DB)`: 
+<code class="head">class MySQLDB(DB)</code>: 
 None
 
-`class OracleDB(DB)`: 
+<code class="head">class OracleDB(DB)</code>: 
 None
 
-`class PostgresDB(DB)`: 
+<code class="head">class PostgresDB(DB)</code>: 
 Postgres driver.
 
-`class SQLLiteral`: 
+<code class="head">class SQLLiteral</code>: 
 Protects a string from `sqlquote`.
 
     >>> sqlquote('NOW()')
@@ -145,7 +151,7 @@ Protects a string from `sqlquote`.
     >>> sqlquote(SQLLiteral('NOW()'))
     <sql: 'NOW()'>
 
-`class SQLParam`: 
+<code class="head">class SQLParam</code>: 
 Parameter in SQLQuery.
 
     >>> q = SQLQuery(["SELECT * FROM test WHERE name=", SQLParam("joe")])
@@ -156,7 +162,7 @@ Parameter in SQLQuery.
     >>> q.values()
     ['joe']
 
-`class SQLQuery`: 
+<code class="head">class SQLQuery</code>: 
 You can pass this sort of thing as a clause in any db function.
 Otherwise, you can pass a dictionary to the keyword argument `vars`
 and the function will call reparam for you.
@@ -164,30 +170,30 @@ and the function will call reparam for you.
 Internally, consists of `items`, which is a list of strings and
 SQLParams, which get concatenated to produce the actual query.
 
-`class SqliteDB(DB)`: 
+<code class="head">class SqliteDB(DB)</code>: 
 None
 
-`class Transaction`: 
+<code class="head">class Transaction</code>: 
 Database transaction.
 
-`class TransactionError(Exception)`: 
+<code class="head">class TransactionError(Exception)</code>: 
 None
 
-`class UnknownDB(Exception)`: 
+<code class="head">class UnknownDB(Exception)</code>: 
 raised for unsupported dbms
 
-`class UnknownParamstyle(Exception)`: 
+<code class="head">class UnknownParamstyle(Exception)</code>: 
 raised for unsupported db paramstyles
 
 (currently supported: qmark, numeric, format, pyformat)
 
-`database(dburl=None, **params)`: 
+<code class="head">database(dburl=None, **params)</code>: 
 Creates appropriate database using params.
 
 Pooling will be enabled if DBUtils module is available. 
 Pooling can be disabled by passing pooling=False in params.
 
-`register_database(name, clazz)`: 
+<code class="head">register_database(name, clazz)</code>: 
 Register a database.
 
     >>> class LegacyDB(DB): 
@@ -197,14 +203,14 @@ Register a database.
     >>> register_database('legacy', LegacyDB)
     >>> db = database(dbn='legacy', db='test', user='joe', passwd='secret') 
 
-`reparam(string_, dictionary)`: 
+<code class="head">reparam(string_, dictionary)</code>: 
 Takes a string and a dictionary and interpolates the string
 using values from the dictionary. Returns an `SQLQuery` for the result.
 
     >>> reparam("s = $s", dict(s=True))
     <sql: "s = 't'">
 
-`sqlify(obj)`: 
+<code class="head">sqlify(obj)</code>: 
 converts `obj` to its proper SQL version
 
     >>> sqlify(None)
@@ -214,7 +220,7 @@ converts `obj` to its proper SQL version
     >>> sqlify(3)
     '3'
 
-`sqllist(lst)`: 
+<code class="head">sqllist(lst)</code>: 
 Converts the arguments for use in something like a WHERE clause.
 
     >>> sqllist(['a', 'b'])
@@ -224,7 +230,7 @@ Converts the arguments for use in something like a WHERE clause.
     >>> sqllist(u'abc')
     u'abc'
 
-`class sqlliteral`: 
+<code class="head">class sqlliteral</code>: 
 Protects a string from `sqlquote`.
 
     >>> sqlquote('NOW()')
@@ -232,7 +238,7 @@ Protects a string from `sqlquote`.
     >>> sqlquote(SQLLiteral('NOW()'))
     <sql: 'NOW()'>
 
-`sqlors(left, lst)`: 
+<code class="head">sqlors(left, lst)</code>: 
 `left is a SQL clause like `tablename.arg = ` 
 and `lst` is a list of values. Returns a reparam-style
 pair featuring the SQL that ORs together the clause
@@ -247,7 +253,7 @@ for each item in the lst.
     >>> sqlors('foo = ', [1,2,3])
     <sql: '(foo = 1 OR foo = 2 OR foo = 3)'>
 
-`class sqlparam`: 
+<code class="head">class sqlparam</code>: 
 Parameter in SQLQuery.
 
     >>> q = SQLQuery(["SELECT * FROM test WHERE name=", SQLParam("joe")])
@@ -258,13 +264,13 @@ Parameter in SQLQuery.
     >>> q.values()
     ['joe']
 
-`sqlquote(a)`: 
+<code class="head">sqlquote(a)</code>: 
 Ensures `a` is quoted properly for use in a SQL query.
 
     >>> 'WHERE x = ' + sqlquote(True) + ' AND y = ' + sqlquote(3)
     <sql: "WHERE x = 't' AND y = 3">
 
-`sqlwhere(dictionary, grouping=' AND ')`: 
+<code class="head">sqlwhere(dictionary, grouping=' AND ')</code>: 
 Converts a `dictionary` to an SQL WHERE clause `SQLQuery`.
 
     >>> sqlwhere({'cust_id': 2, 'order_id':3})
@@ -277,17 +283,17 @@ Converts a `dictionary` to an SQL WHERE clause `SQLQuery`.
 <a name="web.debugerror"></a>
 ## web.debugerror
 
-`debugerror()`: 
+<code class="head">debugerror()</code>: 
 A replacement for `internalerror` that presents a nice page with lots
 of debug information for the programmer.
 
 (Based on the beautiful 500 page from [Django](http://djangoproject.com/), 
 designed by [Wilson Miner](http://wilsonminer.com/).)
 
-`djangoerror()`: 
+<code class="head">djangoerror()</code>: 
 None
 
-`emailerrors(email_address, olderror)`: 
+<code class="head">emailerrors(email_address, olderror)</code>: 
 Wraps the old `internalerror` handler (pass as `olderror`) to 
 additionally email all errors to `email_address`, to aid in 
 debugging production websites.
@@ -298,101 +304,101 @@ attachment containing the nice `debugerror` page.
 <a name="web.form"></a>
 ## web.form
 
-`class Button(Input)`: 
+<code class="head">class Button(Input)</code>: 
 None
 
-`class Checkbox(Input)`: 
+<code class="head">class Checkbox(Input)</code>: 
 None
 
-`class Dropdown(Input)`: 
+<code class="head">class Dropdown(Input)</code>: 
 None
 
-`class File(Input)`: 
+<code class="head">class File(Input)</code>: 
 None
 
-`class Form`: 
+<code class="head">class Form</code>: 
 HTML form.
 
     >>> f = Form(Textbox("x"))
     >>> f.render()
     '<table>\n    <tr><th><label for="x">x</label></th><td><input type="text" name="x" id="x" /></td></tr>\n</table>'
 
-`class Hidden(Input)`: 
+<code class="head">class Hidden(Input)</code>: 
 None
 
-`class Input(object)`: 
+<code class="head">class Input(object)</code>: 
 None
 
-`class Password(Input)`: 
+<code class="head">class Password(Input)</code>: 
 None
 
-`class Radio(Input)`: 
+<code class="head">class Radio(Input)</code>: 
 None
 
-`class Textarea(Input)`: 
+<code class="head">class Textarea(Input)</code>: 
 None
 
-`class Textbox(Input)`: 
+<code class="head">class Textbox(Input)</code>: 
 None
 
-`class Validator`: 
+<code class="head">class Validator</code>: 
 None
 
-`attrget(obj, attr, value=None)`: 
+<code class="head">attrget(obj, attr, value=None)</code>: 
 None
 
-`class regexp(Validator)`: 
+<code class="head">class regexp(Validator)</code>: 
 None
 
 <a name="web.http"></a>
 ## web.http
 
-`background(func)`: 
+<code class="head">background(func)</code>: 
 A function decorator to run a long-running function as a background thread.
 
-`backgrounder(func)`: 
+<code class="head">backgrounder(func)</code>: 
 None
 
-`changequery(query=None, **kw)`: 
+<code class="head">changequery(query=None, **kw)</code>: 
 Imagine you're at `/foo?a=1&b=2`. Then `changequery(a=3)` will return
 `/foo?a=3&b=2` -- the same URL but with the arguments you requested
 changed.
 
-`expires(delta)`: 
+<code class="head">expires(delta)</code>: 
 Outputs an `Expires` header for `delta` from now. 
 `delta` is a `timedelta` object or a number of seconds.
 
-`lastmodified(date_obj)`: 
+<code class="head">lastmodified(date_obj)</code>: 
 Outputs a `Last-Modified` header for `datetime`.
 
-`modified(date=None, etag=None)`: 
+<code class="head">modified(date=None, etag=None)</code>: 
 None
 
-`prefixurl(base='')`: 
+<code class="head">prefixurl(base='')</code>: 
 Sorry, this function is really difficult to explain.
 Maybe some other time.
 
-`profiler(app)`: 
+<code class="head">profiler(app)</code>: 
 Outputs basic profiling information at the bottom of each response.
 
-`url(path=None, **kw)`: 
+<code class="head">url(path=None, **kw)</code>: 
 Makes url by concatinating web.ctx.homepath and path and the 
 query string created using the arguments.
 
-`urlencode(query)`: 
+<code class="head">urlencode(query)</code>: 
 Same as urllib.urlencode, but supports unicode strings.
 
     >>> urlencode({'text':'foo bar'})
     'text=foo+bar'
 
-`write(cgi_response)`: 
+<code class="head">write(cgi_response)</code>: 
 Converts a standard CGI-style string response into `header` and 
 `output` calls.
 
 <a name="web.httpserver"></a>
 ## web.httpserver
 
-`runbasic(func, server_address=('0.0.0.0', 8080))`: 
+<code class="head">runbasic(func, server_address=('0.0.0.0', 8080))</code>: 
   Runs a simple HTTP server hosting WSGI app `func`. The directory `static/` 
   is hosted statically.
 
@@ -402,7 +408,7 @@ Converts a standard CGI-style string response into `header` and
 [cs]: http://www.owlfish.com/
   
 
-`runsimple(func, server_address=('0.0.0.0', 8080))`: 
+<code class="head">runsimple(func, server_address=('0.0.0.0', 8080))</code>: 
 Runs [CherryPy][cp] WSGI server hosting WSGI app `func`. 
 The directory `static/` is hosted statically.
 
@@ -411,32 +417,32 @@ The directory `static/` is hosted statically.
 <a name="web.net"></a>
 ## web.net
 
-`htmlquote(text)`: 
+<code class="head">htmlquote(text)</code>: 
 Encodes `text` for raw use in HTML.
 
     >>> htmlquote("<'&\">")
     '&lt;&#39;&amp;&quot;&gt;'
 
-`htmlunquote(text)`: 
+<code class="head">htmlunquote(text)</code>: 
 Decodes `text` that's HTML quoted.
 
     >>> htmlunquote('&lt;&#39;&amp;&quot;&gt;')
     '<\'&">'
 
-`httpdate(date_obj)`: 
+<code class="head">httpdate(date_obj)</code>: 
 Formats a datetime object for use in HTTP headers.
 
     >>> import datetime
     >>> httpdate(datetime.datetime(1970, 1, 1, 1, 1, 1))
     'Thu, 01 Jan 1970 01:01:01 GMT'
 
-`parsehttpdate(string_)`: 
+<code class="head">parsehttpdate(string_)</code>: 
 Parses an HTTP date into a datetime object.
 
     >>> parsehttpdate('Thu, 01 Jan 1970 01:01:01 GMT')
     datetime.datetime(1970, 1, 1, 1, 1, 1)
 
-`urlquote(val)`: 
+<code class="head">urlquote(val)</code>: 
 Quotes a string for use in a URL.
 
     >>> urlquote('://?f=1&j=1')
@@ -446,7 +452,7 @@ Quotes a string for use in a URL.
     >>> urlquote(u'\u203d')
     '%E2%80%BD'
 
-`validaddr(string_)`: 
+<code class="head">validaddr(string_)</code>: 
 Returns either (ip_address, port) or "/path/to/socket" from string_
 
     >>> validaddr('/path/to/socket')
@@ -462,10 +468,10 @@ Returns either (ip_address, port) or "/path/to/socket" from string_
         ...
     ValueError: fff is not a valid IP address/port
 
-`validip(ip, defaultaddr='0.0.0.0', defaultport=8080)`: 
+<code class="head">validip(ip, defaultaddr='0.0.0.0', defaultport=8080)</code>: 
 Returns `(ip_address, port)` from string `ip_addr_port`
 
-`validipaddr(address)`: 
+<code class="head">validipaddr(address)</code>: 
 Returns True if `address` is a valid IPv4 address.
 
     >>> validipaddr('192.168.1.1')
@@ -475,7 +481,7 @@ Returns True if `address` is a valid IPv4 address.
     >>> validipaddr('192.168.1')
     False
 
-`validipport(port)`: 
+<code class="head">validipport(port)</code>: 
 Returns True if `port` is a valid IPv4 port.
 
     >>> validipport('9000')
@@ -485,7 +491,7 @@ Returns True if `port` is a valid IPv4 port.
     >>> validipport('1000000')
     False
 
-`websafe(val)`: 
+<code class="head">websafe(val)</code>: 
 Converts `val` so that it's safe for use in UTF-8 HTML.
 
     >>> websafe("<'&\">")
@@ -498,7 +504,7 @@ Converts `val` so that it's safe for use in UTF-8 HTML.
 <a name="web.session"></a>
 ## web.session
 
-`class DBStore(Store)`: 
+<code class="head">class DBStore(Store)</code>: 
 Store for saving a session in database
 Needs a table with the following columns:
 
@@ -506,7 +512,7 @@ Needs a table with the following columns:
     atime DATETIME NOT NULL default current_timestamp,
     data TEXT
 
-`class DiskStore(Store)`: 
+<code class="head">class DiskStore(Store)</code>: 
 Store for saving a session on disk.
 
     >>> import tempfile
@@ -522,50 +528,50 @@ Store for saving a session on disk.
         ...
     KeyError: 'a'
 
-`class Session(ThreadedDict)`: 
+<code class="head">class Session(ThreadedDict)</code>: 
 Session management for web.py
     
 
-`class SessionExpired(HTTPError)`: 
+<code class="head">class SessionExpired(HTTPError)</code>: 
 None
 
-`class Store`: 
+<code class="head">class Store</code>: 
 Base class for session stores
 
 <a name="web.template"></a>
 ## web.template
 
-`class AssignmentNode`: 
+<code class="head">class AssignmentNode</code>: 
 None
 
-`class BaseTemplate`: 
+<code class="head">class BaseTemplate</code>: 
 None
 
-`class BlockNode`: 
+<code class="head">class BlockNode</code>: 
 None
 
-`class CodeNode`: 
+<code class="head">class CodeNode</code>: 
 None
 
-`class CompiledTemplate(Template)`: 
+<code class="head">class CompiledTemplate(Template)</code>: 
 None
 
-`class DefNode(BlockNode)`: 
+<code class="head">class DefNode(BlockNode)</code>: 
 None
 
-`class DefwithNode`: 
+<code class="head">class DefwithNode</code>: 
 None
 
-`class ElifNode(BlockNode)`: 
+<code class="head">class ElifNode(BlockNode)</code>: 
 None
 
-`class ElseNode(BlockNode)`: 
+<code class="head">class ElseNode(BlockNode)</code>: 
 None
 
-`class ExpressionNode`: 
+<code class="head">class ExpressionNode</code>: 
 None
 
-`class ForLoop`: 
+<code class="head">class ForLoop</code>: 
 Wrapper for expression in for stament to support loop.xxx helpers.
 
     >>> loop = ForLoop()
@@ -580,30 +586,30 @@ Wrapper for expression in for stament to support loop.xxx helpers.
         ...
     AttributeError: index
 
-`class ForLoopContext`: 
+<code class="head">class ForLoopContext</code>: 
 Stackable context for ForLoop to support nested for loops.
     
 
-`class ForNode(BlockNode)`: 
+<code class="head">class ForNode(BlockNode)</code>: 
 None
 
-`class IfNode(BlockNode)`: 
+<code class="head">class IfNode(BlockNode)</code>: 
 None
 
-`class LineNode`: 
+<code class="head">class LineNode</code>: 
 None
 
-`class ParseError(Exception)`: 
+<code class="head">class ParseError(Exception)</code>: 
 None
 
-`class Parser`: 
+<code class="head">class Parser</code>: 
 Parser Base.
     
 
-`class PythonTokenizer`: 
+<code class="head">class PythonTokenizer</code>: 
 Utility wrapper over python tokenizer.
 
-`class Render`: 
+<code class="head">class Render</code>: 
 The most preferred way of using templates.
 
     render = web.template.render('templates')
@@ -614,7 +620,7 @@ every template through the base template.
 
     render = web.template.render('templates', base='layout')
 
-`class SafeVisitor(object)`: 
+<code class="head">class SafeVisitor(object)</code>: 
 Make sure code is safe by walking through the AST.
 
 Code considered unsafe if:
@@ -623,16 +629,16 @@ Code considered unsafe if:
     
 Adopted from http://www.zafar.se/bkz/uploads/safe.txt (public domain, Babar K. Zafar)
 
-`class SecurityError(Exception)`: 
+<code class="head">class SecurityError(Exception)</code>: 
 The template seems to be trying to do something naughty.
 
-`class SuiteNode`: 
+<code class="head">class SuiteNode</code>: 
 Suite is a list of sections.
 
-`class Template(BaseTemplate)`: 
+<code class="head">class Template(BaseTemplate)</code>: 
 None
 
-`class TemplateResult(Storage)`: 
+<code class="head">class TemplateResult(Storage)</code>: 
 Dictionary like object for storing template output.
 
 A template can specify key-value pairs in the output using 
@@ -646,20 +652,35 @@ __body__.
     >>> print d
     hello, world
 
-`class TextNode`: 
+<code class="head">class TextNode</code>: 
 None
 
-`class VarNode`: 
+<code class="head">class VarNode</code>: 
 None
 
-`compile_templates(root)`: 
+<code class="head">compile_templates(root)</code>: 
 Compiles templates to python code.
 
-`frender(path, **keywords)`: 
+<code class="head">config</code>: 
+
+A configuration object for various aspects of web.py.
+
+`db_parameters`
+   : A dictionary containing the parameters to be passed to `connect`
+     when `load()` is called.
+`db_printing`
+   : Set to `True` if you would like SQL queries and timings to be
+     printed to the debug output.
+`session_parameters`
+   : A dictionary containing session parameters
+    cookie_name, cookie_domain, timeout, 
+    ignore_change_ip, ignore_expiry, expired_message
+
+<code class="head">frender(path, **keywords)</code>: 
 Creates a template from the given file path.
     
 
-`class render`: 
+<code class="head">class render</code>: 
 The most preferred way of using templates.
 
     render = web.template.render('templates')
@@ -670,7 +691,7 @@ every template through the base template.
 
     render = web.template.render('templates', base='layout')
 
-`splitline(text)`: 
+<code class="head">splitline(text)</code>: 
 Splits the given text at newline.
 
     >>> splitline('foo\nbar')
@@ -680,7 +701,7 @@ Splits the given text at newline.
     >>> splitline('')
     ('', '')
 
-`test()`: 
+<code class="head">test()</code>: 
 Doctest for testing template module.
 
 Define a utility function to run template test.
@@ -862,7 +883,7 @@ Test vars.
 <a name="web.utils"></a>
 ## web.utils
 
-`class CaptureStdout`: 
+<code class="head">class CaptureStdout</code>: 
 Captures everything `func` prints to stdout and returns it instead.
 
     >>> def idiot():
@@ -872,7 +893,7 @@ Captures everything `func` prints to stdout and returns it instead.
 
 **WARNING:** Not threadsafe!
 
-`class IterBetter`: 
+<code class="head">class IterBetter</code>: 
 Returns an object that can be used as an iterator 
 but can also be used via __getitem__ (although it 
 cannot go backwards -- that is, you cannot request 
@@ -889,7 +910,7 @@ cannot go backwards -- that is, you cannot request
         ...
     IndexError: already passed 3
 
-`class Memoize`: 
+<code class="head">class Memoize</code>: 
 'Memoizes' a function, caching its return values for each input.
 
     >>> import time
@@ -908,7 +929,7 @@ cannot go backwards -- that is, you cannot request
     >>> timelimit(.1)(fastlife)()
     42
 
-`class Profile`: 
+<code class="head">class Profile</code>: 
 Profiles `func` and returns a tuple containing its output
 and a string with human-readable profiling information.
     
@@ -918,7 +939,7 @@ and a string with human-readable profiling information.
     >>> inf[:10].strip()
     'took 0.0'
 
-`class Storage(dict)`: 
+<code class="head">class Storage(dict)</code>: 
 A Storage object is like a dictionary except `obj.foo` can be used
 in addition to `obj['foo']`.
 
@@ -936,7 +957,7 @@ in addition to `obj['foo']`.
         ...
     AttributeError: 'a'
 
-`class ThreadedDict`: 
+<code class="head">class ThreadedDict</code>: 
 Thread local storage.
 
     >>> d = ThreadedDict()
@@ -951,10 +972,10 @@ Thread local storage.
     >>> d.x
     1
 
-`class TimeoutError(Exception)`: 
+<code class="head">class TimeoutError(Exception)</code>: 
 None
 
-`autoassign(self, locals)`: 
+<code class="head">autoassign(self, locals)</code>: 
 Automatically assigns local variables to `self`.
 
     >>> self = storage()
@@ -966,7 +987,7 @@ Generally used in `__init__` methods, as in:
 
     def __init__(self, foo, bar, baz=1): autoassign(self, locals())
 
-`class capturestdout`: 
+<code class="head">class capturestdout</code>: 
 Captures everything `func` prints to stdout and returns it instead.
 
     >>> def idiot():
@@ -976,7 +997,7 @@ Captures everything `func` prints to stdout and returns it instead.
 
 **WARNING:** Not threadsafe!
 
-`commify(n)`: 
+<code class="head">commify(n)</code>: 
 Add commas to an integer `n`.
 
     >>> commify(1)
@@ -990,7 +1011,7 @@ Add commas to an integer `n`.
     >>> commify(None)
     >>>
 
-`cond(predicate, consequence, alternative=None)`: 
+<code class="head">cond(predicate, consequence, alternative=None)</code>: 
 Function replacement for if-else to use in expressions.
     
     >>> x = 2
@@ -999,10 +1020,10 @@ Function replacement for if-else to use in expressions.
     >>> cond(x % 2 == 0, "even", "odd") + '_row'
     'even_row'
 
-`dateify(datestring)`: 
+<code class="head">dateify(datestring)</code>: 
 Formats a numified `datestring` properly.
 
-`datestr(then, now=None)`: 
+<code class="head">datestr(then, now=None)</code>: 
 Converts a (UTC) datetime object to a nice string representation.
 
     >>> from datetime import datetime, timedelta
@@ -1028,21 +1049,21 @@ Converts a (UTC) datetime object to a nice string representation.
     >>> datestr(datetime(1970, 6, 1), now=d)
     'June  1, 1970'
 
-`denumify(string, pattern)`: 
+<code class="head">denumify(string, pattern)</code>: 
 Formats `string` according to `pattern`, where the letter X gets replaced
 by characters from `string`.
 
     >>> denumify("8005551212", "(XXX) XXX-XXXX")
     '(800) 555-1212'
 
-`dictadd(*dicts)`: 
+<code class="head">dictadd(*dicts)</code>: 
 Returns a dictionary consisting of the keys in the argument dictionaries.
 If they share a key, the value from the last argument is used.
 
     >>> dictadd({1: 0, 2: 0}, {2: 1, 3: 1})
     {1: 0, 2: 1, 3: 1}
 
-`dictfind(dictionary, element)`: 
+<code class="head">dictfind(dictionary, element)</code>: 
 Returns a key whose value in `dictionary` is `element` 
 or, if none exists, None.
 
@@ -1051,7 +1072,7 @@ or, if none exists, None.
     3
     >>> dictfind(d, 5)
 
-`dictfindall(dictionary, element)`: 
+<code class="head">dictfindall(dictionary, element)</code>: 
 Returns the keys whose values in `dictionary` are `element`
 or, if none exists, [].
 
@@ -1061,7 +1082,7 @@ or, if none exists, [].
     >>> dictfindall(d, 5)
     []
 
-`dictincr(dictionary, element)`: 
+<code class="head">dictincr(dictionary, element)</code>: 
 Increments `element` in `dictionary`, 
 setting it to one if it doesn't exist.
 
@@ -1075,19 +1096,19 @@ setting it to one if it doesn't exist.
     >>> d[5]
     1
 
-`dictreverse(mapping)`: 
+<code class="head">dictreverse(mapping)</code>: 
 Returns a new dictionary with keys and values swapped.
 
     >>> dictreverse({1: 2, 3: 4})
     {2: 1, 4: 3}
 
-`group(seq, size)`: 
+<code class="head">group(seq, size)</code>: 
 Returns an iterator over a series of lists of length size from iterable.
 
     >>> list(group([1,2,3,4], 2))
     [1, 2], [3, 4](/1, 2], [3, 4)
 
-`intget(integer, default=None)`: 
+<code class="head">intget(integer, default=None)</code>: 
 Returns `integer` as an int or `default` if it can't.
 
     >>> intget('3')
@@ -1096,7 +1117,7 @@ Returns `integer` as an int or `default` if it can't.
     >>> intget('3a', 0)
     0
 
-`class iterbetter`: 
+<code class="head">class iterbetter</code>: 
 Returns an object that can be used as an iterator 
 but can also be used via __getitem__ (although it 
 cannot go backwards -- that is, you cannot request 
@@ -1113,7 +1134,7 @@ cannot go backwards -- that is, you cannot request
         ...
     IndexError: already passed 3
 
-`listget(lst, ind, default=None)`: 
+<code class="head">listget(lst, ind, default=None)</code>: 
 Returns `lst[ind]` if it exists, `default` otherwise.
 
     >>> listget(['a'], 0)
@@ -1122,13 +1143,13 @@ Returns `lst[ind]` if it exists, `default` otherwise.
     >>> listget(['a'], 1, 'b')
     'b'
 
-`lstrips(text, remove)`: 
+<code class="head">lstrips(text, remove)</code>: 
 removes the string `remove` from the left of `text`
 
     >>> lstrips("foobar", "foo")
     'bar'
 
-`class memoize`: 
+<code class="head">class memoize</code>: 
 'Memoizes' a function, caching its return values for each input.
 
     >>> import time
@@ -1147,7 +1168,7 @@ removes the string `remove` from the left of `text`
     >>> timelimit(.1)(fastlife)()
     42
 
-`nthstr(n)`: 
+<code class="head">nthstr(n)</code>: 
 Formats an ordinal.
 Doesn't handle negative numbers.
 
@@ -1162,7 +1183,7 @@ Doesn't handle negative numbers.
     >>> [nthstr(x) for x in [111, 112, 113, 114, 115]]
     ['111th', '112th', '113th', '114th', '115th']
 
-`numify(string)`: 
+<code class="head">numify(string)</code>: 
 Removes all non-digit characters from `string`.
 
     >>> numify('800-555-1212')
@@ -1170,7 +1191,7 @@ Removes all non-digit characters from `string`.
     >>> numify('800.555.1212')
     '8005551212'
 
-`class profile`: 
+<code class="head">class profile</code>: 
 Profiles `func` and returns a tuple containing its output
 and a string with human-readable profiling information.
     
@@ -1180,7 +1201,7 @@ and a string with human-readable profiling information.
     >>> inf[:10].strip()
     'took 0.0'
 
-`re_subm(pat, repl, string)`: 
+<code class="head">re_subm(pat, repl, string)</code>: 
 Like re.sub, but returns the replacement _and_ the match object.
 
     >>> t, m = re_subm('g(oo+)fball', r'f\1lish', 'goooooofball')
@@ -1189,20 +1210,20 @@ Like re.sub, but returns the replacement _and_ the match object.
     >>> m.groups()
     ('oooooo',)
 
-`rstrips(text, remove)`: 
+<code class="head">rstrips(text, remove)</code>: 
 removes the string `remove` from the right of `text`
 
     >>> rstrips("foobar", "bar")
     'foo'
 
-`safemarkdown(text)`: 
+<code class="head">safemarkdown(text)</code>: 
 Converts text to HTML following the rules of Markdown, but blocking any
 outside HTML input, so that only the things supported by Markdown
 can be used. Also converts raw URLs to links.
 
 (requires [markdown.py](http://webpy.org/markdown.py))
 
-`safestr(obj, encoding='utf-8')`: 
+<code class="head">safestr(obj, encoding='utf-8')</code>: 
 Converts any given object to utf-8 encoded string. 
 
     >>> safestr('hello')
@@ -1212,7 +1233,7 @@ Converts any given object to utf-8 encoded string.
     >>> safestr(2)
     '2'
 
-`safeunicode(obj, encoding='utf-8')`: 
+<code class="head">safeunicode(obj, encoding='utf-8')</code>: 
 Converts any given object to unicode string.
 
     >>> safeunicode('hello')
@@ -1222,7 +1243,7 @@ Converts any given object to unicode string.
     >>> safeunicode('\xe1\x88\xb4')
     u'\u1234'
 
-`sendmail(from_address, to_address, subject, message, headers=None, **kw)`: 
+<code class="head">sendmail(from_address, to_address, subject, message, headers=None, **kw)</code>: 
 Sends the email message `message` with mail and envelope headers
 for from `from_address_` to `to_address` with `subject`. 
 Additional email headers can be specified with the dictionary 
@@ -1233,7 +1254,7 @@ to that SMTP server. Otherwise it will look for
 `/usr/sbin/sendmail`, the typical location for the sendmail-style
 binary. To use sendmail from a different path, set `web.config.sendmail_path`.
 
-`class storage(dict)`: 
+<code class="head">class storage(dict)</code>: 
 A Storage object is like a dictionary except `obj.foo` can be used
 in addition to `obj['foo']`.
 
@@ -1251,7 +1272,7 @@ in addition to `obj['foo']`.
         ...
     AttributeError: 'a'
 
-`storify(mapping, *requireds, **defaults)`: 
+<code class="head">storify(mapping, *requireds, **defaults)</code>: 
 Creates a `storage` object from dictionary `mapping`, raising `KeyError` if
 d doesn't have all of the keys in `requireds` and using the default 
 values for keys found in `defaults`.
@@ -1291,13 +1312,13 @@ Optionally, keyword parameter `_unicode` can be passed to convert all values to 
     >>> storify({'x': storage(value='a')}, _unicode=True)
     <Storage {'x': u'a'}>
 
-`strips(text, remove)`: 
+<code class="head">strips(text, remove)</code>: 
 removes the string `remove` from the both sides of `text`
 
     >>> strips("foobarfoo", "foo")
     'bar'
 
-`class threadeddict`: 
+<code class="head">class threadeddict</code>: 
 Thread local storage.
 
     >>> d = ThreadedDict()
@@ -1312,7 +1333,7 @@ Thread local storage.
     >>> d.x
     1
 
-`timelimit(timeout)`: 
+<code class="head">timelimit(timeout)</code>: 
 A decorator to limit a function to `timeout` seconds, raising `TimeoutError`
 if it takes longer.
 
@@ -1333,7 +1354,7 @@ executing in a separate thread. (There seems to be no way to kill a thread.)
 
 inspired by <http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/473878>
 
-`to36(q)`: 
+<code class="head">to36(q)</code>: 
 Converts an integer to base 36 (a useful scheme for human-sayable IDs).
 
     >>> to36(35)
@@ -1349,7 +1370,7 @@ Converts an integer to base 36 (a useful scheme for human-sayable IDs).
         ... 
     ValueError: must supply a positive integer
 
-`tryall(context, prefix=None)`: 
+<code class="head">tryall(context, prefix=None)</code>: 
 Tries a series of functions and prints their results. 
 `context` is a dictionary mapping names to values; 
 the value will only be tried if it's callable.
@@ -1369,7 +1390,7 @@ At the bottom, have a line:
 Then you can run `python test/stuff.py` and get the results of 
 all the tests.
 
-`utf8(obj, encoding='utf-8')`: 
+<code class="head">utf8(obj, encoding='utf-8')</code>: 
 Converts any given object to utf-8 encoded string. 
 
     >>> safestr('hello')
@@ -1382,116 +1403,130 @@ Converts any given object to utf-8 encoded string.
 <a name="web.webapi"></a>
 ## web.webapi
 
-`class BadRequest(HTTPError)`: 
+<code class="head">class BadRequest(HTTPError)</code>: 
 `400 Bad Request` error.
 
-`class Found(Redirect)`: 
+<code class="head">class Found(Redirect)</code>: 
 A `302 Found` redirect.
 
-`class Gone(HTTPError)`: 
+<code class="head">class Gone(HTTPError)</code>: 
 `410 Gone` error.
 
-`class HTTPError(Exception)`: 
+<code class="head">class HTTPError(Exception)</code>: 
 None
 
-`InternalError(message=None)`: 
+<code class="head">InternalError(message=None)</code>: 
 Returns HTTPError with '500 internal error' error from the active application.
     
 
-`class NoMethod(HTTPError)`: 
+<code class="head">class NoMethod(HTTPError)</code>: 
 A `405 Method Not Allowed` error.
 
-`NotFound(message=None)`: 
+<code class="head">NotFound(message=None)</code>: 
 Returns HTTPError with '404 Not Found' error from the active application.
     
 
-`class Redirect(HTTPError)`: 
+<code class="head">class Redirect(HTTPError)</code>: 
 A `301 Moved Permanently` redirect.
 
-`class SeeOther(Redirect)`: 
+<code class="head">class SeeOther(Redirect)</code>: 
 A `303 See Other` redirect.
 
-`class TempRedirect(Redirect)`: 
+<code class="head">class TempRedirect(Redirect)</code>: 
 A `307 Temporary Redirect` redirect.
 
-`class badrequest(HTTPError)`: 
+<code class="head">class badrequest(HTTPError)</code>: 
 `400 Bad Request` error.
 
-`cookies(*requireds, **defaults)`: 
+<code class="head">config</code>: 
+
+A configuration object for various aspects of web.py.
+
+`db_parameters`
+   : A dictionary containing the parameters to be passed to `connect`
+     when `load()` is called.
+`db_printing`
+   : Set to `True` if you would like SQL queries and timings to be
+     printed to the debug output.
+`session_parameters`
+   : A dictionary containing session parameters
+    cookie_name, cookie_domain, timeout, 
+    ignore_change_ip, ignore_expiry, expired_message
+
+<code class="head">cookies(*requireds, **defaults)</code>: 
 Returns a `storage` object with all the cookies in it.
 See `storify` for how `requireds` and `defaults` work.
 
-`data()`: 
+<code class="head">data()</code>: 
 Returns the data sent with the request.
 
-`debug(*args)`: 
+<code class="head">debug(*args)</code>: 
 Prints a prettyprinted version of `args` to stderr.
 
-`class found(Redirect)`: 
+<code class="head">class found(Redirect)</code>: 
 A `302 Found` redirect.
 
-`class gone(HTTPError)`: 
+<code class="head">class gone(HTTPError)</code>: 
 `410 Gone` error.
 
-`header(hdr, value, unique=False)`: 
+<code class="head">header(hdr, value, unique=False)</code>: 
 Adds the header `hdr: value` with the response.
 
 If `unique` is True and a header with that name already exists,
 it doesn't add a new one. 
 
-`input(*requireds, **defaults)`: 
+<code class="head">input(*requireds, **defaults)</code>: 
 Returns a `storage` object with the GET and POST arguments. 
 See `storify` for how `requireds` and `defaults` work.
 
-`internalerror(message=None)`: 
+<code class="head">internalerror(message=None)</code>: 
 Returns HTTPError with '500 internal error' error from the active application.
     
 
-`class nomethod(HTTPError)`: 
+<code class="head">class nomethod(HTTPError)</code>: 
 A `405 Method Not Allowed` error.
 
-`notfound(message=None)`: 
+<code class="head">notfound(message=None)</code>: 
 Returns HTTPError with '404 Not Found' error from the active application.
     
 
-`class redirect(HTTPError)`: 
+<code class="head">class redirect(HTTPError)</code>: 
 A `301 Moved Permanently` redirect.
 
-`class seeother(Redirect)`: 
+<code class="head">class seeother(Redirect)</code>: 
 A `303 See Other` redirect.
 
-`setcookie(name, value, expires='', domain=None, secure=False)`: 
+<code class="head">setcookie(name, value, expires='', domain=None, secure=False)</code>: 
 Sets a cookie.
 
-`class tempredirect(Redirect)`: 
+<code class="head">class tempredirect(Redirect)</code>: 
 A `307 Temporary Redirect` redirect.
 
 <a name="web.webopenid"></a>
 ## web.webopenid
 
-`form(openid_loc)`: 
+<code class="head">form(openid_loc)</code>: 
 None
 
-`class host`: 
+<code class="head">class host</code>: 
 None
 
-`logout()`: 
+<code class="head">logout()</code>: 
 None
 
-`status()`: 
+<code class="head">status()</code>: 
 None
 
 <a name="web.wsgi"></a>
 ## web.wsgi
 
-`runfcgi(func, addr=('localhost', 8000))`: 
+<code class="head">runfcgi(func, addr=('localhost', 8000))</code>: 
 Runs a WSGI function as a FastCGI server.
 
-`runscgi(func, addr=('localhost', 4000))`: 
+<code class="head">runscgi(func, addr=('localhost', 4000))</code>: 
 Runs a WSGI function as an SCGI server.
 
-`runwsgi(func)`: 
+<code class="head">runwsgi(func)</code>: 
 Runs a WSGI-compatible `func` using FCGI, SCGI, or a simple web server,
 as appropriate based on context and `sys.argv`.
-
 
