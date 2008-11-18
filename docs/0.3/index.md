@@ -9,4 +9,4 @@ title: web.py 0.3 documentation
 * [Templetor: The web.py templating system](/docs/0.3/templetor)
 * Working with database
 * Working with session
-* API documentation
+* [API documentation](/docs/0.3/api)
