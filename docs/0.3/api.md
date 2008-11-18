@@ -5,12 +5,6 @@ title: API documentation
 
 # API documentation
 
-
-<style type="text/css">
-    .content {margin: 10px;}
-    .head {margin: -10px;}
-</style>
-    
 * <a href="#web.application">web.application</a>
 * <a href="#web.db">web.db</a>
 * <a href="#web.debugerror">web.debugerror</a>
@@ -946,6 +940,7 @@ in addition to `obj['foo']`.
     >>> o = storage(a=1)
     >>> o.a
     1
+
     >>> o['a']
     1
     >>> o.a = 2
@@ -1529,4 +1524,11 @@ Runs a WSGI function as an SCGI server.
 <code class="head">runwsgi(func)</code>: 
 Runs a WSGI-compatible `func` using FCGI, SCGI, or a simple web server,
 as appropriate based on context and `sys.argv`.
+
+
+<style type="text/css">
+    .content {margin-left: 20px;}
+    .head {margin-left: -20px;}
+    h2 {margin-left: -20px;}
+</style>
 
