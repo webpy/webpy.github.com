@@ -1593,7 +1593,7 @@ as appropriate based on context and `sys.argv`.
 
 
 <style type="text/css">
-    .content {margin-left: 20px;}
+    #content {margin-left: 20px;}
     .head {margin-left: -20px;}
     h2 {margin-left: -20px;}
 </style>
