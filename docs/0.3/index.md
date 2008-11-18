@@ -6,7 +6,7 @@ title: web.py 0.3 documentation
 # web.py 0.3 documentation
 
 * [Quick tutorial](/tutorial3.en)
-* Detailed Tutorial
+* Detailed Tutorial _(still in progress)_
     * Introduction
     * [Templetor: The web.py templating system](/docs/0.3/templetor)
     * Working with database
