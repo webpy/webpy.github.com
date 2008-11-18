@@ -216,8 +216,3 @@ The debug is not enabled when the application is run in a real webserver. If you
 
 This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
 
-## What next?
-
-* [more documetation](/docs/0.3)
-* [Cookbook](/cookbook)
-* [code samples](/src)
