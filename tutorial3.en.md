@@ -11,7 +11,7 @@ So you know Python and want to make a website. web.py provides the code to make 
 
 If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). For details, see [webpy.org](http://webpy.org/).
 
-If you have an existing web.py project, take a look at the [upgrade](http://webpy.infogami.com/upgrade_to_point2) page for info on migrating.
+If you have an existing web.py project, take a look at the [upgrade](/docs/0.3/upgrade) page for info on migrating.
 
 Let's get started.
 
@@ -90,8 +90,6 @@ Or you can use web.py's templating language to add code to your HTML:
     $else:
         <em>Hello</em>, world!
 
-**Note: Currently, four spaces are required for indentation.**
-
 As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the `$def` statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
 
 Now go back to `code.py`. Under the first line, add:
@@ -101,18 +99,16 @@ Now go back to `code.py`. Under the first line, add:
 This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
 
     name = 'Bob'    
-    print render.index(name)
+    return render.index(name)
 
 ('index' is the name of the template and 'name' is the argument passed to it)
 
 Visit your site and it should say hello to Bob. 
 
-**Development tip:** Add , `cache=False` to the end of your `render` call to have web.py reload your templates every time you visit the page.
-
 But let's say we want to let people enter their own name in. Replace the two lines we added above with:
 
     i = web.input(name=None)
-    print render.index(i.name)
+    return render.index(i.name)
 
 Visit `/` and it should say hello to the world. Visit `/?name=Joe` and it should say hello to Joe.
 
@@ -123,11 +119,11 @@ Of course, having that `?` in the URL is kind of ugly. Instead, change your URL 
 and change the definition of `index.GET` to:
 
     def GET(self, name):
-        print render.index(name)
+        return render.index(name)
 
 and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
 
-If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
+If you wish to learn more about web.py templates, vist the [templetor page](/docs/0.3/templetor).
 
 ## Databasing
 
@@ -156,7 +152,7 @@ And an initial row:
 Return to editing `code.py` and change `index.GET` to the following, replacing the entire function:
 
     def GET(self):
-        todos = web.select('todo')
+        todos = db.select('todo')
         return render.index(todos)
 
 and change back the URL handler to take just `/` as in:
@@ -202,11 +198,11 @@ Note: In order to access data from multiple identically-named items, in a list f
 
     post_data=web.input(name=[])
 
-`web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that URL.
+`db.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that URL.
 
-Some quick additional notes: `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
+Some quick additional notes: `db.update` works just like `db.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
 
-`web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
+`web.input`, `db.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
 
 You can find the full details on these and all the web.py functions in [the documentation](/docs/0.3).
 
