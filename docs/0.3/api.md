@@ -655,21 +655,6 @@ None
 <code class="head">compile_templates(root)</code>: 
 Compiles templates to python code.
 
-<code class="head">config</code>: 
-
-A configuration object for various aspects of web.py.
-
-`db_parameters`
-   : A dictionary containing the parameters to be passed to `connect`
-     when `load()` is called.
-`db_printing`
-   : Set to `True` if you would like SQL queries and timings to be
-     printed to the debug output.
-`session_parameters`
-   : A dictionary containing session parameters
-    cookie_name, cookie_domain, timeout, 
-    ignore_change_ip, ignore_expiry, expired_message
-
 <code class="head">frender(path, **keywords)</code>: 
 Creates a template from the given file path.
     
@@ -940,7 +925,6 @@ in addition to `obj['foo']`.
     >>> o = storage(a=1)
     >>> o.a
     1
-
     >>> o['a']
     1
     >>> o.a = 2
@@ -1451,6 +1435,46 @@ A configuration object for various aspects of web.py.
 <code class="head">cookies(*requireds, **defaults)</code>: 
 Returns a `storage` object with all the cookies in it.
 See `storify` for how `requireds` and `defaults` work.
+
+<code class="head">ctx</code>: 
+
+A `storage` object containing various information about the request:
+  
+`environ` (aka `env`)
+   : A dictionary containing the standard WSGI environment variables.
+
+`host`
+   : The domain (`Host` header) requested by the user.
+
+`home`
+   : The base path for the application.
+
+`ip`
+   : The IP address of the requester.
+
+`method`
+   : The HTTP method used.
+
+`path`
+   : The path request.
+   
+`query`
+   : If there are no query arguments, the empty string. Otherwise, a `?` followed
+     by the query string.
+
+`fullpath`
+   : The full path requested, including query arguments (`== path + query`).
+
+### Response Data
+
+`status` (default: "200 OK")
+   : The status code to be used in the response.
+
+`headers`
+   : A list of 2-tuples to be used in the response.
+
+`output`
+   : A string to be used as the response.
 
 <code class="head">data()</code>: 
 Returns the data sent with the request.
