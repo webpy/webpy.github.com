@@ -5,8 +5,6 @@ title: Custom NotFound message
 
 # Custom NotFound message
 
-
-
 ## Problem
 
 How to customize notfound and other messages?
@@ -14,11 +12,21 @@ How to customize notfound and other messages?
 ## Solution
 
     import web
-    web.webapi.NotFound.message = "Sorry, the page you were looking for was not found."
+
+    urls = (...)
+    app =  web.application(urls, globals())
+
+    def notfound():
+        return web.notfound("Sorry, the page you were looking for was not found.")
+
+    app.notfound = notfound
 
 In the same way InternalError message can also be customized.
 
-    import web
-    web.webapi.InternalError.message = "Bad, bad server. No donut for you."
+    def internalerror():
+        return web.internalerror("Bad, bad server. No donut for you.")
+
+    app.internalerror = internalerror
+
 
 
