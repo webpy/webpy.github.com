@@ -29,7 +29,7 @@ Now we need to tell web.py our URL structure. Let's start out with something sim
 
     urls = (
       '/', 'index'
-	)
+    )
 
 The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (i.e. `\d+` would match a sequence of digits). The parentheses say to capture that piece of the matched data for use later on. The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
 
@@ -62,7 +62,7 @@ This tells web.py to serve the application we created above.
 Now notice that although I've been talking a lot here, we only really have five or so lines of code. That's all you need to make a complete web.py application. If you go to your command line and type:
 
     $ python code.py
-    Launching server: http://0.0.0.0:8080/
+    http://0.0.0.0:8080/
 
 You now have your web.py application running a real web server on your computer. Visit that URL and you should see "Hello, world!" (You can add an IP address/port after the "code.py" bit to control where web.py launches the server. You can also tell it to run a `fastcgi` or `scgi` server.)
 
