@@ -5,7 +5,6 @@ title: How to upgrade from earlier versions of web.py to 0.3
 
 # How to upgrade from earlier versions of web.py to 0.3
 
-
 Web.py 0.3 has some backward-incompatible changes. 
 
 * <a href="#return">prints are replaced by return statements</a>
@@ -63,11 +62,71 @@ It should become:
 <a name="db"></a>
 ## new database system
 
+The database module of web.py has been improved to make it more modularized.
+
+If you have code like this:
+
+    web.config.db_parameters = dict(dbn='postgres', db='test', user='joe', password='secret')
+    def foo():
+        web.insert('test', name='foo')
+
+It should become:
+
+    db = web.database(dbn='postgres', db='test', user='joe', password='secret')
+    def foo():
+        db.insert('test', name='foo')
+
+Same applies to other database functions like `select`, `update`, `delete` and `query`.
+
+If you are using transactions, they should be changed too.
+
+   def foo():
+       web.transact()
+       web.insert('t1', name='foo')
+       web.insert('t2', name='bar')
+       web.commit()
+
+should become:
+
+	def foo():
+	    t = db.transaction()
+	    db.insert('t1', name='foo')
+	    db.insert('t2', name='bar')
+	    t.commit()
+
+If you are using python 2.5 or later, transactions can be used with `with` statement.
+
+    def foo():
+        with db.transaction():
+		    db.insert('t1', name='foo')
+		    db.insert('t2', name='bar')
+            
 <a name="exceptions"></a>
 ## http errors are exceptions
 
+In 0.3, all http errors have been changed to exceptions.
 
+If you have code like this:
 
- 
+    def GET(self):
+        ....
+        if not page:
+            web.notfound()
+        else:
+            ....
+
+It should become:
+
+    def GET(self):
+        ....
+        if not page:
+            raise web.notfound()
+        else:
+	    ....
+
+<a name="others"></a>
+## Other incompatible changes
+
+??
 
 
