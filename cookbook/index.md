@@ -63,6 +63,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Insert: Adding entries to a database](/Insert) 
 * [Query: Advanced database queries](/cookbook/query)
 * [How to use database transactions](/cookbook/transactions)
+* [Using sqlalchemy](/cookbook/sqlalchemy)
 
 ##Deployment:
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
@@ -75,5 +76,30 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 ##Subdomains:
 * Subdomains and how to access the username (requested)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
