@@ -5,7 +5,6 @@ title: Using session with reloader
 
 # Using session with reloader
 
-
 # Problem
 
 There are some issues in using sessions when running the application with autoreload=True. Is there any work-around?
@@ -19,16 +18,13 @@ Here is a sample code which saves session in `web.config`.
     import web
     urls = ("/", "hello")
 
-    app = web.application(urls, globals(), autoreload=True)
+    app = web.application(urls, globals())
 
     if web.config.get('_session') is None:
         session = web.session.Session(app, web.session.DiskStore('sessions'), {'count': 0})
         web.config._session = session
     else:
         session = web.config._session
-
-    print '** session', id(session), session
-    web.config.debug = 'True'
 
     class hello:
        def GET(self):
