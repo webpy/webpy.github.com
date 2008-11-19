@@ -11,6 +11,7 @@ Web.py 0.3 has some backward-incompatible changes.
 * <a href="#app">new application framework</a>
 * <a href="#db">new database system</a>
 * <a href="#exceptions">http errors are exceptions</a>
+* <a href="#others">other incompatible changes</a>
 
 <a name="return"></a>
 ## prints are replaced by return statements
@@ -128,5 +129,4 @@ It should become:
 ## Other incompatible changes
 
 ??
-
 
