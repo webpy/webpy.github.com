@@ -11,7 +11,7 @@ title: Change log
 <dd>new: replace print with return (<i>backward-incompatible</i>)</dd>
 <dd>new: application framework (<i>backward-incompatible</i>)</dd>
 <dd>new: modular database system (<i>backward-incompatible</i>)</dd>
-<dd>new: templator replementation</dd>
+<dd>new: templetor reimplementation</dd>
 <dd>new: better unicode support</dd>
 <dd>new: debug mode (web.config.debug)</dd>
 <dd>new: better db pooling</dd>
