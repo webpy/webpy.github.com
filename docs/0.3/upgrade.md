@@ -63,7 +63,7 @@ It should become:
 <a name="db"></a>
 ## new database system
 
-The database module of web.py has been improved to make it more modularized.
+The database module of web.py has been improved to make it more modular.
 
 If you have code like this:
 
