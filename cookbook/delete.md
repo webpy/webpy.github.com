@@ -22,6 +22,8 @@ Once the database is defined as such, performing deletes can be performed like t
 
 Note that you have to pass a "where" clause, even if you want to delete everything.  This is a safety mechanism so you don't accidentally delete all of your data.
 
+This function returns the number of rows is has removed from the database.
+
 The delete statement takes the following keyword arguments:
 
 * where
