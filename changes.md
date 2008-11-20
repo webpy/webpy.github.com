@@ -8,12 +8,12 @@ title: Change log
 <dl>
 
 <dt>2008-11-??: 0.3</dt>
-<dd>incompatible: replace print with return</dd>
-<dd>new: better unicode support</dd>
-<dd>new: application framework</dd>
+<dd>new: replace print with return (<i>backward-incompatible</i>)</dd>
+<dd>new: application framework (<i>backward-incompatible</i>)</dd>
+<dd>new: modular database system (<i>backward-incompatible</i>)</dd>
 <dd>new: templator replementation</dd>
+<dd>new: better unicode support</dd>
 <dd>new: debug mode (web.config.debug)</dd>
-<dd>new: modular database system</dd>
 <dd>new: better db pooling</dd>
 <dd>new: sessions</dd>
 <dd>new: support for GAE</dd>
@@ -24,8 +24,6 @@ title: Change log
 <dd>fix: python 2.6 compatibility</dd>
 <dd>fix: file uploads are not loaded into memory</dd>
 <dd>fix: SQLLiteral issue (Bug#180027)</dd>
-
-
 
 <dt>2008-01-19: 0.23</dt>
 <dd>fix: for web.background gotcha (<a href="http://bugs.launchpad.net/webpy/+bug/133079">133079</a>)</dd>
@@ -133,6 +131,8 @@ title: Change log
 <dd>Fix bug with <code>storify</code> when it received multiple inputs (tx Ben Woosley).</dd>
 <dd>Fix bug with returning a generator (tx Zbynek Winkler).</dd>
 <dd>Fix bug where len returned a long on query results (tx F.S).</dd>
+
+
 <dt>2006-01-31: 0.131 (not officially released)</dt>
 <dd>New function <code>_interpolate</code> used internally for interpolating strings.</dd>
 <dd>Redone database API. <code>select</code>, <code>insert</code>, <code>update</code>, and <code>delete</code> all made consistent. Database queries can now do more complicated expressions like <code>$foo.bar</code> and <code>${a+b}</code>. You now have to explicitly pass the dictionary to look up variables in. Pass <code>vars=locals()</code> to get the old functionality of looking up variables .</dd>
@@ -228,3 +228,31 @@ title: Change log
 <dt>2006-01-03: 0.11</dt>
 <dd>First public version.</dd>
 </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
