@@ -81,19 +81,19 @@ Same applies to other database functions like `select`, `update`, `delete` and `
 
 If you are using transactions, they should be changed too.
 
-   def foo():
-       web.transact()
-       web.insert('t1', name='foo')
-       web.insert('t2', name='bar')
-       web.commit()
+    def foo():
+        web.transact()
+        web.insert('t1', name='foo')
+        web.insert('t2', name='bar')
+        web.commit()
 
 should become:
 
-	def foo():
-	    t = db.transaction()
-	    db.insert('t1', name='foo')
-	    db.insert('t2', name='bar')
-	    t.commit()
+    def foo():
+        t = db.transaction()
+        db.insert('t1', name='foo')
+        db.insert('t2', name='bar')
+        t.commit()
 
 If you are using python 2.5 or later, transactions can be used with `with` statement.
 
