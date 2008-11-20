@@ -12,7 +12,7 @@ There are some issues in using sessions when running the application in debug mo
 # Solution
 
 web.py runs the program in debug mode when run using the builtin webserver.
-Simplest fix for this is to disable debug mode, which can be done by setting web.config.debug = False.
+Simplest fix for this is to disable debug mode, which can be done by setting `web.config.debug = False`.
 
     import web
     web.config.debug = False
