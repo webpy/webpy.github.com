@@ -7,11 +7,22 @@ title: Using session with reloader
 
 # Problem
 
-There are some issues in using sessions when running the application with autoreload=True. Is there any work-around?
+There are some issues in using sessions when running the application in debug mode. Is there any work-around?
 
 # Solution
 
-Since the reloader loads the main module twice (once as __main__ and once with its name), 2 session objects will be created. This can be avoided by storing the session in some global place to avoid creating the second one. 
+web.py runs the program in debug mode when run using the builtin webserver.
+Simplest fix for this is to disable debug mode, which can be done by setting web.config.debug = False.
+
+    import web
+    web.config.debug = False
+
+    # rest of your code
+
+
+If you want to use sessions in debug mode then here is a work-around.
+
+Since debug mode enables module reloading, the reloader loads the main module twice (once as __main__ and once with its name), 2 session objects will be created. This can be avoided by storing the session in some global place to avoid creating the second one. 
 
 Here is a sample code which saves session in `web.config`.
 
