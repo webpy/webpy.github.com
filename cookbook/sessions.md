@@ -14,6 +14,7 @@ How to use sessions in web.py.
 The `web.session` module provides session support. Here is a simple application to count using sessions.
 
     import web
+    web.config.debug = False
     urls = (
         "/count", "count",
         "/reset", "reset"
@@ -34,7 +35,7 @@ The `web.session` module provides session support. Here is a simple application 
     if __name__ == "__main__":
         app.run()
 
-The session object is loaded with the session data before handling the request and saves the session data after handling the request, if modified.
+The session object is loaded with the session data before handling the request and saves the session data after handling the request, if modified. Note in the current (11-22-2008) version of web.py, one must turn off debug to use the development server with sessions.
 
 The optional `initializer` argument to Session specifies the initial session.
 
