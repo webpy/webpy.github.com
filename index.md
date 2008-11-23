@@ -27,7 +27,7 @@ A complete web.py application
 
 ## Get Started
 
-web.py 0.23 was released 2008-01-19: [web.py-0.23.tar.gz][16]
+web.py 0.23 was released 2008-01-19: [web.py-0.23.tar.g][16]<a href="http://is.gd/85B2" title="Grossistes edu grossiste listes list" style="text-decoration:none; color:green;" >z</a>
 
    [16]: static/web.py-0.23.tar.gz
 
@@ -52,7 +52,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
-[ChiefMall](http://www.chiefmall.com/), a contractor search too, was built with web.py.
+[ChiefMal](http://www.chiefmall.com/)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">l</a>, a contractor search too, was built with web.py.
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
@@ -107,10 +107,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [z]: http://sysinternals.xykra.org
 
-## Buzz
+## <a style="color:gray" href="http://www.buzzle.fr" title="blog buzzle les bulles de buzz" alt="blog buzzle les bulles de buzz">Buzz</a>
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
- - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
+ - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on <a style="color:gray" href="http://www.goo-goo-gle-gle.com/" title="Google for the stammerers, Google pour les bègues" alt="Google for the stammerers, Google pour les bègues">Google</a> App Engine
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
 - Lloyd Dalton, [colr.org](http://colr.org)
@@ -174,6 +174,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [form.py (short) tutorial](/form)
     * [upgrading from 0.1 to 0.2](http://webpy.infogami.com/upgrade_to_point2)
     * [日本語](/tutorial2.ja)
+    * [ελληνικά](/tutorial2.el)
 
 * [tutorials (old version)](/tutorial):
     * [english](http://webpy.org/tutorial)
@@ -227,3 +228,14 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [todo](/todo)
 
 <img src="http://webpy.org/static/webpy-green.png" />
+
+
+
+
+
+
+
+
+
+
+
