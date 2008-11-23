@@ -187,7 +187,7 @@ Now add another class:
     class add:
         def POST(self):
             i = web.input()
-            n = web.insert('todo', title=i.title)
+            n = db.insert('todo', title=i.title)
     	    raise web.seeother('/')
 
 (Notice how we're using `POST` for this?)
