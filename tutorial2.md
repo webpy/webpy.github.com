@@ -14,7 +14,7 @@ title: web.py 0.2 tutorial
 * [Deutsch](/tutorial2.de)
 * [Françai](/tutorial2.fr)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">s</a>
 * [Polish](/tutorial2.pl)
-* [Ελληνικά](/turorial2.el)
+* [ελληνικά](/turorial2.el)
 
 
 
