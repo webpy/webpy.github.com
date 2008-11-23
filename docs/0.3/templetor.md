@@ -162,12 +162,13 @@ Sometimes these can be very handy.
 
 ### def
 
-You can define a new template function using `$def`.
+You can define a new template function using `$def`. Keyword arguments are also supported.
 
-    $def say_hello(name):
+    $def say_hello(name='world'):
         Hello $name!
     
     $say_hello('web.py')
+    $say_hello()
 
 Another example:
         
@@ -274,4 +275,3 @@ The following are still supported but not preferred.
 
 * Using `\$` for escaping dollar. Use `$$` instead.
 * Modifying `web.template.Template.globals`. pass globals to `web.template.render` as argument instead.
-
