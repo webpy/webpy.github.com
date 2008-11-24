@@ -13,6 +13,7 @@ How do you include an application defined in another file in your application?
 
 In `blog.py`:
 
+    import web
     urls = (
       "", "reblog",
       "/(.*)", "blog"
@@ -29,6 +30,7 @@ In `blog.py`:
 
 In your main `code.py`:
 
+    import web
     import blog
     urls = (
       "/blog", blog.app_blog,
@@ -40,3 +42,7 @@ In your main `code.py`:
             return "hello " + path
     
     app = web.application(urls, locals())
+
+    if __name__ == "__main__":
+        app.run()
+
