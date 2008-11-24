@@ -24,6 +24,7 @@ title: Change log
 <dd>fix: python 2.6 compatibility</dd>
 <dd>fix: file uploads are not loaded into memory</dd>
 <dd>fix: SQLLiteral issue (Bug#180027)</dd>
+<dd>change: web.background is moved to experimental (<i>backward-incompatible</i>)</dd> 
 
 <dt>2008-01-19: 0.23</dt>
 <dd>fix: for web.background gotcha (<a href="http://bugs.launchpad.net/webpy/+bug/133079">133079</a>)</dd>
