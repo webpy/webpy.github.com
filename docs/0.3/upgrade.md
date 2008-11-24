@@ -128,5 +128,10 @@ It should become:
 <a name="others"></a>
 ## Other incompatible changes
 
-??
+In web.py 0.3, `web.input()` returns values in unicode. This may create trouble sometimes.
+
+To force `web.input` to return strings instead of unicode values, use:
+
+    web.input(_unicode=False)
+
 
