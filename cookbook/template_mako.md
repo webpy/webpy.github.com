@@ -26,8 +26,7 @@ You need to install both Mako and webpy(0.3) first: [http://www.makotemplates.or
     app = web.application(urls, globals(), autoreload=True)
 
     # input_encoding and output_encoding is important for unicode
-    # template file.
-    # Reference:
+    # template file. Reference:
     # http://www.makotemplates.org/docs/documentation.html#unicode
     render = render_mako(
             directories=['templates'],
