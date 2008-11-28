@@ -47,7 +47,7 @@ Template file:
 
     ## File: templates/hello.html
 
-    您好：${name}
+    Hello, ${name}.
 
 ###Note:
 
