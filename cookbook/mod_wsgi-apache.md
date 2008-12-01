@@ -50,6 +50,17 @@ Steps:
 
 * Point your browser to 'http://your_server_name/appname' to verify whether it works for you.
 
-For mod_wsgi performance, please refer to mod_wsgi wiki page:
+#Note: mod_wsgi + sessions
 
+If you use sessions with mod_wsgi, you should change you code like below:
+
+    app = web.application(urls, globals())
+
+    curdir = os.path.dirname(__file__)
+    session = web.session.Session(app, web.session.DiskStore(curdir + '/' + 'sessions'),)
+
+    application = app.wsgifunc()
+
+#mod_wsgi performance:
+For mod_wsgi performance, please refer to mod_wsgi wiki page:
     http://code.google.com/p/modwsgi/wiki/PerformanceEstimates
