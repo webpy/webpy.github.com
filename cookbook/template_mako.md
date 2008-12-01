@@ -74,7 +74,8 @@ You can use relative paths in order to make it easier too. e.g.
 
 #i18n support in Mako template file:
 Please refer to cookbook 'i18n support in webpy template file' for i18n support in mako template file:
-* [i18n support in webpy template file](/cookbook/i18n_support_in_template_file )
+
+* Cookbook: [i18n support in webpy template file](/cookbook/i18n_support_in_template_file )
 
 #Note:
 Babel is only needed to generate the .mo files.
