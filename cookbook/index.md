@@ -68,6 +68,8 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Query: Advanced database queries](/cookbook/query)
 * [How to use database transactions](/cookbook/transactions)
 * [Using sqlalchemy](/cookbook/sqlalchemy)
+* [Integrating SQLite UDF (user-defined-functions) with webpy database layer](/cookbook/sqlite-udf)
+
 
 ##Deployment:
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
