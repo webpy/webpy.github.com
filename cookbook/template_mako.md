@@ -58,10 +58,6 @@ if you use Apache + mod_wsgi to deploy webpy apps, you may get the similar error
 You have to specify location of templates as absolute path as no
 guarantees as to what current working directory will be.
 
-See section 'Application Working Directory' of:
-
-    http://code.google.com/p/modwsgi/wiki/ApplicationIssues
-
 You can use relative paths in order to make it easier too. e.g.
 
     import os
@@ -71,3 +67,14 @@ You can use relative paths in order to make it easier too. e.g.
             input_encoding='utf-8',
             output_encoding='utf-8',
             )
+
+
+#Reference:
+* http://code.google.com/p/modwsgi/wiki/ApplicationIssues
+
+#i18n support in Mako template file:
+Please refer to cookbook 'i18n support in webpy template file' for i18n support in mako template file:
+* [i18n support in webpy template file](/cookbook/i18n_support_in_template_file )
+
+#Note:
+Babel is only needed to generate the .mo files.
