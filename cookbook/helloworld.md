@@ -23,7 +23,7 @@ How to write hello world with web.py
     if __name__ == "__main__":
         app.run()
 
-#Tip: Make url ending with or without '/' going to the same class.
+###Tip: Make url ending with or without '/' going to the same class.
 
 add the following to the beginning of urls.
 
