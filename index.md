@@ -7,29 +7,29 @@ title:
 
 **web.py** is a web framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
     
-      import web
+    import web
             
-      urls = (
-          '/(.*)', 'hello'
-      )
+    urls = (
+        '/(.*)', 'hello'
+    )
+    app = web.application(urls, globals())
     
-      class hello:        
-          def GET(self, name):
-              i = web.input(times=1)
-              if not name: name = 'world'
-              for c in range(int(i.times)):
-                  print 'Hello,', name+'!'
+    class hello:        
+        def GET(self, name):
+            if not name: 
+                name = 'world'
+            return 'Hello, ' + name + '!'
     
-      if __name__ == "__main__": web.run(urls, globals())
-            
+    if __name__ == "__main__":
+        app.run()
 
 A complete web.py application
 
 ## Get Started
 
-web.py 0.23 was released 2008-01-19: [web.py-0.23.tar.g][16]<a href="http://is.gd/85B2" title="Grossistes edu grossiste listes list" style="text-decoration:none; color:green;" >z</a>
+web.py 0.3 was released 2008-12-06: [web.py-0.3.tar.gz][16]
 
-   [16]: static/web.py-0.23.tar.gz
+   [16]: /static/web.py-0.3.tar.gz
 
 To always have the latest version of web.py, run:
     
@@ -40,7 +40,7 @@ Or download the latest version as [zip](http://github.com/webpy/webpy/zipball/ma
 
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
-   [17]: http://webpy.infogami.com/upgrade_to_point2
+   [17]: http://webpy.org/docs/0.3/upgrade
 
 ## Who uses web.py?
 
@@ -107,10 +107,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [z]: http://sysinternals.xykra.org
 
-## <a style="color:gray" href="http://www.buzzle.fr" title="blog buzzle les bulles de buzz" alt="blog buzzle les bulles de buzz">Buzz</a>
+## <a style="color:gray" href="http://www.buzzle.fr" title="Citation, les citations de nos amis people et de la politique">Buzz</a>
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
- - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on <a style="color:gray" href="http://www.goo-goo-gle-gle.com/" title="Google for the stammerers, Google pour les bègues" alt="Google for the stammerers, Google pour les bègues">Google</a> App Engine
+ - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on <a style="color:gray" href="http://www.goo-goo-gle-gle.com/" title="Google Pagerank, référencement, credits, referencement, rapidement, rapide" alt="Google Pagerank, référencement, credits, referencement, rapidement, rapide">Google</a> App Engine
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
 - Lloyd Dalton, [colr.org](http://colr.org)
@@ -165,14 +165,13 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [español](/install/es)
     * [日本語](/install/ja)
 
-* [tutorials for version 0.2 (latest)](/tutorial2)
-    * [english](/tutorial2.en)
+* [tutorials for version 0.3 (latest)](/tutorial3)
+    * [english](/tutorial3.en)
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
     * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
     * [template.py 教程 (tutorial)](http://gamexg-cw.cn/2008/10/15/webpy-%E6%96%87%E6%A1%A3%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%EF%BC%9Awebpy-%E6%A8%A1%E6%9D%BF%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81%E5%90%8D%E7%A7%B0templetor/)
     * [form.py (short) tutorial](/form)
-    * [upgrading from 0.1 to 0.2](http://webpy.infogami.com/upgrade_to_point2)
     * [日本語](/tutorial2.ja)
     * [ελληνικά](http://webpy.org/tutorial2.el)
 
@@ -219,23 +218,9 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 ### web.py development:
 
-* [bazaar repository](http://webpy.org/bzr/webpy.dev) | [follow commits](https://code.edge.launchpad.net/~anandology/webpy/webpy.dev/+subscribe)
+* [git repository](http://github.com/webpy/webpy)
 
 * [launchpad site](http://launchpad.net/webpy)
 
-* [roadmap](/roadmap)
-
-* [todo](/todo)
-
 <img src="http://webpy.org/static/webpy-green.png" />
-
-
-
-
-
-
-
-
-
-
 
