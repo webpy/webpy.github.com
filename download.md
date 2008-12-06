@@ -13,7 +13,7 @@ The easiest way to install web.py is using [easy_install](http://peak.telecommun
 
 If you don't have `easy_install`, try downloading the sources.
 
-    $ wet http://webpy.org/static/web.py-0.3.tar.gz
+    $ wget http://webpy.org/static/web.py-0.3.tar.gz
     $ tar xvzf web.py-0.3.tar.gz
     $ cd webpy
     $ sudo python setup.py install
@@ -21,7 +21,7 @@ If you don't have `easy_install`, try downloading the sources.
 If you don't want to install web.py system-wide (or if you want to bundle web.py with your application):
 
     $ cd your-app-dir
-    $ wet http://webpy.org/static/web.py-0.3.tar.gz
+    $ wget http://webpy.org/static/web.py-0.3.tar.gz
     $ tar xvzf web.py-0.3.tar.gz
     $ ln -s webpy/web .
    
