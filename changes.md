@@ -7,7 +7,7 @@ title: Change log
 
 <dl>
 
-<dt>2008-11-??: 0.3</dt>
+<dt>2008-12-06: 0.3</dt>
 <dd>new: replace print with return (<i>backward-incompatible</i>)</dd>
 <dd>new: application framework (<i>backward-incompatible</i>)</dd>
 <dd>new: modular database system (<i>backward-incompatible</i>)</dd>
@@ -25,7 +25,7 @@ title: Change log
 <dd>fix: file uploads are not loaded into memory</dd>
 <dd>fix: SQLLiteral issue (Bug#180027)</dd>
 <dd>change: web.background is moved to experimental (<i>backward-incompatible</i>)</dd> 
-
+<dd>improved document generation (tx Colin Rothwell)</dd>
 <dt>2008-01-19: 0.23</dt>
 <dd>fix: for web.background gotcha (<a href="http://bugs.launchpad.net/webpy/+bug/133079">133079</a>)</dd>
 <dd>fix: for postgres unicode bug (<a href="http://bugs.launchpad.net/webpy/+bug/177265">177265</a>)</dd>
