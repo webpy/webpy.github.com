@@ -19,10 +19,11 @@ web.py recommends the following software:
 *  [flup](http://trac.saddi.com/flup) [BSD] (`easy_install flup`)
 
 ##Connection Pooling:
-*  [DBUtils](http://www.w4py.org/downloads/DBUtils/) [CNRI] [(doc)](http://www.webwareforpython.org/DBUtils/Docs/UsersGuide.html) (`easy_install DBUtils`)
+*  [DBUtil](http://www.w4py.org/downloads/DBUtils/)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">s</a> [CNRI] [(doc)](http://www.webwareforpython.org/DBUtils/Docs/UsersGuide.html) (`easy_install DBUtils`)
 
 ##Templates:
-*  template.py [built-in] [(doc)](templetor)
-*  [Cheetah](http://dl.sourceforge.net/cheetahtemplate/Cheetah-1.0.tar.gz) 1.0 [BSD] [(doc)](http://www.cheetahtemplate.org/learn.html)
+*  template.py [built-in] [(doc)](/docs/0.3/templetor)
+
 ##User Input:
 *  [python-markdown](http://sourceforge.net/project/showfiles.php?group_id=153041) [BSD] [(doc)](http://www.freewisdom.org/projects/python-markdown/)
+
