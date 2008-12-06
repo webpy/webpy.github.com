@@ -5,14 +5,13 @@ title: Download web.py
 
 # Download web.py
 
-
 ## Get the latest stable version
 
-The easiest way to install web.py is using `easy_install`:
+The easiest way to install web.py is using [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall):
 
     $ easy_install web.py
 
-Or by downloading the sources.
+If you don't have `easy_install`, try downloading the sources.
 
     $ wet http://webpy.org/static/web.py-0.3.tar.gz
     $ tar xvzf web.py-0.3.tar.gz
