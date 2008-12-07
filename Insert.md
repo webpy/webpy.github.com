@@ -15,7 +15,7 @@ With version 0.3, databases are defined like this:
 
 Once the database is defined as such, performing insert can be performed like this:
     
-    # Select all entries from table 'mytable'
+    # Insert an entry into table 'mytable'
     sequence_id = db.insert('mytable', firstname="Bob",lastname="Smith",joindate=web.SQLLiteral("NOW()"))
 
 The insert statement takes the following keyword arguments:
