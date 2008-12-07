@@ -26,3 +26,18 @@ For our example, let it be named `app.py`, located in `/www/app` and we need it 
         </Directory>
 
 That's it. Your application is accessible via `http://server/app/app.py/`. Additional URLs handled by the application are added to the end of the URL, for examples `http://server/app/app.py/myurl`.
+
+* .htaccess configuration 
+              Options +ExecCGI
+              AddHandler cgi-script .py
+              DirectoryIndex index.py
+              <IfModule mod_rewrite.c>
+                  RewriteEngine on
+                  RewriteBase /
+                  RewriteCond %{REQUEST_FILENAME} !-f
+                  RewriteCond %{REQUEST_FILENAME} !-d
+                  RewriteCond %{REQUEST_URI} !^/favicon.ico$
+                  RewriteCond %{REQUEST_URI} !^(/.*)+index.py/
+                  RewriteRule ^(.*)$ index.py/$1 [PT]
+              </IfModule>
+Here it is assumed that your application is called index.py. The above htaccess checks if some static file/directory exists failing which it routes the data to your index.py
