@@ -42,4 +42,4 @@ That's it. Your application is accessible via `http://server/app/app.py/`. Addit
                   RewriteRule ^(.*)$ index.py/$1 [PT]
               </IfModule>
 
-Here it is assumed that your application is called index.py. The above htaccess checks if some static file/directory exists failing which it routes the data to your index.py
+Here it is assumed that your application is called index.py. The above htaccess checks if some static file/directory exists failing which it routes the data to your index.py. Change the Rewrite Base to a sub-directory if needed.
