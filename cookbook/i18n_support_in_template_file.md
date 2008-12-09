@@ -35,7 +35,7 @@ File: proj/code.py
         )
 
     # File location directory.
-    curdir = os.path.dirname(__file__)
+    curdir = os.path.abspath(os.path.dirname(__file__))
 
     # i18n directory.
     localedir = curdir + '/i18n'
