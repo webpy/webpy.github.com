@@ -33,3 +33,20 @@ If you don't want to use the base template for something, just create a second r
 
     render_plain = web.template.render('templates/')
     
+###Tip: Page title is set in other template files which are then used by the layout (layout.html). Example:
+
+#####templates/index.html
+    $var title: This is title.
+
+    <h3>Hello, world</h3>
+
+#####templates/layout.html
+    $def with (content)
+    <html>
+    <head>
+    <title>$content.title</title>
+    </head>
+    <body>
+    $:content
+    </body>
+    </html>
