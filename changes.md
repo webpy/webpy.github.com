@@ -9,6 +9,7 @@ title: Change log
 
 <dt>upstream</dt>
 <dd>new: browser module</dd>
+<dd>new: ShelfStore</dd>
 <dd>fix: web.cookies error when default is None</dd>
 <dd>fix: paramstyle for OracleDB (tx kromakey)</dd>
 <dd>fix: performance issue in SQLQuery.join</dd>
