@@ -7,6 +7,13 @@ title: Change log
 
 <dl>
 
+<dt>upstream</dt>
+<dd>new: browser module</dd>
+<dd>fix: web.cookies error when default is None</dd>
+<dd>fix: paramstyle for OracleDB (tx kromakey)</dd>
+<dd>fix: performance issue in SQLQuery.join</dd>
+</dt>
+
 <dt>2008-12-06: 0.3</dt>
 <dd>new: replace print with return (<i>backward-incompatible</i>)</dd>
 <dd>new: application framework (<i>backward-incompatible</i>)</dd>
