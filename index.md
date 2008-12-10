@@ -27,9 +27,9 @@ A complete web.py application
 
 ## Get Started
 
-web.py 0.3 was released 2008-12-06: [web.py-0.3.tar.gz][16]
+web.py 0.31 was released 2008-12-10: [web.py-0.31.tar.gz][16]
 
-   [16]: /static/web.py-0.3.tar.gz
+   [16]: /static/web.py-0.31.tar.gz
 
 To always have the latest version of web.py, run:
     
@@ -52,7 +52,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
-[ChiefMal](http://www.chiefmall.com/)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">l</a>, a contractor search too, was built with web.py.
+[ChiefMal](http://www.chiefmall.com/)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">l</a>, a contractor search tool, was built with web.py.
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
@@ -223,4 +223,3 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [launchpad site](http://launchpad.net/webpy)
 
 <img src="http://webpy.org/static/webpy-green.png" />
-
