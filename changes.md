@@ -12,6 +12,7 @@ title: Change log
 <dd>fix: web.cookies error when default is None</dd>
 <dd>fix: paramstyle for OracleDB (tx kromakey)</dd>
 <dd>fix: performance issue in SQLQuery.join</dd>
+<dd>fix: use wsgi.url_scheme to find ctx.protocol</dd>
 </dt>
 
 <dt>2008-12-06: 0.3</dt>
