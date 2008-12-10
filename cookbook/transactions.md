@@ -16,7 +16,7 @@ The database object has a method `transaction` which starts a new transaction an
 
     import web
 
-    db = web.databse(dbn="postgres", db="webpy", user="foo", pw="")
+    db = web.database(dbn="postgres", db="webpy", user="foo", pw="")
     t = db.transaction()
     try:
         db.insert('person', name='foo')
