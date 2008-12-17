@@ -40,7 +40,7 @@ It should become:
 <a href="app"></a>
 ## new application framework
 
-New application framework has been introduced in web.py 0.3 and due that there is a slight change in the way the program's main section is written.
+New application framework has been introduced in web.py 0.3 and due to that there is a slight change in the way the program's main section is written.
 
 If your old code has:
 
