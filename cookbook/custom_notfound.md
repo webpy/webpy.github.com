@@ -19,6 +19,10 @@ How to customize notfound and other messages?
     def notfound():
         return web.notfound("Sorry, the page you were looking for was not found.")
 
+        # You can use template result like below, either is ok:
+        #return web.notfound(render.notfound())
+        #return web.notfound(str(render.notfound()))
+
     app.notfound = notfound
 
 
