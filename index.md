@@ -52,7 +52,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
-[ChiefMal](http://www.chiefmall.com/)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">l</a>, a contractor search tool, was built with web.py.
+[ChiefMal](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
@@ -107,10 +107,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [z]: http://sysinternals.xykra.org
 
-## <a style="color:gray" href="http://www.buzzle.fr" title="Citation, les citations de nos amis people et de la politique">Buzz</a>
-
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
- - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on <a style="color:gray" href="http://www.goo-goo-gle-gle.com/" title="Google Pagerank, référencement, credits, referencement, rapidement, rapide" alt="Google Pagerank, référencement, credits, referencement, rapidement, rapide">Google</a> App Engine
+ - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
 - Lloyd Dalton, [colr.org](http://colr.org)
