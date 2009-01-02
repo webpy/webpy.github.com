@@ -18,7 +18,7 @@ webpy doesn't try to build layers between you and your database.  Rather, it tri
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
     
     results = db.query("SELECT COUNT(*) AS total_users FROM users")
-    print results.total_users # -> prints number of entries in 'users' table
+    print results[0].total_users # -> prints number of entries in 'users' table
 
 
 or, for a JOIN example:
