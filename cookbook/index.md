@@ -38,7 +38,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Working with Session](/cookbook/sessions)
 * [Using session with reloader](/cookbook/session_with_reloader)
 * [Working with Cookies](/cookbook/cookies)
-* User authentication (requested)
+* [User authentication](/cookbook/userauth)
 
 ##Utils:
 * [Sending Mail](/cookbook/sendmail)
