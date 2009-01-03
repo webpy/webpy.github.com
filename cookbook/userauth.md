@@ -5,6 +5,8 @@ title: user authentication
 
 # user authentication
 
+#I'm still working on this page, please no body else edit
+
 ##Problem
 You want a system to authenticate users.
 
@@ -15,7 +17,7 @@ A user authentication system is made up of a few parts. Adding users, logging us
     def POST(self):
         i = web.input()
 
-        authdb = sqlite3.connect('super.db')
+        authdb = sqlite3.connect('users.db')
         check = authdb.execute('select * from users where username=? and password=?', (i.username, i.password))
         if check: 
             session.loggedin = True
