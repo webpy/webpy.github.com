@@ -37,11 +37,14 @@ The third (and optional) argument to `web.setcookie()`, "expires", allows you to
 
 ###Retrieving Cookies
 ####Overview
-There are two methods to retrieve cookies, depending on the desired reaction to a missing cookie.
-#####Way 1 (raises exception if cookie is not found):
+There are many methods to retrieve cookies, depending on the desired reaction to a missing cookie.
+#####Way 1 (return None if cookie is not found):
     web.cookies().get(cookieName)  
         #cookieName is the name of the cookie submitted by the browser
-#####Way 2 (avoids exception by setting default value for cookie if not found):
+#####Way 2 (raises exception AttributeError if cookie is not found):
+    foo = web.cookies()
+    foo.cookieName
+#####Way 3 (avoids exception by setting default value for cookie if not found):
     foo = web.cookies(cookieName=defaultValue)
     foo.cookieName   # return the value (which could be default)
         #cookieName is the name of the cookie submitted by the browser
@@ -61,10 +64,19 @@ Sometimes, you want to know specifically if something doesn't exist, in which ca
     class CookieGet:
         def GET(self):
             try: 
-                 return "Your age is: " + web.cookies().get('age')
+                 return "Your age is: " + web.cookies().age
             except:
                  # Do whatever handling you need to, etc. here.
                  return "Cookie does not exist."
 
+or
+
+    class CookieGet:
+        def GET(self):
+            age=web.cookies().get(age)
+            if age:
+                return "Your age is: %s" % age
+            else:
+                return "Cookie does not exist."
 
 This code attempts to use the cookie submitted by the browser, but does not give it a default value.  If the cookie doesn't exist, an exception is raised, and the `except` clause is executed, giving the server an opportunity to handle the lack of cookie.
