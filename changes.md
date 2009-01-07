@@ -5,6 +5,13 @@ title: Change log
 
 # Change log
 
+**upstream**
+
+* fix: fix python 2.3 compatibility 
+* fix: ignore dot folders when compiling templates (tx Stuart Langridge) 
+* fix: don't consume KeyboardInterrupt and SystemExit errors 
+* fix: make application works well with iterators 
+
 ** 2008-12-10: 0.31**
 
 * new: browser module
