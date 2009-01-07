@@ -5,7 +5,7 @@ title: Change log
 
 # Change log
 
-**upstream**
+** 2008-12-10: 0.31**
 
 * new: browser module
 * new: test utilities
