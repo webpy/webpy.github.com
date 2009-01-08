@@ -7,6 +7,7 @@ title: Change log
 
 **upstream**
 
+* fix: accept both list and tuple as arg values in form.Dropdown [Bug#314970](https://bugs.edge.launchpad.net/webpy/+bug/314970)
 * fix: match parenthesis when parsing `for` statement in templates
 * fix: fix python 2.3 compatibility 
 * fix: ignore dot folders when compiling templates (tx Stuart Langridge) 
