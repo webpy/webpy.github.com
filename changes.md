@@ -11,7 +11,7 @@ title: Change log
 * fix: fix python 2.3 compatibility 
 * fix: ignore dot folders when compiling templates (tx Stuart Langridge) 
 * fix: don't consume KeyboardInterrupt and SystemExit errors 
-* fix: make application works well with iterators 
+* fix: make application work well with iterators 
 
 ** 2008-12-10: 0.31**
 
