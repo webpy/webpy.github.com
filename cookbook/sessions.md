@@ -54,3 +54,29 @@ And you need to pass `db` object and session table name to the constructor of `D
     db = web.database(dbn='postgres', db='mydatabase', user='myname', pw='')
     store = web.session.DBStore(db, 'sessions')
     session = web.session.Session(app, store, initializer={'count': 0})
+
+
+options related to sessions can be modified using the `sessions_paramerts` dict in `web.config`. The default values are shown below.
+
+    web.config.session_parameters['cookie_name'] = 'webpy_session_id'
+    web.config.session_parameters['cookie_domain'] = None
+    web.config.session_parameters['timeout'] = 86400, #24 * 60 * 60, # 24 hours   in seconds
+    web.config.session_parameters['ignore_expiry'] = True
+    web.config.session_parameters['ignore_change_ip'] = True
+    web.config.session_parameters['secret_key'] = 'fLjUfxqXtfNoIldA0A0J'
+    web.config.session_parameters['expired_message'] = 'Session expired'
+
+ * cookie_name - name of the cookie used to store the session id
+ * cookie_domain - domain for the cookie used to store the session id
+ * timeout - number of second of inactivity that is allowed before the session expires
+ * ignore_expiry - if true, the session timeout is ignored
+ * ignore_change_ip - if true, the session is only valid when it is accessed from the same ip address that created the session
+ * secret_key       - *requires explanation*
+ * expired_message  - message displayed when the session expires
+
+
+
+
+
+
+
