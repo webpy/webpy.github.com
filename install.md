@@ -7,7 +7,7 @@ title: Install
 
 To install web.py, download:
     
-    http://webpy.org/static/web.py-0.23.tar.gz
+    http://webpy.org/static/web.py-0.3.tar.gz
 
 extract it and copy the _web_ folder into a directory where your application is. Or, to make it accessible to all applications, run:
     
@@ -19,7 +19,7 @@ Note: on some unix like systems you may need to switch to root or run:
 
 see [recomended setup](/recommended_setup).
 
-Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall).  Once [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) is properly setup:
+Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) is properly setup:
 
 
     easy_install web.py
@@ -236,3 +236,22 @@ If you want webpy to be accessible at 'http://example.com' instead of 'http://ex
     </IfModule>
 
 If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
