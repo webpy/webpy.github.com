@@ -12,7 +12,7 @@ You can add python functions to sqlite and have them called within your queries.
 Example:
 <pre>
 >>> import sqlite3 as db
->>> conn = db.connect(":memory")
+>>> conn = db.connect(":memory:")
 >>> conn.create_function("sign", 1, lambda val: val and (val > 0 and 1 or -1))
 >>> cur = conn.cursor()
 >>> cur.execute("select 1, -1")
