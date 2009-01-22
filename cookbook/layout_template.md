@@ -54,7 +54,7 @@ If you don't want to use the base template for something, just create a second r
 ###Tip: Add css files in other template files. Example:
 ####templates/login.html
 
-    $var cssfile: static/login.css static/login2.css
+    $var cssfiles: static/login.css static/login2.css
 
     hello, world.
 
@@ -65,8 +65,8 @@ If you don't want to use the base template for something, just create a second r
     <head>
         <title>$content.title</title>
 
-        $if page.cssfile:
-            $for f in page.cssfile.split():
+        $if page.cssfiles:
+            $for f in page.cssfiles.split():
                 <link rel="stylesheet" href="$f" type="text/css" media="screen" charset="utf-8"/>
 
     </head>
