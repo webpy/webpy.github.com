@@ -56,6 +56,8 @@ If you don't want to use the base template for something, just create a second r
 
     $var cssfile: static/login.css static/login2.css
 
+    hello, world.
+
 ####templates/layout.html
 
     $def with (content)
