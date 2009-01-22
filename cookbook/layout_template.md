@@ -22,7 +22,7 @@ The format for "layout.html" should be a simple template that takes one variable
     $def with (content)
     <html>
     <head>
-    <title>Foo</title>
+        <title>Foo</title>
     </head>
     <body>
     $:content
@@ -44,9 +44,37 @@ If you don't want to use the base template for something, just create a second r
     $def with (content)
     <html>
     <head>
-    <title>$content.title</title>
+        <title>$content.title</title>
     </head>
     <body>
     $:content
     </body>
     </html>
+
+###Tip: Add css files in other template files. Example:
+####templates/login.html
+
+    $var cssfile: static/login.css static/login2.css
+
+####templates/layout.html
+
+    $def with (content)
+    <html>
+    <head>
+        <title>$content.title</title>
+
+        $if page.cssfile:
+            $ cssfiles = page.cssfile.split()
+            $for f in cssfiles:
+                <link rel="stylesheet" href="$f" type="text/css" media="screen" charset="utf-8"/>
+
+    </head>
+    <body>
+    $:content
+    </body>
+    </html>
+
+The HTML output code looks like below:
+
+    <link rel="stylesheet" href="static/login.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="static/login2.css" type="text/css" media="screen" charset="utf-8"/>
