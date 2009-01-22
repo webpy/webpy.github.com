@@ -66,8 +66,7 @@ If you don't want to use the base template for something, just create a second r
         <title>$content.title</title>
 
         $if page.cssfile:
-            $ cssfiles = page.cssfile.split()
-            $for f in cssfiles:
+            $for f in page.cssfile.split():
                 <link rel="stylesheet" href="$f" type="text/css" media="screen" charset="utf-8"/>
 
     </head>
