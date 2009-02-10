@@ -33,19 +33,19 @@ Data Found in `ctx`
 -------------------
 
 ### Request ###
-*   `environ` a.k.a. `env` &mdash; a dictionary containing the standard [WSGI environment variables](http://www.python.org/dev/peps/pep-0333/#environ-variables)
-*   `home` &mdash; the base path for the application *http://example.org*
-*   `homedomain` &mdash; ??? *http://example.org*
-*   `homepath` &mdash; ???
-*   `host` &mdash; the domain requested by the user *example.org*
-*   `ip` &mdash; the IP address of the user *xxx.xxx.xxx.xxx*
-*   `method` &mdash; the HTTP method used *GET*
-*   `path` &mdash; the path requested by the user */articles/845*
-*   `protocol` &mdash; the protocol used *https*
-*   `query` &mdash; an empty string if there are no query arguments otherwise a `?` followed by the query string *?foo=amorphous&bar=blasphemous*
-*   `fullpath` a.k.a. `path + query` &mdash; the full path requested **including** query arguments */articles/845?foo=amorphous&bar=blasphemous*
+*   `environ` a.k.a. `env` &ndash; a dictionary containing the standard [WSGI environment variables](http://www.python.org/dev/peps/pep-0333/#environ-variables)
+*   `home` &ndash; the base path for the application *http://example.org*
+*   `homedomain` &ndash; ??? *http://example.org*
+*   `homepath` &ndash; ???
+*   `host` &ndash; the domain requested by the user *example.org*
+*   `ip` &ndash; the IP address of the user *xxx.xxx.xxx.xxx*
+*   `method` &ndash; the HTTP method used *GET*
+*   `path` &ndash; the path requested by the user */articles/845*
+*   `protocol` &ndash; the protocol used *https*
+*   `query` &ndash; an empty string if there are no query arguments otherwise a `?` followed by the query string *?foo=amorphous&bar=blasphemous*
+*   `fullpath` a.k.a. `path + query` &ndash; the full path requested **including** query arguments */articles/845?foo=amorphous&bar=blasphemous*
 
 ### Response ###
-*   `status` &mdash; the HTTP status code (default '200 OK') *401 Unauthorized*
-*   `headers` &mdash; a list of 2-tuples containing HTTP headers
-*   `output` &mdash; a string containing the response entity
+*   `status` &ndash; the HTTP status code (default '200 OK') *401 Unauthorized*
+*   `headers` &ndash; a list of 2-tuples containing HTTP headers
+*   `output` &ndash; a string containing the response entity
