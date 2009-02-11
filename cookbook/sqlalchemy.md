@@ -30,6 +30,9 @@ create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy
         web.ctx.orm = scoped_session(sessionmaker(bind=engine))
         try:
             return handler()
+        except web.HTTPError:
+           web.ctx.orm.commit()
+           raise
         except:
             web.ctx.orm.rollback()
             raise
