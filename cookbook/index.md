@@ -33,6 +33,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Application processors, loadhooks and unloadhooks](/cookbook/application_processors)
 * [How to use web.background](/cookbook/background)
 * [Custom NotFound message](/cookbook/custom_notfound)
+* [How to Stream Large Files](/cookbook/streaming_large_files)
 
 ##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
