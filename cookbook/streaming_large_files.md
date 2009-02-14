@@ -5,13 +5,15 @@ title: How to Stream Large Files
 
 # How to Stream Large Files
 
-This is an example of how you can use web.py to stream large files.  You'll find it DOES work as advertised, but there are some protocol changes you may have to make to stream files of certain types to certain clients.  
+This is an example of how you can use web.py to stream large files.  You'll find it DOES work as advertised, but you need to make sure you add the Transfer-Encoding chunked header for it to display properly.  Otherwise the browser will buffer all data before displaying it to you.
 
-You need the content type and chunked header to make things show up correctly on a typical web browser.  
+You can't mix basic string and Yield returns in the same method.  If you use Yield, you'll have to use yield for everything because your function becomes a generator.
+
 
 Simple Example
 
     # Simple streaming server demonstration
+    # Uses time.sleep to emulate a large file read
     import web
     import time
      
@@ -24,6 +26,7 @@ Simple Example
 
     class count_down:
         def GET(self,count):
+            # These headers make it work in browsers
             web.header('Content-type','text/html')
             web.header('Transfer-Encoding','chunked')        
             yield '<h2>Prepare for Launch!</h2>'
