@@ -13,7 +13,7 @@ This is needed when you have a third-party application posting data to your serv
 
 ### Solution
 
-Create your XML template with the XML file you want to server (i.e. reponse.xml). If the XML has any variables, use the corresponding web.py templating code. This is just an example:
+Create your XML template with the XML file you want to server (i.e. response.xml). If the XML has any variables, use the corresponding web.py templating code. This is just an example:
 
     $def with (code)
     <?xml version="1.0"?>
