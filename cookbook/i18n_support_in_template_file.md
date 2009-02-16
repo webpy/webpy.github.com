@@ -29,6 +29,7 @@ File: proj/code.py
     # encoding: utf-8
 
     import web
+    import gettext
     
     urls = (
         '/.*', 'hello',
