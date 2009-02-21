@@ -25,7 +25,7 @@ title: FAQ
 
 99. **Where can I go for additional help?**
 
-    Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
+    Google Groups has a [web.py grou](http://groups.google.com/group/webpy) that is quite helpful.
 
 99. **How can I change the default "not found" page?**
 
@@ -64,3 +64,34 @@ title: FAQ
 99. **もしwebpyの不具合(バグ)を見つけた場合どこで報告すればいいのですか？**
 
     [ここ(webpy launchpad site)](https://launchpad.net/webpy)からバグ報告することができます。ログインが必要な場合は登録を行ってからバグ報告をしてください。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
