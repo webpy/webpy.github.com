@@ -11,7 +11,7 @@ title: code samples
 
 * [simple todo-list engine](/src/todo-list) | [new version](http://domimob.infogami.com/wiki/tidy) (uses template.py and form.py)
 
-* [simple blog engine](http://k4ml.com/wiki/python/webpy/simpleblog)
+* [simple blog engine](http://wiki.k4ml.com/python/webpy/simpleblog)
 
 * [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
 
