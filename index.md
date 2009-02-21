@@ -5,7 +5,7 @@ title:
 
 ## About
 
-**web.py** is a <a href="http://www.netdeveloppeur.com/" title="creation sites web"><font color="#3a3a3a">web</font></a> framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
+**web.py** is a web framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
     
     import web
             
@@ -108,7 +108,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
    [zz]: http://sysinternals.xykra.org
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
- - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on <a href="http://www.seoblackout.com/" title="référencement google"><font color="#3a3a3a">Google</font></a> App Engine
+ - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
 - Lloyd Dalton, [colr.org](http://colr.org)
