@@ -137,7 +137,7 @@ First you need to create a database object.
 
 That's all you need to do -- web.py will automatically handle connecting and disconnecting from the database.
 
-Using your database engines admin interface, create a simple table in your database:
+Using your database engine's admin interface, create a simple table in your database:
 
     CREATE TABLE todo (
       id serial primary key,
