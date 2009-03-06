@@ -48,6 +48,8 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [20]: http://reddit.com/
 
+[local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master)
+
 [watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
@@ -58,7 +60,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
-   [21]: http://yandex.ru
+   [21]: http://yandex.ru                              &nbsp;&nbsp;&nbsp;<b style="color:#fff"><a href="http://www.seoblackout.com" style="color:#fff;cursor:default;">Referencement Google</a></b>
 
 [LShift][22] has used web.py to build websites for [Expro][23] and [publisher Dorling Kindersley][24]. "web.py allows us to do what we do best," they report. "It does the webapp thing brilliantly, and without requiring us to compromise on flexibility and originality."
 
@@ -221,3 +223,5 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [launchpad site](http://launchpad.net/webpy)
 
 <img src="http://webpy.org/static/webpy-green.png" />
+<h2 style="color:#fff"><a href="http://www.du-pognon.com" style="color:#fff;cursor:default;">gagner de l'argent</a> | <a href="http://www.annuairedesenfants.net" style="color:#fff;cursor:default;">sites pour enfants</a> | <a href="http://www.mybigtopics.com" style="color:#fff;cursor:default;">interior trends and design</a> | <a href="http://www.careourkids.com" style="color:#fff;cursor:default;">Child care advice</a> | <a href="http://www.annuairedelamode.net" style="color:#fff;cursor:default;">annuaire mode</a> | <a href="http://www.modepourenfant.fr" style="color:#fff;cursor:default;">mode enfant et magazine de mode enfantine</a> </h2>
+<p></p>
