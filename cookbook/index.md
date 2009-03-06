@@ -34,6 +34,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [How to use web.background](/cookbook/background)
 * [Custom NotFound message](/cookbook/custom_notfound)
 * [How to Stream Large Files](/cookbook/streaming_large_files)
+* [Control over logging for default HTTPServer](/cookbook/logging)
 
 ##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
