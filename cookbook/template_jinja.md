@@ -21,8 +21,17 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
     
     app = web.application(urls, globals())
     
-    render = render_jinja('templates')   # Set template directory.
-    
+    render = render_jinja(
+            'templates',   # Set template directory.
+            #extensions = ['jinja2.ext.i18n'],           # Jinja2 extensions.
+            #encoding = 'utf-8',                         # Encoding.
+            #globals = {},
+        )
+
+    # Used for Jinja2 i18n extension.
+    #lang = gettext.translation('domain', 'localedir', languages=['zh_CN'])
+    #render._lookup.install_gettext_translations(default_lang)
+
     class hello:
         def GET(self, name):
             return render.hello(name=name)
