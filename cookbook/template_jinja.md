@@ -30,7 +30,7 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
 
     # Used for Jinja2 i18n extension.
     #lang = gettext.translation('domain', 'localedir', languages=['zh_CN'])
-    #render._lookup.install_gettext_translations(default_lang)
+    #render._lookup.install_gettext_translations(lang)
 
     class hello:
         def GET(self, name):
@@ -40,5 +40,9 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
         app.run()
 
 ### Template file: templates/hello.html
+
     Hello, {{ name }}.
 
+For i18n string:
+
+    {{ _('Hello') }}, {{ name }}.
