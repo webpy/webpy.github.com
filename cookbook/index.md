@@ -53,6 +53,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [i18n support in template file](/cookbook/i18n_support_in_template_file )
 * [Use Mako template engine in webpy](/cookbook/template_mako)
 * [Use Cheetah template engine in webpy](/cookbook/template_cheetah)
+* [Use Jinja2 template engine in webpy](/cookbook/template_jinja)
 * [How to use templates on Google App Engine](/cookbook/templates_on_gae)
 
 ##User Input:
