@@ -27,8 +27,9 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
     
         def POST(self):
             x = web.input(myfile={})
-            web.debug(x['myfile'].value) # This is the file contents
             web.debug(x['myfile'].filename) # This is the filename
+            web.debug(x['myfile'].value) # This is the file contents
+            web.debug(x['myfile'].file.read()) # Or use a file(-like) object
             raise web.seeother('/upload')
 
 
