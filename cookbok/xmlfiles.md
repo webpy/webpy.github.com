@@ -32,10 +32,12 @@ To serve this file, create a standard Web.Py program (i.e. response.py) and use 
         '/(.*)', 'index'
     )
 
+    app = web.application(urls, globals())
+
     class index:
         def GET(self, code):
             web.header('Content-Type', 'text/xml')
-            print render.index(code)
-        
+            return render.index(code)
+
     web.webapi.internalerror = web.debugerror
-    if __name__ == '__main__': web.run(urls, globals(), web.reloader)
+    if __name__ == '__main__': app.run()
