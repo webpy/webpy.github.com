@@ -58,6 +58,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 ##User Input:
 * [File Upload](/cookbook/fileupload)
+* [Store an uploaded file](/cookbook/storeupload)
 * [How to put a limit of size of uploaded files](/cookbook/limiting_upload_size)
 * [Accessing user input through web.input](/cookbook/input)
 * [How to use forms](/cookbook/forms)
