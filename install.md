@@ -236,22 +236,3 @@ If you want webpy to be accessible at 'http://example.com' instead of 'http://ex
     </IfModule>
 
 If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
