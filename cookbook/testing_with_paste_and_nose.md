@@ -36,7 +36,15 @@ This code resides in a file called test_code.py. The directory layout of the app
     ./test
         test_code.py        
 
-Most of the code example above should be fairly self-explanatory. From our main module, code, we import app, and then pass its wsgifunc() to Paste's TestApp. assert_equal() is provided by nose's utils, and works just like unittest's assertEqual().
+Most of the code example above should be fairly self-explanatory. From our main module, code, we import app, which is defined in the usual way:
+
+    app = web.application(urls, globals())
+
+To set up the test, we pass its wsgifunc() to Paste's TestApp, as you have already seen in the example.
+
+    app = TestApp(app.wsgifunc(*middleware))
+
+assert_equal() is one of the methods provided by nose's utils, and works just like unittest's assertEqual().
 
 ## Setting Up the Test Environment
 
