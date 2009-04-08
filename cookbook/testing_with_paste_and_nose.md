@@ -29,7 +29,14 @@ This example makes use of the Paste and Nose libraries. [Paste](http://pythonpas
 
 ## Explanation
 
-Most of the above example should be fairly self-explanatory. From our main module, code, we import app, and then pass its wsgifunc() to Paste's TestApp. assert_equal() is provided by nose's utils, and works just like unittest's assertEqual().
+This code resides in a file called test_code.py. The directory layout of the application looks like this:
+
+    ./
+    code.py
+    ./test
+        test_code.py        
+
+Most of the code example above should be fairly self-explanatory. From our main module, code, we import app, and then pass its wsgifunc() to Paste's TestApp. assert_equal() is provided by nose's utils, and works just like unittest's assertEqual().
 
 ## Setting Up the Test Environment
 
