@@ -196,7 +196,7 @@ Arbitrary python code can be written using the `code` block.
         y = x.title()
         z = len(x + y)
         
-        def limit(s, width=10)
+        def limit(s, width=10):
             """limits a string to the given width"""
             if len(s) >= width:
                 return s[:width] + "..."
