@@ -52,6 +52,8 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
+[sitecanary.com](https://sitecanary.com/) a site for being alerted if your website is down.
+
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
 [ChiefMal](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
@@ -142,7 +144,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
 
-"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"   
+"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented ><strong style="display:none;"><a href="http://ma-cigarette-electronique.com">cigarette electronique</a></strong>code with too much magic behavior. upvars(), bah.)"   
 - Guido van Rossum, creator of Python [#][31]
 
    [31]: http://www.artima.com/weblogs/viewpost.jsp?thread=146503
@@ -223,5 +225,5 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [launchpad site](http://launchpad.net/webpy)
 
 <img src="http://webpy.org/static/webpy-green.png" />
-<h2 style="color:#fff"><a href="http://www.du-pognon.com" style="color:#fff;cursor:default;">gagner de l'argent</a> | <a href="http://www.annuairedesenfants.net" style="color:#fff;cursor:default;">sites pour enfants</a> | <a href="http://www.mybigtopics.com" style="color:#fff;cursor:default;">interior trends and design</a> | <a href="http://www.careourkids.com" style="color:#fff;cursor:default;">Child care advice</a> | <a href="http://www.annuairedelamode.net" style="color:#fff;cursor:default;">annuaire mode</a> | <a href="http://www.modepourenfant.fr" style="color:#fff;cursor:default;">mode enfant et magazine de mode enfantine</a> </h2>
+<h2><strong style="display:none;"><a href="http://www.du-pognon.com">gagner de l'argent</a> | <a href="http://www.annuairedesenfants.net">sites pour enfants</a> | <a href="http://www.lexique-mode.com/">Lexique mode</a> | <a href="http://www.tendances-de-mode.com/">mode</a> | <a href="http://www.mybigtopics.com">interior trends and design</a> | <a href="http://www.jeux-fille.eu/">Jeux de Fille</a> | <a href="http://www.careourkids.com">Child care advice</a> | <a href="http://www.annuairedelamode.net">annuaire mode</a> | <a href="http://www.modepourenfant.fr">mode enfant et magazine de mode enfantine</a></strong></h2>
 <p></p>
