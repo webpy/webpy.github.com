@@ -67,10 +67,14 @@ title: faq
 
     Web-servingスレッド以外のスレッドからデータベースにアクセスする場合（例えば、新しいスレッドを作ったとか、Webページのserveを開始しなかった場合とか）には、`web.load()`を実行する必要があります。web.py 0.3では修正される予定です。ごめんなさい。
 
-99. **Can I iterate over an IterBetter multiple times?**
+99. **IterBetterは複数回イテレートできますか？**
 
-    No. Do `ib = list(ib)` first to turn it from an IterBetter into a list.
+    できません。`ib = list(ib)`でIterBetterをリストに変換してください。
 
-99. **I stumbled over a bug in web.py. Where can I file it?**
+99. **どのようにデバッグ文をコンソールに出力しますか？**
 
-    Go to the [webpy launchpad site](https://launchpad.net/webpy), login (or register if you have to) and click on "report a bug".
+    web.debug("デバッグ文")
+
+99. **もしwebpyの不具合(バグ)を見つけた場合どこで報告すればいいのですか？**
+
+    [ここ(webpy launchpad site)](https://launchpad.net/webpy)からバグ報告することができます。ログインが必要な場合は登録を行ってからバグ報告をしてください。
