@@ -128,7 +128,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 - Adam Atlas
 
 "very nicely written and concise (not to mention it's written by Aaron Swartz, whose coding skills are very trustable), and doesn't get in my way"   
-- Jonas Galvez, Blogamundo [#][26]
+- Jonas Galvez, Aupeo [#][26]
 
    [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
