@@ -64,7 +64,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
-   [21]: http://yandex.ru                              &nbsp;&nbsp;&nbsp;<b style="color:#fff"><a href="http://www.seoblackout.com" style="color:#fff;cursor:default;">Referencement Google</a></b>
+   [21]: http://yandex.ru
 
 [LShift][22] has used web.py to build websites for [Expro][23] and [publisher Dorling Kindersley][24]. "web.py allows us to do what we do best," they report. "It does the webapp thing brilliantly, and without requiring us to compromise on flexibility and originality."
 
