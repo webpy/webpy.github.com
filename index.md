@@ -220,12 +220,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [powered by web.py buttons](http://luke.jottit.com/webpy_logo)
 
-### web.py development:d
+### web.py development
 
 * [git repository](http://github.com/webpy/webpy)
 
 * [launchpad site](http://launchpad.net/webpy)
-
-<img src="http://webpy.org/static/webpy-green.png" />
-<h2><strong style="display:none;"><a href="http://www.du-pognon.com">gagner de l'argent</a> | <a href="http://www.annuairedesenfants.net">sites pour enfants</a> | <a href="http://www.lexique-mode.com/">Lexique mode</a> | <a href="http://www.tendances-de-mode.com/">mode</a> | <a href="http://www.mybigtopics.com">interior trends and design</a> | <a href="http://www.jeux-fille.eu/">Jeux de Fille</a> | <a href="http://www.careourkids.com">Child care advice</a> | <a href="http://www.annuairedelamode.net">annuaire mode</a> | <a href="http://www.modepourenfant.fr">mode enfant et magazine de mode enfantine</a></strong></h2>
-<p></p>
