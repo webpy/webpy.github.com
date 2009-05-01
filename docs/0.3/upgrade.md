@@ -133,12 +133,3 @@ In web.py 0.3, `web.input()` returns values in unicode. This may create trouble 
 To force `web.input` to return strings instead of unicode values, use:
 
     web.input(_unicode=False)
-
-
-If you have code like this:
-
-    referer = web.ctx.environ["HTTP_REFERER"]
-
-in web.py 0.3, you will change it like this:
-
-    refer = web.ctx.env.get("HTTP_REFERER")
