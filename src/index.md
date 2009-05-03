@@ -41,8 +41,6 @@ title: code samples
 
 * [redditriver.com](http://redditriver.com): a mobile version of reddit.com ([src](http://www.catonmat.net/download/redditriver-dot-com-python-source-code.zip) and [how it was written](http://www.catonmat.net/blog/designing-redditriver-dot-com-website/))
 
-* [ibrouter](http://delaunay.org/antoine/i): a photo gallery system ([src](http://trac.delaunay.org/browser/srv/www.delaunay.org/antoine/i/))
-
 * [webme](http://wm.justos.org/txt.intro): a blogging and podcasting system ([src](http://wm.justos.org/static/download/webme-0.2.0.tar.gz))
 
 * [webr](http://www.antrix.net/stuff/webr): a [flickr](http://flickr.com) powered photo gallery
@@ -50,3 +48,5 @@ title: code samples
 * [colr.org (v5)](http://www.colr.org/): A site for playing with colors. (see [rewrite](http://www.colr.org/rewrite.html))
 
 * [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item (CRUD). ([src](http://svn.natalian.org/projects/todo/))
+
+* [music-share](http://github.com/andreisavu/music-share/tree/master): a simple web app for music sharing (mp3 files). ([src](http://github.com/andreisavu/music-share/tree/master)) 
