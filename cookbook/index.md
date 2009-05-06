@@ -23,7 +23,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 ##Basics:
 * [Hello World](/cookbook/helloworld)
-* [Serving Static File](/cookbook/staticfiles)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">s</a>
+* [Serving Static Files](/cookbook/staticfiles)
 * [Seeother and Redirect](/cookbook/redirect+seeother)
 * [using subapplications](/cookbook/subapp)
 * [Serving XML](/cookbok/xmlfiles)
