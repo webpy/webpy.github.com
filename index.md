@@ -133,12 +133,12 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
    [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
 "the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
-- [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) and [an agenda][34] ([source][35]) with it
+- [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) and [an agency][34] ([source][35]) with it
 
    [27]: http://delaunay.org/antoine/
    [28]: http://www.tendances-de-mode.com/
+   [34]: http://agences-de.com/
    [29]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/ibrouteur/;style=gitweb
-   [34]: http://metagenda.org
    [35]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/glocal/;style=gitweb
 
 "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
@@ -174,7 +174,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
     * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
-    * [template.py 教程 (tutorial)](http://gamexg-cw.cn/2008/10/15/webpy-%E6%96%87%E6%A1%A3%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91%EF%BC%9Awebpy-%E6%A8%A1%E6%9D%BF%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81%E5%90%8D%E7%A7%B0templetor/)
     * [form.py (short) tutorial](/form)
     * [日本語](/tutorial2.ja)
     * [ελληνικά](http://webpy.org/tutorial2.el)
@@ -186,7 +185,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [pусский](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
-    * [简体中文](http://www.keli.info/static/webpy-tutorial.html)
 
 
 * [code documentation](/docs)
