@@ -1,14 +1,13 @@
 ---
 layout: default
-title: How to use templates on Goole App Engine
+title: How to use templates on Google App Engine
 ---
 
-# How to use templates on Goole App Engine
-
+# How to use templates on Google App Engine
 
 ## Problem
 
-How to use templates on Goole App Engine
+How to use templates on Google App Engine
 
 ## Solution
 
