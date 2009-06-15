@@ -40,7 +40,7 @@ Data Found in `ctx`
 *   `host` &ndash; the domain requested by the user *example.org*
 *   `ip` &ndash; the IP address of the user *xxx.xxx.xxx.xxx*
 *   `method` &ndash; the HTTP method used *GET*
-*   `path` &ndash; the path requested by the user */articles/845*
+*   `path` &ndash; the path requested by the user, relative to the current application. If you are using subapplications, any part of the url matched by the outer application will be trimmed off. E.g. you have a main app in `code.py`, and a subapplication called `admin.py`. In `code.py`, you point `/admin` to `admin.app`.  In `admin.py`, you point `/stories` to a class called `stories`. Within `stories`, `web.ctx.path` will be `/stories`, not `/admin/stories`.
 *   `protocol` &ndash; the protocol used *https*
 *   `query` &ndash; an empty string if there are no query arguments otherwise a `?` followed by the query string *?foo=amorphous&bar=blasphemous*
 *   `fullpath` a.k.a. `path + query` &ndash; the full path requested **including** query arguments */articles/845?foo=amorphous&bar=blasphemous*
