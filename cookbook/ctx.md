@@ -34,16 +34,16 @@ Data Found in `ctx`
 
 ### Request ###
 *   `environ` a.k.a. `env` &ndash; a dictionary containing the standard [WSGI environment variables](http://www.python.org/dev/peps/pep-0333/#environ-variables)
-*   `home` &ndash; the base path for the application *http://example.org*
-*   `homedomain` &ndash; ??? *http://example.org*
-*   `homepath` &ndash; The part of the path requested by the user which was trimmed off the current app. That is homepath + path = the path actually requested in HTTP by the user.
-*   `host` &ndash; the domain requested by the user *example.org*
-*   `ip` &ndash; the IP address of the user *xxx.xxx.xxx.xxx*
-*   `method` &ndash; the HTTP method used *GET*
-*   `path` &ndash; the path requested by the user, relative to the current application. If you are using subapplications, any part of the url matched by the outer application will be trimmed off. E.g. you have a main app in `code.py`, and a subapplication called `admin.py`. In `code.py`, you point `/admin` to `admin.app`.  In `admin.py`, you point `/stories` to a class called `stories`. Within `stories`, `web.ctx.path` will be `/stories`, not `/admin/stories`.
-*   `protocol` &ndash; the protocol used *https*
-*   `query` &ndash; an empty string if there are no query arguments otherwise a `?` followed by the query string *?foo=amorphous&bar=blasphemous*
-*   `fullpath` a.k.a. `path + query` &ndash; the full path requested **including** query arguments */articles/845?foo=amorphous&bar=blasphemous*
+*   `home` &ndash; the base path for the application, including any parts "consumed" by outer applications *http://example.org/admin*
+*   `homedomain` &ndash; ? (appears to be protocol + host) *http://example.org*
+*   `homepath` &ndash; The part of the path requested by the user which was trimmed off the current app. That is homepath + path = the path actually requested in HTTP by the user. E.g. */admin*
+*   `host` &ndash; the hostname (domain) and (if not default) the port requested by the user. E.g. *example.org*, *example.org:8080*
+*   `ip` &ndash; the IP address of the user. E.g. *xxx.xxx.xxx.xxx*
+*   `method` &ndash; the HTTP method used. E.g. *GET*
+*   `path` &ndash; the path requested by the user, relative to the current application. If you are using subapplications, any part of the url matched by the outer application will be trimmed off. E.g. you have a main app in `code.py`, and a subapplication called `admin.py`. In `code.py`, you point `/admin` to `admin.app`.  In `admin.py`, you point `/stories` to a class called `stories`. Within `stories`, `web.ctx.path` will be `/stories`, not `/admin/stories`. E.g. */articles/845*
+*   `protocol` &ndash; the protocol used. E.g. *https*
+*   `query` &ndash; an empty string if there are no query arguments otherwise a `?` followed by the query string. E.g. *?fourlegs=good&twolegs=bad*
+*   `fullpath` a.k.a. `path + query` &ndash; the path requested *including* query arguments but *not* including `homepath`. E.g. */articles/845?fourlegs=good&twolegs=bad*
 
 ### Response ###
 *   `status` &ndash; the HTTP status code (default '200 OK') *401 Unauthorized*
