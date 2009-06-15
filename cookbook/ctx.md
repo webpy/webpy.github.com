@@ -36,7 +36,7 @@ Data Found in `ctx`
 *   `environ` a.k.a. `env` &ndash; a dictionary containing the standard [WSGI environment variables](http://www.python.org/dev/peps/pep-0333/#environ-variables)
 *   `home` &ndash; the base path for the application *http://example.org*
 *   `homedomain` &ndash; ??? *http://example.org*
-*   `homepath` &ndash; ???
+*   `homepath` &ndash; The part of the path requested by the user which was trimmed off the current app. That is homepath + path = the path actually requested in HTTP by the user.
 *   `host` &ndash; the domain requested by the user *example.org*
 *   `ip` &ndash; the IP address of the user *xxx.xxx.xxx.xxx*
 *   `method` &ndash; the HTTP method used *GET*
