@@ -65,6 +65,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [How to put a limit of size of uploaded files](/cookbook/limiting_upload_size)
 * [Accessing user input through web.input](/cookbook/input)
 * [How to use forms](/cookbook/forms)
+* [Render individual form fields](/cookbook/form_fields)
 
 ##Database:
 * [Multiple databases](/cookbook/multidbs)
