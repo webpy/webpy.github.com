@@ -11,7 +11,7 @@ You want to render individual form fields in templates
 
 ### Solution
 
-You can use the `render()` method for individual forms to render the fields in your template.
+You can use the `render()` method for individual fields to render the fields in your template.
 
 Let's assume you want to create a name/surname form. Very simple, with only two fields, and no validation, just for testing purposes.
 
