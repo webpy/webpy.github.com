@@ -45,6 +45,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 ##Utils:
 * [Sending Mail](/cookbook/sendmail)
 * [Sending Mail Using Gmail](/cookbook/sendmail_using_gmail)
+* [Webservice using soaplib + WSDL](/cookbook/webservice)
 
 ##Templates:
 * [Templetor: The web.py templating system](http://webpy.org/docs/0.3/templetor )
