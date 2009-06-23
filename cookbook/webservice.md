@@ -33,8 +33,8 @@ Optio's soaplib makes it really straightforward to write SOAP web service views 
      
 
 
-     class HelloService(SoapService):
-         """Class for web.py """
+    class HelloService(SoapService):
+        """Class for web.py """
         def start_response(self,status, headers):
             web.ctx.status = status
             for header, value in headers:
@@ -56,4 +56,15 @@ Optio's soaplib makes it really straightforward to write SOAP web service views 
         app.run()
 
 
+
+
+You can test it with a soaplib client: 
+
+    >>> from soaplib.client import make_service_client
+    >>> from test import HelloService
+    >>> client = make_service_client('http://localhost:8080/hello', HelloService())
+    >>> client.hello('John')
+    'Hello world John'
+
+For more information of webservice see: [soaplib](http://trac.optio.webfactional.com/), 
 
