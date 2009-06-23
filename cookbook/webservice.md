@@ -66,5 +66,7 @@ You can test it with a soaplib client:
     >>> client.hello('John')
     'Hello world John'
 
+And you can view the WSDL in [http://localhost:8080/hello.wsdl](http://localhost:8080/hello.wsdl)
+
 For more information of webservice see: [soaplib](http://trac.optio.webfactional.com/), 
 
