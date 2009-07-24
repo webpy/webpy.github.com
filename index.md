@@ -146,7 +146,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
 
-"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented ><strong style="display:none;"><a href="http://ma-cigarette-electronique.com">cigarette electronique</a></strong>code with too much magic behavior. upvars(), bah.)"   
+"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"   
 - Guido van Rossum, creator of Python [#][31]
 
    [31]: http://www.artima.com/weblogs/viewpost.jsp?thread=146503
