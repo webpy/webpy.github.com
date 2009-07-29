@@ -32,6 +32,3 @@ If you are on Ubuntu Linux or Debian, you can install web.py using `apt-get`. Bu
 ## Get the latest development version
 
     $ git clone git://github.com/webpy/webpy.git
-
-
-<h2><strong style="display:none"><a href="http://www.du-pognon.com">gagner de l'argent sur internet</a> c'est facile !</strong></h2>
