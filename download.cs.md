@@ -7,7 +7,7 @@ title: Získání web.py
 
 ## Získání poslední stabilní verze
 
-Nejsnažší cesta k instalaci web.py je použít [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall):
+Nejsnazší cesta k instalaci web.py je použít [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall):
 
     $ easy_install web.py
 
