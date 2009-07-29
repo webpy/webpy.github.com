@@ -5,9 +5,9 @@ title: ČKD
 
 # ČKD
 
-99. **How do I use template.py templates?**
+99. **Jak použiji šablony template.py**
 
-    For basic doc and some code snippets, see [template.py doc](/templetor)
+    Pro základní dokumentaci a nějaké ukázky kódu, se podívej na [template.py dokumentaci](/templetor)
 
     To display your page from inside a web.py app, just do
 
