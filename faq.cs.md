@@ -5,11 +5,11 @@ title: ČKD
 
 # ČKD
 
-99. **Jak použiji šablony template.py**
+99. **Jak použiji šablony template.py?**
 
-    Pro základní dokumentaci a nějaké ukázky kódu, se podívej na [template.py dokumentaci](/templetor)
+    Pro základní dokumentaci a nějaké ukázky kódu, se podívej na [template.py dokumentaci](/templetor).
 
-    To display your page from inside a web.py app, just do
+    Chcete-li zobrazit stránku z web.py aplikace, stačí
 
             homepage = template.Template(open("homepage.tmpl").read())
             print homepage()
@@ -32,7 +32,7 @@ title: ČKD
     Můžete napsat svůj vlastní notfound handler a připojit ho k  web.webapi.notfound
 
             def my_notfound(): 
-                print "MY OWN NOT FOUND" 
+                print "MUJ VLASTNI NOT FOUND" 
             web.webapi.notfound = my_notfound 
 
 99. **How can i get auto completion in python after loading the webpy module?**
@@ -57,10 +57,10 @@ title: ČKD
 
     No. Do `ib = list(ib)` first to turn it from an IterBetter into a list.
 
-99. **How do I debug print to the console?**
+99. **Jak vytisknu debug do konsole?**
 
-	web.debug("I will get printed to the console and not the body of the webpage")
+	web.debug("Budu vytištěn do konsole a ne do těla stránky")
 
-99. **I stumbled over a bug in web.py. Where can I file it?**
+99. **Narazil jsem na chybu ve web.py. Kam ji můžu nahlásit?**
 
-	Go to the [webpy launchpad site](https://launchpad.net/webpy), login (or register if you have to) and click on "report a bug".
+	Jdi na [webpy launchpad](https://launchpad.net/webpy), přihlaš se (nebo se zaregistruj) a klikni na "report a bug".
