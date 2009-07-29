@@ -24,7 +24,7 @@ Když nechcete instalovat web.py pro celý systém (nebo když chcete zabalit we
     $ wget http://webpy.org/static/web.py-0.32.tar.gz
     $ tar xvzf web.py-0.32.tar.gz
     $ ln -s webpy/web .
-   
+
 V Ubuntu Linuxu nebo Debianu, můžete instalovat web.py přes `apt-get`. Pak ale možná nezískáte poslední verzi, protože cyklus vydání Debianu/Ubuntu je jiný než u web.py.
 
     $ sudo apt-get install python-webpy
