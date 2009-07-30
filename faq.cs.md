@@ -15,9 +15,9 @@ title: ČKD
             print homepage()
 
     
-99. **Why are the urls just one long list?**
+99. **Proč jsou adresy URL pouze jeden dlouhý seznam?**
 
-    If they were a dictionary, they wouldn't be ordered. If it was a list of tuples, then it'd be a lot more typing.
+    Pokud by byly ve slovníku, nebylo by je možné řadit. Pokud by byly v seznamu n-tic (tuple), bylo by s nima mnohem více psaní.
 
 99. **How do I serve static files such as JavaScripts or images like PNG and JPG with the web.py server?**
 
@@ -53,9 +53,9 @@ title: ČKD
 
     If you're trying to access the database from a non-web-serving thread (e.g. you created a new thread or you never started serving web pages) then you need to run `web.load()`. Sorry, this will be fixed in web.py 0.3.
 
-99. **Can I iterate over an IterBetter multiple times?**
+99. **Mohu vícekrát iterovat IterBetter?**
 
-    No. Do `ib = list(ib)` first to turn it from an IterBetter into a list.
+    Ne. Nejdřív převeď IterBetter na seznam pomocí `ib = list(ib)`.
 
 99. **Jak vytisknu debug do konsole?**
 
