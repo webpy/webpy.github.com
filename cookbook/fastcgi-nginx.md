@@ -9,7 +9,7 @@ This cookbook entry explains how to run web.py on Nginx with Fastcgi.
 
 ### Requirements
 
-* Nginx 0.8.0 or 0.7.* (with fastcgi and rewrite module).
+* Nginx 0.8.\* or 0.7.\* (with fastcgi and rewrite module).
 * Webpy 0.32
 * Spawn-fcgi 1.6.2
 * Flup
@@ -18,15 +18,15 @@ Older versions may work, but aren't tested.
 
 ### Resources
 
-* [Nginx install guide.](http://wiki.nginx.org/NginxInstall)
+* [Nginx wiki](http://wiki.nginx.org/NginxInstall)
 * [Spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi/news)
 * [Flup](http://trac.saddi.com/flup)
 
 ### Notes
 
-* You may replace <code>index.py</code> with your own file name.
-* <code>/path/to/www</code> Is the path to the directory where your webpy application is located.
-* <code>/path/to/www/index.py</code> is the full path to your python file.
+* You may replace `index.py` with your own file name.
+* `/path/to/www` Is the path to the directory where your webpy application is located.
+* `/path/to/www/index.py` is the full path to your python file.
 * Do not run anything until you are at *Run*.
 
 ## Nginx configuration
@@ -46,7 +46,7 @@ To serve static files add this:
 	    }
 	}
 
-Note: the address and port may be different.
+__Note:__ the address and port may be different.
 
 ## Spawn-fcgi
 
@@ -66,12 +66,12 @@ Shutdown:
 	#!/bin/sh
 	kill `pgrep -f "python /path/to/www/index.py"`
 
-Note: You're free to choose which address, port, directory and filename to use, but be sure to adjust the Nginx configuration.
+__Note:__ You're free to choose which address, port, directory and filename to use, but be sure to adjust the Nginx configuration.
 
 ## Hello world!
 
 Save the following code in your www directory and call the file index.py (or whatever you like).
-The following line is required: <code>web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)</code>.
+The following line is required: `web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)`.
 
 	#!/usr/bin/env python
 	# -*- coding: utf-8 -*-
@@ -89,14 +89,14 @@ The following line is required: <code>web.wsgi.runwsgi = lambda func, addr=None:
 		web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 		app.run()
 
-Note: make your file executable by doing <code>chmod +x index.py</code>. You'll get errors if it isn't executable.
+Note: make your file executable by doing `chmod +x index.py`. You'll get errors if it isn't executable.
 
 ## Run
 
-1. Start a process with <code>spawn-fcgi</code>.
+1. Start a process with `spawn-fcgi`.
 2. Start Nginx.
 
-To check if it runs do <code>ps aux | grep index.py</code> or simply visit the page in your browser.
+To check if it runs do `ps aux | grep index.py` or simply visit the page in your browser.
 
 To reload your configuration:
 
