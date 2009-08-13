@@ -44,7 +44,7 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 ## Who uses web.py?
 
-web.py was originally published while Aaron Swartz worked at [reddit.com][20], where the site used it as it grew to become one of the top 1000 sites according to Alexa and served millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explained founder Steve Huffman. The site was rewritten using other tools after Aaron left.
+web.py was originally published while Aaron Swartz worked at [reddit.com][20], where the site used it as it grew to become one of the top 1000 sites according to Alexa and served millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explained founder Steve Huffman. (The site was rewritten using other tools after being acquired by Condé Nast.)
 
    [20]: http://reddit.com/
 
@@ -137,7 +137,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [27]: http://delaunay.org/antoine/
    [28]: http://www.tendances-de-mode.com/
-   [34]: http://agences-de.com/
+   [34]: http://www.bingofr.com/
    [29]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/ibrouteur/;style=gitweb
    [35]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/glocal/;style=gitweb
 
