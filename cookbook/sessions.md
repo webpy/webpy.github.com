@@ -56,7 +56,7 @@ And you need to pass `db` object and session table name to the constructor of `D
     session = web.session.Session(app, store, initializer={'count': 0})
 
 
-Options related to sessions can be modified using the `sessions_paramerts` dict in `web.config`. The default values are shown below.
+Options related to sessions can be modified using the `sessions_parameters` dict in `web.config`. The default values are shown below.
 
     web.config.session_parameters['cookie_name'] = 'webpy_session_id'
     web.config.session_parameters['cookie_domain'] = None
