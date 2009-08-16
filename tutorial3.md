@@ -605,11 +605,13 @@ Each time you visit `hello`, the number of pages you visited is incremented (`se
 hello.py
 
     import web
+    web.config.debug=False
     
     urls = (
       '/', 'hello',
       '/bye/', 'bye')
-    
+
+        
     app = web.application(urls, globals())
     session = web.session.Session(app, web.session.DiskStore('sessions'),
                                   initializer={'count': 0})
