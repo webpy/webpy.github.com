@@ -6,7 +6,7 @@ title: web.py 0.2 tutorial
 # web.py 0.2 tutorial
 
 ## Installation
-Vous  connaissez Python et vous voulez construire un site web. Web.py founit le code pour faire cela d'une manière simple.
+Vous  connaissez Python et vous voulez construire un site web. Web.py fournit le code pour faire cela d'une manière simple.
 
 Si vous voulez faire l’ensemble de ce tutoriel vous devrez installer Python, web.py, flup, psycopg2 et Postgres (ou une autre base de données avec son driver pour Python, par exemple : MySQL et mysqldb). Pour plus de détails voir le site de [webpy.org](http://webpy.org/).
 
