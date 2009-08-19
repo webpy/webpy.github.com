@@ -5,6 +5,10 @@ title: Webpy + LightTTPD with FastCGi
 
 # Webpy + LightTTPD with FastCGi
 
+If you have problems with this recipe read this thread:
+
+http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
+
 The following applies on lighttpd version 1.4.18
 
 ##Note:  
