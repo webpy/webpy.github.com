@@ -54,7 +54,7 @@ Your lighttpd config can be something like:
     
      server.modules = ("mod_fastcgi", "mod_rewrite")
      server.document-root = "/path/to/root/"     
-     fastcgi.server = ( "code.py" =>     
+     fastcgi.server = ( "/code.py" =>     
      (( "socket" => "/tmp/fastcgi.socket",
         "bin-path" => "/path/to/root/code.py",
         "max-procs" => 1
@@ -64,7 +64,7 @@ Your lighttpd config can be something like:
      url.rewrite-once = (
        "^/favicon.ico$" => "/static/favicon.ico",
        "^/static/(.*)$" => "/static/$1",
-       "^/(.*)$" => "code.py/$1"
+       "^/(.*)$" => "/code.py/$1"
      )
     
 With some versions of lighttpd, it is important to ensure the "check-local" property of the fastcgi.server entry is set to "false", especially if your `code.py` is located outside of the document root.
@@ -73,7 +73,7 @@ If you get error messages about not being able to import flup, install it by typ
 
 Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable.  This will cause your fastcgi.server configuration above to look something like this:
      
-    fastcgi.server = ( "code.py" =>
+    fastcgi.server = ( "/code.py" =>
     ((
        "socket" => "/tmp/fastcgi.socket",
        "bin-path" => "/path/to/root/code.py",
