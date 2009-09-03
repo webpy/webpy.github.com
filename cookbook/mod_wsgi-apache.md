@@ -16,7 +16,7 @@ Note:
 
 Steps:
 
-* Download and install mod_wsgi from its website: http://code.google.com/p/modwsgi/. It will install a '.so' module in Apache module directory. e.g.
+* Download and install mod_wsgi from its website: [http://code.google.com/p/modwsgi/](http://code.google.com/p/modwsgi/). It will install a '.so' module in Apache module directory. e.g.
 
         /usr/lib64/httpd/modules/
 
@@ -63,4 +63,4 @@ If you use sessions with mod_wsgi, you should change you code like below:
 
 #mod_wsgi performance:
 For mod_wsgi performance, please refer to mod_wsgi wiki page:
-    http://code.google.com/p/modwsgi/wiki/PerformanceEstimates
+    [http://code.google.com/p/modwsgi/wiki/PerformanceEstimates](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates)
