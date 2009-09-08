@@ -12,6 +12,7 @@ title: web.py 0.3 documentation
 * Detailed Tutorial _(still in progress)_
     * Introduction
     * [Templetor: The web.py templating system](/docs/0.3/templetor)
+    * [Working with forms](/form)
     * Working with database
     * Working with session
 
