@@ -136,7 +136,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 - [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) and [an agency][34] ([source][35]) with it
 
    [27]: http://delaunay.org/antoine/
-   [28]: http://www.tendances-de-mode.com/
+   [28]: http://www.ramifr.com/
    [34]: http://www.bingofr.com/
    [29]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/ibrouteur/;style=gitweb
    [35]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/glocal/;style=gitweb
