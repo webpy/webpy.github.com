@@ -48,11 +48,13 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [20]: http://reddit.com/
 
+[Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
+
 [local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master)
 
-[watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
-
 [sitecanary.com](https://sitecanary.com/) a site for being alerted if your website is down.
+
+[watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
 [archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py
 
@@ -133,13 +135,11 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
    [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
 "the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
-- [Delaunay Antoine][27], built [a photo gallery][28] ([source][29]) and [an agency][34] ([source][35]) with it
+- [Delaunay Antoine][27], built [a photo gallery][28] and [an agenda][34] with it
 
    [27]: http://delaunay.org/antoine/
-   [28]: http://www.ramifr.com/
-   [34]: http://www.bingofr.com/
-   [29]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/ibrouteur/;style=gitweb
-   [35]: http://hg.delaunay.org/hacking?mf=9fcf30dc6138;path=/webpy/glocal/;style=gitweb
+   [28]: http://github.com/antoine/ibrouteur/
+   [34]: http://metagenda.org
 
 "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
 - Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]
