@@ -1,9 +1,9 @@
 ---
 layout: default
-title: web.py templating system (codename: templetor) 
+title: web.py templating system (codename: templetor)
 ---
 
-# web.py templating system (codename: templetor) 
+# web.py templating system (codename: templetor)
 
 There are almost as many Python templating systems as there are web 
 frameworks (and, indeed, it seems like many templating systems are 
