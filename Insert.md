@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Insert: Adding a new entry to a database
+title: Insert
 ---
 
-# Insert: Adding a new entry to a database
+# Insert
 
 ###Problem: You want to add data to a database
 
@@ -40,4 +40,4 @@ The _test variable lets you see the SQL produced by the statement:
     ><sql: 'SELECT * FROM mytable OFFSET 10'>
 
 ##\**values
-A set of named arguments that represent the fields in your table. If values are not given, the database may create default values or issue a warning.
+A set of named arguments that represent the fields in your table. If values are not given, the database may create default values or issue a warning
