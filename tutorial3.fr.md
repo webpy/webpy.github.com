@@ -5,7 +5,24 @@ title: web.py 0.3 tutorial
 
 # web.py 0.3 tutorial
 
-# Intoduction
+# Sommaire
+
+
+* <a href="#introduction">Prérequis</a>
+* <a href="#manipurl">Manipuler les URLs</a>
+* <a href="#gereurl">Gérer les URLs</a>
+* <a href="#getpost">GET et POST : la différence</a>
+* <a href="#index">Page index - ma première classe</a>
+* <a href="#lance">Lancer le serveur</a>
+* <a href="#template">Modèles, gabarits</a>
+* <a href="#bd">Base de données</a>
+* <a href="#affbd">Afficher le contenu d'une base de données</a>
+* <a href="#ecrbd">Ecrire dans une base de données</a>
+* <a href="#debug">Debugger</a>
+
+
+<a name="introduction"></a>
+# Prérequis
 
 
 
@@ -13,13 +30,13 @@ Vous connaissez Python et vous désirez construire un site web. Webpy vous perme
 
 Si vous décidez de suivre l'ensemble de ce tutorial, vous aurez besoin d'installer Python, web.py, flup, psycopg2 et Postgres (ou une base de donnée equivalente et les pilotes python). Pour plus de détails, veuillez consulter [webpy.org](http://webpy.org/)
 
-Si vous possédez déjà un projet web.py existant, jetez un oeil à la page de [mise à jour] (http://webpy.infogami.com/upgrade_to_point3) pour plus d'informations sur la migration.
+Si vous possédez déjà un projet web.py existant, jetez un oeil à la page de [mise à jour](http://webpy.org/docs/0.3/upgrade) pour plus d'informations sur la migration.
 
 
 # Commençons
 
 
-
+<a name="manipurl"></a>
 ## Manipuler les URLs
 
 La partie la plus importante de n'importe quel site web est la structure des URLs. Les URLs ne sont pas que des liens que vos visiteurs voient et envoient par mails à leurs amis, elles fournissent aussi un modèle mental sur la façon avec laquel un site web fonctionne. Sur des sites populaires tels que del.icio.us, les URLs font partie même de l'interface utilisateur. Web.py rend la création d'URLs facile.
@@ -41,6 +58,7 @@ La première partie est une expression régulière que l'on applique à une cha�
 
 Cette ligne signifie que nous souhaitons l'URL / (Note: la page d'accueil) qui doit être traitée par la classe nommée 'index'.
 
+<a name="gereurl"></a>
 ## Gérer les URLs
 
 Maintenant, nous avons besoin de créer une application spécifiant les URLs.
@@ -49,12 +67,15 @@ Maintenant, nous avons besoin de créer une application spécifiant les URLs.
 
 Cela explique à web.py qu'il faut créer une application avec les URLs qui sont listées ci-dessus, en appelant les Classes dans l'espace de noms global de ce fichier.
 
+<a name="getpost"></a>
 ## GET et POST: la différence
 
 Alors que la plupart des gens ne le remarquent pas en naviguant simplement, votre navigateur utilise un protocole connu appelé HTTP pour communiquer avec le World Wide Web. Les détails ne sont pas importants, mais l'idée de base est que les visiteurs de sites web demandent aux serveurs de sites web de remplir certaines fonctions (telles que GET ou POST) sur les URLs (comme / ou /foo?f=1).
 
 GET est celle que nous connaissons tous, celle qui sert à demander le texte d'une page web. Lorsque vous tapez 'harvard.edu' dans votre navigateur, cela demande littéralement au serveur web de Harvard de fournir /. La seconde fonction très célèbre, POST, est souvent utilisée lorsque vous utilisez certains types de formulaires, comme une demande d'achat d'un produit. Vous utilisez POST chaque fois que vous soumettez une demande (comme le débit de votre carte de crédit et le traitement d'une commande). Cela est essentiel, parce que GET URLs peut être transmis et indexé par les moteurs de recherche, que vous voulez certainement pour la plupart de vos pages, mais ne désirez certainement pas pour des choses comme le traitement des ordres (imaginez si Google essaye de tout acheter sur votre site!)
 
+
+<a name="index"></a>
 ## Page index - ma première classe
 
 Dans notre code web.py, nous faisons la distinction entre les deux clairement. Maintenant, il est nécessaire d'écrire la Classe 'index'.
@@ -73,6 +94,7 @@ Cela explique à web.py qu'il faut lancer l'application que nous avons créé ci
 
 Maintenant notez que, bien que j'ai beaucoup parlé ici, nous avons seulement cinq ou six lignes de code tout au plus. C'est tout ce dont nous avons besoin pour créer une application web.py complète. 
 
+<a name="lance"></a>
 ## Lancer le serveur
 
 Si vous allez dans votre terminal et que vous tapez les lignes de commande suivantes :
@@ -93,7 +115,7 @@ Note: Vous pouvez spécifier le numéro de port à utiliser dans la ligne de com
 
 
 
-
+<a name="template"></a>
 # Modèles, gabarits
 
 Ecrire du HTML à l'intérieur de python peut être lourd et pesant. C'est bien plus amusant d'écrire du Python à l'intérieur du HTML. Par bonheur, web.py le fait très facilement.
@@ -149,6 +171,8 @@ puis effaçez la ligne qui définit le nom. Maintenant, visitez /joe et il devra
 
 Si vous désirez en apprendre davantage sur les gabarits de web.py, visitez la page [Templator](http://webpy.infogami.com/templetor)
 
+
+<a name="bd"></a>
 # Base de données
 
 Note: Avant de pouvoir utiliser une base de données, soyez certains d'avoir la librairie de la base de données appropriée déjà installée. Pour la base de donnée MySQL, utilisez MySQLdb et pour Postgres, utilisez psycopg2.
@@ -161,6 +185,7 @@ Premièrement, vous devez créer un objet database.
 
 C'est tout ce dont vous avez besoin -- web.py gèrera automatiquement la connection et la déconnection à la base de données.
 
+<a name="affbd"></a>
 ## Afficher le contenu d'une base de données
 
 Utilisez votre interface d'administration de la base de données, et créez une simple table dans la base de données:
@@ -198,6 +223,7 @@ En visitant à nouveau votre site, vous devriez voir: "Learn web.py".
 
 Félicitations ! Vous venez de créer une application complète qui lit une base de données. 
 
+<a name="ecrbd"></a>
 ## Ecrire dans une base données
 
 Maintenant, nous allons écrire dans la base de données.
@@ -240,7 +266,8 @@ db.update fonctionne comme db.insert excepté qu'au lieu de renvoyer l'ID, il la
 
 web.input, db.query, et d'autres fonctions dans web.py renvoient des Objets de Stockage (Storage objects), qui sont comme des dictionnaires mis à part que vous pouvez écrire d.foo en plus de d['foo']. Cela rend le code plus clair.
 
-### Debugger
+<a name="debug"></a>
+# Debugger
 
 web.py possède aussi des outils de debugging pour nous aider. Quand nous le faisons tourner avec le server web intégré, il commence l'application en mode debuggage. Dans ce mode, toutes les modifications du code et des gabarits sont automatiquement rechargées et les messages d'erreur contiennent de précieuses informations.
 
