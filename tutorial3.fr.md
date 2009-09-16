@@ -84,6 +84,7 @@ Vous verrez s'afficher : http://0.0.0.0:8080/
 Vous avez maintenant votre application web.py qui tourne comme un vrai serveur web sur votre ordinateur!
 
 En visitant cette URL, vous devriez voir "Hello, world!" dans votre navigateur. (Vous pouvez ajouter une adresse IP/Port après la partie "code.py" pour contrôler où web.py lancera le serveur. Vous pouvez aussi lui dire de faire fonctionner un serveur fastcgi ou scgi.)
+
 [Note traducteur : A PRECISER]
 
 Note: Vous pouvez spécifier le numéro de port à utiliser dans la ligne de commande, si vous ne souhaitez pas utiliser le port par défaut :
