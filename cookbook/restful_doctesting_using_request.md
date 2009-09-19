@@ -1,9 +1,9 @@
 ---
 layout: default
-title: RESTful `doctest`ing using `application.request`
+title: RESTful doctesting using app.request
 ---
 
-# RESTful `doctest`ing using `application.request`
+# RESTful doctesting using app.request
 
 #!/usr/bin/env python
     
