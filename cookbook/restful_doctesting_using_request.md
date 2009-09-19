@@ -38,7 +38,7 @@ title: RESTful doctesting using app.request
     
     paths = (
       '/mathematicians(/)?', 'Mathematicians',
-      '/mathematicians/([a-z])-([a-z]{3,})', 'Mathematician'
+      '/mathematicians/([a-z])-([a-z]{2,})', 'Mathematician'
     )
     app = web.application(paths, globals())
     
