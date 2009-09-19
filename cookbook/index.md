@@ -61,6 +61,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 ##Testing:
 * [Testing with Paste and Nose](/cookbook/testing_with_paste_and_nose)
+* [RESTful doctesting using an application's request method](/cookbook/restful_doctesting_using_request)
 
 ##User Input:
 * [File Upload](/cookbook/fileupload)
