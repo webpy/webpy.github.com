@@ -94,6 +94,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [f]: http://fotosaur.us
 
+[Groupe 770](http://www.bingofr.com/casino-poker-paris-sportifs-et-bingo-en-ligne-avec-le-groupe-770/) is a nopaste/Pastebin app with Free and Open api, and of course
+
 [URIs.us][u] is service for creating short urls. Deploying on Google App Engine
 
    [u]: http://uris.us 
@@ -177,6 +179,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [form.py (short) tutorial](/form)
     * [日本語](/tutorial2.ja)
     * [ελληνικά](http://webpy.org/tutorial2.el)
+    * [Français](/tutorial3.fr)
 
 * [tutorials (old version)](/tutorial):
     * [english](http://webpy.org/tutorial)
