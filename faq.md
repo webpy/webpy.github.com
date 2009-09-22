@@ -25,7 +25,7 @@ title: FAQ
 
 99. **Where can I go for additional help?**
 
-    Google Groups has a [web.py grou](http://groups.google.com/group/webpy) that is quite helpful.
+    Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
 
 99. **How can I change the default "not found" page?**
 
@@ -57,10 +57,10 @@ title: FAQ
 
     No. Do `ib = list(ib)` first to turn it from an IterBetter into a list.
 
-99. **どのようにデバッグ文をコンソールに出力しますか？**
+99. **How do I debug print to the console?**
 
-    web.debug("デバッグ文")
+	web.debug("I will get printed to the console and not the body of the webpage")
 
-99. **もしwebpyの不具合(バグ)を見つけた場合どこで報告すればいいのですか？**
+99. **I stumbled over a bug in web.py. Where can I file it?**
 
-    [ここ(webpy launchpad site)](https://launchpad.net/webpy)からバグ報告することができます。ログインが必要な場合は登録を行ってからバグ報告をしてください。
+	Go to the [webpy launchpad site](https://launchpad.net/webpy), login (or register if you have to) and click on "report a bug".
