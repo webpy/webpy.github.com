@@ -1,9 +1,9 @@
 ---
 layout: default
-title: i18n support in template file.
+title: i18n support in template file
 ---
 
-# i18n support in template file.
+# i18n support in template file
 
 #Problem:
 How to get i18n support in webpy template file?
