@@ -7,7 +7,7 @@ title: code samples
 
 ### simple samples:
 
-* [skeleton code](http://webpy.infogami.com/skeleton)
+* [skeleton code](skeleton)
 
 * [simple todo-list engine](/src/todo-list) | [new version](http://domimob.infogami.com/wiki/tidy) (uses template.py and form.py)
 
@@ -49,4 +49,4 @@ title: code samples
 
 * [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item (CRUD). ([src](http://svn.natalian.org/projects/todo/))
 
-* [music-share](http://github.com/andreisavu/music-share/tree/master): a simple web app for music sharing (mp3 files). ([src](http://github.com/andreisavu/music-share/tree/master)) 
+* [music-share](http://github.com/andreisavu/music-share/tree/master): a simple web app for music sharing (mp3 files). ([src](http://github.com/andreisavu/music-share/tree/master))
