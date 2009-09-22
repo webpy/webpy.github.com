@@ -1,9 +1,9 @@
 ---
 layout: default
-title: template tricks
+title: Template tricks
 ---
 
-# template tricks
+# Template tricks
 
 ### Testing template rendering
 
