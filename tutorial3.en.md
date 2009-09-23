@@ -210,9 +210,8 @@ You can find the full details on these and all the web.py functions in [the docu
 
 web.py also has a few tools to help us with debugging. When running with the built-in webserver, it starts the application in debug mode. In debug mode any changes to code and templates are automatically reloaded and error messages will have more helpful information.
 
-The debug is not enabled when the application is run in a real webserver. If you want to disable the debug mode, you can do so by adding the following line before creating your application/tempaltes.
+The debug is not enabled when the application is run in a real webserver. If you want to disable the debug mode, you can do so by adding the following line before creating your application/templates.
 
     web.config.debug = False
 
 This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
-
