@@ -35,6 +35,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Custom NotFound message](/cookbook/custom_notfound)
 * [How to Stream Large Files](/cookbook/streaming_large_files)
 * [Control over logging for default HTTPServer](/cookbook/logging)
+* [SSL support in built-in cherrypy server](/cookbook/ssl)
 
 ##Sessions and user state:
 * [Working with Session](/cookbook/sessions)
