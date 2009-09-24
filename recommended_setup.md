@@ -26,4 +26,3 @@ web.py recommends the following software:
 
 ##User Input:
 *  [python-markdown](http://sourceforge.net/project/showfiles.php?group_id=153041) [BSD] [(doc)](http://www.freewisdom.org/projects/python-markdown/)
-
