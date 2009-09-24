@@ -292,4 +292,3 @@ title: Change log
 **2006-01-03: 0.11**
 
 * First public version.
-
