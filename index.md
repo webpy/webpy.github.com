@@ -179,6 +179,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [form.py (short) tutorial](/form)
     * [日本語](/tutorial2.ja)
     * [ελληνικά](http://webpy.org/tutorial2.el)
+    * [français](/tutorial3.fr)
 
 * [tutorials (old version)](/tutorial):
     * [english](http://webpy.org/tutorial)
