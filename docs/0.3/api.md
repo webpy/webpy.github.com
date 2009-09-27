@@ -1,9 +1,9 @@
 ---
 layout: default
-title: API documentation
+title: api docs
 ---
 
-# API documentation
+# api docs
 
 * <a href="#web.application">web.application</a>
 * <a href="#web.contrib.template">web.contrib.template</a>
