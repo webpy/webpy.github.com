@@ -1,9 +1,9 @@
 ---
 layout: default
-title: code samples
+title: Code samples
 ---
 
-# code samples
+# Code samples
 
 ### simple samples:
 
