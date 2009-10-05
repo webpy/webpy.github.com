@@ -25,7 +25,7 @@ title: FAQ
 
 99. **Where can I go for additional help?**
 
-    Google Groups has a [web.py grou](http://groups.google.com/group/webpy) that is quite helpful.
+    Google Groups has a [web.py group](http://groups.google.com/group/webpy) that is quite helpful.
 
 99. **How can I change the default "not found" page?**
 
