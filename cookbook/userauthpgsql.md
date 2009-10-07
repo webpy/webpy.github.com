@@ -161,4 +161,7 @@ Well, I think that nobody will need this, but, I prefer to give all the informat
 </table>
 	</form>
 
-## 7th: Wowowow
+## 7th: Some problems or questions ?
+- You can contact me at guillaume(at)process-evolution(dot)fr
+- Or #webpy on irc.freenode.net (pseudo: Ephedrax)
+- I'm french, and my english is bad...you can edit my work
