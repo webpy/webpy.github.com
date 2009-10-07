@@ -33,7 +33,9 @@ First of all, we need a table for the users. This scheme is very simple, but is 
 
 ## 2nd: the urls
 There will be 2 states during the login/logout session:
+
 - "Login" is for the login page
+
 - "Reset" for the logout page.
 
 ##
@@ -168,6 +170,6 @@ Well, I think that nobody will need this, but, I prefer to give all the informat
 	</form>
 
 ## 7th: Some problems or questions ?
-- You can contact me at guillaume(at)process-evolution(dot)fr
-- Or #webpy on irc.freenode.net (pseudo: Ephedrax)
-- I'm french, and my english is bad...you can edit my work
+- Mail: you can contact me at guillaume(at)process-evolution(dot)fr
+- IRC: #webpy on irc.freenode.net (pseudo: Ephedrax)
+- Translations: I'm french, and my english is bad...you can edit my work
