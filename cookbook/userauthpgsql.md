@@ -32,7 +32,9 @@ First of all, we need a table for the users. This scheme is very simple, but is 
 	)
 
 ## 2nd: the urls
-There will be 2 states during the login/logout session. "Login" is for the login page, and "Reset" for the logout page.
+There will be 2 states during the login/logout session:
+- "Login" is for the login page
+- "Reset" for the logout page.
 
 ##
 	urls = (
@@ -85,7 +87,9 @@ I manage my users, in 4 categories: admin+user+reader (logged), and visitors (no
 		return render
 	
 ## 5th: Login and Reset Python Classes
-Now, let's have fun. If you are already logged, you are redirecting to the login_double.html template file, Else, to the login.html.
+Now, let's have fun:
+- If you are already logged, you are redirecting to the login_double.html template file
+- Else, to the login.html.
 
 ##
 	class login:
@@ -100,7 +104,9 @@ Now, let's have fun. If you are already logged, you are redirecting to the login
 					render.login()
 					)
 
-Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row. If the login/pass is ok, redirect to the login_ok.html. If not, redirect to the login_error.html.
+- Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row.
+- If the login/pass is ok, redirect to the login_ok.html.
+- If not, redirect to the login_error.html.
 
 ##	
 		def POST(self):
