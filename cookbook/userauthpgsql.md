@@ -6,13 +6,13 @@ title: User Authentication with PostgreSQL database
 # User Authentication with PostgreSQL database
 
 ##Problem
-You want a system to authenticate users, with a postgresql database.
+- You want a system to authenticate users, with a postgresql database.
 
 ##Solution
-A user authentication system could have a lot of functions. For this example, we're only going to manage the authentication process, throught a postgresql database.
+- A user authentication system could have a lot of functions. For this example, we're only going to manage the authentication process, throught a postgresql database.
 
 ##Needed
-I use mako templates, and pg. So, you have to import all of that:
+- I use mako templates, and pg. So, you have to import all of that:
 	import web
 	from web.contrib.template import render_mako
 	import pg
