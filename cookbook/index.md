@@ -42,6 +42,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Using session with reloader](/cookbook/session_with_reloader)
 * [Working with Cookies](/cookbook/cookies)
 * [User authentication](/cookbook/userauth)
+* [User authentication with Postgresql database](/cookbook/userauth)
 * [Sessions with sub-apps](/cookbook/sessions_with_subapp)
 
 
