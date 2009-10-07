@@ -166,7 +166,7 @@ Well, I think that nobody will need this, but, I prefer to give all the informat
 				<td></td>
 				<td><input type=submit value=LOGIN></td>
 			</tr>
-</table>
+		</table>
 	</form>
 
 ## 7th: Some problems or questions ?
