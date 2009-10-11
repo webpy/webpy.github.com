@@ -1,19 +1,19 @@
 ---
 layout: default
-title: 提供XML
+title: 提供XML访问
 ---
 
-# 提供XML
+# 提供XML访问
 
 ### 问题
 
-如何在web.py中提供XML？
+如何在web.py中提供XML访问？
 
-如果需要为第三方应用收发数据，那么提供xml服务是很有必要的。
+如果需要为第三方应用收发数据，那么提供xml访问是很有必要的。
 
 ### 解法
 
-根据要提供的xml文件(如response.xml)创建一个XML模板。如果XML中有可变量，就使用相应的模板标签进行替换。下面是一个例子：
+根据要访问的xml文件(如response.xml)创建一个XML模板。如果XML中有变量，就使用相应的模板标签进行替换。下面是一个例子：
 
     $def with (code)
     <?xml version="1.0"?>
