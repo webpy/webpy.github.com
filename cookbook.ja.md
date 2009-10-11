@@ -80,5 +80,3 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 
 ##Subdomains:
 * サブドメインおよびユーザー名を使用してにアクセスする方法 (requested)
-
-
