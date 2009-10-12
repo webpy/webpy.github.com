@@ -74,6 +74,6 @@ web.py并不会主动去清空threaddb词典，这使得输出(如http://localho
 
 通常是在backgrounder函式中做线程清理工作，是因为backgrounder可以获得线程id(通过web.input()得到"_t"的值，就是线程id)，从而根据线程id来回收资源。这是因为虽然background能知道自己何时结束，但它无法获得自己的线程id，所以background无法自己完成线程清理。
 
-还要注意 [}How not to do thread local storage with Python 在python中如何避免多线程本地存储](http://blogs.gnome.org/jamesh/2008/06/11/tls-python/) - 线程ID有时会被重用(可能会引发错误)
+还要注意 [How not to do thread local storage with Python 在python中如何避免多线程本地存储](http://blogs.gnome.org/jamesh/2008/06/11/tls-python/) - 线程ID有时会被重用(可能会引发错误)
 
-还是那句话“小心为上”
+在使用web.background时，还是那句话－－“小心为上”
