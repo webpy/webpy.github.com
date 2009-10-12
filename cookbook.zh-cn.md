@@ -30,7 +30,7 @@ title: Web.py Cookbook 简体中文版
 * [提供XML访问](/cookbok/zh-cn/xmlfiles)
 
 ##高级应用
-* [web.ctx信息](/cookbook/zh-cn/ctx)
+* [用web.ctx获得客户端信息](/cookbook/zh-cn/ctx)
 * [应用处理器，添加钩子和卸载钩子](/cookbook/zh-cn/application_processors)
 * [如何使用web.background](/cookbook/zh-cn/background)
 * [自定义NotFound信息](/cookbook/zh-cn/custom_notfound)
