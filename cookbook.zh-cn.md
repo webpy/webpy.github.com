@@ -30,13 +30,13 @@ title: Web.py Cookbook 简体中文版
 * [提供XML访问](/cookbok/zh-cn/xmlfiles)
 
 ##高级应用
-* [web.ctx](/cookbook/zh-cn/ctx)
-* [Application processors, loadhooks and unloadhooks 应用处理器，添加钩子和卸载钩子](/cookbook/zh-cn/application_processors)
-* [How to use web.background 如何使用web.background](/cookbook/zh-cn/background)
-* [Custom NotFound message](/cookbook/zh-cn/custom_notfound)
-* [How to Stream Large Files](/cookbook/zh-cn/streaming_large_files)
-* [Control over logging for default HTTPServer](/cookbook/zh-cn/logging)
-* [SSL support in built-in cherrypy server](/cookbook/zh-cn/ssl)
+* [web.ctx信息](/cookbook/zh-cn/ctx)
+* [应用处理器，添加钩子和卸载钩子](/cookbook/zh-cn/application_processors)
+* [如何使用web.background](/cookbook/zh-cn/background)
+* [自定义NotFound信息](/cookbook/zh-cn/custom_notfound)
+* [如何流传输大文件](/cookbook/zh-cn/streaming_large_files)
+* [对自带的webserver日志进行操作](/cookbook/zh-cn/logging)
+* [用cherrypy提供SSL支持](/cookbook/zh-cn/ssl)
 
 ##Sessions and user state:
 * [Working with Session (未译)](/cookbook/sessions)
