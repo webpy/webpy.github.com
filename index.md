@@ -78,10 +78,6 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [m]: http://micropledge.com/
 
-[Lemonade games][l] is built with web.py with css validation.
-
-   [l]: http://www.casino-lemonade.com/
-
 The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 [jottit.com](http://jottit.com) is built with web.py.  Jottit makes getting a website as easy as filling out a textbox. 
@@ -98,7 +94,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [f]: http://fotosaur.us
 
-[Groupe 770](http://www.bingofr.com/casino-poker-paris-sportifs-et-bingo-en-ligne-avec-le-groupe-770/) is a nopaste/Pastebin app with Free and Open api, and of course
+[Poker770](http://www.bingofr.com/les-meilleurs-tournois-de-poker-en-ligne-avec-poker770/) is a nopaste/Pastebin app with Free and Open api, and of course
 
 [URIs.us][u] is service for creating short urls. Deploying on Google App Engine
 
@@ -112,6 +108,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 [Edgarest] [y] is built with web.py.Edgarest provides fast, intuitive search of SEC Filings.
 
    [y]: http://edgarest.com
+
+[Grattage] [yy] is built with web.py.Jeu grattage provides fast, intuitive search of SEC Filings.
+
+   [yy]: http://www.jeu-grattage.net
 
 [Wklej.to] [z] is a nopaste/Pastebin app with Free and Open api, and of course with desktop plugins and clients.
 
