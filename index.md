@@ -207,6 +207,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * cookbook:
       * [日本語](/cookbook/ja)
       * [english](/cookbook)
+      * [简体中文版](/cookbook/zh-cn)
 
 * [code samples](/src)
 
