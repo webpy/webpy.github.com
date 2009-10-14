@@ -39,18 +39,18 @@ title: Web.py Cookbook 简体中文版
 * [用cherrypy提供SSL支持](/cookbook/zh-cn/ssl)
 
 ##Sessions and user state:
-* [Working with Session (未译)](/cookbook/sessions)
-* [Using session with reloader (未译)](/cookbook/session_with_reloader)
-* [Working with Cookies (未译)](/cookbook/cookies)
-* [User authentication (未译)](/cookbook/userauth)
-* [User authentication with Postgresql database (未译)](/cookbook/userauthpgsql)
-* [Sessions with sub-apps (未译)](/cookbook/sessions_with_subapp)
+* [如何使用Session](/cookbook/zh-cn/sessions)
+* [如何在调试模式下使用Session](/cookbook/zh-cn/session_with_reloader)
+* [如何操作Cookie](/cookbook/zh-cn/cookies)
+* [用户认证](/cookbook/zh-cn/userauth)
+* [一个在postgreSQL数据库环境下的用户认证的例子](/cookbook/zh-cn/userauthpgsql)
+* [如何在子应用中操作Session](/cookbook/zh-cn/sessions_with_subapp)
 
 
 ##Utils:
-* [Sending Mail (未译)](/cookbook/sendmail)
-* [Sending Mail Using Gmail (未译)](/cookbook/sendmail_using_gmail)
-* [Webservice using soaplib + WSDL (未译)](/cookbook/webservice)
+* [如何发送邮件](/cookbook/zh-cn/sendmail)
+* [如何利用Gmail发送邮件](/cookbook/zh-cn/sendmail_using_gmail)
+* [使用soaplib实现webservice](/cookbook/zh-cn/webservice)
 
 ##Templates:
 * [Templetor: The web.py templating system (未译)](http://webpy.org/docs/0.3/templetor )
