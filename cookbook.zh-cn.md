@@ -19,7 +19,7 @@ title: Web.py Cookbook 简体中文版
 
 1. 该手册适用于0.3版本，所以您在添加代码时，请确认代码能在新版本中工作。
 
-1. 给大中华区朋友的一些建议：您不妨看看 http://kanrs.com/ 教程，讲如何从无开始，用Python写一个web框架，对您理解web.py有极大的帮助--初译者WrongWay推荐。
+1. 一些建议：不妨结合 *http://kanrs.com/* 学习web.py cookbook和tutorial，我(初译者wrongway)个人感觉很有帮助。
 
 
 -------------------------------------------------
