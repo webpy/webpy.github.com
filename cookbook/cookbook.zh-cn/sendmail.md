@@ -23,7 +23,7 @@ title: 发送邮件
 
     web.sendmail('cookbook@webpy.org', ['user1@example.com', 'user2@example.com'], 'subject', 'message')
 
-`cc`和`bcc`关键字参数是可选的，分别表示抄送和暗送接收人。这两个参数也可以接收列表，表示发送多人。
+`cc`和`bcc`关键字参数是可选的，分别表示抄送和暗送接收人。这两个参数也可以是列表，表示抄送/暗送多人。
 
     web.sendmail('cookbook@webpy.org', 'user@example.com', 'subject', 'message', cc='user1@example.com', bcc='user2@example.com')
 
