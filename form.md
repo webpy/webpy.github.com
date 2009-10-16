@@ -1,9 +1,9 @@
 ---
 layout: default
-title: OOkbFpycWXJw
+title: Form Library
 ---
 
-# OOkbFpycWXJw
+# Form Library
 
 ## Example
 Here's a sample script using the new form library:
@@ -14,6 +14,7 @@ Here's a sample script using the new form library:
     render = web.template.render('templates/')
 
     urls = ('/', 'index')
+app = web.application(urls, globals())
 
     myform = form.Form( 
         form.Textbox("boe"), 
@@ -29,20 +30,20 @@ Here's a sample script using the new form library:
         def GET(self): 
             form = myform()
             ### make sure you create a copy of the form by calling it (line above)--otherwise changes will appear globally
-            print render.formtest(form)
+            return render.formtest(form)
 
         def POST(self): 
             form = myform() 
             if not form.validates(): 
-                print render.formtest(form)
+                return render.formtest(form)
             else:
                 # form.d.boe and form['boe'].value are equivalent ways of
                 # extracting the validated arguments from the form.
-                print "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
+                return "Grrreat success! boe: %s, bax: %s" % (form.d.boe, form['bax'].value)
 
     if __name__=="__main__":
         web.internalerror = web.debugerror
-        web.run(urls, globals(), web.reloader)
+        app.run(urls, globals())
 
 And sample formtest.html (place this in the *templates* subdirectory): 
 
