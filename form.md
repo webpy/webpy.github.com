@@ -14,7 +14,7 @@ Here's a sample script using the new form library:
     render = web.template.render('templates/')
 
     urls = ('/', 'index')
-app = web.application(urls, globals())
+    app = web.application(urls, globals())
 
     myform = form.Form( 
         form.Textbox("boe"), 
@@ -43,7 +43,7 @@ app = web.application(urls, globals())
 
     if __name__=="__main__":
         web.internalerror = web.debugerror
-        app.run(urls, globals())
+        app.run()
 
 And sample formtest.html (place this in the *templates* subdirectory): 
 
