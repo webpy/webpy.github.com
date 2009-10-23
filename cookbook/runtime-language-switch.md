@@ -121,3 +121,7 @@ You should:
 
  * Make sure language code (en_US, zh_CN, etc) will be dynamic changed.
  * Make sure custom_gettext() calling  is as cheap as possible.
+
+Reference:
+
+ * There is [http://groups.google.com/group/webpy/browse_thread/thread/a215837aa30e8f80 another solution] which use app.app_processor().
