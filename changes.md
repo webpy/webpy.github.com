@@ -5,24 +5,34 @@ title: Change log
 
 # Change log
 
-**upstream**
+**2009-06-04: web.py 0.32**
 
-* new: uniq and iterview
+* optional from_address to web.emailerrors
+* upgrade wsgiserver to CherryPy/3.1.2
 * support for extensions in Jinja2 templates (tx Zhang Huangbin)
-* support web.datestr for datetime.date objects also 
+* support web.datestr for datetime.date objects also
 * support for lists in db queries
-* make web.commify work  with decimals [Bug#317204](https://bugs.launchpad.net/webpy/+bug/317204)
-* fix: unicode issues with sqlite database [Bug#373219](https://bugs.launchpad.net/webpy/+bug/373219)
-* fix: urlquote url when the server is lighttpd [Bug#339858](https://bugs.launchpad.net/webpy/+bug/339858)
+* new: uniq and iterview
+* fix: set debug=False when application is run with mod_wsgi (tx
+Patrick Swieskowski)
+[Bug#370904](https://bugs.launchpad.net/webpy/+bug/370904)
+* fix: make web.commify work  with decimals
+[Bug#317204](https://bugs.launchpad.net/webpy/+bug/317204)
+* fix: unicode issues with sqlite database
+[Bug#373219](https://bugs.launchpad.net/webpy/+bug/373219)
+* fix: urlquote url when the server is lighttpd
+[Bug#339858](https://bugs.launchpad.net/webpy/+bug/339858)
 * fix: issue with using date.format in templates
-* fix: use TOP instead of LIMIT in mssql database [Bug#324049](https://bugs.launchpad.net/webpy/+bug/324049)
+* fix: use TOP instead of LIMIT in mssql database
+[Bug#324049](https://bugs.launchpad.net/webpy/+bug/324049)
 * fix: make sessions work well with expirations
-* fix: accept both list and tuple as arg values in form.Dropdown [Bug#314970](https://bugs.launchpad.net/webpy/+bug/314970)
+* fix: accept both list and tuple as arg values in form.Dropdown
+[Bug#314970](https://bugs.launchpad.net/webpy/+bug/314970)
 * fix: match parenthesis when parsing `for` statement in templates
-* fix: fix python 2.3 compatibility 
-* fix: ignore dot folders when compiling templates (tx Stuart Langridge) 
-* fix: don't consume KeyboardInterrupt and SystemExit errors 
-* fix: make application work well with iterators 
+* fix: fix python 2.3 compatibility
+* fix: ignore dot folders when compiling templates (tx Stuart Langridge)
+* fix: don't consume KeyboardInterrupt and SystemExit errors
+* fix: make application work well with iterators
 
 ** 2008-12-10: 0.31**
 
