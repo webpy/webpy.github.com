@@ -10,6 +10,10 @@ How to implement run-time language switch?
 
 ## Solution:
 
+ * You must read [i18n support in template file](/i18n_support_in_template_file) first, and then try below code.
+
+File: code.py
+
     import os
     import sys
     import gettext
@@ -21,9 +25,9 @@ How to implement run-time language switch?
     # i18n directory.
     localedir = rootdir + '/i18n'
     
+    # Object used to store all translations.
     allTranslations = web.storage()
     
-    # Object used to store all translations.
     def get_translations(lang='en_US'):
         # Init translation.
         if allTranslations.has_key(lang):
@@ -86,8 +90,16 @@ How to implement run-time language switch?
         def GET(self):
             i = web.input()
             lang = i.get('lang', 'en_US')
+
+            # Debug.
             print >> sys.stderr, 'Language:', lang
+
             session['lang'] = lang
             return render.index()
     
     if __name__ == "__main__": app.run()
+
+
+You should:
+ * Make sure language code (en_US, zh_CN, etc) will be dynamic changed.
+ * Make sure custom_gettext() calling  is as cheap as possible.
