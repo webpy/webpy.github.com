@@ -27,10 +27,10 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
         )
 
     # Add/override some global functions.
-    # render._lookup.globals.update(
-             var=newvar,
-             var2=newvar2,
-       )
+    #render._lookup.globals.update(
+    #       var=newvar,
+    #       var2=newvar2,
+    #)
 
     class hello:
         def GET(self, name):
