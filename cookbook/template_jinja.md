@@ -23,14 +23,14 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
     
     render = render_jinja(
             'templates',   # Set template directory.
-            #extensions = ['jinja2.ext.i18n'],           # Jinja2 extensions.
-            #encoding = 'utf-8',                         # Encoding.
-            #globals = {},
+            encoding = 'utf-8',                         # Encoding.
         )
 
-    # Used for Jinja2 i18n extension.
-    #lang = gettext.translation('domain', 'localedir', languages=['zh_CN'])
-    #render._lookup.install_gettext_translations(lang)
+    # Add/override some global functions.
+    # render._lookup.globals.update(
+             var=newvar,
+             var2=newvar2,
+       )
 
     class hello:
         def GET(self, name):
@@ -42,7 +42,3 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
 ### Template file: templates/hello.html
 
     Hello, {{ name }}.
-
-For i18n string:
-
-    {{ _('Hello') }}, {{ name }}.
