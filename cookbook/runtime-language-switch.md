@@ -100,6 +100,24 @@ File: code.py
     if __name__ == "__main__": app.run()
 
 
+Template file: templates/index.html.
+
+    $_('Hello')
+
+Don't forget to generate necessary po & mo files which used for translations. Reference: [i18n support in template file](/i18n_support_in_template_file)
+
+Now run code.py in terminal:
+
+    $ python code.py
+    http://0.0.0.0:8080/
+
+Now visit below addresses with your favourite web browser, check whether language changed:
+
+    http://your_server:8080/
+    http://your_server:8080/?lang=en_US
+    http://your_server:8080/?lang=zh_CN
+
 You should:
+
  * Make sure language code (en_US, zh_CN, etc) will be dynamic changed.
  * Make sure custom_gettext() calling  is as cheap as possible.
