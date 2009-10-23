@@ -124,4 +124,4 @@ You should:
 
 Reference:
 
- * There is [http://groups.google.com/group/webpy/browse_thread/thread/a215837aa30e8f80 another solution] which use app.app_processor().
+ * Here is [another solution](http://groups.google.com/group/webpy/browse_thread/thread/a215837aa30e8f80 ) which use app.app_processor().
