@@ -22,3 +22,12 @@ The following code limits the size of input data to 10MB.
     cgi.maxlen = 10 * 1024 * 1024 # 10MB
 
 Please note that this limits the size of POST data, not file uploaded. However they will be almost same if there is no other input.
+
+The `cgi` module raises `ValueError` when the input size is more than `cgi.maxlen`. It can be caught to display required error message.
+
+    class upload:
+        def POST(self):
+            try:
+                i = web.input(file={})
+            except ValueError:
+                return "File too large"
