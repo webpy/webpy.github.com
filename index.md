@@ -232,7 +232,4 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 ### web.py development
 
 * [git repository](http://github.com/webpy/webpy)
-
 * [launchpad site](http://launchpad.net/webpy)
-* [custom term papers](http://www.superiorpapers.com/)
-* [tournois de poker en ligne] (http://www.destination-casino.com/modules/news/article.php?storyid=13)
