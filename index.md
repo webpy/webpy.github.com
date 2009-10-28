@@ -27,9 +27,9 @@ A complete web.py application
 
 ## Get Started
 
-web.py 0.32 was released on 2009-06-04: [web.py-0.32.tar.gz][16]
+web.py 0.33 was released on 2009-10-29: [web.py-0.33.tar.gz][16]
 
-   [16]: /static/web.py-0.32.tar.gz
+   [16]: /static/web.py-0.33.tar.gz
 
 To always have the latest version of web.py, run:
     
@@ -64,6 +64,8 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
+[The Dofollow Network](http://www.dofollownet.com/) will soon use web.py.
+
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
    [21]: http://yandex.ru
@@ -94,7 +96,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [f]: http://fotosaur.us
 
-[Poker770](http://www.bingofr.com/les-meilleurs-tournois-de-poker-en-ligne-avec-poker770/) is a nopaste/Pastebin app with Free and Open api, and of course
+[Tournois poker en ligne poker770] (http://www.bingofr.com/les-meilleurs-tournois-de-poker-en-ligne-avec-poker770/) [Poker770](http://www.casino-poker-royale.fr/meilleurs-tournois-poker.html) is a nopaste/Pastebin app with Free and Open api, and of course
 
 [URIs.us][u] is service for creating short urls. Deploying on Google App Engine
 
@@ -232,3 +234,5 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [git repository](http://github.com/webpy/webpy)
 
 * [launchpad site](http://launchpad.net/webpy)
+* [custom term papers](http://www.superiorpapers.com/)
+* [tournois de poker en ligne] (http://www.destination-casino.com/modules/news/article.php?storyid=13)
