@@ -7,23 +7,23 @@ title: Download web.py
 
 ## Get the latest stable version
 
-The easiest way to install web.py is using [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall):
+The easiest way to install web.py is using [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall)[:](http://www.dofollownet.com/)
 
     $ easy_install web.py
 
 If you don't have `easy_install`, try downloading the sources.
 
-    $ wget http://webpy.org/static/web.py-0.32.tar.gz
-    $ tar xvzf web.py-0.32.tar.gz
-    $ cd webpy
+    $ wget http://webpy.org/static/web.py-0.33.tar.gz
+    $ tar xvzf web.py-0.33.tar.gz
+    $ cd web.py-0.33
     $ sudo python setup.py install
 
 If you don't want to install web.py system-wide (or if you want to bundle web.py with your application):
 
     $ cd your-app-dir
-    $ wget http://webpy.org/static/web.py-0.32.tar.gz
-    $ tar xvzf web.py-0.32.tar.gz
-    $ ln -s webpy/web .
+    $ wget http://webpy.org/static/web.py-0.33.tar.gz
+    $ tar xvzf web.py-0.33.tar.gz
+    $ ln -s web.py-0.33/web .
    
 If you are on Ubuntu Linux or Debian, you can install web.py using `apt-get`. But you may not get the latest as debian/ubuntu release cycles are different from web.py.
 
