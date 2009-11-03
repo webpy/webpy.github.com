@@ -1,9 +1,9 @@
 ---
 layout: default
-title: install macosx
+title: install macos x
 ---
 
-# install macosx
+# install macos x
 
 Install Webpy 0.1 via darwinports.  
 
