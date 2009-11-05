@@ -5,7 +5,7 @@ title: Templetor: The web.py templating system
 
 # Templetor: The web.py templating system
 
-<a name="introduction/>
+<a name="introduction></a>
 # Introduction
 
 <style>
@@ -42,7 +42,7 @@ The first line says that the template is defined with one argument called `name`
 For upgrading from web.py 0.2 templates see <a href="#upgrading">upgrading</a> section.
 </div>
 
-<a name="using"/>
+<a name="using"></a>
 # Using the template system
 
 The most common way of rendering templates is this:
@@ -64,7 +64,7 @@ And if you have the template as a string:
     hello = web.template.Template(template)
     print hello('world')
 
-<a name="syntax"/>
+<a name="syntax"></a>
 # Syntax
 
 ## Expression Substitution
@@ -233,7 +233,7 @@ The result of the above template can be used as follows:
     >>> str(out)
     '\n\n<div>\nhello world\n</div>\n'
 
-<a name="builtins"/>
+<a name="builtins"></a>
 # builtins and globals
 
 Just like any Python function, template can also access builtins along with its arguments and local variables.
@@ -253,7 +253,7 @@ Builtins that are exposed in the templates can be controlled too.
     # disable all builtins
     render = web.template.render('templates', builtins={})
 
-<a name="security"/>
+<a name="security"></a>
 # Security
 
 One of the design goals of Templetor is to allow untrusted users to write templates.
