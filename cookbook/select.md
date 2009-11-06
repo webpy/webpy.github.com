@@ -40,7 +40,7 @@ The vars variable is used to populate the rest of the statements.  For example:
 ###what
 The what variable defaults to *, but can take a list of items you want selected if the entire entry isn't desired.
 
-    results = db.select('mytable', what="id")
+    results = db.select('mytable', what="id,name")
 
 ###where
 The where variable lets you pass where clauses to the SQL select, such as:
