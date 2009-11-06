@@ -33,7 +33,7 @@ Web.py *comes* with an easy to use method for setting/getting cookies.
 
 Calling the above class with GET will set a cookie named "age" with a default value equal to "25" (this default value actually comes from the web.input processing, NOT the setcookie function), which expires in 1 hour (3600 seconds).
 
-The third (and optional) argument to `web.setcookie()`, "expires", allows you to set when you want your cookie to expire.  Any negative number will expire the cookie immediately.  Any positive number is the number of seconds that the cookie will last (3600 would result in an hour long cookie).  Leaving this argument empty results in a non-expiring cookie.
+The third (and optional) argument to `web.setcookie()`, "expires", allows you to set when you want your cookie to expire.  Any negative number will expire the cookie immediately.  Any positive number is the number of seconds that the cookie will last (3600 would result in an hour long cookie).  Leaving this argument empty results in a session cookie, which expires when your browser shut down.  To make the cookie "permanent", simply update cookie expiration time at regular interval (e.g. when user logged in).
 
 ###Retrieving Cookies
 ####Overview
