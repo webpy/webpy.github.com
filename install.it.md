@@ -74,7 +74,7 @@ Con alcune versioni di LightTPD, è importante assicurarsi che la proprietà "ch
 
 Se ricevi qualche errore circa l'impossibilità di importare flut, installalo inserendo "easy_install flup" nell terminale (necessiti di installare easy_install, prima).
 
-Dalla revisione 145, è necessario settare una variabile d'ambiente nella configurazione fastcgi se la tua applicazione fà uso di redirect (redirezioni).
+Dalla revisione 145 (della versione 0.31), è necessario settare una variabile d'ambiente nella configurazione fastcgi se la tua applicazione fà uso di redirect (redirezioni).
 Se il tuo codice re-indirizza a http://dominio.com/ e nella tua barra degli indirizzi vedi http://dominio.com/code.py/ (supponendo che code.py sia la tua applicazione) avrai bisogno di settare la variabile d'ambiente.
 Questo comporta una variazione della tua configurazione del webserver ala voce fastcgi.server, qualcosa come:
      
