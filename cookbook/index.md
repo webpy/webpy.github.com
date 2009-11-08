@@ -24,6 +24,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 ##Basics:
 * [Hello World](/cookbook/helloworld)
 * [Serving Static File](/cookbook/staticfiles)[s](http://www.dofollownet.com/)
+* [Understanding URL handling](/cookbook/url_handling)
 * [Seeother and Redirect](/cookbook/redirect+seeother)
 * [using subapplications](/cookbook/subapp)
 * [Serving XML](/cookbok/xmlfiles)
