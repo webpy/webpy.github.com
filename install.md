@@ -7,7 +7,7 @@ title: Install
 
 To install web.py, download:
     
-    http://webpy.org/static/web.py-0.31.tar.gz
+    http://webpy.org/static/web.py-0.33.tar.gz
 
 extract it and copy the _web_ folder into a directory where your application is. Or, to make it accessible to all applications, run:
     
@@ -209,7 +209,6 @@ mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/Conf
         SetHandler wsgi-script
         Options ExecCGI FollowSymLinks
     </Files>
-<p><u style="display: none;"><a href="http://www.himselfprod.com">consultant seo</a></u></p>
 
 If you get an "ImportError: No module named web" in your apache error.log file, you could try setting the absolute path in code.py before importing web:
 
@@ -219,7 +218,7 @@ If you get an "ImportError: No module named web" in your apache error.log file, 
     os.chdir(abspath)
     import web
 
-Also, you might want to read the "Application Working Directory" section from [Common problems with WSGI applications](http://code.google.com/p/modwsgi/wiki/ApplicationIssues).
+Also, you might want to read the "Application Working Directory" section from [Common problems with WSGI application](http://code.google.com/p/modwsgi/wiki/ApplicationIssues).
 
 It should then be accessible at `http://example.com/code.py/` as usual.
 
