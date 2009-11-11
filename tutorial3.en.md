@@ -137,7 +137,7 @@ First you need to create a database object.
 
 That's all you need to do -- web.py will automatically handle connecting and disconnecting from the database.
 
-Using your database engine's admin interface, create a simple table in your database:
+Using your database engines admin interface, create a simple table in your database:
 
     CREATE TABLE todo (
       id serial primary key,
@@ -210,8 +210,14 @@ You can find the full details on these and all the web.py functions in [the docu
 
 web.py also has a few tools to help us with debugging. When running with the built-in webserver, it starts the application in debug mode. In debug mode any changes to code and templates are automatically reloaded and error messages will have more helpful information.
 
-The debug is not enabled when the application is run in a real webserver. If you want to disable the debug mode, you can do so by adding the following line before creating your application/templates.
+The debug is not enabled when the application is run in a real webserver. If you want to disable the debug mode, you can do so by adding the following line before creating your application/tempaltes.
 
     web.config.debug = False
 
 This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
+
+## What next?
+
+* [more documentation](/docs/0.3)
+* [Cookbook](/cookbook)
+* [code samples](/src)
