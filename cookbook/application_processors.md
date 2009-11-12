@@ -32,5 +32,11 @@ Load hooks and unload hooks can be used to do actions at begining and end of req
     app.add_processor(web.loadhook(my_loadhook))
     app.add_processor(web.unloadhook(my_unloadhook))
 
+you can write or use global variables in hook function, for example: web.header()
 
+    def my_loadhook():
+        web.header('Content-type', "text/html; charset=utf-8")
 
+    app.add_processor(web.loadhook(my_loadhook))
+
+###Tip: and also can use web.ctx or web.input() in hook.
