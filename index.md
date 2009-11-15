@@ -41,8 +41,8 @@ Or download the latest version as [zip](http://github.com/webpy/webpy/zipball/ma
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
    [17]: http://webpy.org/docs/0.3/upgrade
-
-## Who uses web.py?
+   
+   ## Who uses web.py?
 
 web.py was originally published while Aaron Swartz worked at [reddit.com][20], where the site used it as it grew to become one of the top 1000 sites according to Alexa and served millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explained founder Steve Huffman. (The site was rewritten using other tools after being acquired by Condé Nast.)
 
@@ -56,15 +56,17 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
+
 [archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py
 
+[web design company](http://www.eluneart.com), custom website design services which are built on web.py
+
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
+
 
 [ChiefMal](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
-
-[The Dofollow Network](http://www.dofollownet.com/) will soon use web.py.
 
 [Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
@@ -96,7 +98,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [f]: http://fotosaur.us
 
-[Tournois poker en ligne poker770] (http://www.bingofr.com/les-meilleurs-tournois-de-poker-en-ligne-avec-poker770/) [Poker770](http://www.casino-poker-royale.fr/meilleurs-tournois-poker.html) is a nopaste/Pastebin app with Free and Open api, and of course
 
 [URIs.us][u] is service for creating short urls. Deploying on Google App Engine
 
@@ -111,9 +112,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [y]: http://edgarest.com
 
-[Grattage] [yy] is built with web.py.Jeu grattage provides fast, intuitive search of SEC Filings.
-
-   [yy]: http://www.jeu-grattage.net
 
 [Wklej.to] [z] is a nopaste/Pastebin app with Free and Open api, and of course with desktop plugins and clients.
 
@@ -145,7 +143,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 "the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
 - [Delaunay Antoine][27], built [a photo gallery][28] and [an agenda][34] with it
 
-   [27]: http://delaunay.org/antoine/
+   [27]: http://www.jeu-grattage.net
    [28]: http://github.com/antoine/ibrouteur/
    [34]: http://metagenda.org
 
@@ -175,17 +173,17 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [english](/install)
     * [mac os x](/install_macosx)
     * [español](/install/es)
-    * [日本語](/install/ja)
+    * [???](/install/ja)
     * [Italiano](/install/it)
 
 * [tutorials for version 0.3 (latest)](/tutorial3)
     * [english](/tutorial3.en)
-    * [pусский 0.2](http://webpy.infogami.com/tutorial2.ru)
-    * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
+    * [p?????? 0.2](http://webpy.infogami.com/tutorial2.ru)
+    * [????](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
     * [form.py (short) tutorial](/form)
-    * [日本語](/tutorial2.ja)
-    * [ελληνικά](http://webpy.org/tutorial2.el)
+    * [???](/tutorial2.ja)
+    * [e???????](http://webpy.org/tutorial2.el)
     * [français](/tutorial3.fr)
 
 * [tutorials (old version)](/tutorial):
@@ -193,8 +191,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [español](/tutorial/es)
     * português: [1](http://www.writely.com/View.aspx?docid=bbcm927cd2fmj) [2](http://www.writely.com/View.aspx?docid=bbcnjdbhbfh6n) [3](http://www.writely.com/View.aspx?docid=bccxp4cgw36p3)
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
-    * [pусский](http://bobuk.infogami.com/webpytrans)
-    * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
+    * [p??????](http://bobuk.infogami.com/webpytrans)
+    * [???](http://kinneko.googlepages.com/webpy_tutorial_ja)
 
 
 * [code documentation](/docs)
@@ -203,14 +201,14 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * FAQ:
     * [english](http://webpy.infogami.com/faq)
     * [español](/faq/es)
-    * [русский](/faq/ru)
-    * [日本語](http://kinneko.googlepages.com/webpy_faq)
-    * [日本語(webpy.org)](/faq/ja)
+    * [???????](/faq/ru)
+    * [???](http://kinneko.googlepages.com/webpy_faq)
+    * [???(webpy.org)](/faq/ja)
 
 * cookbook:
-      * [日本語](/cookbook/ja)
+      * [???](/cookbook/ja)
       * [english](/cookbook)
-      * [简体中文版](/cookbook/zh-cn)
+      * [?????](/cookbook/zh-cn)
 
 * [code samples](/src)
 
@@ -232,4 +230,5 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 ### web.py development
 
 * [git repository](http://github.com/webpy/webpy)
+
 * [launchpad site](http://launchpad.net/webpy)
