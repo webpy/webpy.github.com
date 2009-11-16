@@ -48,6 +48,8 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [20]: http://reddit.com/
 
+[Frinki](http://frinki.com), a Facebook-like social network in spanish.
+
 [Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
 
 [local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master)
@@ -58,8 +60,6 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 
 [archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py
-
-[web design company](http://www.eluneart.com), custom website design services which are built on web.py
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
