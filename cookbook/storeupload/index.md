@@ -17,6 +17,7 @@ You want to upload a file and store it in a predefined folder.
     
     class Upload:
         def GET(self):
+            web.header("Content-Type","text/html; charset=utf-8")
             return """<html><head></head><body>
     <form method="POST" enctype="multipart/form-data" action="">
     <input type="file" name="myfile" />
