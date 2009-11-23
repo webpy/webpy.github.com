@@ -28,6 +28,8 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Seeother and Redirect](/cookbook/redirect+seeother)
 * [using subapplications](/cookbook/subapp)
 * [Serving XML](/cookbok/xmlfiles)
+* [Reading raw data from post](/cookbok/postbasic)
+
 
 ##Advanced
 * [web.ctx](/cookbook/ctx)
