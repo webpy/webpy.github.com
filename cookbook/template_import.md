@@ -35,6 +35,6 @@ Naturally, you will want to write a module, say _displayLogic.py_ and import tha
     #in the template:
     $def with(status)
     ... ...
-    <div>Status: $stat($status)</div>
+    <div>Status: $stat(status)</div>
 
 Remember that you can import more than one name into the _globals_ dict. This trick is also used in [importing session variable into template](/cookbook/session_in_template).
