@@ -119,7 +119,7 @@ This will make your class `bye` respond to requests at `/bye/`. Now start your a
 
 Note: Currently you need to restart your application to see any changes. Try to pass a third argument to `web.application` and restart your application:
 
-    app = web.application(urls, globals(), web.reloader)
+    app = web.application(urls, globals(), True)
 
 
 Future changes can now be seen instantly, although you might need to reload a page in your browser.
