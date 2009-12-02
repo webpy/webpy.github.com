@@ -41,12 +41,14 @@ Or download the latest version as [zip](http://github.com/webpy/webpy/zipball/ma
 Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
    [17]: http://webpy.org/docs/0.3/upgrade
-
+   
 ## Who uses web.py?
 
 web.py was originally published while Aaron Swartz worked at [reddit.com][20], where the site used it as it grew to become one of the top 1000 sites according to Alexa and served millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explained founder Steve Huffman. (The site was rewritten using other tools after being acquired by Condé Nast.)
 
    [20]: http://reddit.com/
+
+[Frinki](http://frinki.com), a Facebook-like social network in spanish.
 
 [Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
 
@@ -139,9 +141,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
    [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
 "the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
-- [Delaunay Antoine][27], built [a photo gallery][28] and [an agenda][34] with it
+- Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it
 
-   [27]: http://www.jeu-grattage.net
    [28]: http://github.com/antoine/ibrouteur/
    [34]: http://metagenda.org
 
@@ -173,6 +174,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [español](/install/es)
     * [???](/install/ja)
     * [Italiano](/install/it)
+    * [français](/install/fr)
+
 
 * [tutorials for version 0.3 (latest)](/tutorial3)
     * [english](/tutorial3.en)
@@ -197,7 +200,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 
 * FAQ:
-    * [english](http://webpy.infogami.com/faq)
+    * [english](http://webpy.org/faq)
     * [español](/faq/es)
     * [???????](/faq/ru)
     * [???](http://kinneko.googlepages.com/webpy_faq)
@@ -206,7 +209,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * cookbook:
       * [???](/cookbook/ja)
       * [english](/cookbook)
-      * [?????](/cookbook/zh-cn)
+      * [中文](/cookbook/zh-cn)
 
 * [code samples](/src)
 
