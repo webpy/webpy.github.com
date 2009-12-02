@@ -40,17 +40,17 @@ web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/tutorial
 
     #!/usr/bin/env python
 
-并运行 `chmod +x code.py` 来使它可执行。
+并运行 `chmod +x code.py` 添加可执行属性。
 
 ### LightTPD
 
 #### .. 使用 FastCGI
 
-FastCGI with lighttpd is the recommended way of using web.py in production. [reddit.com][3] handles millions of hits this way.
+在产品中通过FastCGI结合lighttpd是web.py使用的一种推荐方法。 [reddit.com][3] 通过该方法来处理百万次的点击。
 
    [3]: http://reddit.com/
 
-Your lighttpd config can be something like:
+lighttpd config设置参考如下：
     
      server.modules = ("mod_fastcgi", "mod_rewrite")
      server.document-root = "/path/to/root/"     
@@ -67,11 +67,11 @@ Your lighttpd config can be something like:
        "^/(.*)$" => "/code.py/$1"
      )
     
-With some versions of lighttpd, it is important to ensure the "check-local" property of the fastcgi.server entry is set to "false", especially if your `code.py` is located outside of the document root.
+在某些版本的lighttpd中， 需要保证fastcgi.server选项下的"check-local"属性设置为"false", 特别是当你的 `code.py` 不在文档根目录下。
 
-If you get error messages about not being able to import flup, install it by typing "easy_install flup" at the command line.
+如果你得到错误显示不能够导入flup， 请在命令行下输入 "easy_install flup" 来安装。
 
-Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable.  This will cause your fastcgi.server configuration above to look something like this:
+从修订版本 145开始， 如果你的代码使用了重定向，还需要在fastcgi选项下设置bin-environment变量。 如果你的代码重定向到http://domain.com/ 而在url栏中你会看到 http://domain.com/code.py/， 你可以通过设置这个环境变量来阻止。 这样你的fastcgi.server设置将会如下：
      
     fastcgi.server = ( "/code.py" =>
     ((
@@ -88,26 +88,26 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
 
 ### Apache
 
-#### .. with CGI
+#### .. 使用 CGI
 
 
-Add the following to `httpd.conf` or `apache2.conf`.
+添加以下到 `httpd.conf` 或 `apache2.conf`。
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
 
-#### .. with CGI using .htaccess
+#### .. 使用 CGI .htaccess
 
-CGI is easy to configure, but is not suitable for high-performance websites.
-Add this to your `.htaccess`:
+CGI很容易配置， 但不适合高性能网站。
+添加以下到你的 `.htaccess`：
 
     Options +ExecCGI
     AddHandler cgi-script .py
 
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
+将你的浏览器指向 `http://example.com/code.py/`。 不要忘记最后的斜杠，否则你将会看到 `not found` 消息 (因为在 `urls` 列表中你输入的没有被匹配到). 为了让其运行的时候不需要添加 `code.py`， 启用mod_rewrite 法则 (查看如下)。
 
-Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
+注意: `web.py` 的实现破坏了 `cgitb` 模块，因为它截取了 `stdout`。 可以通过以下的方法来解决该问题：
     
     import cgitb; cgitb.enable()
     import sys
@@ -125,51 +125,51 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
     
     web.internalerror = cgidebugerror
 
-#### .. with FastCGI
+#### .. 使用 FastCGI
 
-FastCGI is easy to configure and performs as well as mod_python.
+FastCGI很容易配置，运行方式如同mod_python。
 
-Add this to your `.htaccess`:
+添加以下到 `.htaccess`：
     
     <Files code.py>      SetHandler fastcgi-script
     </Files>
 
-Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py script to act as a FastCGI server so you have to tell web.py explicitly. Add this to `code.py` before your `if __name__ == "__main__":` line:
+不幸的是, 不像lighttpd, Apache不能够暗示你的web.py脚本以FastCGI 服务器的形式工作，因此你需要明确的告诉web.py。 添加以下到 `code.py`的  `if __name__ == "__main__":` 行前：
     
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
+将你的浏览器指向 `http://example.com/code.py/`。 不要忘记最后的斜杠，否则你将会看到 `not found` 消息 (因为在 `urls` 列表中你输入的没有被匹配到). 为了让其运行的时候不需要添加 `code.py`， 启用mod_rewrite 法则 (查看如下)。
 
-[Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
+[Walter 还有一些额外建议](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-#### .. with SCGI
+#### .. 使用 SCGI
 https://www.mems-exchange.org/software/scgi/
-download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
-windows apache user: 
-edit your httpd.conf:
+从 http://www.mems-exchange.org/software/files/mod_scgi/ 下载 `mod_scgi` 代码
+windows apache 用户： 
+编辑 httpd.conf：
 
     LoadModule scgi_module Modules/mod_scgi.so
     SCGIMount / 127.0.0.1:8080
 
-restart apache and then start your code.py in the command below:
+重启apache，并在命令行中如下方式启动code.py：
 
     python code.py 127.0.0.1:8080 scgi
 
-and open you browser,visit 127.0.0.1
+打开你的浏览器，访问127.0.0.1
 It's ok! 
 
-#### .. with mod_python
+#### .. 使用 mod_python
 
-mod_python performs as well as FastCGI, but is not as straight-forward to configure.
+mod_python 运行方式如同FastCGI， 但不是那么方便配置。
 
-For Python 2.5 do this:
+对于 Python 2.5 按照如下：
 
     cd /usr/lib/python2.5/wsgiref
     # or in windows: cd /python2.5/lib/wsgiref
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser
 
-For Python <2.5 do this:
+对于 Python <2.5 按照如下：
 
     cd /usr/lib/python2.4/site-packages
     # or in windows: cd /python2.4/lib/site-packages
@@ -179,11 +179,11 @@ For Python <2.5 do this:
     # or fetch the file from that address using your browser  
 
 
-Rename your `code.py` to something like `codep.py` and add:
+重命名 `code.py` 为 `codep.py` 或别的名字， 添加：
     
     main = web.wsgifunc(web.webpyfunc(urls, globals()))
 
-In your `.htaccess`, add:
+在 `.htaccess` 中， 添加：
     
     
     AddHandler python-program .py
@@ -191,26 +191,26 @@ In your `.htaccess`, add:
     PythonOption wsgi.application codep::main
     
 
-You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
+你应该希望添加  `RewriteRule` 将 `/` 指向 `/codep.py/`
 
-Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll see an error message like `A server error occurred. Please contact the administrator.`
+确保访问 `/codep.py/` 的时候有添加最后的 `/`。  否则，你将会看到一条错误信息，比如 `A server error occurred. Please contact the administrator.`
 
-#### .. with mod_wsgi
+#### .. 使用 mod_wsgi
 
-mod\_wsgi is a new Apache module which [typically outperforms mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) for hosting WSGI applications, and is very easy to set up.
+mod\_wsgi 是一个新的Apache模块 [通常优于mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) 用于架设WSGI应用，它非常容易配置。
 
-At the end of your `code.py`, add:
+在 `code.py` 的最后添加：
 
     application = web.wsgifunc(web.webpyfunc(urls, globals()))
 
-mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) to expose a WSGI application in Apache's URL hierarchy, but one simple way would be to add the following to your .htaccess:
+mod\_wsgi 提供 [许多可行方法](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) 来实现WSGI应用, 但一种简单的方法是添加以下到 .htaccess：
 
     <Files code.py>
         SetHandler wsgi-script
         Options ExecCGI FollowSymLinks
     </Files>
 
-If you get an "ImportError: No module named web" in your apache error.log file, you could try setting the absolute path in code.py before importing web:
+如果在apache的 error.log 文件中出现 "ImportError: No module named web"， 在导入web之前，你可能需要在code.py中尝试设置绝对路径：
 
     import sys, os
     abspath = os.path.dirname(__file__)
@@ -218,13 +218,13 @@ If you get an "ImportError: No module named web" in your apache error.log file, 
     os.chdir(abspath)
     import web
 
-Also, you might want to read the "Application Working Directory" section from [Common problems with WSGI application](http://code.google.com/p/modwsgi/wiki/ApplicationIssues).
+同时， 你可能需要查看 [WSGI应用的常见问题](http://code.google.com/p/modwsgi/wiki/ApplicationIssues)的 "Application Working Directory" 部分。
 
-It should then be accessible at `http://example.com/code.py/` as usual.
+最终应该可以访问 `http://example.com/code.py/`。
 
-#### mod_rewrite Rules for Apache
+#### mod_rewrite 法则，Apache
 
-If you want web.py to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
+如果希望 web.py 能够通过 'http://example.com' 访问，代替使用 'http://example.com/code.py/'， 添加以下法则到 `.htaccess` 文件：
 
     <IfModule mod_rewrite.c>      
       RewriteEngine on
@@ -235,4 +235,4 @@ If you want web.py to be accessible at 'http://example.com' instead of 'http://e
       RewriteRule ^(.*)$ code.py/$1 [PT]
     </IfModule>
 
-If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+如果 `code.py` 在子目录 `myapp/`中， 调整 RewriteBase 为 `RewriteBase /myapp/`。 如果还有一些静态文件如CSS文件和图片文件, 复制这些并改成你需要的地址。
