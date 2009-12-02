@@ -5,17 +5,17 @@ title: web.py 0.3 新手指南
 
 # web.py 0.3 新手指南
 
-## Starting
+## 开始
 
-So you know Python and want to make a website. web.py provides the code to make that easy.
+你知道Python同时你希望制作一个网站。 那么web.py正好提供了一种简单的方法。
 
-If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). For details, see [webpy.org](http://webpy.org/).
+如果你希望读完整个指南， 你需要安装Python, web.py, flup, psycopg2, 和Postgres (或者等价的数据库和Python驱动)。 详细，可以查看 [webpy.org](http://webpy.org/).
 
-If you have an existing web.py project, take a look at the [upgrade](/docs/0.3/upgrade) page for info on migrating.
+如果你已经有了一个web.py项目，请看看[升级](/docs/0.3/upgrade) 页面的相关信息。
 
-Let's get started.
+准备开始。
 
-## URL Handling
+## URL 处理
 
 The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
 
