@@ -180,6 +180,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [tutorials for version 0.3 (latest)](/tutorial3)
     * [english](/tutorial3.en)
+    * [简体中文](/tutorial3.zh-cn)
     * [p?????? 0.2](http://webpy.infogami.com/tutorial2.ru)
     * [????](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
