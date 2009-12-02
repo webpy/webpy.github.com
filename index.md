@@ -173,6 +173,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [mac os x](/install_macosx)
     * [español](/install/es)
     * [???](/install/ja)
+    * [中文](/install/zh-cn)
     * [Italiano](/install/it)
     * [français](/install/fr)
 
