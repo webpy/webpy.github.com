@@ -1591,7 +1591,6 @@ Runs a WSGI function as an SCGI server.
 Runs a WSGI-compatible `func` using FCGI, SCGI, or a simple web server,
 as appropriate based on context and `sys.argv`.
 
-
 <style type="text/css">
     #content {margin-left: 20px;}
     .head {margin-left: -20px;}
