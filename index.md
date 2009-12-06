@@ -172,7 +172,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [english](/install)
     * [mac os x](/install_macosx)
     * [español](/install/es)
-    * [???](/install/ja)
+    * [日本語](/install/ja)
     * [简体中文](/install/zh-cn)
     * [Italiano](/install/it)
     * [français](/install/fr)
@@ -185,7 +185,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [????](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
     * [template.py tutorial](/templetor)
     * [form.py (short) tutorial](/form)
-    * [???](/tutorial2.ja)
+    * [日本語](/tutorial2.ja)
     * [e???????](http://webpy.org/tutorial2.el)
     * [français](/tutorial3.fr)
 
@@ -195,7 +195,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * português: [1](http://www.writely.com/View.aspx?docid=bbcm927cd2fmj) [2](http://www.writely.com/View.aspx?docid=bbcnjdbhbfh6n) [3](http://www.writely.com/View.aspx?docid=bccxp4cgw36p3)
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [p??????](http://bobuk.infogami.com/webpytrans)
-    * [???](http://kinneko.googlepages.com/webpy_tutorial_ja)
+    * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
 
 
 * [code documentation](/docs)
@@ -206,10 +206,11 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [español](/faq/es)
     * [???????](/faq/ru)
     * [???](http://kinneko.googlepages.com/webpy_faq)
-    * [???(webpy.org)](/faq/ja)
+    * [日本語(webpy.org)](/faq/ja)
+    * [简体中文(webpy.org)](/faq/zh-cn)
 
 * cookbook:
-      * [???](/cookbook/ja)
+      * [日本語](/cookbook/ja)
       * [english](/cookbook)
       * [简体中文](/cookbook/zh-cn)
 
