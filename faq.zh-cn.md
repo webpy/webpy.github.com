@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 中文 FAQ
+title: FAQ
 ---
 
-# 中文 FAQ
+# FAQ
 
 99. **如何使用template.py模板?**
 
