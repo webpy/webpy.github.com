@@ -42,3 +42,9 @@ Put your "index.html" in "template" directory.
     <p>Hello, $name.</p>
     </body>
     </html>
+
+refer
+-----
+
+* [genshi on gae 2010 - Genshi | Google Groups](http://groups.google.com/group/genshi/t/4f3fa1beddbd4ffc)
+* [/trunk/examples/webpy – Genshi](http://genshi.edgewall.org/browser/trunk/examples/webpy?rev=332)
