@@ -9,7 +9,7 @@ title: Code samples
 
 * [skeleton code](skeleton)
 
-* [simple todo-list engine](/src/todo-list) | [new version](http://domimob.infogami.com/wiki/tidy) (uses template.py and form.py)
+* [simple todo-list engine](src/todo-list) (uses template.py and form.py)
 
 * [simple blog engine](http://wiki.k4ml.com/python/webpy/simpleblog)
 
@@ -17,9 +17,11 @@ title: Code samples
 
 * [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
 
-* [simple del.icio.us clone](http://webpy.infogami.com/src/lecker)
+* [simple del.icio.us clone](/src/lecker)
 
-* [alternate version of tutorial code using SQLite and SQLObject](http://schwarzwald.infogami.com/blog/webpysqlobject)
+* [alternate version of tutorial code using SQLite and SQLObject](/src/webpysqlobject)
+
+* [Templating with Genshi](/src/genshi)
 
 ### tips and tricks:
 
@@ -47,6 +49,6 @@ title: Code samples
 
 * [colr.org (v5)](http://www.colr.org/): A site for playing with colors. (see [rewrite](http://www.colr.org/rewrite.html))
 
-* [todo](http://todo.dabase.com): a simple webpy example where you can create, delete and edit-in-place an item (CRUD). ([src](http://svn.natalian.org/projects/todo/))
+* todo: a simple webpy example where you can create, delete and edit-in-place an item (CRUD). ([src](http://svn.natalian.org/projects/todo/))
 
 * [music-share](http://github.com/andreisavu/music-share/tree/master): a simple web app for music sharing (mp3 files). ([src](http://github.com/andreisavu/music-share/tree/master))
