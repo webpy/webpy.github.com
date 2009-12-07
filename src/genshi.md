@@ -15,7 +15,7 @@ Put your "code.py" in root directory.
     import web
     from genshi.template import TemplateLoader
 
-    loader = TemplateLoader(['.'], auto_reload=True)
+    loader = TemplateLoader(['./templates'], auto_reload=True)
 
     urls = (
         '/', 'index'
@@ -24,7 +24,7 @@ Put your "code.py" in root directory.
     class index:
         def GET(self):
             name = 'John Doe'
-            tmpl = loader.load('./templates/index.html')
+            tmpl = loader.load('./index.html')
             stream = tmpl.generate(name=name)
             return stream.render('html')
 
