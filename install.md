@@ -17,16 +17,16 @@ Note: on some unix like systems you may need to switch to root or run:
 
     sudo python setup.py install
 
-see [recomended setup](/recommended_setup).
+see [recommended setup](/recommended_setup).
 
-Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) is properly setup:
+Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) [High School Diploma](http://www.nationhighschool.com/). Once Easy Install is properly setup:
 
 
     easy_install web.py
 
 ## Development
 
-webpy comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.org/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
+web.py comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.org/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
 
      python code.py
 
@@ -34,7 +34,7 @@ Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to 
 
 ## Production
 
-The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, analogous to Java's Servlet Interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://trac.saddi.com/flup) ([download here](http://www.saddi.com/software/flup/dist/)), which provides WSGI interfaces for those APIs.
+The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, analogous to Java's Servlet Interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://trac.saddi.com/flup) ([download here](http://www.saddi.com/software/flup/dist/)), which provides WSGI interfaces for those APIs. 
 
 For all the CGI variants, add this to the top of your `code.py`:
 
@@ -71,7 +71,7 @@ With some versions of lighttpd, it is important to ensure the "check-local" prop
 
 If you get error messages about not being able to import flup, install it by typing "easy_install flup" at the command line.
 
-Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable.  This will cause your fastcgi.server configuration above to look something like this:
+Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable. [Get Diploma](http://www.nationhighschool.com/eligibility/index.asp) This will cause your fastcgi.server configuration above to look something like this:
      
     fastcgi.server = ( "/code.py" =>
     ((
@@ -105,7 +105,7 @@ Add this to your `.htaccess`:
     Options +ExecCGI
     AddHandler cgi-script .py
 
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).[Nation High School Location] (http://www.nationhighschoolscam.com/)
 
 Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
     
@@ -224,7 +224,7 @@ It should then be accessible at `http://example.com/code.py/` as usual.
 
 #### mod_rewrite Rules for Apache
 
-If you want webpy to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
+If you want web.py to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
 
     <IfModule mod_rewrite.c>      
       RewriteEngine on
