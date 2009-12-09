@@ -19,7 +19,7 @@ Note: on some unix like systems you may need to switch to root or run:
 
 see [recommended setup](/recommended_setup).
 
-Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) [High School Diploma](http://www.nationhighschool.com/). Once Easy Install is properly setup:
+Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once Easy Install is properly setup:
 
 
     easy_install web.py
@@ -71,7 +71,7 @@ With some versions of lighttpd, it is important to ensure the "check-local" prop
 
 If you get error messages about not being able to import flup, install it by typing "easy_install flup" at the command line.
 
-Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable. [Get Diploma](http://www.nationhighschool.com/eligibility/index.asp) This will cause your fastcgi.server configuration above to look something like this:
+Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable. This will cause your fastcgi.server configuration above to look something like this:
      
     fastcgi.server = ( "/code.py" =>
     ((
@@ -105,7 +105,7 @@ Add this to your `.htaccess`:
     Options +ExecCGI
     AddHandler cgi-script .py
 
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).[Nation High School Location] (http://www.nationhighschoolscam.com/)
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
 
 Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
     
