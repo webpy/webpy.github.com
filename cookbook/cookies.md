@@ -69,6 +69,8 @@ Sometimes, you want to know specifically if something doesn't exist, in which ca
                  # Do whatever handling you need to, etc. here.
                  return "Cookie does not exist."
 
+This code attempts to use the cookie submitted by the browser, but does not give it a default value.  If the cookie doesn't exist, an exception is raised, and the `except` clause is executed, giving the server an opportunity to handle the lack of cookie.
+
 or
 
     class CookieGet:
@@ -78,5 +80,3 @@ or
                 return "Your age is: %s" % age
             else:
                 return "Cookie does not exist."
-
-This code attempts to use the cookie submitted by the browser, but does not give it a default value.  If the cookie doesn't exist, an exception is raised, and the `except` clause is executed, giving the server an opportunity to handle the lack of cookie.
