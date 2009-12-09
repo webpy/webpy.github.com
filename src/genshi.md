@@ -13,9 +13,9 @@ Put your "code.py" in root directory.
     # -*- coding: utf-8 -*-
 
     import web
-    from genshi.template import TemplateLoader
+    from web.contrib import template
 
-    loader = TemplateLoader(['./templates'], auto_reload=True)
+    render = template.render_genshi(['./templates/'])
 
     urls = (
         '/', 'index'
@@ -24,19 +24,18 @@ Put your "code.py" in root directory.
     class index:
         def GET(self):
             name = 'John Doe'
-            tmpl = loader.load('./index.html')
-            stream = tmpl.generate(name=name)
-            return stream.render('html')
+            return render.index(name=name)
 
     app = web.application(urls, globals())
-    if __name__ == "__main__": app.run()
+    if __name__ == "__main__":
+        app.run()
 
 index.html
 ----------
 
 Put your "index.html" in "template" directory.
 
-    <?python title="My Genshi template"?>
+    <?xml version="1.0" encoding="utf-8"?>
     <html xmlns:py="http://genshi.edgewall.org/">
     <body>
     <p>Hello, $name.</p>
@@ -48,3 +47,4 @@ refer
 
 * [genshi on gae 2010 - Genshi | Google Groups](http://groups.google.com/group/genshi/t/4f3fa1beddbd4ffc)
 * [/trunk/examples/webpy – Genshi](http://genshi.edgewall.org/browser/trunk/examples/webpy?rev=332)
+* [api docs (web.py)](http://webpy.org/docs/0.3/api)
