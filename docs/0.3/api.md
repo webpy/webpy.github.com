@@ -1049,7 +1049,7 @@ Function replacement for if-else to use in expressions.
     >>> cond(x % 2 == 0, "even", "odd") + '_row'
     'even_row'
 
-<code class="head">dateify(datestring)</code>: 
+<a name="datestr"><code class="head">dateify(datestring)</code>: 
 Formats a numified `datestring` properly.
 
 <code class="head">datestr(then, now=None)</code>: 
