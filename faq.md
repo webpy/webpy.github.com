@@ -64,3 +64,7 @@ title: FAQ
 99. **I stumbled over a bug in web.py. Where can I file it?**
 
 	Go to the [webpy launchpad site](https://launchpad.net/webpy), login (or register if you have to) and click on "report a bug".
+
+99. **What's this magic `ctx` I see in examples?**
+
+	[ctx cookbook recipe](/ctx)
