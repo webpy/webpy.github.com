@@ -70,13 +70,6 @@ Options related to sessions can be modified using the `sessions_parameters` dict
  * cookie_domain - domain for the cookie used to store the session id
  * timeout - number of second of inactivity that is allowed before the session expires
  * ignore_expiry - if true, the session timeout is ignored
- * ignore_change_ip - if true, the session is only valid when it is accessed from the same ip address that created the session
+ * ignore_change_ip - if false, the session is only valid when it is accessed from the same ip address that created the session
  * secret_key       - *requires explanation*
  * expired_message  - message displayed when the session expires
-
-
-
-
-
-
-
