@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 
+title: About web.py
 ---
 
 # About web.py
