@@ -3,9 +3,11 @@ layout: default
 title: 
 ---
 
-## About web.py
+# About web.py
 
 **web.py** is a web framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
+
+##A complete web.py application
     
     import web
             
@@ -23,7 +25,6 @@ title:
     if __name__ == "__main__":
         app.run()
 
-A complete web.py application
 
 ## Get Started
 
@@ -206,7 +207,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [español](/faq/es)
     * [???????](/faq/ru)
     * [???](http://kinneko.googlepages.com/webpy_faq)
-    * [日本語(webpy.org)](/faq/ja)
+    * [日本語](/faq/ja)
     * [简体中文](/faq/zh-cn)
 
 * cookbook:
