@@ -19,7 +19,7 @@ title: About web.py
     class hello:        
         def GET(self, name):
             if not name: 
-                name = 'world'
+                name = 'World'
             return 'Hello, ' + name + '!'
     
     if __name__ == "__main__":
