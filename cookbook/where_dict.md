@@ -19,8 +19,6 @@ Solution
     >>> db.delete('mytable', where=web.db.sqlwhere(where_dict), _test=True)
     <sql: "DELETE FROM mytable WHERE col1 = 1 AND col2 = 'sometext'">
 
-    
-
 Explanation
 -----------
 
