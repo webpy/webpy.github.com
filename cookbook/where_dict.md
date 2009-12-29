@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Using dict as where clause
+title: Using a dictionary as where clause
 ---
 
-# Using dict as where clause
+# Using a dictionary as where clause
 
 Problem
 -------
