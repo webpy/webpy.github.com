@@ -201,7 +201,8 @@ mod\_wsgi is a new Apache module which [typically outperforms mod_python](http:/
 
 At the end of your `code.py`, add:
 
-    application = web.wsgifunc(web.webpyfunc(urls, globals()))
+    app = web.application(urls, globals(), autoreload=False)
+    application = app.wsgifunc()
 
 mod\_wsgi offers [many possible ways](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) to expose a WSGI application in Apache's URL hierarchy, but one simple way would be to add the following to your .htaccess:
 
