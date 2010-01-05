@@ -17,13 +17,13 @@ title: web.py 0.3 新手指南
 
 ## URL 处理
 
-The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
+任何网站最重要的部分就是它的URL结构。你的URL并不仅仅只是访问者所能看到并且能发给朋友的。它还规定了你网站运行的心智模型。在一些类似[del.icio.us](http://del.icio.us/)的流行网站 , URL甚至是UI的一部分。 web.py使这类强大的URL成为可能。
 
-To get started with your web.py application, open up a new text file (let's call it `code.py`) and type:
+在开始你的web.py程序之前,打开一个文本文件（文件名为code.py）输入:
 
     import web
 
-This imports the web.py module.
+这条语句会导入web.py模块。
 
 Now we need to tell web.py our URL structure. Let's start out with something simple:
 
