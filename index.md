@@ -65,7 +65,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
 
-[ChiefMal](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
+[Chiefmall](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
