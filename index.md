@@ -122,7 +122,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [zz]: http://sysinternals.xykra.org
 
-[Biomed Search] [zzz] search over a million biomedical images images in nicely viewable sizes.
+[Biomed Search] [zzz] searches over a million biomedical images images in nicely viewable sizes.
 
    [zzz]: http://www.biomed-search.com
 
