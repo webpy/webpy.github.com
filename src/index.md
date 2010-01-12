@@ -52,3 +52,11 @@ title: Code samples
 * todo: a simple webpy example where you can create, delete and edit-in-place an item (CRUD). ([src](http://svn.natalian.org/projects/todo/))
 
 * [music-share](http://github.com/andreisavu/music-share/tree/master): a simple web app for music sharing (mp3 files). ([src](http://github.com/andreisavu/music-share/tree/master))
+
+* [Google Modules] (http://www.googlemodules.com) : an iGoogle Gadget directory written in MVC style. ([src](http://github.com/alexksikes/googlemodules))
+
+* [Mailer] (http://mailer.ksikes.net) : a very simple mass mailer. ([src] (http://github.com/alexksikes/mailer))
+
+* [MLSS Admin] (http://mlss.ksikes.net) : a system to rate, comment and accept candidates for conferences and likes. ([src](http://github.com/alexksikes/MLSS))
+
+* [Wikitrivia] (http://www.wikitrivia.net) : take randomly generated quizes generated using Wikipedia. ([src](http://github.com/alexksikes/wikitrivia))
