@@ -122,6 +122,10 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [zz]: http://sysinternals.xykra.org
 
+[Biomed Search] [zzz] search over a million biomedical images images in nicely viewable sizes.
+
+   [zzz]: http://www.biomed-search.com
+
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
  - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
 
