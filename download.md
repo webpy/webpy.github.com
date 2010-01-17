@@ -5,7 +5,7 @@ title: Download
 
 # Download
 
-<a id=toc></a>
+<hr id=toc>
 
 1.  [Development](#development)
 1.  [Stable](#stable)
