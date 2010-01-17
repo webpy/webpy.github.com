@@ -45,12 +45,42 @@ body {
   background-color: #fff;
   color: #000;
   font: 300 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
-#main {
-  color: #000; }
+h1 {
+  font-size: 2em;
+  margin: .5em; }
+h2 {
+  font-size: 1.75em;
+  margin: .571428571em; }
+h3 {
+  font-size: 1.5em;
+  margin: .6666em; }
+h4 {
+  font-size: 1.25em;
+  margin: .8em; }
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  margin-left: 0;
+  margin-right: 0; }
+#header .logo a {
+  font-size: 4em;
+  font-weight: 900;
+  padding: .25em; }
+#header .logo a:after {
+  content: 'web.py'; }
+#header .logo a img {
+  display: none; }
+#header .blurb {
+  font-size: 1.25em;
+  float: right;
+  left: 0;
+  padding: 1em;
+  position: relative; }
 #location {
   background-color: #bbb; }
 #location a:first-child {
   text-transform: capitalize; }
+#main {
+  color: #000; }
 pre {
   background-color: #ddd;
   border: 0;
