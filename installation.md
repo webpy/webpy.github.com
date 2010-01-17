@@ -7,7 +7,6 @@ title: Installation
 
 <hr id=toc>
 
-1.  [Development](#development)
 1.  [Stable](#stable)
     1.  [Source](#source)
         1.  [System](#system)
@@ -15,10 +14,10 @@ title: Installation
     1.  [Distribution](#distribution)
         1.  [Debian](#debian)
         1.  [Red Hat](#red-hat)
+1.  [Development](#development)
+1.  [Verify Install](#verify)
 
-<h2 id=development>Development</h2>
-
-<pre><code><kbd>git clone git://github.com/webpy/webpy.git</kbd></code></pre>
+`web.py` supports Python 2.4 &ndash; 2.6 and possesses no immediate prerequisites.
 
 <h2 id=stable>Stable</h2>
 
@@ -33,12 +32,12 @@ The easiest way to install `web.py` is using
 <pre><code><kbd>wget http://webpy.org/static/web.py-0.33.tar.gz</kbd>
 <kbd>tar xvzf web.py-0.33.tar.gz</kbd></code></pre>
 
-<h4 id=system>System Install</h4>
+<h4 id=system>System-wide</h4>
 
 <pre><code><kbd>cd web.py-0.33</kbd>
 <kbd>sudo python setup.py install</kbd></code></pre>
 
-<h4 id=local>Local Install</h4>
+<h4 id=local>Local</h4>
 
 If you need to bundle `web.py` with your application extract the source to a `vendor` folder and create a symlink, normally within your package's root.
 
@@ -60,5 +59,16 @@ If you are on a Red Hat-based system you can install `web.py` using `yum` or `up
 
 <pre><code><kbd class=su>yum install python-webpy</kbd>
 <kbd class=su>up2date -i python-webpy</kbd></code></pre>
+
+<h2 id=development>Development</h2>
+
+<pre><code><kbd>git clone git://github.com/webpy/webpy.git</kbd></code></pre>
+
+<h2 id=verify>Verify</h2>
+
+<pre><code><kbd>python -c "import web; web.application(('/', lambda: 'success')).run()"</kbd>
+<samp>http://0.0.0.0:8080/</samp></code></pre>
+
+Point a browser to your host at port `8080` and expect a response of `success`.
 
 <style>@import url(http://angelo.gladding.name/assets/webpy-redesign.css);</style>
