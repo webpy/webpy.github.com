@@ -5,6 +5,8 @@ title: Download
 
 # Download
 
+<a id=toc></a>
+
 1.  [Development](#development)
 1.  [Stable](#stable)
     1.  [Source](#source)
