@@ -73,7 +73,7 @@ To follow the bleeding edge clone the master branch.
 
 Point a browser to your host at port `8080` and expect a response of `success`.
 
-<script src=http://angelo.gladding.name/assets/webpy/jquery.js></script>
+<script src=http://angelo.gladding.name/assets/jquery.js></script>
 <script src=http://angelo.gladding.name/assets/webpy/js-prettify/prettify.js></script>
 <script>$(document).ready(function() { prettyPrint(); });</script>
 <style>
