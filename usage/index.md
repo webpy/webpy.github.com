@@ -39,10 +39,10 @@ if __name__ == '__main__':
 
 [ [download](/usage/hello.py?format=raw) ]
 
-<script src=http://angelo.gladding.name/assets/jquery.js></script>
-<script src=http://angelo.gladding.name/assets/js-prettify/prettify.js></script>
+<script src=http://angelo.gladding.name/assets/webpy/jquery.js></script>
+<script src=http://angelo.gladding.name/assets/webpy/js-prettify/prettify.js></script>
 <script>$(document).ready(function() { prettyPrint(); });</script>
 <style>
-@import url(http://angelo.gladding.name/assets/js-prettify/prettify.css);
-@import url(http://angelo.gladding.name/assets/webpy-redesign.css);
+@import url(http://angelo.gladding.name/assets/webpy/js-prettify/prettify.css);
+@import url(http://angelo.gladding.name/assets/webpy/changes.css);
 </style>
