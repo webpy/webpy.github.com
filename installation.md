@@ -73,4 +73,4 @@ To follow the bleeding edge clone the master branch.
 
 Point a browser to your host at port `8080` and expect a response of `success`.
 
-<style>@import url(http://angelo.gladding.name/assets/webpy-redesign.css);</style>
+<style>@import url(http://angelo.gladding.name/assets/webpy/changes.css);</style>
