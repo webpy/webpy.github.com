@@ -16,19 +16,16 @@ hello world
 
 """
 
-
 import web
-
 
 resources = (
   r'/(.*)', 'Hello'
 )
 webapp = web.application(resources, globals())
 
-
 class Hello:
   """
-  say "Hello"
+  say Hello
   
   """
   
@@ -37,9 +34,10 @@ class Hello:
         name = 'World'
     return 'Hello ' + name + '!'
 
-
 if __name__ == '__main__':
   webapp.run()</code></pre>
+
+[ [download](/usage/hello.py?format=raw) ]
 
 <script src=http://angelo.gladding.name/assets/jquery.js></script>
 <script src=http://angelo.gladding.name/assets/js-prettify/prettify.js></script>
