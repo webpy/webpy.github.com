@@ -29,7 +29,7 @@ webapp = web.application(resources, globals())
 class Hello:
   """
   say "Hello"
-
+  
   >>> webapp.request('/').data
   'Hello World'
   >>> webapp.request('/Fnord').data
@@ -44,4 +44,10 @@ class Hello:
 if __name__ == '__main__':
   app.run()</code></pre>
 
-<style>@import url(http://angelo.gladding.name/assets/webpy-redesign.css);</style>
+<style>
+@import url(http://angelo.gladding.name/assets/webpy-redesign.css);
+@import url(http://angelo.gladding.name/assets/js-prettify/prettify.css);
+</style>
+<script src=http://angelo.gladding.name/assets/jquery.js></script>
+<script src=http://angelo.gladding.name/assets/js-prettify/prettify.js></script>
+<script>$(document).ready(function() { prettyPrint(); });</script>
