@@ -34,8 +34,9 @@ class Hello:
   'Hello World'
   >>> webapp.request('/Fnord').data
   'Hello Fnord'
-
+  
   """
+
   def GET(self, name):
     if not name: 
         name = 'World'
