@@ -7,19 +7,19 @@ title: Installation
 
 <hr id=toc>
 
-1.  [Stable](#stable)
-    1.  [Source](#source)
-        1.  [System](#system)
+1.  [Stable Version](#stable)
+    1.  [From Source](#source)
+        1.  [System-wide](#system)
         1.  [Local](#local)
-    1.  [Distribution](#distribution)
-        1.  [Debian](#debian)
-        1.  [Red Hat](#red-hat)
-1.  [Development](#development)
+    1.  [Via Distribution](#distribution)
+        1.  [Debian-based](#debian)
+        1.  [Red Hat-based](#red-hat)
+1.  [Development Version](#development)
 1.  [Verify Install](#verify)
 
-`web.py` supports Python 2.4 &ndash; 2.6 and possesses no immediate prerequisites.
+`web.py` supports Python 2.4 &ndash; 2.6 and has no immediate prerequisites.
 
-<h2 id=stable>Stable</h2>
+<h2 id=stable>Stable Version</h2>
 
 The easiest way to install `web.py` is using
 <code>[easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall)</code>.  
@@ -27,7 +27,7 @@ The easiest way to install `web.py` is using
 
 <pre><code><kbd>easy_install web.py</kbd></code></pre>
 
-<h3 id=source>Source</h3>
+<h3 id=source>From Source</h3>
 
 <pre><code><kbd>wget http://webpy.org/static/web.py-0.33.tar.gz</kbd>
 <kbd>tar xvzf web.py-0.33.tar.gz</kbd></code></pre>
@@ -43,24 +43,26 @@ If you need to bundle `web.py` with your application extract the source to a `ve
 
 <pre><code><kbd>ln -s vendor/web.py-0.33/web web</kbd></code></pre>
 
-<h3 id=distributions>GNU/Linux Distributions</h3>
+<h3 id=distribution>Via GNU/Linux Distribution</h3>
 
-<h4 id=debian>Debian <small>Ubuntu</small></h4>
+<h4 id=debian>Debian <small>or Ubuntu</small></h4>
 
 If you are on a Debian-based system you can install `web.py` using `apt-get`.  
-<em><small><strong>Note</strong> that you may not get the latest version as the Ubuntu/Debian release cycles are different from `web.py`.</small></em>
+<em><small><strong>Note</strong> that you may not get the latest version as the Ubuntu/Debian release cycles are different from `web.py`. See <a href=http://packages.debian.org/search?searchon=names&keywords=python-webpy>Debian</a> and <a href=https://launchpad.net/ubuntu/+source/webpy>Ubuntu</a> package profiles for more information.</small></em>
 
 <pre><code><kbd>sudo apt-get install python-webpy</kbd></code></pre>
 
-<h4 id=red-hat>Red Hat <small>Fedora, RHEL, CentOS</small></h4>
+<h4 id=red-hat>Red Hat <small>or Fedora, RHEL, CentOS</small></h4>
 
 If you are on a Red Hat-based system you can install `web.py` using `yum` or `up2date`.  
 <em><small><strong>Note</strong> that CentOS requires the [<abbr title="Extra Packages for Enterprise Linux">EPEL</abbr>](https://fedoraproject.org/wiki/EPEL) repository.</small></em>
 
-<pre><code><kbd class=su>yum install python-webpy</kbd>
-<kbd class=su>up2date -i python-webpy</kbd></code></pre>
+<pre><code><kbd class=su>yum install python-webpy</kbd></code></pre>
+<pre><code><kbd class=su>up2date -i python-webpy</kbd></code></pre>
 
-<h2 id=development>Development</h2>
+<h2 id=development>Development Branch</h2>
+
+To follow the bleeding edge clone the master branch.
 
 <pre><code><kbd>git clone git://github.com/webpy/webpy.git</kbd></code></pre>
 
