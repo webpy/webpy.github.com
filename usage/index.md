@@ -41,10 +41,10 @@ class Hello:
 if __name__ == '__main__':
   webapp.run()</code></pre>
 
-<style>
-@import url(http://angelo.gladding.name/assets/webpy-redesign.css);
-@import url(http://angelo.gladding.name/assets/js-prettify/prettify.css);
-</style>
 <script src=http://angelo.gladding.name/assets/jquery.js></script>
 <script src=http://angelo.gladding.name/assets/js-prettify/prettify.js></script>
 <script>$(document).ready(function() { prettyPrint(); });</script>
+<style>
+@import url(http://angelo.gladding.name/assets/js-prettify/prettify.css);
+@import url(http://angelo.gladding.name/assets/webpy-redesign.css);
+</style>
