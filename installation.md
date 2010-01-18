@@ -75,7 +75,7 @@ Point a browser to your host at port `8080` and expect a response of `success`.
 
 <script src=http://angelo.gladding.name/assets/jquery.js></script>
 <script src=http://angelo.gladding.name/assets/webpy/js-prettify/prettify.js></script>
-<script>$(document).ready(function() { prettyPrint(); });</script>
+<script src=http://angelo.gladding.name/assets/webpy/enliven.js></script>
 <style>
 @import url(http://angelo.gladding.name/assets/webpy/js-prettify/prettify.css);
 @import url(http://angelo.gladding.name/assets/webpy/changes.css);
