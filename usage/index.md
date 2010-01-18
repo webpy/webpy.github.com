@@ -7,9 +7,9 @@ title: Usage
 
 <hr id=toc>
 
-1.  [Hello World](#hello-world)
+1.  [Hello World](#hello)
 
-<h2 id=hello-world>Hello World</h2>
+<h2 id=hello>Hello World</h2>
 
 <pre class=prettyprint><code>"""
 hello world
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
 <script src=http://angelo.gladding.name/assets/jquery.js></script>
 <script src=http://angelo.gladding.name/assets/webpy/js-prettify/prettify.js></script>
-<script>$(document).ready(function() { prettyPrint(); });</script>
+<script src=http://angelo.gladding.name/assets/webpy/enliven.js></script>
 <style>
 @import url(http://angelo.gladding.name/assets/webpy/js-prettify/prettify.css);
 @import url(http://angelo.gladding.name/assets/webpy/changes.css);
