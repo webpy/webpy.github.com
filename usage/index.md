@@ -5,8 +5,6 @@ title: Usage
 
 # Usage
 
-<hr id=toc>
-
 1.  [Hello World](#hello)
 
 <h2 id=hello>Hello World</h2>
