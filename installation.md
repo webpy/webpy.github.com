@@ -5,8 +5,6 @@ title: Installation
 
 # Installation
 
-<hr id=top>
-
 `web.py` supports Python 2.4 &ndash; 2.6 and has no immediate prerequisites.
 
 1.  [Stable Version](#stable)
