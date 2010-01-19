@@ -5,8 +5,6 @@ title: About
 
 # About
 
-<hr id=top>
-
 web.py is a web framework for Python that is as simple as it is powerful. It is released to the public domain via a <a href=http://creativecommons.org/publicdomain/zero/1.0/ rel=license>Creative Commons Zero 1.0 License</a> &mdash; you can use it for whatever purpose with absolutely no restrictions.
 
 1.  [Hello World](#hello)
