@@ -5,14 +5,13 @@ title: About
 
 # About
 
-*   [Current Status](#status)
-*   [Hello World](#hello)
-*   [Sites Built with web.py](#built-with)
-*   [People Talking about web.py](#talking-about)
+<hr id=toc>
+
+1.  [Hello World](#hello)
+1.  [Sites Built with web.py](#built-with)
+1.  [People Talking about web.py](#talking-about)
 
 web.py is a web framework for Python that is as simple as it is powerful. It is released to the public domain via a <a href=http://creativecommons.org/publicdomain/zero/1.0/ rel=license>Creative Commons Zero 1.0 License</a> &mdash; you can use it for whatever purpose with absolutely no restrictions.
-
-<h2 id=status>Current Status</h2>
 
 web.py 0.33 was released on 2009-10-28 [ [tar.gz](/static/web.py-0.33.tar.gz) ]
 
