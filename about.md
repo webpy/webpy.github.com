@@ -8,8 +8,9 @@ title: About
 web.py is a web framework for Python that is as simple as it is powerful. It is released to the public domain via a <a href=http://creativecommons.org/publicdomain/zero/1.0/ rel=license>Creative Commons Zero 1.0 License</a> &mdash; you can use it for whatever purpose with absolutely no restrictions.
 
 1.  [Hello World](#hello)
-1.  [Sites Built with web.py](#built-with)
-1.  [People Talking about web.py](#talking-about)
+1.  [A Gentle Walkthrough](#walkthrough)
+1.  [Sites Built with web.py](#built)
+1.  [People Talking about web.py](#talking)
 
 web.py 0.33 was released on 2009-10-28 [ [tar.gz](/static/web.py-0.33.tar.gz) ]
 
@@ -43,7 +44,7 @@ if __name__ == '__main__':
 
 [ [download](/usage/hello.py?format=raw) ]
 
-<h2 id=built-with>Sites Built with web.py</h2>
+<h2 id=built>Sites Built with web.py</h2>
 
 * <p class=vcard>web.py was originally published while Aaron Swartz worked at <a class="fn org url uid" href=http://reddit.com/>Reddit</a>, where the site used it as it grew to become one of the top 1000 sites according to Alexa and served millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explained founder Steve Huffman. <em>The site was rewritten using other tools after being acquired by Condé Nast.</em></p>
 
@@ -93,7 +94,7 @@ if __name__ == '__main__':
 
 * <p class=vcard><a class="fn org url uid" href=http://biomed-search.com/>Biomed Search</a> searches over a million biomedical images images in nicely viewable sizes.</p>
 
-<h2 id=talking-about>People Talking about web.py</h2>
+<h2 id=talking>People Talking about web.py</h2>
 
 >   [My] blog runs on the code I wrote this evening. ... I used a web framework we use at FriendFeed. It looks a lot like the webapp framework that ships with App Engine and web.py (which inspired both of them). [#](http://bret.appspot.com/entry/experimenting-google-app-engine)
 
