@@ -9,8 +9,8 @@ web.py is a web framework for Python that is as simple as it is powerful. It is 
 
 1.  [Hello World](#hello)
 1.  [A Gentle Overview](#overview)
-1.  [Sites Built with web.py](#built)
-1.  [People Talking about web.py](#talking)
+1.  [Sites Built with web.py](#sites)
+1.  [People Talking about web.py](#people)
 
 web.py 0.33 was released on 2009-10-28 [ [tar.gz](/static/web.py-0.33.tar.gz) ]
 
@@ -53,7 +53,7 @@ Follow these in order and it will read like a story but feel free to jump around
 1.  [Deployment](/deployment)
 1.  [Documentation](/documentation)
 
-<h2 id=built>Sites Built with web.py</h2>
+<h2 id=sites>Sites Built with web.py</h2>
 
 * <p class=vcard>web.py was originally published while Aaron Swartz worked at <a class="fn org url uid" href=http://reddit.com/>Reddit</a>, where the site used it as it grew to become one of the top 1000 sites according to Alexa and served millions of daily page views. "It's the anti-framework framework. web.py doesn't get in your way," explained founder Steve Huffman. <em>The site was rewritten using other tools after being acquired by Condé Nast.</em></p>
 
@@ -103,7 +103,7 @@ Follow these in order and it will read like a story but feel free to jump around
 
 * <p class=vcard><a class="fn org url uid" href=http://biomed-search.com/>Biomed Search</a> searches over a million biomedical images images in nicely viewable sizes.</p>
 
-<h2 id=talking>People Talking about web.py</h2>
+<h2 id=people>People Talking about web.py</h2>
 
 >   [My] blog runs on the code I wrote this evening. ... I used a web framework we use at FriendFeed. It looks a lot like the webapp framework that ships with App Engine and web.py (which inspired both of them). [#](http://bret.appspot.com/entry/experimenting-google-app-engine)
 
