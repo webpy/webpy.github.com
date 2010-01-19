@@ -5,7 +5,9 @@ title: Installation
 
 # Installation
 
-<hr id=toc>
+<hr id=top>
+
+`web.py` supports Python 2.4 &ndash; 2.6 and has no immediate prerequisites.
 
 1.  [Stable Version](#stable)
     1.  [From Source](#source)
@@ -16,8 +18,6 @@ title: Installation
         1.  [Red Hat-based](#red-hat)
 1.  [Development Version](#development)
 1.  [Verify Install](#verify)
-
-`web.py` supports Python 2.4 &ndash; 2.6 and has no immediate prerequisites.
 
 <h2 id=stable>Stable Version</h2>
 
