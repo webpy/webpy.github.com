@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
 >   It's minimal. In the ecosystem of web frameworks, something needs to occupy the "small, light and fast" niche. web.py is it. [#](http://www.colr.org/rewrite.html)
 
-<p class=vcard>—<a class="fn url uid" href=http://twitter.com/daltonlp>Lloyd Dalton</a><br><small>creator of colr.org</small></p>
+<p class=vcard>—&thinsp;<a class="fn url uid" href=http://twitter.com/daltonlp>Lloyd Dalton</a><br><small>creator of colr.org</small></p>
 
 >   We completed our server rewrite a few days ago with web.py and it was everything we could have wished for.
 
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 <p class=vcard>—&thinsp;<span class=fn>Phillip J. Eby</span><br><small>creator of Python's <abbr title="Web Server Gateway Interface">WSGI</abbr></small></p>
 
 >   ... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.) [#](http://shortb.net/~f561f3)
- 
+
 <p class=vcard>—&thinsp;<a class="fn url uid" href=http://www.python.org/~guido/>Guido van Rossum</a><br><small>creator of Python</small></p>
 
 >   suffice to say I think Aaron is headed in the right direction.
@@ -144,4 +144,6 @@ if __name__ == '__main__':
 <style>
 @import url(http://angelo.gladding.name/assets/webpy/js-prettify/prettify.css);
 @import url(http://angelo.gladding.name/assets/webpy/changes.css);
+h2#built-with + ul {
+  padding-left: 1em; }
 </style>
