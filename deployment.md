@@ -208,3 +208,11 @@ If you want web.py to be accessible at 'http://example.com' instead of 'http://e
     </IfModule>
 
 If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+
+<script src=http://angelo.gladding.name/assets/jquery.js></script>
+<script src=http://angelo.gladding.name/assets/webpy/js-prettify/prettify.js></script>
+<script src=http://angelo.gladding.name/assets/webpy/enliven.js></script>
+<style>
+@import url(http://angelo.gladding.name/assets/webpy/js-prettify/prettify.css);
+@import url(http://angelo.gladding.name/assets/webpy/changes.css);
+</style>
