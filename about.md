@@ -8,7 +8,7 @@ title: About
 web.py is a web framework for Python that is as simple as it is powerful. It is released to the public domain via a <a href=http://creativecommons.org/publicdomain/zero/1.0/ rel=license>Creative Commons Zero 1.0 License</a> &mdash; you can use it for whatever purpose with absolutely no restrictions.
 
 1.  [Hello World](#hello)
-1.  [A Gentle Walkthrough](#walkthrough)
+1.  [A Gentle Overview](#overview)
 1.  [Sites Built with web.py](#built)
 1.  [People Talking about web.py](#talking)
 
@@ -43,6 +43,15 @@ if __name__ == '__main__':
   webapp.run()</code></pre>
 
 [ [download](/usage/hello.py?format=raw) ]
+
+<h2 id=overview>A Gentle Overview</h2>
+
+Follow these in order and it will read like a story but feel free to jump around just the same.
+
+1.  [Installation](/installation)
+1.  [Usage](/usage)
+1.  [Deployment](/deployment)
+1.  [Documentation](/documentation)
 
 <h2 id=built>Sites Built with web.py</h2>
 
