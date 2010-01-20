@@ -86,6 +86,7 @@ title: Web.py Cookbook 简体中文版
 * [How to use database transactions](/transactions/zh-cn)
 * [Using sqlalchemy](/sqlalchemy/zh-cn)
 * [Integrating SQLite UDF (user-defined-functions) with webpy database layer](/sqlite-udf/zh-cn)
+* [Using a dictionary as where clause](/where_dict/zh-cn)
 
 ##Deployment:
 * [Fastcgi deployment through lighttpd (未译)](/fastcgi-lighttpd/zh-cn)
