@@ -43,6 +43,7 @@ title: Web.py Cookbook 简体中文版
 ##Sessions and user state:
 * [如何使用Session](/sessions/zh-cn)
 * [如何在调试模式下使用Session](/session_with_reloader/zh-cn)
+* [Using session in template (未译)](/session_in_template/zh-cn)
 * [如何操作Cookie](/cookies/zh-cn)
 * [用户认证](/userauth/zh-cn)
 * [一个在postgreSQL数据库环境下的用户认证的例子](/userauthpgsql/zh-cn)
