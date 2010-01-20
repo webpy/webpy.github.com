@@ -27,9 +27,11 @@ title: Web.py Cookbook 简体中文版
 ##基本应用:
 * [Hello World](/helloworld/zh-cn)
 * [提供静态文件访问](/staticfiles/zh-cn)
+* [Understanding URL handling (未译)](/url_handling/zh-cn)
 * [跳转与重定向](/redirect+seeother/zh-cn)
 * [使用子应用](/subapp/zh-cn)
 * [提供XML访问](/xmlfiles/zh-cn)
+* [Reading raw data from post (未译)](/postbasic/zh-cn)
 
 ##高级应用
 * [用web.ctx获得客户端信息](/ctx/zh-cn)
@@ -39,6 +41,7 @@ title: Web.py Cookbook 简体中文版
 * [如何流传输大文件](/streaming_large_files/zh-cn)
 * [对自带的webserver日志进行操作](/logging/zh-cn)
 * [用cherrypy提供SSL支持](/ssl/zh-cn)
+* [Run-time language switch (未译)](/runtime-language-switch/zh-cn)
 
 ##Sessions and user state:
 * [如何使用Session](/sessions/zh-cn)
