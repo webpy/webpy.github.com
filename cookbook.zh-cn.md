@@ -25,7 +25,7 @@ title: Web.py Cookbook 简体中文版
 -------------------------------------------------
 
 ##基本应用:
-* [Hello World](/cookbook/zh-cn/helloworld)
+* [Hello World](/cookbook/helloworld/zh-cn)
 * [提供静态文件访问](/cookbook/zh-cn/staticfiles)
 * [跳转与重定向](/cookbook/zh-cn/redirect+seeother)
 * [使用子应用](/cookbook/zh-cn/subapp)
