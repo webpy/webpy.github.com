@@ -58,6 +58,7 @@ title: Web.py Cookbook 简体中文版
 * [Templetor: The web.py templating system (未译)](http://webpy.org/docs/0.3/templetor/zh-cn)
 * [Using Site Layout Templates (未译)](/layout_template/zh-cn)
 * [Alternating Style (未译)](/alternating_style/zh-cn)
+* [Import functions into templates (未译)](/template_import/zh-cn)
 * [i18n support in template file (未译)](/i18n_support_in_template_file/zh-cn)
 * [Use Mako template engine in webpy ](/template_mako/zh-cn)
 * [Use Cheetah template engine in webpy (未译)](/template_cheetah/zh-cn)
