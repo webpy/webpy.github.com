@@ -61,7 +61,7 @@ title: Web.py Cookbook 简体中文版
 * [i18n support in template file (未译)](/i18n_support_in_template_file/zh-cn)
 * [Use Mako template engine in webpy ](/template_mako/zh-cn)
 * [Use Cheetah template engine in webpy (未译)](/template_cheetah/zh-cn)
-* [[template_jinja/zh-cn|Use Jinja2 template engine in webpy (未译)
+* [Use Jinja2 template engine in webpy (未译)](/template_jinja/zh-cn)
 * [How to use templates on Google App Engine (未译)](/templates_on_gae/zh-cn)
 
 ##Testing:
