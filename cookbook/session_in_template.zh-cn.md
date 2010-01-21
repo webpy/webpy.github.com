@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Using session in template
+title: 在template中使用session
 ---
 
-# Using session in template
+# 在template中使用session
 
-`Problem`: I want to use session in template (e.g. get session.username to display)
+`问题`: 我想在模板中使用session（比如：读取并显示session.username）
 
-`Solution`:
+`解决`:
 
-In your application code:
+在应用程序中的代码:
 
     render = web.template.render('templates', globals={'context': session})
 
-In the template:
+在模板中的代码:
 
     <span>You are logged in as <b>$context.username</b></span>
 
-You can literally use any valid python variable names, like the _context_ used above. I would prefer just use 'session' in real applications.
+你可以真正的使用任何符合语法的python变量名，比如上面用的_context_。我更喜欢在应用中直接使用'session'。
