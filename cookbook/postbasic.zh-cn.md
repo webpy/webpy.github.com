@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Reading raw data from post
+title: 从post读取原始数据
 ---
 
-# Reading raw data from post
+# 从post读取原始数据
 
-## Introduction
+## 介绍
 
-Sometimes, the client send a lot of data by post method. In webpy, you can handle it like this.
+有时候，浏览器会通过post发送很多数据。在webpy，你可以可以操作。
 
 
-## Code
+## 代码
 
     class RequestHandler():
         def POST():
-            data = web.data() # you can get data use this method
+            data = web.data() # 通过这个方法可以取到数据
