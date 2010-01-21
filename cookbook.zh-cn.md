@@ -31,7 +31,7 @@ title: Web.py Cookbook 简体中文版
 * [跳转与重定向](/redirect+seeother/zh-cn)
 * [使用子应用](/subapp/zh-cn)
 * [提供XML访问](/xmlfiles/zh-cn)
-* [Reading raw data from post (未译)](/postbasic/zh-cn)
+* [从post读取原始数据](/postbasic/zh-cn)
 
 ##高级应用
 * [用web.ctx获得客户端信息](/ctx/zh-cn)
