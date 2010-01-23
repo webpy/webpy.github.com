@@ -29,7 +29,7 @@ The easiest way to install `web.py` is using
 
 <pre class=prettyprint><code><kbd>wget http://webpy.org/static/web.py-0.33.tar.gz</kbd>
 <kbd>tar xvzf web.py-0.33.tar.gz</kbd>
-<kbd><kbd></code></pre>
+<kbd></kbd></code></pre>
 
 <h4 id=system>System-wide</h4>
 
