@@ -5,14 +5,12 @@ title: About
 
 # About
 
-a web framework for Python that is as simple as it is powerful
+<p class=vevent>web.py is a web framework for Python that is as simple as it is powerful. Version 0.33 was released on <abbr class=dtstart title=2009-10-28>October 28, 2009</abbr> [ <a href=/static/web.py-0.33.tar.gz>tar.gz</a> ].</p>
 
 1.  [Hello World](#hello)
 1.  [A Gentle Overview](#overview)
 1.  [Sites Built with web.py](#sites)
 1.  [People Talking about web.py](#people)
-
-web.py 0.33 was released on 2009-10-28 [ [tar.gz](/static/web.py-0.33.tar.gz) ]
 
 <h2 id=hello>Hello World</h2>
 
@@ -45,8 +43,6 @@ if __name__ == '__main__':
 [ [download](/usage/hello.py?format=raw) ]
 
 <h2 id=overview>A Gentle Overview</h2>
-
-Follow these in order and it will read like a story but feel free to jump around just the same.
 
 1.  [Installation](/installation)
 1.  [Usage](/usage)
