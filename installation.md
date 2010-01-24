@@ -61,9 +61,9 @@ If you are on a Red Hat-based system you can install `web.py` using `yum` or `up
 <em><small><strong>Note</strong> that CentOS requires the [<abbr title="Extra Packages for Enterprise Linux">EPEL</abbr>](https://fedoraproject.org/wiki/EPEL) repository.</small></em>
 
 <pre><code><kbd class=su>yum install python-webpy</kbd>
-<kbd></kbd></code></pre>
+<kbd class=su></kbd></code></pre>
 <pre><code><kbd class=su>up2date -i python-webpy</kbd>
-<kbd></kbd></code></pre>
+<kbd class=su></kbd></code></pre>
 
 <h2 id=development>Development Branch</h2>
 
