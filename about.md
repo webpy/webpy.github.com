@@ -1,9 +1,7 @@
 ---
 layout: default
-title: About
+title: 
 ---
-
-# About
 
 a web framework for Python that is as simple as it is powerful
 
