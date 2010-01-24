@@ -32,11 +32,11 @@ web.py is a web framework for Python that is as simple as it is powerful.
   <li>fix: consider empty lines as part of the indented block in templetor</li>
   <li>fix: fix a bug in web.group</li>
 </ul>
+</div>
 
 1.  [Hello World](#hello)
 1.  [Sites Built with web.py](#sites)
 1.  [People Talking about web.py](#people)
-1.  [Change Log](#changes)
 
 <h2 id=hello>Hello World</h2>
 
