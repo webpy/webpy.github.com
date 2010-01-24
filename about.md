@@ -5,7 +5,7 @@ title: About
 
 # About
 
-web.py is a web framework for Python that is as simple as it is powerful. It is released to the public domain via a <a href=http://creativecommons.org/publicdomain/zero/1.0/ rel=license>Creative Commons Zero 1.0 License</a> &mdash; you can use it for whatever purpose with absolutely no restrictions.
+a web framework for Python that is as simple as it is powerful
 
 1.  [Hello World](#hello)
 1.  [A Gentle Overview](#overview)
@@ -144,14 +144,3 @@ Follow these in order and it will read like a story but feel free to jump around
 >   a very fascinating moment for me. The feelings just like the first time I wrote my php script ... it sure have let me learn python in the fun way. Good work aaron !
 
 <p class=vcard>—&thinsp;<span class=fn>Kamal</span><br><small><a href=http://www.k4ml.com/node/165>simple blog in webpy, learning python the fun way</a></small></p>
-
-<script src=http://angelo.gladding.name/assets/jquery.js></script>
-<script src=http://angelo.gladding.name/assets/webpy/js-prettify/prettify.js></script>
-<script src=http://angelo.gladding.name/assets/webpy/enliven.js></script>
-
-<style>
-@import url(http://angelo.gladding.name/assets/webpy/js-prettify/prettify.css);
-@import url(http://angelo.gladding.name/assets/webpy/changes.css);
-h2#built-with + ul {
-  padding-left: 1em; }
-</style>
