@@ -5,7 +5,7 @@ title: About
 
 # About
 
-a web framework for Python that is as simple as it is powerful.
+a web framework for Python that is as simple as it is powerful
 
 1.  [Current Status](#status)
 1.  [Hello World](#hello)
