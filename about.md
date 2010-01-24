@@ -14,6 +14,7 @@ web.py is a web framework for Python that is as simple as it is powerful.
 
 <h2 id=status>Current Status</h2>
 
+<div class=hfeed>
 <div class=hentry>
 <p><span class=entry-title>Version 0.33 released</span> <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> [ <a href=http://github.com/webpy/webpy/tarball/master>tar.gz</a> | <a href=http://github.com/webpy/webpy/zipball/master>zip</a> ]</p>
 <ul class=changelist>
@@ -37,6 +38,7 @@ web.py is a web framework for Python that is as simple as it is powerful.
   <li>fix: consider empty lines as part of the indented block in templetor</li>
   <li>fix: fix a bug in <code>web.group</code></li>
 </ul>
+</div>
 </div>
 
 <a href=/history>change history</a>
