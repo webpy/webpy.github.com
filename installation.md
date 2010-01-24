@@ -72,7 +72,7 @@ To follow the bleeding edge clone the master branch.
 <pre><code><kbd>git clone git://github.com/webpy/webpy.git</kbd>
 <kbd></kbd></code></pre>
 
-<h2 id=verify>Verify</h2>
+<h2 id=verify>Verify Install</h2>
 
 <pre><code><kbd>python -c "import web; web.application(('/', lambda: 'success')).run()"</kbd>
 <samp>http://0.0.0.0:8080/</samp></code></pre>
