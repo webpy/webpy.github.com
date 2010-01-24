@@ -39,6 +39,8 @@ web.py is a web framework for Python that is as simple as it is powerful.
 </ul>
 </div>
 
+<a href=/history>change history</a>
+
 <h2 id=hello>Hello World</h2>
 
 <pre class=prettyprint><code>import web
@@ -113,40 +115,40 @@ if __name__ == '__main__':
 
 >   [My] blog runs on the code I wrote this evening. ... I used a web framework we use at FriendFeed. It looks a lot like the webapp framework that ships with App Engine and web.py (which inspired both of them). [#](http://bret.appspot.com/entry/experimenting-google-app-engine)
 
-<p class=vcard>—&thinsp;<a class="fn url uid" href=http://bret.appspot.com/>Brett Taylor</a><br><small>co-founder of FriendFeed and original tech lead on Google App Engine</small></p>
+<p class=vcard><a class="fn url uid" href=http://bret.appspot.com/>Brett Taylor</a><br><small>co-founder of FriendFeed and original tech lead on Google App Engine</small></p>
 
 >   It's minimal. In the ecosystem of web frameworks, something needs to occupy the "small, light and fast" niche. web.py is it. [#](http://www.colr.org/rewrite.html)
 
-<p class=vcard>—&thinsp;<a class="fn url uid" href=http://twitter.com/daltonlp>Lloyd Dalton</a><br><small>creator of colr.org</small></p>
+<p class=vcard><a class="fn url uid" href=http://twitter.com/daltonlp>Lloyd Dalton</a><br><small>creator of colr.org</small></p>
 
 >   We completed our server rewrite a few days ago with web.py and it was everything we could have wished for.
 
-<p class=vcard>—&thinsp;<span class=fn>Sam Hsiung</span><br><small>creator of YouOS (out of service)</small></p>
+<p class=vcard><span class=fn>Sam Hsiung</span><br><small>creator of YouOS (out of service)</small></p>
 
 >   Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. web.py lets you write web apps in Python.
 
-<p class=vcard>—&thinsp;<span class=fn>Adam Atlas</span></p>
+<p class=vcard><span class=fn>Adam Atlas</span></p>
 
 >   If I were to start a personal project today I would probably pick [web.py]. It's very nicely written and concise (not to mention it's written by Aaron Swartz, whose coding skills are very trustable [sic]), and doesn't get in my way. [#](http://www.artima.com/forums/flat.jsp?forum=106&thread=146149#189284)
 
-<p class=vcard>—&thinsp;<span class=fn>Jonas Galvez</span><br><small>Aupeo</small></p>
+<p class=vcard><span class=fn>Jonas Galvez</span><br><small>Aupeo</small></p>
 
 >   the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."
 
-<p class=vcard>—&thinsp;<span class=fn>Delaunay Antoine</span><br><small>creator of a <a href=http://github.com/antoine/ibrouteur/>photo gallery</a> and an <a href=http://metagenda.org/>agenda</a></small></p>
+<p class=vcard><span class=fn>Delaunay Antoine</span><br><small>creator of a <a href=http://github.com/antoine/ibrouteur/>photo gallery</a> and an <a href=http://metagenda.org/>agenda</a></small></p>
 
 >   Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like. [#](http://shortb.net/~f561f2)
 
-<p class=vcard>—&thinsp;<span class=fn>Phillip J. Eby</span><br><small>creator of Python's <abbr title="Web Server Gateway Interface">WSGI</abbr></small></p>
+<p class=vcard><span class=fn>Phillip J. Eby</span><br><small>creator of Python's <abbr title="Web Server Gateway Interface">WSGI</abbr></small></p>
 
 >   ... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.) [#](http://shortb.net/~f561f3)
 
-<p class=vcard>—&thinsp;<a class="fn url uid" href=http://www.python.org/~guido/>Guido van Rossum</a><br><small>creator of Python</small></p>
+<p class=vcard><a class="fn url uid" href=http://www.python.org/~guido/>Guido van Rossum</a><br><small>creator of Python</small></p>
 
 >   suffice to say I think Aaron is headed in the right direction.
 
-<p class=vcard>—&thinsp;<span class=fn>Harry Fuecks</span><br><small><a href=http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/>a simple wiki with web.py</a></small></p>
+<p class=vcard><span class=fn>Harry Fuecks</span><br><small><a href=http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/>a simple wiki with web.py</a></small></p>
 
 >   a very fascinating moment for me. The feelings just like the first time I wrote my php script ... it sure have let me learn python in the fun way. Good work aaron !
 
-<p class=vcard>—&thinsp;<span class=fn>Kamal</span><br><small><a href=http://www.k4ml.com/node/165>simple blog in webpy, learning python the fun way</a></small></p>
+<p class=vcard><span class=fn>Kamal</span><br><small><a href=http://www.k4ml.com/node/165>simple blog in webpy, learning python the fun way</a></small></p>
