@@ -15,7 +15,7 @@ web.py is a web framework for Python that is as simple as it is powerful.
 <h2 id=status>Current Status</h2>
 
 <div class=hentry>
-<p><span class=entry-title>Version 0.33 released</span> <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> [ <a href=http://angelo.gladding.name/assets/webpy/web.py-0.33.tar.gz>tar.gz</a> | <a href=http://angelo.gladding.name/assets/webpy/web.py-0.33.zip>zip</a> ] <a href=/history#0.33 rel=bookmark>#</a></p>
+<p><span class=entry-title>Version 0.33 released</span> <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> <a href=/history#0.33 rel=bookmark>#</a> <small>[ <a href=http://angelo.gladding.name/assets/webpy/web.py-0.33.tar.gz>tar.gz</a> | <a href=http://angelo.gladding.name/assets/webpy/web.py-0.33.zip>zip</a> ]</small></p>
 <ul class=changelist>
   <li>new: <code>form.Button</code> takes optional argument <code>html</code></li>
   <li>remove: obsolete write function in <code>http.py</code> (tx Justin) (Bug#315337)</li>
@@ -43,6 +43,8 @@ web.py is a web framework for Python that is as simple as it is powerful.
 
 <h2 id=hello>Hello World</h2>
 
+A complete web.py application in 12 source lines of code.
+
 <pre class=prettyprint><code>import web
 
 resources = (
@@ -59,7 +61,7 @@ class Hello:
 if __name__ == '__main__':
   webapp.run()</code></pre>
 
-[ [download](/usage/hello.py?format=raw) ]
+<small>[ [download](/usage/hello.py?format=raw) ]</small>
 
 <h2 id=sites>Sites Built with web.py</h2>
 
