@@ -43,7 +43,7 @@ web.py is a web framework for Python that is as simple as it is powerful.
 
 <h2 id=hello>Hello World</h2>
 
-A complete web.py application in 12 source lines of code.
+A complete web.py application in 12 source lines of code. <small>[ [download](/usage/hello.py?format=raw) ]</small>
 
 <pre class=prettyprint><code>import web
 
@@ -60,8 +60,6 @@ class Hello:
 
 if __name__ == '__main__':
   webapp.run()</code></pre>
-
-<small>[ [download](/usage/hello.py?format=raw) ]</small>
 
 <h2 id=sites>Sites Built with web.py</h2>
 
