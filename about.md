@@ -7,7 +7,12 @@ title: About
 
 web.py is a web framework for Python that is as simple as it is powerful.
 
-<h2 id=changes>Current Status</h2>
+1.  [Current Status](#status)
+1.  [Hello World](#hello)
+1.  [Sites Built with web.py](#sites)
+1.  [People Talking about web.py](#people)
+
+<h2 id=status>Current Status</h2>
 
 <div class=hentry>
 <p><span class=entry-title>Version 0.33 released</span> on <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> [ <a href=/static/web.py-0.33.tar.gz rel=bookmark>tar.gz</a> ].</p>
@@ -33,10 +38,6 @@ web.py is a web framework for Python that is as simple as it is powerful.
   <li>fix: fix a bug in web.group</li>
 </ul>
 </div>
-
-1.  [Hello World](#hello)
-1.  [Sites Built with web.py](#sites)
-1.  [People Talking about web.py](#people)
 
 <h2 id=hello>Hello World</h2>
 
