@@ -9,29 +9,29 @@ web.py is a web framework for Python that is as simple as it is powerful.
 
 <h2 id=changes>Current Status</h2>
 
-Version 0.33 was released on <abbr class=dtstart title=2009-10-28>October 28, 2009</abbr> [ <a href=/static/web.py-0.33.tar.gz>tar.gz</a> ].
-
-**2009-10-28: web.py 0.33**
-
-* form.Button takes optional argument `html`
-* remove obsolete write function in http.py (tx Justin) (Bug#315337)
-* refactor httpserver.runsimple code
-* improve form.py for customizability
-* new: add background updating to memoize
-* fix: use sendmail from web.config.sendmail_path (tx Daniel Schwartz)
-* fix: make web.profiler work on Windows (tx asmo) (Bug#325139)
-* fix changequery to make it work correctly even when the input has multi-valued fields (Bug#118229)
-* fix: make sure sequence exists before queying for currval(seqname) when executing postgres insert query (Bug#268705)
-* fix: raise web.notfound() instead of return in autodelegate (tx SeC) 
-* fix: raise NotSupportedError when len or bool is used on sqlite result (Bug#179644)
-* fix: make db paramater optional for creating postgres DB to allow taking it from environ. (Bug#153491)
-* fix unicode errors in db module
-* fix: convert unicode strings to UTF8 before printing SQL queries
-* fix unicode error in debugerror
-* fix: don't convert file upload data to unicode even when file={} is not passed to web.input
-* fix checkbox value/checked confusion (Bug#128233)
-* fix: consider empty lines as part of the indented block in templetor
-* fix: fix a bug in web.group
+<div class=hentry>
+<p><span class=entry-title>Version 0.33 released</span> on <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> [ <a href=/static/web.py-0.33.tar.gz rel=bookmark>tar.gz</a> ].</p>
+<ul>
+  <li>form.Button takes optional argument `html`</li>
+  <li>remove obsolete write function in http.py (tx Justin) (Bug#315337)</li>
+  <li>refactor httpserver.runsimple code</li>
+  <li>improve form.py for customizability</li>
+  <li>new: add background updating to memoize</li>
+  <li>fix: use sendmail from web.config.sendmail_path (tx Daniel Schwartz)</li>
+  <li>fix: make web.profiler work on Windows (tx asmo) (Bug#325139)</li>
+  <li>fix changequery to make it work correctly even when the input has multi-valued fields (Bug#118229)</li>
+  <li>fix: make sure sequence exists before queying for currval(seqname) when executing postgres insert query (Bug#268705)</li>
+  <li>fix: raise web.notfound() instead of return in autodelegate (tx SeC)</li>
+  <li>fix: raise NotSupportedError when len or bool is used on sqlite result (Bug#179644)</li>
+  <li>fix: make db paramater optional for creating postgres DB to allow taking it from environ. (Bug#153491)</li>
+  <li>fix unicode errors in db module</li>
+  <li>fix: convert unicode strings to UTF8 before printing SQL queries</li>
+  <li>fix unicode error in debugerror</li>
+  <li>fix: don't convert file upload data to unicode even when file={} is not passed to web.input</li>
+  <li>fix checkbox value/checked confusion (Bug#128233)</li>
+  <li>fix: consider empty lines as part of the indented block in templetor</li>
+  <li>fix: fix a bug in web.group</li>
+</ul>
 
 1.  [Hello World](#hello)
 1.  [Sites Built with web.py](#sites)
