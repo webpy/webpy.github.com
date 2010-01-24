@@ -15,8 +15,8 @@ web.py is a web framework for Python that is as simple as it is powerful.
 <h2 id=status>Current Status</h2>
 
 <div class=hentry>
-<p><span class=entry-title>Version 0.33 released</span> on <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> [ <a href=/static/web.py-0.33.tar.gz rel=bookmark>tar.gz</a> ].</p>
-<ul>
+<p><span class=entry-title>Version 0.33 released</span> <abbr class="published updated" title=2009-10-28>October 28, 2009</abbr> [ <a href=http://github.com/webpy/webpy/tarball/master>tar.gz</a> | <a href=http://github.com/webpy/webpy/zipball/master>zip</a> ]</p>
+<ul class=changelist>
   <li>form.Button takes optional argument `html`</li>
   <li>remove obsolete write function in http.py (tx Justin) (Bug#315337)</li>
   <li>refactor httpserver.runsimple code</li>
