@@ -13,24 +13,14 @@ title: About
 
 <h2 id=hello>Hello World</h2>
 
-<pre class=prettyprint><code>"""
-hello world
-
-"""
-
-import web
+<pre class=prettyprint><code>import web
 
 resources = (
   r'/(.*)', 'Hello'
 )
 webapp = web.application(resources, globals())
 
-class Hello:
-  """
-  say Hello
-  
-  """
-  
+class Hello:  
   def GET(self, name):
     if not name: 
         name = 'World'
