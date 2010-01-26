@@ -7,7 +7,7 @@ title: Code samples
 
 ### simple samples:
 
-* TODO: 0.3 skeleton code
+* [skeleton code](/skeleton/0.3)
 
 * [simple todo-list engine](src/todo-list) (uses template.py and form.py)
 
