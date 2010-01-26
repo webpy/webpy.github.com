@@ -30,8 +30,6 @@ When finishing working on something, delete it from the list. If a code block re
 * Move url to /samples
 
 ## Samples
-* todo-list: 0.2
-* blog-engine: 0.2, external
 * simple-wiki: 0.2, external
 * simple-wiki num 2: 0.2, external
 * simple delicious: 0.2
