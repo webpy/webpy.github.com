@@ -8,19 +8,12 @@ title: Code samples
 ### simple samples:
 
 * [skeleton code](/skeleton/0.3)
-
-* [simple todo-list engine](src/todo-list) (uses template.py and form.py)
-
+* [simple todo-list engine](/src/todo-list/0.3)
 * [simple blog engine](http://wiki.k4ml.com/python/webpy/simpleblog)
-
 * [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
-
 * [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
-
 * [simple del.icio.us clone](/src/lecker)
-
 * [alternate version of tutorial code using SQLite and SQLObject](/src/webpysqlobject)
-
 * [Templating with Genshi](/src/genshi)
 
 
@@ -67,3 +60,4 @@ title: Code samples
 These samples no longer works with the current version of Webpy, but may still contain good patterns:
 
 * [skeleton code](/skeleton/0.2)
+* [simple todo-list engine](/src/todo-list/0.2)
