@@ -7,7 +7,7 @@ title: Code samples
 
 ### simple samples:
 
-* [skeleton code](skeleton)
+* TODO: 0.3 skeleton code
 
 * [simple todo-list engine](src/todo-list) (uses template.py and form.py)
 
@@ -22,6 +22,7 @@ title: Code samples
 * [alternate version of tutorial code using SQLite and SQLObject](/src/webpysqlobject)
 
 * [Templating with Genshi](/src/genshi)
+
 
 ### tips and tricks:
 
@@ -60,3 +61,9 @@ title: Code samples
 * [MLSS Admin] (http://mlss.ksikes.net) : a system to rate, comment and accept candidates for conferences and likes. ([src](http://github.com/alexksikes/MLSS))
 
 * [Wikitrivia] (http://www.wikitrivia.net) : take randomly generated quizes generated using Wikipedia. ([src](http://github.com/alexksikes/wikitrivia))
+
+### Deprecated Samples:
+
+These samples no longer works with the current version of Webpy, but may still contain good patterns:
+
+* [skeleton code](/skeleton/0.2)
