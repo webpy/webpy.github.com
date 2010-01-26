@@ -5,10 +5,10 @@ title: Code samples
 
 # Code samples
 
-### simple samples:
+### Simple samples:
 
-* [skeleton code](/skeleton/0.3)
-* [simple todo-list engine](/src/todo-list/0.3)
+* [Skeleton code](/skeleton/0.3). The very basics required to get started.
+* [Todo-list](/src/todo-list/0.3). The simplest database-driven app possible.
 * [simple blog engine](http://wiki.k4ml.com/python/webpy/simpleblog)
 * [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
 * [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
