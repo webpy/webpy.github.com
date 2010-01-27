@@ -22,7 +22,7 @@ title: web.py 0.3 documentation
 
 ## Upgrade to Current Version
 
-* [How to upgrade from earlier versions of web.py](/docs/0.3/upgrade)
+* [Upgrade to 0.3 versions of web.py](/docs/0.3/upgrade)
 
 
 ## API Documentation
