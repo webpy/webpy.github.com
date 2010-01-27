@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Auto webpy app
+title: Auto Application
 ---
-
-# Auto webpy app
 
 # Auto Application
 
