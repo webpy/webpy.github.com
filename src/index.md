@@ -16,17 +16,6 @@ All samples are in the public domain.  They are intentionally unstyled, and they
 * [wiki](/src/wiki/0.3). A very basic wiki engine.
 
 
-### Tips and Tricks:
-
-* [tricks with template.py](/template tricks)
-* [quick vhosting hack](/quick vhosting hack)
-* [using a metaclass to automate setting urls](/MetaClassAutoURLS)
-* [test your web application with paste](/testing)
-* [Serving Images](/images)
-* [Create multiple apps using web.py](/multiple_apps)
-* [Templating with Genshi](/src/genshi)
-
-
 
 ### Deprecated Samples:
 
@@ -50,3 +39,13 @@ These are fully functional apps with code that have been built with Webpy.  Note
 * [Mailer] (http://mailer.ksikes.net) : a very simple mass mailer. ([src] (http://github.com/alexksikes/mailer))
 * [MLSS Admin] (http://mlss.ksikes.net) : a system to rate, comment and accept candidates for conferences and likes. ([src](http://github.com/alexksikes/MLSS))
 * [Wikitrivia] (http://www.wikitrivia.net) : take randomly generated quizes generated using Wikipedia. ([src](http://github.com/alexksikes/wikitrivia))
+
+### Tips and Tricks:
+
+* [tricks with template.py](/template tricks)
+* [quick vhosting hack](/quick vhosting hack)
+* [using a metaclass to automate setting urls](/MetaClassAutoURLS)
+* [test your web application with paste](/testing)
+* [Serving Images](/images)
+* [Create multiple apps using web.py](/multiple_apps)
+* [Templating with Genshi](/src/genshi)
