@@ -5,6 +5,37 @@ title: Form Library
 
 # Form Library
 
+The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
+
+The form module defines 2 primary classes: the Form class, and the Input class.  Forms are instantiated with lists of inputs.  The Input class is subclassed into the following html inputs:
+
+* Textbox - free form single line input (input type="text")
+* Password - free form single line that hides input (input type="password")
+* Textarea - free form multi line input (textarea)
+* Dropdown - mutually exclusive input for lists (select with options)
+* Radio - mutally exclusive input for a few options (input type="radio")
+* Checkbox - binary input (input type="checkbox")
+* Button - submit the form (button)
+
+A basic login form would look like this:
+
+    login = form.Form(
+        form.Textbox('username'),
+        form.Password('password'),
+        form.Button('Login'),
+    )
+
+This defines a basic form. Once defined, you should call it again to get an copied instance, and then you can call the render method on it, like so:
+
+    f = login()
+    print f.render()
+
+<table>
+    <tr><th><label for="username">username</label></th><td><input type="text" id="username" name="username"/><div class="post" style="display: none;"></div></td></tr>
+    <tr><th><label for="password">password</label></th><td><input type="password" id="password" name="password"/><div class="post" style="display: none;"></div></td></tr>
+    <tr><th><label for="Login"></label></th><td><button id="Login" name="Login">Login</button><div class="post" style="display: none;"></div></td></tr>
+</table>
+
 ## Form Features
 In addition individual input validators, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
 
