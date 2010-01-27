@@ -8,24 +8,6 @@ title: Templetor: The web.py templating system
 <a name="introduction"></a>
 # Introduction
 
-<style>
-pre {
-    background-color:#F0F0F0;
-    border:1px solid #CCCBBA;
-       padding: 10px 10px 10px 20px;
-}
-code {
-    background: inherit;
-    color: inherit;
-}
-.warning {
-    border: 1px solid #FFAAAA;
-    padding: 10px;
-    background-color: #FFF0F0;
-}
-</style>
-
-
 The web.py template language, called `Templetor` is designed to bring the power of Python to templates.
 Instead of inventing new syntax for templates, it re-uses python syntax. 
 If you know Python programming language, you will be at home.
