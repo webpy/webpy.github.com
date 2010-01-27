@@ -29,7 +29,7 @@ _by Valentin Wüstholz_
         delete.html
         search.html
 
-* ### `lecker.py`
+### `lecker.py`
 
         import web
 
@@ -108,7 +108,7 @@ _by Valentin Wüstholz_
         web.db_parameters = dict(dbn='mysql', user='root', pw='', db='lecker')
         if __name__ == '__main__': web.run(urls, web.reloader)
 
-* ### `view.html`
+### `view.html`
 
         <p><center><h1>lec.ker</h1></center></p>        
         <p>        <hr/>        </p>        
@@ -126,14 +126,14 @@ _by Valentin Wüstholz_
           </td>          <td>            <input type="text" name="url" size="100" />          </td>        </tr>        <tr>          <td>            Tags:
           </td>          <td>            <input type="text" name="tags" size="100" />          </td>        </tr>        </p>        </table>        <p>        <input type="submit" value="Add" />        </p>        </form>        
         <a href="delete">Delete Bookmarks</a>
-* ### `edit.html`
+### `edit.html`
 
         <p><center><h1>lec.ker</h1></center></p>        
         <p><h2>Edit Bookmark:</h2></p>        
         <form method="post" action="">        <p>        <p>        Title:<input type="text" name="title" value="$bookmark.title" size="100" />        </p>        Url:<input type="text" name="url" value="$bookmark.url" size="100" />        </p>        Tags:<input type="text" name="tags" value="$bookmark.tags" size="100" />        </p>        <input type="submit" value="Edit" />        </p>        </form>        
         <p>        <hr/>        </p>        
         <a href="../">Back</a>
-* ### `delete.html`
+### `delete.html`
 
         <p><center><h1>lec.ker</h1></center></p>        
         <form name = "bookmarks" method="post" action="delete">          <p><h2>Delete Bookmarks:</h2></p>        
@@ -142,7 +142,7 @@ _by Valentin Wüstholz_
           </p>          <p><input type="submit" value="Delete" />          </p>        </form>        
         <p>        <hr/>        </p>        
         <a href="../">Back</a>
-* ### `search.html`
+### `search.html`
 
         <p><center><h1>lec.ker</h1></center></p>        
         <table border="0" width="100%">        #for bookmark in $bookmarks
