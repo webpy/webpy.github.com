@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Basic webpy app
+title: Basic Application
 ---
-
-# Basic webpy app
 
 # Basic Application
 
