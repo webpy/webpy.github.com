@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Subdir webp app
+title: Subdir webpy app
 ---
 
-# Subdir webp app
+# Subdir webpy app
 
 # Subdir Application
 
