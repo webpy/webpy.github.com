@@ -16,10 +16,10 @@ title: web.py 0.3 documentation
 
 ## Component Documentation
 * [Applications](/docs/0.3/apps). How to map urls to python code paths.
-    * [Basic app](/docs/0.3/apps/basic)
-    * [Auto app](/docs/0.3/apps/auto)
-    * [Subdir app](/docs/0.3/apps/subdir)
-    * [Subdomain app](/docs/0.3/apps/subdomain)
+    * [Basic app](/docs/0.3/apps/basic). Map regexes to classes.
+    * [Auto app](/docs/0.3/apps/auto). Have webpy keep track of the urls based on class name.
+    * [Subdir app](/docs/0.3/apps/subdir). Host multiple apps based on the sub-directory.
+    * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain.
 * [Templates](/docs/0.3/templetor). Templetor, the web.py templating system
 * [Forms](/form). Dealing with user input
 * Sessions
