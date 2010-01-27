@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Subdir webpy app
+title: Subdir application
 ---
 
-# Subdir webpy app
-
-# Subdir Application
+# Subdir application
 
 A subdir application lets you run various mount points on the same hostname, but switched based on directory mount point.
 
