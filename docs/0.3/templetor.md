@@ -38,9 +38,6 @@ Here is a simple template:
 The first line says that the template is defined with one argument called `name`.
 `$name` in the second line will be replaced with the value of name when the template is rendered.
 
-<div class="warning">
-For upgrading from web.py 0.2 templates see <a href="#upgrading">upgrading</a> section.
-</div>
 
 <a name="using"></a>
 # Using the template system
