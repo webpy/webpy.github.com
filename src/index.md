@@ -14,7 +14,6 @@ All samples are in the public domain.  They are intentionally unstyled, and they
 * [Todo-list](/src/todo-list/0.3). The simplest database-driven app possible.
 * [Blog](/src/blog/0.3). A very simple blog, showing basic CRUD functionality.
 * [wiki](/src/wiki/0.3). A very basic wiki engine.
-* [simple del.icio.us clone](/src/lecker)
 * [alternate version of tutorial code using SQLite and SQLObject](/src/webpysqlobject)
 * [Templating with Genshi](/src/genshi)
 
@@ -63,3 +62,4 @@ These samples no longer works with the current version of Webpy, but may still c
 
 * [skeleton code](/skeleton/0.2)
 * [simple todo-list engine](/src/todo-list/0.2)
+* [simple del.icio.us clone](/src/lecker)
