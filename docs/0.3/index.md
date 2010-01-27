@@ -21,7 +21,7 @@ title: web.py 0.3 documentation
 * [Code samples](/src)
 
 ## Component Documentation
-* [Applications](/docs/0.3/apps)
+* [Applications](/docs/0.3/apps): How to map urls to python code paths.
     * [Basic app](/docs/0.3/apps/basic)
     * [Auto app](/docs/0.3/apps/auto)
     * [Subdir app](/docs/0.3/apps/subdir)
