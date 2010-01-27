@@ -24,8 +24,8 @@ title: web.py 0.3 documentation
 * [Applications](/docs/0.3/apps)
     * [Basic app](/docs/0.3/apps/basic)
     * [Auto app](/docs/0.3/apps/auto)
-    * Subdir app
-    * Subdomain app
+    * [Subdir app](/docs/0.3/apps/subdir)
+    * [Subdomain app](/docs/0.3/apps/subdomain)
 
 ## Upgrade to Current Version
 
