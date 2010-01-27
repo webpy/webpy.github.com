@@ -5,10 +5,9 @@ title: web.py 0.3 documentation
 
 # web.py 0.3 documentation
 
+## Tutorial
+
 * [Quick tutorial](/tutorial3.en)
-
-* [How to upgrade from earlier versions of web.py](/docs/0.3/upgrade)
-
 * Detailed Tutorial _(still in progress)_
     * Introduction
     * [Templetor: The web.py templating system](/docs/0.3/templetor)
@@ -16,8 +15,16 @@ title: web.py 0.3 documentation
     * Working with database
     * Working with session
 
-* [API documentation](/docs/0.3/api)
+## Example Code
 
 * [Cookbook](/cookbook)
-
 * [Code samples](/src)
+
+## Upgrade to Current Version
+
+* [How to upgrade from earlier versions of web.py](/docs/0.3/upgrade)
+
+
+## API Documentation
+
+* [API documentation](/docs/0.3/api)
