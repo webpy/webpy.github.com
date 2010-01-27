@@ -8,13 +8,6 @@ title: web.py 0.3 documentation
 ## Tutorial
 
 * [Quick tutorial](/tutorial3.en)
-* Detailed Tutorial _(still in progress)_
-    * Introduction
-    * [Templetor: The web.py templating system](/docs/0.3/templetor)
-    * [Working with forms](/form)
-    * Working with database
-    * Working with session
-    * Testing application
 
 ## Example Code
 
@@ -27,10 +20,11 @@ title: web.py 0.3 documentation
     * [Auto app](/docs/0.3/apps/auto)
     * [Subdir app](/docs/0.3/apps/subdir)
     * [Subdomain app](/docs/0.3/apps/subdomain)
-* Templates
-* Forms
+* [Templates](/docs/0.3/templetor): Templetor, the web.py templating system
+* [Forms](/form): Dealing with user input
 * Sessions
 * Database
+* Testing
 
 ## Upgrade to Current Version
 
