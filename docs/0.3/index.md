@@ -23,7 +23,7 @@ title: web.py 0.3 documentation
 ## Component Documentation
 * [Applications](/docs/0.3/apps)
     * [Basic app](/docs/0.3/apps/basic)
-    * Auto app
+    * [Auto app](/docs/0.3/apps/auto)
     * Subdir app
     * Subdomain app
 
