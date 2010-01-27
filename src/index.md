@@ -7,13 +7,13 @@ title: Code samples
 
 ### Simple samples:
 
+All samples are in the public domain.  They are intentionally unstyled, and they usually lack features that make them usable.  They are intended to show how common patterns are performed in webpy.
 
 
 * [Skeleton code](/skeleton/0.3). The very basics required to get started.
 * [Todo-list](/src/todo-list/0.3). The simplest database-driven app possible.
 * [Blog](/src/blog/0.3). A very simple blog, showing basic CRUD functionality.
-* [simple wiki engine](http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/)
-* [another simple wiki engine](http://bachman.infogami.com/another_simple_wiki)
+* [wiki](/src/wiki/0.3). A very basic wiki engine.
 * [simple del.icio.us clone](/src/lecker)
 * [alternate version of tutorial code using SQLite and SQLObject](/src/webpysqlobject)
 * [Templating with Genshi](/src/genshi)
