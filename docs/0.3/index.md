@@ -20,6 +20,13 @@ title: web.py 0.3 documentation
 * [Cookbook](/cookbook)
 * [Code samples](/src)
 
+## Component Documentation
+* [Applications](/docs/0.3/apps)
+    * [Basic app](/docs/0.3/apps/basic)
+    * Auto app
+    * Subdir app
+    * Subdomain app
+
 ## Upgrade to Current Version
 
 * [Upgrade to 0.3 versions of web.py](/docs/0.3/upgrade)
