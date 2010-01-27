@@ -36,26 +36,6 @@ This defines a basic form. Once defined, you should call it again to get an copi
     <tr><th><label for="Login"></label></th><td><button id="Login" name="Login">Login</button><div class="post" style="display: none;"></div></td></tr>
 </table>
 
-## Form Features
-In addition individual input validators, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
-
-    signup = form.Form(
-        form.Textbox('username'),
-        form.Password('password'),
-        form.Password('password_again'),
-        validators = [form.Validator("Passwords didn't match.", lambda i: i.password == i.password_again)]
-    )
-
-Once the form data has been posted, it can easily be put into a database (if the database scheme has names consistent with your webpy form).  For example:
-
-    def POST(self):
-        f = myform()
-        if f.validates():
-            web.insert('data_table', **f.d)
-        #don't do web.insert('data_table', **web.input()) because malicious data could be submitted too
-        else:
-            render.foo(f)
-
 ## Input Features
 The form inputs support several additional attributes.  For example:
 
@@ -82,6 +62,26 @@ In addition to the attributes above, any html attributes can be entered in the s
 Dropdown inputs allow a unique description and value for each item in the dropdown list.  To do this, create the dropdown list with tuples like this:
     
     form.Dropdown('mydrop', [('value1', 'description1'), ('value2', 'description2')])
+
+## Form Features
+In addition individual input validators, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
+
+    signup = form.Form(
+        form.Textbox('username'),
+        form.Password('password'),
+        form.Password('password_again'),
+        validators = [form.Validator("Passwords didn't match.", lambda i: i.password == i.password_again)]
+    )
+
+Once the form data has been posted, it can easily be put into a database (if the database scheme has names consistent with your webpy form).  For example:
+
+    def POST(self):
+        f = myform()
+        if f.validates():
+            web.insert('data_table', **f.d)
+        #don't do web.insert('data_table', **web.input()) because malicious data could be submitted too
+        else:
+            render.foo(f)
 
 ## Example
 
