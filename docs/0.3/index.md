@@ -14,6 +14,7 @@ title: web.py 0.3 documentation
     * [Working with forms](/form)
     * Working with database
     * Working with session
+    * Testing application
 
 ## Example Code
 
@@ -26,6 +27,10 @@ title: web.py 0.3 documentation
     * [Auto app](/docs/0.3/apps/auto)
     * [Subdir app](/docs/0.3/apps/subdir)
     * [Subdomain app](/docs/0.3/apps/subdomain)
+* Templates
+* Forms
+* Sessions
+* Database
 
 ## Upgrade to Current Version
 
