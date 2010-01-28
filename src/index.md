@@ -5,7 +5,7 @@ title: Code samples
 
 # Code samples
 
-### Simple samples:
+## Simple samples:
 All samples are in the public domain.  They are intentionally unstyled, and they usually lack features that make them usable.  They are intended to show how common patterns are performed in web.py.
 
 
@@ -16,7 +16,7 @@ All samples are in the public domain.  They are intentionally unstyled, and they
 
 
 
-### Deprecated Samples:
+## Deprecated Samples:
 
 These samples no longer works with the current version of web.py, but may still contain good patterns:
 
@@ -24,7 +24,7 @@ These samples no longer works with the current version of web.py, but may still 
 * [simple todo-list engine](/src/todo-list/0.2)
 * [simple del.icio.us clone](/src/lecker)
 
-### Real Web Apps:
+## Real Web Apps:
 
 These are fully functional apps with code that have been built with web.py.  Note that these may be using older versions of web.py than the current release.
 
@@ -39,7 +39,7 @@ These are fully functional apps with code that have been built with web.py.  Not
 * [MLSS Admin] (http://mlss.ksikes.net) : a system to rate, comment and accept candidates for conferences and likes. ([src](http://github.com/alexksikes/MLSS))
 * [Wikitrivia] (http://www.wikitrivia.net) : take randomly generated quizes generated using Wikipedia. ([src](http://github.com/alexksikes/wikitrivia))
 
-### Tips and Tricks:
+## Tips and Tricks:
 
 * [tricks with template.py](/template tricks)
 * [quick vhosting hack](/quick vhosting hack)
