@@ -6,7 +6,6 @@ title: Code samples
 # Code samples
 
 ### Simple samples:
-
 All samples are in the public domain.  They are intentionally unstyled, and they usually lack features that make them usable.  They are intended to show how common patterns are performed in web.py.
 
 
