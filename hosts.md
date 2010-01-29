@@ -5,7 +5,7 @@ title: hosts
 
 # hosts
 
-How to's on getting web.py on the folowing hosts
+How to's on getting web.py on the following hosts:
 
 * [WebFaction](/WebFaction)
 * [TextDrive](/TextDrive)
@@ -16,3 +16,4 @@ How to's on getting web.py on the folowing hosts
 * [GrokThis](/GrokThis)
 * [kimsufi](/kimsufi)
 * [DevelopmentIsland](/DevelopmentIsland)
+* [eSecureData](http://www.esecuredata.com)
