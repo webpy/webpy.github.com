@@ -26,8 +26,8 @@ code {
 </style>
 
 
-web.py 的模板语言叫做`Templetor`，它能负责将 python 的强大功能传递给模板系统。
-在模板中没有重新设计语法，它是类 python的。 
+web.py 的模板语言叫做 `Templetor`，它能负责将 python 的强大功能传递给模板系统。
+在模板中没有重新设计语法，它是类 python 的。 
 如果你会 python，你可以顺手拈来。
 
 这是一个模板示例:
@@ -96,37 +96,36 @@ However you can also create template from a file using `frender`.
     >>> render.hello("1 < 2")
     "Hello 1 &lt; 2"
 
-To turnoff filter use `:` after `$`. For example:
+不需要过滤可以在 `$` 之后 使用 `:`。示例：
 
-    The following will not be html escaped.
+    该 Html 内容不会被义
     $:form.render()
     
-## Newline suppression
+## 新起一行用法
 
-Newline can be suppressed by adding `\` character at the end of line. 
+在行末添加 `\` 代表显示层该内容不会被真实处理成一行。
 
     If you put a backslash \ 
     at the end of a line \ 
     (like these) \ 
     then there will be no newline.
     
-## Escaping $
+## 转义 $
 
-Use `$$` to get `$` in the output.
+使用 `$$` 可以在输出的时候显示字符 `$`.
 
     Can you lend me $$50?
     
-## Comments
+## 注释
 
-`$#` is used as comment indicator. Anything starting with $# till end of the line is ignored.
+`$#` 是注释指示符。任何以 `$#` 开始的某行内容都被当做注释。
 
     $# this is a comment
     Hello $name.title()! $# display the name in title case
 
-## Control Structures
+## 控制结构
 
-The template system supports `for`, `while`, `if`, `elif` and `else`.
-Just like in python, body of the statement is indented.
+模板系统支持 `for`, `while`, `if`, `elif` 和 `else`。像 python 一样，这里是需要缩进的。
 
     $for i in range(10): 
         I like $i
@@ -141,7 +140,7 @@ Just like in python, body of the statement is indented.
     $else: 
         Keep on, you can do it.
 
-The for loop sets a number of variables available within the loop:
+`for` 循环内的成员变量只在循环内发生可用：
 
     loop.index: the iteration of the loop (1-indexed)
     loop.index0: the iteration of the loop (0-indexed)
@@ -152,7 +151,7 @@ The for loop sets a number of variables available within the loop:
     loop.parity: "odd" or "even" depending on which is true
     loop.parent: the loop above this in nested loops
     
-Sometimes these can be very handy.
+有时候，他们使用起来很方便：
 
     <table>
     $for c in ["a", "b", "c", "d"]:
@@ -162,11 +161,11 @@ Sometimes these can be very handy.
         </tr>
     </table>
     
-## Other Statements
+## 其他
 
-### def
+### 使用 `def`
 
-You can define a new template function using `$def`. Keyword arguments are also supported.
+可以使用 `#$def` 定义一个新的模板函数，支持使用参数。
 
     $def say_hello(name='world'):
         Hello $name!
@@ -174,7 +173,7 @@ You can define a new template function using `$def`. Keyword arguments are also 
     $say_hello('web.py')
     $say_hello()
 
-Another example:
+其他示例：
         
     $def tr(values):
         <tr>
@@ -191,10 +190,9 @@ Another example:
     $ data = [['a', 'b', 'c'], [1, 2, 3], [2, 4, 6], [3, 6, 9] ]
     $:table([tr(d) for d in data])
     
-### code
+### 代码
 
-Arbitrary python code can be written using the `code` block.
-
+可以在 `code` 块书写任何 python 代码：
     $code:
         x = "you can write any python code here"
         y = x.title()
@@ -211,9 +209,9 @@ Arbitrary python code can be written using the `code` block.
     The variables defined in the code block can be used here.
     For example, $limit(x)
     
-### var
+### 使用 `var`
 
-The `var` block can be used to define additional properties in the template result.
+`var` 块可以用来定义模板结果的额外属性：
 
     $def with (title, body)
     
@@ -224,7 +222,7 @@ The `var` block can be used to define additional properties in the template resu
     $body
     </div>
     
-The result of the above template can be used as follows:
+以上模板内容的输出结果如下：
 
     >>> out = render.page('hello', 'hello world')
     >>> out.title
@@ -235,13 +233,11 @@ The result of the above template can be used as follows:
     '\n\n<div>\nhello world\n</div>\n'
 
 <a name="builtins"></a>
-# builtins and globals
+# 内置 和 全局
 
-Just like any Python function, template can also access builtins along with its arguments and local variables.
-Some common builtin functions like `range`, `min`, `max` etc. and boolean values `True` and `False` are made available to all the templates.
-Apart from the builtins, application specific globals can be specified to make them accessible in all the templates.
+像 python 的任何函数一样，模板系统同样可以使用内置以及局部参数。很多内置的公共方法像 `range`，`min`，`max`等，以及布尔值 `True` 和 `False`，在模板中都是可用的。部分内置和全局对象也可以使用在模板中。
 
-Globals can be specified as an argument to `web.template.render`.
+全局对象可以使用参数方式传给模板，使用 `web.template.render`：
 
     import web
     import markdown
@@ -249,35 +245,38 @@ Globals can be specified as an argument to `web.template.render`.
     globals = {'markdown': markdown.markdown}
     render = web.template.render('templates', globals=globals)
 
-Builtins that are exposed in the templates can be controlled too.
+内置方法是否可以在模板中也是可以被控制的：
 
-    # disable all builtins
+    # 禁用所有内置方法
     render = web.template.render('templates', builtins={})
 
 <a name="security"></a>
-# Security
+# 安全
 
 One of the design goals of Templetor is to allow untrusted users to write templates.
+模板的设计想法之一是允许非高级用户来写模板
 
 To make the template execution safe, the following are not allowed in the templates.
+如果要使模板更安全，可在模板中禁用以下方法
 
-* Unsafe statements like `import`, `exec` etc.
-* Accessing attributes starting with `_`
-* Unsafe builtins like `open`, `getattr`, `setattr` etc.
+* 不安全部分像 `import`，`exec` 等；
+* 允许属性开始部分使用 `_`；
+* 不安全的内置方法 `open`, `getattr`, `setattr` 等。
 
-`SecurityException` is raised if your template uses any of these.
+如果模板中使用以上提及的会引发异常 `SecurityException`。
 
 <a name="upgrading"></a>
-# Upgrading from web.py 0.2 templates
+# 从 web.py 0.2 升级
 
-The new implementation is mostly compatible with the earlier implementation. However some cases might not work because of the following reasons.
+新版本大部分兼容早期版本，但仍有部分使用方法会无法运行，看看以下原因：
 
 * Template output is always storage like `TemplateResult` object, however converting it to `unicode` or `str` gives the result as unicode/string.
 * Reassigning a global value will not work. The following will not work if x is a global.
+* 重定义全局变量将无法正常运行，如果 x 是全局变量下面的写法是无法运行的。
     
         $ x = x + 1
     
-The following are still supported but not preferred.
+以下写法仍被支持，但不被推荐.
 
-* Using `\$` for escaping dollar. Use `$$` instead.
-* Modifying `web.template.Template.globals`. pass globals to `web.template.render` as argument instead.
+* 如果你原来用 `\$` 反转美元字符串， 推荐用 `$$` 替换；
+* 如果你有时会修改 `web.template.Template.globals`，建议通过向 `web.template.render` 传变量方式来替换.
