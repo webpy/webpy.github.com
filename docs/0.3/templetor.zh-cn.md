@@ -36,7 +36,7 @@ web.py 的模板语言叫做 `Templetor`，它能负责将 python 的强大功�
     Hello $name!
 
 第一行表示模板定义了一个变量 `name`。
-第二行中的 `$name` 将会用 name 的值来替换。
+第二行中的 `$name` 将会用 `name` 的值来替换。
 
 <div class="warning">
 如果是从 web.py 0.2 升级请看这里 <a href="#upgrading">升级</a> 部分。
@@ -45,7 +45,6 @@ web.py 的模板语言叫做 `Templetor`，它能负责将 python 的强大功�
 <a name="using"></a>
 # 使用模板系统
 
-The most common way of rendering templates is this:
 通用渲染模板的方法：
 
     render = web.template.render('templates')
@@ -53,7 +52,6 @@ The most common way of rendering templates is this:
    
 `render` 方法从模板根目录查找模板文件，`render.hello(..)`表示渲染 hello.html 模板。实际上，系统会在根目录去查找叫 `hello`的所有文件，直到找到匹配的。(事实上他只支持 .html 和 .xml 两种)
 
-However you can also create template from a file using `frender`.
 除了上面的使用方式，你也可以直接用文件的方式来处理模板 `frender`：
 
     hello = web.template.frender('templates/hello.html')
@@ -70,7 +68,7 @@ However you can also create template from a file using `frender`.
 
 ## 表达式用法
 
-特殊字符 `$` 被用于特殊的 python 表达式。表达式能够被用于一些确定的组合当中 `()` 和 `｛｝`:
+特殊字符 `$` 被用于特殊的 python 表达式。表达式能够被用于一些确定的组合当中 `()` 和 `{}`:
 
     Look, a $string. 
     Hark, an ${arbitrary + expression}. 
@@ -110,7 +108,7 @@ However you can also create template from a file using `frender`.
     (like these) \ 
     then there will be no newline.
     
-## 转义 $
+## 转义 `$`
 
 使用 `$$` 可以在输出的时候显示字符 `$`.
 
@@ -165,7 +163,7 @@ However you can also create template from a file using `frender`.
 
 ### 使用 `def`
 
-可以使用 `#$def` 定义一个新的模板函数，支持使用参数。
+可以使用 `$def` 定义一个新的模板函数，支持使用参数。
 
     $def say_hello(name='world'):
         Hello $name!
@@ -253,11 +251,7 @@ However you can also create template from a file using `frender`.
 <a name="security"></a>
 # 安全
 
-One of the design goals of Templetor is to allow untrusted users to write templates.
-模板的设计想法之一是允许非高级用户来写模板
-
-To make the template execution safe, the following are not allowed in the templates.
-如果要使模板更安全，可在模板中禁用以下方法
+模板的设计想法之一是允许非高级用户来写模板，如果要使模板更安全，可在模板中禁用以下方法：
 
 * 不安全部分像 `import`，`exec` 等；
 * 允许属性开始部分使用 `_`；
@@ -271,12 +265,11 @@ To make the template execution safe, the following are not allowed in the templa
 新版本大部分兼容早期版本，但仍有部分使用方法会无法运行，看看以下原因：
 
 * Template output is always storage like `TemplateResult` object, however converting it to `unicode` or `str` gives the result as unicode/string.
-* Reassigning a global value will not work. The following will not work if x is a global.
 * 重定义全局变量将无法正常运行，如果 x 是全局变量下面的写法是无法运行的。
     
         $ x = x + 1
     
-以下写法仍被支持，但不被推荐.
+以下写法仍被支持，但不被推荐。
 
 * 如果你原来用 `\$` 反转美元字符串， 推荐用 `$$` 替换；
-* 如果你有时会修改 `web.template.Template.globals`，建议通过向 `web.template.render` 传变量方式来替换.
+* 如果你有时会修改 `web.template.Template.globals`，建议通过向 `web.template.render` 传变量方式来替换。
