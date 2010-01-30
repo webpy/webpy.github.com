@@ -12,7 +12,7 @@ Here are the simple steps needed to create and run an web.py application.
 * Create the application as documented
 
         if __name__ == "__main__":
-            web.run(urls, globals())
+            web.application(urls, globals()).run()
 
 For our example, let it be named `app.py`, located in `/www/app` and we need it accessible as `http://server/app/app.py`.
 
