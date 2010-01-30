@@ -61,7 +61,7 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 
     class hello: 
         def GET(self):
-        return 'Hello, world!'
+            return 'Hello, world!'
 
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     if __name__ == "__main__":
@@ -105,5 +105,3 @@ Did you add this line?
 </pre>
 #Misc
 After updating your application you may need to restart your web server to see the changes.
-
-
