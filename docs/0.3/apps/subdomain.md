@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Subdir application
+title: Subdomain application
 ---
 
-# Subdir application
+# Subdomain application
 
 Subdomain applications delegate requests based on host. This makes virtual hosting very easy. This works like a [subdir application](/docs/0.3/apps/subdir), only switches to the corresponding application based on host name instead of sub directory.
 
