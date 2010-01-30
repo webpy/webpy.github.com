@@ -40,7 +40,7 @@ Application to delegate requests based on path.
 
 <code class="head">class auto_application(application)</code>: 
 Application similar to `application` but urls are constructed 
-automatiacally using metaclass.
+automatically using metaclass.
 
     >>> app = auto_application()
     >>> class hello(app.page):
@@ -65,8 +65,7 @@ calling `notfound()` if there isn't one. Example:
         def GET_password(self): pass
         def GET_privacy(self): pass
 
-`GET_password` would get called for `/prefs/password` while `GET_privacy` for 
-`GET_privacy` gets called for `/prefs/privacy`.
+`GET_password` would get called for `/prefs/password` while `GET_privacy` gets called for `/prefs/privacy`.
 
 If a user visits `/prefs/password/change` then `GET_password(self, '/change')`
 is called.
@@ -79,16 +78,17 @@ Converts a load hook into an application processor.
     ...
     >>> app.add_processor(loadhook(f))
 
-<code class="head">class subdir_application</code>: 
+<code class="head">class subdir_application(application)</code>: 
 Application to delegate requests based on path.
 
-    >>> urls = ("/hello", "hello")
-    >>> app = application(urls, globals())
-    >>> class hello:
-    ...     def GET(self): return "hello"
-    >>>
-    >>> app.request("/hello").data
-    'hello'
+Example:
+
+    import wiki, blog, auth 
+    mapping = ( 
+        "/wiki", wiki.app, 
+        "/blog", blog.app, 
+        "/auth", auth.app) 
+    app = web.subdir_application(mapping)
 
 <code class="head">class subdomain_application(application)</code>: 
 Application to delegate requests based on the host.
