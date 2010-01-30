@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Templetor: The web.py templating system
+title: Templetor: web.py 模板系统
 ---
 
-# Templetor: The web.py templating system
+# Templetor: web.py 模板系统
 
 <a name="introduction"></a>
 # Introduction
@@ -26,59 +26,60 @@ code {
 </style>
 
 
-The web.py template language, called `Templetor` is designed to bring the power of Python to templates.
-Instead of inventing new syntax for templates, it re-uses python syntax. 
-If you know Python programming language, you will be at home.
+web.py 的模板语言叫做`Templetor`，它能负责将 python 的强大功能传递给模板系统。
+在模板中没有重新设计语法，它是类 python的。 
+如果你会 python，你可以顺手拈来。
 
-Here is a simple template:
+这是一个模板示例:
 
     $def with (name)
     Hello $name!
 
-The first line says that the template is defined with one argument called `name`.
-`$name` in the second line will be replaced with the value of name when the template is rendered.
+第一行表示模板定义了一个变量 `name`。
+第二行中的 `$name` 将会用 name 的值来替换。
 
 <div class="warning">
-For upgrading from web.py 0.2 templates see <a href="#upgrading">upgrading</a> section.
+如果是从 web.py 0.2 升级请看这里 <a href="#upgrading">升级</a> 部分。
 </div>
 
 <a name="using"></a>
-# Using the template system
+# 使用模板系统
 
 The most common way of rendering templates is this:
+通用渲染模板的方法：
 
     render = web.template.render('templates')
-    print render.hello('world')
+    return render.hello('world')
    
-The `render` function takes the template root as argument. `render.hello(..)` calls the template `hello.html` with the given arguments.
-In fact, it looks for the files matching `hello.*` in the template root and picks the first matching file.
+`render` 方法从模板根目录查找模板文件，`render.hello(..)`表示渲染 hello.html 模板。实际上，系统会在根目录去查找叫 `hello`的所有文件，直到找到匹配的。(事实上他只支持 .html 和 .xml 两种)
 
 However you can also create template from a file using `frender`.
+除了上面的使用方式，你也可以直接用文件的方式来处理模板 `frender`：
 
     hello = web.template.frender('templates/hello.html')
-    print hello('world')
+    render hello('world')
     
-And if you have the template as a string:
+直接使用字符串方式：
 
     template = "$def with (name)\nHello $name"
     hello = web.template.Template(template)
-    print hello('world')
+    return hello('world')
 
 <a name="syntax"></a>
-# Syntax
+# 语法
 
-## Expression Substitution
+## 表达式用法
 
-Special character `$` is used to specify python expressions. Expression can be enclosed in `()` or `{}` for explicit grouping.
+特殊字符 `$` 被用于特殊的 python 表达式。表达式能够被用于一些确定的组合当中 `()` 和 `｛｝`:
 
     Look, a $string. 
     Hark, an ${arbitrary + expression}. 
     Gawk, a $dictionary[key].function('argument'). 
     Cool, a $(limit)ing.
 
-## Assignments
+## 赋值
 
-Sometimes you may want to define new variables and re-assign some variables.
+有时你可能需要定义一个新变量或给一些变量重新赋值，如下：
     
     $ bug = get_bug(id)
     <h1>$bug.title</h1>
@@ -86,11 +87,12 @@ Sometimes you may want to define new variables and re-assign some variables.
         $bug.description
     <div>
 
-Notice the space after `$` in the assignment. It is required to differentiate assignment from expression substitution.
+注意 `$`在赋值变量名称之前要有一个空格，这有区别于常规的赋值用法。
 
-## Filtering 
+## 过滤
 
 By default, Templetor uses `web.websafe` filter to do HTML-encoding.
+模板默认会使用 `web.websafe` 过滤 html 内容(encodeing 处理)。
 
     >>> render.hello("1 < 2")
     "Hello 1 &lt; 2"
