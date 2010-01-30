@@ -91,7 +91,6 @@ However you can also create template from a file using `frender`.
 
 ## 过滤
 
-By default, Templetor uses `web.websafe` filter to do HTML-encoding.
 模板默认会使用 `web.websafe` 过滤 html 内容(encodeing 处理)。
 
     >>> render.hello("1 < 2")
