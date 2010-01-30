@@ -59,7 +59,7 @@ title: Web.py Cookbook 简体中文版
 * [使用soaplib实现webservice](/webservice/zh-cn)
 
 ##Templates:
-* [Templetor: The web.py templating system (未译)](http://webpy.org/docs/0.3/templetor/zh-cn)
+* [Templetor: web.py 模板系统](http://webpy.org/docs/0.3/templetor/zh-cn)
 * [Using Site Layout Templates (未译)](/layout_template/zh-cn)
 * [Alternating Style (未译)](/alternating_style/zh-cn)
 * [Import functions into templates (未译)](/template_import/zh-cn)
