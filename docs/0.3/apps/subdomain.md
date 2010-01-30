@@ -16,7 +16,7 @@ Subdomain applications delegate requests based on host. This makes virtual hosti
      mapping = ( 
          "(www\.)?example.com", mainsite.app, 
          "wiki.example.com", wiki.app,
-         ".*\.example.com", wiki.app 
+         ".*\.example.com", usersite.app 
      ) 
 
      app = web.subdomain_application(mapping)
