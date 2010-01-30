@@ -13,7 +13,7 @@ The form module defines 2 primary classes: the Form class, and the Input class. 
 * Password - free form single line that hides input (input type="password")
 * Textarea - free form multi line input (textarea)
 * Dropdown - mutually exclusive input for lists (select and options)
-* Radio - mutally exclusive input for a few options (input type="radio")
+* Radio - mutually exclusive input for a few options (input type="radio")
 * Checkbox - binary input (input type="checkbox")
 * Button - submit the form (button)
 
