@@ -40,4 +40,4 @@ web.input()方法返回一个包含从url(GET方法)或http header(POST方法,�
             return "<h1>" + ",".join(user_data.id) + "</h1>"
 
 译者补充:
-多值变量这儿,在WEB上除了上面所说的multiple select 和query strings外,用得最多的就是复选框(checkbox)了,另外还有多文件上传时的<input type="file" ...>.
+多值变量这儿,在WEB上除了上面所说的multiple select 和query strings外,用得最多的就是复选框(checkbox)了,另外还有多文件上传时的&lt;input type="file" ...&gt;.
