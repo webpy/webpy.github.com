@@ -24,6 +24,9 @@ web.py sessions allow for multiple ways to store the session data.  These method
 The storage methods have various performance and setup tradeoffs, so the options allow you to choose what's best for your application.
 
 
+## Example
+The following code shows how to use a basic DiskStore session.
+
 ###/sess.py
 
     import web
