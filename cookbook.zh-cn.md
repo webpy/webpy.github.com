@@ -77,7 +77,7 @@ title: Web.py Cookbook 简体中文版
 * [File Upload (未译)](/fileupload/zh-cn)
 * [Store an uploaded file (未译)](/storeupload/zh-cn)
 * [How to put a limit of size of uploaded files (未译)](/limiting_upload_size/zh-cn)
-* [Accessing user input through web.input (未译)](/input/zh-cn)
+* [通过 web.input 接受用户输入](/input/zh-cn)
 * [How to use forms (未译)](/forms/zh-cn)
 * [Render individual form fields (未译)](/form_fields/zh-cn)
 
