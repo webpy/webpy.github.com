@@ -12,9 +12,14 @@ Sessions are convenient because they allow a programmer to store user state in n
 ## Storage types
 web.py sessions allow for multiple ways to store the session data.  These methods include:
 
-* Disk store. Session data is pickled in a designated directory.
-* DB Store. Session data is pickled and stored in a database.  This can be useful if you want to store session data on a separate system.
-* Shelve store. Data is stored using the python shelve module.
+* DiskStore. Session data is pickled in a designated directory. When instantiating, the first and only argument is the folder where the session information should be stored on disk.
+* DBStore. Session data is pickled and stored in a database.  This can be useful if you want to store session data on a separate system. When creating, the DBStore takes 2 arguments: a web.py database instance, and the table name (string). The table which stores the session must have the following schema:
+
+        session_id CHAR(128) UNIQUE NOT NULL,
+        atime DATETIME NOT NULL default current_timestamp,
+        data TEXT
+
+* ShelfStore. Data is stored using the python shelve module. When creating, the ShelfStore takes the filename that should be used to store the data.
 
 The storage methods have various performance and setup tradeoffs, so the options allow you to choose what's best for your application.
 
