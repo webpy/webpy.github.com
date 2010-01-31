@@ -116,7 +116,8 @@ Once the form data has been posted, it can easily be put into a database (if the
     class index: 
         def GET(self): 
             form = myform()
-            ### make sure you create a copy of the form by calling it (line above)--otherwise changes will appear globally
+            # make sure you create a copy of the form by calling it (line above)
+            # Otherwise changes will appear globally
             return render.formtest(form)
 
         def POST(self): 
