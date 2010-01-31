@@ -27,8 +27,6 @@ The storage methods have various performance and setup tradeoffs, so the options
 ## Example
 The following code shows how to use a basic DiskStore session.
 
-###/sess.py
-
     import web
     
     
