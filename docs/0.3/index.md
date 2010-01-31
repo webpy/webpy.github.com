@@ -23,7 +23,7 @@ title: web.py 0.3 documentation
 * [Templates](/docs/0.3/templetor). Templetor, the web.py templating system
 * [Forms](/form). Dealing with user input
 * Application processors. Process requests and responses
-* Sessions
+* [Sessions](/docs/0.3/sessions). Store persistent data per user across requests.
 * Database
 * Testing
 
