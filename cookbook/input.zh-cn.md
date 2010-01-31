@@ -7,34 +7,37 @@ title: web.input
 
 ##web.input
 
-### Problem
-You want user data from a form, or a url encoded parameter.
+### 问题
+如何从form或是url参数接受用户数据.
 
-### Solution
-The web.input() method returns a web.storage object (a dictionary-like object) that contains the variables from the url (in a GET) or in the http header (in a POST).  For example, if you go to the page http://example.com/test?id=10, on the Python backend you'll want to extract that the id=10.  Using web.input(), this becomes trivial:
+### 解决方法
+web.input()方法返回一个包含从url(GET方法)或http header(POST方法,即表单POST)获取的变量的web.storage对象(类似字典).举个例子,如果你访问页面http://example.com/test?id=10,在Python后台你想取得 id=10 ,那么通过web.input()那就是小菜一碟:
 
     class SomePage:
         def GET(self):
             user_data = web.input()
             return "<h1>" + user_data.id + "</h1>"
 
-Sometimes you may want to specify a default variable, in case none is given.  The same code with a default value for x:
+有时你想指定一个默认变量,而不想使用None.参考下面的代码:
 
     class SomePage:
         def GET(self):
             user_data = web.input(id="no data")
             return "<h1>" + user_data.id + "</h1>"
 
-Note that the web.input() values will be strings even if there are numbers passed to it.  
+注意,web.input()取得的值都会被当作string类型,即使你传递的是一些数字.
 
 
-What if you pass several of the same variable names, like this:
+如果你想传递一个多值变量,比如像这样:
 
 <select multiple size="3"><option>foo</option><option>bar</option><option>baz</option></select>
 
-You need to let web.input know to expect multiple inputs, or it will clobber all but one.  Pass the default value of a list to web.input and it will work correctly.  For example, going to http://example.com?id=10&id=20:
+你需要让web.input知道这是一个多值变量,否则会变成一串而不是一个变量 .传递一个list给 web.input 作为默认值,就会正常工作.举个例子, 访问 http://example.com?id=10&id=20:
 
     class SomePage:
         def GET(self):
             user_data = web.input(id=[])
             return "<h1>" + ",".join(user_data.id) + "</h1>"
+
+译者补充:
+多值变量这儿,在WEB上除了上面所说的multiple select 和query strings外,用得最多的就是复选框(checkbox)了,另外还有多文件上传时的<input type="file" ...>.
