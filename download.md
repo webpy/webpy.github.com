@@ -31,8 +31,8 @@ If you are on Ubuntu Linux or Debian, you can install web.py using `apt-get`. Bu
 
 If you're running Fedora, RHEL or CentOS (and using the [EPEL](https://fedoraproject.org/wiki/EPEL) repository), you can install web.py using `yum` or `up2date`:
 
-    # yum install python-webpy
-    # up2date -i python-webpy
+    $ yum install python-webpy
+    $ up2date -i python-webpy
 
 ## Get the latest development version
 
