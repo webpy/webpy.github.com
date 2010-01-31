@@ -8,7 +8,7 @@ title: About web.py
 **web.py** is a web framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
 
 ##A complete web.py application
-    
+
     import web
             
     urls = (
