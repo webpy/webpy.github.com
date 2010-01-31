@@ -7,7 +7,7 @@ title: Form Library
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
 
-The form module defines 2 primary classes: the Form class, and the Input class.  Forms are instantiated with lists of inputs.  The Input class is subclassed into the following html inputs (html type in parens):
+The form module defines 2 primary classes: the Form class, and the Input class.  Forms are instantiated with one or more inputs, and optional validators.  Inputs are instantiated with a name variable, and optional arguments and validators. The Input class is subclassed into the following html inputs (html type in parens):
 
 * Textbox - free form single line input (input type="text")
 * Password - free form single line that hides input (input type="password")
