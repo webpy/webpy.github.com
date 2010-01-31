@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Install
+title: Install guide
 ---
 
-# Install
+# Install guide
 
 To install web.py, download:
     
@@ -237,3 +237,7 @@ If you want web.py to be accessible at 'http://example.com' instead of 'http://e
     </IfModule>
 
 If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
+
+See [Module mod_rewrite URL Rewriting Engine][4] 
+
+   [4]: http://shortb.net/~3kf44h
