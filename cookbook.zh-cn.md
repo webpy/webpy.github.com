@@ -41,7 +41,7 @@ title: Web.py Cookbook 简体中文版
 * [如何流传输大文件](/streaming_large_files/zh-cn)
 * [对自带的webserver日志进行操作](/logging/zh-cn)
 * [用cherrypy提供SSL支持](/ssl/zh-cn)
-* [Run-time language switch (未译)](/runtime-language-switch/zh-cn)
+* [实时语言切换](/runtime-language-switch/zh-cn)
 
 ##Sessions and user state:
 * [如何使用Session](/sessions/zh-cn)
