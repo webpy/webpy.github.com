@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Run-time language switch
+title: 实时语言切换
 ---
 
-# Run-time language switch
+# 实时语言切换
 
-## Problem:
-How to implement run-time language switch?
+## 问题:
+如何实现实时语言切换？
 
-## Solution:
+## 解法:
 
- * You must read [i18n support in template file](/i18n_support_in_template_file) first, and then try below code.
+ * 首先你必须阅读 [模板语言中的i18n支持](/i18n_support_in_template_file), 然后尝试下面的代码。
 
-File: code.py
+文件: code.py
 
     import os
     import sys
@@ -100,28 +100,28 @@ File: code.py
     if __name__ == "__main__": app.run()
 
 
-Template file: templates/index.html.
+模板文件: templates/index.html.
 
     $_('Hello')
 
-Don't forget to generate necessary po & mo files which used for translations. Reference: [i18n support in template file](/i18n_support_in_template_file)
+不要忘记生成必要的po&mo语言文件。参考: [模板语言中的i18n支持](/i18n_support_in_template_file)
 
-Now run code.py in terminal:
+现在运行code.py:
 
     $ python code.py
     http://0.0.0.0:8080/
 
-Now visit below addresses with your favourite web browser, check whether language changed:
+然后用你喜欢的浏览器访问下面的地址，检查语言是否改变:
 
     http://your_server:8080/
     http://your_server:8080/?lang=en_US
     http://your_server:8080/?lang=zh_CN
 
-You should:
+你必须:
 
- * Make sure language code (en_US, zh_CN, etc) will be dynamic changed.
- * Make sure custom_gettext() calling  is as cheap as possible.
+ * 确保语言文件(en_US、zh_CN等)可以动态改变。
+ * 确保custom_gettext()调用越省资源约好。
 
-Reference:
+参考:
 
- * Here is [another solution](http://groups.google.com/group/webpy/browse_thread/thread/a215837aa30e8f80 ) which use app.app_processor().
+ * 这里有使用app.app_processor()的 [另一个方案](http://groups.google.com/group/webpy/browse_thread/thread/a215837aa30e8f80 )。
