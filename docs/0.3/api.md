@@ -616,7 +616,7 @@ None
 None
 
 <code class="head">class ForLoop</code>: 
-Wrapper for expression in for statement to support loop.xxx helpers.
+Wrapper for expression in for stament to support loop.xxx helpers.
 
     >>> loop = ForLoop()
     >>> for x in loop.setup(['a', 'b', 'c']):
