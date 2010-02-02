@@ -35,4 +35,4 @@ Example code for many common questions can be found in the [cookbook section](/c
 
 99. **What's this magic `ctx` I see in examples?**
 
-	[ctx cookbook recipe](/ctx)
+	[ctx cookbook recipe](/cookbook/ctx)
