@@ -5,6 +5,10 @@ title: web.py 0.3 tutorial
 
 # web.py 0.3 tutorial
 
+##
+      * [日本語](/tutorial2.ja)
+      * [简体中文](/tutorial3.zh-cn)
+      * [français](/tutorial3.fr)
 ## Starting
 
 So you know Python and want to make a website. web.py provides the code to make that easy.
