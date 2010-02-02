@@ -5,6 +5,12 @@ title: FAQ
 
 # FAQ
 
+##
+    * [español](/faq/es)
+    * [???????](/faq/ru)
+    * [日本語](/faq/ja)
+    * [简体中文](/faq/zh-cn)
+
 Example code for many common questions can be found in the [cookbook section](/cookbook).
     
 99. **Why are the urls just one long list?**
