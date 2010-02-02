@@ -5,10 +5,11 @@ title: Web.py Cookbook
 
 # Web.py Cookbook
 
-Cookbook style documentation for web.py 0.3. Note that some of these features aren't available in previous versions.  Currently version 0.3 is the development branch.
-##Other Language:
+##
       * [日本語](/cookbook/ja)
       * [简体中文](/cookbook/zh-cn)
+
+Cookbook style documentation for web.py 0.3. Note that some of these features aren't available in previous versions.  Currently version 0.3 is the development branch.
 
 #Formatting
 
