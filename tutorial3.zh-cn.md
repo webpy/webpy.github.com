@@ -25,49 +25,48 @@ title: web.py 0.3 新手指南
 
 这条语句会导入web.py模块。
 
-Now we need to tell web.py our URL structure. Let's start out with something simple:
+现在我们需要把我们的URL结构告诉web.py。让我从下面这个简单的例子开始:
 
     urls = (
       '/', 'index'
     )
 
-The first part is a [regular expressions](http://osteele.com/tools/rework/) that matches a URL, like `/`, `/help/faq`, `/item/(\d+)`, etc. (i.e. `\d+` would match a sequence of digits). The parentheses say to capture that piece of the matched data for use later on. The second part is the name of a class to send the request to, like `index`, `view`, `welcomes.hello` (which gets the `hello` class of the `welcomes` module), or `get_\1`. `\1` is replaced by the first capture of your regular expression; any remaining captures get passed to your function.
+第一部分是匹配URL的[正则表达式](http://osteele.com/tools/rework/)，像`/`、`/help/faq`、`/item/(\d+)`等(`\d+`将匹配数字)。圆括号表示捕捉对应的数据以便后面使用。第二部分是接受请求的类名称，像`index`、`view`、`welcomes.hello` (`welcomes`模块的`hello`类)，或者`get_\1`。`\1` 会被正则表达式捕捉到的内容替换，剩下来捕捉的的内容将被传递到你的函数中去。
 
-This line says we want the URL `/` (i.e. the front page) to be handled by the class named `index`.
+这行表示我们要URL`/`(首页)被一个叫`index`的类处理。
 
-Now we need to create an application specifying the urls.
+现在我们需要创建一个列举这些url的application。
 
     app = web.application(urls, globals())
 
-This tells web.py to create an application with the URLs we listed above, looking up the classes in the global namespace of this file.
+这会告诉web.py去创建一个基于我们刚提交的URL列表的application。这个application会在这个文件的全局命名空间中查找对应类。
 
-Now we need to write the `index` class. While most people don't notice it just browsing around, your browser uses a language known as HTTP for communicating with the World Wide Web. The details aren't important, but the basic idea is that Web visitors ask web servers to perform certain functions (like `GET` or `POST`) on URLs (like `/` or `/foo?f=1`). 
+现在我们需要来写`index`类。虽然大多数人只会看看，并不会注意你的浏览器在使用用于与万维网通信的HTTP语言。具体的细节并不重要，但是要理解web访问者请求web服务器去根据URL(像`/`、`/foo?f=1`)执行一个合适的函数（像`GET`、`POST`）的基本思想。
 
-`GET` is the one we're all familiar with, the one used to request the text of a web page. When you type `harvard.edu` into your web browser, it literally asks the Harvard web server to `GET /`.  The second-most famous, `POST`, is often used when submitting certain kinds of forms, like a request to purchase something. You use `POST` whenever the act of submitting a request _does something_ (like charge your credit card and process an order). This is key, because `GET` URLs can be passed around and indexed by search engines, which you definitely want for most of your pages but definitely _don't_ want for things like processing orders (imagine if Google tried to buy everything on your site!).
+`GET`是我们都熟悉的。它用于请求网页文本。当你在浏览器输入`harvard.edu`，它会直接访问Harvard的web服务器，去`GET /`。 第二个最有名的是`POST`，它经常被用在提交form，比如请求买什么东西。每当提交一个去做什么事情(像使用信用卡处理一笔交易)的请求时，你可以使用`POST`。这是关键，因为`GET`的URL可以被搜索引擎索引，并通过搜索引擎访问。虽然大部分页面你希望被索引，但是少数类似订单处理的页面你是不希望被索引的 (想象一下Google尝试去购买你网站上的所有东西)。
 
-In our web.py code, we make the distinction between the two clear:
+在我们web.py的代码中，我们是这两则明确区分:
 
     class index:
         def GET(self):
             return "Hello, world!"
 
-This `GET` function will now get called by web.py anytime some makes a `GET` request for `/`.
+当有人用`GET`请求`/`时，这个`GET`函数随时会被web.py调用。
 
-Alright, now we just need to finish up with a final line telling web.py to start serving web pages:
+好了，限制我们只需要最后一句就写完了。这行会告诉web.py开始提供web页面:
 
     if __name__ == "__main__": app.run()
 
-This tells web.py to serve the application we created above.
+这会告诉web.py为我们启动上面我们写的应用。
 
-Now notice that although I've been talking a lot here, we only really have five or so lines of code. That's all you need to make a complete web.py application. If you go to your command line and type:
+现在注意，即使我已经在这里说了很多，但我们真正有5行这些代码。这就是你需要编写的一个完整的web.py应用。如果你在命令行下面，请输入:
 
     $ python code.py
     http://0.0.0.0:8080/
 
-You now have your web.py application running a real web server on your computer. Visit that URL and you should see "Hello, world!" (You can add an IP address/port after the "code.py" bit to control where web.py launches the server. You can also tell it to run a `fastcgi` or `scgi` server.)
+现在你的web.py应用正运行在你电脑上的一个真正的web服务器上。 访问那个URL，然后你应该看到"Hello, world!" (你可以通过把IP地址/端口加在"code.py"的后面，来控制web.py在哪里启动服务器。你也可以让它运行在`fastcgi`或`scgi`服务器上)。
 
-**Note:** You can specify the port number to use on the command line like this
-if you can't or don't want to use the default:
+**注意:** 如果你不能或者不想使用默认端口，你可以使用这样的命令来指定端口号:
 
     $ python code.py 1234
 
