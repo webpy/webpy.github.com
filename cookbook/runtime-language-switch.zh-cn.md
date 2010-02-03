@@ -10,7 +10,7 @@ title: 实时语言切换
 
 ## 解法:
 
- * 首先你必须阅读 [模板语言中的i18n支持](/i18n_support_in_template_file), 然后尝试下面的代码。
+ * 首先你必须阅读 [模板语言中的i18n支持](/cookbook/i18n_support_in_template_file), 然后尝试下面的代码。
 
 文件: code.py
 
