@@ -70,17 +70,17 @@ title: web.py 0.3 新手指南
 
     $ python code.py 1234
 
-## Templating
+## 模板
 
-Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
+在 Python 中写 HTML 不是聪明的选择，相反在 HTML 中写 Python 则有趣的多。幸运的是，`web.py` 让这件事情做得简单而又漂亮。
 
-**Note:** Old versions of web.py used [Cheetah templates](http://www.cheetahtemplate.org/). You are, of course, welcome to use that or any other software with web.py, but it is no longer officially supported.
+**注意：** 老版本的 `web.py` 使用 [Cheetah 模板系统](http://www.cheetahtemplate.org/)，你可以也欢迎使用其他模板系统，但它可能不会被长久支持。
 
-Let's make a new directory for our templates (we'll call it `templates`). Inside, make a new file whose name ends with HTML (we'll call it `index.html`). Now, inside, you can just write normal HTML:
+给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件，、HTML 内容如下：
 
     <em>Hello</em>, world!
 
-Or you can use web.py's templating language to add code to your HTML:
+你也可以在模板中使用 `web.py` 模板支持代码：
 
     $def with (name)
     
