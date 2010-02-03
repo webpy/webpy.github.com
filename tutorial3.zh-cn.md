@@ -76,7 +76,7 @@ title: web.py 0.3 新手指南
 
 **注意：** 老版本的 `web.py` 使用 [Cheetah 模板系统](http://www.cheetahtemplate.org/)，你可以也欢迎使用其他模板系统，但它可能不会被长久支持。
 
-给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件，、HTML 内容如下：
+给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件，内容如下：
 
     <em>Hello</em>, world!
 
@@ -89,40 +89,41 @@ title: web.py 0.3 新手指南
     $else:
         <em>Hello</em>, world!
 
-As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the `$def` statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
+如上，该模板看起来就像 python 文件一样，除了顶部的 `def with` (表示从模板将从这后面取值)和总是位于代码段之前的`$`。当前，`template.py` 首先请求模板文件的首行 `$def` 。当然，你要注意 `web.py` 将会转义任何任何用到的变量，所以当你将 `name` 的值设为是一段 HTML 时，它会被转义显示成纯文本。如果要关闭该选项，可以写成 `$:name` 来代替 `$name`。
 
-Now go back to `code.py`. Under the first line, add:
+回看再看 `code.py`。在第一行之下添加：
 
     render = web.template.render('templates/')
 
 This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
+告诉 `web.py` 在你的模板目录下查找模板文件。修改 `index.GET` ：
 
     name = 'Bob'    
     return render.index(name)
 
-('index' is the name of the template and 'name' is the argument passed to it)
+（'index' 是模板的名字，'name' 是传入模板的一个参数）
 
-Visit your site and it should say hello to Bob. 
+访问站点它将显示 hello Bob。
 
-But let's say we want to let people enter their own name in. Replace the two lines we added above with:
+但是如果我们想让用户自行输入他的名字，么办？如下：
 
     i = web.input(name=None)
     return render.index(i.name)
 
-Visit `/` and it should say hello to the world. Visit `/?name=Joe` and it should say hello to Joe.
+访问 `/` 将显示 hello world，访问 `/?name=Joe` 将显示 hello Joe。
 
-Of course, having that `?` in the URL is kind of ugly. Instead, change your URL line at the top to:
+URL 的后面的 `?` 看起来不好看？修改下 URL 配置：
 
     '/(.*)', 'index'
 
-and change the definition of `index.GET` to:
+然后修改下 `index.GTE`：
 
     def GET(self, name):
         return render.index(name)
 
-and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
+现在访问 `/Joe` 看看，它会显示 hello Joe。
 
-If you wish to learn more about web.py templates, vist the [templetor page](/docs/0.3/templetor).
+如果学习更多关于 web.py 的模板处理，请访问 [web.py 模板](/docs/0.3/templetor).
 
 ## Databasing
 
