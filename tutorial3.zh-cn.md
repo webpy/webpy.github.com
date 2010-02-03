@@ -95,7 +95,7 @@ title: web.py 0.3 新手指南
 
     render = web.template.render('templates/')
 
-This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
+这会告诉web.py到你的模板目录中去查找模板。然后把 `index.GET`改成:
 告诉 `web.py` 在你的模板目录下查找模板文件。修改 `index.GET` ：
 
     name = 'Bob'    
@@ -116,7 +116,7 @@ URL 的后面的 `?` 看起来不好看？修改下 URL 配置：
 
     '/(.*)', 'index'
 
-然后修改下 `index.GTE`：
+然后修改下 `index.GET`：
 
     def GET(self, name):
         return render.index(name)
@@ -125,19 +125,19 @@ URL 的后面的 `?` 看起来不好看？修改下 URL 配置：
 
 如果学习更多关于 web.py 的模板处理，请访问 [web.py 模板](/docs/0.3/templetor).
 
-## Databasing
+## 数据库操作
 
-**Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
+**注意:** 在你开始使用数据库之前，确保你已经安装了合适的数据库访问库。比如对于MySQL数据库，使用 [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) ，对于Postgres数据库使用[psycopg2](http://initd.org/pub/software/psycopg/)。
 
-First you need to create a database object.
+首先你需要创建一个数据库对象。
 
     db = web.database(dbn='postgres', user='username', pw='password', db='dbname')
 
-(Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` definition to `mysql`.)
+(根据需要修改这里 -- 尤其是`username` 、 `password` 、 `dbname` -- 。 MySQL用户还需要把 `dbn` 定义改为 `mysql`。)
 
-That's all you need to do -- web.py will automatically handle connecting and disconnecting from the database.
+这就是所有你需要做的 -- web.py将会自动处理与数据库的连接和断开。
 
-Using your database engines admin interface, create a simple table in your database:
+使用的的数据库引擎管理工具，在你的库中创建一个简单的表:
 
     CREATE TABLE todo (
       id serial primary key,
@@ -145,21 +145,21 @@ Using your database engines admin interface, create a simple table in your datab
       created timestamp default now(),
       done boolean default 'f'    );
 
-And an initial row:
+然后初始化行:
 
     INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Return to editing `code.py` and change `index.GET` to the following, replacing the entire function:
+我们回来继续编辑 `code.py` ，把 `index.GET` 改成下面的样子，替换整个函数:
 
     def GET(self):
         todos = db.select('todo')
         return render.index(todos)
 
-and change back the URL handler to take just `/` as in:
+然后把URL列表改回来，只保留 `/`:
 
     '/', 'index',
 
-Edit and replace the entire contents of `index.html` so that it reads:
+像这样编辑并替换 `index.html` 的全部内容:
 
     $def with (todos)
     <ul>
@@ -167,22 +167,22 @@ Edit and replace the entire contents of `index.html` so that it reads:
         <li id="t$todo.id">$todo.title</li>
     </ul>
 
-Visit your site again and you should see your one todo item: "Learn web.py". Congratulations! You've made a full application that reads from the database. Now let's let it write to the database as well.
+再访问你的网站，然后你可以看到你的todo item: "Learn web.py"。恭喜你！你已经完整地写好了一个可以从数据库读取数据的程序。现在让我们同样再写一个可以把数据写入数据库的程序。
 
-At the end of `index.html`, add:
+在 `index.html`尾部添加:
 
     <form method="post" action="add">
     <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>
     </form>
 
-And change your URLs list to read:
+然后把你的URL列表改为:
 
     '/', 'index',
     '/add', 'add'
 
-(You've got to be very careful about those commas.  If you omit them, Python adds the strings together and sees `'/index/addadd'` instead of your list of URLs!)
+(你必须要非常小心那些逗号。如果你省略他们，Python会把所有字符串连接起来,变成 `'/index/addadd'`)
 
-Now add another class:
+现在添加另一个类:
 
     class add:
         def POST(self):
@@ -190,34 +190,34 @@ Now add another class:
             n = db.insert('todo', title=i.title)
     	    raise web.seeother('/')
 
-(Notice how we're using `POST` for this?)
+(注意现在我们正在使用 `POST`)
 
-`web.input` gives you access to any variables the user submitted through a form. 
+`web.input` 可以让你访问用户通过form提交的任何数据。
 
-Note: In order to access data from multiple identically-named items, in a list format (e.g.: a series of check-boxes all with the attribute name="name") use:
+注意: 如果要访问多个相同名字的字段，请使用list的格式(比如:一串name="name"的多选框):
 
     post_data=web.input(name=[])
 
-`db.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that URL.
+`db.insert` 把数据插入数据表 `todo` ，然后把新的行号返回给你。 `seeother` 把用户重定向到指定的URL。
 
-Some quick additional notes: `db.update` works just like `db.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
+一些快速补充说明: `db.update` 与 `db.insert` 差不多，除了它返回的行号是直接从sql语句里面提取的(`WHERE ID=2`)。
 
-`web.input`, `db.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
+`web.input`、 `db.query`已经其他web.py中的函数返回"Storage objects"，这些东西就像字典，你除了可以 `d['foo']`之外，你还可以 `d.foo`。这可以让代码更加干净。
 
-You can find the full details on these and all the web.py functions in [the documentation](/docs/0.3).
+你可以在[the documentation](/docs/0.3)找到这方面具体的细节以及所有web.py的函数说明。
 
-## Developing
+## 开发
 
-web.py also has a few tools to help us with debugging. When running with the built-in webserver, it starts the application in debug mode. In debug mode any changes to code and templates are automatically reloaded and error messages will have more helpful information.
+web.py 还有一些帮助我们debug的工具。当它在内建的服务器中运行时，它会一debug模式启动程序。在debug模式中，任何代码、模板的修改，都会让服务器重新加载它们，然后还会输出有用的错误消息。
 
-The debug is not enabled when the application is run in a real webserver. If you want to disable the debug mode, you can do so by adding the following line before creating your application/tempaltes.
+只有在生产环境中debug模式是关闭的。如果你想禁用debug模式，你可以在创建程序/模板前添加像这样的行。
 
     web.config.debug = False
 
-This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
+我们的指南就到这里了。如果要做更多很酷的东西，你可以先查看一下文档。
 
-## What next?
+## 下一步是什么?
 
-* [more documentation](/docs/0.3)
+* [更多文档](/docs/0.3)
 * [Cookbook](/cookbook)
 * [code samples](/src)
