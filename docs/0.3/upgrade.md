@@ -37,7 +37,6 @@ It should become:
             for i in range(5):
                 yield "hello " + str(i)
 
-<a href="app"></a>
 ## new application framework
 
 New application framework has been introduced in web.py 0.3 and due to that there is a slight change in the way the program's main section is written.
