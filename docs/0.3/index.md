@@ -22,7 +22,7 @@ title: web.py 0.3 documentation
     * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain.
 * [Templates](/docs/0.3/templetor). Templetor, the web.py templating system
 * [Forms](/form). Dealing with user input
-* Application processors. Process requests and responses
+* [Application processors](/docs/0.3/app_processors). Run code before each request.
 * [Sessions](/docs/0.3/sessions). Store persistent data per user across requests.
 * Database
 * Testing
