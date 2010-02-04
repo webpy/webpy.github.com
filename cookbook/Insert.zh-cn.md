@@ -1,24 +1,26 @@
 ---
 layout: default
-title: Insert: Adding a new entry to a database
+title: db.insert 向数据库中新增数据
 ---
 
-# Insert: Adding a new entry to a database
+# db.insert 向数据库中新增数据
 
-###Problem: You want to add data to a database
+###问题
+如何向数据加新增数据？
 
-###Solution: 
+###解决办法
 
-With version 0.3, databases are defined like this:
+在 0.3 中，数据库连接如下：
 
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
 
-Once the database is defined as such, performing insert can be performed like this:
+数据库连接写好以后，“insert” 操作如下：
     
-    # Insert an entry into table 'mytable'
+    # 向 'mytable' 表中插入一条数据
     sequence_id = db.insert('mytable', firstname="Bob",lastname="Smith",joindate=web.SQLLiteral("NOW()"))
 
-The insert statement takes the following keyword arguments:
+上面的操作带入了几个参数，我们来说明一下：
+
  
 tablename
 seqname   
@@ -28,16 +30,17 @@ _test
 
 
 ##tablename
-The name of the table in your database to which you would like to add data to.
+表名，即你希望向哪个表新增数据。
 
 ##seqname
-An optional argument, the default value is None. Set `seqname` to the ID if it's not the default, or to `False`.
+可选参数，默认 None。Set `seqname` to the ID if it's not the default, or to `False`.
 
 ##_test
-The _test variable lets you see the SQL produced by the statement:
+`_test` 参数可以让你看到 SQL 的执行过程：
 
     results = db.select('mytable', offset=10, _test=True) 
     ><sql: 'SELECT * FROM mytable OFFSET 10'>
 
 ##\**values
 A set of named arguments that represent the fields in your table. If values are not given, the database may create default values or issue a warning.
+数据表里的各字段参数。如果没有赋值，数据库可能创建默认值或者发出警告。
