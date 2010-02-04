@@ -21,12 +21,10 @@ title: db.insert 向数据库中新增数据
 
 上面的操作带入了几个参数，我们来说明一下：
 
- 
-tablename
-seqname   
-_test  
-\**values
- 
+* tablename
+* seqname   
+* _test  
+* \**values 
 
 
 ##tablename
@@ -42,5 +40,4 @@ _test
     ><sql: 'SELECT * FROM mytable OFFSET 10'>
 
 ##\**values
-A set of named arguments that represent the fields in your table. If values are not given, the database may create default values or issue a warning.
-数据表里的各字段参数。如果没有赋值，数据库可能创建默认值或者发出警告。
+字段参数。如果没有赋值，数据库可能创建默认值或者发出警告。
