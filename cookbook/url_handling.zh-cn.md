@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Understanding URL Handling
+title: 理解URL控制
 ---
 
-# Understanding URL Handling
+# 理解URL控制
 
-`Problem`: how to design a url handling / dispatching scheme for the entire site
+`问题`: 如何为整个网站设计一个URL控制方案 / 调度模式
 
-`Solution`:
+`解决`:
 
-web.py's URL handling scheme is simple yet powerful and flexible.  at the top of each application, you usually see the full URL dispatching scheme defined as a tuple:
+web.py的URL控制模式是简单的、强大的、灵活的。在每个应用的最顶部，你通常会看到整个URL调度模式被定义在元组中:
 
     urls = (
         "/tasks/?", "signin",
@@ -21,30 +21,30 @@ web.py's URL handling scheme is simple yet powerful and flexible.  at the top of
         "/tasks/signup", "signup"
     )
 
-The format of this tuple is: _url-path-pattern_, _handler-class_ this pattern will repeat as more url patterns are defined.  If you don't understand the relationship between url pattern and handler classes, please read the [Hello World example](/helloworld) or [Quick Start Tutorial](/tutorial3.en) before reading any other cookbook recipes.
+这些元组的格式是: _URL路径_, _处理类_ 这组定义有多少可以定义多少。如果你并不知道URL路径和处理类之间的关系，请在阅读cookbook之前先阅读[Hello World example](/helloworld)，或者[快速入门](/tutorial3.zh-cn)。
 
-`Path Matching`
+`路径匹配`
 
-You can utilize the power of regular expressions to design more flexible url patterns. For example, /(test1|test2) will catch either /test1 or /test2.  The key point to understand is that this matching happens on the `path` of your URL. For example, the following URL:
+你可以利用强大的正则表达式去设计更灵活的URL路径。比如 /(test1|test2) 可以捕捉 /test1 或 /test2。要理解这里的关键，匹配是依据URL路径的。比如下面的URL:
 
     http://localhost/myapp/greetings/hello?name=Joe
 
-The path of this URL is _/myapp/greetings/hello_.  web.py will internally add ^ and $ to the url pattern so that the pattern _/tasks/_ will not match _/tasks/addnew_.  As it matches against the path, you can not use a pattern like: _/tasks/delete?name=(.+)_ as the part after ? is called `query` and is not matched against.  For a detailed description of URL components, please read [web.ctx](/cookbook/ctx).
+这个URL的路径是 _/myapp/greetings/hello_。web.py会在内部给URL路径加上^和$ ，这样 _/tasks/_ 不会匹配 _/tasks/addnew_。  正如它根据路径匹配，你不能在?后面使用像这样的参数: _/tasks/delete?name=(.+)_，这部分是参数，不会被匹配。 阅读URL组件的更多细节，请访问[web.ctx](/cookbook/ctx/zh-cn)。
 
-`Capture Parameters`
+`捕捉参数`
 
-In the url pattern you can catch parameters which can be used in your handler class:
+你可以捕捉URL的参数，然后用在处理类中:
 
     /users/list/(.+), "list_users"
 
-The chunk after _list/_ are captured and can be used as a parameter in GET or POST:
+在 _list/_后面的这块会被捕捉，然后作为参数被用在GET或POST:
 
     class list_users:
         def GET(self, name):
             return "Listing info about user: {0}".format(name)
 
-You can define more than one parameters as you wish.  Also note that URL query parameters (which appears after the ?) can be obtained using [web.input()](/cookbook/input)
+你可以根据需要定义更多参数。同时要注意URL查询的参数(?后面的内容)也可以用[web.input()](/cookbook/input/zh-cn)取得。
 
-`Note on sub-applications`
+`开发子程序的时候注意`
 
-To better handle larger web applications, web.py support [sub-applications](/cookbook/subapp).  While designing url scheme with sub applications, keep in mind that the path (web.ctx.path) will get the parent path stripped off. e.g. if in the main application, you define to forward url pattern "/blog" to the 'blog' sub-application, in your blog sub-application all url patterns starts with "/", `not` /blog.  Read the [web.ctx](/cookbook/ctx) cookbook recipe for more details.
+为了更好的控制大型web应用，web.py支持[子程序](/cookbook/subapp/zh-cn)。在为子程序设计URL模式的时候，记住取到的路径(web.ctx.path)是父应用剥离后的。比如，你在主程序定义了URL"/blog"跳转到'blog'子程序，那没在你blog子程序中所有URL都是以"/"开头的，而不是"/blog"。查看[web.ctx](/cookbook/ctx/zh-cn)取得更多信息。
