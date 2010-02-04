@@ -84,7 +84,7 @@ title: Web.py Cookbook 简体中文版
 ##Database:
 * [使用多数据库](/multidbs/zh-cn)
 * [Select: 数据库查询](/select/zh-cn)
-* [Update: Updating entries in a database (未译)](/update/zh-cn)
+* [Update: 数据库更新 ](/update/zh-cn)
 * [Delete: Remove entries in a database (未译)](/delete/zh-cn)
 * [Insert: Adding entries to a database (未译)](/Insert/zh-cn) 
 * [Query: Advanced database queries (未译)](/query/zh-cn)
