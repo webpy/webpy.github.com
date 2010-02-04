@@ -1,21 +1,21 @@
 ---
 layout: default
-title: db.delete
+title: db.delete 数据删除
 ---
 
-# db.delete
+# db.delete 数据删除
 
-### Problem
+### 问题
 
-You want to delete data that's been entered into a database.
+在数据库中删除数据。
 
-### Solution
+### 解决办法
 
     import web
     
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
     db.delete('mytable', where="id=10")
 
-It is also accepts "using" and "vars" parameters.
+上面接受 "using" 和 "vars" 参数。
 
-The delete method returns the number of rows deleted.
+删除方法返回被删除的影响行数。
