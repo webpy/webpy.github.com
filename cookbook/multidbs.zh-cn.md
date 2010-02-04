@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Multiple Databases
+title: 多数据库使用
 ---
 
-# Multiple Databases
+# 多数据库使用
 
-## Problem
-You want to access multiple databases in a single project.
+## 问题
+如何在单独项目中应用多数据库?
 
-## Solution
+## 解决办法
 
-webpy 0.3 supports multiple databases by removing the database from a part of the "web" module, and making it a more typical object.  For example:
+webpy 0.3 支持多数据库操作,并从web模块中移走数据库部分, 使其成为一个更典型的对象.  例子如下:
 
     import web
     
@@ -20,6 +20,6 @@ webpy 0.3 supports multiple databases by removing the database from a part of th
     print db1.select('foo', where='id=1')
     print db2.select('bar', where='id=5')
     
-insert, update, delete and query methods can also be used in the similar way. 
+增加, 更新, 删除和查询的方法跟原有单数据库操作类似.
 
-Of course, you can use 'host' and 'port to specify server address and listen port.
+当然, 你可以使用'host'和'port'来指定服务器地址和监听端口.
