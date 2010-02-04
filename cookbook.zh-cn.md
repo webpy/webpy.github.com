@@ -86,7 +86,7 @@ title: Web.py Cookbook 简体中文版
 * [Select: 查询数据](/select/zh-cn)
 * [Update: 更新数据 ](/update/zh-cn)
 * [Delete: 删除数据](/delete/zh-cn)
-* [[Insert/zh-cn|Insert: 新增数据] 
+* [Insert: 新增数据](/Insert/zh-cn)
 * [Query: Advanced database queries (未译)](/query/zh-cn)
 * [How to use database transactions (未译)](/transactions/zh-cn)
 * [Using sqlalchemy (未译)](/sqlalchemy/zh-cn)
