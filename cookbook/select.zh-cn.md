@@ -1,26 +1,26 @@
 ---
 layout: default
-title: db.select
+title: db.select 查询
 ---
 
-# db.select
+# db.select 查询
 
-##Problem:
+##问题:
 
-You want to select data from a database
+怎样执行数据库查询？
 
-##Solution: 
+##解决方案: 
 
-With version 0.3, databases are defined like this:
+如果是0.3版本, 连接部分大致如下:
 
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
 
-Once the database is defined as such, performing selects can be performed like this:
+当获取数据库连接后, 可以这样执行查询数据库:
     
     # Select all entries from table 'mytable'
     entries = db.select('mytable')
 
-The select statement takes the following keyword arguments:
+select方法有下面几个参数:
 
 * vars
 * what
@@ -32,43 +32,43 @@ The select statement takes the following keyword arguments:
 * _test
 
 ###vars
-The vars variable is used to populate the rest of the statements.  For example:
+vars变量用来填充查询条件.  如:
 
     myvar = dict(name="Bob")
     results = db.select('mytable', myvar, where="name = $name")
 
 ###what
-The what variable defaults to *, but can take a list of items you want selected if the entire entry isn't desired.
+what是标明需要查询的列名, 默认是*, 但是你可以标明需要查询哪些列.
 
     results = db.select('mytable', what="id,name")
 
 ###where
-The where variable lets you pass where clauses to the SQL select, such as:
+where查询条件, 如:
 
     results = db.select('mytable', where="id>100")
 
 ###order
-The order variable lets the order be specified.  For instance:
+排序方式:
 
     results = db.select('mytable', order="post_date DESC")
 
 ###group
-Grouping lets you combine things that are common.
+按group组排列.
 
     results = db.select('mytable', group="color")    
 
 ###limit
-Limits set how many results are returned. 
+从多行中返回limit查询. 
  
     results = db.select('mytable', limit=10) 
 
 ###offset
-Offsets start returning results after a certain point; they're often used with limits to do something like show 10 entries per page, and then see the next 10.   
+偏移量, 从第几行开始.   
 
     results = db.select('mytable', offset=10) 
 
 ###_test
-The _test variable lets you see the SQL produced by the statement:
+此变量可以查看运行时执行的SQL语句:
 
     results = db.select('mytable', offset=10, _test=True) 
     <sql: 'SELECT * FROM mytable OFFSET 10'>
