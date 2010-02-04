@@ -58,7 +58,7 @@ title: Web.py Cookbook 简体中文版
 * [如何利用Gmail发送邮件](/sendmail_using_gmail/zh-cn)
 * [使用soaplib实现webservice](/webservice/zh-cn)
 
-##Templates:
+##Templates 模板
 * [Templetor: web.py 模板系统](http://webpy.org/docs/0.3/templetor/zh-cn)
 * [Using Site Layout Templates (未译)](/layout_template/zh-cn)
 * [Alternating Style (未译)](/alternating_style/zh-cn)
@@ -81,12 +81,12 @@ title: Web.py Cookbook 简体中文版
 * [How to use forms (未译)](/forms/zh-cn)
 * [Render individual form fields (未译)](/form_fields/zh-cn)
 
-##Database:
+##Database 数据库
 * [使用多数据库](/multidbs/zh-cn)
-* [Select: 数据库查询](/select/zh-cn)
-* [Update: 数据库更新 ](/update/zh-cn)
-* [Delete: Remove entries in a database (未译)](/delete/zh-cn)
-* [Insert: Adding entries to a database (未译)](/Insert/zh-cn) 
+* [Select: 查询数据](/select/zh-cn)
+* [Update: 更新数据 ](/update/zh-cn)
+* [Delete: 删除数据](/delete/zh-cn)
+* [[Insert/zh-cn|Insert: 新增数据] 
 * [Query: Advanced database queries (未译)](/query/zh-cn)
 * [How to use database transactions (未译)](/transactions/zh-cn)
 * [Using sqlalchemy (未译)](/sqlalchemy/zh-cn)
