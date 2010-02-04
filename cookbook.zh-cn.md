@@ -82,7 +82,7 @@ title: Web.py Cookbook 简体中文版
 * [Render individual form fields (未译)](/form_fields/zh-cn)
 
 ##Database:
-* [Multiple databases (未译)](/multidbs/zh-cn)
+* [多数据库操作](/multidbs/zh-cn)
 * [Select: Retrieving entries from a database (未译)](/select/zh-cn)
 * [Update: Updating entries in a database (未译)](/update/zh-cn)
 * [Delete: Remove entries in a database (未译)](/delete/zh-cn)
