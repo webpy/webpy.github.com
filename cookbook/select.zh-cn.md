@@ -68,7 +68,7 @@ where查询条件, 如:
     results = db.select('mytable', offset=10) 
 
 ###_test
-此变量可以查看运行时执行的SQL语句:
+查看运行时执行的SQL语句:
 
     results = db.select('mytable', offset=10, _test=True) 
     <sql: 'SELECT * FROM mytable OFFSET 10'>
