@@ -1,22 +1,22 @@
 ---
 layout: default
-title: db.update
+title: db.upate 数据更新
 ---
 
-# db.update
+# db.upate 数据更新
 
-### Problem
+### 问题
 
-You want to update data that's been entered into a database.
+向数据库中更新数据。
 
-### Solution
+### 解决方案
 
     import web
     
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
     db.update('mytable', where="id = 10", value1 = "foo")
 
-See the [select](/cookbook/select) for more information on arguments that are accepted by update.
+在 [查询](/cookbook/select) 中有更多关于可用参数的信息。
 
 
-The update method returns the number of rows updated.
+该更新操作会返回更新的影响行数。
