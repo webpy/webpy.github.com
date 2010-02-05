@@ -7,7 +7,7 @@ title: web.py 0.3 documentation
 
 Other languages : [français](/docs/0.3.fr) | ...
 
-## Installation
+## Install
 * [Install](/install). Install web.py, configure LightTPD, Apache, Nginx ...(CGI, FastCgi, ...)
 
 ## Tutorial
