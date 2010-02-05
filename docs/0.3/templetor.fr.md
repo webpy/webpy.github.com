@@ -5,7 +5,7 @@ title: Templator: le système de gabarits de web.py
 
 # Templator: le système de gabarits de web.py
 
-## Summary
+## Sommaire
 
 * <a href="#introduction">Introduction</a>
 * <a href="#using">Utiliser un modèle de gabarit</a>
