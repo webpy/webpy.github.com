@@ -5,6 +5,8 @@ title: web.py 0.3 documentation
 
 # web.py 0.3 documentation
 
+Other languages : [français](/docs/0.3.fr) | ...
+
 ## Tutorial
 
 * [Quick tutorial](/tutorial3.en). Getting started with your first application.
