@@ -15,6 +15,7 @@ title: web.py 0.3 tutorial
 * <a href="#index">Page index - ma première classe</a>
 * <a href="#lance">Lancer le serveur</a>
 * <a href="#template">Modèles, gabarits</a>
+* <a href="#formulaires">Formulaires</a>
 * <a href="#bd">Base de données</a>
 * <a href="#affbd">Afficher le contenu d'une base de données</a>
 * <a href="#ecrbd">Ecrire dans une base de données</a>
@@ -28,7 +29,7 @@ title: web.py 0.3 tutorial
 
 Vous connaissez Python et vous désirez construire un site web. Webpy vous permettra de le faire facilement.
 
-Si vous décidez de suivre l'ensemble de ce tutorial, vous aurez besoin d'installer Python, web.py, flup, psycopg2 et Postgres (ou une base de donnée equivalente et les pilotes python). Pour plus de détails, veuillez consulter [webpy.org](http://webpy.org/)
+Si vous décidez de suivre l'ensemble de ce tutorial, vous aurez besoin d'installer Python, [web.py] (/install/fr) , flup, psycopg2 et Postgres (ou une base de donnée equivalente et les pilotes python). Pour plus de détails, veuillez consulter [webpy.org](http://webpy.org/)
 
 Si vous possédez déjà un projet web.py existant, jetez un oeil à la page de [mise à jour](http://webpy.org/docs/0.3/upgrade) pour plus d'informations sur la migration.
 
@@ -126,7 +127,7 @@ Créons un nouveau répertoire pour nos gabarits (nous l'appellerons templates).
 
      <em>Hello</em>, world!
 
-Ou utiliser le langage de template de web.py (Templator) pour ajouter du code dans votre HTML:
+Ou utiliser le langage de template de web.py (Templetor) pour ajouter du code dans votre HTML:
 
      $def with (name)
 
@@ -169,8 +170,13 @@ Et modifiez la définition de la fonction GET de la classe index en:
 
 puis effaçez la ligne qui définit le nom. Maintenant, visitez /joe et il devrait vous afficher hello to Joe.
 
-Si vous désirez en apprendre davantage sur les gabarits de web.py, visitez la page [Templator](http://webpy.infogami.com/templetor)
+Si vous désirez en apprendre davantage sur les gabarits de web.py, visitez la page [Templetor](http://webpy.org/templetor)
 
+<a name="formulaires"></a>
+# Formulaires
+
+Le module de formulaire de web.py permet de générer des formulaires HTML, de récuperer les entrées des utilisateurs, et les valider avant de les traiter ou les ajouter à une base de donnée.
+Si vous souhaitez en apprendre plus sur l'utilisation du module de formulaires de web.py, consultez la [Documentation](http://webpy.org/docs/0.3) ou la traduction française du module [Formulaires](http://webpy.org/form.fr)
 
 <a name="bd"></a>
 # Base de données
@@ -181,9 +187,9 @@ Premièrement, vous devez créer un objet database.
 
      db = web.database(dbn='postgres', user='username', pw='password', db='dbname')
 
-(Adaptez ici -- particulièrement pour username, password, and dbname -- vos paramètres de connection. les utilisateurs de MySQL devront modifier la définition dbn en 'mysql'.)
+(Adaptez ici -- particulièrement pour `username`, `password`, and `dbname` -- vos paramètres de connexion. les utilisateurs de MySQL devront modifier la définition `dbn` en `mysql`.)
 
-C'est tout ce dont vous avez besoin -- web.py gèrera automatiquement la connection et la déconnection à la base de données.
+C'est tout ce dont vous avez besoin -- web.py gèrera automatiquement la connexion et la déconnexion à la base de données.
 
 <a name="affbd"></a>
 ## Afficher le contenu d'une base de données
@@ -201,7 +207,7 @@ Ainsi qu'une ligne initiale:
 
      INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Revenez à "code.py" et modifiez la fonction GET de la Classe index de la façon suivante en remplaçant la fonction entièrement:
+Revenez à "code.py" et modifiez la fonction 'GET' de la Classe 'index' de la façon suivante en remplaçant la fonction entièrement:
 
      def GET(self):
         todos = db.select('todo')
@@ -211,7 +217,7 @@ puis remodifiez le gestionnaire d'URLs pour qu'il ne prenne en compte que /:
 
      '/', 'index'
 
-Editez et remplaçez le contenu entier du gabarit index.html de cette façon:
+Editez et remplaçez le contenu entier du gabarit `index.html` de cette façon:
 
      $def with (todos)
         <ul>
@@ -228,7 +234,7 @@ Félicitations ! Vous venez de créer une application complète qui lit une base
 
 Maintenant, nous allons écrire dans la base de données.
 
-A la fin du gabarit index.html, ajoutez:
+A la fin du gabarit `index.html`, ajoutez:
 
      <form method="post" action="add">
         <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>
@@ -239,7 +245,7 @@ puis modifiez la liste de vos URLs pour qu'elle ressemble à:
      '/', 'index',
      '/add', 'add'
 
-(Vous devez être très prudents avec les virgules. Si vous en oubliez, Python joint les chaînes ensembles, et verra '/index/addadd' à la place de votre liste d'URLs!)
+(Vous devez être très prudents avec les virgules. Si vous en oubliez, Python joint les chaînes ensembles, et verra `/index/addadd` à la place de votre liste d'URLs!)
 
 Maintenant, ajoutons une nouvelle Classe:
 
@@ -249,22 +255,26 @@ Maintenant, ajoutons une nouvelle Classe:
            n = db.insert('todo', title = i.title)
            raise web.seeother('/')
 
-(Avez-vous noté que nous utilisons la fonction POST pour celle-ci?)
+(Avez-vous noté que nous utilisons la fonction `POST` pour celle-ci?)
 
-web.input vous donne accès à toutes les variables de l'utilisateur soumises via un formulaire.
+`web.input` vous donne accès à toutes les variables de l'utilisateur soumises via un formulaire.
 
 Note: Afin d'accéder aux données à partir de plusieurs éléments identiquement nommé, dans un format de liste (Une série de cases à cocher qui ont toutes l'attribut name="name"), utilisez:
 
      post_data=web.input(name=[])
 
-db.insert insère les valeurs dans la table todo de la base de données et renvoi l'ID des nouvelles entrées. seeother redirige les utilisateurs vers cette URL.
+`db.insert` insère les valeurs dans la table `todo` de la base de données et renvoie l'ID de la ligne créée.  
+`seeother` redirige les utilisateurs vers cette URL.
 
 Quelques notes additionnelles: 
 
-db.update fonctionne comme db.insert excepté qu'au lieu de renvoyer l'ID, il la prend après le nom de la table.(ou une chaine si clause WHERE) 
-[note TRADUCTEUR: A PRECISER]
+`db.update` fonctionne comme `db.insert` excepté qu'au lieu de renvoyer l'ID, il doit recevoir en argument, après le nom de la table, soit l'ID soit une clause `WHERE` permettant d'identifier la ligne à modifier.
 
-web.input, db.query, et d'autres fonctions dans web.py renvoient des Objets de Stockage (Storage objects), qui sont comme des dictionnaires mis à part que vous pouvez écrire d.foo en plus de d['foo']. Cela rend le code plus clair.
+    
+    db.update('todo', where="id = 10", title = "web.py pour les nuls")
+
+
+`web.input`, `db.query`, et d'autres fonctions dans web.py renvoient des Objets de Stockage (Storage objects), qui sont comme des dictionnaires mis à part que vous pouvez écrire `d.foo` en plus de `d['foo']`. Cela rend le code plus clair.
 
 <a name="debug"></a>
 # Debugger
@@ -275,6 +285,6 @@ Le debuggage n'est pas actif lorsque l'application tourne comme un vrai serveur.
 
      web.config.debug = False
 
-C'est la fin du tutorial maintenant. Jetez un oeil à la documentation pour voir ce que vous pouvez utiliser avec web.py.
+C'est la fin du tutorial maintenant. Jetez un oeil à la [Documentation](http://webpy.org/docs/0.3) pour voir ce que vous pouvez utiliser avec web.py.
 
-Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fonctions web.py dans la documentation.
+Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fonctions web.py dans la [Documentation](http://webpy.org/docs/0.3).
