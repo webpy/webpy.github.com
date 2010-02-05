@@ -5,6 +5,8 @@ title: Templetor: The web.py templating system
 
 # Templetor: The web.py templating system
 
+* [français](/docs/0.3/templetor.fr)
+
 <a name="introduction"></a>
 # Introduction
 
