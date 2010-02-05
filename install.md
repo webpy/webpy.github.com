@@ -5,13 +5,29 @@ title: Install guide
 
 # Install guide
 
-##
-    * [mac os x](/install_macosx)
-    * [español](/install/es)
-    * [日本語](/install/ja)
-    * [简体中文](/install/zh-cn)
-    * [Italiano](/install/it)
-    * [français](/install/fr)
+Other languages : [español](/install/es) | [Japan 日本語 ](/install/ja) | [chinese 简体中文 ](/install/zh-cn) | [italiano](/install/it) | [français](/install/fr)
+
+## Summary
+
+* <a href="#install">Install</a>
+	* <a href="#macosx">.. on MacOS X</a>
+* <a href="#dev">Development</a>
+* <a href="#prod">Production</a>
+	* <a href="#lighttpd">LightTPD</a>
+		* <a href="#lighttpdfastcgi">.. with FastCGI</a>
+	* <a href="#apache">Apache</a>
+		* <a href="#apachecgi">.. with CGI</a>
+		* <a href="#apachecgihtaccess"> .. with CGI using .htaccess</a>
+		* <a href="#apachefastcgi">.. with FastCGI</a>
+		* <a href="#apachescgi">.. with SCGI</a>
+		* <a href="#apachemodpython">.. with mod_python</a>
+		* <a href="#apachemodwsgi">.. with mod_wsgi</a>
+		* <a href="#apachemodrewrite">.. with mod_rewrite</a>
+
+
+<a name="install"></a>
+## Install
+
 
 To install web.py, download:
     
@@ -32,6 +48,12 @@ Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/
 
     easy_install web.py
 
+<a name="macosx"></a>
+### MacOS X
+
+To install web.py on  [mac os x](/install_macosx). Web.py 0.1 only...
+
+<a name="dev"></a>
 ## Development
 
 web.py comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.org/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
@@ -40,6 +62,7 @@ web.py comes with a built-in webserver.  Learn how to write an application by fo
 
 Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page. To specify another port, use `python code.py 1234`.
 
+<a name="prod"></a>
 ## Production
 
 The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, analogous to Java's Servlet Interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://trac.saddi.com/flup) ([download here](http://www.saddi.com/software/flup/dist/)), which provides WSGI interfaces for those APIs. 
@@ -50,8 +73,10 @@ For all the CGI variants, add this to the top of your `code.py`:
 
 And run `chmod +x code.py` to make it executable.
 
+<a name="lighttpd"></a>
 ### LightTPD
 
+<a name="lighttpdfastcgi"></a>
 #### .. with FastCGI
 
 FastCGI with lighttpd is the recommended way of using web.py in production. [reddit.com][3] handles millions of hits this way.
@@ -93,9 +118,10 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
     ))
     )
     
-
+<a name="apache"></a>
 ### Apache
 
+<a name="apachecgi"></a>
 #### .. with CGI
 
 
@@ -104,7 +130,7 @@ Add the following to `httpd.conf` or `apache2.conf`.
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-
+<a name="apachecgihtaccess"></a>
 #### .. with CGI using .htaccess
 
 CGI is easy to configure, but is not suitable for high-performance websites.
@@ -133,6 +159,8 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
     
     web.internalerror = cgidebugerror
 
+
+<a name="apachefastcgi"></a>
 #### .. with FastCGI
 
 FastCGI is easy to configure and performs as well as mod_python.
@@ -150,6 +178,8 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
+
+<a name="apachescgi"></a>
 #### .. with SCGI
 https://www.mems-exchange.org/software/scgi/
 download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
@@ -166,6 +196,8 @@ restart apache and then start your code.py in the command below:
 and open you browser,visit 127.0.0.1
 It's ok! 
 
+
+<a name="apachemodpython"></a>
 #### .. with mod_python
 
 mod_python performs as well as FastCGI, but is not as straight-forward to configure.
@@ -203,6 +235,7 @@ You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
 Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll see an error message like `A server error occurred. Please contact the administrator.`
 
+<a name="apachemodwsgi"></a>
 #### .. with mod_wsgi
 
 mod\_wsgi is a new Apache module which [typically outperforms mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) for hosting WSGI applications, and is very easy to set up.
@@ -231,6 +264,9 @@ Also, you might want to read the "Application Working Directory" section from [C
 
 It should then be accessible at `http://example.com/code.py/` as usual.
 
+
+
+<a name="apachemodrewrite"></a>
 #### mod_rewrite Rules for Apache
 
 If you want web.py to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
