@@ -127,7 +127,7 @@ Créons un nouveau répertoire pour nos gabarits (nous l'appellerons templates).
 
      <em>Hello</em>, world!
 
-Ou utiliser le langage de template de web.py (Templetor) pour ajouter du code dans votre HTML:
+Ou utiliser le langage de template de web.py ( [Templator](http://webpy.org/docs/0.3/templetor.fr)) pour ajouter du code dans votre HTML:
 
      $def with (name)
 
@@ -293,5 +293,7 @@ Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fon
 ## Et après ?
 
 * [Plus de documentation](/docs/0.3) 
+* [Formulaires](/docs/0.3/form.fr) 
+* [Templator: le modèle de gabarit de web.py](/docs/0.3/templetor.fr)
 * [Cookbook](/cookbook)
 * [Exemples de codes](/src)
