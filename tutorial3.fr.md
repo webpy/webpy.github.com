@@ -127,7 +127,7 @@ Créons un nouveau répertoire pour nos gabarits (nous l'appellerons templates).
 
      <em>Hello</em>, world!
 
-Ou utiliser le langage de template de web.py ( [Templator](http://webpy.org/docs/0.3/templetor.fr)) pour ajouter du code dans votre HTML:
+Ou utiliser le langage de template de web.py ( [Templator](http://webpy.org/docs/0.3/templetor.fr) ) pour ajouter du code dans votre HTML:
 
      $def with (name)
 
@@ -176,7 +176,7 @@ Si vous désirez en apprendre davantage sur les gabarits de web.py, visitez la p
 # Formulaires
 
 Le module de formulaire de web.py permet de générer des formulaires HTML, de récuperer les entrées des utilisateurs, et les valider avant de les traiter ou les ajouter à une base de donnée.
-Si vous souhaitez en apprendre plus sur l'utilisation du module de formulaires de web.py, consultez la [Documentation](http://webpy.org/docs/0.3) ou la traduction française du module [Formulaires](http://webpy.org/docs/0.3/form.fr)
+Si vous souhaitez en apprendre plus sur l'utilisation du module de formulaires de web.py, consultez la [Documentation](http://webpy.org/docs/0.3.fr) ou la traduction française du module [Formulaires](http://webpy.org/docs/0.3/form.fr)
 
 <a name="bd"></a>
 # Base de données
@@ -285,9 +285,9 @@ Le debuggage n'est pas actif lorsque l'application tourne comme un vrai serveur.
 
      web.config.debug = False
 
-C'est la fin du tutorial maintenant. Jetez un oeil à la [Documentation](http://webpy.org/docs/0.3) pour voir ce que vous pouvez utiliser avec web.py.
+C'est la fin du tutorial maintenant. Jetez un oeil à la [Documentation](http://webpy.org/docs/0.3.fr) pour voir ce que vous pouvez utiliser avec web.py.
 
-Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fonctions web.py dans la [Documentation](http://webpy.org/docs/0.3).
+Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fonctions web.py dans la [Documentation](http://webpy.org/docs/0.3.fr).
 
 <a name="apres"></a>
 ## Et après ?
