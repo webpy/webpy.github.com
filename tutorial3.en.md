@@ -129,6 +129,13 @@ and delete the line setting name. Now visit `/Joe` and it should say hello to Jo
 
 If you wish to learn more about web.py templates, vist the [templetor page](/docs/0.3/templetor).
 
+
+## Forms
+
+The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
+If you want to learn more about using the module forms web.py, see the [Documentation](http://webpy.org/docs/0.3) or direct link to [Form Library](http://webpy.org/form)
+
+
 ## Databasing
 
 **Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
