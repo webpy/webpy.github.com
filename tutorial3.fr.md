@@ -20,7 +20,7 @@ title: web.py 0.3 tutorial
 * <a href="#affbd">Afficher le contenu d'une base de données</a>
 * <a href="#ecrbd">Ecrire dans une base de données</a>
 * <a href="#debug">Debugger</a>
-
+* <a href="#apres">Et Après ?</a>
 
 <a name="introduction"></a>
 # Prérequis
@@ -288,3 +288,10 @@ Le debuggage n'est pas actif lorsque l'application tourne comme un vrai serveur.
 C'est la fin du tutorial maintenant. Jetez un oeil à la [Documentation](http://webpy.org/docs/0.3) pour voir ce que vous pouvez utiliser avec web.py.
 
 Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fonctions web.py dans la [Documentation](http://webpy.org/docs/0.3).
+
+<a name="apres"></a>
+## Et après ?
+
+* [Plus de documentation](/docs/0.3) 
+* [Cookbook](/cookbook)
+* [Exemples de codes](/src)
