@@ -5,7 +5,7 @@ title: Form Library
 
 # Form Library
 
-* [français](/form.fr)
+* [français](/docs/0.3/form.fr)
 
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
