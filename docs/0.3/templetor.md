@@ -5,7 +5,28 @@ title: Templetor: The web.py templating system
 
 # Templetor: The web.py templating system
 
-* [français](/docs/0.3/templetor.fr)
+Other languages : [français](/docs/0.3/templetor.fr) | ...
+
+## Summary
+
+* <a href="#introduction">Introduction</a>
+* <a href="#using">Using the template system</a>
+* <a href="#syntax">Syntax</a>
+	* <a href="#expressionsubstitution">Expression Substitution</a>
+	* <a href="#assignments">Assignments</a>
+	* <a href="#filtering">Filtering</a>
+	* <a href="#newlinesuppression">Newline suppression</a>
+	* <a href="#escaping">Escaping '$'</a>
+	* <a href="#comments">Comments</a>
+	* <a href="#controlstructure">Control Structures</a>
+* <a href="#otherstatements">Other Statements</a>
+	* <a href="#def">$def : define a new template function using $def</a>
+	* <a href="#code">$code : arbitrary python code can be written</a>
+	* <a href="#var">$var : can be used to define additional properties</a>
+* <a href="#builtins">Builtins and globals</a>
+* <a href="#security">Security</a>
+* <a href="#upgrading">Upgrading from web.py 0.2 templates</a>
+
 
 <a name="introduction"></a>
 # Introduction
@@ -50,6 +71,7 @@ And if you have the template as a string:
 <a name="syntax"></a>
 # Syntax
 
+<a name="expressionsubstitution"></a>
 ## Expression Substitution
 
 Special character `$` is used to specify python expressions. Expression can be enclosed in `()` or `{}` for explicit grouping.
@@ -59,6 +81,7 @@ Special character `$` is used to specify python expressions. Expression can be e
     Gawk, a $dictionary[key].function('argument'). 
     Cool, a $(limit)ing.
 
+<a name="assignments"></a>
 ## Assignments
 
 Sometimes you may want to define new variables and re-assign some variables.
@@ -71,6 +94,7 @@ Sometimes you may want to define new variables and re-assign some variables.
 
 Notice the space after `$` in the assignment. It is required to differentiate assignment from expression substitution.
 
+<a name="filtering"></a>
 ## Filtering 
 
 By default, Templetor uses `web.websafe` filter to do HTML-encoding.
@@ -82,7 +106,8 @@ To turnoff filter use `:` after `$`. For example:
 
     The following will not be html escaped.
     $:form.render()
-    
+
+<a name="newlinesuppression"></a>   
 ## Newline suppression
 
 Newline can be suppressed by adding `\` character at the end of line. 
@@ -92,12 +117,14 @@ Newline can be suppressed by adding `\` character at the end of line.
     (like these) \ 
     then there will be no newline.
     
+<a name="escaping"></a> 
 ## Escaping $
 
 Use `$$` to get `$` in the output.
 
     Can you lend me $$50?
     
+<a name="comments"></a> 
 ## Comments
 
 `$#` is used as comment indicator. Anything starting with $# till end of the line is ignored.
@@ -105,6 +132,7 @@ Use `$$` to get `$` in the output.
     $# this is a comment
     Hello $name.title()! $# display the name in title case
 
+<a name="controlstructure"></a> 
 ## Control Structures
 
 The template system supports `for`, `while`, `if`, `elif` and `else`.
@@ -144,8 +172,10 @@ Sometimes these can be very handy.
         </tr>
     </table>
     
+<a name="otherstatements"></a> 
 ## Other Statements
 
+<a name="def"></a>
 ### def
 
 You can define a new template function using `$def`. Keyword arguments are also supported.
@@ -173,6 +203,7 @@ Another example:
     $ data = [['a', 'b', 'c'], [1, 2, 3], [2, 4, 6], [3, 6, 9] ]
     $:table([tr(d) for d in data])
     
+<a name="code"></a>
 ### code
 
 Arbitrary python code can be written using the `code` block.
@@ -193,6 +224,7 @@ Arbitrary python code can be written using the `code` block.
     The variables defined in the code block can be used here.
     For example, $limit(x)
     
+<a name="var"></a>
 ### var
 
 The `var` block can be used to define additional properties in the template result.
