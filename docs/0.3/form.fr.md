@@ -5,6 +5,8 @@ title: Librairie formulaires
 
 # Librairie formulaires
 
+Autres langues : [English](/form) | ...
+
 # Sommaire
 
 * <a href="#introduction">Introduction</a>
