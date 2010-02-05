@@ -5,7 +5,18 @@ title: Form Library
 
 # Form Library
 
-* [français](/docs/0.3/form.fr)
+Other languages : [français](/docs/0.3/form.fr) | ...
+
+# Summary
+
+* <a href="#introduction">Introduction</a>
+* <a href="#inputfeatures">Input Features</a>
+* <a href="#dropdown">Dropdown</a>
+* <a href="#formfeatures">Form Features</a>
+* <a href="#example">Example</a>
+
+<a name="introduction"></a>
+## Introduction
 
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
@@ -49,6 +60,7 @@ Which looks like:
     <tr><th><label for="Login"></label></th><td><button id="Login" name="Login">Login</button><div class="post" style="display: none;"></div></td></tr>
 </table>
 
+<a name="inputfeatures"></a>
 ## Input Features
 The form inputs support several additional attributes.  For example:
 
@@ -70,12 +82,14 @@ In addition to the attributes above, any html attributes can be entered in the s
             maxlength="12"        )
     )
 
-**Dropdown**
+<a name="dropdown"></a>
+##Dropdown
 
 Dropdown inputs allow a unique description and value for each item in the dropdown list.  To do this, create the dropdown list with tuples like this:
     
     form.Dropdown('mydrop', [('value1', 'description1'), ('value2', 'description2')])
 
+<a name="formfeatures"></a>
 ## Form Features
 In addition individual input validators, form.py supports entire form validation which allows comparisons of fields.  The validators get passed as a list as the variable 'validators'.  For example:
 
@@ -96,6 +110,7 @@ Once the form data has been posted, it can easily be put into a database (if the
         else:
             render.foo(f)
 
+<a name="example"></a>
 ## Example
 
     import web
