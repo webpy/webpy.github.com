@@ -67,7 +67,7 @@ Ou encore à partir d'une chaîne de caractères:
     print hello('world')
 
 <a name="syntax"></a>
-# Syntax
+# Syntaxe
 
 <a name="expressionsubstitution"></a>
 ## Substitution d'expression
