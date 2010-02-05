@@ -5,7 +5,7 @@ title: web.py 0.3 tutorial
 
 # web.py 0.3 tutorial
 
-Autre langages : [english](/tutorial3.en) | [chinese](/tutorial3.zh-cn) | [japan](/tutorial2.ja)
+Autre langages : [english](/tutorial3.en) | [chinese](/tutorial3.zh-cn) | [japan](/tutorial2.ja) | ...
 
 # Sommaire
 
