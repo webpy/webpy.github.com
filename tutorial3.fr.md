@@ -176,7 +176,7 @@ Si vous désirez en apprendre davantage sur les gabarits de web.py, visitez la p
 # Formulaires
 
 Le module de formulaire de web.py permet de générer des formulaires HTML, de récuperer les entrées des utilisateurs, et les valider avant de les traiter ou les ajouter à une base de donnée.
-Si vous souhaitez en apprendre plus sur l'utilisation du module de formulaires de web.py, consultez la [Documentation](http://webpy.org/docs/0.3) ou la traduction française du module [Formulaires](http://webpy.org/form.fr)
+Si vous souhaitez en apprendre plus sur l'utilisation du module de formulaires de web.py, consultez la [Documentation](http://webpy.org/docs/0.3) ou la traduction française du module [Formulaires](http://webpy.org/docs/0.3/form.fr)
 
 <a name="bd"></a>
 # Base de données
