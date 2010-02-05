@@ -294,7 +294,7 @@ Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fon
 <a name="apres"></a>
 ## Et après ?
 
-* [Plus de documentation](/docs/0.3) 
+* [Plus de documentation](/docs/0.3.fr) 
 * [Formulaires](/docs/0.3/form.fr) 
 * [Templator: le modèle de gabarit de web.py](/docs/0.3/templetor.fr)
 * [Cookbook](/cookbook)
