@@ -9,6 +9,21 @@ title: web.py 0.3 tutorial
       * [日本語](/tutorial2.ja)
       * [简体中文](/tutorial3.zh-cn)
       * [français](/tutorial3.fr)
+
+## Summary
+
+* <a href="#starting">Starting</a>
+* <a href="#urlhandling">URL Handling</a>
+* <a href="#getpost">GET and POST: the difference</a>
+* <a href="#start">Start the server</a>
+* <a href="#templating">Templating</a>
+* <a href="#forms">Forms</a>
+* <a href="#databasing">Databasing</a>
+* <a href="#developing">Developing</a>
+* <a href="#whatnext">What next?</a>
+
+
+<a name="starting"></a>
 ## Starting
 
 So you know Python and want to make a website. web.py provides the code to make that easy.
@@ -19,6 +34,7 @@ If you have an existing web.py project, take a look at the [upgrade](/docs/0.3/u
 
 Let's get started.
 
+<a name="urlhandling"></a>
 ## URL Handling
 
 The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
@@ -45,6 +61,10 @@ Now we need to create an application specifying the urls.
 
 This tells web.py to create an application with the URLs we listed above, looking up the classes in the global namespace of this file.
 
+<a name="getpost"></a>
+## GET and POST: the difference
+
+
 Now we need to write the `index` class. While most people don't notice it just browsing around, your browser uses a language known as HTTP for communicating with the World Wide Web. The details aren't important, but the basic idea is that Web visitors ask web servers to perform certain functions (like `GET` or `POST`) on URLs (like `/` or `/foo?f=1`). 
 
 `GET` is the one we're all familiar with, the one used to request the text of a web page. When you type `harvard.edu` into your web browser, it literally asks the Harvard web server to `GET /`.  The second-most famous, `POST`, is often used when submitting certain kinds of forms, like a request to purchase something. You use `POST` whenever the act of submitting a request _does something_ (like charge your credit card and process an order). This is key, because `GET` URLs can be passed around and indexed by search engines, which you definitely want for most of your pages but definitely _don't_ want for things like processing orders (imagine if Google tried to buy everything on your site!).
@@ -63,7 +83,12 @@ Alright, now we just need to finish up with a final line telling web.py to start
 
 This tells web.py to serve the application we created above.
 
-Now notice that although I've been talking a lot here, we only really have five or so lines of code. That's all you need to make a complete web.py application. If you go to your command line and type:
+Now notice that although I've been talking a lot here, we only really have five or so lines of code. That's all you need to make a complete web.py application.
+
+<a name="start"></a>
+## Start the server
+
+ If you go to your command line and type:
 
     $ python code.py
     http://0.0.0.0:8080/
@@ -75,6 +100,8 @@ if you can't or don't want to use the default:
 
     $ python code.py 1234
 
+
+<a name="templating"></a>
 ## Templating
 
 Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
@@ -129,13 +156,14 @@ and delete the line setting name. Now visit `/Joe` and it should say hello to Jo
 
 If you wish to learn more about web.py templates, vist the [templetor page](/docs/0.3/templetor).
 
-
+<a name="forms"></a>
 ## Forms
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
 If you want to learn more about using the module forms web.py, see the [Documentation](http://webpy.org/docs/0.3) or direct link to [Form Library](http://webpy.org/form)
 
 
+<a name="databasing"></a>
 ## Databasing
 
 **Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
@@ -217,6 +245,7 @@ Some quick additional notes: `db.update` works just like `db.insert` except inst
 
 You can find the full details on these and all the web.py functions in [the documentation](/docs/0.3).
 
+<a name="developing"></a>
 ## Developing
 
 web.py also has a few tools to help us with debugging. When running with the built-in webserver, it starts the application in debug mode. In debug mode any changes to code and templates are automatically reloaded and error messages will have more helpful information.
@@ -227,6 +256,7 @@ The debug is not enabled when the application is run in a real webserver. If you
 
 This ends the tutorial for now. Take a look at the documentation for lots more cool stuff you can do with web.py.
 
+<a name="whatnext"></a>
 ## What next?
 
 * [more documentation](/docs/0.3)
