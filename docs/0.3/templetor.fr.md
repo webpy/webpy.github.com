@@ -5,6 +5,8 @@ title: Templator: le système de gabarits de web.py
 
 # Templator: le système de gabarits de web.py
 
+Autre langues : [English](/docs/0.3/templetor) | ...
+
 ## Sommaire
 
 * <a href="#introduction">Introduction</a>
