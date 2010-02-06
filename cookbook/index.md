@@ -88,7 +88,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Select: Retrieving entries from a database](/cookbook/select)
 * [Update: Updating entries in a database](/cookbook/update)
 * [Delete: Remove entries in a database](/cookbook/delete)
-* [Insert: Adding entries to a database](/Insert) 
+* [Insert: Adding entries to a database](/cookbook/insert) 
 * [Query: Advanced database queries](/cookbook/query)
 * [How to use database transactions](/cookbook/transactions)
 * [Using sqlalchemy](/cookbook/sqlalchemy)
