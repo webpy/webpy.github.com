@@ -149,13 +149,12 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
    [34]: http://metagenda.org
 
 "Guido [van Rossum, Créateur de Python], vous constaterez probablement que web.py convient le mieux à votre style. ...Si vous ne l'aimez pas, je ne peux imaginer lequel des autres douzaines d'autres framework sortis vous *pourriez* aimer."   
-- Phillip J. Eby, créateur du Python Web Server Gateway Interface (WSGI) [#][30]
+- Phillip J. Eby, créateur du Python Web Server Gateway Interface (WSGI) [#lien][30]
 
    [30]: http://shortb.net/~f561f2
 
-"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"   
 "... l'exemple [Cheetah] que j'ai vu sur web.py à l'air "bon". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"  [ Note traducteur : A préciser]
-- Guido van Rossum, Créateur de Python [#][31]
+- Guido van Rossum, Créateur de Python [#Lien][31]
 
    [31]: http://shortb.net/+f561f3
 
@@ -181,7 +180,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
     * [français](/install/fr)
 
 
-* [tutorials for version 0.3 (latest)](/tutorial3)
+* [tutoriaux pour la version 0.3 (dernière en date)](/tutorial3)
     * [english](/tutorial3.en)
     * [简体中文](/tutorial3.zh-cn)
     * [p?????? 0.2](http://webpy.infogami.com/tutorial2.ru)
@@ -192,7 +191,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
     * [e???????](http://webpy.org/tutorial2.el)
     * [français](/tutorial3.fr)
 
-* [tutorials (old version)](/tutorial):
+* [tutoriaux (anciennes versions)](/tutorial):
     * [english](http://webpy.org/tutorial)
     * [español](/tutorial/es)
     * português: [1](http://www.writely.com/View.aspx?docid=bbcm927cd2fmj) [2](http://www.writely.com/View.aspx?docid=bbcnjdbhbfh6n) [3](http://www.writely.com/View.aspx?docid=bccxp4cgw36p3)
@@ -218,7 +217,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
       * [english](/cookbook)
       * [简体中文](/cookbook/zh-cn)
 
-* [code samples](/src)
+* [exemples de code](/src)
 
 * [friendly hosts](/hosts)
 
