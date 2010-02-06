@@ -101,7 +101,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
    [f]: http://fotosaur.us
 
 
-[URIs.us][u] est un service pour créé des urls courtes. Déployé sur Google App Engine
+[URIs.us][u] est un service pour créer des urls courtes. Déployé sur Google App Engine
 
    [u]: http://uris.us 
 
