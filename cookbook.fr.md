@@ -90,7 +90,7 @@ La version actuelle 0.3 est la branche développement.
 * [Insert: Ajouter des entrées à une base de donnée](/insert).  (traduction demandée)
 * [Query: Base de données - Requêtes avancées](/query). (traduction demandée)
 * [Query: How to use database transactions](/transactions). (traduction demandée)
-* [Using sqlalchemy](/sqlalchemy). (traduction demandée)
+* [Comment utiliser sqlalchemy](/sqlalchemy). (traduction demandée)
 * [Intégrer SQLite UDF (user-defined-functions) à la couche de base de données webpy](/sqlite-udf). (traduction demandée)
 * [Utiliser un dictionnaire comme clause where](/where_dict). (traduction demandée)
 
