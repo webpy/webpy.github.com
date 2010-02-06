@@ -5,11 +5,7 @@ title: FAQ
 
 # FAQ
 
-##
-    * [español](/faq/es)
-    * [???????](/faq/ru)
-    * [日本語](/faq/ja)
-    * [简体中文](/faq/zh-cn)
+Other languages : [español](/faq/es) | [russian ???????](/faq/ru) |[japan 日本語](/faq/ja) | [chinese 简体中文](/faq/zh-cn) | [français](/faq/fr)
 
 Example code for many common questions can be found in the [cookbook section](/cookbook).
     
