@@ -5,6 +5,8 @@ title: Recommended Setup
 
 # Recommended Setup
 
+Other languages : [français](/recommended_setup/fr) | ...
+
 web.py recommends the following software for production servers:
 
 ##Web Server:
