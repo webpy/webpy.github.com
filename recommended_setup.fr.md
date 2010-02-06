@@ -53,6 +53,6 @@ Webpy possède son propre système de gabarit qui permet aux utilisateurs d'auto
 <a name="userinput"></a>
 ##Entrées utilisateurs:
 
-Markdown permet au utilisateurs de Webpy t'écrire du texte qui est convertit en HTML dans la page. Ce n'est pas indispensable, mais c'est la meilleure façon de générer du HTML à partir des entrées utilisateur.
+Markdown permet aux utilisateurs de Webpy d'écrire du texte qui est convertit en HTML dans la page. Ce n'est pas indispensable, mais c'est la meilleure façon de générer du HTML à partir des entrées utilisateur.
 
 *  [python-markdown](http://sourceforge.net/project/showfiles.php?group_id=153041) [BSD] [(doc)](http://www.freewisdom.org/projects/python-markdown/)
