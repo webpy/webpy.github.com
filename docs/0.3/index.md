@@ -40,3 +40,7 @@ Other languages : [français](/docs/0.3.fr) | ...
 ## API Documentation
 
 * [API documentation](/docs/0.3/api)
+
+## Recommended Setup
+
+* [setup](/recommended_setup). Recommended software for production servers.
