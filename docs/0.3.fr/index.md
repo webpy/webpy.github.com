@@ -16,7 +16,7 @@ Autre langages : [english](/docs/0.3) | ...
 
 ## Exemples de code
 
-* [Cookbook](/cookbook/fr). Coment effectuer des tâches basiques et communes. 
+* [Cookbook](/cookbook/fr). Comment effectuer des tâches basiques et communes. 
 * [Code samples](/src). Example code of how to write some basic applications. (traduction demandée)
 
 ## Documentation des composants
