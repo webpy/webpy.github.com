@@ -5,6 +5,8 @@ title: Hello World!
 
 # Hello World!
 
+Other languages : [français](/helloworld/fr) | ...
+
 ## Problem
 
 How to write hello world with web.py
