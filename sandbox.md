@@ -5,4 +5,4 @@ title: Sandbox
 
 # Sandbox
 
-{{PageList("/i18n")}}
+Place for experimenting!
