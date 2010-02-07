@@ -216,6 +216,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
       * [日本語](/cookbook/ja)
       * [english](/cookbook)
       * [简体中文](/cookbook/zh-cn)
+      * [français](/cookbook/fr)
 
 * [exemples de code](/src)
 
