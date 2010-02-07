@@ -5,6 +5,8 @@ title: Serving Static Files (such as js, css and images)
 
 # Serving Static Files (such as js, css and images)
 
+Other languages : [français](/staticfiles/fr) | ...
+
 Problem
 -------
 How to serve static files?
