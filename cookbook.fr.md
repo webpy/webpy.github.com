@@ -25,7 +25,7 @@ La version actuelle 0.3 est la branche développement.
 -------------------------------------------------
 
 ##Basique:
-* [Hello World](/helloworld). (traduction demandée)
+* [Hello World](/helloworld). 
 * [Servir des fichiers statiques](/staticfiles).   (traduction demandée)
 * [Comprendre la gestion des URL](/url_handling).  (traduction demandée)
 * [Seeother et Redirect](/redirect+seeother).  (traduction demandée)
