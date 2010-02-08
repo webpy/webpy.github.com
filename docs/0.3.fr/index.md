@@ -20,7 +20,7 @@ Autre langages : [english](/docs/0.3) | ...
 * [Code samples](/src). Example code of how to write some basic applications. (traduction demandée)
 
 ## Documentation des composants
-* [Applications](/docs/0.3/apps). How to map urls to python code paths. (traduction demandée)
+* [Applications](/docs/0.3/apps/fr). Comment mapper des urls à du code python.
     * [Basic app](/docs/0.3/apps/basic/fr). Mapper des expressions régulières à des classes.
     * [Auto app](/docs/0.3/apps/auto). Have webpy keep track of the urls based on class name. (traduction demandée)
     * [Subdir app](/docs/0.3/apps/subdir). Host multiple apps based on the sub-directory. (traduction demandée)
