@@ -28,7 +28,7 @@ Autre langages : [english](/docs/0.3) | ...
 * [Modèles, gabarits](/docs/0.3/templetor.fr). Templetor, le système de gabarits de web.py.
 * [Formulaires](/docs/0.3/form.fr). Gérer les entrées des utilisateurs.
 * [Application processors](/docs/0.3/app_processors). Run code before each request. (traduction demandée)
-* [Sessions](/docs/0.3/sessions/fr). Stoquer des données persistantes par utilisateur au travers les requêtes.
+* [Sessions](/docs/0.3/sessions/fr). Stocker des données persistantes des utilisateurs au travers les requêtes.
 * Database
 * Testing
 
