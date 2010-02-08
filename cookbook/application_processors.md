@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Application processors
+title: Application processors, hooks
 ---
 
-# Application processors
+# Application processors, hooks
 
 Other languages : [français](/../cookbook/application_processors/fr) | ...
 
