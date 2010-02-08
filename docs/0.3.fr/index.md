@@ -27,7 +27,7 @@ Autre langages : [english](/docs/0.3) | ...
     * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain. (traduction demandée)
 * [Modèles, gabarits](/docs/0.3/templetor.fr). Templetor, le système de gabarits de web.py.
 * [Formulaires](/docs/0.3/form.fr). Gérer les entrées des utilisateurs.
-* [Application processors](/docs/0.3/app_processors). Run code before each request. (traduction demandée)
+* [Application processors](/docs/0.3/app_processors/fr). Executer du code avant chaque requête.
 * [Sessions](/docs/0.3/sessions/fr). Stocker des données persistantes des utilisateurs au travers les requêtes.
 * Database
 * Testing
