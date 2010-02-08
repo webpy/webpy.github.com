@@ -5,6 +5,8 @@ title: webpy Applications
 
 # webpy Applications
 
+Other languages : [français](/docs/0.3/apps/fr) | ...
+
 webpy applications encompasss the urls and handlers that map to them. They fall into several categories:
 
 * [Basic app](/docs/0.3/apps/basic). Define urls and classes to handle them.
