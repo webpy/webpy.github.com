@@ -5,6 +5,8 @@ title: Application processors
 
 # Application processors
 
+Other languages : [français](/../cookbook/application_processors/fr) | ...
+
 ##  Problem
 
 How to use application processors, loadhooks and unload hooks?
