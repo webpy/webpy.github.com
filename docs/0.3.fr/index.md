@@ -22,7 +22,7 @@ Autre langages : [english](/docs/0.3) | ...
 ## Documentation des composants
 * [Applications](/docs/0.3/apps/fr). Comment mapper des urls à du code python.
     * [Basic app](/docs/0.3/apps/basic/fr). Mapper des expressions régulières à des classes.
-    * [Auto app](/docs/0.3/apps/auto). Have webpy keep track of the urls based on class name. (traduction demandée)
+    * [Auto app](/docs/0.3/apps/auto/fr). Webpy suit les urls basées sur le nom des classes.
     * [Subdir app](/docs/0.3/apps/subdir). Host multiple apps based on the sub-directory. (traduction demandée)
     * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain. (traduction demandée)
 * [Modèles, gabarits](/docs/0.3/templetor.fr). Templetor, le système de gabarits de web.py.
