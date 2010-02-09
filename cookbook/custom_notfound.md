@@ -5,6 +5,8 @@ title: Custom NotFound message
 
 # Custom NotFound message
 
+Other languages:  [français](/../cookbook/custom_notfound/fr) | ...
+
 ## Problem
 
 How to customize notfound and other messages?
@@ -38,6 +40,3 @@ In the same way InternalError message can also be customized.
         return web.internalerror("Bad, bad server. No donut for you.")
 
     app.internalerror = internalerror
-
-
-
