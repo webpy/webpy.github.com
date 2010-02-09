@@ -31,7 +31,7 @@ La version actuelle 0.3 est la branche développement.
 * [Seeother et Redirect](/redirect+seeother/fr).  
 * [Utiliser les sous-applications](/subapp/fr).  
 * [Servir du XML](/xmlfiles/fr).   
-* [Lire les données brutes d'un post](/postbasic).  (traduction demandée)
+* [Lire les données brutes d'un post](/postbasic/fr). 
 
 
 ##Avancé
