@@ -5,6 +5,8 @@ title: using subapplications
 
 # using subapplications
 
+Other languages [français](/../cookbook/subapp/fr) | ...
+
 ## Problem
 
 How do you include an application defined in another file in your application?
@@ -45,4 +47,3 @@ In your main `code.py`:
 
     if __name__ == "__main__":
         app.run()
-
