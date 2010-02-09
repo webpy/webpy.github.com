@@ -5,6 +5,8 @@ title: Serving XML
 
 # Serving XML
 
+Other languages:  [français](/../cookbook/xmlfiles/fr) | ...
+
 ### Problem
 
 How to serve XML files correctly?
