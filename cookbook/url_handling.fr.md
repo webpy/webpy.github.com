@@ -26,7 +26,7 @@ Le schéma de traitement des urls de web.py est simple, mais puissant et flexibl
     )
 
 
-Le format de ce tuple est: _motif_du_chemin-url_, _gestionnaire de classe_ ce modèle se répètera tant que des motifs de chemins urls sont définis. Si vous ne comprenez pas la relation entre les motifs des chemins urls et les gestionnaire de classe, veuillez lire l'exemple [Hello World](/../helloworld/fr) ou le [rapide tutorial](/tutorial3.fr) avant de lire d'autres astuces cookbook.
+Le format de ce tuple est: _motif du chemin url_, _gestionnaire de classe_ ce modèle se répètera tant que des motifs de chemins urls sont définis. Si vous ne comprenez pas la relation entre les motifs des chemins urls et les gestionnaire de classe, veuillez lire l'exemple [Hello World](/../helloworld/fr) ou le [rapide tutorial](/tutorial3.fr) avant de lire d'autres astuces cookbook.
 
 ## Correspondance des chemins
 
