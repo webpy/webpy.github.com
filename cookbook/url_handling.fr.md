@@ -56,5 +56,5 @@ Vous pouvez définir plusieurs paramètres si vous le souhaitez. Notez simplemen
 
 ##Note sur les sous_applications
 
-Afin de mieux traiter de grandes applications Web, web.py encourage l'utilisation des [sous-applications](/cookbook/subapp). Tout en concevant des mécanismes d'URL avec des sous-applications, gardez à l'esprit que le chemin (web.ctx.path) trouvera un  chemin parent dépouillé. 
+Afin de mieux traiter de grandes applications Web, web.py encourage l'utilisation des [sous-applications](/cookbook/subapp/fr). Tout en concevant des mécanismes d'URL avec des sous-applications, gardez à l'esprit que le chemin (web.ctx.path) trouvera un  chemin parent dépouillé. 
 Par exemple, si dans l'application principale, vous transmettez un format d'url "/blog" à la sous-application 'blog', dans votre sous-application blog, tous les formats d'url commençeront avec "/", et non avec /blog. Lisez les astuces cookbook [web.ctx](/cookbook/ctx) pour plus de détails.
