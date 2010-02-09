@@ -41,7 +41,7 @@ La version actuelle 0.3 est la branche développement.
 * [Personnaliser le message NotFound](/custom_notfound/fr). 
 * [Comment streamer de gros fichiers](/streaming_large_files/fr). 
 * [Contrôler les evènements sur le serveur intégré par défaut](/logging/fr). 
-* [Support SSL dans serveur intégré cherrypy](/ssl). (traduction demandée)
+* [Configurer le support SSL dans le serveur intégré](/ssl/fr).
 * [Run-time language switch](/runtime-language-switch). (traduction demandée)
 
 ##Sessions et état des utilisateurs:
