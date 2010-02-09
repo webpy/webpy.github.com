@@ -5,6 +5,8 @@ title: Reading raw data from post
 
 # Reading raw data from post
 
+Other languages: [français](/../cookbook/postbasic/fr) | ...
+
 ## Introduction
 
 Sometimes, the client send a lot of data by post method. In webpy, you can handle it like this.
