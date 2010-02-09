@@ -8,7 +8,7 @@ title: Les sessions web.py
 Autres langages : [english](/../sessions) | ...
 
 
-Les sessions sont un moyen de stoquer des informations entre les requêtes, faisant ainsi du http un protocole avec état. Elles fonctionnent en envoyant à l'utilisateur un cookie, qui mappe vers un objet de stockage de session sur le serveur. Lorsque l'utilisateur fait une requête vers une page, le client renvoie le cookie avec la requête, web.py charge la session basée sur sa clef, et le code peut demander et stocker des informations dedans.
+Les sessions sont un moyen de stocker des informations entre les requêtes, faisant ainsi du http un protocole avec état. Elles fonctionnent en envoyant à l'utilisateur un cookie, qui mappe vers un objet de stockage de session sur le serveur. Lorsque l'utilisateur fait une requête vers une page, le client renvoie le cookie avec la requête, web.py charge la session basée sur sa clef, et le code peut demander et stocker des informations dedans.
 
 Les sessions sont pratiques car elles permettent à un programmeur de stocker l'état des utilisateurs dans des objets natifs Python.
 
