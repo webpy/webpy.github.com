@@ -32,4 +32,4 @@ Des exemples de code pour de nombreuses questions communes peuvent être trouvé
 
 99. **Qu'est-ce que ce fameux 'ctx' que je vois dans les exemples ?**
 
-	'ctx' est une classe qui permet d'utiliser des variables contextuelles dans votre code, comme par exemple, la page de référence, le navigateur du client... voir [ctx cookbook recipe](/cookbook/ctx)
+	'ctx' est une classe qui permet d'utiliser des variables contextuelles dans votre code, comme par exemple, la page  référante, le navigateur du client... voir [ctx cookbook recipe](/cookbook/ctx)
