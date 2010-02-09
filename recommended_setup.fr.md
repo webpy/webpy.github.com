@@ -21,7 +21,7 @@ Web.py recommande les logiciels suivants pour les serveurs de production:
 <a name="webserver"></a>
 ##Serveurs web:
 
-Webpy dispose d'un serveur web interne, mais il devrait être utilisé pour le développement seulement. Pour le déploiement, un serveur plus robuste devrait être utilisé, comme l'un de ceux-ci:
+Webpy dispose d'un serveur web interne, mais il devrait être utilisé pour le développement seulement. Pour le déploiement, un serveur plus robuste est recommandé, comme l'un de ceux-ci:
 
 *  [lighttpd](http://www.lighttpd.net/download/) [BSD] [(doc)](http://trac.lighttpd.net/trac/wiki/#ReferenceDocumentation) via [flup's fastcgi](http://trac.saddi.com/flup) [BSD] ('easy_install flup')
 *  [Apache](http://www.apache.org/) [Apache] via [(mod_wsgi)](http://code.google.com/p/modwsgi/) [Apache]
