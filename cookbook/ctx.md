@@ -5,6 +5,8 @@ title: ctx
 
 # ctx
 
+Other languages: [français](/../cookbook/ctx/fr) | ...
+
 Problem
 -------
 
