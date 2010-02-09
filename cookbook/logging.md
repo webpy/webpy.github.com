@@ -35,7 +35,7 @@ You need to subclass wsgilog.WsgiLog to pass keyword arguments to the base e.g. 
             sys.stdout = LogIO(self.logger, logging.INFO)
             sys.stderr = LogIO(self.logger, logging.ERROR)
 
-Then when you run your app, you pass a reference to to the class e.g. (if the above was part of the module 'mylog';
+Then when you run your app, you pass a reference to to the class e.g. (if the above was part of the module 'mylog')
 
     from mylog import Log
     application = web.application(urls, globals())
