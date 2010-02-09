@@ -7,7 +7,6 @@ title: web.redirect et web.seeother
 
 Autres langages [english](/../redirect+seeother/) | ...
 
-## web.redirect et web.seeother
 
 ### Probleme
 
