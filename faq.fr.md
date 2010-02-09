@@ -8,7 +8,7 @@ title: FAQ
 Autres langages : [español](/faq/es) | [russian ???????](/faq/ru) |[ Japan 日本語](/faq/ja) | [chinese 简体中文](/faq/zh-cn) | [english](/faq) | ...
 
 
-Des exemples de code pour de nombreuses questions communes peuvent être trouvées dans la section [cookbook](/cookbook).
+Des exemples de code pour de nombreuses questions communes peuvent être trouvées dans la section [cookbook](/cookbook/fr).
     
 99. **Pourquoi les urls ne sont qu'une longue liste?**
 
