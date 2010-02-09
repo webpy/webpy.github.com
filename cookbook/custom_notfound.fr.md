@@ -5,7 +5,7 @@ title: Personnaliser le message NotFound
 
 # Personnaliser le message NotFound
 
-Autres langages [english](/../custom_notfound) | ...
+Autre langages: [english](/../custom_notfound) | ...
 
 ## Probleme
 
