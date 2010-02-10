@@ -45,7 +45,7 @@ La version actuelle 0.3 est la branche développement.
 * [Run-time language switch](/runtime-language-switch). (traduction demandée)
 
 ##Sessions et état des utilisateurs:
-* [Travailler avec Session](/sessions). (traduction demandée)
+* [Travailler avec les sessions](/sessions/fr). 
 * [Utiliser session avec reloader](/session_with_reloader). (traduction demandée)
 * [Utiliser session dans un gabarit](/session_in_template). (traduction demandée)
 * [Travailler avec les cookies](/cookies). (traduction demandée)
