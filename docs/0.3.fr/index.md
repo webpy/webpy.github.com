@@ -23,8 +23,8 @@ Autre langages : [english](/docs/0.3) | ...
 * [Applications](/docs/0.3/apps/fr). Comment mapper des urls à du code python.
     * [Basic app](/docs/0.3/apps/basic/fr). Mapper des expressions régulières à des classes.
     * [Auto app](/docs/0.3/apps/auto/fr). Webpy suit les urls basées sur le nom des classes.
-    * [Subdir app](/docs/0.3/apps/subdir). Host multiple apps based on the sub-directory. (traduction demandée)
-    * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain. (traduction demandée)
+    * [Subdir app](/docs/0.3/apps/subdir). Host multiple apps based on the sub-directory. - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+    * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain. - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Modèles, gabarits](/docs/0.3/templetor.fr). Templetor, le système de gabarits de web.py.
 * [Formulaires](/docs/0.3/form.fr). Gérer les entrées des utilisateurs.
 * [Application processors](/docs/0.3/app_processors/fr). Executer du code avant chaque requête.
@@ -32,14 +32,14 @@ Autre langages : [english](/docs/0.3) | ...
 * Database
 * Testing
 
-## Mise à jour vers la version actuelle (traduction demandée)
+## Mise à jour vers la version actuelle
 
-* [Upgrade to 0.3 versions of web.py](/docs/0.3/upgrade)  
+* [Upgrade to 0.3 versions of web.py](/docs/0.3/upgrade)  - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 
-## API Documentation (traduction demandée)
+## API Documentation 
 
-* [API documentation](/docs/0.3/api)
+* [API documentation](/docs/0.3/api) - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Configuration recommandée
 
