@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Utiliser session avec reloader](/cookbook/session_with_reloader). - en cours
+
 
 # A faire
 
