@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Envoi de Mail en utilisant Gmail](/cookbook/sendmail_using_gmail).  - En cours
+---
 
 # A faire
 
