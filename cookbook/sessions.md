@@ -5,6 +5,8 @@ title: Sessions
 
 # Sessions
 
+Other languages: [français](/../cookbook/sessions/fr) | ...
+
 ### Problem
 
 How to use sessions in web.py.
