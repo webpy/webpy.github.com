@@ -51,7 +51,7 @@ La version actuelle 0.3 est la branche développement.
 * [Travailler avec les cookies](/cookies). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Authentification des utilisateurs](/userauth). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Authentification des utilisateurs avec base de données Postgresql](/userauthpgsql). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
-* [Session avec des sous-apps](/sessions_with_subapp). - En cours, voir [Todo](/docs/0.3.fr/todo)
+* [Utiliser les sessions avec les sous-applications](/sessions_with_subapp/fr). 
 
 
 ##Utils:
