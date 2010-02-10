@@ -9,7 +9,7 @@ Autre langages: [english](/../fastcgi-lighttpd) | ...
 
 ##Problème:
 
-Comment configurer lighttpd sous Debian GNU/Linux ?
+Comment configurer [lighttpd](http://www.lighttpd.net/) sous Debian GNU/Linux ?
 
 ##Solution:
 
@@ -22,7 +22,7 @@ Ce qui suit s'applique à la version 1.4.18 de lighttpd.*
 * <code>/path-to/webpy-app/code.py</code> est le chemin complet de votre **fichier python**
 
 
-Si vous n'êtes pas certain de savoir quelle version de lighttpd s'execute, tapez : <code>lighttpd -v</code> dans la console.
+Si vous n'êtes pas certain de savoir quelle version de [lighttpd](http://www.lighttpd.net/) s'execute, tapez : <code>lighttpd -v</code> dans la console.
 
 *Note: La version précédente de lighttpd organise les fichiers .conf différemment. Cependant, les mêmes principes s'appliquent aussi bien sur eux.*
 
