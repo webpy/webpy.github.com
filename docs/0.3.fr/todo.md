@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Utiliser session dans un gabarit](/cookbook/session_in_template). - en cours
+
 
 # A faire
 
