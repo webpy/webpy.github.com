@@ -5,6 +5,8 @@ title: Using session with reloader
 
 # Using session with reloader
 
+Other languages: [français](/../cookbook/session_with_reloader/fr) | ...
+
 # Problem
 
 There are some issues in using sessions when running the application in debug mode. Is there any work-around?
@@ -45,4 +47,3 @@ Here is a sample code which saves session in `web.config`.
 
     if __name__ == "__main__":
        app.run()
-
