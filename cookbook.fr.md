@@ -37,72 +37,72 @@ La version actuelle 0.3 est la branche développement.
 ##Avancé
 * [web.ctx](/ctx/fr). 
 * [Application processors, charger et décharger des hooks](/application_processors/fr). 
-* [Comment utiliser web.background](/background). (traduction demandée)
+* [Comment utiliser web.background](/background). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Personnaliser le message NotFound](/custom_notfound/fr). 
 * [Comment streamer de gros fichiers](/streaming_large_files/fr). 
 * [Contrôler les evènements sur le serveur intégré par défaut](/logging/fr). 
 * [Configurer le support SSL dans le serveur intégré](/ssl/fr).
-* [Run-time language switch](/runtime-language-switch). (traduction demandée)
+* [Run-time language switch](/runtime-language-switch). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Sessions et état des utilisateurs:
 * [Travailler avec les sessions](/sessions/fr). 
 * [Utiliser session avec reloader](/session_with_reloader/fr). 
-* [Utiliser session dans un gabarit](/session_in_template). (traduction demandée)
-* [Travailler avec les cookies](/cookies). (traduction demandée)
-* [Authentification des utilisateurs](/userauth). (traduction demandée)
-* [Authentification des utilisateurs avec base de données Postgresql](/userauthpgsql). (traduction demandée)
-* [Session avec des sous-apps](/sessions_with_subapp). (en cours)
+* [Utiliser session dans un gabarit](/session_in_template). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Travailler avec les cookies](/cookies). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Authentification des utilisateurs](/userauth). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Authentification des utilisateurs avec base de données Postgresql](/userauthpgsql). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Session avec des sous-apps](/sessions_with_subapp). - En cours, voir [Todo](/docs/0.3.fr/todo)
 
 
 ##Utils:
-* [Envoi de Mail](/sendmail). (traduction demandée)
-* [Envoi de Mail en utilisant Gmail](/sendmail_using_gmail). (traduction demandée)
-* [Webservice en utilisant soaplib + WSDL](/webservice). (traduction demandée)
+* [Envoi de Mail](/sendmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Envoi de Mail en utilisant Gmail](/sendmail_using_gmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Webservice en utilisant soaplib + WSDL](/webservice). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Modèles de mise en forme, gabarits de mise en page:
 * [Templetor: le système de gabarits de web.py](/docs/0.3/templetor.fr )
-* [Utiliser des gabarits sur le site](/layout_template). (traduction demandée)
-* [Alterner un style](/alternating_style). (traduction demandée) 
-* [Importer des fonctions dans les gabarits](/template_import). (traduction demandée)
-* [i18n support dans les fichiers gabarits](/i18n_support_in_template_file ). (traduction demandée)
-* [Utiliser le moteur de gabarit Mako dans webpy](/template_mako). (traduction demandée)
-* [Utiliser le moteur de gabarit Cheetah dans webpy](/template_cheetah). (traduction demandée)
-* [Utiliser le moteur de gabarit  Jinja2 dans webpy](/template_jinja). (traduction demandée)
-* [Comment utiliser les gabarits sur Google App Engine](/templates_on_gae). (traduction demandée)
+* [Utiliser des gabarits sur le site](/layout_template). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Alterner un style](/alternating_style). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Importer des fonctions dans les gabarits](/template_import). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [i18n support dans les fichiers gabarits](/i18n_support_in_template_file ). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Utiliser le moteur de gabarit Mako dans webpy](/template_mako). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Utiliser le moteur de gabarit Cheetah dans webpy](/template_cheetah). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Utiliser le moteur de gabarit  Jinja2 dans webpy](/template_jinja). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Comment utiliser les gabarits sur Google App Engine](/templates_on_gae). - traduction demandée, voir [Todo](/docs/0.3.fr/todo))
 
 ##Essais:
-* [Tester avec Paste et Nose](/testing_with_paste_and_nose). (traduction demandée)
-* [RESTful doctesting using an application's request method](/restful_doctesting_using_request). (traduction demandée)
+* [Tester avec Paste et Nose](/testing_with_paste_and_nose). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [RESTful doctesting using an application's request method](/restful_doctesting_using_request). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Entrées utilisateurs:
-* [Uploader un fichier](/fileupload). (traduction demandée)
-* [Stocker un fichier uploadé](/storeupload). (traduction demandée)
-* [Comment limiter la taille des fichiers uploadés](/limiting_upload_size). (traduction demandée)
-* [Accéder aux entrées utilisateurs par le biais de web.input](/input). (traduction demandée)
-* [Comment utiliser les formulaires](/forms). (traduction demandée)
-* [Rendu individuel des champs de formulaires](/form_fields). (traduction demandée)
+* [Uploader un fichier](/fileupload). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Stocker un fichier uploadé](/storeupload). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Comment limiter la taille des fichiers uploadés](/limiting_upload_size). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Accéder aux entrées utilisateurs par le biais de web.input](/input). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Comment utiliser les formulaires](/forms). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Rendu individuel des champs de formulaires](/form_fields). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Base de données:
-* [Multiples bases de données](/multidbs). (traduction demandée)
-* [Select: Récupérer les entrées d'une base de données](/select). (traduction demandée)
-* [Update: Mettre à jour les entrées d'une base de données](/update). (traduction demandée)
-* [Delete: Supprimer les entrées d'une base de données](/delete). (traduction demandée)
-* [Insert: Ajouter des entrées à une base de donnée](/insert).  (traduction demandée)
-* [Query: Base de données - Requêtes avancées](/query). (traduction demandée)
-* [Query: How to use database transactions](/transactions). (traduction demandée)
-* [Comment utiliser sqlalchemy](/sqlalchemy). (traduction demandée)
-* [Intégrer SQLite UDF (user-defined-functions) à la couche de base de données webpy](/sqlite-udf). (traduction demandée)
-* [Utiliser un dictionnaire comme clause where](/where_dict). (traduction demandée)
+* [Multiples bases de données](/multidbs). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Select: Récupérer les entrées d'une base de données](/select). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Update: Mettre à jour les entrées d'une base de données](/update). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Delete: Supprimer les entrées d'une base de données](/delete). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Insert: Ajouter des entrées à une base de donnée](/insert).  - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Query: Base de données - Requêtes avancées](/query). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Query: How to use database transactions](/transactions). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Comment utiliser sqlalchemy](/sqlalchemy). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Intégrer SQLite UDF (user-defined-functions) à la couche de base de données webpy](/sqlite-udf). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Utiliser un dictionnaire comme clause where](/where_dict). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 
 ##Déploiement:
-* [Déploiement Fastcgi au travers lighttpd](/fastcgi-lighttpd). (traduction demandée)
-* [Déploiement Fastcgi au travers Apache](/fastcgi-apache).  (traduction demandée)
-* [Déploiement CGI au travers Apache](/cgi-apache). (traduction demandée)
+* [Déploiement Fastcgi au travers lighttpd](/fastcgi-lighttpd). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Déploiement Fastcgi au travers Apache](/fastcgi-apache).  - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Déploiement CGI au travers Apache](/cgi-apache). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * Déploiement mod_python au travers Apache (requis)
-* [Déploiement mod_wsgi au travers Apache](/mod_wsgi-apache ). (traduction demandée)
-* [Déploiement mod_wsgi au travers Nginx](/mod_wsgi-nginx ). (traduction demandée)
-* [Déploiement Fastcgi au travers Nginx](/fastcgi-nginx). (traduction demandée)
+* [Déploiement mod_wsgi au travers Apache](/mod_wsgi-apache ). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Déploiement mod_wsgi au travers Nginx](/mod_wsgi-nginx ). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Déploiement Fastcgi au travers Nginx](/fastcgi-nginx). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Sous-domaines:
 * Sous-domaines et comment accéder au nom utilisateur (requis)
