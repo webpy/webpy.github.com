@@ -46,7 +46,7 @@ La version actuelle 0.3 est la branche développement.
 
 ##Sessions et état des utilisateurs:
 * [Travailler avec les sessions](/sessions/fr). 
-* [Utiliser session avec reloader](/session_with_reloader). (en cours)
+* [Utiliser session avec reloader](/session_with_reloader/fr). 
 * [Utiliser session dans un gabarit](/session_in_template). (traduction demandée)
 * [Travailler avec les cookies](/cookies). (traduction demandée)
 * [Authentification des utilisateurs](/userauth). (traduction demandée)
