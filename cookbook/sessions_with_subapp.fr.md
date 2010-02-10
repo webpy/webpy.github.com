@@ -11,11 +11,11 @@ Autre langages: [english](/../sessions_with_subapp) | ...
 
 *Cette solution est issue de ce [post](http://www.mail-archive.com/webpy@googlegroups.com/msg02557.html) de la mailing liste de web.py.*
 
-##Problem
+##Problème:
 
 Dans le comportement par défaut, les informations de session ne peuvent être partagées qu'au sein de l'application principale, même si vous «importez» la session depuis d'autres modules. Vous devez être en mesure d'accéder aux informations de session depuis une sous-application, mais comment?
 
-##Solution
+##Solution:
 
 Dans votre application principale (code.py par defaut), initialisez votre session de cette façon:
 
