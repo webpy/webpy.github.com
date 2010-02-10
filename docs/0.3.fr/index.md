@@ -44,3 +44,7 @@ Autre langages : [english](/docs/0.3) | ...
 ## Configuration recommandée
 
 * [Configuration](/recommended_setup/fr). Logiciels recommandés pour les serveurs en production.
+
+## Todo
+
+* [Todo](/docs/0.3.fr/todo). Liste des travaux en cours ou à faire, conçernant la traduction française.
