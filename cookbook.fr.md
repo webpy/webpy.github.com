@@ -56,7 +56,7 @@ La version actuelle 0.3 est la branche développement.
 
 ##Utils:
 * [Envoi de Mail](/sendmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
-* [Envoi de Mail en utilisant Gmail](/sendmail_using_gmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Envoi de Mail en utilisant Gmail](/sendmail_using_gmail). - En cours, voir [Todo](/docs/0.3.fr/todo)
 * [Webservice en utilisant soaplib + WSDL](/webservice). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Modèles de mise en forme, gabarits de mise en page:
