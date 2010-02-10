@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Session avec des sous-apps](/cookbook/sessions_with_subapp). - en cours 
+
 
 # A faire
 
