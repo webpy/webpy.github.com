@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-
+* [Travailler avec les cookies](/cookbook/cookies). - En cours
 ---
 
 # A faire
@@ -56,7 +56,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 ###Sessions et état des utilisateurs:
 
-* [Travailler avec les cookies](/cookbook/cookies). - traduction demandée
+
 * [Authentification des utilisateurs](/cookbook/userauth). - traduction demandée
 * [Authentification des utilisateurs avec base de données Postgresql](/cookbook/userauthpgsql). - traduction demandée
 
