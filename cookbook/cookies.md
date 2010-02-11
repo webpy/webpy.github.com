@@ -5,6 +5,8 @@ title: cookies
 
 # cookies
 
+Other languages: [français](/../cookbook/cookies/fr) | ...
+
 ##Problem
 You want to set and retrieve cookies for a user browsing the site.
 
