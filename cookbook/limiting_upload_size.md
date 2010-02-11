@@ -5,6 +5,8 @@ title: How to put a limit on upload size
 
 # How to put a limit on upload size
 
+Other languages: [français](/../cookbook/limiting_upload_size/fr) | ...
+
 ## Problem
 
 How to put a limit on upload size
