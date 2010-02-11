@@ -5,6 +5,8 @@ title: File Upload Recipe
 
 # File Upload Recipe
 
+Other languages: [français](/../cookbook/fileupload/fr) | ...
+
 ## Problem
 
 File uploads can be a little tricky if you're not familiar with form uploads, or CGI in general.
