@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Accéder aux entrées utilisateurs par le biais de web.input](/cookbook/input). - en cours
+
 
 ---
 
