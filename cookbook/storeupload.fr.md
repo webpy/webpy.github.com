@@ -48,6 +48,6 @@ Vous voulez uploader un fichier et le stocker dans un dossier prédéfini.
 
 Deux petites choses à surveiller:
 
-* Voir [fileupload/fr](/fileupload/fr).
+* Voir [Uploader un fichier](/../fileupload/fr).
 * Ne pas mettre le fichier dans un dossier qui est exécutable sans vérification de l'extension et du type de fichier.
 * En fait, nous avons besoin d'ouvrir l'objet fichier 'fout' en mode "wb" (sous Windows) *mode d'écriture binaire, sinon l'image uploadée est cassée.*
