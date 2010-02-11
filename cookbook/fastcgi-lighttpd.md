@@ -5,11 +5,11 @@ title: Webpy + LightTTPD with FastCGi
 
 # Webpy + LightTTPD with FastCGi
 
-If you have problems with this recipe read this thread:
+Other languages: [français](/../cookbook/fastcgi-lighttpd/fr) | ...
 
-http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
+*If you have problems with this recipe read this [thread](http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html)*
 
-The following applies on lighttpd version 1.4.18
+*The following applies on lighttpd version 1.4.18*
 
 ##Note:  
 * You may replace <code>code.py</code> with your own file name.
@@ -53,7 +53,7 @@ For web py you should enable mod_fastcgi and mod_rewrite, thus run: <code>/usr/s
 * <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 * <code>code.py</code>
 
-<code>/etc/lighttpd/lighttpd.conf</code>
+###<code>/etc/lighttpd/lighttpd.conf</code>
 
 <pre>
 server.modules              = (
@@ -71,7 +71,7 @@ In my case I used postgresql and therefore runs lighttpd as postgres in order to
 server.username = "postgres"
 </pre>
 
-<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+###<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 
 <pre>
 server.modules   += ( "mod_fastcgi" )
@@ -95,7 +95,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-<code>/code.py</code>  
+###<code>/code.py</code>  
 At the top of the file add:
 
 <pre>
