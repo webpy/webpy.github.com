@@ -5,6 +5,8 @@ title: web.input
 
 # web.input
 
+Other languages: [français](/../cookbook/input/fr) | ...
+
 ##web.input
 
 ### Problem
@@ -38,4 +40,3 @@ You need to let web.input know to expect multiple inputs, or it will clobber all
         def GET(self):
             user_data = web.input(id=[])
             return "<h1>" + ",".join(user_data.id) + "</h1>"
-
