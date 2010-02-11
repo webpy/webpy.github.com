@@ -38,7 +38,7 @@ Data Found in `ctx`
 *   `environ` a.k.a. `env` &ndash; a dictionary containing the standard [WSGI environment variables](http://www.python.org/dev/peps/pep-0333/#environ-variables)
 *   `home` &ndash; the base path for the application, including any parts "consumed" by outer applications *http://example.org/admin*
 *   `homedomain` &ndash; ? (appears to be protocol + host) *http://example.org*
-*   `homepath` &ndash; The part of the path requested by the user which was trimmed off the current app. That is homepath + path = the path actually requested in HTTP by the user. E.g. */admin*
+*   `homepath` &ndash; The part of the path requested by the user which was trimmed off the current app. That is homepath + path = the path actually requested in HTTP by the user. E.g. */admin* This seems to be derived during startup from the environment variable REAL_SCRIPT_NAME. It affects what web.url() will prepend to supplied urls. This in turn affects where web.seeother() will go, which might interact badly with your url rewriting scheme (e.g. mod_rewrite)
 *   `host` &ndash; the hostname (domain) and (if not default) the port requested by the user. E.g. *example.org*, *example.org:8080*
 *   `ip` &ndash; the IP address of the user. E.g. *xxx.xxx.xxx.xxx*
 *   `method` &ndash; the HTTP method used. E.g. *GET*
