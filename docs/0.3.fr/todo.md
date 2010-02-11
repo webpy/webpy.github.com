@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Comment limiter la taille des fichiers uploadés](/cookbook/limiting_upload_size). En cours
+
 
 ---
 
