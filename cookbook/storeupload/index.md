@@ -5,6 +5,8 @@ title: Store an uploaded file
 
 # Store an uploaded file
 
+Other languages: [français](/../cookbook/storeupload/fr) | ...
+
 ## Problem
 
 You want to upload a file and store it in a predefined folder.
