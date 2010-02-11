@@ -21,6 +21,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 # En cours
 
 * [Travailler avec les cookies](/cookbook/cookies). - En cours
+
 ---
 
 # A faire
