@@ -75,7 +75,7 @@ La version actuelle 0.3 est la branche développement.
 * [RESTful doctesting using an application's request method](/restful_doctesting_using_request). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Entrées utilisateurs:
-* [Uploader un fichier](/fileupload). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
+* [Uploader un fichier](/fileupload). - En cours, voir [Todo](/docs/0.3.fr/todo)
 * [Stocker un fichier uploadé](/storeupload). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Comment limiter la taille des fichiers uploadés](/limiting_upload_size). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Accéder aux entrées utilisateurs par le biais de web.input](/input/fr). 
