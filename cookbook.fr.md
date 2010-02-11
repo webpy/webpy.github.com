@@ -48,7 +48,7 @@ La version actuelle 0.3 est la branche développement.
 * [Travailler avec les sessions](/sessions/fr). 
 * [Utiliser session avec reloader](/session_with_reloader/fr). 
 * [Utiliser session dans les gabarits](/session_in_template/fr). 
-* [Travailler avec les cookies](/cookies). - en cours, voir [Todo](/docs/0.3.fr/todo)
+* [Travailler avec les cookies](/cookies/fr). 
 * [Authentification des utilisateurs](/userauth). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Authentification des utilisateurs avec base de données Postgresql](/userauthpgsql). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Utiliser les sessions avec les sous-applications](/sessions_with_subapp/fr). 
