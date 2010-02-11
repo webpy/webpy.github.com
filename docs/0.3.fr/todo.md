@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-
+* [Comment utiliser les formulaires](/cookbook/forms). - En cours
 
 ---
 
@@ -85,7 +85,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 ###Entrées utilisateurs:
 
-* [Comment utiliser les formulaires](/cookbook/forms). - traduction demandée
+
 * [Rendu individuel des champs de formulaires](/cookbook/form_fields). - traduction demandée
 
 ###Base de données:
