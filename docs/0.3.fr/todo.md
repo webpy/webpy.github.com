@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-
+* [Accéder aux entrées utilisateurs par le biais de web.input](/cookbook/input). - en cours
 
 ---
 
@@ -88,7 +88,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 * [Uploader un fichier](/cookbook/fileupload). - traduction demandée
 * [Stocker un fichier uploadé](/cookbook/storeupload). - traduction demandée
 * [Comment limiter la taille des fichiers uploadés](/cookbook/limiting_upload_size). - traduction demandée
-* [Accéder aux entrées utilisateurs par le biais de web.input](/cookbook/input). - traduction demandée
 * [Comment utiliser les formulaires](/cookbook/forms). - traduction demandée
 * [Rendu individuel des champs de formulaires](/cookbook/form_fields). - traduction demandée
 
