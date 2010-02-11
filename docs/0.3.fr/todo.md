@@ -20,7 +20,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-* [Uploader un fichier](/cookbook/fileupload). - En cours
+
 
 ---
 
