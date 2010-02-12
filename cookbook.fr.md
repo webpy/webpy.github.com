@@ -79,7 +79,7 @@ La version actuelle 0.3 est la branche développement.
 * [Stocker un fichier uploadé](/storeupload/fr). 
 * [Comment limiter la taille des fichiers uploadés](/limiting_upload_size/fr). 
 * [Accéder aux entrées utilisateurs par le biais de web.input](/input/fr). 
-* [Comment utiliser les formulaires](/forms). - En cours, voir [Todo](/docs/0.3.fr/todo)
+* [Comment utiliser les formulaires](/forms/fr). 
 * [Rendu individuel des champs de formulaires](/form_fields). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ##Base de données:
