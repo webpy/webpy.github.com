@@ -55,7 +55,7 @@ Voici un exemple de formulaire d'enregistrement d'un nouvel utilisateur.
             else:
                 # do whatever is required for registration
 
-Et le gabarit doit reseembler à ca:
+Et le gabarit doit ressembler à ca:
 
     $def with(form)
 
