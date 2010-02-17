@@ -7,19 +7,19 @@ title: 安装
 
 ## Summary
 
-* <a href="#install">Install</a>
-* <a href="#dev">Development</a>
-* <a href="#prod">Production</a>
+* <a href="#install">安装</a>
+* <a href="#dev">开发</a>
+* <a href="#prod">产品</a>
 	* <a href="#lighttpd">LightTPD</a>
-		* <a href="#lighttpdfastcgi">.. with FastCGI</a>
+		* <a href="#lighttpdfastcgi">.. 使用 FastCGI</a>
 	* <a href="#apache">Apache</a>
 		* <a href="#apachecgi">.. with CGI</a>
 		* <a href="#apachecgihtaccess"> .. with CGI using .htaccess</a>
-		* <a href="#apachefastcgi">.. with FastCGI</a>
-		* <a href="#apachescgi">.. with SCGI</a>
-		* <a href="#apachemodpython">.. with mod_python</a>
-		* <a href="#apachemodwsgi">.. with mod_wsgi</a>
-		* <a href="#apachemodrewrite">.. with mod_rewrite</a>
+		* <a href="#apachefastcgi">.. 使用 FastCGI</a>
+		* <a href="#apachescgi">.. 使用 SCGI</a>
+		* <a href="#apachemodpython">.. 使用 mod_python</a>
+		* <a href="#apachemodwsgi">.. 使用 mod_wsgi</a>
+		* <a href="#apachemodrewrite">.. 使用 mod_rewrite</a>
 
 <a name="install"></a>
 ## 安装
