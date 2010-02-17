@@ -13,8 +13,8 @@ title: 安装
 	* <a href="#lighttpd">LightTPD</a>
 		* <a href="#lighttpdfastcgi">.. 使用 FastCGI</a>
 	* <a href="#apache">Apache</a>
-		* <a href="#apachecgi">.. with CGI</a>
-		* <a href="#apachecgihtaccess"> .. with CGI using .htaccess</a>
+		* <a href="#apachecgi">.. 使用 CGI</a>
+		* <a href="#apachecgihtaccess"> .. 使用 CGI using .htaccess</a>
 		* <a href="#apachefastcgi">.. 使用 FastCGI</a>
 		* <a href="#apachescgi">.. 使用 SCGI</a>
 		* <a href="#apachemodpython">.. 使用 mod_python</a>
