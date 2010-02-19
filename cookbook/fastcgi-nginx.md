@@ -51,11 +51,12 @@ Older versions may work, but aren't tested.
 
 To serve static files add this:
 
-	location /static/ {
-	    if (-f $request_filename) {
-		rewrite ^/static/(.*)$  /static/$1 break;
-	    }
-	}
+        location /static/ {
+            root /path/to/www;
+            if (-f $request_filename) {
+               rewrite ^/static/(.*)$  /static/$1 break;
+            }
+        }
 
 __Note:__ the address and port may be different.
 
