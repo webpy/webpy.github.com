@@ -21,6 +21,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 # En cours
 
 
+* [Authentification des utilisateurs](/cookbook/userauth). - en cours
 
 ---
 
@@ -58,7 +59,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 ###Sessions et état des utilisateurs:
 
 
-* [Authentification des utilisateurs](/cookbook/userauth). - traduction demandée
 * [Authentification des utilisateurs avec base de données Postgresql](/cookbook/userauthpgsql). - traduction demandée
 
 
