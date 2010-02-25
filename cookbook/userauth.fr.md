@@ -16,7 +16,7 @@ Vous souhaitez mettre en place un système pour authentifier les utilisateurs.
 
 ##Solution
 
-Un système d'authentification des utilisateurs est constitué de plusieurs éléments. L'ajout d'utilisateurs, la connexion des utilisateurs, leurs déconnexion, et vérifier s'ils sont déjà enregistrés. 
+Un système d'authentification des utilisateurs est constitué de plusieurs éléments. L'ajout d'utilisateurs, la connexion des utilisateurs, leurs déconnexion, et vérifier s'ils sont déjà enregistrés. Cela nécessite aussi une base de données. Dans cet exemple nous allons utiliser MD5 et SQLite.
 
 ##
     import hashlib
