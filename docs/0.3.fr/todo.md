@@ -21,7 +21,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 # En cours
 
 
-* [Utiliser des gabarits sur le site](/cookbook/layout_template). - en cours
 
 ---
 
