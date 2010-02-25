@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Authentification d'utilisateurs
+title: Authentification des utilisateurs
 ---
 
-# Authentification d'utilisateurs
+# Authentification des utilisateurs
 
 Autres langages : [english](/../userauth) | ...
 
