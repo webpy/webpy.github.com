@@ -1,9 +1,9 @@
 ---
 layout: default
-title: sqlalchemy 
+title: sqlalchemy
 ---
 
-# sqlalchemy 
+# sqlalchemy
 
 ## Problem
 
@@ -36,7 +36,7 @@ create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy
         except:
             web.ctx.orm.rollback()
             raise
-        finally:
+        else:
             web.ctx.orm.commit()
 
 
