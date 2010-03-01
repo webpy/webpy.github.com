@@ -86,7 +86,7 @@ title: Web.py Cookbook 简体中文版
 * [Insert: 新增数据](/Insert/zh-cn)
 * [Query: Advanced database queries (未译)](/query/zh-cn)
 * [How to use database transactions (未译)](/transactions/zh-cn)
-* [Using sqlalchemy (未译)](/sqlalchemy/zh-cn)
+* [使用 sqlalchemy](/sqlalchemy/zh-cn)
 * [Integrating SQLite UDF (user-defined-functions) with webpy database layer (未译)](/sqlite-udf/zh-cn)
 * [Using a dictionary as where clause (未译)](/where_dict/zh-cn)
 
