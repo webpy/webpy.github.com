@@ -5,13 +5,14 @@ title: sqlalchemy
 
 # sqlalchemy
 
-## Problem
+## 问题
 
-How to use sqlalchemy with web.py
+如何在web.py中使用sqlalchemy
 
-## Solution
+## 方案
 
-create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy.org/docs/05/session.html#unitofwork_contextual)
+创建一个钩子并使用sqlalchemy的scoped session
+(http://www.sqlalchemy.org/docs/05/session.html#unitofwork_contextual)
 
 
     import string
@@ -36,7 +37,7 @@ create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy
         except:
             web.ctx.orm.rollback()
             raise
-        finally:
+        else:
             web.ctx.orm.commit()
 
 
@@ -102,5 +103,4 @@ create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy
         metadata.create_all(engine)
 
 
-
-before running the application. run `python models.py` to setup the sqlite database.
+在跑程序之前,运行'python models.py'来初始化一次数据库.
