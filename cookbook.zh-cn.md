@@ -60,10 +60,10 @@ title: Web.py Cookbook 简体中文版
 * [Using Site Layout Templates (未译)](/layout_template/zh-cn)
 * [Alternating Style (未译)](/alternating_style/zh-cn)
 * [Import functions into templates (未译)](/template_import/zh-cn)
-* [i18n support in template file (未译)](/i18n_support_in_template_file/zh-cn)
+* [模板文件中的i18n支持](/i18n_support_in_template_file/zh-cn)
 * [Use Mako template engine in webpy ](/template_mako/zh-cn)
 * [Use Cheetah template engine in webpy (未译)](/template_cheetah/zh-cn)
-* [Use Jinja2 template engine in webpy (未译)](/template_jinja/zh-cn)
+* [在web.py中使用Jinja2模板引擎](/template_jinja/zh-cn)
 * [How to use templates on Google App Engine (未译)](/templates_on_gae/zh-cn)
 
 ##Testing:
