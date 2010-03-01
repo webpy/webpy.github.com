@@ -5,12 +5,13 @@ title: Use Jinja2 template engine in webpy
 
 # Use Jinja2 template engine in webpy
 
-### Problem
-How to use Jinja2 (http://jinja.pocoo.org/2/) template engine in webpy?
+### 问题
 
-### Solution
+如何在web.py中使用Jinja2 (http://jinja.pocoo.org/2/) 模板引擎?
 
-You need to install both Jinja2 and webpy(0.3) first, and then try out the following code snippet:
+### 方案
+
+首先需要安装Jinja2和webpy(0.3), 然后使用下面的代码做测试:
 
     import web
     from web.contrib.template import render_jinja
@@ -22,11 +23,11 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
     app = web.application(urls, globals())
     
     render = render_jinja(
-            'templates',   # Set template directory.
-            encoding = 'utf-8',                         # Encoding.
+            'templates',   # 设置模板路径.
+            encoding = 'utf-8', # 编码.
         )
 
-    # Add/override some global functions.
+    #添加或者修改一些全局方法.
     #render._lookup.globals.update(
     #       var=newvar,
     #       var2=newvar2,
@@ -39,6 +40,6 @@ You need to install both Jinja2 and webpy(0.3) first, and then try out the follo
     if __name__ == "__main__":
         app.run()
 
-### Template file: templates/hello.html
+### 模板文件: templates/hello.html
 
     Hello, {{ name }}.
