@@ -63,4 +63,4 @@ title: FAQ
 
 99. **我凑巧遇到web.py的一个bug。我需要提交到何处？**
 
-	青岛 [webpy launchpad site](https://launchpad.net/webpy), 登录(或注册如果没有帐号) 并点击 "report a bug"。
+	请到 [webpy launchpad site](https://launchpad.net/webpy), 登录(如果没有帐号请注册) 并点击 "report a bug"。
