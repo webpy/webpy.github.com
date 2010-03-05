@@ -5,6 +5,8 @@ title: web.py 0.2 tutorial
 
 # web.py 0.2 tutorial
 
+{{OldVersionWarning()}}
+
 ## Starting
 
 So you know Python and want to make a website. web.py provides the code to make that easy.
