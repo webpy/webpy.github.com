@@ -36,7 +36,7 @@ create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy
         except:
             web.ctx.orm.rollback()
             raise
-        else:
+        finally:
             web.ctx.orm.commit()
 
 
