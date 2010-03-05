@@ -5,7 +5,7 @@ title: web.py 0.2 tutorial
 
 # web.py 0.2 tutorial
 
-{{OldVersionWarning()}}
+{{OldVersionWarning("/tutorial3.en")}}
 
 ## Starting
 
