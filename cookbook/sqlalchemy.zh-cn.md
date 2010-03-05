@@ -37,7 +37,7 @@ title: sqlalchemy
         except:
             web.ctx.orm.rollback()
             raise
-        else:
+        finally:
             web.ctx.orm.commit()
 
 
