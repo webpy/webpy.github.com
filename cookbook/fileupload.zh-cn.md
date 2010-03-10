@@ -5,11 +5,11 @@ title: File Upload Recipe
 
 # File Upload Recipe
 
-## Problem
+## 问题
 
-File uploads can be a little tricky if you're not familiar with form uploads, or CGI in general.
+如果你不是很了解表单上传或者CGI的话, 你会觉得文件上传有点奇特.
 
-## Solution
+## 解决方法
 
     import web
     
@@ -27,9 +27,9 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
     
         def POST(self):
             x = web.input(myfile={})
-            web.debug(x['myfile'].filename) # This is the filename
-            web.debug(x['myfile'].value) # This is the file contents
-            web.debug(x['myfile'].file.read()) # Or use a file(-like) object
+            web.debug(x['myfile'].filename) # 这里是文件名
+            web.debug(x['myfile'].value) # 这里是文件内容
+            web.debug(x['myfile'].file.read()) # 或者使用一个文件对象
             raise web.seeother('/upload')
 
 
@@ -37,9 +37,9 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
        app = web.application(urls, globals()) 
        app.run()
 
-## Hang ups
+## 注意
 
-A couple of things to watch out for:
+需要注意以下内容:
 
-* The form needs an attribute enctype="multipart/form-data", or this won't work correctly.
-* In the webpy code, a default value is needed (the myfile={} part) if you want it to be imported as a CGI FieldStorage object.  If you don't specify the default value, the file will be passed as a string -- this works, but you lose the filename attribute.
+* 表单需要一个enctype="multipart/form-data"的属性, 否则不会正常工作.
+* 在webpy的代码里, 如果你需要默认值的话, myfile就需要默认值了(myfile={}), 文件会以字符串的形式传输 -- 这确实可以工作, 但是你会丢失文件的名称
