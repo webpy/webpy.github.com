@@ -5,7 +5,9 @@ title: RESTful doctesting using app.request
 
 # RESTful doctesting using app.request
 
-#!/usr/bin/env python
+RESTful doctesting using app.request
+
+    #!/usr/bin/env python
     
     """
     RESTful web.py testing
@@ -42,7 +44,7 @@ title: RESTful doctesting using app.request
     )
     app = web.application(paths, globals())
     
-    dbname = {True: 'test', False: 'production'}[sys.argv[-1] == '--test']
+    dbname = 'test' if sys.argv[-1] == '--test' else 'production'
     db = {} # db = web.database(..., db='math_{0}'.format(dbname))
     
     
