@@ -71,7 +71,7 @@ title: Web.py Cookbook 简体中文版
 * [RESTful doctesting using an application's request method (未译)](/restful_doctesting_using_request/zh-cn)
 
 ##User Input:
-* [File Upload (未译)](/fileupload/zh-cn)
+* [文件上传](/fileupload/zh-cn)
 * [Store an uploaded file (未译)](/storeupload/zh-cn)
 * [How to put a limit of size of uploaded files (未译)](/limiting_upload_size/zh-cn)
 * [通过 web.input 接受用户输入](/input/zh-cn)
