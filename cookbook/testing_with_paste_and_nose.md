@@ -18,8 +18,8 @@ You want to test your web.py application.
     class TestCode():
         def test_index(self):
             middleware = []
-            app = TestApp(app.wsgifunc(*middleware))
-            r = app.get('/')
+            testApp = TestApp(app.wsgifunc(*middleware))
+            r = testApp.get('/')
             assert_equal(r.status, 200)
             r.mustcontain('Hello, world!')
 
@@ -42,7 +42,7 @@ Most of the code example above should be fairly self-explanatory. From our main 
 
 To set up the test, we pass its wsgifunc() to Paste's TestApp, as you have already seen in the example.
 
-    app = TestApp(app.wsgifunc(*middleware))
+    testApp = TestApp(app.wsgifunc(*middleware))
 
 assert_equal() is one of the methods provided by nose's utils, and works just like unittest's assertEqual().
 
