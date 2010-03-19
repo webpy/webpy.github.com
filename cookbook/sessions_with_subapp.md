@@ -20,7 +20,7 @@ In your app.py (or main.py) initialize your session like this:
     session = web.session.Session(app, web.session.DiskStore('sessions'),
     initializer = {'test': 'woot', 'foo':''})
 
-.. and create a processor via web.loadhook
+.. and create a processor via web.loadhook:
 
     def session_hook():
         web.ctx.session = session
@@ -31,3 +31,16 @@ In your app.py (or main.py) initialize your session like this:
 
     print web.ctx.session.test
     web.ctx.session.foo = 'bar'
+
+.. if you want to make sessions avaible in templates you should change session.hook function like this:
+
+    def session_hook():
+        web.ctx.session = session
+        web.template.Template.globals['session'] = session
+
+.. and now you can write in template something like this:
+
+    $session.get('logged_in', ''):
+        <p>You are $session.username</p>
+    $else:
+        <p>You are not logged in</p>
