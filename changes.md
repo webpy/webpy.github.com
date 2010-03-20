@@ -5,6 +5,19 @@ title: Change log
 
 # Change log
 
+** 2010-03-20: web.py 0.34**
+
+* fix: boolen test works even for sqlite results (tx Emyr Thomas for the idea)
+* fix issue with loop.xx variables in templetor (Bug#476708)
+* hide unwanted tracebacks in debugerror
+* display correct template line numbers in debugerror
+* new utilities: counter, safeiter, safewrite, requeue, restack (by Aaron Swartz)
+* various form.py fixes and improvements
+* automatically escape % characters in the db query (Bug#516516)
+* fix non-deterministic template order (Bug#490209)
+* attachment support for web.sendmail (tx gregglind)
+* template.py optimizations and extension support
+
 **2009-10-28: web.py 0.33**
 
 * form.Button takes optional argument `html`
@@ -270,6 +283,7 @@ Patrick Swieskowski)
 
 * Fix bug with CGI usage (tx Eddie Sowden for the prod).
 
+
 **2006-01-14: 0.122**
 
 * Allow DELETEs from `web.query` (tx Joost Molenaar for the prod).
@@ -322,6 +336,5 @@ Patrick Swieskowski)
 * Fixed bug in `strips()`. (tx Michael Josephson)
 
 **2006-01-03: 0.11**
-**2006-01-01: [meilleurs tournois de poker en ligne avec poker770] (http://www.destination-casino.com/modules/news/article.php?storyid=13)
 
 * First public version.
