@@ -30,9 +30,9 @@ Other languages : [français](/fr) | ...
 
 ## Get Started
 
-web.py 0.33 was released on 2009-10-28: [web.py-0.33.tar.gz][16]
+web.py 0.34 was released on 2010-03-20: [web.py-0.34.tar.gz][16]
 
-   [16]: /static/web.py-0.33.tar.gz
+   [16]: /static/web.py-0.34.tar.gz
 
 To always have the latest version of web.py, run:
     
@@ -229,8 +229,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [related projects](/related)
 
 * [tricks](/tricks)
-
-* [best essays](http://www.bestessays.ca/)
 
 
 
