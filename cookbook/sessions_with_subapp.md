@@ -32,7 +32,7 @@ In your app.py (or main.py) initialize your session like this:
     print web.ctx.session.test
     web.ctx.session.foo = 'bar'
 
-.. if you want to make sessions avaible in templates you should change session.hook function like this:
+.. if you want to make sessions avaible in templates you should change session_hook function like this:
 
     def session_hook():
         web.ctx.session = session
