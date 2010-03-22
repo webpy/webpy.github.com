@@ -68,7 +68,7 @@ Create locale dir and use pygettext.py which shipped within Python-2.6 (in direc
 <pre>
 shell> cd /path/to/proj/
 shell> mkdir -p i18n/en_US/LC_MESSAGES/
-shell> python /path/to/pygettext.py -a -v -d messages -o i18n/messages.po *.py templates/*.html
+shell> python /path/to/pygettext.py -a -v -d messages -o i18n/messages.po \*.py templates/\*.html
 Working on code.py
 Working on templates/hello.html
 </pre>
