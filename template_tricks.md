@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Template tricks
+title: template tricks
 ---
 
-# Template tricks
+# template tricks
 
 ### Testing template rendering
 
@@ -50,8 +50,8 @@ you forget the space, you'll get this error from template.py:
 
         'str' object is not callable
 
-1. Alternatively if you're only using the $ functions a few times, you can just add a &#92; before the $ and the templator will render it correctly:
+1. Alternatively if you're only using the $ functions a few times, you can just add a $; before the $ and the templator will render it correctly:
 
-        myElement = \$('elementID');
+        myElement = $$('elementID');
 
 ---
