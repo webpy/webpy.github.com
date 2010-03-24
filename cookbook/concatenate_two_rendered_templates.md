@@ -3,14 +3,14 @@ layout: default
 title: 
 ---
 
-* Problem:
+### Problem:
 
 How to concatenate two rendered templates?
 
-* Solution:
+### Solution:
 
-    render = web.template.render('templates') 
-    
+    render = web.template.render('templates')
+
     def GET(): 
         article = render.article() 
         comments = render.comments() 
