@@ -1,7 +1,9 @@
 ---
 layout: default
-title: 
+title: How to concatenate two rendered templates?
 ---
+
+# How to concatenate two rendered templates?
 
 ### Problem:
 
