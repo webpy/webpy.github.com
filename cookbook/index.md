@@ -34,7 +34,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 
 
 ##Advanced
-* [web.ctx](/cookbook/ctx)
+* [Contextual and Environment variables - web.ctx](/cookbook/ctx)
 * [Application processors, loadhooks and unloadhooks](/cookbook/application_processors)
 * [How to use web.background](/cookbook/background)
 * [Custom NotFound message](/cookbook/custom_notfound)
@@ -68,6 +68,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Use Cheetah template engine in webpy](/cookbook/template_cheetah)
 * [Use Jinja2 template engine in webpy](/cookbook/template_jinja)
 * [How to use templates on Google App Engine](/cookbook/templates_on_gae)
+* [Concatenate two rendered templates](/cookbook/concatenate_two_rendered_templates)
 
 ##Testing:
 * [Testing with Paste and Nose](/cookbook/testing_with_paste_and_nose)
