@@ -20,7 +20,12 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-
+* [API documentation](/docs/0.3/api) - En cours...
+* [Select: Récupérer les entrées d'une base de données](/cookbook/select). - En cours...
+* [Update: Mettre à jour les entrées d'une base de données](/cookbook/update).  - En cours...
+* [Delete: Supprimer les entrées d'une base de données](/cookbook/delete). - En cours...
+* [Insert: Ajouter des entrées à une base de donnée](/cookbook/insert).  - En cours...
+* [Query: Base de données - Requêtes avancées](/cookbook/query). - En cours...
 
 ---
 
@@ -44,7 +49,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 ### API Documentation
 
-* [API documentation](/docs/0.3/api) - traduction demandée
+
 
 
 ## Cookbook
@@ -90,11 +95,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 ###Base de données:
 
 * [Multiples bases de données](/cookbook/multidbs). - traduction demandée
-* [Select: Récupérer les entrées d'une base de données](/cookbook/select). - traduction demandée
-* [Update: Mettre à jour les entrées d'une base de données](/cookbook/update).  - traduction demandée
-* [Delete: Supprimer les entrées d'une base de données](/cookbook/delete). - traduction demandée
-* [Insert: Ajouter des entrées à une base de donnée](/cookbook/insert).  - traduction demandée
-* [Query: Base de données - Requêtes avancées](/cookbook/query). - traduction demandée
+
 * [Query: How to use database transactions](/cookbook/transactions). - traduction demandée
 * [Comment utiliser sqlalchemy](/cookbook/sqlalchemy). - traduction demandée
 * [Intégrer SQLite UDF (user-defined-functions) à la couche de base de données webpy](/cookbook/sqlite-udf). - traduction demandée
