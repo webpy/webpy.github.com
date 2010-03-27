@@ -56,7 +56,7 @@ To install web.py on  [mac os x](/install_macosx). Web.py 0.1 only...
 <a name="dev"></a>
 ## Development
 
-web.py comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.org/tutorial2).  When you have an application written, put your code into `code.py` and start the server like this:
+web.py comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.org/tutorial).  When you have an application written, put your code into `code.py` and start the server like this:
 
      python code.py
 
