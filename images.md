@@ -31,6 +31,6 @@ Now create the class that will handle them:
 
             if name in os.listdir('images'):  # Security
                 web.header("Content-Type", cType[ext]) # Set the Header
-                print open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
+                return open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
             else:
-                web.notfound()
+                raise web.notfound()
