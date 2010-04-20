@@ -13,14 +13,14 @@ How to use forms.
 
 ## Solution
 
-The `web.form` module provides support for creating, validating and rendering forms.
+The `web.form` module provides support for creating, validating, and rendering forms.
 This module contains a `Form` class and classes for various inputs like `Textbox`, `Password` etc.
 
-Each input can take a list of validators are arguments and which are validated against the input when `form.validates()` is called.
+Each input can take a list of validators as arguments which are validated against the input when `form.validates()` is called.
 
-The `Form` class can also takes additional keyword argument `validators` to validate the form using complete input.
+The `Form` class can take additional keyword argument `validators` to validate the form using complete input.
 
-Here is an example of a new user registration form.
+Here is an example of a new user registration form:
 
     import web
     from web import form
