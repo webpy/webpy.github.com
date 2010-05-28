@@ -8,7 +8,6 @@ title: Install guide
 Other languages : [español](/install/es) | [Japan 日本語 ](/install/ja) | [chinese 简体中文 ](/install/zh-cn) | [italiano](/install/it) | [français](/install/fr)
 
 ## Summary
-
 * <a href="#install">Install</a>
 	* <a href="#macosx">.. on MacOS X</a>
 * <a href="#dev">Development</a>
@@ -139,7 +138,7 @@ Add this to your `.htaccess`:
     Options +ExecCGI
     AddHandler cgi-script .py
 
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message [write my essay](http://custom-essay-writing-service.org/faq.php) (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
 
 Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
     
@@ -174,9 +173,9 @@ Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py s
     
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     
-and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
+and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work as [custom writing company](http://essaywritingservices.org/custom-essay-writing.php) without having to enter `code.py`, enable mod_rewrite rules (see below).
 
-[Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
+[Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html). [pool cover] (http://www.cheappoolproducts.com/Pool~Covers~Accessories_50~supplies.html)
 
 
 <a name="apachescgi"></a>
