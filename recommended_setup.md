@@ -44,7 +44,7 @@ For high traffic sites, connection pooling allows Webpy to keep multiple databas
 <a name="template"></a>
 ##Templates:
 
-Webpy has its own template system which allows users to let untrusted users write templates, and use python-like syntax within templates.
+Webpy has its own template system which allows users to let untrusted users write templates using this, and use python-like syntax within templates.
 
 *  template.py [built-in] [(doc)](/docs/0.3/templetor)
 
