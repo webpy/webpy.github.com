@@ -79,7 +79,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Store an uploaded file](/cookbook/storeupload)
 * [How to put a limit of size of uploaded files](/cookbook/limiting_upload_size)
 * [Accessing user input through web.input](/cookbook/input)
-* [How to use forms](/cookbook/forms)
+* [How to use forms](/cookbook/forms) 
 * [Render individual form fields](/cookbook/form_fields)
 
 ##Database:
@@ -90,7 +90,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Insert: Adding entries to a database](/cookbook/insert) 
 * [Query: Advanced database queries](/cookbook/query)
 * [How to use database transactions](/cookbook/transactions)
-* [Using sqlalchemy](/cookbook/sqlalchemy)
+* [Using sqlalchemy](/cookbook/sqlalchemy) 
 * [Integrating SQLite UDF (user-defined-functions) with webpy database layer](/cookbook/sqlite-udf)
 * [Using a dictionary as where clause](/cookbook/where_dict)
 
