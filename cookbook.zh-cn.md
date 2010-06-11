@@ -72,7 +72,7 @@ title: Web.py Cookbook 简体中文版
 
 ##User Input:
 * [文件上传](/fileupload/zh-cn)
-* [Store an uploaded file (未译)](/storeupload/zh-cn)
+* [保存上传的文件](/storeupload/zh-cn)
 * [How to put a limit of size of uploaded files (未译)](/limiting_upload_size/zh-cn)
 * [通过 web.input 接受用户输入](/input/zh-cn)
 * [How to use forms (未译)](/forms/zh-cn)
