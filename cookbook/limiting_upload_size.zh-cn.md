@@ -1,19 +1,19 @@
 ---
 layout: default
-title: How to put a limit on upload size
+title: 上传文件大小限定
 ---
 
-# How to put a limit on upload size
+# 上传文件大小限定
 
-## Problem
+## 问题
 
-How to put a limit on upload size
+如何限定上传文件的大小？
 
 ## Solution
 
-web.py uses `cgi` module to parse user inputs and the `cgi` module has a provision to limit max size of input.
+web.py 使用`cgi` 模块来解析用户的输入， 而 `cgi` 模块对最大输入大小有限制。
 
-The following code limits the size of input data to 10MB.
+下面的代码限制了最大数据输入为 10MB.
 
     import cgi
 
@@ -21,9 +21,9 @@ The following code limits the size of input data to 10MB.
     # 0 ==> unlimited input
     cgi.maxlen = 10 * 1024 * 1024 # 10MB
 
-Please note that this limits the size of POST data, not file uploaded. However they will be almost same if there is no other input.
+请注意这是对POST方法提交数据大小的限制，而不是上传文件大小。当然如果表单中没有其他输入数据，上传文件完全可以达到限制的大小。
 
-The `cgi` module raises `ValueError` when the input size is more than `cgi.maxlen`. It can be caught to display required error message.
+`cgi` 模块将会抛出 `ValueError`异常，如果数据输入的大小超过了 `cgi.maxlen`。我们可以捕捉该异常而避免显示不友好的错误信息。
 
     class upload:
         def POST(self):
