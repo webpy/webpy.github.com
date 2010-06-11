@@ -5,9 +5,13 @@ title: Alternating Style
 
 # Alternating Style
 
-Problem: You want to alternate the background color of a list's elements as you dynamically generate it from a passed sequence.
+### 问题: 
 
-Solution: Give templetor access to the `int` built-in and use modulo to test.
+You want to alternate the background color of a list's elements as you dynamically generate it from a passed sequence.
+
+### 方法: 
+
+Give templetor access to the `int` built-in and use modulo to test.
 
 ## code.py ##
 
