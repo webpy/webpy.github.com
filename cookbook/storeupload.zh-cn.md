@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Store an uploaded file
+title: 保存上传的文件
 ---
 
-# Store an uploaded file
+# 保存上传的文件
 
-## Problem
+## 问题
 
-You want to upload a file and store it in a predefined folder.
+上传文件，并将其保存到预先设定的某个目录下。
 
-## Solution
+## 方法
 
     import web
     
@@ -44,8 +44,8 @@ You want to upload a file and store it in a predefined folder.
 
 ## Hang ups
 
-A couple of things to watch out for:
+同时还需要注意如下几点:
 
-* See [fileupload](/fileupload).
-* Don't put the file in a folder that is executable without any check of the extension and type of file.
-* Actually, we need to open the fout file object in mode "wb"(in windows), ie. write binary mode, otherwise the image uploaded is broken.
+* 转到 [fileupload](/fileupload)。
+* 千万不要让用户把文件上传到那些不经过文件后缀和类型检查而执行文件的文件夹下。
+* 事实上，一定要以"mb"模式打开文件（在windows下）， 也就是二进制可写模式, 否则图片将无法上传。
