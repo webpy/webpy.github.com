@@ -57,7 +57,7 @@ title: Web.py Cookbook 简体中文版
 
 ##Templates 模板
 * [Templetor: web.py 模板系统](http://webpy.org/docs/0.3/templetor/zh-cn)
-* [Using Site Layout Templates (未译)](/layout_template/zh-cn)
+* [使用站点布局模板](/layout_template/zh-cn)
 * [Alternating Style (未译)](/alternating_style/zh-cn)
 * [Import functions into templates (未译)](/template_import/zh-cn)
 * [模板文件中的i18n支持](/i18n_support_in_template_file/zh-cn)
