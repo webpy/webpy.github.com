@@ -151,7 +151,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 "the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
 - Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it
 
-   [28]: http://github.com/antoine/ibrouteur/
+   [28]: http://www.tendances-de-mode.com/
    [34]: http://metagenda.org
 
 "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
@@ -232,9 +232,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [tricks](/tricks)
 
 
-
 ### web.py community
-
 * [**mail list**](http://groups.google.com/group/webpy/ "web.py google group"): home of the web.py discussion
 
 * [**irc channel**](irc://irc.freenode.net/webpy "#webpy on irc.freenode.net"): home of the web.py talk
