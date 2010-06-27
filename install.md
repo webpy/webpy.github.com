@@ -82,7 +82,7 @@ And run `chmod +x code.py` to make it executable.
 FastCGI with lighttpd is the recommended way of using web.py in production. [reddit.com][3] handles millions of hits this way.
 
    [3]: http://reddit.com/
-
+   
 Your lighttpd config can be something like:
     
      server.modules = ("mod_fastcgi", "mod_rewrite")
@@ -206,7 +206,7 @@ For Python 2.5 do this:
 
     cd /usr/lib/python2.5/wsgiref
     # or in windows: cd /python2.5/lib/wsgiref
-    wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
+    wget -O modpython_gateway.py http://svn.aminus.net/misc/modpython_gateway.py
     # or fetch the file from that address using your browser
 
 For Python <2.5 do this:
@@ -215,7 +215,7 @@ For Python <2.5 do this:
     # or in windows: cd /python2.4/lib/site-packages
     svn co svn://svn.eby-sarna.com/svnroot/wsgiref/wsgiref
     cd wsgiref
-    wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
+    wget -O modpython_gateway.py http://svn.aminus.net/misc/modpython_gateway.py
     # or fetch the file from that address using your browser  
 
 
