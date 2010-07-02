@@ -1,17 +1,17 @@
 ---
 layout: default
-title: db.query
+title: 使用db.query进行高级数据库查询
 ---
 
-# db.query
+# 使用db.query进行高级数据库查询
 
-### Problem
+### 问题：
 
-You want to perform advanced SQL statements like joins or counts.
+您要执行的SQL语句如：高级的联接或计数。
 
-### Solution
+### 解决：
 
-webpy doesn't try to build layers between you and your database.  Rather, it tries to make it easy to common tasks, and get out of your way when you need to do more advanced topics.  Performing advanced database queries is no different.  For example:
+webpy不会尝试为您和您的数据库建立层。相反，它试图以方便的通用任务，走出自己的方式，当您需要做的更高级的主题。执行高级的数据库查询是没有什么不同。例如：
 
     import web
 
@@ -21,7 +21,7 @@ webpy doesn't try to build layers between you and your database.  Rather, it tri
     print results[0].total_users # -> prints number of entries in 'users' table
 
 
-or, for a JOIN example:
+或者是，使用一个JOIN示例:
 
     import web
     
@@ -30,8 +30,8 @@ or, for a JOIN example:
     results = db.query("SELECT * FROM entries JOIN users WHERE entries.author_id = users.id")
 
 
-To prevent SQL injection attacks, db.query also accepts the "vars" syntax as described in [db.select](/cookbook/select):
+为了防止SQL注入攻击，db.query还接受了“vars”语法如下描述[db.select](/cookbook/select):
 
     results = db.query("SELECT * FROM users WHERE id=$id", vars={'id':10})
 
-This will escape user input, if you're trusting them for the "id" variable.
+这将避免用户输入，如果你信任这个“id”变量。
