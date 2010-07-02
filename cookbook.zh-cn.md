@@ -62,7 +62,7 @@ title: Web.py Cookbook 简体中文版
 * [导入函数到模板中 (未译)](/template_import/zh-cn)
 * [模板文件中的i18n支持](/i18n_support_in_template_file/zh-cn)
 * [在web.py中使用Mako模板引擎 ](/template_mako/zh-cn)
-* [在web.py中使用Cheetah模板引擎 (未译)](/template_cheetah/zh-cn)
+* [在web.py中使用Cheetah模板引擎](/template_cheetah/zh-cn)
 * [在web.py中使用Jinja2模板引擎](/template_jinja/zh-cn)
 * [如何在谷歌应用程序引擎使用模板 (未译)](/templates_on_gae/zh-cn)
 
