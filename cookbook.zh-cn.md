@@ -84,7 +84,7 @@ title: Web.py Cookbook 简体中文版
 * [Update: 更新数据 ](/update/zh-cn)
 * [Delete: 删除数据](/delete/zh-cn)
 * [Insert: 新增数据](/Insert/zh-cn)
-* [Query: Advanced database queries (未译)](/query/zh-cn)
+* [Query: 高级数据库查询](/query/zh-cn)
 * [How to use database transactions (未译)](/transactions/zh-cn)
 * [使用 sqlalchemy](/sqlalchemy/zh-cn)
 * [Integrating SQLite UDF (user-defined-functions) with webpy database layer (未译)](/sqlite-udf/zh-cn)
