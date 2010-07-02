@@ -58,25 +58,25 @@ title: Web.py Cookbook 简体中文版
 ##Templates 模板
 * [Templetor: web.py 模板系统](http://webpy.org/docs/0.3/templetor/zh-cn)
 * [使用站点布局模板](/layout_template/zh-cn)
-* [Alternating Style (未译)](/alternating_style/zh-cn)
-* [Import functions into templates (未译)](/template_import/zh-cn)
+* [交替式风格 (未译)](/alternating_style/zh-cn)
+* [导入函数到模板中 (未译)](/template_import/zh-cn)
 * [模板文件中的i18n支持](/i18n_support_in_template_file/zh-cn)
-* [Use Mako template engine in webpy ](/template_mako/zh-cn)
-* [Use Cheetah template engine in webpy (未译)](/template_cheetah/zh-cn)
+* [在web.py中使用Mako模板引擎 ](/template_mako/zh-cn)
+* [在web.py中使用Cheetah模板引擎 (未译)](/template_cheetah/zh-cn)
 * [在web.py中使用Jinja2模板引擎](/template_jinja/zh-cn)
-* [How to use templates on Google App Engine (未译)](/templates_on_gae/zh-cn)
+* [如何在谷歌应用程序引擎使用模板 (未译)](/templates_on_gae/zh-cn)
 
-##Testing:
+##Testing 测试:
 * [Testing with Paste and Nose (未译)](/testing_with_paste_and_nose/zh-cn)
 * [RESTful doctesting using an application's request method (未译)](/restful_doctesting_using_request/zh-cn)
 
-##User Input:
+##User input 用户输入:
 * [文件上传](/fileupload/zh-cn)
 * [保存上传的文件](/storeupload/zh-cn)
 * [上传文件大小限定](/limiting_upload_size/zh-cn)
 * [通过 web.input 接受用户输入](/input/zh-cn)
-* [How to use forms (未译)](/forms/zh-cn)
-* [Render individual form fields (未译)](/form_fields/zh-cn)
+* [怎样使用forms (未译)](/forms/zh-cn)
+* [渲染个别表单区域 (未译)](/form_fields/zh-cn)
 
 ##Database 数据库
 * [使用多数据库](/multidbs/zh-cn)
@@ -85,12 +85,12 @@ title: Web.py Cookbook 简体中文版
 * [Delete: 删除数据](/delete/zh-cn)
 * [Insert: 新增数据](/Insert/zh-cn)
 * [Query: 高级数据库查询](/query/zh-cn)
-* [How to use database transactions (未译)](/transactions/zh-cn)
+* [怎样使用数据库事务 (未译)](/transactions/zh-cn)
 * [使用 sqlalchemy](/sqlalchemy/zh-cn)
-* [Integrating SQLite UDF (user-defined-functions) with webpy database layer (未译)](/sqlite-udf/zh-cn)
+* [整合 SQLite UDF (用户定义函数) 到 webpy 数据库层 (未译)](/sqlite-udf/zh-cn)
 * [Using a dictionary as where clause (未译)](/where_dict/zh-cn)
 
-##Deployment:
+##Deployment 部署:
 * [Fastcgi deployment through lighttpd (未译)](/fastcgi-lighttpd/zh-cn)
 * [Fastcgi deployment through Apache (未译)](/fastcgi-apache/zh-cn) 
 * [CGI deployment through Apache (未译)](/cgi-apache/zh-cn)
@@ -99,5 +99,5 @@ title: Web.py Cookbook 简体中文版
 * [mod_wsgi deployment through Nginx (未译)](/mod_wsgi-nginx/zh-cn)
 * [Fastcgi deployment through Nginx (未译)](/fastcgi-nginx/zh-cn)
 
-##Subdomains:
+##Subdomains 子域名:
 * Subdomains and how to access the username (requested)
