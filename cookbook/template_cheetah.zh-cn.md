@@ -5,12 +5,12 @@ title: Use Cheetah template engine in webpy
 
 # Use Cheetah template engine in webpy
 
-### Problem
-How to use Cheetah template engine in webpy?
+### 问题：
+怎样在webpy中使用Cheetah模板引擎？
 
-### Solution
+### 解决：
 
-You need to install both Cheetah and webpy(0.3) first: [http://www.cheetahtemplate.org/](http://www.cheetahtemplate.org/). And then try out the following code snippet:
+您需要先安装webpy(0.3)和Cheetah：[http://www.cheetahtemplate.org/](http://www.cheetahtemplate.org/). 然后尝试使用下面的代码段：
 
     # encoding: utf-8
     # File: code.py
@@ -43,7 +43,7 @@ You need to install both Cheetah and webpy(0.3) first: [http://www.cheetahtempla
     if __name__ == "__main__":
         app.run()
 
-Template file:
+模板文件
 
     ## File: templates/first.html
 
