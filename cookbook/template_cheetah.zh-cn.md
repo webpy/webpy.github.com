@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Use Cheetah template engine in webpy
+title: 在webpy中使用Cheetah模板引擎
 ---
 
-# Use Cheetah template engine in webpy
+# 在webpy中使用Cheetah模板引擎
 
 ### 问题：
 怎样在webpy中使用Cheetah模板引擎？
