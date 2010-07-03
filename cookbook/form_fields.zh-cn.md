@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Render individual form fields
+title: 显示表单部分字段
 ---
 
-# Render individual form fields
+# 显示表单部分字段
 
-### Problem
+### 问题：
 
-You want to render individual form fields in templates
+怎样在模板中显示部分的表单字段？
 
-### Solution
+### 解决：
 
-You can use the `render()` method for individual fields to render the fields in your template.
+你可以使用'render()'方法在你的模板中显示部分的表单字段。
 
-Let's assume you want to create a name/surname form. Very simple, with only two fields, and no validation, just for testing purposes.
+假设你想创建一个名字/姓氏表单。很简单，只有两个字段，不需要验证，只是为了测试目的。
 
     from web import form
     simple_form = form.Form(
@@ -21,21 +21,22 @@ Let's assume you want to create a name/surname form. Very simple, with only two 
         form.Textbox('surname', description='Surname'),
     )
 
-Usually you would either use `simple_form.render()` or `simple_form.render_css()`. But what if you want to render individual form fields one by one, so you can have more control over how it appears in your template? For that, you can use the `render()` method on individual fields.
+通常你可以使用`simple_form.render（）`或`simple_form.render_css（）`。
+但如你果你想一个一个的显示表单的字段，或者你怎样才能对模板中的表单显示拥有更多的控制权限？如果是这样，你可以对你的个别字段使用`render()`方法。
 
-We have defined two fields with names `name` and `surname`. Those names automatically become attributes of `simple_form` object.
+我们定义了两个字段名称为`name`和`surname`。这些名称将自动成为`simple_form`对象的属性。
 
     >>> simple_form.name.render()
     '<input type="text" name="name" id="name" />'
     >>> simple_form.surname.render()
     '<input type="text" name="surname" id="surname" />' 
 
-You can also render individual descriptions in a similar way:
+你同样可以通过类似的方法显示个别的描述：
 
     >>> simple_form.surname.description
     'Surname'
 
-What if you have a small template snippet (partial template) that you'd like to use universally for all form fields you have defined? You can iterate fields by using the `inputs` attribute of your form object. Here's an example:
+如果你有一个小模板片段（局部模板），你想统一的使用你所定义的所有表单字段？你可以使用表单对象的`inputs`属性迭代每个字段。下面是一个示例：
 
     >>> for input in simple_form.inputs:
     ...     print input.description
