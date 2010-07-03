@@ -1,24 +1,23 @@
 ---
 layout: default
-title: How to use forms
+title: 怎样使用表单 forms
 ---
 
-# How to use forms
+# 怎样使用表单 forms
 
-## Problem
+## 问题：
 
-How to use forms.
+怎样使用表单 forms
 
-## Solution
+## 解决：
 
-The `web.form` module provides support for creating, validating and rendering forms.
-This module contains a `Form` class and classes for various inputs like `Textbox`, `Password` etc.
+'web.form'模块提供支持创建，校验和显示表单。该模块包含一个'Form'类和各种输入框类如'Textbox'，'Password'等等。
 
-Each input can take a list of validators are arguments and which are validated against the input when `form.validates()` is called.
+当'form.validates()'调用时，可以针对每个输入检测的哪个是有效的，并取得校验理由列表。
 
-The `Form` class can also takes additional keyword argument `validators` to validate the form using complete input.
+'Form'类同样可以使用完整输入附加的关键字参数'validators'来校验表单。
 
-Here is an example of a new user registration form.
+这里是一个新用户注册的表单的示例：
 
     import web
     from web import form
@@ -51,8 +50,9 @@ Here is an example of a new user registration form.
                 return render.register(f)
             else:
                 # do whatever is required for registration
- 
-And the register template should be something like this:
+
+
+然后注册的模板应该像是这样： 
 
     $def with(form)
 
