@@ -1,15 +1,19 @@
 ---
 layout: default
-title: Integrating SQLite UDF (user-defined-functions) with webpy database layer
+title: 整合 SQLite UDF (用户定义函数) 到 webpy 数据库层
 ---
 
-# Integrating SQLite UDF (user-defined-functions) with webpy database layer
+# 整合 SQLite UDF (用户定义函数) 到 webpy 数据库层
 
-A user asked at the mailing list and I thought of putting it here for future use and reference. 
+问题：
 
-You can add python functions to sqlite and have them called within your queries.
+用户在邮件列表中询问，我把它放在这里作为将来使用和参考。
 
-Example:
+解决：
+您可以添加到Python函数到SQLite，并让它们在您的查询调用。
+
+示例：
+
 <pre>
 >>> import sqlite3 as db
 >>> conn = db.connect(":memory:")
@@ -25,10 +29,9 @@ Example:
 [(1, -1, 0, -1, 1)]
 >>> conn.close()</pre>
 
-In webpy, you can get a reference to the connection object via the cursor
-i.e. db._db_cursor().connection
+在webpy中，你可以通过游标如db._db_cursor().connection 取得连接对象的引用。
 
-Example:
+示例：
 <pre>
 >>> import web
 >>> db = web.database(dbn="sqlite", db=":memory:")
