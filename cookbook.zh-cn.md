@@ -40,7 +40,7 @@ title: Web.py Cookbook 简体中文版
 * [用cherrypy提供SSL支持](/ssl/zh-cn)
 * [实时语言切换](/runtime-language-switch/zh-cn)
 
-##Sessions and user state:
+##Sessions and user state 会话和用户状态:
 * [如何使用Session](/sessions/zh-cn)
 * [如何在调试模式下使用Session](/session_with_reloader/zh-cn)
 * [在template中使用session](/session_in_template/zh-cn)
@@ -50,7 +50,7 @@ title: Web.py Cookbook 简体中文版
 * [如何在子应用中操作Session](/sessions_with_subapp/zh-cn)
 
 
-##Utils:
+##Utils 实用工具:
 * [如何发送邮件](/sendmail/zh-cn)
 * [如何利用Gmail发送邮件](/sendmail_using_gmail/zh-cn)
 * [使用soaplib实现webservice](/webservice/zh-cn)
