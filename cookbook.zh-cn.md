@@ -75,7 +75,7 @@ title: Web.py Cookbook 简体中文版
 * [保存上传的文件](/storeupload/zh-cn)
 * [上传文件大小限定](/limiting_upload_size/zh-cn)
 * [通过 web.input 接受用户输入](/input/zh-cn)
-* [怎样使用forms](/forms/zh-cn)
+* [怎样使用表单](/forms/zh-cn)
 * [显示个别表单字段](/form_fields/zh-cn)
 
 ##Database 数据库
