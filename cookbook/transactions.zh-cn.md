@@ -1,18 +1,17 @@
 ---
 layout: default
-title: How to use database transactions
+title: 怎样使用数据库事务处理
 ---
 
-# How to use database transactions
+# 怎样使用数据库事务处理
 
-### Problem
+### 问题：
 
-How to use database transactions
+怎样使用数据库事务处理？
 
+### 解决：
 
-### Solution
-
-The database object has a method `transaction` which starts a new transaction and returns the transaction object. The transaction object can be used to commit or rollback that transaction.
+数据库对象有一个方法“transaction”,将启动一个新的事务，并返回事务对象。这个事务对象可以使用commit提交事务或rollback来回滚事务。
 
     import web
 
@@ -27,7 +26,7 @@ The database object has a method `transaction` which starts a new transaction an
     else:
         t.commit()
 
-With python 2.5+, transaction can be used as with statement also.  
+在python 2.5+以上的版本，事务同样可以在段中使用：
 
     from __future__ import with_statement
     
@@ -37,8 +36,7 @@ With python 2.5+, transaction can be used as with statement also.
         db.insert('person', name='foo')
         db.insert('person', name='bar')
         
-
-It is also possible to have nested transactions.
+它同样可能有一个嵌套的事务：
 
     def post(title, body, tags):
         t = db.transaction()
@@ -60,5 +58,4 @@ It is also possible to have nested transactions.
         else:
             t.commit()
 
-
-Nested transactions are ignored for sqlite as they are not supported.
+嵌套的事务在sqlite中将被忽略，因为此特性不被sqlite支持。
