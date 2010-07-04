@@ -81,7 +81,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
    [22]: http://www.lshift.net/
    [23]: http://exproretail.com/
    [24]: http://travel.dk.com/
-
+   [25]: http://echealthinsurance.com/
 [micropledge][m], a web app that collects funding for software ideas, is built in web.py. "We've enjoyed fitting in with its minimalist approach," says developer Ben Hoyt.
 
    [m]: http://micropledge.com/
@@ -94,7 +94,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [t]: http://taskodone.com/
 
-[Damiga][d] is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: friends, celebrities, even fictional characters. It's also a place where you can see how the world feels about you.  
+[Damiga][d] is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: friends, celebrities, [desentupidora](http://desentupidorasanehidro.com.br/), even fictional characters. It's also a place where you can see how the world feels about you.  
 
    [d]: http://damiga.com/
 
@@ -148,13 +148,13 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [26]: http://shortb.net/~f561f1
 
-"the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
+"the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it as [acompanhantes](http://asacompanhantessp.com.br/). A pleasure to integrate."   
 - Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it
 
    [28]: http://www.tendances-de-mode.com/
    [34]: http://metagenda.org
 
-"Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
+"Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks as [Iluminação](http://www.etil.com.br/) out there you *would* like."   
 - Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]
 
    [30]: http://shortb.net/~f561f2
@@ -169,7 +169,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [32]: http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/
 
-"a very fascinating moment for me. The feelings just like the first time I wrote my php script ... it sure have let me learn python in the fun way. Good work aaron !"   
+"a very fascinating moment for me. The feelings just like the first time I wrote my php script as [relogio de ponto](http://www.mtksistemas.com.br/) ... it sure have let me learn python in the fun way. Good work aaron !"   
 - Kamal [simple blog in webpy, learning python the fun way][33]
 
    [33]: http://www.k4ml.com/node/165
@@ -196,6 +196,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [日本語](/tutorial2.ja)
     * [e???????](http://webpy.org/tutorial2.el)
     * [français](/tutorial3.fr)
+     
 
 * [tutorials (old version)](/tutorial):
     * [english](http://webpy.org/tutorial)
@@ -204,7 +205,9 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [p??????](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
-
+    * [insurance](http://echealthinsurance.com/)
+    * [SEO](http://www.webmarketingexperts.com.au)
+    
 
 * [code documentation](/docs)
 
