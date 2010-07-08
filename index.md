@@ -146,7 +146,7 @@ Upgrading from an older version? Be sure to [read the upgrade guide][17].
 
 * "Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."  - Adam Atlas
 
-* "very nicely written and concise (not to mention it's written by Aaron Swartz, whose coding skills are very trustable), and doesn't get in my way" - Jonas Galvez, Aupeo [#][26]
+* "very nicely written and concise (not to mention it's written by Aaron Swartz, whose coding skills are very trustable), and doesn't get in my way" - Jonas Galvez, [Aupeo](http://itcomputerzone.com/) [#][26]
 
    [26]: http://shortb.net/~f561f1
 
