@@ -95,7 +95,7 @@ title: Web.py Cookbook 简体中文版
 * [Fastcgi deployment through Apache (未译)](/fastcgi-apache/zh-cn) 
 * [CGI deployment through Apache (未译)](/cgi-apache/zh-cn)
 * mod_python deployment through Apache (requested)
-* [mod_wsgi deployment through Apache (未译)](/mod_wsgi-apache/zh-cn)
+* [通过Apache和mod_wsgi部署](/mod_wsgi-apache/zh-cn)
 * [mod_wsgi deployment through Nginx (未译)](/mod_wsgi-nginx/zh-cn)
 * [Fastcgi deployment through Nginx (未译)](/fastcgi-nginx/zh-cn)
 
