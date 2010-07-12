@@ -72,7 +72,7 @@ Des options relatives aux sessions peuvent être modifiées en utilisant le dict
  * `cookie_name` - nom du cookie utilisé pour stocker la session id
  * `cookie_domain` - domaine du cookie utilisé pour stocker l'ID de session
  * `timeout` - nombre de secondes d'inactivité autorisées avant que la session expire
- * `ignore_expiry` - if `True`, l'expiration de la session est ignoré
- * `ignore_change_ip` - if `False`, la session est valide uniquement quand elle est accessible à partir de la même adresse IP qui l'a créé
+ * `ignore_expiry` - si `True`, l'expiration de la session est ignoré
+ * `ignore_change_ip` - si `False`, la session est valide uniquement quand elle est accessible à partir de la même adresse IP qui l'a créé
  * `secret_key`       - clef utilisée dans la génération du hachage session id (demande d'explications plus détaillées))
  * `expired_message`  - message affiché lorsque la session a expiré
