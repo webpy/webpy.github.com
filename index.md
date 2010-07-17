@@ -129,7 +129,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [zzz]: http://www.biomed-search.com
 
-[I Write Like] [iwl] analyzes which famous writer you write like. Serves about a million page views daily.
+[I Write Like] [iwl] analyzes which famous writer you write like. Serves about a million page views daily from a single 512 MB VPS instance.
 
    [iwl]: http://iwl.me
 
