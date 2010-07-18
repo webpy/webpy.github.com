@@ -129,10 +129,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [zzz]: http://www.biomed-search.com
 
-[I Write Like] [iwl] analyzes which famous writer you write like. Serves about a million page views daily from a single 512 MB VPS instance.
-
-   [iwl]: http://iwl.me
-
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
  - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
 
@@ -174,7 +170,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
    [32]: http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/
 
 "a very fascinating moment for me. The feelings just like the first time I wrote my php script as [relogio de ponto](http://www.mtksistemas.com.br/) ... it sure have let me learn python in the fun way. Good work aaron !"   
-- Kamal [simple blog in webpy [health insurance help] (http://echealthinsurance.com/), learning python the fun way][33]
+- Kamal [simple blog in webpy, learning python the fun way][33]
 
    [33]: http://www.k4ml.com/node/165
 
@@ -236,7 +232,18 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [related projects](/related)
 * [Criar site](http://www.sitegratisgratis.com.br)
-* [Übersetzung Französisch Deutsch](http://www.profischnell.com)
+
+* [related projects](/related)
+* [Empréstimo consignado](http://emprestimo-consignado.com/)
+
+* [related projects](/related)
+* [Decoração de festa](http://decoracao-festa.com/)
+
+* [related projects](/related)
+* [Decoração de interiores](http://decoracaoeinteriores.net/)
+
+* [related projects](/related)
+* [Consulta cpf](http://caionanet.net/2009/03/09/consulta-cpf-grtis/)
 
 * [tricks](/tricks)
 * [Hospedagem](http://hospedagemsites10.com.br)
