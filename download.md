@@ -27,7 +27,7 @@ If you don't want to install web.py system-wide (or if you want to bundle web.py
     $ tar xvzf web.py-0.33.tar.gz
     $ ln -s web.py-0.33/web .
    
-If you are on Ubuntu Linux or Debian, you can install web.py using `apt-get`. But you may not get the latest as debian/ubuntu release cycles are different from web.py.
+If you are on Ubuntu Linux or Debian, you can install web.py using `apt-get` [ package service](http://pt.wikipedia.org/wiki/Advanced_Packaging_Tool). But you may not get the latest as debian/ubuntu release cycles are different from web.py.
 
     $ sudo apt-get install python-webpy
 
