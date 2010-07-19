@@ -189,7 +189,7 @@ web.py のテンプレート処理についてもっと知りたければ、[tem
 
 ユーザーがフォームを通して送信した値には、`web.input` のようにしてアクセスできる。`web.insert` はデータベースの todo テーブルに値を挿入して、新しくできたレコードの ID を返す。`seeother` は指定した URL にユーザーをリダイレクトする。
 
-駆け足で紹介: `web.transact()` でトランザクションを開始する。`web.commit()` でそれをコミットし、`web.rollback()` でロールバック。`web.update` は `web.insert` に似ているが、新しい ID を返すのではなく、テーブル名に続けて ID を引数に取ってそのレコードを更新する。
+駆け足で紹介: `web.transact()` でトランザクションを開始する。`web.commit()` でそれをコミットし、`web.rollback()` でロールバック。`web.update` は `web.insert` に似ているが、新しい ID を返すのではなく、テーブル名に続けて ID を引数に取ってそのレコードを更新する。 [Professional resumes](http://cvresumewritingservices.org/professional-resume.php)
 
 `web.input` や `web.query`、またその他いくつかの web.py 関数は「ストレージオブジェクト」というものを返す。これは辞書オブジェクトに似ているが、`d['foo']` だけでなく `d.foo` のようにアクセスできるところが違っている。これのおかげで、コードがずいぶんすっきりしたものになるはずだ。
 
