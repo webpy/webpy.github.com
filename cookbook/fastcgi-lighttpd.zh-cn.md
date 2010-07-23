@@ -5,22 +5,22 @@ title: Webpy + LightTTPD with FastCGi
 
 # Webpy + LightTTPD with FastCGi
 
-If you have problems with this recipe read this thread:
+如果你对这个主题有任何问题，可以点击下面的链接访问相应的话题:
 
 http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
 
-The following applies on lighttpd version 1.4.18
+下面的代码基于lighttpd 1.4.18，更高版本也可以工作
 
 ##Note:  
-* You may replace <code>code.py</code> with your own file name.
-* <code>/path-to/webpy-app</code> found below refers to the path to the directory contains your <code>code.py</code>
-* <code>/path-to/webpy-app/code.py</code> is the full path to your **python file**
+* 你可以重命名 <code>code.py</code>为任何你自己愿意的名字，该例子还是以code.py为例。
+* <code>/path-to/webpy-app</code> 为包含你的 <code>code.py</code>代码的路径。
+* <code>/path-to/webpy-app/code.py</code> 应该是你的**python file**的完整路径。
 
-If you are not certain what version you are running simply type: <code>lighttpd -v</code> at your console.
+如果你还不确定你的lighttpd版本的话，你可以在命令行中使用<code>lighttpd -v</vode>查看相应的版本信息。
 
-Note: Earlier version of lighttpd may organize the .conf files differently. Yet, the same principles applied on them as well.
+Note: 较早版本的lighttpd可能会按照不同的方式组织.conf文件，但是它们应该遵循的是相同的原则。
 
-###ligghttpd Configuration under Debian GNU/Linux
+###ligghttpd 在 Debian GNU/Linux 下的配置文件
 
 <pre>
 Files and Directories in /etc/lighttpd:
@@ -45,13 +45,15 @@ Enabling and disabling modules could be done by provided
 </pre>
 
 <strong>
-For web py you should enable mod_fastcgi and mod_rewrite, thus run: <code>/usr/sbin/lighty-enable-mod</code> and supply <code>fastcgi</code>  
-(mod_rewrite will be enabled within <code>10-fastcgi.conf</code> file as you will see in a moment).
+对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: <code>/usr/sbin/lighty-enable-mod</code> 启用 <code>fastcgi</code> （Mac OS X可能不需要）  
+(mod_rewrite 模块可能需要启用 <code>10-fastcgi.conf</code>文件).
 
-##Below are instructions for the following files:
+##下面是文件的基本结构（Mac OS X不同）:
 * <code>/etc/lighttpd/lighttpd.conf</code>
 * <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 * <code>code.py</code>
+
+对于Mac OS X或任何以Mac Ports邓方式安装的lighttpd，可以直接在路径下编写.conf文件并用lighttpd -f xxx.conf启动lighttpd，而无需去修改或考虑任何文件结构。
 
 <code>/etc/lighttpd/lighttpd.conf</code>
 
@@ -65,7 +67,7 @@ server.modules              = (
 server.document-root       = "/path-to/webpy-app"
 </pre>
 
-In my case I used postgresql and therefore runs lighttpd as postgres in order to grant permissions to the database, therefore I added the line:
+对我来说，我使用 postgresql，因此需要授予对的数据库权限，可以添加行如下（如果不使用则不需要）。
 
 <pre>
 server.username = "postgres"
@@ -88,6 +90,8 @@ server.modules   += ( "mod_rewrite" )
  ))
  )
 
+如果本地的lighttpd跑不起来的话，需要设置check-local属性为disable。
+
  url.rewrite-once = (
    "^/favicon.ico$" => "/static/favicon.ico",
    "^/static/(.*)$" => "/static/$1",
@@ -96,13 +100,13 @@ server.modules   += ( "mod_rewrite" )
 </pre>
 
 <code>/code.py</code>  
-At the top of the file add:
+在代码头部添加以下代码，让系统环境使用系统环境中当前的python
 
 <pre>
 #!/usr/bin/env python
 </pre>
 
-and don't forget to make it executable (otherwise you will get a "permission denied" error):
+最后不要忘记了要对需要执行的py代码设置执行权限，否则你可能会遇到“permission denied”错误。
 
 <pre>
 $ chmod 755 /path-to/webpy-app/code.py
