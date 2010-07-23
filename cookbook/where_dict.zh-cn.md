@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Using a dictionary as where clause
+title: 使用字典动态构造where子句
 ---
 
-# Using a dictionary as where clause
+# 使用字典动态构造where子句
 
 问题
 -------
