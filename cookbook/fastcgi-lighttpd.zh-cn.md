@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Webpy + LightTTPD with FastCGi
+title: 通过Fastcgi和lighttpd部署
 ---
 
-# Webpy + LightTTPD with FastCGi
+# 通过Fastcgi和lighttpd部署
 
 如果你对这个主题有任何问题，可以点击下面的链接访问相应的话题:
 
