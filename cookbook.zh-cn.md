@@ -88,7 +88,7 @@ title: Web.py Cookbook 简体中文版
 * [怎样使用数据库事务](/transactions/zh-cn)
 * [使用 sqlalchemy](/sqlalchemy/zh-cn)
 * [整合 SQLite UDF (用户定义函数) 到 webpy 数据库层](/sqlite-udf/zh-cn)
-* [Using a dictionary as where clause (未译)](/where_dict/zh-cn)
+* [使用字典动态构造where子句](/where_dict/zh-cn)
 
 ##Deployment 部署:
 * [通过Fastcgi和lighttpd部署](/fastcgi-lighttpd/zh-cn)
