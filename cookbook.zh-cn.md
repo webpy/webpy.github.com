@@ -91,7 +91,7 @@ title: Web.py Cookbook 简体中文版
 * [Using a dictionary as where clause (未译)](/where_dict/zh-cn)
 
 ##Deployment 部署:
-* [Fastcgi deployment through lighttpd (未译)](/fastcgi-lighttpd/zh-cn)
+* [通过Fastcgi和lighttpd部署](/fastcgi-lighttpd/zh-cn)
 * [Fastcgi deployment through Apache (未译)](/fastcgi-apache/zh-cn) 
 * [CGI deployment through Apache (未译)](/cgi-apache/zh-cn)
 * mod_python deployment through Apache (requested)
