@@ -92,7 +92,7 @@ title: Web.py Cookbook 简体中文版
 
 ##Deployment 部署:
 * [通过Fastcgi和lighttpd部署](/fastcgi-lighttpd/zh-cn)
-* [Fastcgi deployment through Apache (未译)](/fastcgi-apache/zh-cn) 
+* [Webpy + Nginx with FastCGI搭建Web.py](/fastcgi-apache/zh-cn) 
 * [CGI deployment through Apache (未译)](/cgi-apache/zh-cn)
 * mod_python deployment through Apache (requested)
 * [通过Apache和mod_wsgi部署](/mod_wsgi-apache/zh-cn)
