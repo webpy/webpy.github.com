@@ -1,22 +1,24 @@
 ---
 layout: default
-title: Webpy + Nginx with FastCGI
+title: Webpy + Nginx with FastCGI搭建Web.py
 ---
 
-# Webpy + Nginx with FastCGI
+# Webpy + Nginx with FastCGI搭建Web.py
 
-This cookbook entry explains how to run web.py on Nginx with Fastcgi.
+这一节讲解的是如何使用Nginx和FastCGI搭建Web.py应用
 
-### Requirements
+### 环境依赖的软件包
 
-* Nginx 0.8.\* or 0.7.\* (with fastcgi and rewrite module).
+* Nginx 0.8.\* or 0.7.\* (需要包含fastcgi和rewrite模块)。
 * Webpy 0.32
 * Spawn-fcgi 1.6.2
 * Flup
 
-Older versions may work, but aren't tested.
+注意：Flup是最常见的忘记装的软件，需要安装
 
-### Resources
+更老的版本应该也可以工作，但是没有测试过，最新的是可以工作的
+
+### 一些资源
 
 * [Nginx wiki](http://wiki.nginx.org/NginxInstall)
 * [Spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi/news)
@@ -24,12 +26,11 @@ Older versions may work, but aren't tested.
 
 ### Notes
 
-* You may replace `index.py` with your own file name.
-* `/path/to/www` Is the path to the directory where your webpy application is located.
-* `/path/to/www/index.py` is the full path to your python file.
-* Do not run anything until you are at *Run*.
+* 你可以重命名`index.py`为任何你想要的文件名。
+* `/path/to/www` 为代码路径。
+* `/path/to/www/index.py`为python代码的完整路径。
 
-## Nginx configuration
+## Nginx 配置文件
 
 	location / {
 	    include fastcgi_params;
@@ -38,7 +39,7 @@ Older versions may work, but aren't tested.
 	    fastcgi_pass 127.0.0.1:9002;
 	}
 
-To serve static files add this:
+对于静态文件可以添加如下配置:
 
 	location /static/ {
 	    if (-f $request_filename) {
@@ -46,32 +47,31 @@ To serve static files add this:
 	    }
 	}
 
-__Note:__ the address and port may be different.
+__注意:__ 地址和端口号可能会是不同的。
 
 ## Spawn-fcgi
 
-You can start a process with:
+可以通过一下命令启动一个Spawn-fcgi进程:
 
 	spawn-fcgi -d /path/to/www -f /path/to/www/index.py -a 127.0.0.1 -p 9002
 
-### Start and shutdown script
+### 启动和关闭的命令
 
-Start:
+启动:
 
 	#!/bin/sh
 	spawn-fcgi -d /path/to/www -f /path/to/www/index.py -a 127.0.0.1 -p 9002
 
-Shutdown:
+关闭:
 
 	#!/bin/sh
 	kill `pgrep -f "python /path/to/www/index.py"`
 
-__Note:__ You're free to choose which address, port, directory and filename to use, but be sure to adjust the Nginx configuration.
+__Note:__ 你可以随意填写地址和端口信息，但是一定需要和Nginx配置文件相匹配。
 
 ## Hello world!
 
-Save the following code in your www directory and call the file index.py (or whatever you like).
-The following line is required: `web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)`.
+讲下面的代码保存为index.py（或者任何你喜欢的），注意，使用Nginx配置的话，`web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)`这一行代码是必须的。
 
 	#!/usr/bin/env python
 	# -*- coding: utf-8 -*-
@@ -89,19 +89,21 @@ The following line is required: `web.wsgi.runwsgi = lambda func, addr=None: web.
 		web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 		app.run()
 
-Note: make your file executable by doing `chmod +x index.py`. You'll get errors if it isn't executable.
+注意: 同样需要给代码设置权限，代码如下chmod +x index.py。
 
-## Run
+## 运行
 
-1. Start a process with `spawn-fcgi`.
-2. Start Nginx.
+1. 打开一个 `spawn-fcgi` 进程.
+2. 打开 Nginx.
 
-To check if it runs do `ps aux | grep index.py` or simply visit the page in your browser.
+如果需要检查应用程序是否运行，使用`ps aux|grep index.py`可以很容易的查看。
 
-To reload your configuration:
+重启nginx配置:
 
 	/path/to/nginx/sbin/nginx -s reload
 
-And to stop:
+停止nginx:
 
 	/path/to/nginx/sbin/nginx -s stop
+
+注意：运行后可访问http://localhost访问网站，更多信息可以去参考nginx官方文档。
