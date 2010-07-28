@@ -225,11 +225,13 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [code samples](/src)
 
-* [Otimização de sites](http://otimizacao-de-websites.com/)
+* [Criar site](http://www.sitegratisgratis.com.br)
 
 * [friendly hosts](/hosts)
 
 * [related projects](/related)
+
+* [Joomla](http://www.hospedagemjoomla.com.br)
 
 * [tricks](/tricks)
 
