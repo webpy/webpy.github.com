@@ -94,7 +94,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [t]: http://taskodone.com/
 
-[Damiga][d] is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: [essay topics](http://www.essaybank.com), friends, celebrities, [desentupidora](http://desentupidorasanehidro.com.br/), even fictional characters. It's also a place where you can see how the world feels about you.  
+[Damiga][d] is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: friends, celebrities, [desentupidora](http://desentupidorasanehidro.com.br/), even fictional characters. It's also a place where you can see how the world feels about you.  
 
    [d]: http://damiga.com/
 
@@ -169,7 +169,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
    [32]: http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/
 
-"a very fascinating moment for me. The feelings just like the first time I wrote my php script as [relogio de ponto](http://www.mtksistemas.com.br/) ... it sure have let me learn python in the fun way (example here: [health insurance](http://echealthinsurance.com). Good work aaron !"   
+"a very fascinating moment for me. The feelings just like the first time I wrote my php script as [relogio de ponto](http://www.mtksistemas.com.br/) ... it sure have let me learn python in the fun way. Good work aaron !"   
 - Kamal [simple blog in webpy, learning python the fun way][33]
 
    [33]: http://www.k4ml.com/node/165
@@ -201,7 +201,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [english](http://webpy.org/tutorial)
     * [español](/tutorial/es)
     * português: [1](http://www.writely.com/View.aspx?docid=bbcm927cd2fmj) [2](http://www.writely.com/View.aspx?docid=bbcnjdbhbfh6n) [3](http://www.writely.com/View.aspx?docid=bccxp4cgw36p3)
-[4][auto](http://ecautoinsurance.com/)
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [p??????](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
@@ -227,35 +226,12 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [code samples](/src)
 
 * [Otimização de sites](http://otimizacao-de-websites.com/)
-* [buy retin-a online](http://www.care2.com/c2c/share/detail/1467419)
-
-* [web app blog](http://besteducationalblog.blogspot.com/)
-* [app blog](http://gamblingthings.blogspot.com/)
-* [blog](http://yourcardreams.blogspot.com/)
-* [app blog](http://startinginsmallbusiness.blogspot.com/)
-* [web app blog](http://yourseotools.blogspot.com/)
-* [app blog](http://myworldtraveling.blogspot.com/)
 
 * [friendly hosts](/hosts)
-* [Halloween Contacts](http://www.discount-lenses.com/halloween-contact-lenses.php)
 
 * [related projects](/related)
-* [Criar site](http://www.sitegratisgratis.com.br)
-
-* [related projects](/related)
-* [Empréstimo consignado](http://emprestimo-consignado.com/)
-
-* [related projects](/related)
-* [Decoração de festa](http://decoracao-festa.com/)
-
-* [related projects](/related)
-* [Decoração de interiores](http://decoracaoeinteriores.net/)
-
-* [related projects](/related)
-* [Consulta cpf](http://caionanet.net/2009/03/09/consulta-cpf-grtis/)
 
 * [tricks](/tricks)
-* [Hospedagem](http://hospedagemsites10.com.br)
 
 
 ### web.py community
@@ -268,7 +244,5 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 ### web.py development
 
 * [git repository](http://github.com/webpy/webpy)
-
-* [Torpedo grátis web](http://torpedogratisweb.com/)
 
 * [launchpad site](http://launchpad.net/webpy)
