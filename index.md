@@ -53,7 +53,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [Frinki](http://frinki.com), a Facebook-like social network in spanish.
 
-[Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
+[Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome." [job jena](http://www.jobs-jena.net/)
 
 [Oyster Hotel Reviews](http://www.oyster.com/), a website that reviews hotels and lets you book them, uses web.py for its booking pages and dynamic content. They note that "web.py gives us the control we need for a large-scale website".
 
@@ -225,13 +225,9 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [code samples](/src)
 
-* [Criar site](http://www.sitegratisgratis.com.br)
-
 * [friendly hosts](/hosts)
 
 * [related projects](/related)
-
-* [Joomla](http://www.hospedagemjoomla.com.br)
 
 * [tricks](/tricks)
 
@@ -244,6 +240,7 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 * [powered by web.py buttons](http://luke.jottit.com/webpy_logo)
 
 ### web.py development
+
 
 * [git repository](http://github.com/webpy/webpy)
 
