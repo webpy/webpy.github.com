@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Sessions (GSoC)
+title: Session
 ---
 
-# Sessions (GSoC)
+# Session
 
 # Usage
 [example](/sessions/example)
