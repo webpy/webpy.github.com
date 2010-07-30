@@ -1,9 +1,9 @@
 ---
 layout: default
-title: web.py 0.2 チュートリアル
+title: uVVFjrCeXizfCc
 ---
 
-# web.py 0.2 チュートリアル
+# uVVFjrCeXizfCc
 
 ## はじめに
 
