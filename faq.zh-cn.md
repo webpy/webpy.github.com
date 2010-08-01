@@ -33,7 +33,7 @@ title: FAQ
 
             def my_notfound(): 
                 print "MY OWN NOT FOUND" 
-            web.webapi.notfound = my_notfound 
+            web.notfound = my_notfound 
 
 99. **将webpy模块导入后，在python中如何才能够自动补全？**
 
