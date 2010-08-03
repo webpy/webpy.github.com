@@ -204,6 +204,8 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [p??????](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
+    * [Texas Whitetail Deer Hunts] (http://www.huntingtexastrophies.com/texas-hunting-packages/texas-whitetail-deer-hunting/)
+    * [Pacquiao Vs Margarito] (http://www.pacquiaomargarito.co.cc/)
 
 
 * [code documentation](/docs)
@@ -225,9 +227,21 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [code samples](/src)
 
+* [Tok stok moveis](http://dicasdedecoracoes.com/tok-stock-moveis/)
+
+* [Texas Fallow Deer Hunting] (http://huntingtexastrophies.com/texas-hunting-packages/fallow-deer-hunting/)
+
+* [Otimização de sites](http://otimizacao-de-websites.com/)
+
+* [Torpedo gratis web](http://torpedogratisweb.com/)
+
 * [friendly hosts](/hosts)
 
 * [related projects](/related)
+
+* [Box para banheiro](http://soboxparabanheiro.com/)
+
+* [Aoudad Sheep Hunts] (http://huntingtexastrophies.com/texas-hunting-packages/aoudad-sheep-hunting/)
 
 * [tricks](/tricks)
 
