@@ -51,7 +51,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [User authentication](/cookbook/userauth)
 * [User authentication with Postgresql database](/cookbook/userauthpgsql)
 * [Sessions with sub-apps](/cookbook/sessions_with_subapp)
-
+* [Unpack session stored in postgresql](/cookbook/unpack_postgres_session)
 
 ##Utils:
 * [Sending Mail](/cookbook/sendmail)
