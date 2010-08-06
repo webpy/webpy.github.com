@@ -13,6 +13,8 @@ When using session and storing some ids or any kind of stuff referencing a datab
 That's not a real problem, but if your session is stored in a postgresql database, this is wierd to take these fields in your database to unpack them in web.py and then re-use them in your queries. 
 A clean approach would be to access directly these informations in postgresql to read and/or write them.
 
+At the other end, this is also weird to take data in your database to bring them in web.py and then repack them in your database.
+
 ##Solution:
 
 To apply this recipe, you'll need to use postgresql DBStore for your sessions. 
