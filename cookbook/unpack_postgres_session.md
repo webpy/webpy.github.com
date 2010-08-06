@@ -11,9 +11,11 @@ When using session and storing some ids or any kind of stuff referencing a datab
 "select foo, bar from foobar_table where id=%s and id_foor=%s" % (session.id, session.id_foo)
 
 That's not a real problem, but if your session is stored in a postgresql database, this is wierd to take these fields in your database to unpack them in web.py and then re-use them in your queries. 
-A clean approach would be to access directly these informations in postgresql to read and/or write them.
 
 At the other end, this is also weird to take data in your database to bring them in web.py and then repack them in your database.
+
+A cleaner approach would be to access directly these informations in postgresql to read and/or write them.
+
 
 ##Solution:
 
