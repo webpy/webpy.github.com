@@ -96,7 +96,7 @@ Technically, as it uses the primary key indexes to match the session_id, seeking
 But, we can easily consider using general functions which unpack every session at once, making all of them readable in a view. The temptation is huge, but this is overkill because you shouldn't have to use every sessions data for one client handling only one session, and, more important, this would be an awful CPU and Memory killer. Don't do it ! 
 
 If you think of doing a lot of these operations, consider using triggers to unpack these fields when they're updated or inserted, this is quite better for database performance, opening the window to indexes and foreign keys... 
-Can you imagine the simplicity, and performance, you gain with a session instance raising a database exception when you try to set an id that violates a foreign key, with a synchronous and transactional behavior, and no more SQL to verify them ?
+Can you imagine the simplicity, and performance, you gain with a session instance raising a database exception when you try to set a value in your sessions that violates a database foreign key, with a synchronous and transactional behavior, and no more SQL to verify them ?
 
 This function is quite obvious, to demonstrate how to access session data, but it doesn't handle any kind of exceptions. So, don't use it as this for production matters, it needs enlightenment to be as stable and functionnal as needed ;)
 
