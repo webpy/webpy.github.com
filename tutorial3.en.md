@@ -157,7 +157,7 @@ If you wish to learn more about web.py templates, vist the [templetor page](/doc
 ## Forms
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
-If you want to learn more about using the module forms web.py, see the [Documentation](http://webpy.org/docs/0.3) or direct link to [Form Library](http://webpy.org/form)
+If you want to learn more about using the module forms web.py, see the [Documentation](http://webpy.org/docs/0.3) [custom writing](http://customwritingservices.org/) or direct link to [Form Library](http://webpy.org/form) [Translation](http://profischnell.com)
 
 
 <a name="databasing"></a>
