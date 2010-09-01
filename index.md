@@ -53,17 +53,17 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [Frinki](http://frinki.com), a new social network in Spanish.
 
-[Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome." [job jena](http://www.jobs-jena.net/)
+[Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
 
 [Oyster Hotel Reviews](http://www.oyster.com/), a website that reviews hotels and lets you book them, uses web.py for its booking pages and dynamic content. They note that "web.py gives us the control we need for a large-scale website".
 
-[local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master)
+[local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master).
 
 [sitecanary.com](https://sitecanary.com/) a site for being alerted if your website is down.
 
 [watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
-[archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py
+[archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py.
 
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
 
@@ -204,9 +204,6 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
     * [français](http://sunfox.org/tutoriel-web-py-fr/)
     * [p??????](http://bobuk.infogami.com/webpytrans)
     * [日本語](http://kinneko.googlepages.com/webpy_tutorial_ja)
-    * [Texas Whitetail Deer Hunts] (http://www.huntingtexastrophies.com/texas-hunting-packages/texas-whitetail-deer-hunting/)
-    * [Pacquiao Vs Margarito] (http://www.pacquiaomargarito.co.cc/)
-
 
 * [code documentation](/docs)
 
@@ -227,21 +224,9 @@ The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 * [code samples](/src)
 
-* [Tok stok moveis](http://dicasdedecoracoes.com/tok-stock-moveis/)
-
-* [Texas Fallow Deer Hunting] (http://huntingtexastrophies.com/texas-hunting-packages/fallow-deer-hunting/)
-
-* [Otimização de sites](http://otimizacao-de-websites.com/)
-
-* [Torpedo gratis web](http://torpedogratisweb.com/)
-
 * [friendly hosts](/hosts)
 
 * [related projects](/related)
-
-* [Box para banheiro](http://soboxparabanheiro.com/)
-
-* [Aoudad Sheep Hunts] (http://huntingtexastrophies.com/texas-hunting-packages/aoudad-sheep-hunting/)
 
 * [tricks](/tricks)
 
