@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Alternating Style
+title: 交替风格
 ---
 
-# Alternating Style
+# 交替风格
 
 ### 问题: 
 
-You want to alternate the background color of a list's elements as you dynamically generate it from a passed sequence.
+你想通过数据集合动态的生成交替背景色的列表.
 
 ### 方法: 
 
