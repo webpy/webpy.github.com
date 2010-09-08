@@ -1,9 +1,9 @@
 ---
 layout: default
-title: æ´å SQLite UDF (ç¨æ·å®ä¹å½æ°) å° webpy æ°æ®åºå±
+title: 整合 SQLite UDF (用户定义函数) 到 webpy 数据库层
 ---
 
-# æ´å SQLite UDF (ç¨æ·å®ä¹å½æ°) å° webpy æ°æ®åºå±
+# 整合 SQLite UDF (用户定义函数) 到 webpy 数据库层
 
 问题：
 
