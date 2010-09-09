@@ -28,7 +28,7 @@ Other languages : [français](/docs/0.3.fr) | ...
 * [Templates](/docs/0.3/templetor). Templetor, the web.py templating system
 * [Forms](/form). Dealing with user input
 * [Application processors](/docs/0.3/app_processors). Run code before each request.
-* [Sessions](/docs/0.3/sessions). Store persistent data per user across requests.
+* [Sessions](/docs/0.3/sessions). Store persistent data per user across requests. 
 * Database
 * Testing
 
