@@ -38,6 +38,9 @@ create a load hook and used sqlalchemy's [scoped session] (http://www.sqlalchemy
             raise
         finally:
             web.ctx.orm.commit()
+            # If the above alone doesn't work, uncomment 
+            # the following line:
+            #web.ctx.org.expunge_all() 
 
 
     app = web.application(urls, locals())
