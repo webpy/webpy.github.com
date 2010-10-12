@@ -5,18 +5,18 @@ title: How to use templates on Google App Engine
 
 # How to use templates on Google App Engine
 
-## Problem
+## 问题
 
-How to use templates on Google App Engine
+如何在 Google App Engine 上使用模板
 
-## Solution
+## 解答
 
-web.py templetor compiles the templates to python source, which requires accessing parser module of python standard library. Unfortunately that module is blocked in GAE for security reasons. 
+web.py templetor 把模板编译成 python 字节码，这需要访问标准库中的 parser 模块。不幸的是，由于安全原因 GAE 禁用了这个模块。
+ 
+为了克服这个状况，web.py 支持把模板编译成 python 代码，从而避免在 GAE 上使用原来的模板。web.py 确保在应用这种方法的时候模板中的代码不需要任何改变。
 
-To overcome that situation, web.py supports compiling the templates to python code so that the compiled sources can be used on GAE instead of the original templates. web.py makes sure that no code changes are required to use templates in this way.
-
-To compile all templates in a template dir (has to be redone each time a template has changed):
+为了编译一个文件夹中所有的模板（一旦有模板改动，就需要重新运行），运行：
 
     $ python web/template.py --compile templates
 
-This compiles all templates in templates/ dir recursively and creates `__init__.py` with all the templates in that dir. On GAE, `web.template.render` is re-written to treat `templates/` as python module.
+以上命令把 templates/ 目录下的模板文件递归地全部编译，并且生产 `__init__.py`， 'web.template.render` 重新编写过，它将视 templates 为一个 python 模块。
