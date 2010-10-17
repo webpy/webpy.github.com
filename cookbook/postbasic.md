@@ -9,7 +9,7 @@ Other languages: [français](/../cookbook/postbasic/fr) | ...
 
 ## Introduction
 
-Sometimes, the client send a lot of data by post method. In webpy, you can handle it like this.
+Sometimes, the client sends a lot of data by the POST method. In webpy, you can handle it like this.
 
 
 ## Code
