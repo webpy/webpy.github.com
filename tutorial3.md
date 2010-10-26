@@ -94,7 +94,7 @@ Save the file and run the following command to start your application:
 
 The first output of your application is the address of your web site. By default this is:
 
-    http://0.0.0.0:8080/
+    http://locahost:8080/
 
 Open this address with your web browser. That's it. Congrats! You can stop your application at any time by pressing `ctrl+c` in the terminal.
 
@@ -113,7 +113,7 @@ As mentioned above, each page needs a unique address. Modify your list of URLs a
 
     urls = (
       '/', 'hello',
-      '/bye/', 'bye')
+      '/bye', 'bye')
 
 This will make your class `bye` respond to requests at `/bye/`. Now start your application and open `http://localhost:8080/bye/` in your browser.
 
@@ -132,13 +132,13 @@ hello.py
     
     urls = (
       '/', 'hello',
-      '/bye/', 'bye')
+      '/bye', 'bye')
     
-    app = web.application(urls, globals(), web.reloader)
+    app = web.application(urls, globals(), True)
     
     class hello:
         def GET(self):
-            return time.ctime()
+            return 'Hello, web!'
     
     class bye:
         def GET(self):
@@ -161,7 +161,7 @@ Change the "hello" class above so it looks like this:
             i = web.input(name = 'web')
             return 'Hello, ' + web.websafe(i.name) + '!'
         
-Run the script, and then go to http://0.0.0.0:8080/?name=Luke .  You should see "Hello, Luke!."
+Run the script, and then go to http://localhost:8080/?name=Luke .  You should see "Hello, Luke!."
 
 Here is what is happening:
 
@@ -227,9 +227,9 @@ hello.py
     
     urls = (
       '/', 'hello',
-      '/bye/', 'bye')
+      '/bye', 'bye')
     
-    app = web.application(urls, globals(), web.reloader)
+    app = web.application(urls, globals(), True)
     
     class hello:
         def GET(self):
@@ -310,13 +310,13 @@ hello.py
       '/', 'hello',
       '/bye/', 'bye')
     
-    app = web.application(urls, globals(), web.reloader)
+    app = web.application(urls, globals(), True)
     
     render = web.template.render('templates/')
     
     class hello:
         def GET(self):
-            return render.hello("Templates demo", "Hello", "A long time ago...", "bla")
+            return render.hello("Templates demo", "Hello", "A long time ago...")
     
     class bye:
         def GET(self):
