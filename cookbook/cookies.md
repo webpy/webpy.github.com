@@ -77,7 +77,7 @@ or
 
     class CookieGet:
         def GET(self):
-            age=web.cookies().get(age)
+            age=web.cookies().get('age')
             if age:
                 return "Your age is: %s" % age
             else:
