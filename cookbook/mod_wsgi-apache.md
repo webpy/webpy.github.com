@@ -57,7 +57,7 @@ If you use sessions with mod_wsgi, you should change you code like below:
     app = web.application(urls, globals())
 
     curdir = os.path.dirname(__file__)
-    session = web.session.Session(app, web.session.DiskStore(curdir + '/' + 'sessions'),)
+    session = web.session.Session(app, web.session.DiskStore(os.path.join(curdir,'sessions')),)
 
     application = app.wsgifunc()
 
