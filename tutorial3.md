@@ -18,7 +18,7 @@ This is a work-in-progress
 
 TODO: move the next paragraph over to install?
 
-To create a website with web.py you need to know the Python programming language and have it installed. Installation instructions for Python can be found at [http://python.org/][pacquiao vs margarito](http://mysmartblog.net/) .If you don't know if Python is installed on your system, open a terminal and type `python`. A great starting point to learn Python is the official [tutorial] (http://docs.python.org/tut/tut.html). If you are new to programming in general, [Think Python] (http://www.greenteapress.com/thinkpython/) is a wonderful book to understand key concepts in programming. 
+To create a website with web.py you need to know the Python programming language and have it installed. Installation instructions for Python can be found at [http://python.org/](http://python.org/) .If you don't know if Python is installed on your system, open a terminal and type `python`. A great starting point to learn Python is the official [tutorial] (http://docs.python.org/tut/tut.html). If you are new to programming in general, [Think Python] (http://www.greenteapress.com/thinkpython/) is a wonderful book to understand key concepts in programming. 
 
 ## TOC
 
@@ -403,7 +403,7 @@ hello.py
       '/', 'hello',
       '/bye/', 'bye')
     
-    app = web.application(urls, globals(), web.reloader)
+    app = web.application(urls, globals(), autoreload=True)
     
     render = web.template.render('templates/', base='base')
     
