@@ -37,7 +37,7 @@ The path of this URL is _/myapp/greetings/hello_.  web.py will internally add ^ 
 
 In the url pattern you can catch parameters which can be used in your handler class:
 
-    /users/list/(.+), "list_users"
+    "/users/list/(.+)", "list_users"
 
 The chunk after _list/_ are captured and can be used as a parameter in GET or POST:
 
