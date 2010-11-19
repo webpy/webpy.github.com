@@ -667,8 +667,13 @@ hello.py
     
     app = web.application(urls, globals())
     render = web.template.render('templates/')
-    session = web.session.Session(app, web.session.DiskStore('sessions'),
+
+    if web.config.get('_session') is None:
+        session = web.session.Session(app, web.session.DiskStore('sessions'),
                                   initializer={'user': 'anonymous'})
+        web.config._session = session
+    else:
+        session = web.config._session
     
     signin_form = form.Form(form.Textbox('username',
                                          form.Validator('Unknown username.',
