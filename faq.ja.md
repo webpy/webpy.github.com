@@ -77,4 +77,4 @@ title: faq
 
 99. **もしwebpyの不具合(バグ)を見つけた場合どこで報告すればいいのですか？**
 
-    [ここ(webpy launchpad site)](https://launchpad.net/webpy)からバグ報告することができます。ログインが必要な場合は登録を行ってからバグ報告をしてください。
+    [ここ(webpy launchpad site)](https://launchpad.net/webpy) からバグ報告することができます。ログインが必要な場合は登録を行ってからバグ報告をしてください。
