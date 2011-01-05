@@ -1,0 +1,12 @@
+body                { font-family: "lucida grande", "lucida sans unicode", lucida, verdana, geneva, sans-serif;}
+pre                 { border: 1px solid #ccc; background-color: #eee; padding: .5em; font-size: smaller; }
+.mainexample        { margin: 1.5em; text-align: left; width=100%;}
+a                   { text-decoration: none;}
+a:visited           { color: #5959ff;}
+a:hover             { color: #0000ff;}
+
+h2                  { margin: 0;}
+
+#hdr                { text-align: left; padding: 0; margin: 0;}
+#nav                { float: left; width: 100px; height: 1400px; padding:10px; background: url(../webpy_files/back.png) 0 0;}
+#main               { margin-left: 150px; margin-right: 120px; padding:0px;}

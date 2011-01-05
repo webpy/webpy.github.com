@@ -1,0 +1,133 @@
+body {
+     margin: 0;
+     padding: 0;
+     background-color: #eee;
+     color: #;
+     font-family: "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
+     font-size: 110%;
+}
+.body { font-family: Helvetica, Arial, sans-serif; }
+
+a {
+  color: #32a81e;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+            color: #505050;
+	    font-family: "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
+            font-weight: normal;
+}
+
+h1 { font-size: 120%; }
+h2 { font-size: 100%; }
+h3 { font-size: 90%; }
+h4 { font-size: 85%; }
+
+img { border: none; }
+
+pre {
+    padding: 10px 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: #272727;
+    font-size: 80%;
+}
+
+strong {
+       color: #505050;
+       font-weight: normal;
+}
+
+/* Header */
+#header {
+        height: 100px;
+}
+
+#header img {
+        padding: 18px 0 0 20px;
+}
+
+#header .blurb {
+        position: absolute;
+        left: 32%;
+        padding-top: 25px;
+        font-size: 120%;
+}
+
+/* Breadcrumbs */
+#location {
+          padding: 13px 20px;
+          background-color: #a7a7a7;
+          color: #000;
+}
+
+#location a {
+          color: #000;
+}
+
+#location .selected, #location strong {
+          color: #49b237;
+}
+
+/* Column separator */
+#container {
+           background: #fff url(static/col.gif) repeat-y 140px 0;
+}
+
+/* Sidebar */
+#sidebar {
+         float: left;
+         width: 121px;
+         padding: 20px 0 20px 30px;
+}
+
+#sidebar, #sidebar a {
+          color: #6a6a6a;
+}
+
+#sidebar a:hover {
+         color: #000; text-decoration: underline;
+}
+
+#sidebar h1,h2,h3,h4 {
+         margin: 0;
+}
+
+#sidebar li {
+/*         list-style: none;*/
+list-style-type: circle;
+
+}
+
+#sidebar li.selected a {
+         color: #fff;
+}
+
+#sidebar ul {
+         margin: 0 0 15px;
+         padding: 0px;
+}
+
+/* Content */
+#main {
+      margin-left: 141px;
+      padding: 5px 32px 15px 32px;
+      color: #3a3a3a;
+}
+
+#main a {
+      color: #217214;
+}
+
+#main .login {
+      float: right;
+      font-size: 80%;
+}
+
+/* Footer */
+#footer {
+        padding: 20px 32px;
+        font-size: 80%;
+        text-align: center;
+}

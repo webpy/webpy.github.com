@@ -1,0 +1,158 @@
+/*
+Copyright (c) 2008-2009, by Branko Vukelic <bg.branko@gmail.com>. 
+All rights reserved.
+Code licensed under the BSD License:
+version: 0.1.2-pre2
+*/
+
+/* # Image replacement 
+ * 
+ * ## Example usage:
+ *
+ * 1. You don't want the image to be clickable:
+ *
+ *  <h1 class="fox-irp">Text that needs to go away<span class="fox-irc">&nbsp;</span></h1>
+ * 
+ * 2. You want the image to be clickable:
+ *
+ *  <h1 class="fox-irp">
+ *      <a href="http://...." class="fox-irc hidetext">Text that needs to go away</a>
+ *  </h1>
+ *
+ */
+
+.fox-irp {
+    position: relative;
+    overflow: hidden;
+}
+
+.fox-irc {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.hidetext {
+    text-indent: -9999px;
+}
+
+/* # Complex backgrounds
+ *
+ * The following part of the CSS is poorly tested and you should be very 
+ * careful with it. Also keep in mind that this stylesheet is always used in
+ * conjunction with YUI CSS reset-fonts-grids styles.
+ *
+ * http://developer.yahoo.com/yui/grids/
+ *
+ * ## Example usage:
+ *
+ * 1. The top-middle-bottom layout:
+ * 
+ *  <div class="fox-bg bg-m bg-v">
+ *      <div class="fox-bg bg-t bg-nr">
+ *          <div class="fox-bg bg-b bg-nr">
+ *              <!-- Content goes here. This will produce a three-part box
+ *              with top, middle and bottom sections. Note that the
+ *              outermost DIV is the middle section, not top. -->
+ *          </div>
+ *      </div>
+ *  </div>
+ *
+ *  2. The four-corner layout:
+ *
+ *  <!-- You can also wrap the following DIV with
+ *  another DIV.bg-m to set the global background -->
+ *  <div class="fox-bg bg-tleft bg-nr">
+ *      <span class="fox-bg bg-tright bg-nr">
+ *          <span class="fox-bg bg-bleft bg-nr">
+ *              <span class="fox-bg bg-bright bg-nr>
+ *                  <!-- Content goes here -->
+ *              </span>
+ *          </span>
+ *      </span>
+ *  </div>
+ *
+ *  With the second example, some more tweaking is necessary in the main 
+ *  stylesheet. You need to make all span elements display:block, and also
+ *  position:absolute, with width and height set to 100%, top, and left to 0.
+ *  A beta version of .bg-block selector is available for exactly that,
+ *  but it is poorly tested at this moment. Feedback is welcome!
+ *  
+ *  3. Variable height top-middle-bottom layout:
+ *
+ *  <div class="fox-bg bg-m bg-v">
+ *      <div class="bg-block bg-t bg-nr"></div>
+ *      <div>
+ *          <!-- place your content here -->
+ *      </div>
+ *      <div class="bg-block bg-b bg-nr"></div>
+ *  </div>
+ *
+ */
+
+.fox-bg {
+    background-color: transparent;
+    position: relative;
+}
+
+.bg-nr {
+    background-repeat: no-repeat;
+}
+
+.bg-h {
+    background-repeat: repeat-x;
+}
+
+.bg-v {
+    background-repeat: repeat-y;
+}
+
+.bg-block {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bg-t {
+    background-position: top;
+}
+
+.bg-tleft {
+    background-position: top left;
+}
+
+.bg-tright {
+    background-position: top right;
+}
+
+.bg-m {
+    background-position: center;
+}
+
+.bg-mleft {
+    background-position: center left;
+}
+
+.bg-mright {
+    background-position: center right;
+}
+
+.bg-b {
+    background-position: bottom;
+}
+
+.bg-bleft {
+    background-position: bottom left;
+}
+
+.bg-bright {
+    background-position: bottom right;
+}
+

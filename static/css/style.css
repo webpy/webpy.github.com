@@ -1,0 +1,309 @@
+/*
+ * COLOR SCHEME
+ *
+ * text color:      #22241c
+ * menu bg:         #447821
+ * menu text:       #cdde87
+ * breadcrumb bg:   #c3c8b7
+ * visited link:    #454837
+ * page:            #dee3db
+ *
+ */
+
+
+body, html {
+    background-color: #dee3db;
+    color: #22241c;
+}
+
+/*
+ * HEADER
+ *
+ */
+
+#header {
+    height: 132px;
+    background-color: #c3c8b7;
+}
+
+#header_logo {
+    width: 364px;
+    height: 132px;
+    float: left;
+}
+
+#header_logo .fox-irc {
+    background-image: url('../images/header.jpg');
+}
+
+#header_quote {
+    padding-top: 50px;
+    padding-left: 40%;
+    font-family: Georgia, Century, "Century Schoolbook", serif;
+    font-size: 123.1%;
+    font-style: italic;
+}
+
+#header_quote a {
+    color: #447821;
+}
+
+#header_quote a:visited {
+    color: #dee3db;
+}
+
+/*
+ * PRIMARY NAVIGATION
+ *
+ */
+
+
+#primary_nav {
+    background-color: #447821;
+    color: #cdde87;
+    height: 36px;
+    font-size: 123.1%
+}
+
+#primary_nav a {
+    color: #cdde87;
+    text-decoration: none;
+}
+
+#primary_nav .active {
+    color: #22241c;
+}
+
+#primary_nav a:hover {
+    color: #fff;
+}
+
+#primary_nav li {
+    float: left;
+    margin-left: 1em;
+}
+
+#primary_nav div {
+    position: relative;
+}
+
+#primary_nav .active {
+    background-image: url('../images/current_location.png');
+    background-position: center -36px;
+    background-repeat: repeat-x;
+}
+
+#primary_nav .menu_right_deco {
+    padding: 9px 10px 4px 10px;
+    text-align: center;
+}
+
+#primary_nav .active .menu_left_deco,
+#primary_nav .active .menu_right_deco {
+    background-image: url('../images/current_location.png');
+    background-repeat: no-repeat;
+}
+
+#primary_nav .active .menu_right_deco {
+    background-position: right -72px;
+}
+
+#home, #rss {
+    width: 44px;
+    height: 36px;
+}
+
+#home {
+    float: left;
+    margin-right: 1em;
+}
+
+#rss {
+    float: right;
+}
+
+#home a, #rss a, #home span {
+    background-image: url('../images/menu_icons.png');
+}
+
+#rss a {
+    background-position: center -108px;
+}
+
+#home a:hover {
+    background-position: center -36px;
+}
+
+#home span {
+    background-position: center -72px;
+}
+
+#rss a:hover {
+    background-position: center -144px;
+}
+
+/* 
+ * BREADCRUMBS
+ *
+ */
+
+#breadcrumbs {
+    background-color: #c3c8b7;
+    height: 20px;
+    padding-top: 4px;
+    padding-left: 1em;
+}
+
+#breadcrumbs a {
+    color: #22241c;
+    text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+    color: #fff;
+}
+
+#breadcrumbs strong {
+    font-weight: bold;
+}
+
+/*
+ * TOOLBOX
+ *
+ */
+
+#toolbox {
+    height: 24px;
+    background-color: #fff;
+}
+
+#dashboard {
+    float: right;
+    padding: 3px 10px 0 28px;
+    height: 21px;
+    background-color: #447821;
+    color: #cdde87;
+    background-image: url('../images/toolbox_corner.png');
+    background-repeat: no-repeat;
+}
+
+#dashboard a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*
+ * CONTENT
+ *
+ */
+
+#content {
+    padding: 1em 6em 3em 4em;
+    background-color: #fff;
+    color: #22241c;
+}
+
+#content h1, h2, h3, h4, h5 {
+    font-family: Georgia, Century, "Century Schoolbook", serif;
+}
+
+#content h1 {
+    font-size: 250%;
+    margin-bottom: 1em;
+    color: #447821;
+}
+
+#content h2 {
+    font-size: 197%;
+    margin-bottom: 1em;
+    color: #447821;
+}
+
+#content h3 {
+    font-size: 167%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #abc837;
+}
+
+#content h4 {
+    font-size: 138.5%;
+    margin: 2em 0 1em 39px;
+}
+
+#content h5 {
+    margin-bottom: 1em;
+    margin-left: 3em;
+}
+
+#content p {
+    margin-left: 39px;
+    margin-bottom: 1em;
+    font-size: 116%;
+}
+
+#content em {
+    font-style: italic;
+}
+
+#content strong {
+    font-weight: bold;
+}
+
+#content a {
+    color: #447821;
+}
+
+#content a:visited {
+    color: #454837;
+}
+
+#content ul,
+#content ol,
+#content blockquote {
+    margin-left: 6em;
+    margin-left: 2em;
+}
+
+#content ul {
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+#content ul li {
+    list-style: disc;
+}
+
+#content pre {
+/*    background-image: url('../images/code_block.png');  */
+
+    background: #dde8dd;
+    background-repeat: repeat-y;
+    padding: 1em;
+    margin: 0 0 1em 39px;
+    border: 1px solid #dee3db;
+}
+
+#content code {
+    font-family: Courier, "Courier New", monospace;
+}
+
+/*
+ * FOOTER
+ *
+ */
+
+#footer {
+    background-color: #447821;
+    color: #cdde87;
+    padding: 0.5em 0 1em;
+    text-align: center;
+}
+
+#content li p {
+    margin-left: 0px;
+}
+
+#footer a {
+    color: #cdde87;
+}
