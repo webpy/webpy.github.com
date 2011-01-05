@@ -1,0 +1,3 @@
+safe: false
+pygments: true
+markdown: rdiscount
