@@ -2,11 +2,11 @@ body {
      margin: 0;
      padding: 0;
      background-color: #eee;
-     color: #;
+     color: black;
      font-family: "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
      font-size: 110%;
 }
-.body { font-family: Helvetica, Arial, sans-serif; }
+.body { font-family: Georgia, serif; }
 
 a {
   color: #32a81e;
@@ -15,7 +15,6 @@ a {
 
 h1,h2,h3,h4 {
             color: #505050;
-	    font-family: "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
             font-weight: normal;
 }
 
@@ -113,7 +112,7 @@ list-style-type: circle;
 #main {
       margin-left: 141px;
       padding: 5px 32px 15px 32px;
-      color: #3a3a3a;
+      color: black;
 }
 
 #main a {
