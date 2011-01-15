@@ -3,7 +3,7 @@ layout: default
 title: Welcome to web.py!
 ---
 
-**web.py** is a web framework for python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
+**web.py** is a web framework for Python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
 
 <div style="float: right">
 <pre>
