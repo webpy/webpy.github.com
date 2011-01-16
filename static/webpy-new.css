@@ -17,14 +17,18 @@ a {
 }
 
 h1,h2,h3,h4 {
-            color: #505050;
+            color: #333;
+
+	    border-bottom: 1px solid #aaa;
             font-weight: normal;
 }
 
+/*
 h1 { font-size: 120%; }
 h2 { font-size: 100%; }
 h3 { font-size: 90%; }
 h4 { font-size: 85%; }
+*/
 
 img { border: none; }
 
