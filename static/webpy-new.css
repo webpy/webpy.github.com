@@ -55,21 +55,25 @@ strong {
 }
 
 #header .blurb {
-        position: absolute;
-        left: 32%;
-        padding-top: 25px;
-        font-size: 120%;
+    vertical-align: bottom;
+    text-align: right;
+    padding-top: 25px;
+    font-size: 120%;
 }
+
+.header { width: 100%; }
+.logo { vertical-align: top; }
 
 /* Breadcrumbs */
 #location {
-          padding: 13px 20px;
-          background-color: #a7a7a7;
-          color: #000;
+    padding: 5px 15px;
+    background-color: #747473;
+    color: #ddd;
 }
 
 #location a {
-          color: #000;
+    color: #fff;
+    text-decoration: underline;
 }
 
 #location .selected, #location strong {
