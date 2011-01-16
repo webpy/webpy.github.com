@@ -5,7 +5,11 @@ body {
      color: black;
      font-family: "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
 }
-.body { font-family: Georgia, serif; }
+.body { 
+font-family: arial,helvetica,clean,sans-serif;
+font-size: 13px;
+line-height: 1.5em;
+}
 
 a {
   color: #32a81e;
