@@ -58,6 +58,7 @@ strong {
     vertical-align: bottom;
     text-align: right;
     padding-top: 25px;
+    padding-right: 2em;
 }
 
 .header { width: 100%; }
