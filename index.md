@@ -5,7 +5,7 @@ title: Welcome to web.py!
 
 **web.py** is a web framework for Python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
 
-<div style="float: right">
+<div style="float: right; margin: 1em">
 <pre>
 import web
         
@@ -43,24 +43,24 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [20]: http://reddit.com/
 
-[Frinki](http://frinki.com), a new social network in Spanish.
+* [Frinki](http://frinki.com), a new social network in Spanish.
 
-[Yandex][21], the leading Russian search engine (their homepage alone receives 70 million daily page views).
+* [Yandex][21], the leading Russian search engine (their homepage alone receives 70 million daily page views).
 
    [21]: http://yandex.ru
 
-[Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
+* [Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
 
-[Oyster Hotel Reviews](http://www.oyster.com/), a website that reviews hotels and lets you book them, uses web.py for its booking pages and dynamic content. They note that "web.py gives us the control we need for a large-scale website".
+* [Oyster Hotel Reviews](http://www.oyster.com/), a website that reviews hotels and lets you book them, uses web.py for its booking pages and dynamic content. They note that "web.py gives us the control we need for a large-scale website".
 
-[local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master).
+* [local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master).
 
-[archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py.
+* [archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py.
 
-[Chiefmall](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
+* [Chiefmall](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
- - [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine
+<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
 
 "In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
 - Lloyd Dalton, [colr.org](http://colr.org)
