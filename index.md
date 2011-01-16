@@ -62,44 +62,10 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
 
-"In the ecosystem of web frameworks, something needs to occupy the 'small, light and fast' niche. web.py is it."  
-- Lloyd Dalton, [colr.org](http://colr.org)
-
-"We completed our server rewrite a few days ago with web.py and it was everything we could have wished for."  
-- Sam Hsiung, [YouOS][25]
-
-   [25]: http://www.youos.com/
-
 "Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."  
-- Adam Atlas
-
-"very nicely written and concise (not to mention it's written by Aaron Swartz, whose coding skills are very trustable), and doesn't get in my way"   
-- Jonas Galvez, Aupeo [#][26]
-
-   [26]: http://shortb.net/~f561f1
-
-"the first framework ... where I could just scribble code and see something working without even having to try to understand the logic of it. A pleasure to integrate."   
-- Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it
-
-   [28]: http://www.tendances-de-mode.com/
-   [34]: http://metagenda.org
+<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Adam Atlas</span>
 
 "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
-- Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]
+<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]</span>
 
    [30]: http://shortb.net/~f561f2
-
-"... the [Cheetah] example I saw on web.py looks "right". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"   
-- Guido van Rossum, creator of Python [#][31] (the magic, like upvars, has since been removed)
-
-   [31]: http://shortb.net/+f561f3
-
-"suffice to say I think Aaron is headed in the right direction."   
-- Harry Fuecks: [a simple wiki with web.py][32]
-
-   [32]: http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/
-
-"a very fascinating moment for me. The feelings just like the first time I wrote my php script ... it sure have let me learn python in the fun way. Good work aaron !"   
-- Kamal [simple blog in webpy, learning python the fun way][33]
-
-   [33]: http://www.k4ml.com/node/165
