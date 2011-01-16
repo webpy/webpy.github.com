@@ -17,8 +17,8 @@ a {
 }
 
 h1,h2,h3,h4 {
-            color: #333;
-
+	    color: #333;
+	    padding: 15px 0 5px 0;
 	    border-bottom: 1px solid #aaa;
             font-weight: normal;
 }
