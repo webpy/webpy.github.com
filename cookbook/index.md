@@ -5,25 +5,9 @@ title: Web.py Cookbook
 
 # Web.py Cookbook
 
-Other languages :[chinese 简体中文](/cookbook/zh-cn) | [japan 日本語](/cookbook/ja) |  [français](/cookbook/fr) | ...
+_Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/index.ja) |  [Français](/cookbook/index.fr)
 
-Cookbook style documentation for web.py 0.3. Note that some of these features aren't available in previous versions.  Currently version 0.3 is the development branch.
-
-#Formatting
-
-1. In terms of formatting, please try to use a cookbook-like format...that is:
-    
-    ###Problem: You want to access data from database.
-     
-    ###Solution: Use this code...
-
-1. Note that the urls don't need "web" in them -- just "/cookbook/select" , not "/cookbook/web.select".  
-
-1. Finally, this documentation is for version 0.3, so please only add code that you know works with the new version.
-
--------------------------------------------------
-
-##Basics:
+## Basics
 * [Hello World](/cookbook/helloworld)
 * [Serving Static Files](/cookbook/staticfiles)
 * [Understanding URL handling](/cookbook/url_handling)
@@ -32,8 +16,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Serving XML](/cookbook/xmlfiles)
 * [Reading raw data from post](/cookbook/postbasic)
 
-
-##Advanced
+## Advanced
 * [Contextual and Environment variables - web.ctx](/cookbook/ctx)
 * [Application processors, loadhooks and unloadhooks](/cookbook/application_processors)
 * [How to use web.background](/cookbook/background)
@@ -43,7 +26,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [SSL support in built-in cherrypy server](/cookbook/ssl)
 * [Run-time language switch](/cookbook/runtime-language-switch)
 
-##Sessions and user state:
+## Sessions and user state
 * [Working with Session](/cookbook/sessions)
 * [Using session with reloader](/cookbook/session_with_reloader)
 * [Using session in template](/cookbook/session_in_template)
@@ -54,12 +37,12 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Sessions with sub-apps](/cookbook/sessions_with_subapp)
 * [Unpack session stored in postgresql](/cookbook/unpack_postgres_session)
 
-##Utils:
+## Utils
 * [Sending Mail](/cookbook/sendmail)
 * [Sending Mail Using Gmail](/cookbook/sendmail_using_gmail)
 * [Webservice using soaplib + WSDL](/cookbook/webservice)
 
-##Templates:
+## Templates
 * [Templetor: The web.py templating system](/docs/0.3/templetor )
 * [Using Site Layout Templates](/cookbook/layout_template)
 * [Alternating Style](/cookbook/alternating_style)
@@ -71,11 +54,11 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [How to use templates on Google App Engine](/cookbook/templates_on_gae)
 * [Concatenate two rendered templates](/cookbook/concatenate_two_rendered_templates)
 
-##Testing:
+## Testing
 * [Testing with Paste and Nose](/cookbook/testing_with_paste_and_nose)
 * [RESTful doctesting using an application's request method](/cookbook/restful_doctesting_using_request)
 
-##User Input:
+## User input
 * [File Upload](/cookbook/fileupload)
 * [Store an uploaded file](/cookbook/storeupload)
 * [How to put a limit of size of uploaded files](/cookbook/limiting_upload_size)
@@ -83,7 +66,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [How to use forms](/cookbook/forms) 
 * [Render individual form fields](/cookbook/form_fields)
 
-##Database:
+## Databases
 * [Multiple databases](/cookbook/multidbs)
 * [Select: Retrieving entries from a database](/cookbook/select)
 * [Update: Updating entries in a database](/cookbook/update)
@@ -96,7 +79,7 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [Using a dictionary as where clause](/cookbook/where_dict)
 
 
-##Deployment:
+## Deployment
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
 * [Fastcgi deployment through Apache](/cookbook/fastcgi-apache) 
 * [CGI deployment through Apache](/cookbook/cgi-apache)
@@ -105,5 +88,5 @@ Cookbook style documentation for web.py 0.3. Note that some of these features ar
 * [mod_wsgi deployment through Nginx](/cookbook/mod_wsgi-nginx )
 * [Fastcgi deployment through Nginx](/cookbook/fastcgi-nginx)
 
-##Subdomains:
+## Subdomains
 * Subdomains and how to access the username (requested)
