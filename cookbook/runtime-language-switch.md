@@ -10,7 +10,7 @@ How to implement run-time language switch?
 
 ## Solution:
 
- * You must read [i18n support in template file](/i18n_support_in_template_file) first, and then try below code.
+ * You must read [i18n support in template file](i18n_support_in_template_file) first, and then try below code.
 
 File: code.py
 
