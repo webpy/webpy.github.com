@@ -65,6 +65,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Accessing user input through web.input](/cookbook/input)
 * [How to use forms](/cookbook/forms) 
 * [Render individual form fields](/cookbook/form_fields)
+* [How to protect forms from CSRF attacks](/cookbook/csrf) 
 
 ## Databases
 * [Multiple databases](/cookbook/multidbs)
