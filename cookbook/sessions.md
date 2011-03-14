@@ -13,7 +13,7 @@ How to use sessions in web.py.
 
 ### Solution
 
-*sessions doesn't work in [debug](/tutorial3.en#developing) mode because it interfere with reloading. see [session_with_reloader](/session_with_reloader) for more details.*
+*sessions doesn't work in [debug](/tutorial3.en#developing) mode because it interfere with reloading. see [session_with_reloader](session_with_reloader) for more details.*
 
 The `web.session` module provides session support. Here is a simple application to count using sessions.
 

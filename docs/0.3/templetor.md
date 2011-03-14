@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Templetor: The web.py templating system
+title: Templetor - The web.py templating system
 ---
 
 # Templetor: The web.py templating system
