@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
 ## Get Started
 
-web.py 0.34 is the latest released version of web.py. You can install it by running:
+web.py 0.35 is the latest released version of web.py. You can install it by running:
 
     sudo easy_install web.py
 
