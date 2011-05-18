@@ -53,7 +53,7 @@ title: Web.py Cookbook 简体中文版
 ##Utils 实用工具:
 * [如何发送邮件](sendmail.zh-cn)
 * [如何利用Gmail发送邮件](sendmail_using_gmail.zh-cn)
-* [使用soaplib实现webservice](/webservice.zh-cn)
+* [使用soaplib实现webservice](webservice.zh-cn)
 
 ##Templates 模板
 * [Templetor: web.py 模板系统](http://webpy.org/docs/0.3/templetor.zh-cn)
