@@ -110,5 +110,5 @@ Good luck!
 
 _PS: If you want to avoid using PyISAPIe, there is a simpler way of deploying web.py on IIS. It is documented crudely over [here][1]._
 
-[0] http://sourceforge.net/projects/pywin32/
-[1] http://forums.iis.net/t/1122937.aspx
+[0]: http://sourceforge.net/projects/pywin32/
+[1]: http://forums.iis.net/t/1122937.aspx
