@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deploying web.py on IIS7 vai PyISAPIe
+title: Deploying web.py on IIS7 via PyISAPIe
 ---
 
 # Deploying web.py on IIS7 via PyISAPIe
