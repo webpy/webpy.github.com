@@ -37,4 +37,4 @@ Naturally, you will want to write a module, say _displayLogic.py_ and import tha
     ... ...
     <div>Status: $stat(status)</div>
 
-Remember that you can import more than one name into the _globals_ dict. This trick is also used in [importing session variable into template](/cookbook/session_in_template).
+Remember that you can import more than one name into the _globals_ dict. This trick is also used in [importing session variable into template](session_in_template.zh-cn).

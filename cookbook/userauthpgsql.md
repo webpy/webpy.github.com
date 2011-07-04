@@ -12,10 +12,9 @@ title: User Authentication with PostgreSQL database
 - A user authentication system could have a lot of functions. For this example, we're only going to manage the authentication process, through a postgresql database.
 
 ##Needed
-- I use mako templates, and pg. So, you have to import all of that:
+- The only one we need is web.py:
+
 	import web
-	from web.contrib.template import render_mako
-	import pg
 
 ## 1st: The database
 First of all, we need a table for the users. This scheme is very simple, but is enough for a lot of projects.
@@ -38,12 +37,21 @@ There will be 2 states during the login/logout session:
 
 - "Reset" for the logout page.
 
-##
-	urls = (
-	 	'/login', 'login',
-		'/reset', 'reset',
-		 )
+*sessions doesn't work in [debug](/tutorial3.en#developing) mode because it interfere with reloading. see [session_with_reloader](session_with_reloader) for more details.*
 
+##
+	web.config.debug = False
+	
+	urls = (
+	  '/login', 'Login',
+	  '/reset', 'Reset',
+	)
+	app = web.application(urls, locals())
+	db = web.database(dbn='postgres', db='YOURDB', user='USERNAME', pw='PASSWORD')
+	
+	store = web.session.DiskStore('sessions')
+	session = web.session.Session(app, store,
+	                              initializer={'login': 0, 'privilege': 0})
 
 
 ## 3rd: Logged or not logged ?
@@ -61,32 +69,19 @@ I manage my users, in 4 categories: admin+user+reader (logged), and visitors (no
 
 ##
 	def create_render(privilege):
-		if logged():
-			if privilege==0:
-				render = render_mako(
-					directories=['templates/reader'],
-					input_encoding='utf-8',
-					output_encoding='utf-8',
-					)
-			elif privilege==1:
-				render = render_mako(
-					directories=['templates/user'],
-					input_encoding='utf-8',
-					output_encoding='utf-8',
-					)
-			elif privilege==2:
-				render = render_mako(
-					directories=['templates/admin'],
-					input_encoding='utf-8',
-					output_encoding='utf-8',
-					)
-		else:
-			render = render_mako(
-				directories=['templates/communs'],
-				input_encoding='utf-8',
-				output_encoding='utf-8',
-				)
-		return render
+	    if logged():
+	        if privilege == 0:
+	            render = web.template.render('templates/reader')
+	        elif privilege == 1:
+	            render = web.template.render('templates/user')
+	        elif privilege == 2:
+	            render = web.template.render('templates/admin')
+	        else:
+	            render = web.template.render('templates/communs')
+	    else:
+	        render = web.template.render('templates/communs')
+	    return render
+
 	
 ## 5th: Login and Reset Python Classes
 Now, let's have fun:
@@ -94,77 +89,70 @@ Now, let's have fun:
 - Else, to the login.html.
 
 ##
-	class login:
-		def GET(self):
-			if logged():
-				render = create_render(session.privilege)
-				return "%s" % (
-					render.login_double()				)
-			else:
-				render = create_render(session.privilege)
-				return "%s" % (
-					render.login()
-					)
+	class Login:
+	
+	    def GET(self):
+	        if logged():
+	            render = create_render(session.privilege)
+	            return '%s' % render.login_double()
+	        else:
+	            render = create_render(session.privilege)
+	            return '%s' % render.login()
 
 - Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row.
 - If the login/pass is ok, redirect to the login_ok.html.
 - If not, redirect to the login_error.html.
 
 ##	
-		def POST(self):
-			user, passwd = web.input().user, web.input().passwd
-			ident = db.query("select * from example_users where user = '%s'" % (user)).getresult()
-			try:
-				if passwd==ident[0][2]:
-					session.login=1
-					session.privilege=ident[0][4]
-					render = create_render(session.privilege)
-					return "%s" % (
-							render.login_ok()
-							)
-				else:
-					session.login=0
-					session.privilege=0
-					render = create_render(session.privilege)
-					return "%s" % (
-						render.login_error()
-						)
-			except:
-				session.login=0
-				session.privilege=0
-				render = create_render(session.privilege)
-				return "%s" % (
-					render.login_error()
-					)
+	    def POST(self):
+	        name, passwd = web.input().name, web.input().passwd
+	        ident = db.select('example_users', where='name=$name', vars=locals())[0]
+	        try:
+	            if passwd == ident['pass']:
+	                session.login = 1
+	                session.privilege = ident['privilege']
+	                render = create_render(session.privilege)
+	                return render.login_ok()
+	            else:
+	                session.login = 0
+	                session.privilege = 0
+	                render = create_render(session.privilege)
+	                return render.login_error()
+	        except:
+	            session.login = 0
+	            session.privilege = 0
+	            render = create_render(session.privilege)
+	            return render.login_error()
+
 
 For the reset function, we just kill the session, and redirect to the logout.html template file.
 ##
-	class reset:
-		def GET(self):
-			session.login=0
-			session.kill()
-			render = create_render(session.privilege)
-			return "%s" % (
-				render.logout()
-			 	)
+	class Reset:
+	
+	    def GET(self):
+	        session.login = 0
+	        session.kill()
+	        render = create_render(session.privilege)
+	        return render.logout()
+
 
 ## 6th: HTML templates help
 Well, I think that nobody will need this, but, I prefer to give all the informations. The most important is the login.html.
 
 ##
-	<FORM action=/login method=POST>
+	<form action="/login" method="POST">
 		<table id="login">
 			<tr>
 				<td>User: </td>
-				<td><input type=text name='user'></td>
+				<td><input type="text" name="user"></td>
 			</tr>
 			<tr>
 				<td>Password: </td>
-				<td><input type="password" name=passwd></td>
+				<td><input type="password" name="passwd"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type=submit value=LOGIN></td>
+				<td><input type="submit" value="LOGIN"></td>
 			</tr>
 		</table>
 	</form>
@@ -173,3 +161,4 @@ Well, I think that nobody will need this, but, I prefer to give all the informat
 - Mail: you can contact me at guillaume(at)process-evolution(dot)fr
 - IRC: #webpy on irc.freenode.net (pseudo: Ephedrax)
 - Translations: I'm french, and my english is bad...you can edit my work
+- Revision: Vayn <vayn at vayn dot de>
