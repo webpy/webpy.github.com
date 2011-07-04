@@ -1,9 +1,3 @@
----
-layout: default
-title: api docs
----
-# api docs
-
 <div>
 
 <style type="text/css">
@@ -120,6 +114,10 @@ There you can just do:</p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> handle_with_processors(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> init_mapping(self, mapping)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
@@ -263,6 +261,10 @@ There you can just do:</p>
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> init_mapping(self, mapping)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> internalerror(self)</code><br />
 <div style="margin-left:75px"><p>Returns HTTPError with '500 internal error' message</p></div></p>
 </div>
@@ -395,6 +397,10 @@ There you can just do:</p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> handle_with_processors(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> init_mapping(self, mapping)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
@@ -537,6 +543,10 @@ There you can just do:</p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> handle_with_processors(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> init_mapping(self, mapping)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
@@ -773,7 +783,7 @@ using values from the dictionary. Returns an <code>SQLQuery</code> for the resul
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> SQLQuery(self, items=[])</code><br />
+<p><span class="ts">type</span><code class="type"> SQLQuery(self, items=None)</code><br />
 <div style="margin-left:45px"><p>You can pass this sort of thing as a clause in any db function.
 Otherwise, you can pass a dictionary to the keyword argument <code>vars</code>
 and the function will call reparam for you.</p>
@@ -781,7 +791,11 @@ and the function will call reparam for you.</p>
 <p>Internally, consists of <code>items</code>, which is a list of strings and
 SQLParams, which get concatenated to produce the actual query.</p></div></p>
 <div style="margin-left:60px">
-<p><span class="ts">function</span><code class="function"> join(items, sep=' ')</code><br />
+<p><span class="ts">method</span><code class="method"> append(self, value)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">function</span><code class="function"> join(items, sep=' ', prefix=None, suffix=None, target=None)</code><br />
 <div style="margin-left:75px"><p>Joins multiple queries.</p>
 
 <blockquote>
@@ -791,7 +805,20 @@ SQLParams, which get concatenated to produce the actual query.</p></div></p>
       <sql: 'a, b'></p>
     </blockquote>
   </blockquote>
-</blockquote></div></p>
+</blockquote>
+
+<p>Optinally, prefix and suffix arguments can be provided.</p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>SQLQuery.join(['a', 'b'], ', ', prefix='(', suffix=')')
+      <sql: '(a, b)'></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>If target argument is provided, the items are appended to target instead of creating a new SQLQuery.</p></div></p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> query(self, paramstyle=None)</code><br />
@@ -825,7 +852,7 @@ SQLParams, which get concatenated to produce the actual query.</p></div></p>
 </div>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> SQLParam(self, value)</code><br />
+<p><span class="ts">type</span><code class="type"> SQLParam(self, value)</code><br />
 <div style="margin-left:45px"><p>Parameter in SQLQuery.</p>
 
 <pre><code>&gt;&gt;&gt; q = SQLQuery(["SELECT * FROM test WHERE name=", SQLParam("joe")])
@@ -846,7 +873,7 @@ SQLParams, which get concatenated to produce the actual query.</p></div></p>
 </div>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> sqlparam(self, value)</code><br />
+<p><span class="ts">type</span><code class="type"> sqlparam(self, value)</code><br />
 <div style="margin-left:45px"><p>Parameter in SQLQuery.</p>
 
 <pre><code>&gt;&gt;&gt; q = SQLQuery(["SELECT * FROM test WHERE name=", SQLParam("joe")])
@@ -1007,6 +1034,8 @@ and setting <code>values</code>.</p>
 &lt;sql: 'SELECT * FROM foo WHERE bar_id = 3'&gt;
 &gt;&gt;&gt; db.where('foo', source=2, crust='dewey', _test=True)
 &lt;sql: "SELECT * FROM foo WHERE source = 2 AND crust = 'dewey'"&gt;
+&gt;&gt;&gt; db.where('foo', _test=True)
+&lt;sql: 'SELECT * FROM foo'&gt;
 </code></pre></div></p>
 </div>
 </div>
@@ -1268,7 +1297,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
 </div>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Form(self, *inputs, **kw)</code><br />
+<p><span class="ts">type</span><code class="type"> Form(self, *inputs, **kw)</code><br />
 <div style="margin-left:45px"><p>HTML form.</p>
 
 <pre><code>&gt;&gt;&gt; f = Form(Textbox("x"))
@@ -1640,7 +1669,7 @@ and checks the headers to see if they match. If they do, it returns
 changed.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> url(path=None, **kw)</code><br />
+<p><span class="ts">function</span><code class="function"> url(path=None, doseq=False, **kw)</code><br />
 <div style="margin-left:45px"><p>Makes url by concatinating web.ctx.homepath and path and the 
 query string created using the arguments.</p></div></p>
 </div>
@@ -1737,35 +1766,42 @@ datetime.datetime(1970, 1, 1, 1, 1, 1)
 <p><span class="ts">function</span><code class="function"> htmlquote(text)</code><br />
 <div style="margin-left:45px"><p>Encodes <code>text</code> for raw use in HTML.</p>
 
-<pre><code>&gt;&gt;&gt; htmlquote("&lt;'&amp;\"&gt;")
-'&amp;lt;&amp;#39;&amp;amp;&amp;quot;&amp;gt;'
+<pre><code>&gt;&gt;&gt; htmlquote(u"&lt;'&amp;\"&gt;")
+u'&amp;lt;&amp;#39;&amp;amp;&amp;quot;&amp;gt;'
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> htmlunquote(text)</code><br />
 <div style="margin-left:45px"><p>Decodes <code>text</code> that's HTML quoted.</p>
 
-<pre><code>&gt;&gt;&gt; htmlunquote('&amp;lt;&amp;#39;&amp;amp;&amp;quot;&amp;gt;')
-'&lt;\'&amp;"&gt;'
+<pre><code>&gt;&gt;&gt; htmlunquote(u'&amp;lt;&amp;#39;&amp;amp;&amp;quot;&amp;gt;')
+u'&lt;\'&amp;"&gt;'
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> websafe(val)</code><br />
-<div style="margin-left:45px"><p>Converts <code>val</code> so that it's safe for use in UTF-8 HTML.</p>
+<div style="margin-left:45px"><p>Converts <code>val</code> so that it is safe for use in Unicode HTML.</p>
 
-<pre><code>&gt;&gt;&gt; websafe("&lt;'&amp;\"&gt;")
-'&amp;lt;&amp;#39;&amp;amp;&amp;quot;&amp;gt;'
-&gt;&gt;&gt; websafe(None)
-''
-&gt;&gt;&gt; websafe(u'\u203d')
-'\xe2\x80\xbd'
-</code></pre></div></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>websafe("&lt;'&amp;\">")
+      u'&lt;&#39;&amp;&quot;&gt;'
+      websafe(None)
+      u''
+      websafe(u'\u203d')
+      u'\u203d'
+      websafe('\xe2\x80\xbd')
+      u'\u203d'</p>
+    </blockquote>
+  </blockquote>
+</blockquote></div></p>
 </div>
 <p><span class="ts">module</span><code class="module"> <a name="web.session">web.session</a></code><br />
 <div style="margin-left:15px"><p>Session Management
 (from web.py)</p></div></p>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Session(self, app, store, initializer=None)</code><br />
+<p><span class="ts">type</span><code class="type"> Session(self, app, store, initializer=None)</code><br />
 <div style="margin-left:45px"><p>Session management for web.py</p></div></p>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> expired(self)</code><br />
@@ -1903,8 +1939,11 @@ pyexpr -&gt; &lt;python expression&gt;
 </div>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Render(self, loc='templates', cache=None, base=None, **keywords)</code><br />
-<div style="margin-left:45px"><p>The most preferred way of using templates.</p>
+<p><span class="ts">class</span><code class="class"> Render(self, loc, *a, **kw)</code><br />
+<div style="margin-left:45px"><p></p></div></p>
+<div style="margin-left:60px">
+<p><span class="ts">class</span><code class="class"> super(self, loc='templates', cache=None, base=None, **keywords)</code><br />
+<div style="margin-left:75px"><p>The most preferred way of using templates.</p>
 
 <pre><code>render = web.template.render('templates')
 print render.foo()
@@ -1916,9 +1955,13 @@ every template through the base template.</p>
 <pre><code>render = web.template.render('templates', base='layout')
 </code></pre></div></p>
 </div>
+</div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> render(self, loc='templates', cache=None, base=None, **keywords)</code><br />
-<div style="margin-left:45px"><p>The most preferred way of using templates.</p>
+<p><span class="ts">class</span><code class="class"> render(self, loc, *a, **kw)</code><br />
+<div style="margin-left:45px"><p></p></div></p>
+<div style="margin-left:60px">
+<p><span class="ts">class</span><code class="class"> super(self, loc='templates', cache=None, base=None, **keywords)</code><br />
+<div style="margin-left:75px"><p>The most preferred way of using templates.</p>
 
 <pre><code>render = web.template.render('templates')
 print render.foo()
@@ -1929,6 +1972,7 @@ every template through the base template.</p>
 
 <pre><code>render = web.template.render('templates', base='layout')
 </code></pre></div></p>
+</div>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> frender(path, **keywords)</code><br />
@@ -2456,6 +2500,12 @@ value, unless the key appears in <code>defaults</code> as a dictionary.</p>
 
 <pre><code>&gt;&gt;&gt; lstrips("foobar", "foo")
 'bar'
+&gt;&gt;&gt; lstrips('http://foo.org/', ['http://', 'https://'])
+'foo.org/'
+&gt;&gt;&gt; lstrips('FOOBARBAZ', ['FOO', 'BAR'])
+'BAZ'
+&gt;&gt;&gt; lstrips('FOOBARBAZ', ['BAR', 'FOO'])
+'BARBAZ'
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
@@ -2597,17 +2647,24 @@ If <code>background</code> is specified, values are recalculated in a separate t
 <div style="margin-left:45px"><p>Returns an iterator over a series of lists of length size from iterable.</p>
 
 <pre><code>&gt;&gt;&gt; list(group([1,2,3,4], 2))
-[1, 2], [3, 4](/1, 2], [3, 4)
+[[1, 2], [3, 4]]
 &gt;&gt;&gt; list(group([1,2,3,4,5], 2))
-[1, 2], [3, 4], [5](/1, 2], [3, 4], [5)
+[[1, 2], [3, 4], [5]]
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> uniq(seq)</code><br />
-<div style="margin-left:45px"><p>Removes duplicate elements from a list.</p>
+<p><span class="ts">function</span><code class="function"> uniq(seq, key=None)</code><br />
+<div style="margin-left:45px"><p>Removes duplicate elements from a list while preserving the order of the rest.</p>
 
-<pre><code>&gt;&gt;&gt; uniq([1,2,3,1,4,5,6])
-[1, 2, 3, 4, 5, 6]
+<pre><code>&gt;&gt;&gt; uniq([9,0,2,1,0])
+[9, 0, 2, 1]
+</code></pre>
+
+<p>The value of the optional <code>key</code> parameter should be a function that
+takes a single argument and returns a key to test the uniqueness.</p>
+
+<pre><code>&gt;&gt;&gt; uniq(["Foo", "foo", "bar"], key=lambda s: s.lower())
+['Foo', 'bar']
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
@@ -2932,7 +2989,7 @@ At the bottom, have a line:</p>
 all the tests.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> ThreadedDict(self)</code><br />
+<p><span class="ts">type</span><code class="type"> ThreadedDict(self)</code><br />
 <div style="margin-left:45px"><p>Thread local storage.</p>
 
 <pre><code>&gt;&gt;&gt; d = ThreadedDict()
@@ -2948,6 +3005,70 @@ all the tests.</p></div></p>
 &gt;&gt;&gt; d.x
 1
 </code></pre></div></p>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> clear(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">function</span><code class="function"> clear_all()</code><br />
+<div style="margin-left:75px"><p>Clears all ThreadedDict instances.</p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> copy(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> get(self, key, default=None)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> has_key(self, key)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> items(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> iter(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> iteritems(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> iterkeys(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> itervalues(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> keys(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> pop(self, key, *args)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> popitem(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> setdefault(self, key, default=None)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> update(self, *args, **kwargs)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> values(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> autoassign(self, locals)</code><br />
@@ -3035,7 +3156,7 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p>Returns the data sent with the request.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> setcookie(name, value, expires='', domain=None, secure=False)</code><br />
+<p><span class="ts">function</span><code class="function"> setcookie(name, value, expires='', domain=None, secure=False, httponly=False, path=None)</code><br />
 <div style="margin-left:45px"><p>Sets a cookie.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -3124,12 +3245,12 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p><code>403 Forbidden</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> NoMethod(self, cls=None)</code><br />
-<div style="margin-left:45px"><p>A <code>405 Method Not Allowed</code> error.</p></div></p>
-</div>
-<div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> NotFound(message=None)</code><br />
 <div style="margin-left:45px"><p>Returns HTTPError with '404 Not Found' error from the active application.</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> NoMethod(self, cls=None)</code><br />
+<div style="margin-left:45px"><p>A <code>405 Method Not Allowed</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">type</span><code class="type"> NotAcceptable(self, data='Not Acceptable', headers={})</code><br />
@@ -3160,12 +3281,12 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p><code>403 Forbidden</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> nomethod(self, cls=None)</code><br />
-<div style="margin-left:45px"><p>A <code>405 Method Not Allowed</code> error.</p></div></p>
-</div>
-<div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> notfound(message=None)</code><br />
 <div style="margin-left:45px"><p>Returns HTTPError with '404 Not Found' error from the active application.</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> nomethod(self, cls=None)</code><br />
+<div style="margin-left:45px"><p>A <code>405 Method Not Allowed</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">type</span><code class="type"> notacceptable(self, data='Not Acceptable', headers={})</code><br />
