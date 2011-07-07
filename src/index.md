@@ -41,8 +41,8 @@ These are fully functional apps with code that have been built with web.py.  Not
 
 ## Tips and Tricks:
 
-* [tricks with template.py](/template tricks)
-* [quick vhosting hack](/quick vhosting hack)
+* [tricks with template.py](/template_tricks)
+* [quick vhosting hack](/quick_vhosting_hack)
 * [using a metaclass to automate setting urls](/MetaClassAutoURLS)
 * [test your web application with paste](/testing)
 * [Serving Images](/images)
