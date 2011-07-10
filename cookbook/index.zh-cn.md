@@ -25,7 +25,7 @@ title: Web.py Cookbook 简体中文版
 * [Hello World](helloworld.zh-cn)
 * [提供静态文件访问](staticfiles.zh-cn)
 * [理解URL控制](url_handling.zh-cn)
-* [跳转与重定向](redirect+seeother.zh-cn)
+* [跳转与重定向](redirect%20seeother.zh-cn)
 * [使用子应用](subapp.zh-cn)
 * [提供XML访问](xmlfiles.zh-cn)
 * [从post读取原始数据](postbasic.zh-cn)
@@ -56,7 +56,7 @@ title: Web.py Cookbook 简体中文版
 * [使用soaplib实现webservice](webservice.zh-cn)
 
 ##Templates 模板
-* [Templetor: web.py 模板系统](http://webpy.org/docs/0.3/templetor.zh-cn)
+* [Templetor: web.py 模板系统](/docs/0.3/templetor.zh-cn)
 * [使用站点布局模板](layout_template.zh-cn)
 * [交替式风格 (未译)](alternating_style.zh-cn)
 * [导入函数到模板中 (未译)](template_import.zh-cn)
