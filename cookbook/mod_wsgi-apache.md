@@ -63,4 +63,5 @@ If you use sessions with mod_wsgi, you should change you code like below:
 
 #mod_wsgi performance:
 For mod_wsgi performance, please refer to mod_wsgi wiki page:
-    [http://code.google.com/p/modwsgi/wiki/PerformanceEstimates](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates)
+
+<http://code.google.com/p/modwsgi/wiki/PerformanceEstimates>
