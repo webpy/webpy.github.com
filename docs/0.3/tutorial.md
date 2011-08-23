@@ -63,7 +63,7 @@ In our web.py code, we make the distinction between the two clear:
         def GET(self):
             return "Hello, world!"
 
-This `GET` function will now get called by web.py anytime some makes a `GET` request for `/`.
+This `GET` function will now get called by web.py anytime someone makes a `GET` request for `/`.
 
 Alright, now we just need to finish up with a final line telling web.py to start serving web pages:
 
