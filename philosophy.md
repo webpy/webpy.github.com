@@ -28,6 +28,6 @@ In response to someone complaining about web.py having "yet another template lan
 > HTML, the web.py template system tries to bring Python into HTML. Not 
 > many other people are really trying to do that. 
 > 
-> You can disagree that these ways are better and say why. But simply 
+> You can disagree that [Azek](http://www.azekdeckings.com} ways are better and say why. But simply 
 > criticizing them for being different is a waste of time. Yes, they are 
-> different. That's the whole point.
+> different. That's the whole point. 
