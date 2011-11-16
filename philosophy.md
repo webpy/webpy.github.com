@@ -7,7 +7,7 @@ title: Philosophy
 
 The web.py slogan is: "Think about the ideal way to write a web app. Write the code to make it happen."
 
-This is literally how I developed web.py. I wrote a web application in Python just imagining how I wanted the API should be. It started with <code>import web</code>, of course, and then had a place to define URLs, simple functions for GET and POST, a thing to deal with input variables and so on. Once the code looked right to me, I did whatever it took to make it execute _without changing the application code_ -- the result was web.py.
+This is literally how I developed web.py. I wrote a web application in Python just imagining how I wanted the API to be. It started with <code>import web</code>, of course, and then had a place to define URLs, simple functions for GET and POST, a thing to deal with input variables and so on. Once the code looked right to me, I did whatever it took to make it execute _without changing the application code_ -- the result was web.py.
 
 In response to someone complaining about web.py having "yet another template language", [I wrote a bit more about my philosophy](http://groups.google.com/group/webpy/msg/f266701d97e7ceb1):
 
