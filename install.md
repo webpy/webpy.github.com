@@ -33,6 +33,10 @@ To install web.py, download:
     
     http://webpy.org/static/web.py-0.36.tar.gz
 
+or the get the latest dev version:
+
+    https://github.com/webpy/webpy/tarball/master
+
 extract it and copy the _web_ folder into a directory where your application is. Or, to make it accessible to all applications, run:
     
     python setup.py install
