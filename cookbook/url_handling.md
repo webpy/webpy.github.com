@@ -23,7 +23,7 @@ web.py's URL handling scheme is simple yet powerful and flexible.  at the top of
         "/tasks/signup", "signup"
     )
 
-The format of this tuple is: _url-path-pattern_, _handler-class_ this pattern will repeat as more url patterns are defined.  If you don't understand the relationship between url pattern and handler classes, please read the [Hello World example](/helloworld) or [Quick Start Tutorial](/tutorial3.en) before reading any other cookbook recipes.
+The format of this tuple is: _url-path-pattern_, _handler-class_ this pattern will repeat as more url patterns are defined.  If you don't understand the relationship between url pattern and handler classes, please read the [Hello World example](/cookbook/helloworld) or [Quick Start Tutorial](/tutorial3.en) before reading any other cookbook recipes.
 
 `Path Matching`
 
