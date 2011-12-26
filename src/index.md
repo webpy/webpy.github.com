@@ -13,6 +13,7 @@ All samples are in the public domain.  They are intentionally unstyled, and they
 * [Todo-list](/src/todo-list/0.3). The simplest database-driven app possible.
 * [Blog](/src/blog/0.3). A very simple blog, showing basic CRUD functionality.
 * [wiki](/src/wiki/0.3). A very basic wiki engine.
+* [zbox_wiki](https://github.com/shuge/zbox_wiki). A lightweight wiki system ([demo](http://wiki.shuge-lab.org/zbox-wiki/about-zboxwiki))
 
 
 
