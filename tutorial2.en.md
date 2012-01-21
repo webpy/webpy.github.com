@@ -200,7 +200,7 @@ Now add another class:
         def POST(self):
             i = web.input()
             n = web.insert('todo', title=i.title)
-    	    web.seeother('/')
+            web.seeother('/')
 
 (Notice how we're using `POST` for this?)
 
