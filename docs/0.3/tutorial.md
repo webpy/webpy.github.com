@@ -166,7 +166,7 @@ Using your database engines admin interface, create a simple table in your datab
     CREATE TABLE todo (
       id serial primary key,
       title text,
-      created timestamp default now,
+      created timestamp default now(),
       done boolean default 'f'    );
 
 And an initial row:
