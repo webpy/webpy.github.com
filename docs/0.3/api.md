@@ -1789,21 +1789,17 @@ u'&lt;\'&amp;"&gt;'
 <p><span class="ts">function</span><code class="function"> websafe(val)</code><br />
 <div style="margin-left:45px"><p>Converts <code>val</code> so that it is safe for use in Unicode HTML.</p>
 
-<blockquote>
-  <blockquote>
-    <blockquote>
-      <p>websafe("&lt;'&amp;\">")
-      u'&lt;&#39;&amp;&quot;&gt;'
-      websafe(None)
-      u''
-      websafe(u'\u203d')
-      u'\u203d'
-      websafe('\xe2\x80\xbd')
-      u'\u203d'</p>
-    </blockquote>
-  </blockquote>
-</blockquote></div></p>
+<pre><code>&gt;&gt;&gt; websafe("&lt;'&amp;\">")
+u'&amp;lt;&amp;#39;&amp;amp;&amp;quot;&amp;gt;'
+&gt;&gt;&gt; websafe(None)
+u''
+&gt;&gt;&gt; websafe(u'\u203d')
+'\xe2\x80\xbd'
+&gt;&gt;&gt; websafe('\xe2\x80\xbd')
+'\xe2\x80\xbd'</p>
+</code></pre></div></p>
 </div>
+
 <p><span class="ts">module</span><code class="module"> <a name="web.session">web.session</a></code><br />
 <div style="margin-left:15px"><p>Session Management
 (from web.py)</p></div></p>
