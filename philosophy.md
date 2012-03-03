@@ -19,7 +19,7 @@ In response to someone complaining about web.py having "yet another template lan
 > reinventing old things with only small differences were necessary to 
 > achieve this goal, I would defend reinventing them. The difference 
 > between the ideal way and the almost-ideal way is, as Mark Twain 
-> suggested, the difference between the lighting and the lightning bug. 
+> suggested, the difference between the lightning and the lightning bug. 
 > 
 > But these aren't just small differences. Instead of exposing Python 
 > objects, web.py allows you to build HTTP responses. Instead of trying 
