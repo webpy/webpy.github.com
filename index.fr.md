@@ -140,7 +140,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
 "très élégant et concis (sans oublier que c'est écrit par Aaron Swartz, dont les compétences en codage sont impressionnantes), et ça ne m'a pas fait perdre de temps."   
 - Jonas Galvez, Aupeo [#][26]
 
-   [26]: http://shortb.net/~f561f1
+   [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
 "Le premier framework ... sur lequel je peux bidouiller du code et voir quelque chose fonctionner sans même être obligé de comprendre la logique de celui-ci. Un plaisir à intégrer."   
 - Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it
@@ -151,12 +151,12 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
 "Guido [van Rossum, Créateur de Python], vous constaterez probablement que web.py convient le mieux à votre style. ...Si vous ne l'aimez pas, je ne peux imaginer lequel des autres douzaines d'autres framework sortis vous *pourriez* aimer."   
 - Phillip J. Eby, créateur du Python Web Server Gateway Interface (WSGI) [#lien][30]
 
-   [30]: http://shortb.net/~f561f2
+   [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
 
 "... l'exemple [Cheetah] que j'ai vu sur web.py à l'air "bon". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"  [ Note traducteur : A préciser]
 - Guido van Rossum, Créateur de Python [#Lien][31]
 
-   [31]: http://shortb.net/+f561f3
+   [31]: http://www.artima.com/weblogs/viewpost.jsp?thread=146503
 
 "il suffit de dire je crois, que Aaron se dirige dans la bonne direction."   
 - Harry Fuecks: [un simple wiki avec web.py][32]
@@ -225,9 +225,6 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
 * [related projects](/related)
 
 * [tricks](/tricks)
-
-* [best essays](http://www.bestessays.ca/)
-
 
 
 ### Communauté web.py
