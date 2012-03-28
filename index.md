@@ -68,4 +68,4 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]</span>
 
-   [30]: http://shortb.net/~f561f2
+   [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
