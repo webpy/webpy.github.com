@@ -50,7 +50,11 @@ see [recommended setup](/recommended_setup).
 Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once Easy Install is properly setup:
 
 
-    easy_install web.py
+    sudo easy_install web.py
+    
+Or [PIP](http://packages.python.org/distribute/)
+
+    sudo pip install web.py
 
 <a name="macosx"></a>
 ### MacOS X
