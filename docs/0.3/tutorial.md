@@ -44,12 +44,6 @@ The first part is a [regular expressions](http://osteele.com/tools/rework/) that
 
 This line says we want the URL `/` (i.e. the front page) to be handled by the class named `index`.
 
-Now we need to create an application specifying the urls.
-
-    app = web.application(urls, globals())
-
-This tells web.py to create an application with the URLs we listed above, looking up the classes in the global namespace of this file.
-
 <a name="getpost"> </a>
 ## GET and POST: the difference
 
@@ -65,13 +59,32 @@ In our web.py code, we make the distinction between the two clear:
 
 This `GET` function will now get called by web.py anytime someone makes a `GET` request for `/`.
 
-Alright, now we just need to finish up with a final line telling web.py to start serving web pages:
+Now we need to create an application specifying the urls and a way to tell  web.py to start serving web pages:
 
-    if __name__ == "__main__": app.run()
+    if __name__ == "__main__": 
+        app = web.application(urls, globals())
+        app.run()        
 
-This tells web.py to serve the application we created above.
+First we tell web.py to create an application with the URLs we listed above, looking up the classes in the global namespace of this file.
+And finally we make sure that web.py serves the application we created above.
 
 Now notice that although I've been talking a lot here, we only really have five or so lines of code. That's all you need to make a complete web.py application.
+
+For easier access, here's how your code should look like:
+
+    import web
+    
+    urls = (
+        '/', 'index'
+    )
+    
+    class index:
+        def GET(self):
+            return "Hello, world!"
+    
+    if __name__ == "__main__":
+        app = web.application(urls, globals())
+        app.run()
 
 <a name="start"> </a>
 ## Start the server
