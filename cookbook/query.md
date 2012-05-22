@@ -11,7 +11,7 @@ You want to perform advanced SQL statements like joins or counts.
 
 ### Solution
 
-webpy doesn't try to build layers between you and your database.  Rather, it tries to make it easy to common tasks, and get out of your way when you need to do more advanced topics.  Performing advanced database queries is no different.  For example:
+webpy doesn't try to build layers between you and your database.  Rather, it tries to make it easy to perform common tasks, and get out of your way when you need to do more advanced things.  Performing advanced database queries is no different.  For example:
 
     import web
 
