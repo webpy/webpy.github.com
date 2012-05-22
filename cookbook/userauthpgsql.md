@@ -12,9 +12,10 @@ title: User Authentication with PostgreSQL database
 - A user authentication system could have a lot of functions. For this example, we're only going to manage the authentication process, through a postgresql database.
 
 ##Needed
-- The only one we need is web.py:
+- web.py for all the web functions, and hashlib to store the passwords securely:
 
 	import web
+	import hashlib
 
 ## 1st: The database
 First of all, we need a table for the users. This scheme is very simple, but is enough for a lot of projects.
@@ -24,7 +25,7 @@ First of all, we need a table for the users. This scheme is very simple, but is 
 	(
 	  id serial NOT NULL,
 	  user character varying(80) NOT NULL,
-	  pass character varying(80) NOT NULL,
+	  pass character(40) NOT NULL,
 	  email character varying(100) NOT NULL,
 	  privilege integer NOT NULL DEFAULT 0,
 	  CONSTRAINT utilisateur_pkey PRIMARY KEY (id)
@@ -55,7 +56,7 @@ There will be 2 states during the login/logout session:
 
 
 ## 3rd: Logged or not logged ?
-To manage the access for people who are logged or not, it's very easy. Just define the logged expression like this, and use it for your login/reset classes:
+To manage the access for people who are logged or not is very easy. Just define the logged expression like this, and use it for your login/reset classes:
 
 ##
 	def logged():
@@ -65,7 +66,7 @@ To manage the access for people who are logged or not, it's very easy. Just defi
 			return False
 
 ## 4th: Easy Privleges Management
-I manage my users, in 4 categories: admin+user+reader (logged), and visitors (not logged). The directory template is choosing according to the privilege specified in the table example_users.
+I manage my users in 4 categories: admin+user+reader (logged), and visitors (not logged). The directory template is choosing according to the privilege specified in the table example_users.
 
 ##
 	def create_render(privilege):
@@ -100,6 +101,7 @@ Now, let's have fun:
 	            return '%s' % render.login()
 
 - Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row.
+- For security, we don't store passwords in the database directly, but store the hash of the password + salt; this is kind of line one-way encryption, so we can tell if the user's passwords match, but an attacker couldn't figure out what the password was to start with.
 - If the login/pass is ok, redirect to the login_ok.html.
 - If not, redirect to the login_error.html.
 
@@ -108,7 +110,7 @@ Now, let's have fun:
 	        name, passwd = web.input().name, web.input().passwd
 	        ident = db.select('example_users', where='name=$name', vars=locals())[0]
 	        try:
-	            if passwd == ident['pass']:
+	            if hashlib.sha1("sAlT754-"+passwd).hexdigest() == ident['pass']:
 	                session.login = 1
 	                session.privilege = ident['privilege']
 	                render = create_render(session.privilege)
