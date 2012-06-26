@@ -31,7 +31,7 @@ Other languages : [español](/install/es) | [Japan 日本語 ](/install/ja) | [c
 
 To install web.py, download:
     
-    http://webpy.org/static/web.py-0.36.tar.gz
+    http://webpy.org/static/web.py-0.37.tar.gz
 
 or the get the latest dev version:
 
