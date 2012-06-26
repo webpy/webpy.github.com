@@ -50,7 +50,11 @@ see [recommended setup](/recommended_setup).
 Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once Easy Install is properly setup:
 
 
-    easy_install web.py
+    sudo easy_install web.py
+    
+Or [PIP](http://packages.python.org/distribute/)
+
+    sudo pip install web.py
 
 <a name="macosx"></a>
 ### MacOS X
@@ -286,7 +290,3 @@ If you want web.py to be accessible at 'http://example.com' instead of 'http://e
     </IfModule>
 
 If the `code.py` is in the subfolder `myapp/`, adjust the RewriteBase to `RewriteBase /myapp/`. If you have static files like CSS files and images to pass through, duplicate the line with the icons for each path you want to allow.
-
-See [Module mod_rewrite URL Rewriting Engine][4] 
-
-   [4]: http://shortb.net/~3kf44h
