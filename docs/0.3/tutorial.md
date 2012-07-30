@@ -153,7 +153,7 @@ and change the definition of `index.GET` to:
 
 and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
 
-If you wish to learn more about web.py templates, vist the <a href="/docs/0.3/templetor">templetor page</a>.
+If you wish to learn more about web.py templates, visit the <a href="/docs/0.3/templetor">templetor page</a>.
 
 <a name="forms"> </a>
 ## Forms
