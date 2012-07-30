@@ -3,7 +3,7 @@ layout: default
 title: using subapplications
 ---
 
-# using subapplications
+# Using subapplications
 
 Other languages [français](/../cookbook/subapp/fr) | ...
 
@@ -29,6 +29,8 @@ In `blog.py`:
             return "blog " + path
 
     app_blog = web.application(urls, locals())
+
+Note that if you are using WSGI, you must not append `.wsgifunc()` to any of the app definitions, only to the main `code.py`.
 
 In your main `code.py`:
 
