@@ -9,11 +9,11 @@ Here is a 10 minute hack with lots of room for improvement but I think its
 pretty useful. I made this to allow the serving of multiple
 sites from a single webpy app.
 
-I created this because I would like to run a few small sites but my cheep
+I created this because I would like to run a few small sites but my cheap
 account at my hosting provider:
 
- * Only allows 40MB to be used by persistant processes. 
- * Only allows *one* persistant process.
+ * Only allows 40MB to be used by persistent processes. 
+ * Only allows *one* persistent process.
  * Multiple instances of webpy would require multiple ports to be proxied with apache's mod_proxy
    and this configuration can only be done by the server admin.
 
@@ -56,7 +56,7 @@ The /static directory is currently still shared between all sites.
 
      #
      ## VHOSTING DECORATOR
-     #     
+     #
      def vhostrr(vhosts=vhosts):
          def decorator(func): 
              def proxyfunc(*args, **kw):
@@ -70,7 +70,8 @@ The /static directory is currently still shared between all sites.
                          print 'Error, Not configured for vhost: '+rd
                          return
                  else:
-                     print 'Direct access not allowed. Use proxy.'                     return
+                     print 'Direct access not allowed. Use proxy.'
+                     return
                  return func(mapping=mapping, *args, **kw)
              return proxyfunc
          return decorator
