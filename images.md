@@ -7,7 +7,7 @@ title: Serving Images
 
 ## Basic Directory Set-up
 
-First let your urls extend beyound images:
+First let your urls extend beyond images:
 
     import web
     
@@ -25,9 +25,9 @@ Now create the class that will handle them:
             
             cType = {
                 "png":"images/png",
-                "jpg":"image/jpeg",
-                "gif":"image/gif",
-                "ico":"image/x-icon"            }
+                "jpg":"images/jpeg",
+                "gif":"images/gif",
+                "ico":"images/x-icon"            }
 
             if name in os.listdir('images'):  # Security
                 web.header("Content-Type", cType[ext]) # Set the Header
