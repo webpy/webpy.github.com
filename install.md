@@ -157,8 +157,9 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
     # ... import web etc here...
     
     def cgidebugerror():
-        """                                                                         
-        """        _wrappedstdout = sys.stdout
+        """
+        """        
+        _wrappedstdout = sys.stdout
     
         sys.stdout = web._oldstdout
         cgitb.handler()
@@ -175,7 +176,8 @@ FastCGI is easy to configure and performs as well as mod_python.
 
 Add this to your `.htaccess`:
     
-    <Files code.py>      SetHandler fastcgi-script
+    <Files code.py>      
+    SetHandler fastcgi-script
     </Files>
 
 Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py script to act as a FastCGI server so you have to tell web.py explicitly. Add this to `code.py` before your `if __name__ == "__main__":` line:
