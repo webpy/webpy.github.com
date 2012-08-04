@@ -7,7 +7,7 @@ title: Web.py using FastCGI and Apache 2
 
 #Requirements
 * Apache 2.x
-* [mod_fcgid](http://fastcgi.coremail.cn/)
+* [mod_fcgid](http://httpd.apache.org/mod_fcig/)
 * [mod_rewrite](http://httpd.apache.org/docs/2.0/rewrite/)
 * [Flup](http://trac.saddi.com/flup)
 
