@@ -104,4 +104,6 @@ Did you add this line?
  web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 </pre>
 #Misc
-After updating your application you may need to restart your web server to see the changes.
+* After updating your application you may need to restart your web server to see the changes.
+* If you do not have root access to your Apache server, you may not have access to all of the above commands in the .htaccess file in your project directory. [See this githup repository](http://github.com/stevekochscience/webpy-bluehost-helloworld) for a first-draft workaround, using hosted server on bluehost.com.  (This is a hack written by someone who doesn't understand Apache and web.py thoroughly.)
+
