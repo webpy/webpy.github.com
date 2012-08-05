@@ -7,7 +7,7 @@ title: Web.py using FastCGI and Apache 2
 
 #Requirements
 * Apache 2.x
-* [mod_fcgid](http://fastcgi.coremail.cn/)
+* [mod_fcgid](http://httpd.apache.org/mod_fcgid/)
 * [mod_rewrite](http://httpd.apache.org/docs/2.0/rewrite/)
 * [Flup](http://trac.saddi.com/flup)
 
@@ -104,4 +104,6 @@ Did you add this line?
  web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 </pre>
 #Misc
-After updating your application you may need to restart your web server to see the changes.
+* After updating your application you may need to restart your web server to see the changes.
+* If you do not have root access to your Apache server, you may not have access to all of the above commands in the .htaccess file in your project directory. [See this githup repository](http://github.com/stevekochscience/webpy-bluehost-helloworld) for a first-draft workaround, using hosted server on bluehost.com.  (This is a hack written by someone who doesn't understand Apache and web.py thoroughly.)
+
