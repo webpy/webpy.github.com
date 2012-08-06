@@ -1,7 +1,11 @@
----
+﻿---
 layout: default
 title: Tutorial
 ---
+
+# Tutorial
+
+Other languages : [chinese 简体中文 ](/tutorial3.zh-cn) | [français](/tutorial3.fr) | ...
 
 ## Summary
 
