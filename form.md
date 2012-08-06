@@ -33,7 +33,9 @@ The form module defines 2 primary classes: the Form class, and the Input class. 
 
 A basic login form would look like this:
 
-    login = web.form.Form(
+    from web import form 
+
+    login = form.Form(
         form.Textbox('username'),
         form.Password('password'),
         form.Button('Login'),
