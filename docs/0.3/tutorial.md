@@ -5,7 +5,7 @@ title: Tutorial
 
 # Tutorial
 
-Other languages : [chinese 简体中文 ](/tutorial3.zh-cn) | [français](/tutorial3.fr) | ...
+Other languages : [chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [français](/docs/0.3/tutorial.fr) | ...
 
 ## Summary
 
