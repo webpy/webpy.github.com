@@ -94,7 +94,7 @@ title: web.py 0.3 新手指南
 		
 
 <a name="start"> </a>
-## Start the server
+## 启动服务
 
  如果你在命令行下面，请输入::
     $ python code.py
