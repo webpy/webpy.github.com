@@ -3,7 +3,7 @@ layout: default
 title: 欢迎来到web.py!
 ---
 
-**web.py**是一个用于python的简单而有强大的web开发框架。web.py是完全开放的，你可以没有任何限制的用于任何目的使用它。
+**web.py**是一个用于python的简单而有强大的web开发框架。web.py发布在Public Domain协议下，你可以不受限制的自由使用它。
 
 <div style="float: right; margin: 1em"> 
 <pre>
