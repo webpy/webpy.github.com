@@ -10,6 +10,7 @@ This cookbook entry explains how to run web.py as a google app engine applicatio
 ### Requirements
 
 * Google App Engine Python API
+* web.py .38 or later
 
 ### Resources
 
@@ -18,7 +19,7 @@ This cookbook entry explains how to run web.py as a google app engine applicatio
 ###  Notes
 * The mechanisms for running GAE in python2.7 and 2.5 are different, change the app.yaml accordingly
 * code.py is the main file of your application (2.5)
-* code.app is the main file that includes the global variable app (2.7)
+* code.app is the object that cointains the return value of gaerun() (2.7)
 * appname is the name that you specified while creating your GAE application
 * runtime for 2.5 is python, 2.7 is python27
 * threadsafe is only required in 2.7, read about it on the google app engine site
