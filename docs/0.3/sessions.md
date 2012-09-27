@@ -61,3 +61,14 @@ The following code shows how to use a basic DiskStore session.
     
     if __name__ == '__main__':
         app.run()
+
+
+## Sessions and Reloading/Debug Mode
+Is your session data disappearing for seemingly no reason? This can happen when using the web.py app reloader (local debug mode), which will not persist the session object between reloads. Here's a nifty hack to get around this.
+
+    # Hack to make session play nice with the reloader (in debug mode)
+    if web.config.get('_session') is None:
+        session = web.session.Session(app, db.SessionDBStore())
+        web.config._session = session
+    else:
+        session = web.config._session
