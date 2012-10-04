@@ -172,7 +172,7 @@ If you want to learn more about using the module forms web.py, see the [Document
 
 First you need to create a database object.
 
-    db = web.database(dbn='postgres', user='username', pw='password', db='dbname')
+    db = web.database(host='localhost' dbn='postgres', user='username', pw='password', db='dbname')
 
 (Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` definition to `mysql`.)
 
