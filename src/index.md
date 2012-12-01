@@ -39,6 +39,8 @@ These are fully functional apps with code that have been built with web.py.  Not
 * [Mailer](http://mailer.ksikes.net): a very simple mass mailer. ([src](http://github.com/alexksikes/mailer))
 * [MLSS Admin](http://mlss.ksikes.net): a system to rate, comment and accept candidates for conferences and likes. ([src](http://github.com/alexksikes/MLSS))
 * [Wikitrivia](http://www.wikitrivia.net): take randomly generated quizes generated using Wikipedia. ([src](http://github.com/alexksikes/wikitrivia))
+* [onlinestore-multi](https://github.com/nopri/onlinestore-multi): simple online store application
+* [sqliteboy](https://github.com/nopri/sqliteboy): simple SQLite manager/form application
 
 ## Tips and Tricks:
 
