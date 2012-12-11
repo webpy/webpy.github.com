@@ -26,7 +26,7 @@ title: 安装
 
 安装web.py, 请先下载：
     
-    http://webpy.org/static/web.py-0.33.tar.gz
+    http://webpy.org/static/web.py-0.37.tar.gz
 
 或者获取最新的开发版：
 
