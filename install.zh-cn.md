@@ -28,6 +28,10 @@ title: 安装
     
     http://webpy.org/static/web.py-0.33.tar.gz
 
+或者获取最新的开发版：
+
+    https://github.com/webpy/webpy/tarball/master
+
 解压并拷贝 _web_ 文件夹到你的应用程序目录下。 或者，为了让所有的应用程序都可以使用，运行：
     
     python setup.py install
@@ -42,6 +46,10 @@ title: 安装
 
 
     easy_install web.py
+
+或者 [PIP](http://packages.python.org/distribute/)
+
+    sudo pip install web.py
 
 <a name="dev"></a>
 ## 开发
@@ -210,7 +218,8 @@ mod_python 运行方式如同FastCGI， 但不是那么方便配置。
 
 重命名 `code.py` 为 `codep.py` 或别的名字， 添加：
     
-    main = web.wsgifunc(web.webpyfunc(urls, globals()))
+    app = web.application(urls, globals())
+    main = app.wsgifunc()
 
 在 `.htaccess` 中， 添加：
     
@@ -231,7 +240,8 @@ mod\_wsgi 是一个新的Apache模块 [通常优于mod_python](http://code.googl
 
 在 `code.py` 的最后添加：
 
-    application = web.wsgifunc(web.webpyfunc(urls, globals()))
+    app = web.application(urls, globals(), autoreload=False)
+    application = app.wsgifunc()
 
 mod\_wsgi 提供 [许多可行方法](http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives) 来实现WSGI应用, 但一种简单的方法是添加以下到 .htaccess：
 
