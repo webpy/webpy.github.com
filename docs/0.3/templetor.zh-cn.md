@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Templetor: web.py 模板系统
+title: Templetor web.py 模板系统
 ---
 
 # Templetor: web.py 模板系统
