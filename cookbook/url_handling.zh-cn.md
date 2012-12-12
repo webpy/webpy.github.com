@@ -29,7 +29,7 @@ web.py的URL控制模式是简单的、强大的、灵活的。在每个应用�
 
     http://localhost/myapp/greetings/hello?name=Joe
 
-这个URL的路径是 _/myapp/greetings/hello_。web.py会在内部给URL路径加上^和$ ，这样 _/tasks/_ 不会匹配 _/tasks/addnew_。URL匹配依赖于“路径”，所以不能这样使用，如： _/tasks/delete?name=(.+)_ ,?之后部分表示是“查询”，并不会被匹配。阅读URL组件的更多细节，请访问[web.ctx](ctx.zh-cn)。
+这个URL的路径是 _/myapp/greetings/hello_。web.py会在内部给URL路径加上^ 和$ ，这样 _/tasks/_ 不会匹配 _/tasks/addnew_。URL匹配依赖于“路径”，所以不能这样使用，如： _/tasks/delete?name=(.+)_ ,?之后部分表示是“查询”，并不会被匹配。阅读URL组件的更多细节，请访问[web.ctx](ctx.zh-cn)。
 
 `捕捉参数`
 
