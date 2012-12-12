@@ -70,6 +70,6 @@ web.py在处理请求之前，就加载session对象及其数据；在请求处�
  * cookie_domain - 保存session id的Cookie的domain信息
  * timeout - session的有效时间 ，以秒为单位
  * ignore_expiry - 如果为True，session就永不过期
- * ignore_change_ip - 如果为true，就表明只有在访问该session的IP与创建该session的IP完全一致时，session才被允许访问。
+ * ignore_change_ip - 如果为False，就表明只有在访问该session的IP与创建该session的IP完全一致时，session才被允许访问。
  * secret_key       - 密码种子，为session加密提供一个字符串种子
  * expired_message  - session过期时显示的提示信息。

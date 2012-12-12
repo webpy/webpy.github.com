@@ -31,3 +31,16 @@ web.py可以在处理请求之前或之后，通过添加处理器(processor)来
 
     app.add_processor(web.loadhook(my_loadhook))
     app.add_processor(web.unloadhook(my_unloadhook))
+
+你可以在钩子中使用和修改全局变量，比如：web.header()
+
+    def my_loadhook():
+        web.header('Content-type', "text/html; charset=utf-8")
+
+    app.add_processor(web.loadhook(my_loadhook))
+
+###提示: 你也可以在钩子中使用 web.ctx 和 web.input() 。
+
+    def my_loadhook():
+        input = web.input()
+        print input
