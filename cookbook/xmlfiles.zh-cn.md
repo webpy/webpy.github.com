@@ -37,7 +37,7 @@ title: 提供XML访问
     class index:
         def GET(self, code):
             web.header('Content-Type', 'text/xml')
-            return render.index(code)
+            return render.response(code)
 
     web.webapi.internalerror = web.debugerror
     if __name__ == '__main__': app.run()
