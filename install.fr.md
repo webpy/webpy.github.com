@@ -39,8 +39,6 @@ Note: sur certains systèmes Unix (ou Linux), il vous faudra vous connecter en t
 
     sudo python setup.py install
 
-voir [paramètrage recommandé](http://www.feuxi.com/Le-web-py-nouveau-est-arrive.html) 
-
 Une autre option est d'utiliser [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Une fois Easy Install correctement paramétré, exécutez:
 
 
