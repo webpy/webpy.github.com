@@ -51,7 +51,7 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 * [Make History](http://makehistory.national911memorial.org), a project of the 9/11 Memorial Museum, is powered by web.py on top of Google App Engine. On September 11, 2009, it received nearly 200,000 visitors. "It's my first time working with web.py and basically with Python," noted its developer. "web.py was awesome."
 
-* [Oyster Hotel Reviews](http://www.oyster.com/), a website that reviews hotels and lets you book them, uses web.py for its booking pages and dynamic content. They note that "web.py gives us the control we need for a large-scale website".
+* [Oyster.com](http://www.oyster.com/), a website that reviews and photographs hotels, uses web.py for the entire site. They note that "web.py gives us the control we need for a large-scale website". As of Jan 2013, Oyster.com renders about 230,000 pages per day.
 
 * [local.ch](http://www.local.ch), the official online Telephone Directory for Switzerland - using web.py in a backend service for tracking expired content - code open-sourced as [urldammit](http://github.com/harryf/urldammit/tree/master).
 
