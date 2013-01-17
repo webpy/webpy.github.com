@@ -33,7 +33,7 @@ Other languages : [français](/docs/0.3/templetor.fr) | ...
 
 The web.py template language, called `Templetor` is designed to bring the power of Python to templates.
 Instead of inventing new syntax for templates, it re-uses python syntax. 
-If you know Python programming language, you will be at home.
+If you know the Python programming language, you will be at home.
 
 Templetor intentionally limits variable access within a template. A user has access to the variables passed into the template and some builtin python functions.  This allows untrusted users to write templates, and not worry about them causing harm to the running system. You can, of course, increase the global variables available, but more on this later.
 
