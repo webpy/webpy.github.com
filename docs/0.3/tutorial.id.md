@@ -5,7 +5,7 @@ title: Tutorial web.py 0.3
 
 # Tutorial
 
-Bahasa Lain : [Inggris](/tutorial) | [China 简体中文](/docs/0.3/tutorial.zh-cn) | [Perancis](/docs/0.3/tutorial.fr) | ...
+Bahasa Lain : [Inggris](/docs/0.3/tutorial) | [China 简体中文](/docs/0.3/tutorial.zh-cn) | [Perancis](/docs/0.3/tutorial.fr) | ...
 
 ## Ringkasan
 
