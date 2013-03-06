@@ -5,7 +5,7 @@ title: Tutorial
 
 # Tutorial
 
-Other languages : [chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [français](/docs/0.3/tutorial.fr) | ...
+Other languages : [chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [français](/docs/0.3/tutorial.fr) | [Bahasa Indonesia](/docs/0.3/tutorial.id) | ...
 
 ## Summary
 
@@ -157,7 +157,7 @@ and change the definition of `index.GET` to:
 
 and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
 
-If you wish to learn more about web.py templates, vist the <a href="/docs/0.3/templetor">templetor page</a>.
+If you wish to learn more about web.py templates, visit the <a href="/docs/0.3/templetor">templetor page</a>.
 
 <a name="forms"> </a>
 ## Forms
