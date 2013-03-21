@@ -11,7 +11,7 @@ How to use sqlalchemy with web.py
 
 ## Solution
 
-create a load hook and use sqlalchemy's [scoped session] (http://www.sqlalchemy.org/docs/05/session.html#unitofwork_contextual)
+create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy.org/en/rel_0_8/orm/session.html#using-thread-local-scope-with-web-applications)
 
 
     import string
@@ -26,22 +26,20 @@ create a load hook and use sqlalchemy's [scoped session] (http://www.sqlalchemy.
         "/view", "view"
     )
 
+    Session = scoped_session(sessionmaker(bind=engine))
+
     def load_sqla(handler):
-        web.ctx.orm = scoped_session(sessionmaker(bind=engine))
+        web.ctx.orm = Session()
+        
         try:
             return handler()
-        except web.HTTPError:
-           web.ctx.orm.commit()
-           raise
         except:
             web.ctx.orm.rollback()
+            Session.remove()
             raise
         finally:
             web.ctx.orm.commit()
-            # If the above alone doesn't work, uncomment 
-            # the following line:
-            #web.ctx.orm.expunge_all() 
-
+            Session.remove()
 
     app = web.application(urls, locals())
     app.add_processor(load_sqla)
