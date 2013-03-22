@@ -18,6 +18,7 @@ create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy
     import random
     import web
 
+    from sqlalchemy.exc import OperationalError
     from sqlalchemy.orm import scoped_session, sessionmaker
     from models import *
 
@@ -33,8 +34,12 @@ create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy
         
         try:
             return handler()
-        except:
+        except OperationalError:
             web.ctx.orm.rollback()
+            Session.remove()
+            raise
+        except:
+            web.ctx.orm.commit()
             Session.remove()
             raise
         finally:
