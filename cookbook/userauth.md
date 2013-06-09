@@ -7,7 +7,7 @@ title: user authentication
 
 #I'm still working on this page, please no body else edit
 
-Other languages : [français](/userauth/fr) | ...
+Other languages : [français](/userauth.fr) | ...
 
 ##Problem
 You want a system to authenticate users.
