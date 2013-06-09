@@ -5,7 +5,7 @@ title: Reading raw data from post
 
 # Reading raw data from post
 
-Other languages: [français](/../cookbook/postbasic/fr) | ...
+Other languages: [français](/../cookbook/postbasic.fr) | ...
 
 ## Introduction
 
