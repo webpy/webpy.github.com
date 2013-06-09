@@ -5,7 +5,7 @@ title: web.input
 
 # web.input
 
-Other languages: [français](/../cookbook/input/fr) | ...
+Other languages: [français](/../cookbook/input.fr) | ...
 
 ##web.input
 
