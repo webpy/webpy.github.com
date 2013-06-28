@@ -49,4 +49,4 @@ You can define more than one parameters as you wish.  Also note that URL query p
 
 `Note on sub-applications`
 
-To better handle larger web applications, web.py support [sub-applications](/cookbook/subapp).  While designing url scheme with sub applications, keep in mind that the path (web.ctx.path) will get the parent path stripped off. e.g. if in the main application, you define to forward url pattern "/blog" to the 'blog' sub-application, in your blog sub-application all url patterns starts with "/", `not` /blog.  Read the [web.ctx](/cookbook/ctx) cookbook recipe for more details.
+To better handle larger web applications, web.py supports sub-applications](/cookbook/subapp).  While designing url scheme with sub applications, keep in mind that the path (web.ctx.path) will get the parent path stripped off. e.g. if in the main application, you define to forward url pattern "/blog" to the 'blog' sub-application, in your blog sub-application all url patterns starts with "/", `not` /blog.  Read the [web.ctx](/cookbook/ctx) cookbook recipe for more details.
