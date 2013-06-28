@@ -53,8 +53,14 @@ Note:
         
 3. Finally, create a sample file `/var/www/webpy-app/code.py`:
 
+        import os
+        import sys
         import web
-
+        
+        app_path = os.path.dirname(__file__)
+        if app_path:
+            os.chdir(app_path)
+        
         urls = (
             '/.*', 'hello',
             )
