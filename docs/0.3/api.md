@@ -208,7 +208,7 @@ function.</p></div></p>
 <div style="margin-left:30px">
 <p><span class="ts">class</span><code class="class"> auto_application(self)</code><br />
 <div style="margin-left:45px"><p>Application similar to <code>application</code> but urls are constructed 
-automatiacally using metaclass.</p>
+automatically using metaclass.</p>
 
 <pre><code>&gt;&gt;&gt; app = auto_application()
 &gt;&gt;&gt; class hello(app.page):
@@ -687,10 +687,10 @@ render.hello(name="cheetah")
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">class</span><code class="class"> render_genshi(self, *a, **kwargs)</code><br />
-<div style="margin-left:45px"><p>Rendering interface genshi templates.
+<div style="margin-left:45px"><p>Rendering interface to genshi templates.
 Example:</p>
 
-<p>for xml/html templates.</p>
+<p>For xml/html templates:</p>
 
 <pre><code>render = render_genshi(['templates/'])
 render.hello(name='genshi')
@@ -753,7 +753,7 @@ u'abc'
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> sqlors(left, lst)</code><br />
-<div style="margin-left:45px"><p><code>left is a SQL clause like</code>tablename.arg = ` 
+<div style="margin-left:45px"><p><code>left</code> is a SQL clause like <code>tablename.arg = `</code> 
 and <code>lst</code> is a list of values. Returns a reparam-style
 pair featuring the SQL that ORs together the clause
 for each item in the lst.</p>
@@ -966,7 +966,7 @@ if there isn't one.</p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> multiple_insert(self, tablename, values, seqname=None, _test=False)</code><br />
-<div style="margin-left:75px"><p>Inserts multiple rows into <code>tablename</code>. The <code>values</code> must be a list of dictioanries, 
+<div style="margin-left:75px"><p>Inserts multiple rows into <code>tablename</code>. The <code>values</code> must be a list of dictionaries, 
 one for each row to be inserted, each with the same set of keys.
 Returns the list of ids of the inserted rows. <br />
 Set <code>seqname</code> to the ID if it's not the default, or to <code>False</code>
@@ -1677,7 +1677,7 @@ changed.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> url(path=None, doseq=False, **kw)</code><br />
-<div style="margin-left:45px"><p>Makes url by concatinating web.ctx.homepath and path and the 
+<div style="margin-left:45px"><p>Makes url by concatenating web.ctx.homepath and path and the 
 query string created using the arguments.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -1724,7 +1724,7 @@ False
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> validaddr(string_)</code><br />
-<div style="margin-left:45px"><p>Returns either (ip<em>address, port) or "/path/to/socket" from string</em></p>
+<div style="margin-left:45px"><p>Returns either <code>(ipaddress, port)</code> or <code>"/path/to/socket"</code> from string</p>
 
 <pre><code>&gt;&gt;&gt; validaddr('/path/to/socket')
 '/path/to/socket'
@@ -1789,20 +1789,15 @@ u'&lt;\'&amp;"&gt;'
 <p><span class="ts">function</span><code class="function"> websafe(val)</code><br />
 <div style="margin-left:45px"><p>Converts <code>val</code> so that it is safe for use in Unicode HTML.</p>
 
-<blockquote>
-  <blockquote>
-    <blockquote>
-      <p>websafe("&lt;'&amp;\">")
-      u'&lt;&#39;&amp;&quot;&gt;'
-      websafe(None)
-      u''
-      websafe(u'\u203d')
-      u'\u203d'
-      websafe('\xe2\x80\xbd')
-      u'\u203d'</p>
-    </blockquote>
-  </blockquote>
-</blockquote></div></p>
+<pre><code>&gt;&gt;&gt; websafe("&lt;'&amp;\">")
+u'&lt;&#39;&amp;&quot;&gt;'
+&gt;&gt;&gt; websafe(None)
+u''
+&gt;&gt;&gt; websafe(u'\u203d')
+u'\u203d'
+&gt;&gt;&gt;websafe('\xe2\x80\xbd')
+u'\u203d'</code</pre>
+</div></p>
 </div>
 <p><span class="ts">module</span><code class="module"> <a name="web.session">web.session</a></code><br />
 <div style="margin-left:15px"><p>Session Management
@@ -1871,7 +1866,7 @@ KeyError: 'a'
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">class</span><code class="class"> DBStore(self, db, table_name)</code><br />
-<div style="margin-left:45px"><p>Store for saving a session in database
+<div style="margin-left:45px"><p>Store for saving a session in database. 
 Needs a table with the following columns:</p>
 
 <pre><code>session_id CHAR(128) UNIQUE NOT NULL,
@@ -1921,7 +1916,7 @@ expr -&gt; '$' pyexpr | '$(' pyexpr ')' | '${' pyexpr '}'
 pyexpr -&gt; &lt;python expression&gt;
 </code></pre></div></p>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Template(self, text, filename='<template>', filter=None, globals=None, builtins=None, extensions=None)</code><br />
+<p><span class="ts">class</span><code class="class"> Template(self, text, filename='&lt;template&gt;', filter=None, globals=None, builtins=None, extensions=None)</code><br />
 <div style="margin-left:45px"><p></p></div></p>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> compile_template(self, template_string, filename)</code><br />
