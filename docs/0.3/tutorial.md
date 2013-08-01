@@ -130,7 +130,7 @@ Now go back to `code.py`. Under the first line, add:
 
     render = web.template.render('templates/')
 
-This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
+This tells web.py to look for templates in your templates directory. Then change the method `GET` to:
 
     name = 'Bob'    
     return render.index(name)
@@ -150,7 +150,7 @@ Of course, having that `?` in the URL is kind of ugly. Instead, change your URL 
 
     '/(.*)', 'index'
 
-and change the definition of `index.GET` to:
+and change the definition of the method `GET` to:
 
     def GET(self, name):
         return render.index(name)
@@ -170,7 +170,7 @@ If you want to learn more about using the module forms web.py, see the [Document
 
 **Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
 
-First you need to create a database object.
+First you need to create a database object on the file code.py, after the url object.
 
     db = web.database(dbn='postgres', user='username', pw='password', db='dbname')
 
@@ -186,11 +186,13 @@ Using your database engines admin interface, create a simple table in your datab
       created timestamp default now(),
       done boolean default 'f'    );
 
+NOTE: MySQL will have a diferente query statement.
+
 And an initial row:
 
     INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Return to editing `code.py` and change `index.GET` to the following, replacing the entire function:
+Return to editing `code.py` and change the method `GET` to the following, replacing the entire function:
 
     def GET(self):
         todos = db.select('todo')
