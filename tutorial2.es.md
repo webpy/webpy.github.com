@@ -122,8 +122,7 @@ y cambiamos la definicion de `index.GET` a :
 
 y borramos la linea seteando nombre. Con visitar `/` deberia saludar a todo el mundo, y al visitar `/Juan` solamente deberia saludar a Juan.
 
-If you wish to learn more about web.py templates, vist the [templetor page](/templetor).
-Si desea conocer mas sobre las plantillas en web.py, visite la [pagina templetor](/templetor).
+Si deseas aprender mas sobre las plantillas de web.py, visita la [página de templetor](/templetor).
 
 ## Base de Datos
 
@@ -151,25 +150,25 @@ Vuelva al código `code.py`, modifique `index.GET` por:
         todos = web.select('todo')
         print render.index(todos)
 
-and change back the URL handler to take just `/`.
+regresa el manejador de URL para que tenga `/`.
 
-Edit `index.html` so that it reads:
+Edita `index.html` para que se lea:
 
     $def with (todos)
     <ul>    $for todo in todos:
         <li id="t$todo.id">$todo.title</li>    </ul>
 Visit your site again and you should see your one todo item: "Learn web.py". Congratulations! You've made a full application that reads from the database. Now let's let it write to the database as well.
 
-At the end of `index.html`, add:
+Agrega al final de `index.html`, lo siguiente:
 
     <form method="post" action="add">    <p><input type="text" name="title" /> <input type="submit" value="Add" /></p>    </form>
-And change your URLs list to read:
+Modifica tus listas de URLs para leer:
 
     '/', 'index',
     '/add', 'add'
-(You've got to be very careful about those commas.  If you omit them, Python adds the strings together and sees `'/index/addadd'` instead of your list of URLs!)
+(Debes ser cuidadoso sobre las comas. Si los omites, Python unirá las cadena y se verá `'/index/addadd'` en vez de ver una lista de URLs!)
 
-Now add another class:
+Y ahora otra clase:
 
     class add:
         def POST(self):
@@ -177,13 +176,13 @@ Now add another class:
             n = web.insert('todo', title=i.title)
     	    web.seeother('/')
 
-(Notice how we're using `POST` for this?)
+(Observa que estamos usando `POST` para esto?)
 
-`web.input` gives you access to any variables the user submitted through a form. `web.insert` inserts values into the database table `todo` and gives you back the ID of the new row. `seeother` redirects users to that ID.
+`web.input` te da acceso a cualquier variable que el usuario registro en el formulario. `web.insert` inserta los valores dentro de la tabla `todo` y te regresa el ID en un nuevo renglón. `seeother` te redirigirá a ese ID.
 
-Quickly: `web.transact()` starts a transaction. `web.commit()` commits it; `web.rollback()` rolls it back. `web.update` works just like `web.insert` except instead of returning the ID it takes it (or a string `WHERE` clause) after the table name.
+Rápidamente: `web.transact()` inicia una transacción. `web.commit()` lo registra; `web.rollback()` hace un reingreso. `web.update` trabaja igual que `web.insert` con la excepción que en vez d regresar el ID este lo toma (o la cadena con la clausula `WHERE`) despues d la taba de nombre.
 
-`web.input`, `web.query`, and other functions in web.py return "Storage objects", which are just like dictionaries except you can do `d.foo` in addition to `d['foo']`. This really cleans up some code.
+`web.input`, `web.query`, y otras funciones en web.py regresá "Storage objects", lo cual son como diccionarios excepto que puedes hacer `d.foo` sumandose a `d['foo']`. Esto realmente limpia el código.
 
 Usted puede encontrar todos los detalles sobre lo tratado en este tutorial y lo relacionado a las funciones de web.py en [la documentación](http://webpy.infogami.com/docs).
 
