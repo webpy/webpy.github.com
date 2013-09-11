@@ -42,6 +42,7 @@ title: Webpy + Nginx with FastCGI搭建Web.py
 对于静态文件可以添加如下配置:
 
 	location /static/ {
+	    root /path/to/www;
 	    if (-f $request_filename) {
 		rewrite ^/static/(.*)$  /static/$1 break;
 	    }
