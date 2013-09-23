@@ -69,7 +69,7 @@ Note:
 
 ### Note: mod_wsgi + sessions
 
-If you use sessions with `mod_wsgi`, you should change you code like below:
+If you use sessions with `mod_wsgi`, you should change your code like below:
 
     app = web.application(urls, globals())
 
