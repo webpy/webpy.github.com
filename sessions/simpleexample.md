@@ -17,27 +17,32 @@ urls = (
         '/reset', 'reset'
        )
 
-    shelf = shelve.open('session')
-    shelfStore = web.session.ShelfStore(shelf)
+shelf = shelve.open('session')
+shelfStore = web.session.ShelfStore(shelf)
 app = web.application(urls, globals())
 
-    class counter:        
 
-        def GET(self):
-            s = web.session.Session(app, shelfStore)
-            try:
-                s.store.shelf["count"] += 1
-                except Exception:
-                s.store.shelf["count"] = 1
-                return s.store.shelf.get("count")
+class counter:        
+
+    def GET(self):
+        s = web.session.Session(app, shelfStore)
+         numberToAdd = web.input().get('number')
+         if not numberToAdd:
+            numberToAdd = 1
+        try:
+            s.store.shelf["count"] += int(numberToAdd)
+        except Exception:
+            s.store.shelf["count"] = 1
+            return s.store.shelf.get("count")
 
 
-                class reset:
-                    def GET(self): 
-    s = web.session.Session(app, shelfStore)
-    s.store.shelf.clear()
+class reset:
+    def GET(self): 
+        s = web.session.Session(app, shelfStore)
+        s.store.shelf.clear()
 
-    if __name__ == "__main__":
-app.run()
+
+if __name__ == "__main__":
+    app.run()
 
 
