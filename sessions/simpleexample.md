@@ -6,33 +6,38 @@ title: Very simple session example
 # Very simple session example
 
 put this in code.py and run python code.py
+Note : Tested with python2.7.  You should install virtualenv with wirtualenvwrapper to avoid interference with your own Python configuration.
 
-    import web
+import web
+import shelve
 
-    web.config.db_parameters = {
-                                'dbn' : 'postgres',
-                                'host' : 'localhost',
-                                'user' : 'web',
-                                'pw' : 'web',
-                                'db' : 'web'
-                        }
 
-    urls = (
-        '/', 'index'
-    )
+urls = (
+        '/add', 'counter',
+        '/reset', 'reset'
+       )
 
-    class index:
+    shelf = shelve.open('session')
+    shelfStore = web.session.ShelfStore(shelf)
+app = web.application(urls, globals())
+
+    class counter:        
+
         def GET(self):
-            s = web.ctx.session
-            s.start()
-
+            s = web.session.Session(app, shelfStore)
             try:
-                s.click += 1
-            except AttributeError:
-                s.click = 1
+                s.store.shelf["count"] += 1
+                except Exception:
+                s.store.shelf["count"] = 1
+                return s.store.shelf.get("count")
 
-            print 'click: ', s.click
-            s.save()
 
-    if __name__ == '__main__':
-        web.run(urls, globals(), web.reloader)
+                class reset:
+                    def GET(self): 
+    s = web.session.Session(app, shelfStore)
+    s.store.shelf.clear()
+
+    if __name__ == "__main__":
+app.run()
+
+
