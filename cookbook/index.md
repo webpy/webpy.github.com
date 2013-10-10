@@ -11,7 +11,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Hello World](/cookbook/helloworld)
 * [Serving Static Files](/cookbook/staticfiles)
 * [Understanding URL handling](/cookbook/url_handling)
-* [Seeother and Redirect](/cookbook/redirect%20seeother)
+* [Seeother and Redirect](/cookbook/redirect+seeother)
 * [using subapplications](/cookbook/subapp)
 * [Serving XML](/cookbook/xmlfiles)
 * [Reading raw data from post](/cookbook/postbasic)
