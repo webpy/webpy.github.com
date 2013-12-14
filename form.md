@@ -39,7 +39,7 @@ A basic login form would look like this:
         form.Button('Login'),
     )
 
-This defines a basic form. Once defined, you should call it again to get an copied instance, and then you can call the render method on it, like so:
+This defines a basic form. Once defined, you should call it again to get a copied instance, and then you can call the render method on it, like so:
 
     f = login()
     print f.render()
