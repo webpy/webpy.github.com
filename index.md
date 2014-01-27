@@ -61,6 +61,11 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 * [pudung.com](http://pudung.com), Online Store based in Jakarta, Indonesia, is using [onlinestore-multi](https://github.com/nopri/onlinestore-multi) (Simple Online Store application built using Python, web.py, jQuery and MySQL).
 
+* [colr.org](http://www.colr.org), a web experiment with colors and color schemes, is powered by web.py.
+
+* [NiceDiff](http://www.nicediff.com), a tool for diffing Excel and Word files, uses web.py.
+
+
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
 
