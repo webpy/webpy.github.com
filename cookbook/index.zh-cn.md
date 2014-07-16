@@ -25,7 +25,7 @@ title: Web.py Cookbook 简体中文版
 * [Hello World](helloworld.zh-cn)
 * [提供静态文件访问](staticfiles.zh-cn)
 * [理解URL控制](url_handling.zh-cn)
-* [跳转与重定向](redirect%20seeother.zh-cn)
+* [跳转与重定向](redirect+seeother.zh-cn)
 * [使用子应用](subapp.zh-cn)
 * [提供XML访问](xmlfiles.zh-cn)
 * [从post读取原始数据](postbasic.zh-cn)
