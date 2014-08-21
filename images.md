@@ -21,7 +21,10 @@ Now create the class that will handle them:
     import os
     class images:
         def GET(self,name):
-            ext = name.split(".")[-1] # Gather extension
+            try:
+                ext = name.split(".")[-1] # Gather extension
+            except IndexError:
+                raise web.notfound('Invalid request')
             
             cType = {
                 "png":"images/png",
