@@ -29,7 +29,7 @@ title: 站点布局模板
     </body>
     </html>
 
-在某些情况，如果不想使用基本模板，只需要创建一个没有base属性的reander对象，如下：
+在某些情况，如果不想使用基本模板，只需要创建一个没有base属性的render对象，如下：
 
     render_plain = web.template.render('templates/')
     
