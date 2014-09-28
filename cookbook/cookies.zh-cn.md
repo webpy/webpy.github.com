@@ -76,7 +76,7 @@ title: 如何操作Cookie
     class CookieGet:
         def GET(self):
             age=web.cookies().get('age')
-            if age:
+            if age is not None:
                 return "Your age is: %s" % age
             else:
                 return "Cookie does not exist."
