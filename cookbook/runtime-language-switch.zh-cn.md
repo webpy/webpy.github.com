@@ -120,7 +120,7 @@ title: 实时语言切换
 你必须:
 
  * 确保语言文件(en_US、zh_CN等)可以动态改变。
- * 确保custom_gettext()调用越省资源约好。
+ * 确保custom_gettext()调用越省资源越好。
 
 参考:
 
