@@ -100,7 +100,7 @@ title: web.py 0.3 新手指南
     $ python code.py
     http://0.0.0.0:8080/
 
-现在你的web.py应用正运行在你电脑上的一个真正的web服务器上。 访问那个URL，然后你应该看到"Hello, world!" (你可以通过把IP地址/端口加在"code.py"的后面，来控制web.py在哪里启动服务器。你也可以让它运行在`fastcgi`或`scgi`服务器上)。
+现在你的web.py应用正运行在你电脑上的一个真正的web服务器上。 访问http://localhost:8080，然后你应该看到"Hello, world!" (你可以通过把IP地址/端口加在"code.py"的后面，来控制web.py在哪里启动服务器。你也可以让它运行在`fastcgi`或`scgi`服务器上)。
 
 **注意:** 如果你不能或者不想使用默认端口，你可以使用这样的命令来指定端口号:
 
@@ -115,10 +115,28 @@ title: web.py 0.3 新手指南
 
 **注意：** 老版本的 `web.py` 使用 [Cheetah 模板系统](http://www.cheetahtemplate.org/)，你可以也欢迎使用其他模板系统，但它可能不会被长久支持。
 
-给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件，内容如下：
+# 基本用法
+在当前code.py所处的文件夹下，给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件(示例中新建的是`index.html`)，内容如下：
 
     <em>Hello</em>, world!
 
+然后在`code.py`添加如下语句(添加在import web下面，需另起一行。)
+
+    render = web.template.render('templates/')
+
+最后修改下 `index.GET`：
+
+    def GET(self):
+        return render.index()
+
+如果你新建的是`helloworld.html`,则使用
+
+        return render.helloworld()
+
+可以理解为`render`后面跟模板名称
+运行程序，访问http://localhost:8080，即可看到效果。
+
+# 进阶用法
 你也可以在模板中使用 `web.py` 模板支持代码：
 
     $def with (name)
