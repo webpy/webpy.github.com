@@ -115,10 +115,25 @@ title: web.py 0.3 新手指南
 
 **注意：** 老版本的 `web.py` 使用 [Cheetah 模板系统](http://www.cheetahtemplate.org/)，你可以也欢迎使用其他模板系统，但它可能不会被长久支持。
 
-给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件，内容如下：
+### 基本用法
+在刚才的`code.py`目录下给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件(示例中新建的是`index.html`)，内容如下：
 
     <em>Hello</em>, world!
 
+修改`code.py`。在第一行之下添加：
+
+    render = web.template.render('templates/')
+
+这会告诉web.py到你的模板目录中去查找模板。
+
+修改 `index.GET` ：
+
+    return render.index()
+    
+（'index' 是模板的名字）
+最后运行`code.py`。访问`http://localhost:8080/`即可看到修改后的效果。
+
+### 进阶用法
 你也可以在模板中使用 `web.py` 模板支持代码：
 
     $def with (name)
