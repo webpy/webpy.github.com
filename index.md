@@ -43,8 +43,6 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
    [20]: http://reddit.com/
 
-* [Frinki](http://frinki.com), a new social network in Spanish.
-
 * [Yandex][21], the leading Russian search engine (their homepage alone receives 70 million daily page views).
 
    [21]: http://yandex.ru
@@ -58,8 +56,6 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 * [archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py.
 
 * [Chiefmall](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
-
-* [pudung.com](http://pudung.com), Online Store based in Jakarta, Indonesia, is using [onlinestore-multi](https://github.com/nopri/onlinestore-multi) (Simple Online Store application built using Python, web.py, jQuery and MySQL).
 
 "[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
