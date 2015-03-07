@@ -23,3 +23,7 @@ webpy 0.3 supports multiple databases by removing the database from a part of th
 insert, update, delete and query methods can also be used in the similar way. 
 
 Of course, you can use 'host' and 'port' to specify server address and listen port.
+
+To close a db connection explicitly:
+
+    db1.ctx.db.close()
