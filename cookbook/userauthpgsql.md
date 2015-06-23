@@ -14,6 +14,7 @@ title: User Authentication with PostgreSQL database
 ##Needed
 - web.py for all the web functions, and hashlib to store the passwords securely:
 
+##
 	import web
 	import hashlib
 
