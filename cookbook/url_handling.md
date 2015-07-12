@@ -39,7 +39,7 @@ In the url pattern you can catch parameters which can be used in your handler cl
 
     "/users/list/(.+)", "list_users"
 
-The chunk after _list/_ are captured and can be used as a parameter in GET or POST:
+The chunk after _list/_ is captured and can be used as a parameter in GET or POST:
 
     class list_users:
         def GET(self, name):
