@@ -5,7 +5,11 @@ title: deploying web.py with nginx, uwsgi service and linux
 
 # deploying web.py with nginx, uwsgi service and linux
 
-It is possible to deploy web.py with nginx using a uWSGI 2.0.11 or later. Note that earlier versions available in the repository may not work! uWSGI is available via python's pip installer. Nginx natively supports uWSGI since 0.8.40.
+It is possible to deploy web.py with nginx using a uWSGI 2.0.11 or later. Note that earlier versions available in the repository (such as 1.9.17) may not work! uWSGI is available via python's pip installer. Nginx natively supports uWSGI since 0.8.40. The following is for python 2.7.
+
+	sudo apt-get install python-pip nginx python-webpy python-dev libpcre3-dev
+	sudo apt-get remove uwsgi uwsgi-core
+	sudo pip install uwsgi
 
 Create the folders: 
 
@@ -36,21 +40,18 @@ Add a file: /etc/nginx/sites-available/mon
 
 	}
 
-Enable the site:
+Enable the site and disable the default nginx website:
 
     sudo ln -s /etc/nginx/sites-available/mon /etc/nginx/sites-enabled/mon
+	sudo rm /etc/nginx/sites-enabled/default
 
-Create file: /etc/uwsgi/apps-available/mon.xml
+Create file: /var/srv/www/mon/app/mon.xml
 
 	<uwsgi>
 		<plugin>python</plugin>
 		<socket>/run/uwsgi/app/mon/mon.socket</socket>
 		<pythonpath>/var/srv/www/mon/app/</pythonpath>
-		<app mountpoint="/">
-
-		    <script>mon</script>
-
-		</app>
+		<module>mon</module>
 		<master/>
 		<processes>4</processes>
 		<harakiri>60</harakiri>
@@ -64,10 +65,6 @@ Create file: /etc/uwsgi/apps-available/mon.xml
 		<no-orphans/>
 		<vacuum/>
 	</uwsgi>
-
-Enable the app:
-
-	sudo ln -s /etc/uwsgi/apps-available/mon.xml /etc/uwsgi/apps-enabled/mon.xml
 
 Create file: /var/srv/www/mon/app/mon.py
 
@@ -88,17 +85,43 @@ Create file: /var/srv/www/mon/app/mon.py
 
 		return [output]
 
+If upstart is available, create file: /etc/init/mon.conf
+
+	description "mon uwsgi"
+	author "TSC"
+
+	start on runlevel [2345]
+	stop on runlevel [016]
+
+	env DIR=/run/uwsgi/app/mon
+	env USER=www-data
+	env GROUP=www-data
+	env PERMS=0755
+
+	pre-start script
+	  mkdir -p $DIR              || true
+	  chmod $PERMS $DIR       || true
+	  chown $USER:$GROUP $DIR || true
+	end script
+
+	exec sudo -u www-data uwsgi /var/srv/www/mon/app/mon.xml
+
 Restart nginx and uwsgi. This works on many linux systems:
 
 	sudo service nginx stop
-	sudo service uwsgi stop
+	sudo service mon start
 	sudo service nginx start
-	sudo service uwsgi start
 
 Open web browser and view:
 	
 	http://localhost/
 
+Errors are variously logged in:
+
+	/var/log/nginx/error.log
+	/var/srv/www/mon/logs/error.log
+	/var/log/upstart/mon.log
+	
 Helpful links:<br />
 [ nginx website](http://nginx.net/ )<br />
 [ wiki page on Nginx support for uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/Nginx.html )
