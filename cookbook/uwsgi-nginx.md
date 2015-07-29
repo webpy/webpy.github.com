@@ -86,7 +86,7 @@ Create file: /var/srv/www/mon/app/mon.py
 
 		return [output]
 
-If upstart is available, create file: /etc/init/mon.conf
+If upstart (as used in Linux Mint 17.2) is available, create file: /etc/init/mon.conf
 
 	description "mon uwsgi"
 	author "TSC"
