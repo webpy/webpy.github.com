@@ -11,11 +11,12 @@ It is possible to deploy web.py with nginx using a uWSGI 2.0.11 or later. Note t
 	sudo apt-get remove uwsgi uwsgi-core
 	sudo pip install uwsgi
 
-Create the folders: 
+Create the folders and set ownership: 
 
-	/var/srv/www/mon/logs
-	/var/srv/www/mon/public_html/static
-	/var/srv/www/mon/app
+	sudo mkdir -p /var/srv/www/mon/logs
+	sudo mkdir -p /var/srv/www/mon/public_html/static
+	sudo mkdir -p /var/srv/www/mon/app
+	sudo chown www-data:www-data -R /var/srv/www/mon
 
 Add a file: /etc/nginx/sites-available/mon
 
@@ -106,7 +107,7 @@ If upstart is available, create file: /etc/init/mon.conf
 
 	exec sudo -u www-data uwsgi /var/srv/www/mon/app/mon.xml
 
-Restart nginx and uwsgi. This works on many linux systems:
+Restart nginx and start the new mon service. These commands on many linux systems:
 
 	sudo service nginx stop
 	sudo service mon start
