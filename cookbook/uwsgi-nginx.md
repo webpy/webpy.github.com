@@ -49,6 +49,8 @@ Enable the site and disable the default nginx website:
 Create file: /var/srv/www/mon/app/mon.xml
 
 	<uwsgi>
+		<uid>www-data</uid>
+		<gid>www-data</gid>
 		<plugin>python</plugin>
 		<socket>/run/uwsgi/app/mon/mon.socket</socket>
 		<pythonpath>/var/srv/www/mon/app/</pythonpath>
@@ -86,7 +88,7 @@ Create file: /var/srv/www/mon/app/mon.py
 
 		return [output]
 
-If upstart (as used in Linux Mint 17.2) is available, create file: /etc/init/mon.conf
+If upstart, as used in Linux Mint 17.2, is available, create file: /etc/init/mon.conf
 
 	description "mon uwsgi"
 	author "TSC"
@@ -105,7 +107,7 @@ If upstart (as used in Linux Mint 17.2) is available, create file: /etc/init/mon
 	  chown $USER:$GROUP $DIR || true
 	end script
 
-	exec sudo -u www-data uwsgi /var/srv/www/mon/app/mon.xml
+	exec uwsgi /var/srv/www/mon/app/mon.xml
 
 Restart nginx and start the new mon service. These commands on many linux systems:
 
