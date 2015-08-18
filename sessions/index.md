@@ -31,7 +31,7 @@ The Session class is a derivate of Storage. It will store as a dict anyhow calle
 
 #### Public methods
 
- * start() - it will start the session, regenerate id, set cookies, retreive data if the session isn't new; it will call \_identity(), \_verify(), \_generate\_id(), \_retreive()
+ * start() - it will start the session, regenerate id, set cookies, retrieve data if the session isn't new; it will call \_identity(), \_verify(), \_generate\_id(), \_retrieve()
  * get_id() - it will return current session id
  * cleanup() - it will clean expired sessions depending on the provided interface by choosen Handler object (cookie based will do nothing); it will call Handler.clean() with the user preset timeout
  * save() - it will save session data using the _store()
@@ -41,9 +41,9 @@ The Session class is a derivate of Storage. It will store as a dict anyhow calle
 
  * _generate\_id() - it will _only_ make a hash of ip, time, seed or it will call user supplied generator
  * _identify() - it will identify the session id (through client cookie                s)
- * _verify() - it will verify the session id with retreived data from handler object i.e. check for expiration, IP change (headers change?)
+ * _verify() - it will verify the session id with retrieved data from handler object i.e. check for expiration, IP change (headers change?)
  * _store() - a simple wrapper around Handler.store(); data will be passed **unpickled**
- * _retreive() - a simple wrapper around Handler.retreive(); data will be awaited **unpickled**
+ * _retrieve() - a simple wrapper around Handler.retrieve(); data will be awaited **unpickled**
  * _remove() - a simple wrapper around Handler.remove()
 
 #### Main session parameters
@@ -56,17 +56,17 @@ web.config.session_parameters - Storage object:
  * id_seed - a seed-string that will be used in the default Session._generator(); default value: 'web.py'
  * regenerate_id - should the session id be regenerated and set again with a cookie on every request?; default value: True
  * generator - a function to generate _random_ session ids, if False, the implicit generator (Session.\_generate\_id()) will be used; default value: False
- * ignore_change_ip - if the pair ( _id_, _ip_) doesn't match the retreived data from Handler objcet, then fail/raise exception/...; default value: False
+ * ignore_change_ip - if the pair ( _id_, _ip_) doesn't match the retrieved data from Handler objcet, then fail/raise exception/...; default value: False
  * ignore_expiration - should the session expiration be ignored?; default value: False
  * ignore_old_age - should the session be checked for max_age?; default value: True
  * handler - a Handler-like object to provide persistence for Session class; default value: 'db'
 
 ### Handler class
-An abstract class which defines a interface to store/retreive/remove session data.
+An abstract class which defines a interface to store/retrieve/remove session data.
 
 #### Public methods
  * store() - it will store the session data (& pickle them before that); if the argument _old\_id_ is set, it will look for an already storaged session data and if they are present overwrite them or else store as new
- * retreive() - it will retreive storaged data *unpickled* in a Storage object ( _id_, _ip_, _time_, _data_), if there aren't any for given _id_, it will return empty Storage object
+ * retrieve() - it will retrieve storaged data *unpickled* in a Storage object ( _id_, _ip_, _time_, _data_), if there aren't any for given _id_, it will return empty Storage object
  * remove() - it will remove storaged data for given _id_
  * clean() - optional function (may not be available for any Handler implementation [CookieHandler]), it will remove all session data, which been updated longer then before given _timeout_
 

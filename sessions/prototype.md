@@ -78,15 +78,15 @@ title: Prototype
                     pass
     
             def _verify( self ):
-                    '''verifies with retreived data from handler object'''
+                    '''verifies with retrieved data from handler object'''
                     pass
     
             def _store( self ):
                     '''stores session data (wrapper around handler object)'''
                     pass
     
-            def _retreive( self ):
-                    '''retreive session data (wrapper around handler object)'''
+            def _retrieve( self ):
+                    '''retrieve session data (wrapper around handler object)'''
                     pass
     
             def _remove( self ):
@@ -106,7 +106,7 @@ title: Prototype
                             data - dictionary'''
                     pass
     
-            def retreive( self, id ):
+            def retrieve( self, id ):
                     '''return ( id, ip, data, time ) or maybe dictionary'''
                     pass
     
