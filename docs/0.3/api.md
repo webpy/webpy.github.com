@@ -1921,7 +1921,7 @@ expr -&gt; '$' pyexpr | '$(' pyexpr ')' | '${' pyexpr '}'
 pyexpr -&gt; &lt;python expression&gt;
 </code></pre></div></p>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Template(self, text, filename='<template>', filter=None, globals=None, builtins=None, extensions=None)</code><br />
+<p><span class="ts">class</span><code class="class"> Template(self, text, filename='&lt;template&gt;', filter=None, globals=None, builtins=None, extensions=None)</code><br />
 <div style="margin-left:45px"><p></p></div></p>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> compile_template(self, template_string, filename)</code><br />
