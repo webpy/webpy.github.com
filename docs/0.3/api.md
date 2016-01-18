@@ -112,6 +112,27 @@ There you can just do:</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> gaerun(self, *middleware)</code><br />
+<div style="margin-left:75px"><p>Starts the program in a way that will work with Google app engine,
+no matter which version you are using (2.5 / 2.7)</p>
+
+<p>If it is 2.5, just normally start it with app.gaerun()</p>
+
+<p>If it is 2.7, make sure to change the app.yaml handler to point to the
+global variable that contains the result of app.gaerun()</p>
+
+<p>For example:</p>
+
+<p>in app.yaml (where code.py is where the main code is located)</p>
+
+<pre><code>handlers:
+- url: /.*
+  script: code.app
+</code></pre>
+
+<p>Make sure that the app variable is globally accessible</p></div></p>
+</div>
+<div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> get_parent_app(self)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
@@ -140,7 +161,7 @@ There you can just do:</p>
 <div style="margin-left:75px"><p>Returns HTTPError with '404 not found' message</p></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> request(self, localpart='/', method='GET', data=None, host='0.0.0.0:8080', headers=None, https=False, **kw)</code><br />
+<p><span class="ts">method</span><code class="method"> request(self, localpart=&#39;/&#39;, method=&#39;GET&#39;, data=None, host=&#39;0.0.0.0:8080&#39;, headers=None, https=False, **kw)</code><br />
 <div style="margin-left:75px"><p>Makes request to this application for the specified path and method.
 Response will be a storage object with data, status and headers.</p>
 
@@ -199,6 +220,10 @@ is no argument, on port 8080.</p>
 
 <p><code>middleware</code> is a list of WSGI middleware which is applied to the resulting WSGI
 function.</p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> stop(self)</code><br />
+<div style="margin-left:75px"><p>Stops the http server started by run.</p></div></p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> wsgifunc(self, *middleware)</code><br />
@@ -256,6 +281,27 @@ There you can just do:</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> gaerun(self, *middleware)</code><br />
+<div style="margin-left:75px"><p>Starts the program in a way that will work with Google app engine,
+no matter which version you are using (2.5 / 2.7)</p>
+
+<p>If it is 2.5, just normally start it with app.gaerun()</p>
+
+<p>If it is 2.7, make sure to change the app.yaml handler to point to the
+global variable that contains the result of app.gaerun()</p>
+
+<p>For example:</p>
+
+<p>in app.yaml (where code.py is where the main code is located)</p>
+
+<pre><code>handlers:
+- url: /.*
+  script: code.app
+</code></pre>
+
+<p>Make sure that the app variable is globally accessible</p></div></p>
+</div>
+<div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> get_parent_app(self)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
@@ -284,7 +330,7 @@ There you can just do:</p>
 <div style="margin-left:75px"><p>Returns HTTPError with '404 not found' message</p></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> request(self, localpart='/', method='GET', data=None, host='0.0.0.0:8080', headers=None, https=False, **kw)</code><br />
+<p><span class="ts">method</span><code class="method"> request(self, localpart=&#39;/&#39;, method=&#39;GET&#39;, data=None, host=&#39;0.0.0.0:8080&#39;, headers=None, https=False, **kw)</code><br />
 <div style="margin-left:75px"><p>Makes request to this application for the specified path and method.
 Response will be a storage object with data, status and headers.</p>
 
@@ -343,6 +389,10 @@ is no argument, on port 8080.</p>
 
 <p><code>middleware</code> is a list of WSGI middleware which is applied to the resulting WSGI
 function.</p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> stop(self)</code><br />
+<div style="margin-left:75px"><p>Stops the http server started by run.</p></div></p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> wsgifunc(self, *middleware)</code><br />
@@ -395,6 +445,27 @@ There you can just do:</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> gaerun(self, *middleware)</code><br />
+<div style="margin-left:75px"><p>Starts the program in a way that will work with Google app engine,
+no matter which version you are using (2.5 / 2.7)</p>
+
+<p>If it is 2.5, just normally start it with app.gaerun()</p>
+
+<p>If it is 2.7, make sure to change the app.yaml handler to point to the
+global variable that contains the result of app.gaerun()</p>
+
+<p>For example:</p>
+
+<p>in app.yaml (where code.py is where the main code is located)</p>
+
+<pre><code>handlers:
+- url: /.*
+  script: code.app
+</code></pre>
+
+<p>Make sure that the app variable is globally accessible</p></div></p>
+</div>
+<div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> get_parent_app(self)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
@@ -423,7 +494,7 @@ There you can just do:</p>
 <div style="margin-left:75px"><p>Returns HTTPError with '404 not found' message</p></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> request(self, localpart='/', method='GET', data=None, host='0.0.0.0:8080', headers=None, https=False, **kw)</code><br />
+<p><span class="ts">method</span><code class="method"> request(self, localpart=&#39;/&#39;, method=&#39;GET&#39;, data=None, host=&#39;0.0.0.0:8080&#39;, headers=None, https=False, **kw)</code><br />
 <div style="margin-left:75px"><p>Makes request to this application for the specified path and method.
 Response will be a storage object with data, status and headers.</p>
 
@@ -482,6 +553,10 @@ is no argument, on port 8080.</p>
 
 <p><code>middleware</code> is a list of WSGI middleware which is applied to the resulting WSGI
 function.</p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> stop(self)</code><br />
+<div style="margin-left:75px"><p>Stops the http server started by run.</p></div></p>
 </div>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> wsgifunc(self, *middleware)</code><br />
@@ -541,6 +616,27 @@ There you can just do:</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> gaerun(self, *middleware)</code><br />
+<div style="margin-left:75px"><p>Starts the program in a way that will work with Google app engine,
+no matter which version you are using (2.5 / 2.7)</p>
+
+<p>If it is 2.5, just normally start it with app.gaerun()</p>
+
+<p>If it is 2.7, make sure to change the app.yaml handler to point to the
+global variable that contains the result of app.gaerun()</p>
+
+<p>For example:</p>
+
+<p>in app.yaml (where code.py is where the main code is located)</p>
+
+<pre><code>handlers:
+- url: /.*
+  script: code.app
+</code></pre>
+
+<p>Make sure that the app variable is globally accessible</p></div></p>
+</div>
+<div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> get_parent_app(self)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
@@ -569,7 +665,7 @@ There you can just do:</p>
 <div style="margin-left:75px"><p>Returns HTTPError with '404 not found' message</p></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> request(self, localpart='/', method='GET', data=None, host='0.0.0.0:8080', headers=None, https=False, **kw)</code><br />
+<p><span class="ts">method</span><code class="method"> request(self, localpart=&#39;/&#39;, method=&#39;GET&#39;, data=None, host=&#39;0.0.0.0:8080&#39;, headers=None, https=False, **kw)</code><br />
 <div style="margin-left:75px"><p>Makes request to this application for the specified path and method.
 Response will be a storage object with data, status and headers.</p>
 
@@ -630,6 +726,10 @@ is no argument, on port 8080.</p>
 function.</p></div></p>
 </div>
 <div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> stop(self)</code><br />
+<div style="margin-left:75px"><p>Stops the http server started by run.</p></div></p>
+</div>
+<div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> wsgifunc(self, *middleware)</code><br />
 <div style="margin-left:75px"><p>Returns a WSGI-compatible function for this application.</p></div></p>
 </div>
@@ -655,7 +755,7 @@ function.</p></div></p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> autodelegate(prefix='')</code><br />
+<p><span class="ts">function</span><code class="function"> autodelegate(prefix=&#39;&#39;)</code><br />
 <div style="margin-left:45px"><p>Returns a method that takes one argument and calls the method named prefix+arg,
 calling <code>notfound()</code> if there isn't one. Example:</p>
 
@@ -802,7 +902,7 @@ SQLParams, which get concatenated to produce the actual query.</p></div></p>
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">function</span><code class="function"> join(items, sep=' ', prefix=None, suffix=None, target=None)</code><br />
+<p><span class="ts">function</span><code class="function"> join(items, sep=&#39; &#39;, prefix=None, suffix=None, target=None)</code><br />
 <div style="margin-left:75px"><p>Joins multiple queries.</p>
 
 <blockquote>
@@ -871,7 +971,7 @@ SQLParams, which get concatenated to produce the actual query.</p></div></p>
 ['joe']
 </code></pre></div></p>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> get_marker(self, paramstyle='pyformat')</code><br />
+<p><span class="ts">method</span><code class="method"> get_marker(self, paramstyle=&#39;pyformat&#39;)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
@@ -892,7 +992,7 @@ SQLParams, which get concatenated to produce the actual query.</p></div></p>
 ['joe']
 </code></pre></div></p>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> get_marker(self, paramstyle='pyformat')</code><br />
+<p><span class="ts">method</span><code class="method"> get_marker(self, paramstyle=&#39;pyformat&#39;)</code><br />
 <div style="margin-left:75px"><p></p></div></p>
 </div>
 <div style="margin-left:60px">
@@ -995,7 +1095,7 @@ instead of interpolating.</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> select(self, tables, vars=None, what='*', where=None, order=None, group=None, limit=None, offset=None, _test=False)</code><br />
+<p><span class="ts">method</span><code class="method"> select(self, tables, vars=None, what=&#39;*&#39;, where=None, order=None, group=None, limit=None, offset=None, _test=False)</code><br />
 <div style="margin-left:75px"><p>Selects <code>what</code> from <code>tables</code> with clauses <code>where</code>, <code>order</code>, 
 <code>group</code>, <code>limit</code>, and <code>offset</code>. Uses vars to interpolate. 
 Otherwise, each clause can be a SQLQuery.</p>
@@ -1005,6 +1105,8 @@ Otherwise, each clause can be a SQLQuery.</p>
 &lt;sql: 'SELECT * FROM foo'&gt;
 &gt;&gt;&gt; db.select(['foo', 'bar'], where="foo.bar_id = bar.id", limit=5, _test=True)
 &lt;sql: 'SELECT * FROM foo, bar WHERE foo.bar_id = bar.id LIMIT 5'&gt;
+&gt;&gt;&gt; db.select('foo', where={'id': 5}, _test=True)
+&lt;sql: 'SELECT * FROM foo WHERE id = 5'&gt;
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
@@ -1033,7 +1135,7 @@ and setting <code>values</code>.</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:60px">
-<p><span class="ts">method</span><code class="method"> where(self, table, what='*', order=None, group=None, limit=None, offset=None, _test=False, **kwargs)</code><br />
+<p><span class="ts">method</span><code class="method"> where(self, table, what=&#39;*&#39;, order=None, group=None, limit=None, offset=None, _test=False, **kwargs)</code><br />
 <div style="margin-left:75px"><p>Selects from <code>table</code> where keys are equal to values in <code>kwargs</code>.</p>
 
 <pre><code>&gt;&gt;&gt; db = DB(None, {})
@@ -1104,9 +1206,9 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Button("save").render()
-      '<button id="save" name="save">save</button>'
+      u'<button id="save" name="save">save</button>'
       Button("action", value="save", html="<b>Save Changes</b>").render()
-      '<button id="action" value="save" name="action"><b>Save Changes</b></button>'</p>
+      u'<button id="action" value="save" name="action"><b>Save Changes</b></button>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1155,14 +1257,14 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Checkbox('foo', value='bar', checked=True).render()
-      '<input checked="checked" type="checkbox" id="foo_bar" value="bar" name="foo"/>'
+      u'<input checked="checked" type="checkbox" id="foo_bar" value="bar" name="foo"/>'
       Checkbox('foo', value='bar').render()
-      '<input type="checkbox" id="foo_bar" value="bar" name="foo"/>'
+      u'<input type="checkbox" id="foo_bar" value="bar" name="foo"/>'
       c = Checkbox('foo', value='bar')
       c.validate('on')
       True
       c.render()
-      '<input checked="checked" type="checkbox" id="foo_bar" value="bar" name="foo"/>'</p>
+      u'<input checked="checked" type="checkbox" id="foo_bar" value="bar" name="foo"/>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1211,9 +1313,9 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Dropdown(name='foo', args=['a', 'b', 'c'], value='b').render()
-      '<select id="foo" name="foo">\n  <option value="a">a</option>\n  <option selected="selected" value="b">b</option>\n  <option value="c">c</option>\n</select>\n'
+      u'<select id="foo" name="foo">\n  <option value="a">a</option>\n  <option selected="selected" value="b">b</option>\n  <option value="c">c</option>\n</select>\n'
       Dropdown(name='foo', args=[('a', 'aa'), ('b', 'bb'), ('c', 'cc')], value='b').render()
-      '<select id="foo" name="foo">\n  <option value="a">aa</option>\n  <option selected="selected" value="b">bb</option>\n  <option value="c">cc</option>\n</select>\n'</p>
+      u'<select id="foo" name="foo">\n  <option value="a">aa</option>\n  <option selected="selected" value="b">bb</option>\n  <option value="c">cc</option>\n</select>\n'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1262,7 +1364,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>File(name='f').render()
-      '<input type="file" id="f" name="f"/>'</p>
+      u'<input type="file" id="f" name="f"/>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1309,7 +1411,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
 
 <pre><code>&gt;&gt;&gt; f = Form(Textbox("x"))
 &gt;&gt;&gt; f.render()
-'&lt;table&gt;\n    &lt;tr&gt;&lt;th&gt;&lt;label for="x"&gt;x&lt;/label&gt;&lt;/th&gt;&lt;td&gt;&lt;input type="text" id="x" name="x"/&gt;&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;'
+u'&lt;table&gt;\n    &lt;tr&gt;&lt;th&gt;&lt;label for="x"&gt;x&lt;/label&gt;&lt;/th&gt;&lt;td&gt;&lt;input type="text" id="x" name="x"/&gt;&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;'
 </code></pre></div></p>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> fill(self, source=None, **kw)</code><br />
@@ -1337,6 +1439,57 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
 </div>
 </div>
 <div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> GroupedDropdown(self, name, args, *validators, **attrs)</code><br />
+<div style="margin-left:45px"><p>Grouped Dropdown/select input.</p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>GroupedDropdown(name='car<em>type', args=(('Swedish Cars', ('Volvo', 'Saab')), ('German Cars', ('Mercedes', 'Audi'))), value='Audi').render()
+      u'<select id="car_type" name="car_type">\n  <optgroup label="Swedish Cars">\n    <option value="Volvo">Volvo</option>\n    <option value="Saab">Saab</option>\n  </optgroup>\n  <optgroup label="German Cars">\n    <option value="Mercedes">Mercedes</option>\n    <option selected="selected" value="Audi">Audi</option>\n  </optgroup>\n</select>\n'
+      GroupedDropdown(name='car</em>type', args=(('Swedish Cars', (('v', 'Volvo'), ('s', 'Saab'))), ('German Cars', (('m', 'Mercedes'), ('a', 'Audi')))), value='a').render()
+      u'<select id="car_type" name="car_type">\n  <optgroup label="Swedish Cars">\n    <option value="v">Volvo</option>\n    <option value="s">Saab</option>\n  </optgroup>\n  <optgroup label="German Cars">\n    <option value="m">Mercedes</option>\n    <option selected="selected" value="a">Audi</option>\n  </optgroup>\n</select>\n'</p>
+    </blockquote>
+  </blockquote>
+</blockquote></div></p>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> addatts(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> get_default_id(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> get_type(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> get_value(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> is_hidden(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> render(self)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> rendernote(self, note)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> set_value(self, value)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> validate(self, value)</code><br />
+<div style="margin-left:75px"><p></p></div></p>
+</div>
+</div>
+<div style="margin-left:30px">
 <p><span class="ts">type</span><code class="type"> Hidden(self, name, *validators, **attrs)</code><br />
 <div style="margin-left:45px"><p>Hidden Input.</p>
 
@@ -1344,7 +1497,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Hidden(name='foo', value='bar').render()
-      '<input type="hidden" id="foo" value="bar" name="foo"/>'</p>
+      u'<input type="hidden" id="foo" value="bar" name="foo"/>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1433,7 +1586,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Password(name='password', value='secret').render()
-      '<input type="password" id="password" value="secret" name="password"/>'</p>
+      u'<input type="password" id="password" value="secret" name="password"/>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1522,7 +1675,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Textarea(name='foo', value='bar').render()
-      '<textarea id="foo" name="foo">bar</textarea>'</p>
+      u'<textarea id="foo" name="foo">bar</textarea>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1571,9 +1724,9 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
   <blockquote>
     <blockquote>
       <p>Textbox(name='foo', value='bar').render()
-      '<input type="text" id="foo" value="bar" name="foo"/>'
+      u'<input type="text" id="foo" value="bar" name="foo"/>'
       Textbox(name='foo', value=0).render()
-      '<input type="text" id="foo" value="0" name="foo"/>'</p>
+      u'<input type="text" id="foo" value="0" name="foo"/>'</p>
     </blockquote>
   </blockquote>
 </blockquote></div></p>
@@ -1647,7 +1800,7 @@ attachment containing the nice <code>debugerror</code> page.</p></div></p>
 <div style="margin-left:45px"><p>Outputs a <code>Last-Modified</code> header for <code>datetime</code>.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> prefixurl(base='')</code><br />
+<p><span class="ts">function</span><code class="function"> prefixurl(base=&#39;&#39;)</code><br />
 <div style="margin-left:45px"><p>Sorry, this function is really difficult to explain.
 Maybe some other time.</p></div></p>
 </div>
@@ -1677,7 +1830,7 @@ changed.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> url(path=None, doseq=False, **kw)</code><br />
-<div style="margin-left:45px"><p>Makes url by concatinating web.ctx.homepath and path and the 
+<div style="margin-left:45px"><p>Makes url by concatenating web.ctx.homepath and path and the 
 query string created using the arguments.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -1687,7 +1840,7 @@ query string created using the arguments.</p></div></p>
 <p><span class="ts">module</span><code class="module"> <a name="web.httpserver">web.httpserver</a></code><br />
 <div style="margin-left:15px"><p></p></div></p>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> runsimple(func, server_address=('0.0.0.0', 8080))</code><br />
+<p><span class="ts">function</span><code class="function"> runsimple(func, server_address=(&#39;0.0.0.0&#39;, 8080))</code><br />
 <div style="margin-left:45px"><p>Runs <a href="http://www.cherrypy.org">CherryPy</a> WSGI server hosting WSGI app <code>func</code>. 
 The directory <code>static/</code> is hosted statically.</p></div></p>
 </div>
@@ -1707,6 +1860,20 @@ False
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
+<p><span class="ts">function</span><code class="function"> validip6addr(address)</code><br />
+<div style="margin-left:45px"><p>Returns True if <code>address</code> is a valid IPv6 address.</p>
+
+<pre><code>&gt;&gt;&gt; validip6addr('::')
+True
+&gt;&gt;&gt; validip6addr('aaaa:bbbb:cccc:dddd::1')
+True
+&gt;&gt;&gt; validip6addr('1:2:3:4:5:6:7:8:9:10')
+False
+&gt;&gt;&gt; validip6addr('12:10')
+False
+</code></pre></div></p>
+</div>
+<div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> validipport(port)</code><br />
 <div style="margin-left:45px"><p>Returns True if <code>port</code> is a valid IPv4 port.</p>
 
@@ -1719,8 +1886,27 @@ False
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> validip(ip, defaultaddr='0.0.0.0', defaultport=8080)</code><br />
-<div style="margin-left:45px"><p>Returns <code>(ip_address, port)</code> from string <code>ip_addr_port</code></p></div></p>
+<p><span class="ts">function</span><code class="function"> validip(ip, defaultaddr=&#39;0.0.0.0&#39;, defaultport=8080)</code><br />
+<div style="margin-left:45px"><p>Returns <code>(ip_address, port)</code> from string <code>ip_addr_port</code></p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>validip('1.2.3.4')
+      ('1.2.3.4', 8080)
+      validip('80')
+      ('0.0.0.0', 80)
+      validip('192.168.0.1:85')
+      ('192.168.0.1', 85)
+      validip('::')
+      ('::', 8080)
+      validip('[::]:88')
+      ('::', 88)
+      validip('[::1]:80')
+      ('::1', 80)</p>
+    </blockquote>
+  </blockquote>
+</blockquote></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> validaddr(string_)</code><br />
@@ -1734,6 +1920,8 @@ False
 ('127.0.0.1', 8080)
 &gt;&gt;&gt; validaddr('127.0.0.1:8000')
 ('127.0.0.1', 8000)
+&gt;&gt;&gt; validip('[::1]:80')
+('::1', 80)
 &gt;&gt;&gt; validaddr('fff')
 Traceback (most recent call last):
     ...
@@ -1921,7 +2109,7 @@ expr -&gt; '$' pyexpr | '$(' pyexpr ')' | '${' pyexpr '}'
 pyexpr -&gt; &lt;python expression&gt;
 </code></pre></div></p>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Template(self, text, filename='<template>', filter=None, globals=None, builtins=None, extensions=None)</code><br />
+<p><span class="ts">class</span><code class="class"> Template(self, text, filename=&#39;&lt;template&gt;&#39;, filter=None, globals=None, builtins=None, extensions=None)</code><br />
 <div style="margin-left:45px"><p></p></div></p>
 <div style="margin-left:60px">
 <p><span class="ts">method</span><code class="method"> compile_template(self, template_string, filename)</code><br />
@@ -1946,11 +2134,8 @@ pyexpr -&gt; &lt;python expression&gt;
 </div>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> Render(self, loc, *a, **kw)</code><br />
-<div style="margin-left:45px"><p></p></div></p>
-<div style="margin-left:60px">
-<p><span class="ts">class</span><code class="class"> super(self, loc='templates', cache=None, base=None, **keywords)</code><br />
-<div style="margin-left:75px"><p>The most preferred way of using templates.</p>
+<p><span class="ts">class</span><code class="class"> Render(self, loc=&#39;templates&#39;, cache=None, base=None, **keywords)</code><br />
+<div style="margin-left:45px"><p>The most preferred way of using templates.</p>
 
 <pre><code>render = web.template.render('templates')
 print render.foo()
@@ -1961,14 +2146,10 @@ every template through the base template.</p>
 
 <pre><code>render = web.template.render('templates', base='layout')
 </code></pre></div></p>
-</div>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">class</span><code class="class"> render(self, loc, *a, **kw)</code><br />
-<div style="margin-left:45px"><p></p></div></p>
-<div style="margin-left:60px">
-<p><span class="ts">class</span><code class="class"> super(self, loc='templates', cache=None, base=None, **keywords)</code><br />
-<div style="margin-left:75px"><p>The most preferred way of using templates.</p>
+<p><span class="ts">class</span><code class="class"> render(self, loc=&#39;templates&#39;, cache=None, base=None, **keywords)</code><br />
+<div style="margin-left:45px"><p>The most preferred way of using templates.</p>
 
 <pre><code>render = web.template.render('templates')
 print render.foo()
@@ -1979,7 +2160,6 @@ every template through the base template.</p>
 
 <pre><code>render = web.template.render('templates', base='layout')
 </code></pre></div></p>
-</div>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> frender(path, **keywords)</code><br />
@@ -2524,7 +2704,7 @@ value, unless the key appears in <code>defaults</code> as a dictionary.</p>
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> safeunicode(obj, encoding='utf-8')</code><br />
+<p><span class="ts">function</span><code class="function"> safeunicode(obj, encoding=&#39;utf-8&#39;)</code><br />
 <div style="margin-left:45px"><p>Converts any given object to unicode string.</p>
 
 <pre><code>&gt;&gt;&gt; safeunicode('hello')
@@ -2536,7 +2716,7 @@ u'\u1234'
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> safestr(obj, encoding='utf-8')</code><br />
+<p><span class="ts">function</span><code class="function"> safestr(obj, encoding=&#39;utf-8&#39;)</code><br />
 <div style="margin-left:45px"><p>Converts any given object to utf-8 encoded string.</p>
 
 <pre><code>&gt;&gt;&gt; safestr('hello')
@@ -2548,7 +2728,7 @@ u'\u1234'
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> utf8(obj, encoding='utf-8')</code><br />
+<p><span class="ts">function</span><code class="function"> utf8(obj, encoding=&#39;utf-8&#39;)</code><br />
 <div style="margin-left:45px"><p>Converts any given object to utf-8 encoded string.</p>
 
 <pre><code>&gt;&gt;&gt; safestr('hello')
@@ -2698,6 +2878,16 @@ Traceback (most recent call last):
 IndexError: already passed 3
 </code></pre>
 
+<p>It is also possible to get the first value of the iterator or None.</p>
+
+<pre><code>&gt;&gt;&gt; c = iterbetter(iter([3, 4, 5]))
+&gt;&gt;&gt; print c.first()
+3
+&gt;&gt;&gt; c = iterbetter(iter([]))
+&gt;&gt;&gt; print c.first()
+None
+</code></pre>
+
 <p>For boolean test, IterBetter peeps at first value in the itertor without effecting the iteration.</p>
 
 <pre><code>&gt;&gt;&gt; c = iterbetter(iter(range(5)))
@@ -2711,6 +2901,14 @@ False
 &gt;&gt;&gt; list(c)
 []
 </code></pre></div></p>
+<div style="margin-left:60px">
+<p><span class="ts">method</span><code class="method"> first(self, default=None)</code><br />
+<div style="margin-left:75px"><p>Returns the first element of the iterator or None when there are no
+elements.</p>
+
+<p>If the optional argument default is specified, that is returned instead
+of None when there are no elements.</p></div></p>
+</div>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> safeiter(it, cleanup=None, ignore_errors=True)</code><br />
@@ -3163,44 +3361,58 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p>Returns the data sent with the request.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> setcookie(name, value, expires='', domain=None, secure=False, httponly=False, path=None)</code><br />
+<p><span class="ts">function</span><code class="function"> setcookie(name, value, expires=&#39;&#39;, domain=None, secure=False, httponly=False, path=None)</code><br />
 <div style="margin-left:45px"><p>Sets a cookie.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> cookies(*requireds, **defaults)</code><br />
-<div style="margin-left:45px"><p>Returns a <code>storage</code> object with all the cookies in it.
-See <code>storify</code> for how <code>requireds</code> and <code>defaults</code> work.</p></div></p>
+<div style="margin-left:45px"><p>Returns a <code>storage</code> object with all the request cookies in it.</p>
+
+<p>See <code>storify</code> for how <code>requireds</code> and <code>defaults</code> work.</p>
+
+<p>This is forgiving on bad HTTP_COOKIE input, it tries to parse at least
+the cookies it can.</p>
+
+<p>The values are converted to unicode if _unicode=True is passed.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> HTTPError(self, status, headers={}, data='')</code><br />
+<p><span class="ts">type</span><code class="type"> HTTPError(self, status, headers={}, data=&#39;&#39;)</code><br />
 <div style="margin-left:45px"><p></p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> OK(self, data='', headers={})</code><br />
+<p><span class="ts">type</span><code class="type"> OK(self, data=&#39;&#39;, headers={})</code><br />
 <div style="margin-left:45px"><p><code>200 OK</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Created(self, data='Created', headers={})</code><br />
+<p><span class="ts">type</span><code class="type"> Created(self, data=&#39;Created&#39;, headers={})</code><br />
 <div style="margin-left:45px"><p><code>201 Created</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Accepted(self, data='Accepted', headers={})</code><br />
+<p><span class="ts">type</span><code class="type"> Accepted(self, data=&#39;Accepted&#39;, headers={})</code><br />
 <div style="margin-left:45px"><p><code>202 Accepted</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> ok(self, data='', headers={})</code><br />
+<p><span class="ts">type</span><code class="type"> NoContent(self, data=&#39;No Content&#39;, headers={})</code><br />
+<div style="margin-left:45px"><p><code>204 No Content</code> status</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> ok(self, data=&#39;&#39;, headers={})</code><br />
 <div style="margin-left:45px"><p><code>200 OK</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> created(self, data='Created', headers={})</code><br />
+<p><span class="ts">type</span><code class="type"> created(self, data=&#39;Created&#39;, headers={})</code><br />
 <div style="margin-left:45px"><p><code>201 Created</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> accepted(self, data='Accepted', headers={})</code><br />
+<p><span class="ts">type</span><code class="type"> accepted(self, data=&#39;Accepted&#39;, headers={})</code><br />
 <div style="margin-left:45px"><p><code>202 Accepted</code> status</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Redirect(self, url, status='301 Moved Permanently', absolute=False)</code><br />
+<p><span class="ts">type</span><code class="type"> nocontent(self, data=&#39;No Content&#39;, headers={})</code><br />
+<div style="margin-left:45px"><p><code>204 No Content</code> status</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> Redirect(self, url, status=&#39;301 Moved Permanently&#39;, absolute=False)</code><br />
 <div style="margin-left:45px"><p>A <code>301 Moved Permanently</code> redirect.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -3220,7 +3432,7 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p>A <code>307 Temporary Redirect</code> redirect.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> redirect(self, url, status='301 Moved Permanently', absolute=False)</code><br />
+<p><span class="ts">type</span><code class="type"> redirect(self, url, status=&#39;301 Moved Permanently&#39;, absolute=False)</code><br />
 <div style="margin-left:45px"><p>A <code>301 Moved Permanently</code> redirect.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -3240,16 +3452,16 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p>A <code>307 Temporary Redirect</code> redirect.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> BadRequest(self)</code><br />
+<p><span class="ts">type</span><code class="type"> BadRequest(self, message=None)</code><br />
 <div style="margin-left:45px"><p><code>400 Bad Request</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Unauthorized(self, data='Unauthorized', headers={})</code><br />
-<div style="margin-left:45px"><p><code>401 Unauthorized</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> Unauthorized(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>401 Unauthorized</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Forbidden(self, data='Forbidden', headers={})</code><br />
-<div style="margin-left:45px"><p><code>403 Forbidden</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> Forbidden(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>403 Forbidden</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> NotFound(message=None)</code><br />
@@ -3260,32 +3472,36 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p>A <code>405 Method Not Allowed</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> NotAcceptable(self, data='Not Acceptable', headers={})</code><br />
-<div style="margin-left:45px"><p><code>406 Not Acceptable</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> NotAcceptable(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>406 Not Acceptable</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Conflict(self, data='Conflict', headers={})</code><br />
-<div style="margin-left:45px"><p><code>409 Conflict</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> Conflict(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>409 Conflict</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> Gone(self)</code><br />
+<p><span class="ts">type</span><code class="type"> Gone(self, message=None)</code><br />
 <div style="margin-left:45px"><p><code>410 Gone</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> PreconditionFailed(self, data='Precondition Failed', headers={})</code><br />
-<div style="margin-left:45px"><p><code>412 Precondition Failed</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> PreconditionFailed(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>412 Precondition Failed</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> badrequest(self)</code><br />
+<p><span class="ts">type</span><code class="type"> UnsupportedMediaType(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>415 Unsupported Media Type</code> error.</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> badrequest(self, message=None)</code><br />
 <div style="margin-left:45px"><p><code>400 Bad Request</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> unauthorized(self, data='Unauthorized', headers={})</code><br />
-<div style="margin-left:45px"><p><code>401 Unauthorized</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> unauthorized(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>401 Unauthorized</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> forbidden(self, data='Forbidden', headers={})</code><br />
-<div style="margin-left:45px"><p><code>403 Forbidden</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> forbidden(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>403 Forbidden</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> notfound(message=None)</code><br />
@@ -3296,20 +3512,24 @@ See <code>storify</code> for how <code>requireds</code> and <code>defaults</code
 <div style="margin-left:45px"><p>A <code>405 Method Not Allowed</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> notacceptable(self, data='Not Acceptable', headers={})</code><br />
-<div style="margin-left:45px"><p><code>406 Not Acceptable</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> notacceptable(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>406 Not Acceptable</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> conflict(self, data='Conflict', headers={})</code><br />
-<div style="margin-left:45px"><p><code>409 Conflict</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> conflict(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>409 Conflict</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> gone(self)</code><br />
+<p><span class="ts">type</span><code class="type"> gone(self, message=None)</code><br />
 <div style="margin-left:45px"><p><code>410 Gone</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">type</span><code class="type"> preconditionfailed(self, data='Precondition Failed', headers={})</code><br />
-<div style="margin-left:45px"><p><code>412 Precondition Failed</code> status</p></div></p>
+<p><span class="ts">type</span><code class="type"> preconditionfailed(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>412 Precondition Failed</code> error.</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">type</span><code class="type"> unsupportedmediatype(self, message=None)</code><br />
+<div style="margin-left:45px"><p><code>415 Unsupported Media Type</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> InternalError(message=None)</code><br />
@@ -3366,6 +3586,17 @@ store for things to work.</p></li>
 <div style="margin-left:15px"><p>WSGI Utilities
 (from web.py)</p></div></p>
 <div style="margin-left:30px">
+<p><span class="ts">function</span><code class="function"> intget(integer, default=None)</code><br />
+<div style="margin-left:45px"><p>Returns <code>integer</code> as an int or <code>default</code> if it can't.</p>
+
+<pre><code>&gt;&gt;&gt; intget('3')
+3
+&gt;&gt;&gt; intget('3a')
+&gt;&gt;&gt; intget('3a', 0)
+0
+</code></pre></div></p>
+</div>
+<div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> listget(lst, ind, default=None)</code><br />
 <div style="margin-left:45px"><p>Returns <code>lst[ind]</code> if it exists, <code>default</code> otherwise.</p>
 
@@ -3377,11 +3608,11 @@ store for things to work.</p></li>
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> runfcgi(func, addr=('localhost', 8000))</code><br />
+<p><span class="ts">function</span><code class="function"> runfcgi(func, addr=(&#39;localhost&#39;, 8000))</code><br />
 <div style="margin-left:45px"><p>Runs a WSGI function as a FastCGI server.</p></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> runscgi(func, addr=('localhost', 4000))</code><br />
+<p><span class="ts">function</span><code class="function"> runscgi(func, addr=(&#39;localhost&#39;, 4000))</code><br />
 <div style="margin-left:45px"><p>Runs a WSGI function as an SCGI server.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -3401,6 +3632,8 @@ as appropriate based on context and <code>sys.argv</code>.</p></div></p>
 ('127.0.0.1', 8080)
 &gt;&gt;&gt; validaddr('127.0.0.1:8000')
 ('127.0.0.1', 8000)
+&gt;&gt;&gt; validip('[::1]:80')
+('::1', 80)
 &gt;&gt;&gt; validaddr('fff')
 Traceback (most recent call last):
     ...
@@ -3408,7 +3641,26 @@ ValueError: fff is not a valid IP address/port
 </code></pre></div></p>
 </div>
 <div style="margin-left:30px">
-<p><span class="ts">function</span><code class="function"> validip(ip, defaultaddr='0.0.0.0', defaultport=8080)</code><br />
-<div style="margin-left:45px"><p>Returns <code>(ip_address, port)</code> from string <code>ip_addr_port</code></p></div></p>
+<p><span class="ts">function</span><code class="function"> validip(ip, defaultaddr=&#39;0.0.0.0&#39;, defaultport=8080)</code><br />
+<div style="margin-left:45px"><p>Returns <code>(ip_address, port)</code> from string <code>ip_addr_port</code></p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>validip('1.2.3.4')
+      ('1.2.3.4', 8080)
+      validip('80')
+      ('0.0.0.0', 80)
+      validip('192.168.0.1:85')
+      ('192.168.0.1', 85)
+      validip('::')
+      ('::', 8080)
+      validip('[::]:88')
+      ('::', 88)
+      validip('[::1]:80')
+      ('::1', 80)</p>
+    </blockquote>
+  </blockquote>
+</blockquote></div></p>
 </div>
 </div>
