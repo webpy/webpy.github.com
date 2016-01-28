@@ -8,15 +8,15 @@ title: Welcome to web.py!
 <div style="float: right; margin: 1em">
 <pre>
 import web
-        
+
 urls = (
     '/(.*)', 'hello'
 )
 app = web.application(urls, globals())
 
-class hello:        
+class hello:
     def GET(self, name):
-        if not name: 
+        if not name:
             name = 'World'
         return 'Hello, ' + name + '!'
 
@@ -30,10 +30,10 @@ if __name__ == "__main__":
 
 web.py 0.37 is the latest released version of web.py. You can install it by running:
 
-    sudo easy_install web.py
+    sudo pip install web.py
 
 Or to get the latest development version from git:
-    
+
     git clone git://github.com/webpy/webpy.git
     ln -s `pwd`/webpy/web .
 
@@ -61,13 +61,13 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 * [pudung.com](http://pudung.com), Online Store based in Jakarta, Indonesia, is using [onlinestore-multi](https://github.com/nopri/onlinestore-multi) (Simple Online Store application built using Python, web.py, jQuery and MySQL).
 
-"[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."  
+"[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://bret.appspot.com/entry/experimenting-google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
 
-"Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."  
+"Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Adam Atlas</span>
 
-"Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."   
+"Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you *would* like."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]</span>
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
