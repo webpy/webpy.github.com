@@ -31,7 +31,7 @@ Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [c
 
 To install web.py, download:
     
-    http://webpy.org/static/web.py-0.37.tar.gz
+    http://webpy.org/static/web.py-0.38.tar.gz
 
 or the get the latest dev version:
 
@@ -43,18 +43,18 @@ extract it and copy the _web_ folder into a directory where your application is.
 
 Note: on some unix like systems you may need to switch to root or run:
 
-    sudo python setup.py install
+    python setup.py install
 
 see [recommended setup](/recommended_setup).
 
 Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once Easy Install is properly setup:
 
 
-    sudo easy_install web.py
+    easy_install web.py
     
 Or [PIP](http://packages.python.org/distribute/)
 
-    sudo pip install web.py
+    pip install web.py
 
 <a name="macosx"></a>
 ### MacOS X
