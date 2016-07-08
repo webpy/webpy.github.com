@@ -3353,7 +3353,7 @@ it doesn't add a new one.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> input(*requireds, **defaults)</code><br />
-<div style="margin-left:45px"><p>Returns a <code>storage</code> object with the GET and POST arguments. 
+<div style="margin-left:45px"><p>Returns a <code>storage</code> object with the GET and POST arguments.
 See <code>storify</code> for how <code>requireds</code> and <code>defaults</code> work.</p></div></p>
 </div>
 <div style="margin-left:30px">
@@ -3492,6 +3492,10 @@ the cookies it can.</p>
 <div style="margin-left:45px"><p><code>415 Unsupported Media Type</code> error.</p></div></p>
 </div>
 <div style="margin-left:30px">
+<p><span class="ts">function</span><code class="function"> UnavailableForLegalReasons(message=None)</code><br />
+<div style="margin-left:45px"><p>Returns HTTPError with '415 Unavailable For Legal Reasons' error from the active application.</p></div></p>
+</div>
+<div style="margin-left:30px">
 <p><span class="ts">type</span><code class="type"> badrequest(self, message=None)</code><br />
 <div style="margin-left:45px"><p><code>400 Bad Request</code> error.</p></div></p>
 </div>
@@ -3530,6 +3534,10 @@ the cookies it can.</p>
 <div style="margin-left:30px">
 <p><span class="ts">type</span><code class="type"> unsupportedmediatype(self, message=None)</code><br />
 <div style="margin-left:45px"><p><code>415 Unsupported Media Type</code> error.</p></div></p>
+</div>
+<div style="margin-left:30px">
+<p><span class="ts">function</span><code class="function"> unavailableforlegalreasons(message=None)</code><br />
+<div style="margin-left:45px"><p>Returns HTTPError with '415 Unavailable For Legal Reasons' error from the active application.</p></div></p>
 </div>
 <div style="margin-left:30px">
 <p><span class="ts">function</span><code class="function"> InternalError(message=None)</code><br />
