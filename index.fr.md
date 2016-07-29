@@ -135,7 +135,7 @@ Le [bivalidateur](http://xhtml-css.com/) vérifie votre HTML et la validation CS
    [25]: http://www.youos.com/
 
 "Django vous permet d'écrire des applications web en Django. TurboGears vous permet d'écrire des applications web en TurboGears. Web.py vous permet d'écrire des applications web en Python."  
-- Adam Atlas
+- Alice Atlas
 
 "très élégant et concis (sans oublier que c'est écrit par Aaron Swartz, dont les compétences en codage sont impressionnantes), et ça ne m'a pas fait perdre de temps."   
 - Jonas Galvez, Aupeo [#][26]
