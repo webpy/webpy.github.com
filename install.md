@@ -55,6 +55,11 @@ Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/
 Or [PIP](http://packages.python.org/distribute/)
 
     pip install web.py
+    
+And the dev version:
+
+    pip install web.py==0.40.dev0
+    
 
 <a name="macosx"></a>
 ### MacOS X
