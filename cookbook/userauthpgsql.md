@@ -53,6 +53,7 @@ There will be 2 states during the login/logout session:
 	store = web.session.DiskStore('sessions')
 	session = web.session.Session(app, store,
 	                              initializer={'login': 0, 'privilege': 0})
+	session_data = session._initializer
 
 
 ## 3rd: Logged or not logged ?
@@ -60,7 +61,7 @@ To manage the access for people who are logged or not is very easy. Just define 
 
 ##
 	def logged():
-		if session.login==1:
+		if session_data['login']==1:
 			return True
 		else:
 			return False
@@ -94,10 +95,10 @@ Now, let's have fun:
 	
 	    def GET(self):
 	        if logged():
-	            render = create_render(session.privilege)
+	            render = create_render(session_data['privilege'])
 	            return '%s' % render.login_double()
 	        else:
-	            render = create_render(session.privilege)
+	            render = create_render(session_data['privilege'])
 	            return '%s' % render.login()
 
 - Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row.
@@ -111,19 +112,19 @@ Now, let's have fun:
 	        ident = db.select('example_users', where='name=$name', vars=locals())[0]
 	        try:
 	            if hashlib.sha1("sAlT754-"+passwd).hexdigest() == ident['pass']:
-	                session.login = 1
-	                session.privilege = ident['privilege']
-	                render = create_render(session.privilege)
+	                session_data['login'] = 1
+	                session_data['privilege'] = ident['privilege']
+	                render = create_render(session_data['privilege'])
 	                return render.login_ok()
 	            else:
-	                session.login = 0
-	                session.privilege = 0
-	                render = create_render(session.privilege)
+	                session_data['login'] = 0
+	                session_data['privilege'] = 0
+	                render = create_render(session_data['privilege'])
 	                return render.login_error()
 	        except:
-	            session.login = 0
-	            session.privilege = 0
-	            render = create_render(session.privilege)
+	            session_data['login'] = 0
+	            session_data['privilege'] = 0
+	            render = create_render(session_data['privilege'])
 	            return render.login_error()
 
 
@@ -132,9 +133,9 @@ For the reset function, we just kill the session, and redirect to the logout.htm
 	class Reset:
 	
 	    def GET(self):
-	        session.login = 0
+	        session_data['login'] = 0
 	        session.kill()
-	        render = create_render(session.privilege)
+	        render = create_render(session_data['privilege'])
 	        return render.logout()
 
 
