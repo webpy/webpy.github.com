@@ -28,9 +28,13 @@ if __name__ == "__main__":
 
 ## Get Started
 
-web.py 0.38 is the latest released version of web.py. You can install it by running:
+web.py 0.39 is the latest released version of web.py. You can install it by running:
 
     pip install web.py
+
+The above version only supports Python 2. If you looking for Python 3 support, try the experimental version.
+
+    pip install web.py==0.40-dev1
 
 Or to get the latest development version from git:
     
