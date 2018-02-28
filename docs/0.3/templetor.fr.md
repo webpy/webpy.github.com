@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Templator: le système de gabarits de web.py
+title: "Templator: le système de gabarits de web.py"
 ---
 
 # Templator: le système de gabarits de web.py

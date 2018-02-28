@@ -1,6 +1,6 @@
 ---
 layout: default
-title: web.py templating system (codename: templetor)
+title: "web.py templating system (codename: templetor)"
 ---
 
 # web.py templating system (codename: templetor)

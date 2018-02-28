@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Google Summer of Code: web.py - Session management
+title: "Google Summer of Code: web.py - Session management"
 ---
 
 # Google Summer of Code: web.py - Session management

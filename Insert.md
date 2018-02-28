@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Insert: Adding a new entry to a database
+title: "Insert: Adding a new entry to a database"
 ---
 
 # Insert: Adding a new entry to a database
