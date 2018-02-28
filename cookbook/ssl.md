@@ -11,6 +11,23 @@ Other languages: [français](/../cookbook/ssl/fr) | ...
 
 How to set SSL support in built-in cherrypy server web.py
 
+## Solution (with upcoming 0.40)
+
+Add this code before calling `app.run()`.
+
+```python
+from cheroot.server import HTTPServer
+from cheroot.ssl.builtin import BuiltinSSLAdapter
+
+HTTPServer.ssl_adapter = BuiltinSSLAdapter(
+        certificate='cert/domain.crt', 
+        private_key='cert/domain.key')
+```
+
+If you need to include `certificate_chain`, it can passed as additional keyword parameter `certificate_chain='path-to-chain'`.
+
+See [cheroot code](https://github.com/cherrypy/cheroot/blob/master/cheroot/ssl/builtin.py) for more details.
+
 ## Solution (Requires latest web.py version [0.37 installed from source as of this writing])
     import web
     from web.wsgiserver import CherryPyWSGIServer
