@@ -1,4 +1,4 @@
-highlighter: true
+highlighter: rouge
 markdown: kramdown
 exclude: [_tools, Makefile]
 
