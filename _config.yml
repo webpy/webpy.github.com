@@ -1,3 +1,4 @@
 highlighter: true
+markdown: kramdown
 exclude: [_tools, Makefile]
 
