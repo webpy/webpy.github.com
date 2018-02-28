@@ -1,5 +1,4 @@
 safe: false
 highlighter: true
-markdown: rdiscount
 exclude: [_tools, Makefile]
 
