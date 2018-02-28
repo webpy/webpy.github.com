@@ -1,5 +1,5 @@
 safe: false
-pygments: true
+highlighter: true
 markdown: rdiscount
 exclude: [_tools, Makefile]
 
