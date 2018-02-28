@@ -1,4 +1,3 @@
-safe: false
 highlighter: true
 exclude: [_tools, Makefile]
 
