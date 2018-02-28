@@ -7,6 +7,7 @@ title: RESTful doctesting using app.request
 
 RESTful doctesting using app.request
 
+```python
     #!/usr/bin/env python
     
     """
@@ -128,3 +129,4 @@ RESTful doctesting using app.request
         doctest.testmod()
       else:
         app.run()
+```
