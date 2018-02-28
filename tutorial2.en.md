@@ -5,7 +5,7 @@ title: web.py 0.2 tutorial
 
 # web.py 0.2 tutorial
 
-{{OldVersionWarning("/tutorial3.en")}}
+**This documentation refers to an old version of web.py. <a href="/docs/0.3/tutorial">Checkout the new version</a>.
 
 ## Starting
 
