@@ -24,10 +24,10 @@ Now create the class that will handle them:
             ext = name.split(".")[-1] # Gather extension
             
             cType = {
-                "png":"images/png",
-                "jpg":"images/jpeg",
-                "gif":"images/gif",
-                "ico":"images/x-icon"            }
+                "png":"image/png",
+                "jpg":"image/jpeg",
+                "gif":"image/gif",
+                "ico":"image/x-icon"            }
 
             if name in os.listdir('images'):  # Security
                 web.header("Content-Type", cType[ext]) # Set the Header
