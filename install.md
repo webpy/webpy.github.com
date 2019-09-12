@@ -73,7 +73,7 @@ Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to 
 <a name="prod"></a>
 ## Production
 
-The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, analogous to Java's Servlet Interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](http://trac.saddi.com/flup) ([download here](https://pypi.org/project/flup/#history)), which provides WSGI interfaces for those APIs. 
+The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, analogous to Java's Servlet Interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](https://www.saddi.com/software/flup/) ([download here](https://pypi.org/project/flup/#history)), which provides WSGI interfaces for those APIs. 
 
 For all the CGI variants, add this to the top of your `code.py`:
 
