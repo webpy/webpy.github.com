@@ -35,6 +35,8 @@ In your main `code.py`:
     import web
     import blog
     urls = (
+      # Note: regex is not supported for sub-app URL match.
+      # "/(blog|BLOG)" does not work, you have to define "/blog" and "/BLOG" instead.
       "/blog", blog.app_blog,
       "/(.*)", "index"
     )
