@@ -42,20 +42,20 @@ class CookieSet:
 
 Calling the above class with GET will set a cookie named `age` with a default value equal to `25` (this default value actually comes from the `web.input` processing, NOT the `setcookie` function), which expires in 1 hour (3600 seconds).
 
-The third (and optional) argument to `web.setcookie()`, "expires", allows you to set when you want your cookie to expire.  Any negative number will expire the cookie immediately.  Any positive number is the number of seconds that the cookie will last (3600 would result in an hour long cookie).  Leaving this argument empty results in a session cookie, which expires when your browser shuts down.  To make the cookie "permanent", simply update cookie expiration time at regular interval (e.g. when user logged in).
+The third (and optional) argument to `web.setcookie()`, `expires`, allows you to set when you want your cookie to expire.  Any negative number will expire the cookie immediately.  Any positive number is the number of seconds that the cookie will last (3600 would result in an hour long cookie).  Leaving this argument empty results in a session cookie, which expires when your browser shuts down.  To make the cookie permanent, simply update cookie expiration time at regular interval (e.g. when user logged in).
 
 ### Retrieving Cookies
 #### Overview
 
 There are many methods to retrieve cookies, depending on the desired reaction to a missing cookie.
 
-##### Way 1 (return None if cookie is not found):
+##### Way 1 (return None if cookie is not found)
 
 ```
 web.cookies().get(cookieName)  # cookieName is the name of the cookie submitted by the browser
 ```
 
-##### Way 2 (raises exception AttributeError if cookie is not found):
+##### Way 2 (raises exception AttributeError if cookie is not found)
 
 ```
 foo = web.cookies()
