@@ -191,6 +191,7 @@ web.py 的模板语言叫做 `Templetor`，它能负责将 python 的强大功�
 ### 代码
 
 可以在 `code` 块书写任何 python 代码：
+
     $code:
         x = "you can write any python code here"
         y = x.title()
