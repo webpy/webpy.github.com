@@ -15,5 +15,5 @@ Sometimes, the client sends a lot of data by the POST method. In webpy, you can 
 ## Code
 
     class RequestHandler():
-        def POST():
+        def POST(self):
             data = web.data() # you can get data use this method
