@@ -40,7 +40,7 @@ class count:
 class reset:
     def GET(self):
         session.kill()
-        return ""
+        return "Reset"
 
 if __name__ == "__main__":
     app.run()
@@ -58,6 +58,8 @@ Test it with `curl` on another console:
 curl -c cookie.txt http://127.0.0.1/count  # Store cookie in file 'cookie.txt'. It returns `1`.
 curl -b cookie.txt http://127.0.0.1/count  # Use existing cookie. It returns `2`.
 curl -b cookie.txt http://127.0.0.1/count  # Use existing cookie. It returns `3`.
+curl -b cookie.txt http://127.0.0.1/reset  # Use existing cookie. It returns `Reset`.
+                                           # Count is set back to the initial value `0`.
 ```
 
 The session object is loaded with the session data before handling the request and saves the session data after handling the request, if modified. Note in the current (11-22-2008) version of web.py, one must turn off debug to use the development server with sessions.
