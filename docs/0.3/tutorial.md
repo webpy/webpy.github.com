@@ -51,7 +51,7 @@ This line says we want the URL `/` (i.e. the front page) to be handled by the cl
 <a name="getpost"> </a>
 ## GET and POST: the difference
 
-Now we need to write the `index` class. While most people don't notice it just browsing around, your browser uses a language known as HTTP for communicating with the World Wide Web. The details aren't important, but the basic idea is that Web visitors ask web servers to perform certain functions (like `GET` or `POST`) on URLs (like `/` or `/foo?f=1`). 
+Now we need to write the `index` class. While most people don't notice it just browsing around, your browser uses a language known as HTTP for communicating with the World Wide Web. The details aren't important, but the basic idea is that Web visitors ask web servers to perform certain functions (like `GET` or `POST`) on URLs (like `/` or `/foo?f=1`).
 
 `GET` is the one we're all familiar with, the one used to request the text of a web page. When you type `harvard.edu` into your web browser, it literally asks the Harvard web server to `GET /`.  The second-most famous, `POST`, is often used when submitting certain kinds of forms, like a request to purchase something. You use `POST` whenever the act of submitting a request _does something_ (like charge your credit card and process an order). This is key, because `GET` URLs can be passed around and indexed by search engines, which you definitely want for most of your pages but definitely _don't_ want for things like processing orders (imagine if Google tried to buy everything on your site!).
 
@@ -65,9 +65,9 @@ This `GET` function will now get called by web.py anytime someone makes a `GET` 
 
 Now we need to create an application specifying the urls and a way to tell  web.py to start serving web pages:
 
-    if __name__ == "__main__": 
+    if __name__ == "__main__":
         app = web.application(urls, globals())
-        app.run()        
+        app.run()
 
 First we tell web.py to create an application with the URLs we listed above, looking up the classes in the global namespace of this file.
 And finally we make sure that web.py serves the application we created above.
@@ -76,35 +76,41 @@ Now notice that although I've been talking a lot here, we only really have five 
 
 For easier access, here's how your code should look like:
 
-    import web
-    
-    urls = (
-        '/', 'index'
-    )
-    
-    class index:
-        def GET(self):
-            return "Hello, world!"
-    
-    if __name__ == "__main__":
-        app = web.application(urls, globals())
-        app.run()
+```
+import web
+
+urls = (
+    '/', 'index'
+)
+
+class index:
+    def GET(self):
+        return "Hello, world!"
+
+if __name__ == "__main__":
+    app = web.application(urls, globals())
+    app.run()
+```
 
 <a name="start"> </a>
 ## Start the server
 
- If you go to your command line and type:
+If you go to your command line and type:
 
-    $ python code.py
-    http://0.0.0.0:8080/
+```
+$ python code.py
+http://0.0.0.0:8080/
+```
 
 You now have your web.py application running a real web server on your computer. Visit that URL and you should see "Hello, world!" (You can add an IP address/port after the "code.py" bit to control where web.py launches the server. You can also tell it to run a `fastcgi` or `scgi` server.)
 
 **Note:** You can specify the port number to use on the command line like this
 if you can't or don't want to use the default:
 
-    $ python code.py 1234
-
+```
+$ python code.py 1234
+http://0.0.0.0:1234/
+```
 
 <a name="templating"> </a>
 ## Templating
@@ -117,12 +123,14 @@ Let's make a new directory for our templates (we'll call it `templates`). Inside
 
 Or you can use web.py's templating language to add code to your HTML:
 
-    $def with (name)
-    
-    $if name:
-        I just wanted to say <em>hello</em> to $name.
-    $else:
-        <em>Hello</em>, world!
+```
+$def with (name)
+
+$if name:
+    I just wanted to say <em>hello</em> to $name.
+$else:
+    <em>Hello</em>, world!
+```
 
 As you can see, the templates look a lot like Python files except for the `def with` statement at the top (saying what the template gets called with) and the `$`s placed in front of any code.  Currently, template.py requires the `$def` statement to be the first line of the file.  Also, note that web.py automatically escapes any variables used here, so that if for some reason `name` is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write `$:name` instead of `$name`.
 
@@ -132,12 +140,12 @@ Now go back to `code.py`. Under the first line, add:
 
 This tells web.py to look for templates in your templates directory. Then change `index.GET` to:
 
-    name = 'Bob'    
+    name = 'Bob'
     return render.index(name)
 
 ('index' is the name of the template and 'name' is the argument passed to it)
 
-Visit your site and it should say hello to Bob. 
+Visit your site and it should say hello to Bob.
 
 But let's say we want to let people enter their own name in. Replace the two lines we added above with:
 
@@ -172,9 +180,20 @@ If you want to learn more about using the module forms web.py, see the [Document
 
 First you need to create a database object.
 
-    db = web.database(dbn='postgres', user='username', pw='password', db='dbname')
+```
+db = web.database(
+    dbn='postgres',
+    host='127.0.0.1',
+    port=5432,
+    user='username',
+    pw='password',
+    db='dbname',
+)
+```
 
-(Adjust these -- especially `username`, `password`, and `dbname` -- for your setup. MySQL users will also want to change `dbn` definition to `mysql`.)
+Make sure you have correct PostgreSQL server (`host`), port, username (`user`),
+password (`pw`) and database name (`db`). For MySQL server, please use
+`dbn=mysql` instead.
 
 That's all you need to do -- web.py will automatically handle connecting and disconnecting from the database.
 
@@ -233,7 +252,7 @@ Now add another class:
 
 (Notice how we're using `POST` for this?)
 
-`web.input` gives you access to any variables the user submitted through a form. 
+`web.input` gives you access to any variables the user submitted through a form.
 
 Note: In order to access data from multiple identically-named items, in a list format (e.g.: a series of check-boxes all with the attribute name="name") use:
 
