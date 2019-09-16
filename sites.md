@@ -19,70 +19,45 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 [watchdog.net](http://watchdog.net/), a political watchdog site, is built in web.py.
 
-
-[archivd.com](http://www.archivd.com), a web application for collaborative research and archiving, is built on web.py
-
 [colr.org](http://www.colr.org), a color scheme picking site, is built in web.py.
-
 
 [Chiefmall](http://www.chiefmall.com/), a contractor search tool, was built with web.py.
 
 [grouplite.com](http://www.grouplite.com) uses web.py.
 
-[Yandex][21], a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
+[Yandex](http://yandex.ru), a Russian traffic provider whose homepage alone receives 70 million daily page views, uses web.py for certain projects.
 
-   [21]: http://yandex.ru
+[LShift](http://www.lshift.net/) has used web.py to build websites for [Expro](http://exproretail.com/) and [publisher Dorling Kindersley](http://travel.dk.com/). "web.py allows us to do what we do best," they report. "It does the webapp thing brilliantly, and without requiring us to compromise on flexibility and originality."
 
-[LShift][22] has used web.py to build websites for [Expro][23] and [publisher Dorling Kindersley][24]. "web.py allows us to do what we do best," they report. "It does the webapp thing brilliantly, and without requiring us to compromise on flexibility and originality."
-
-   [22]: http://www.lshift.net/
-   [23]: http://exproretail.com/
-   [24]: http://travel.dk.com/
-
-[micropledge][m], a web app that collects funding for software ideas, is built in web.py. "We've enjoyed fitting in with its minimalist approach," says developer Ben Hoyt.
-
-   [m]: http://micropledge.com/
+[micropledge](http://micropledge.com/), a web app that collects funding for software ideas, is built in web.py. "We've enjoyed fitting in with its minimalist approach," says developer Ben Hoyt.
 
 The [bivalidator](http://xhtml-css.com/) checks your HTML and CSS validation.
 
 [jottit.com](http://jottit.com) is built with web.py.  Jottit makes getting a website as easy as filling out a textbox. 
 
-[Tasko][t] is built with web.py. Tasko is an online task management tool which  uses a plain text file format to store all the information.
+[Tasko](http://taskodone.com/) is built with web.py. Tasko is an online task management tool which  uses a plain text file format to store all the information.
 
-   [t]: http://taskodone.com/
+[Damiga](http://damiga.com/) is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: friends, celebrities, even fictional characters. It's also a place where you can see how the world feels about you.
 
-[Damiga][d] is built with web.py. Damiga is a place where you can anonymously and freely tell the world how you feel about other people: friends, celebrities, even fictional characters. It's also a place where you can see how the world feels about you.  
+[Fotosaur.us](http://fotosaur.us), an unbelievably rad image bookmarking app, was written with web.py.
 
-   [d]: http://damiga.com/
+[URIs.us](http://uris.us) is service for creating short urls. Deploying on Google App Engine
 
-[Fotosaur.us][f], an unbelievably rad image bookmarking app, was written with web.py.
+[xykra](http://xykra.org) is a minimalist (160 Python lines) wiki using [Markdown](http://daringfireball.net/projects/markdown/).
 
-   [f]: http://fotosaur.us
-
-
-[URIs.us][u] is service for creating short urls. Deploying on Google App Engine
-
-   [u]: http://uris.us 
-
-
-[xykra] [x] is a minimalist (160 Python lines) wiki using [Markdown](http://daringfireball.net/projects/markdown/).
-
-   [x]: http://xykra.org
-
-[Edgarest] [y] is built with web.py.Edgarest provides fast, intuitive search of SEC Filings.
+[Edgarest][y] is built with web.py.Edgarest provides fast, intuitive search of SEC Filings.
 
    [y]: http://edgarest.com
 
-
-[Wklej.to] [z] is a nopaste/Pastebin app with Free and Open api, and of course with desktop plugins and clients.
+[Wklej.to][z] is a nopaste/Pastebin app with Free and Open api, and of course with desktop plugins and clients.
 
    [z]: http://wklej.to
 
-[Sysinternals CD] [zz] integrates webpy and postgresql to render an automated website
+[Sysinternals CD][zz] integrates webpy and postgresql to render an automated website
 
    [zz]: http://sysinternals.xykra.org
 
-[Biomed Search] [zzz] searches over a million biomedical images images in nicely viewable sizes.
+[Biomed Search][zzz] searches over a million biomedical images images in nicely viewable sizes.
 
    [zzz]: http://www.biomed-search.com
 
