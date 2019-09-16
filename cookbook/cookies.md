@@ -19,7 +19,7 @@ Web.py *comes* with an easy to use method for setting/getting cookies.
 #### Overview
 
 ```
-setcookie(name, value, expires="", domain=None, secure=False):
+setcookie(name, value, expires="", domain=None, secure=False, samesite=None):
 ```
        
 * *name* `(string)` - The actual name of the cookie, as stored by the browser, and returned to the server.
@@ -27,6 +27,7 @@ setcookie(name, value, expires="", domain=None, secure=False):
 * *expires* `(int)` - Optionally, is the time in seconds until the browser should expire the cookie.  Note: this must be an integer, not a string.
 * *domain* `(string)` - The domain the cookie is valid for. By default, set to the host accessed, this allows you to set the domain, rather than just a host (such as `.webpy.org`).
 * *secure* `(bool)`- If True, require that the cookie only be sent over HTTP/S.
+* *samesite* `None`, `Strict`, `Lax` - If `None`, no `samesite` attribute set. Check RFC document [Same-site Cookies](https://tools.ietf.org/html/draft-west-first-party-cookies-07) for more details.
 
 #### Example
 
