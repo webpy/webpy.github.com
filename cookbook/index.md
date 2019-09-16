@@ -89,6 +89,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [mod_wsgi deployment through Apache on Ubuntu](/cookbook/mod_wsgi-apache-ubuntu)
 * [mod_wsgi deployment through Nginx](/cookbook/mod_wsgi-nginx )
 * [Fastcgi deployment through Nginx](/cookbook/fastcgi-nginx)
+* [uWSGI service deployment through Nginx on Linux](/cookbook/uwsgi-nginx)
 * [PyISAPIe deployment through IIS7/IIS6](/cookbook/iis7_iis6_windows_pyisapie)
 * [Deploying as a google app engine application](/cookbook/google_app_engine)
 
