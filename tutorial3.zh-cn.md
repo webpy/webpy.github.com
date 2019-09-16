@@ -111,11 +111,11 @@ title: web.py 0.3 新手指南
 <a name="templating"> </a>
 ## 模板
 
-在 Python 中写 HTML 不是聪明的选择，相反在 HTML 中写 Python 则有趣的多。幸运的是，`web.py` 让这件事情做得简单而又漂亮。
+在 Python 中写 HTML 会很笨重，相反在 HTML 中写 Python 则有趣的多。幸运的是，`web.py` 让这件事变得非常简单。
 
 **注意：** 老版本的 `web.py` 使用 [Cheetah 模板系统](http://www.cheetahtemplate.org/)，你可以也欢迎使用其他模板系统，但它可能不会被长久支持。
 
-给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件，内容如下：
+给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件（就叫index.html好了），内容如下：
 
     <em>Hello</em>, world!
 
@@ -128,7 +128,7 @@ title: web.py 0.3 新手指南
     $else:
         <em>Hello</em>, world!
 
-如上，该模板看起来就像 python 文件一样，除了顶部的 `def with` (表示从模板将从这后面取值)和总是位于代码段之前的`$`。当前，`template.py` 首先请求模板文件的首行 `$def` 。当然，你要注意 `web.py` 将会转义任何任何用到的变量，所以当你将 `name` 的值设为是一段 HTML 时，它会被转义显示成纯文本。如果要关闭该选项，可以写成 `$:name` 来代替 `$name`。
+如上，该模板看起来就像 python 文件一样，除了顶部的 `def with` (表示从模板将从这后面取值)和总是位于代码段之前的`$`。当前，`template.py` 要求模板文件的首行为 `$def` 语句。当然，你要注意 `web.py` 将会转义任何用到的变量，所以当你将 `name` 的值设为是一段 HTML 时，它会被适当的转移，显示成纯文本。如果要关闭该选项，可以写成 `$:name` 来代替 `$name`。
 
 回看再看 `code.py`。在第一行之下添加：
 
