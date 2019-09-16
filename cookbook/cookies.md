@@ -26,8 +26,8 @@ setcookie(name, value, expires="", domain=None, secure=False, samesite=None):
 * *value* `(string)` - The value you want stored under that name.
 * *expires* `(int)` - Optionally, is the time in seconds until the browser should expire the cookie.  Note: this must be an integer, not a string.
 * *domain* `(string)` - The domain the cookie is valid for. By default, set to the host accessed, this allows you to set the domain, rather than just a host (such as `.webpy.org`).
-* *secure* `(bool)`- If True, require that the cookie only be sent over HTTP/S.
-* *samesite* `None`, `Strict`, `Lax` - If `None`, no `samesite` attribute set. Check RFC document [Same-site Cookies](https://tools.ietf.org/html/draft-west-first-party-cookies-07) for more details.
+* *secure* `(bool)`- If `True`, require that the cookie only be sent over HTTP/S.
+* *samesite* (`None`, `'Strict'`, `'Lax'`) - If `None`, no `samesite` attribute will be set. Check RFC document [Same-site Cookies](https://tools.ietf.org/html/draft-west-first-party-cookies-07) for more details. *Note: This argument is available in web.py version released after Sep 16, 2019.*
 
 #### Example
 
