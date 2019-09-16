@@ -12,7 +12,7 @@ Here are ideas for web.py projects to take on if you have some free time, say, t
 <a name="enhancing-templating"></a>
 ### enhancing templating
 
-The current templating system, and even Adam Atlas's rewrite, doesn't perfectly conform to the spec. For example, it doesn't support arbitrary Python code execution within a template. This project would be to take the templating system the final mile and fix the remaining bugs and unimplemented features.
+The current templating system, and even Alice Atlas's rewrite, doesn't perfectly conform to the spec. For example, it doesn't support arbitrary Python code execution within a template. This project would be to take the templating system the final mile and fix the remaining bugs and unimplemented features.
 
 <a name="engine-agnostic-templating"></a>
 ### Engine-agnostic templating

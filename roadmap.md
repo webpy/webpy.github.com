@@ -165,7 +165,7 @@ unittest:
 * no whitespace magic 
 * better error reporting 
 * should allow template reuse 
-* Probably use Adam Atlas's implementation 
+* Probably use Alice Atlas's implementation 
 
 ## Contrib 
 
