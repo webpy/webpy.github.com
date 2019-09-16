@@ -19,18 +19,19 @@ Once the database is defined as such, you can insert new row like this:
 
 ```
 # Insert an entry into table 'mytable'. `firstname`, `lastname`, `joindate` are the SQL column names.
-sequence_id = db.insert('mytable', firstname="Bob", lastname="Smith", joindate=web.SQLLiteral("NOW()"))
+# `sequence_id` is the value of sequence id of the newly inserted entry.
+sequence_id = db.insert("mytable", firstname="Bob", lastname="Smith", joindate=web.SQLLiteral("NOW()"))
 ```
 
 The insert statement takes the following keyword arguments:
  
 * `tablename` - The name of the SQL table in your database.
-* `seqname` - the column name which stores sequence ID, defaults to name `id`. If `None` or `False`, no sequence id will be returned.
+* `seqname` - the column name which stores sequence ID, defaults to name `id`. If `None` or `False`, no sequence ID will be returned.
 * `_test` - if `True`, SQL statement will NOT be actually executed, instead a string of full SQL statement is returned. Useful to verify your SQL statement.
 
 ```
-db.select('mytable', offset=10, _test=True)
-<sql: 'SELECT * FROM mytable OFFSET 10'>
+db.insert("mytable", firstname="Bob")
+<sql: "INSERT INTO mytable (firstname) VALUES ('Bob')">
 ```
 
 You can also pass a dict with SQL column name as dict key directly:
