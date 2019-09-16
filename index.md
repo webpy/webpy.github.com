@@ -8,15 +8,15 @@ title: Welcome to web.py!
 <div style="float: right; margin: 1em">
 <pre>
 import web
-        
+
 urls = (
     '/(.*)', 'hello'
 )
 app = web.application(urls, globals())
 
-class hello:        
+class hello:
     def GET(self, name):
-        if not name: 
+        if not name:
             name = 'World'
         return 'Hello, ' + name + '!'
 
