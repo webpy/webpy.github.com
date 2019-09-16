@@ -9,28 +9,37 @@ title: Serving Images
 
 First let your urls extend beyond images:
 
-    import web
+```
+import web
     
-    urls = (
-    '/images/(.*)', 'images' #this is where the image folder is located....
-    )
+urls = (
+    '/images/(.*)', 'images' # serve image files with url prefix '/images/'
+)
+```
 
 ## Basic Image Class
+
 Now create the class that will handle them:
 
-    import os
-    class images:
-        def GET(self,name):
-            ext = name.split(".")[-1] # Gather extension
-            
-            cType = {
-                "png":"image/png",
-                "jpg":"image/jpeg",
-                "gif":"image/gif",
-                "ico":"image/x-icon"            }
+```
+import os
+import web
 
-            if name in os.listdir('images'):  # Security
-                web.header("Content-Type", cType[ext]) # Set the Header
-                return open('images/%s'%name,"rb").read() # Notice 'rb' for reading images
-            else:
-                raise web.notfound()
+
+class images:
+    def GET(self, name):
+        ext = name.split(".")[-1]
+
+        content_types = {
+            "png": "image/png",
+            "jpg": "image/jpeg",
+            "gif": "image/gif",
+            "ico": "image/x-icon",
+        }
+
+        if name in os.listdir("images"):  # Security
+            web.header("Content-Type", content_types[ext.lower()])
+            return open("images/%s" % name, "rb").read()  # reading with 'rb'
+        else:
+            raise web.notfound()
+```
