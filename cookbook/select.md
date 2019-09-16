@@ -20,8 +20,16 @@ db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
 Once the database is defined as such, performing selects can be performed like this:
 
 ```
-# Select all entries from table 'mytable'
-entries = db.select('mytable')
+# Select all rows from table 'mytable'.
+results = db.select('mytable')
+```
+
+The query result (`results` in above example) is an iterator of dict-like storage items, you can access them like below:
+
+```
+len(results)        # number of rows returned
+results[0]          # first row returned
+results[0]['name']  # value of sql column `name` in first row returned
 ```
 
 The select statement takes the following keyword arguments:
