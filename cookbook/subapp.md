@@ -17,8 +17,8 @@ In `blog.py`:
 
     import web
     urls = (
-      "", "reblog",
-      "/(.*)", "blog"
+        "", "reblog",
+        "/(.*)", "blog"
     )
 
     class reblog:
@@ -30,15 +30,15 @@ In `blog.py`:
 
     app_blog = web.application(urls, locals())
 
-In your main `code.py`:
+In your main `app.py`:
 
     import web
     import blog
     urls = (
-      # Note: regex url matching is not supported for sub-app.
-      # "/(blog|BLOG)" does not work, you have to define "/blog" and "/BLOG" instead.
-      "/blog", blog.app_blog,
-      "/(.*)", "index"
+        # Note: regex url matching is not supported for sub-app.
+        # "/(blog|BLOG)" does not work, you have to define "/blog" and "/BLOG" instead.
+        "/blog", blog.app_blog,
+        "/(.*)", "index"
     )
     
     class index:
