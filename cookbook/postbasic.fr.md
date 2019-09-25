@@ -13,6 +13,6 @@ Parfois, le client envoie de nombreuses données par la péthode post. Dans webp
 
 ## Solution:
 
-    class RequestHandler():
-        def POST():
+    class RequestHandler(object):
+        def POST(self):
             data = web.data() # Vous pouvez obtenir les données en utilisant cette méthode

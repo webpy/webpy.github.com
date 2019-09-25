@@ -12,6 +12,6 @@ title: 从post读取原始数据
 
 ## 代码
 
-    class RequestHandler():
-        def POST():
+    class RequestHandler(object):
+        def POST(self):
             data = web.data() # 通过这个方法可以取到数据
