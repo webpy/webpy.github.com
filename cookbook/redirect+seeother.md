@@ -5,7 +5,7 @@ title: web.redirect and web.seeother
 
 # web.redirect and web.seeother
 
-Other languages:  [français](/../cookbook/redirect+seeother/fr) | ...
+Other languages:  [français](/../cookbook/redirect+seeother.fr) | ...
 
 ## web.redirect and web.seeother
 

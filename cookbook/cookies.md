@@ -5,7 +5,7 @@ title: cookies
 
 # cookies
 
-Other languages: [français](/../cookbook/cookies/fr) | ...
+Other languages: [français](/../cookbook/cookies.fr) | ...
 
 ## Problem
 
@@ -21,7 +21,7 @@ Web.py *comes* with an easy to use method for setting/getting cookies.
 ```
 setcookie(name, value, expires="", domain=None, secure=False, samesite=None):
 ```
-       
+
 * *name* `(string)` - The actual name of the cookie, as stored by the browser, and returned to the server.
 * *value* `(string)` - The value you want stored under that name.
 * *expires* `(int)` - Optionally, is the time in seconds until the browser should expire the cookie.  Note: this must be an integer, not a string.

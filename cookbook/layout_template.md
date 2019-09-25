@@ -5,7 +5,7 @@ title: Site Layout Template
 
 # Site Layout Template
 
-Other languages : [français](/layout_template/fr) | ...
+Other languages : [français](/layout_template.fr) | ...
 
 ### Problem
 
@@ -16,7 +16,7 @@ How do I use a site-wide base template that displays across every page? (In othe
 This can be done using the base attribute:
     
     render = web.template.render('templates/', base='layout')
-    
+
 Now if you do something like `render.foo()` it will render the `templates/foo.html` template and then wrap it in the `templates/layout.html` template.
 
 The format for "layout.html" should be a simple template that takes one variable.  For example:

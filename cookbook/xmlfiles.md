@@ -5,7 +5,7 @@ title: Serving XML
 
 # Serving XML
 
-Other languages:  [français](/../cookbook/xmlfiles/fr) | ...
+Other languages:  [français](/../cookbook/xmlfiles.fr) | ...
 
 ### Problem
 

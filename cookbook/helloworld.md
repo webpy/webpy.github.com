@@ -5,7 +5,7 @@ title: Hello World!
 
 # Hello World!
 
-Other languages : [français](/helloworld/fr) | ...
+Other languages : [français](/helloworld.fr) | ...
 
 ## Problem
 

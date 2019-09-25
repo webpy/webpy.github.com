@@ -3,11 +3,12 @@ layout: default
 title: Web.py Cookbook
 ---
 
-# Web.py Cookbook
+# web.py Cookbook
 
-_Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/index.ja) |  [Français](/cookbook/index.fr)
+Other languages: [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/index.ja) |  [Français](/cookbook/index.fr)
 
 ## Basics
+
 * [Hello World](/cookbook/helloworld)
 * [Serving Static Files](/cookbook/staticfiles)
 * [Understanding URL handling](/cookbook/url_handling)
@@ -17,6 +18,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Reading raw data from post](/cookbook/postbasic)
 
 ## Advanced
+
 * [Contextual and Environment variables - web.ctx](/cookbook/ctx)
 * [Application processors, loadhooks and unloadhooks](/cookbook/application_processors)
 * [How to use web.background](/cookbook/background)
@@ -27,6 +29,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Run-time language switch](/cookbook/runtime-language-switch)
 
 ## Sessions and user state
+
 * [Working with Session](/cookbook/sessions)
 * [Using session with reloader](/cookbook/session_with_reloader)
 * [Using session in template](/cookbook/session_in_template)
@@ -38,11 +41,13 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Unpack session stored in postgresql](/cookbook/unpack_postgres_session)
 
 ## Utils
+
 * [Sending Mail](/cookbook/sendmail)
 * [Sending Mail Using Gmail](/cookbook/sendmail_using_gmail)
 * [Webservice using soaplib + WSDL](/cookbook/webservice)
 
 ## Templates
+
 * [Templetor: The web.py templating system](/docs/0.3/templetor )
 * [Using Site Layout Templates](/cookbook/layout_template)
 * [Alternating Style](/cookbook/alternating_style)
@@ -55,10 +60,12 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Concatenate two rendered templates](/cookbook/concatenate_two_rendered_templates)
 
 ## Testing
+
 * [Testing with Paste and Nose](/cookbook/testing_with_paste_and_nose)
 * [RESTful doctesting using an application's request method](/cookbook/restful_doctesting_using_request)
 
 ## User input
+
 * [File Upload](/cookbook/fileupload)
 * [Store an uploaded file](/cookbook/storeupload)
 * [How to put a limit of size of uploaded files](/cookbook/limiting_upload_size)
@@ -68,6 +75,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [How to protect forms from CSRF attacks](/cookbook/csrf) 
 
 ## Databases
+
 * [Multiple databases](/cookbook/multidbs)
 * [Select: Retrieving entries from a database](/cookbook/select)
 * [Update: Updating entries in a database](/cookbook/update)
@@ -81,6 +89,7 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 
 
 ## Deployment
+
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
 * [Fastcgi deployment through Apache](/cookbook/fastcgi-apache) 
 * [CGI deployment through Apache](/cookbook/cgi-apache)
@@ -94,4 +103,5 @@ _Other languages:_ [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook
 * [Deploying as a google app engine application](/cookbook/google_app_engine)
 
 ## Subdomains
+
 * Subdomains and how to access the username (requested)

@@ -5,7 +5,7 @@ title: Sessions
 
 # Sessions
 
-Other languages: [français](/../cookbook/sessions/fr) | ...
+Other languages: [français](/../cookbook/sessions.fr) | ...
 
 ### Problem
 
