@@ -12,28 +12,30 @@ The easiest way to install web.py is using [easy_install](http://peak.telecommun
 
     $ easy_install web.py
 
-If you don't have `easy_install`, try downloading the sources.
+If you don't have `easy_install`, try downloading the source package from
+[pypi](https://pypi.org/project/web.py/), then install manually. We use
+version `0.39` for example here:
 
-    $ wget http://webpy.org/static/web.py-0.38.tar.gz
-    $ tar xvzf web.py-0.38.tar.gz
-    $ cd web.py-0.38
+    $ tar xvzf web.py-0.39.tar.gz
+    $ cd web.py-0.39
     $ sudo python setup.py install
 
-If you don't want to install web.py system-wide (or if you want to bundle web.py with your application):
+If you don't want to install web.py system-wide, or if you want to bundle
+web.py with your application, you can simply copy `web.py-0.39/web/` to your
+application directory.
 
-    $ cd your-app-dir
-    $ wget http://webpy.org/static/web.py-0.38.tar.gz
-    $ tar xvzf web.py-0.38.tar.gz
-    $ ln -s web.py-0.38/web .
-   
-If you are on Ubuntu Linux or Debian, you can install web.py using `apt-get` [ packaging service](http://en.wikipedia.org/wiki/Advanced_Packaging_Tool). But you may not get the latest as debian/ubuntu release cycles are different from web.py.
+If you are on Ubuntu Linux or Debian, you can install web.py with `apt-get`,
+but you may not get the latest web.py as Debian/Ubuntu release cycles are
+different from web.py.
 
     $ sudo apt-get install python-webpy
 
-If you're running Fedora, RHEL or CentOS (and using the [EPEL](https://fedoraproject.org/wiki/EPEL) repository), you can install web.py using `yum` or `up2date`:
+If you're running Fedora, RHEL or CentOS (and using the
+[EPEL](https://fedoraproject.org/wiki/EPEL) repository), you can install web.py
+using `yum`:
 
-    $ yum install python-webpy
-    $ up2date -i python-webpy
+    $ sudo yum install epel-release
+    $ sudo yum install python-webpy
 
 ## Get the latest development version
 
