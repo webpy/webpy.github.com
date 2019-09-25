@@ -44,7 +44,8 @@ login = form.Form(
 )
 ```
 
-This defines a basic form. Once defined, you should call it again to get an copied instance, and then you can call the render method on it, like so:
+This defines a basic form. Once defined, you should call it again to get a
+copied instance, and then you can call the render method on it, like so:
 
 ```
 f = login()
