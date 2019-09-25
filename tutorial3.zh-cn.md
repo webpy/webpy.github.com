@@ -91,22 +91,19 @@ title: web.py 0.3 新手指南
         app = web.application(urls, globals())
         app.run()
 
-		
-
 <a name="start"> </a>
 ## 启动服务
 
- 如果你在命令行下面，请输入::
+如果你在命令行下面，请输入::
+
     $ python code.py
     http://0.0.0.0:8080/
 
-现在你的web.py应用正运行在你电脑上的一个真正的web服务器上。 访问那个URL，然后你应该看到"Hello, world!" (你可以通过把IP地址/端口加在"code.py"的后面，来控制web.py在哪里启动服务器。你也可以让它运行在`fastcgi`或`scgi`服务器上)。
+现在你的web.py应用正运行在你电脑上的一个真正的web服务器上。 访问那个 `http://localhost:8080`，然后你应该看到"Hello, world!" (你可以通过把IP地址/端口加在"code.py"的后面，来控制web.py在哪里启动服务器。你也可以让它运行在`fastcgi`或`scgi`服务器上)。
 
 **注意:** 如果你不能或者不想使用默认端口，你可以使用这样的命令来指定端口号:
 
     $ python code.py 1234
-
-	
 
 <a name="templating"> </a>
 ## 模板
@@ -115,9 +112,29 @@ title: web.py 0.3 新手指南
 
 **注意：** 老版本的 `web.py` 使用 [Cheetah 模板系统](http://www.cheetahtemplate.org/)，你可以也欢迎使用其他模板系统，但它可能不会被长久支持。
 
-给模板新建一个目录（命名为 `templates`），在该目录下新建一个以 `.html` 结尾的文件（就叫index.html好了），内容如下：
+### 基本用法
+
+在刚才的`code.py`目录下新建一个目录 `templates` 用来存放 HTML 模版文件，新建
+一个 `templates/index.html` 作为要使用的模版，并写入如下内容：
 
     <em>Hello</em>, world!
+
+修改`code.py`。在第一行之下添加：
+
+    render = web.template.render('templates/')
+
+这会告诉web.py到和 `code.py` 文件同一目录的 `templates/` 目录里查找模板文件。
+
+现在将 `code.py` 里的 `return "Hello, world!"` 替换为：
+
+    return render.index()
+
+这里的 `render.index()` 表示查找 `index.html` 文件作为模版。如果要使用名为
+`hello.html` 的模版文件，代码则应该是 `render.hello()`。
+
+最后运行code.py`。访问`http://localhost:8080/`即可看到修改后的效果。
+
+### 进阶用法
 
 你也可以在模板中使用 `web.py` 模板支持代码：
 
@@ -270,3 +287,4 @@ web.py 还有一些帮助我们debug的工具。当它在内建的服务器中�
 * [更多文档](/docs/0.3)
 * [Cookbook](/cookbook)
 * [code samples](/src)
+最后运行`code.py`。访问`http://localhost:8080/`即可看到修改后的效果。
