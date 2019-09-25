@@ -82,7 +82,7 @@ Application to delegate requests based on path.
 
 ### web.auto_application 
 Application similar to web.application but urls are constructed   
-automatiacally using metaclasses. 
+automatically using metaclasses. 
 
      app = web.auto_application() 
 

@@ -158,7 +158,7 @@ Of course, having that `?` in the URL is kind of ugly. Instead, change your URL 
 
     '/(.*)', 'index'
 
-and change the definition of `index.GET` to:
+and change the definition of the method `GET` to:
 
     def GET(self, name):
         return render.index(name)
@@ -178,7 +178,7 @@ If you want to learn more about using the module forms web.py, see the [Document
 
 **Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
 
-First you need to create a database object.
+First you need to create a database object in file `code.py`, after the `urls` object.
 
 ```
 db = web.database(
@@ -203,13 +203,16 @@ Using your database engines admin interface, create a simple table in your datab
       id serial primary key,
       title text,
       created timestamp default now(),
-      done boolean default 'f'    );
+      done boolean default 'f'
+    );
+
+Note: MYSQL may use different statements.
 
 And an initial row:
 
     INSERT INTO todo (title) VALUES ('Learn web.py');
 
-Return to editing `code.py` and change `index.GET` to the following, replacing the entire function:
+Return to edit `code.py` and change the method `GET` to the following, replacing the entire function:
 
     def GET(self):
         todos = db.select('todo')

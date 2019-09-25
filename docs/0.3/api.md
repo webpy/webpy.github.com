@@ -233,7 +233,7 @@ function.</p></div></p>
 <div style="margin-left:30px">
 <p><span class="ts">class</span><code class="class"> auto_application(self)</code><br />
 <div style="margin-left:45px"><p>Application similar to <code>application</code> but urls are constructed 
-automatiacally using metaclass.</p>
+automatically using metaclass.</p>
 
 <pre><code>&gt;&gt;&gt; app = auto_application()
 &gt;&gt;&gt; class hello(app.page):

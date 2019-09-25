@@ -77,7 +77,7 @@ using [web.input()](/cookbook/input).
 
 ### Note on sub-applications
 
-To better handle larger web applications, web.py support
+To better handle larger web applications, web.py supports
 [sub-applications](/cookbook/subapp). While designing url scheme with sub
 applications, keep in mind that the path (web.ctx.path) will get the parent
 path stripped off. e.g. if in the main application, you define to forward
