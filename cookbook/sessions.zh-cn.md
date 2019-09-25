@@ -56,7 +56,7 @@ web.py在处理请求之前，就加载session对象及其数据；在请求处�
     session = web.session.Session(app, store, initializer={'count': 0})
 
 
-｀web.config｀中的`sessions_parameters`保存着session的相关设置，`sessions_parameters`本身是一个字典，可以对其修改。默认设置如下：
+`web.config`中的`sessions_parameters`保存着session的相关设置，`sessions_parameters`本身是一个字典，可以对其修改。默认设置如下：
 
     web.config.session_parameters['cookie_name'] = 'webpy_session_id'
     web.config.session_parameters['cookie_domain'] = None
