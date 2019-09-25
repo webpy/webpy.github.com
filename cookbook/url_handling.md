@@ -11,7 +11,9 @@ Other languages : [français](/../cookbook/url_handling/fr) | ...
 
 ## Solution
 
-web.py's URL handling scheme is simple yet powerful and flexible.  at the top of each application, you usually see the full URL dispatching scheme defined as a tuple:
+web.py's URL handling scheme is simple yet powerful and flexible.
+At the top of each application, you usually see the full URL dispatching
+scheme defined as a tuple:
 
 ```
 urls = (
@@ -43,11 +45,11 @@ http://localhost/myapp/greetings/hello?name=Joe
 ```
 
 The path of this URL is `/myapp/greetings/hello`.  web.py will internally
-add `^` and `$` to the url pattern so that the pattern `/tasks/` will not
-match `/tasks/addnew`.  As it matches against the path, you can not use
-a pattern like `/tasks/delete?name=(.+)` as the part after `?` is called
-`query` and is not matched against. For a detailed description of URL
-components, please read [web.ctx](/cookbook/ctx).
+add `^` and `$` to the url pattern (`^/myapp/greetings/hello$`) so that the
+pattern `/tasks/` will not match `/tasks/addnew`.  As it matches against
+the path, you can not use a pattern like `/tasks/delete?name=(.+)` as the
+part after `?` is called `query` and is not matched against. For a detailed
+description of URL components, please read [web.ctx](/cookbook/ctx).
 
 ### Capture Parameters
 
