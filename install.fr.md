@@ -28,8 +28,8 @@ Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/ins
 <a name="installation"></a>
 ## Installation
 Pour installer web.py, commencez par télécharger l'archive:
-    
-[web.py-0.33.tar.gz] (/static/web.py-0.33.tar.gz)
+
+[web.py-0.40.tar.gz](https://github.com/webpy/webpy/archive/0.40.tar.gz)
 
 Décompressez l'archive et copier le dossier _web_ dans le dossier de votre application. Ou, pour rendre web.py accessible par toutes les applications, exécutez:
     

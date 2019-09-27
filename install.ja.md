@@ -7,7 +7,7 @@ title: インストールガイド
 
 web.pyをダウンロードします。
     
-    http://webpy.org/static/web.py-0.33.tar.gz
+    https://github.com/webpy/webpy/archive/0.40.tar.gz
 
 ダウンロードファイルを展開し、あなたのアプリケーションがあるディレクトリに展開したフォルダ`webpy`の直下にある `web` フォルダをコピーしてください。
 もしくは以下のコマンドを実行し、すべてのアプリケーションからのアクセスを可能にします。

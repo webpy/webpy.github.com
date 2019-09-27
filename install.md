@@ -31,7 +31,7 @@ Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [c
 
 To install web.py for Python-2, download:
     
-    http://webpy.org/static/web.py-0.39.tar.gz
+    https://github.com/webpy/webpy/archive/0.40.tar.gz
 
 or the get the latest dev version:
 

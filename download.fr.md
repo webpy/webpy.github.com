@@ -15,18 +15,19 @@ La façon la plus simple d'installer web.py est d'utiliser [easy_install](http:/
 
 Si vous n'avez pas 'easy_install', essayez de télécharger les sources.
 
-    $ wget http://webpy.org/static/web.py-0.33.tar.gz
-    $ tar xvzf web.py-0.33.tar.gz
-    $ cd web.py-0.33
+    $ wget https://github.com/webpy/webpy/archive/0.40.zip
+    $ unzip 0.40.zip
+    $ cd webpy-0.40
     $ sudo python setup.py install
 
 Si vous ne voulez pas installer web.py pour tout le système (ou si vous désirez grouper web.py avec votre application):
 
     $ cd your-app-dir
-    $ wget http://webpy.org/static/web.py-0.33.tar.gz
-    $ tar xvzf web.py-0.33.tar.gz
-    $ ln -s web.py-0.33/web .
-   
+    $ wget https://github.com/webpy/webpy/archive/0.40.zip
+    $ unzip 0.40.zip
+    $ cp -rf webpy-0.40/web .
+    $ rm -rf 0.40.zip webpy-0.40
+
 Si vous êtes sous Linux Ubuntu ou Debian, vous pouvez installer web.py en utilisant la commande 'apt-get'. Mias vous n'aurez pas la dernière version car  les cycles de versions de debian/ubuntu (releases) diffèrent de ceux de web.py.
 
     $ sudo apt-get install python-webpy
