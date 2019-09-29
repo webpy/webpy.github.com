@@ -6,9 +6,9 @@ body {
      font-family: "Franklin Gothic Medium", Helvetica, Arial, sans-serif;
 }
 .body { 
-font-family: arial,helvetica,clean,sans-serif;
-font-size: 13px;
-line-height: 1.5em;
+    font-family: arial,helvetica,clean,sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 a {
@@ -17,10 +17,10 @@ a {
 }
 
 h1,h2,h3,h4 {
-	    color: #333;
-	    padding: 15px 0 5px 0;
-	    border-bottom: 1px solid #aaa;
-            font-weight: normal;
+    color: #333;
+    padding: 15px 0 5px 0;
+    border-bottom: 1px solid #aaa;
+    font-weight: normal;
 }
 
 /*
@@ -38,6 +38,13 @@ pre {
     border: 1px solid #ddd;
     color: #272727;
     font-size: 80%;
+}
+
+code {
+    overflow: auto;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    word-wrap: normal;
 }
 
 strong {
@@ -82,14 +89,17 @@ strong {
 
 /* Column separator */
 #container {
-           background: #fff url(/static/col.gif) repeat-y 140px 0;
+    /*
+    background: #fff url(/static/col.gif) repeat-y 140px 0;
+    */
+    background: #fff;
 }
 
 /* Sidebar */
 #sidebar {
-         float: left;
-         width: 121px;
-         padding: 20px 0 20px 30px;
+     float: left;
+     width: 121px;
+     padding: 20px 0 20px 30px;
 }
 
 #sidebar, #sidebar a {
