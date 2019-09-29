@@ -12,7 +12,7 @@ title: 用cherrypy提供SSL支持
 ## 解法
 
     import web
-    
+
     from web.wsgiserver import CherryPyWSGIServer
 
     CherryPyWSGIServer.ssl_certificate = "path/to/ssl_certificate"

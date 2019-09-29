@@ -15,9 +15,9 @@ uploads, ou le CGI en général.
 ## Solution:
 
     import web
-    
+
     urls = ('/upload', 'Upload')
-    
+
     class Upload:
         def GET(self):
             return """<html><head></head><body>
@@ -27,7 +27,7 @@ uploads, ou le CGI en général.
     <input type="submit" />
     </form>
     </body></html>"""
-    
+
         def POST(self):
             x = web.input(myfile={})
             web.debug(x['myfile'].filename) # Ceci est le nom du fichier
@@ -37,7 +37,7 @@ uploads, ou le CGI en général.
 
 
     if __name__ == "__main__":
-       app = web.application(urls, globals()) 
+       app = web.application(urls, globals())
        app.run()
 
 ## A savoir

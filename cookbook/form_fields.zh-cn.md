@@ -29,7 +29,7 @@ title: 个别显示表单字段
     >>> simple_form.name.render()
     '<input type="text" name="name" id="name" />'
     >>> simple_form.surname.render()
-    '<input type="text" name="surname" id="surname" />' 
+    '<input type="text" name="surname" id="surname" />'
 
 你同样可以通过类似的方法显示个别的描述：
 
@@ -41,7 +41,7 @@ title: 个别显示表单字段
     >>> for input in simple_form.inputs:
     ...     print input.description
     ...     print input.render()
-    ... 
+    ...
     Name
     <input type="text" name="name" id="name" />
     Surname

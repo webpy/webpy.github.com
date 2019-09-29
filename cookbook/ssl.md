@@ -20,7 +20,7 @@ from cheroot.server import HTTPServer
 from cheroot.ssl.builtin import BuiltinSSLAdapter
 
 HTTPServer.ssl_adapter = BuiltinSSLAdapter(
-        certificate='cert/domain.crt', 
+        certificate='cert/domain.crt',
         private_key='cert/domain.key')
 ```
 
@@ -31,10 +31,10 @@ See [cheroot code](https://github.com/cherrypy/cheroot/blob/master/cheroot/ssl/b
 ## Solution (Requires latest web.py version [0.37 installed from source as of this writing])
     import web
     from web.wsgiserver import CherryPyWSGIServer
-    
+
     CherryPyWSGIServer.ssl_certificate = "/path/to/ssl_certificate"
     CherryPyWSGIServer.ssl_private_key = "/path/to/ssl_private_key"
-       
+
     urls = ("/.*", "hello")
     app = web.application(urls, globals())
 
@@ -50,10 +50,10 @@ See [cheroot code](https://github.com/cherrypy/cheroot/blob/master/cheroot/ssl/b
     import web
     from web.wsgiserver import CherryPyWSGIServer
     from web.wsgiserver.ssl_builtin import BuiltinSSLAdapter
-    
+
     ssl_cert = "path/to/ssl_certificate"
     ssl_key = "path/to/ssl_private_key"
-    
+
     CherryPyWSGIServer.ssl_adapter = BuiltinSSLAdapter(ssl_cert,ssl_key,None)
 
 

@@ -35,13 +35,13 @@ Here is an example Virtual Host configured on a Unix like system with an Alias d
         WSGIScriptAlias / /script/root/code.py
         # the Alias directive
         Alias /static /doc/root/static
-        
+
         <Directory />
             Order Allow,Deny
             Allow From All
             Options -Indexes
         </Directory>
-        
+
         # because Alias can be used to reference resources outside docroot, you
         # must reference the directory with an absolute path
         <Directory /doc/root/static>

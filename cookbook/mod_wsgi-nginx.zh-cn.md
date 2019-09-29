@@ -19,7 +19,7 @@ After compiling and installing nginx with mod_wsgi, you can easily get a web.py 
 
         include /etc/nginx/wsgi_vars;
         location / {
-            wsgi_pass /path/to/your/webpy/app.py;     
+            wsgi_pass /path/to/your/webpy/app.py;
          }
     }
 

@@ -28,7 +28,7 @@ title: Sessions
         def GET(self):
             session.count += 1
             return str(session.count)
-            
+
     class reset:
         def GET(self):
             session.kill()

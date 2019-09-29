@@ -11,11 +11,11 @@ How to send mails from web.py
 
 ### Solution
 
-`web.sendmail` function can be used to send mail from web.py. 
+`web.sendmail` function can be used to send mail from web.py.
 
     web.sendmail('cookbook@webpy.org', 'user@example.com', 'subject', 'message')
 
-If any mail server is specified in `web.config` it uses that to send the mail or it uses the traditional sendmail from `/usr/lib/sendmail`. 
+If any mail server is specified in `web.config` it uses that to send the mail or it uses the traditional sendmail from `/usr/lib/sendmail`.
 
     web.config.smtp_server = 'mail.mydomain.com'
 

@@ -5,11 +5,13 @@ title: db.query
 
 # db.query
 
-### Problem
+Other languages: [简体中文](./query.zh-cn)
+
+## Problem
 
 You want to perform advanced SQL statements like joins or counts.
 
-### Solution
+## Solution
 
 webpy doesn't try to build layers between you and your database. Rather, it
 tries to make it easy to perform common tasks, and get out of your way when

@@ -13,9 +13,9 @@ title: Application processors
 
 web.py可以在处理请求之前或之后，通过添加处理器(processor)来完成某些操作。
 
-    def my_processor(handler): 
+    def my_processor(handler):
         print 'before handling'
-        result = handler() 
+        result = handler()
         print 'after handling'
         return result
 

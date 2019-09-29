@@ -22,7 +22,7 @@ Note:
 ### Steps:
 
 1. Install mod_wsgi:
-        
+
         sudo apt-get install libapache2-mod-wsgi
 
  This will install a `.so` module in Apache's **module directory**:
@@ -37,7 +37,7 @@ Note:
 
         /etc/apache2/mods-enabled/wsgi.conf
         /etc/apache2/mods-enabled/wsgi.load
-        
+
 2. Configure a website on Apache to load the `mod_wsgi` module. This can either be your default website, or another Virtual Host, which you can create by copying `/etc/apache2/sites-available/default` to something like `/etc/apache2/sites-available/my-website`. Add the following lines, under the `DocumentRoot` directive:
 
         WSGIScriptAlias /appname /var/www/webpy-app/code.py/
@@ -48,19 +48,19 @@ Note:
         Alias /appname/static /var/www/webpy-app/static/
 
  After you have finished editing your website definition, you need to enable it (in case it is not already enabled). Do:
- 
+
         sudo a2ensite my-website
-        
+
 3. Finally, create a sample file `/var/www/webpy-app/code.py`:
 
         import os
         import sys
         import web
-        
+
         app_path = os.path.dirname(__file__)
         if app_path:
             os.chdir(app_path)
-        
+
         urls = (
             '/.*', 'hello',
             )

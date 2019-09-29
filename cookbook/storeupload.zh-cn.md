@@ -12,9 +12,9 @@ title: 保存上传的文件
 ## 方法
 
     import web
-    
+
     urls = ('/upload', 'Upload')
-    
+
     class Upload:
         def GET(self):
             web.header("Content-Type","text/html; charset=utf-8")
@@ -25,7 +25,7 @@ title: 保存上传的文件
     <input type="submit" />
     </form>
     </body></html>"""
-    
+
         def POST(self):
             x = web.input(myfile={})
             filedir = '/path/where/you/want/to/save' # change this to the directory you want to store the file in.
@@ -39,7 +39,7 @@ title: 保存上传的文件
 
 
     if __name__ == "__main__":
-       app = web.application(urls, globals()) 
+       app = web.application(urls, globals())
        app.run()
 
 ## Hang ups

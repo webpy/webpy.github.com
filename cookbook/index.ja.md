@@ -12,9 +12,9 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 #形式
 
 1. 形式に関しては、Cookbookのような形式を使用するようにしてください。以下のような形式です。
-    
+
     ###問題点: データベースにアクセスしたいのですが。
-     
+
     ###解決手段: このコードを使ってください。
 
 1. URLには"web"をつけないようにしてください。もし"/cookbook/select"ならば、"/cookbook/web.select"のようにしないでください。
@@ -62,13 +62,13 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 * [Select: データ検索(SELECT文)](/select)
 * [Update: データ更新(UPDATE文)](/update)
 * [Delete: データ削除(DELETE文)](/delete)
-* [Insert: データ追加(INSERT文)](/Insert) 
+* [Insert: データ追加(INSERT文)](/Insert)
 * [問い合わせ(SQL文の発行)](/query)
 * [トランザクションの使用](transactions)
 
 ##Deployment:
 * [Lighttpd + Fastcgiの配置](/fastcgi-lighttpd)
-* [Apache + Fastcgiの配置](/fastcgi-apache) 
+* [Apache + Fastcgiの配置](/fastcgi-apache)
 * [Apache + CGIの配置](/cgi-apache/ja)
 * mod_python deployment through Apache (requested)
 * [mod_wsgi deployment through Apache](/mod_wsgi-apache )

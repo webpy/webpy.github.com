@@ -53,7 +53,7 @@ Here is an example of a new user registration form:
                 return render.register(f)
             else:
                 # do whatever is required for registration
- 
+
 And the register template should be something like this:
 
     $def with(form)

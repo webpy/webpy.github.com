@@ -18,31 +18,30 @@ to the url [http://localhost:8080/login](http://localhost:8080/login).
 When you are successfully authenticated, you will be redirected to the
 index page.
 
-##
     import web
     import re
     import base64
-    
+
     urls = (
         '/','Index',
         '/login','Login'
     )
-    
+
     app = web.application(urls,globals())
-    
+
     allowed = (
         ('jon','pass1'),
         ('tom','pass2')
     )
-    
-    
+
+
     class Index:
         def GET(self):
             if web.ctx.env.get('HTTP_AUTHORIZATION') is not None:
                 return 'This is the index page'
             else:
                 raise web.seeother('/login')
-    
+
     class Login:
         def GET(self):
             auth = web.ctx.env.get('HTTP_AUTHORIZATION')
@@ -60,9 +59,9 @@ index page.
                 web.header('WWW-Authenticate','Basic realm="Auth example"')
                 web.ctx.status = '401 Unauthorized'
                 return
-    
+
     if __name__=='__main__':
         app.run()
-  
+
 ##Notes
 Do not use this code on real site - this is only for illustration.

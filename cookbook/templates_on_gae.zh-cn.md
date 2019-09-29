@@ -12,7 +12,7 @@ title: How to use templates on Google App Engine
 ## 解答
 
 web.py templetor 把模板编译成 python 字节码，这需要访问标准库中的 parser 模块。不幸的是，由于安全原因 GAE 禁用了这个模块。
- 
+
 为了克服这个状况，web.py 支持把模板编译成 python 代码，从而避免在 GAE 上使用原来的模板。web.py 确保在应用这种方法的时候模板中的代码不需要任何改变。
 
 为了编译一个文件夹中所有的模板（一旦有模板改动，就需要重新运行），运行：

@@ -20,7 +20,7 @@ Comment puis-je utiliser un modèle/gabarit de site qui s'affiche dans chaque pa
 Cela peut être fait en utilisant l'attribut de base:
 
     render = web.template.render('templates/', base='layout')
-    
+
 
 Maintenant si vous faites quelque chose comme `render.foo ()` il cherchera le gabarit `templates/foo.html`, puis l'enveloppera dans le gabarit `templates/layout.html`
 
@@ -42,7 +42,7 @@ Le format de "layout.html" doit être un simple gabarit qui contient une variabl
 Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deuxième objet, sans l'attribut "base", ainsi:
 
     render_plain = web.template.render('templates/')
-    
+
 ###Astuce: Le titre de page est défini dans d'autres fichiers gabarits qui sont ensuite utilisés par la mise en page (layout.html). Par exemple:
 
 #####templates/index.html

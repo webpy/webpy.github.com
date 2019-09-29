@@ -5,7 +5,7 @@ title: 如何用Gmail发送邮件
 
 # 如何用Gmail发送邮件
 
-### 问题 
+### 问题
 
 如何用Gmail发送邮件？
 
@@ -23,6 +23,6 @@ title: 如何用Gmail发送邮件
 
     web.sendmail('cookbook@gmail.com', 'user@example.com', 'subject', 'message')
 
-可以在这里了解有关Gmail设置的更多信息 [GMail: Configuring other mail clients][1] 
+可以在这里了解有关Gmail设置的更多信息 [GMail: Configuring other mail clients][1]
 
 [1]: http://mail.google.com/support/bin/answer.py?hl=en&answer=13287

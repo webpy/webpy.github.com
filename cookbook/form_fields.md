@@ -28,7 +28,7 @@ We have defined two fields with names `name` and `surname`. Those names automati
     >>> simple_form.name.render()
     '<input type="text" name="name" id="name" />'
     >>> simple_form.surname.render()
-    '<input type="text" name="surname" id="surname" />' 
+    '<input type="text" name="surname" id="surname" />'
 
 You can also render individual descriptions in a similar way:
 
@@ -40,7 +40,7 @@ What if you have a small template snippet (partial template) that you'd like to 
     >>> for input in simple_form.inputs:
     ...     print input.description
     ...     print input.render()
-    ... 
+    ...
     Name
     <input type="text" name="name" id="name" />
     Surname

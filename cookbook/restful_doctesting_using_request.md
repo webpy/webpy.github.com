@@ -9,16 +9,16 @@ RESTful doctesting using app.request
 
 ```python
     #!/usr/bin/env python
-    
+
     """
     RESTful web.py testing
-    
+
     usage: python webapp.py 8080 [--test]
-    
+
     >>> req = app.request('/mathematicians', method='POST')
     >>> req.status
     '400 Bad Request'
-    
+
     >>> name = {'first': 'Beno\xc3\xaet', 'last': 'Mandelbrot'}
     >>> data = urllib.urlencode(name)
     >>> req = app.request('/mathematicians', method='POST', data=data)
@@ -29,28 +29,28 @@ RESTful doctesting using app.request
     '/mathematicians/b-mandelbrot'
     >>> fn = '<h1 class=fn>{0} {1}</h1>'.format(name['first'], name['last'])
     >>> assert fn in app.request(created_path).data
-    
+
     """
-    
+
     import doctest
     import urllib
     import sys
-    
+
     import web
-    
-    
+
     paths = (
-      '/mathematicians(/)?', 'Mathematicians',
-      '/mathematicians/([a-z])-([a-z]{2,})', 'Mathematician'
+        '/mathematicians(/)?', 'Mathematicians',
+        '/mathematicians/([a-z])-([a-z]{2,})', 'Mathematician'
     )
+
     app = web.application(paths, globals())
-    
+
     dbname = 'test' if sys.argv[-1] == '--test' else 'production'
     db = {} # db = web.database(..., db='math_{0}'.format(dbname))
-    
-    
+
+
     class Mathematicians:
-    
+
       def GET(self, slash=False):
         """list all mathematicians and form to create new one"""
         if slash:
@@ -78,7 +78,7 @@ RESTful doctesting using app.request
             </form>
           </body>
           </html>""")(mathematicians)
-    
+
       def POST(self, _):
         """create new mathematician"""
         name = web.input('first', 'last')
@@ -99,10 +99,10 @@ RESTful doctesting using app.request
             <p>Profile created for <a href=$path>$name.first $name.last</a>.</p>
           </body>
           </html>""")(path, name)
-    
-    
+
+
     class Mathematician:
-    
+
       def GET(self, first_initial, last_name):
         """display mathematician"""
         key = '{0}-{1}'.format(first_initial, last_name)
@@ -122,8 +122,8 @@ RESTful doctesting using app.request
             <h1 class=fn>$name.first $name.last</h1>
           </body>
           </html>""")(mathematician)
-    
-    
+
+
     if __name__ == "__main__":
       if sys.argv[-1] == '--test':
         doctest.testmod()

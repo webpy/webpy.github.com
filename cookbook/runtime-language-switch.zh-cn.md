@@ -18,16 +18,16 @@ title: 实时语言切换
     import sys
     import gettext
     import web
-    
+
     # File location directory.
     rootdir = os.path.abspath(os.path.dirname(__file__))
-    
+
     # i18n directory.
     localedir = rootdir + '/i18n'
-    
+
     # Object used to store all translations.
     allTranslations = web.storage()
-    
+
     def get_translations(lang='en_US'):
         # Init translation.
         if allTranslations.has_key(lang):
@@ -44,7 +44,7 @@ title: 实时语言切换
             except IOError:
                 translation = gettext.NullTranslations()
         return translation
-    
+
     def load_translations(lang):
         """Return the translations for the locale."""
         lang = str(lang)
@@ -52,32 +52,32 @@ title: 实时语言切换
         if translation is None:
             translation = get_translations(lang)
             allTranslations[lang] = translation
-    
+
             # Delete unused translations.
             for lk in allTranslations.keys():
                 if lk != lang:
                     del allTranslations[lk]
         return translation
-    
+
     def custom_gettext(string):
         """Translate a given string to the language of the application."""
         translation = load_translations(session.get('lang'))
         if translation is None:
             return unicode(string)
         return translation.ugettext(string)
-    
+
     urls = (
-    '/', 'index'
+        '/', 'index'
     )
-    
+
     render = web.template.render('templates/',
             globals={
                 '_': custom_gettext,
                 }
             )
-    
+
     app = web.application(urls, globals())
-    
+
     # Init session.
     session = web.session.Session(app,
             web.session.DiskStore('sessions'),
@@ -85,7 +85,7 @@ title: 实时语言切换
                 'lang': 'en_US',
                 }
             )
-    
+
     class index:
         def GET(self):
             i = web.input()
@@ -96,7 +96,7 @@ title: 实时语言切换
 
             session['lang'] = lang
             return render.index()
-    
+
     if __name__ == "__main__": app.run()
 
 

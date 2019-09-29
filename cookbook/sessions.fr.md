@@ -30,7 +30,7 @@ Le module `web.session` fournit un support session. Voici une application simple
         def GET(self):
             session.count += 1
             return str(session.count)
-            
+
     class reset:
         def GET(self):
             session.kill()

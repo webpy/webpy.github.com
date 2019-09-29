@@ -8,7 +8,7 @@ title: Envoi de mails en utilisant Gmail
 Autre langages: [english](/../sendmail_using_gmail) | ...
 
 
-##Problème: 
+##Problème:
 
 Comment envoyer un mail en utilisant Gmail ?
 

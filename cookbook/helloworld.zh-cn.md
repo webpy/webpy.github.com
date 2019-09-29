@@ -27,7 +27,7 @@ title: Hello World!
 
 在URL开头添加代码：
 
-    '/(.*)/', 'redirect', 
+    '/(.*)/', 'redirect',
 
 然后用redirect类处理以'/'结尾的网址：
 

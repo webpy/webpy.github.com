@@ -82,14 +82,14 @@ class CookieGet:
         return "Your age is: " + c.age
 ```
 
-The example sets a default value for the cookie if it does not exist. The reason for setting a default value is that if the cookie is attempted to be accessed, but does not exist, `web.cookies()` raises an exception.  
+The example sets a default value for the cookie if it does not exist. The reason for setting a default value is that if the cookie is attempted to be accessed, but does not exist, `web.cookies()` raises an exception.
 
 Sometimes, you want to know specifically if something doesn't exist, in which case you can use something like the following:
 
 ```
 class CookieGet:
     def GET(self):
-        try: 
+        try:
              return "Your age is: " + web.cookies().age
         except:
              # Do whatever handling you need to, etc. here.

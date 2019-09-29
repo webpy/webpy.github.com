@@ -5,13 +5,13 @@ title: i18n support in template file
 
 # i18n support in template file
 
-## 模板文件中的i18n支持  
+## 模板文件中的i18n支持
 
-### 问题:  
+### 问题
 
-在web.py的模板文件中, 如何得到i18n的支持?  
+在web.py的模板文件中, 如何得到i18n的支持?
 
-### Solution:  
+### 方案
 
 项目目录结构:
 
@@ -29,7 +29,7 @@ proj/
 
 </pre>
 
-文件: proj/code.py 
+文件: proj/code.py
 
 <pre>
 #!/usr/bin/env python
@@ -48,8 +48,8 @@ curdir = os.path.abspath(os.path.dirname(__file__))
 # i18n directory.
 localedir = curdir + '/i18n'
 
-gettext.install('messages', localedir, unicode=True)   
-gettext.translation('messages', localedir, languages=['en_US']).install(True)  
+gettext.install('messages', localedir, unicode=True)
+gettext.translation('messages', localedir, languages=['en_US']).install(True)
 render = web.template.render(curdir + '/templates/', globals={'_': _})
 
 class hello:
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     app.run()
 </pre>
 
-模板文件: proj/templates/hello.html. 
+模板文件: proj/templates/hello.html.
 <pre>$_("Message")</pre>
 
 创建一个locale目录并使用python2.6内建的pygettext.py从python脚本和模板文件中导出翻译:
@@ -75,19 +75,19 @@ Working on templates/hello.html
 </pre>
 
 你将会得到pot file: i18n/messages.po. 它的内容和下面的差不多
-('msgstr'包含了翻译后的信息):  
+('msgstr'包含了翻译后的信息):
 <pre>
  # 文件 code.py:40
 msgid "Message"
 msgstr "This is translated message in file: code.py."
 </pre>
 
-拷贝文件'i18n/messages.po'到目录'i18n/en_US/LC_MESSAGES/'下, 然后翻译它. 使用gettext包的msgfmt工具或者使用python2.6内建的'msgfmt.py'文件将一个pot文件编译称mo文件:  
+拷贝文件'i18n/messages.po'到目录'i18n/en_US/LC_MESSAGES/'下, 然后翻译它. 使用gettext包的msgfmt工具或者使用python2.6内建的'msgfmt.py'文件将一个pot文件编译称mo文件:
 <pre>
 shell> msgfmt -o i18n/en_US/LC_MESSAGES/messages.mo i18n/en_US/LC_MESSAGES/messages.po
 </pre>
 
-运行web.py的服务器: 
+运行web.py的服务器:
 
 <pre>
 shell> cd /path/to/proj/

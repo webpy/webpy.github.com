@@ -15,9 +15,9 @@ Comment utiliser les application processors, charger les hooks et les décharger
 
 L'application web.py permet d'ajouter des processors qui peuvent effectuer quelques traitements avant et après l'execution des requêtes.
 
-    def my_processor(handler): 
+    def my_processor(handler):
         print 'avant le traitement de la requête'
-        result = handler() 
+        result = handler()
         print 'après le traitement de la requête'
         return result
 

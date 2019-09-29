@@ -12,7 +12,7 @@ title: db.delete 数据删除
 ### 解决办法
 
     import web
-    
+
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
     db.delete('mytable', where="id=10")
 

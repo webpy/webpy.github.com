@@ -33,13 +33,13 @@ Voici un exemple d'Hôte Virtuel configuré sur un système de type Unix avec un
         WSGIScriptAlias / /script/root/code.py
         # La Directive Alias
         Alias /static /doc/root/static
-        
+
         <Directory />
             Order Allow,Deny
             Allow From All
             Options -Indexes
         </Directory>
-        
+
 	# Parce que l'Alias peut être utilisé pour référencer les ressources en dehors de docroot,
 	# vous devez référencer le repertoire avec un chemin absolu.
         <Directory /doc/root/static>

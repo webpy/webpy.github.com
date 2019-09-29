@@ -5,18 +5,19 @@ title: 交替风格
 
 # 交替风格
 
-### 问题: 
+### 问题
 
 你想通过数据集合动态的生成交替背景色的列表.
 
-### 方法: 
+### 方案
 
 Give templetor access to the `int` built-in and use modulo to test.
 
-## code.py ##
+## code.py
 
-    web.template.Template.globals['int'] = int
-
+```
+web.template.Template.globals['int'] = int
+```
 
 ## template.html ##
 

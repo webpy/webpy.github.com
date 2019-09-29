@@ -16,7 +16,7 @@ Comment configurer [lighttpd](http://www.lighttpd.net/) sous Debian GNU/Linux ?
 *Si vous avez des problèmes avec cette astuce, veuillez lire ce [fil](http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html).
 Ce qui suit s'applique à la version 1.4.18 de lighttpd.*
 
-###Note:  
+###Note:
 * Vous devez remplacer <code>code.py</code> par le nom de votre propre fichier.
 * <code>/path-to/webpy-app</code> que vous trouverez ci-dessous, concerne le chemin vers le répertoire contenant votre <code>code.py</code>
 * <code>/path-to/webpy-app/code.py</code> est le chemin complet de votre **fichier python**
@@ -37,21 +37,21 @@ lighttpd.conf:
          fichier de configuration principal
 
 conf-available/
-        
+
 	Ce répertoire contient une série de fichiers .conf. Ces fichiers contiennent
 	les directives de configuration nécesssaire pour charger et executer les modules
 	du serveur web. Si vous voulez créer vos propres fichiers, leurs noms doivent être
-	construits ainsi : nn-name.conf. "nn" est un nombre à deux chiffres (ce nombre est 
+	construits ainsi : nn-name.conf. "nn" est un nombre à deux chiffres (ce nombre est
 	utilisé pour déterminer l'ordre de chargement des fichiers)	
 
 conf-enabled/
-        
+
 	Afin d'activer effectivement un module pour lighttpd, il est nécessaire
-	de créer dans ce répertoire un lien symbolique vers le fichier .conf concerné 
+	de créer dans ce répertoire un lien symbolique vers le fichier .conf concerné
 	du répertoire conf-available/.
 
 l'Activation et désactivation des modules peut se faire en lançant:
-	/usr/sbin/lighty-enable-mod 
+	/usr/sbin/lighty-enable-mod
  	/usr/sbin/lighty-disable-mod scripts.
 </pre>
 
@@ -111,7 +111,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-###<code>code.py</code>  
+###<code>code.py</code>
 En haut du fichier, ajoutez:
 
 <pre>

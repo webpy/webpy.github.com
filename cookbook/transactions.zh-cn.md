@@ -29,13 +29,13 @@ title: 怎样使用数据库事务处理
 在python 2.5+以上的版本，事务同样可以在段中使用：
 
     from __future__ import with_statement
-    
+
     db = web.databse(dbn="postgres", db="webpy", user="foo", pw="")
-     
+
     with db.transaction():
         db.insert('person', name='foo')
         db.insert('person', name='bar')
-        
+
 它同样可能有一个嵌套的事务：
 
     def post(title, body, tags):

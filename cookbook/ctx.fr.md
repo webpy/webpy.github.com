@@ -19,7 +19,7 @@ Solution
 C'est possible en utilisant 'web.ctx'. D'abord un peu d'architecture: 'web.ctx' est basée sur la classe 'threadeddict', alias 'ThreadedDict'. Cette classe crée un objet de type dictionnaire qui possède des attributs spécifiques au processus id de thread. C'est élégant dans la mesure ou cela nous permet d'utiliser un objet de type dictionnaire, tandis que beaucoup d'utilisateurs accèdent au système simultanément, et l'objet ne contiendra que les données de la requête HTTP donnée. (aucune données n'est partagée donc l'objet est ["thread-safe"](http://fr.wikipedia.org/wiki/Threadsafe) -- _On dit qu’un programme ou qu'une portion de code est thread-safe s’il fonctionne correctement durant une exécution simultanée par plusieurs threads (processus légers)_.)
 
 
-'web.ctx' contient des variables pour chaque requête qui comprennent des informations spécifiques pour chaque demande, comme les variables environnement du client. En supposant que vous vouliez déterminer quelle était la page référante d'un utilisateur accédant à une page: 
+'web.ctx' contient des variables pour chaque requête qui comprennent des informations spécifiques pour chaque demande, comme les variables environnement du client. En supposant que vous vouliez déterminer quelle était la page référante d'un utilisateur accédant à une page:
 
 Exemple
 -------

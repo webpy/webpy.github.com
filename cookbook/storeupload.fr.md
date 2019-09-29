@@ -14,9 +14,9 @@ Vous voulez uploader un fichier et le stocker dans un dossier prédéfini.
 ## Solution
 
     import web
-    
+
     urls = ('/upload', 'Upload')
-    
+
     class Upload:
         def GET(self):
             web.header("Content-Type","text/html; charset=utf-8")
@@ -27,7 +27,7 @@ Vous voulez uploader un fichier et le stocker dans un dossier prédéfini.
     <input type="submit" />
     </form>
     </body></html>"""
-    
+
         def POST(self):
             x = web.input(myfile={})
             filedir = '/path/where/you/want/to/save' # modifiez ceci pour le répertoire dans lequel vous voulez stocker le fichier.
@@ -41,7 +41,7 @@ Vous voulez uploader un fichier et le stocker dans un dossier prédéfini.
 
 
     if __name__ == "__main__":
-       app = web.application(urls, globals()) 
+       app = web.application(urls, globals())
        app.run()
 
 ## A savoir

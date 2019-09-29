@@ -11,15 +11,15 @@ You want to test webpy applications.
 
 ### Solution
 
-Use the 'browser' module. 
-    
+Use the 'browser' module.
+
     urls = (
         '/', 'Index',
         '/login', 'Login',
     )
 
     class Index:
-    
+
         def GET(self):
             return """
             <html><body>
@@ -27,7 +27,7 @@ Use the 'browser' module.
             </body></html>"""
 
     class Login:
-        
+
         def GET(self):
             return """
             <html><body>
@@ -37,14 +37,14 @@ Use the 'browser' module.
             </form>
             </body><html>
             """
-    
+
         def POST(self):
             i = web.input()
             return "Welcome " + i.name
-             
-    
+
+
     app = web.application(urls, globals())
-    
+
     b = app.browser()
     b.open('/')
     b.follow_link(text='Login')
@@ -70,4 +70,4 @@ existing websites.
     b.submit()
 
     assert b.path == '/'
-    assert 'Log Out' in b.get_text() 
+    assert 'Log Out' in b.get_text()

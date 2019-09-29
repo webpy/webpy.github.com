@@ -12,7 +12,7 @@ You want to update data that's been entered into a database.
 ### Solution
 
     import web
-    
+
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
     db.update('mytable', where="id = 10", value1 = "foo")
 

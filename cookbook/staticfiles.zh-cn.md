@@ -27,13 +27,13 @@ title: 提供静态文件 (诸如js脚本, css样式表和图象文件)
         WSGIScriptAlias / /script/root/code.py
         # the Alias directive
         Alias /static /doc/root/static
-        
+
         <Directory />
             Order Allow,Deny
             Allow From All
             Options -Indexes
         </Directory>
-        
+
         # because Alias can be used to reference resources outside docroot, you
         # must reference the directory with an absolute path
         <Directory /doc/root/static>

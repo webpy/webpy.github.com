@@ -19,9 +19,9 @@ title: Use Jinja2 template engine in webpy
     urls = (
             '/(.*)', 'hello'
             )
-    
+
     app = web.application(urls, globals())
-    
+
     render = render_jinja(
             'templates',   # 设置模板路径.
             encoding = 'utf-8', # 编码.
@@ -36,7 +36,7 @@ title: Use Jinja2 template engine in webpy
     class hello:
         def GET(self, name):
             return render.hello(name=name)
-    
+
     if __name__ == "__main__":
         app.run()
 

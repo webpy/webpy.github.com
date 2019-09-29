@@ -8,10 +8,10 @@ title: Multiple Databases
 webpy 0.3 supports multiple databases by removing the database from a part of the "web" module, and making it a more typical object.  For example:
 
     import web
-    
+
     mydb1 = web.database(dbn='mysql', db='dbname1', user='foo')
     mydb2 = web.database(dbn='mysql', db='dbname2', user='foo')
-    
+
 All of the former database methods work on these objects, such as:
 
 * select('table_name', where="foo = bar")

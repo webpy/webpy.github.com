@@ -14,7 +14,7 @@ Comment configurer le support SSL dans le serveur intégré de web.py, cherrypy.
 ## Solution
 
     import web
-    
+
     from web.wsgiserver import CherryPyWSGIServer
 
     CherryPyWSGIServer.ssl_certificate = "path/to/ssl_certificate"

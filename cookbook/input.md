@@ -27,7 +27,7 @@ Sometimes you may want to specify a default variable, in case none is given.  Th
             user_data = web.input(id="no data")
             return "<h1>" + user_data.id + "</h1>"
 
-Note that the web.input() values will be strings even if there are numbers passed to it.  
+Note that the web.input() values will be strings even if there are numbers passed to it.
 
 
 What if you pass several of the same variable names, like this:

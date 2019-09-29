@@ -34,7 +34,7 @@ This code resides in a file called test_code.py. The directory layout of the app
     ./
     code.py
     ./test
-        test_code.py        
+        test_code.py
 
 Most of the code example above should be fairly self-explanatory. From our main module, code, we import app, which is defined in the usual way:
 

@@ -7,7 +7,7 @@ title: db.insert
 
 ### Problem: You want to add data to a database
 
-### Solution: 
+### Solution
 
 With version 0.3, databases are defined like this:
 
@@ -24,7 +24,7 @@ sequence_id = db.insert("mytable", firstname="Bob", lastname="Smith", joindate=w
 ```
 
 The insert statement takes the following keyword arguments:
- 
+
 * `tablename` - The name of the SQL table in your database.
 * `seqname` - the column name which stores sequence ID, defaults to name `id`. If `None` or `False`, no sequence ID will be returned.
 * `_test` - if `True`, SQL statement will NOT be actually executed, instead a string of full SQL statement is returned. Useful to verify your SQL statement.

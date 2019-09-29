@@ -11,7 +11,7 @@ Autre langages: [english](/../forms) | ...
 
 Comment utiliser les formulaires ?
 
-## Solution: 
+## Solution:
 
 Le module `web.form`  fournit un support pour créer, valider et interpréter les formulaires.
 Ce module contient une classe `Form` et des classes pour diverses entrées de type `Textbox`, `Password`, etc...

@@ -21,7 +21,7 @@ Comment personnaliser les messages notfound et autres?
     def notfound():
         return web.notfound("Désolé, la page que vous recherchez n'a pas été trouvée.")
 
-	# Vous pouvez utiliser des résultats avec gabarits comme ci-dessous, l'un ou l'autre fonctionne: 
+	# Vous pouvez utiliser des résultats avec gabarits comme ci-dessous, l'un ou l'autre fonctionne:
         #return web.notfound(render.notfound())
         #return web.notfound(str(render.notfound()))
 

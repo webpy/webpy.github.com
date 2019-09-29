@@ -11,7 +11,7 @@ title: 发送邮件
 
 ### 解法
 
-在web.py中使用`web.sendmail()`发送邮件. 
+在web.py中使用`web.sendmail()`发送邮件.
 
     web.sendmail('cookbook@webpy.org', 'user@example.com', 'subject', 'message')
 

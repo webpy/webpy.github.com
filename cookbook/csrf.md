@@ -36,7 +36,7 @@ We define `csrf_token()` like this:
             from uuid import uuid4
             session.csrf_token=uuid4().hex
         return session.csrf_token
-    
+
 The `@csrf_protected` decorator is defined like this:
 
     def csrf_protected(f):

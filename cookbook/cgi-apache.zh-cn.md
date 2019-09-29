@@ -27,7 +27,7 @@ For our example, let it be named `app.py`, located in `/www/app` and we need it 
 
 That's it. Your application is accessible via `http://server/app/app.py/`. Additional URLs handled by the application are added to the end of the URL, for examples `http://server/app/app.py/myurl`.
 
-* .htaccess configuration 
+* `.htaccess` configuration
 
               Options +ExecCGI
               AddHandler cgi-script .py

@@ -70,9 +70,9 @@ Other languages: [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/i
 * [Store an uploaded file](/cookbook/storeupload)
 * [How to put a limit of size of uploaded files](/cookbook/limiting_upload_size)
 * [Accessing user input through web.input](/cookbook/input)
-* [How to use forms](/cookbook/forms) 
+* [How to use forms](/cookbook/forms)
 * [Render individual form fields](/cookbook/form_fields)
-* [How to protect forms from CSRF attacks](/cookbook/csrf) 
+* [How to protect forms from CSRF attacks](/cookbook/csrf)
 
 ## Databases
 
@@ -80,10 +80,10 @@ Other languages: [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/i
 * [Select: Retrieving entries from a database](/cookbook/select)
 * [Update: Updating entries in a database](/cookbook/update)
 * [Delete: Remove entries in a database](/cookbook/delete)
-* [Insert: Adding entries to a database](/cookbook/insert) 
+* [Insert: Adding entries to a database](/cookbook/insert)
 * [Query: Advanced database queries](/cookbook/query)
 * [How to use database transactions](/cookbook/transactions)
-* [Using sqlalchemy](/cookbook/sqlalchemy) 
+* [Using sqlalchemy](/cookbook/sqlalchemy)
 * [Integrating SQLite UDF (user-defined-functions) with webpy database layer](/cookbook/sqlite-udf)
 * [Using a dictionary as where clause](/cookbook/where_dict)
 
@@ -91,7 +91,7 @@ Other languages: [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/i
 ## Deployment
 
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)
-* [Fastcgi deployment through Apache](/cookbook/fastcgi-apache) 
+* [Fastcgi deployment through Apache](/cookbook/fastcgi-apache)
 * [CGI deployment through Apache](/cookbook/cgi-apache)
 * mod_python deployment through Apache (requested)
 * [mod_wsgi deployment through Apache on Red Hat](/cookbook/mod_wsgi-apache)

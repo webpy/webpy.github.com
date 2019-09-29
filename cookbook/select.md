@@ -5,6 +5,8 @@ title: db.select
 
 # db.select
 
+Other languages: [简体中文](./select.zh-cn)
+
 ## Problem
 
 You want to select data from a database
@@ -93,8 +95,8 @@ results = db.select('mytable', group="color")
 
 ### limit
 
-Limits set how many results are returned. 
- 
+Limits set how many results are returned.
+
 ```
 # Same as SQL statement: SELECT * FROM mytable LIMIT 10
 results = db.select('mytable', limit=10)

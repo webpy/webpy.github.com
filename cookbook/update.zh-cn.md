@@ -12,7 +12,7 @@ title: db.upate 数据更新
 ### 解决方案
 
     import web
-    
+
     db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
     db.update('mytable', where="id = 10", value1 = "foo")
 

@@ -7,7 +7,7 @@ title: Sending mail using gmail
 
 Other languages: [français](/../cookbook/sendmail_using_gmail.fr) | ...
 
-##Problem: 
+##Problem:
 
 How to send mail using gmail.
 

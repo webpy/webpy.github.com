@@ -5,14 +5,17 @@ title: Web.py using FastCGI and Apache 2
 
 # Web.py using FastCGI and Apache 2
 
-#Requirements
+## Requirements
+
 * Apache 2.x
 * [mod_fcgid](http://httpd.apache.org/mod_fcgid/)
 * [mod_rewrite](http://httpd.apache.org/docs/2.0/rewrite/)
 * [Flup](http://trac.saddi.com/flup)
 
 Note, on CentOS compiling mod_fcgid requires apache-devel be installed (available via yum).
-#Apache Configuration
+
+## Apache Configuration
+
 Replace '/var/www/myapp/' with the path to your apps directory
 
     LoadModule rewrite_module modules/mod_rewrite.so
@@ -25,10 +28,10 @@ Replace '/var/www/myapp/' with the path to your apps directory
     Alias / "/var/www/myapp/"
     <Directory "/var/www/myapp/">
         allow from all
-        SetHandler fcgid-script    
+        SetHandler fcgid-script
         Options +ExecCGI
         AllowOverride None
-        <IfModule mod_rewrite.c>      
+        <IfModule mod_rewrite.c>
            RewriteEngine on
            RewriteBase /
            RewriteCond %{REQUEST_URI} !^/icons
@@ -45,12 +48,9 @@ Replace '/var/www/myapp/' with the path to your apps directory
           SetHandler None
       </Directory>
 
+## Hello World
 
-
-
-#Hello World
-Note the following line is required:
-web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
+Note the following line is required: `web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)`.
 
     #!/usr/bin/python
 
@@ -59,7 +59,7 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     urls = ("/.*", "hello")
     app = web.application(urls, globals())
 
-    class hello: 
+    class hello:
         def GET(self):
             return 'Hello, world!'
 
@@ -68,42 +68,44 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
         app.run()
 
 
-#Run
-1. Start your server. 
+### Run
+
+1. Start your server.
 1. Open your application with your browser
 1. To confirm your application is running try:
 
-<code>
- ps aux | grep code.py
-</code>
+```
+ps aux | grep code.py
+```
 
-#Troubleshooting
+### Troubleshooting
 
-<br>
-###Check your apache error log for information!
+Check your apache error log for information!
 
-<br>
-##Common problems
-<br>
+#### Common problems
 
-###File permissions. 
+##### File permissions.
+
 You might see error code 255 in your logs.
 Ensure the directory is readable and that code. py is executable:
 
-<code>
+```
 chmod +x code.py
-</code>
+```
 
-###404 Not Found. 
+#### 404 Not Found.
+
 Is your Alias path correct in your apache configuration?
 
-###Other problems
-Web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing. 
+#### Other problems
+
+web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing.
+
 Did you add this line?
 <pre>
  web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 </pre>
-#Misc
+#### Misc
+
 * After updating your application you may need to restart your web server to see the changes.
 * If you do not have root access to your Apache server, you may not have access to all of the above commands in the .htaccess file in your project directory. [See this githup repository](http://github.com/stevekochscience/webpy-bluehost-helloworld) for a first-draft workaround, using hosted server on bluehost.com.  (This is a hack written by someone who doesn't understand Apache and web.py thoroughly.)
-

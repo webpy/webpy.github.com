@@ -12,9 +12,9 @@ title: File Upload Recipe
 ## 解决方法
 
     import web
-    
+
     urls = ('/upload', 'Upload')
-    
+
     class Upload:
         def GET(self):
             return """<html><head></head><body>
@@ -24,7 +24,7 @@ title: File Upload Recipe
     <input type="submit" />
     </form>
     </body></html>"""
-    
+
         def POST(self):
             x = web.input(myfile={})
             web.debug(x['myfile'].filename) # 这里是文件名
@@ -34,7 +34,7 @@ title: File Upload Recipe
 
 
     if __name__ == "__main__":
-       app = web.application(urls, globals()) 
+       app = web.application(urls, globals())
        app.run()
 
 ## 注意

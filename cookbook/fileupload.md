@@ -14,9 +14,9 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
 ## Solution
 
     import web
-    
+
     urls = ('/upload', 'Upload')
-    
+
     class Upload:
         def GET(self):
             return """<html><head></head><body>
@@ -26,7 +26,7 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
     <input type="submit" />
     </form>
     </body></html>"""
-    
+
         def POST(self):
             x = web.input(myfile={})
             web.debug(x['myfile'].filename) # This is the filename
@@ -36,7 +36,7 @@ File uploads can be a little tricky if you're not familiar with form uploads, or
 
 
     if __name__ == "__main__":
-       app = web.application(urls, globals()) 
+       app = web.application(urls, globals())
        app.run()
 
 ## Hang ups

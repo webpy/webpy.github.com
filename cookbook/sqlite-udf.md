@@ -5,7 +5,7 @@ title: Integrating SQLite UDF (user-defined-functions) with webpy database layer
 
 # Integrating SQLite UDF (user-defined-functions) with webpy database layer
 
-A user asked at the mailing list and I thought of putting it here for future use and reference. 
+A user asked at the mailing list and I thought of putting it here for future use and reference.
 
 You can add python functions to sqlite and have them called within your queries.
 

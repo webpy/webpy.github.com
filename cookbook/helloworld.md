@@ -29,7 +29,7 @@ How to write hello world with web.py
 
 add the following to the beginning of urls.
 
-    '/(.*)/', 'redirect', 
+    '/(.*)/', 'redirect',
 
 and have the following class to handle those urls.
 

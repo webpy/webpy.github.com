@@ -25,10 +25,10 @@ Replace '/var/www/myapp/' with the path to your apps directory
     Alias / "/var/www/myapp/"
     <Directory "/var/www/myapp/">
         allow from all
-        SetHandler fcgid-script    
+        SetHandler fcgid-script
         Options +ExecCGI
         AllowOverride None
-        <IfModule mod_rewrite.c>      
+        <IfModule mod_rewrite.c>
            RewriteEngine on
            RewriteBase /
            RewriteCond %{REQUEST_URI} !^/icons
@@ -59,7 +59,7 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     urls = ("/.*", "hello")
     app = web.application(urls, globals())
 
-    class hello: 
+    class hello:
         def GET(self):
         return 'Hello, world!'
 
@@ -69,7 +69,7 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 
 
 #Run
-1. Start your server. 
+1. Start your server.
 1. Open your application with your browser
 1. To confirm your application is running try:
 
@@ -86,7 +86,7 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 ##Common problems
 <br>
 
-###File permissions. 
+###File permissions.
 You might see error code 255 in your logs.
 Ensure the directory is readable and that code. py is executable:
 
@@ -94,11 +94,11 @@ Ensure the directory is readable and that code. py is executable:
 chmod +x code.py
 </code>
 
-###404 Not Found. 
+###404 Not Found.
 Is your Alias path correct in your apache configuration?
 
 ###Other problems
-Web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing. 
+Web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing.
 Did you add this line?
 <pre>
  web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)

@@ -123,8 +123,8 @@ And to stop:
 
 ### problem child exited with 2
 
-solution:  insert `#!/usr/bin/env python` into header of main.py 
-    
+solution:  insert `#!/usr/bin/env python` into header of main.py
+
 ### problem spawn-fcgi child exited with 126
 
 solution: `chmod +x main.py`

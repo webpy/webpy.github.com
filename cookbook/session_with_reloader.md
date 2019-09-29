@@ -24,7 +24,7 @@ Simplest fix for this is to disable debug mode, which can be done by setting `we
 
 If you want to use sessions in debug mode then here is a work-around.
 
-Since debug mode enables module reloading, the reloader loads the main module twice (once as __main__ and once with its name), 2 session objects will be created. This can be avoided by storing the session in some global place to avoid creating the second one. 
+Since debug mode enables module reloading, the reloader loads the main module twice (once as __main__ and once with its name), 2 session objects will be created. This can be avoided by storing the session in some global place to avoid creating the second one.
 
 Here is a sample code which saves session in `web.config`.
 

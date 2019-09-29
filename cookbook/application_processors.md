@@ -15,9 +15,9 @@ How to use application processors, loadhooks and unload hooks?
 
 web.py application allows adding processors which can do some processing before and after executing the requests
 
-    def my_processor(handler): 
+    def my_processor(handler):
         print 'before handling'
-        result = handler() 
+        result = handler()
         print 'after handling'
         return result
 

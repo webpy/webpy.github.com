@@ -52,7 +52,7 @@ title: 怎样使用表单 forms
                 # do whatever is required for registration
 
 
-然后注册的模板应该像是这样： 
+然后注册的模板应该像是这样：
 
     $def with(form)
 

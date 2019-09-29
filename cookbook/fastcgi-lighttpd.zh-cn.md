@@ -11,7 +11,8 @@ http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
 
 下面的代码基于lighttpd 1.4.18，更高版本也可以工作
 
-##Note:  
+## 注意事项
+
 * 你可以重命名 <code>code.py</code>为任何你自己愿意的名字，该例子还是以code.py为例。
 * <code>/path-to/webpy-app</code> 为包含你的 <code>code.py</code>代码的路径。
 * <code>/path-to/webpy-app/code.py</code> 应该是你的**python file**的完整路径。
@@ -45,7 +46,7 @@ Enabling and disabling modules could be done by provided
 </pre>
 
 <strong>
-对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: <code>/usr/sbin/lighty-enable-mod</code> 启用 <code>fastcgi</code> （Mac OS X可能不需要）  
+对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: <code>/usr/sbin/lighty-enable-mod</code> 启用 <code>fastcgi</code> （Mac OS X可能不需要）
 (mod_rewrite 模块可能需要启用 <code>10-fastcgi.conf</code>文件).
 
 ##下面是文件的基本结构（Mac OS X不同）:
@@ -99,7 +100,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-<code>/code.py</code>  
+<code>/code.py</code>
 在代码头部添加以下代码，让系统环境使用系统环境中当前的python
 
 <pre>

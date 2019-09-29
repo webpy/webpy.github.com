@@ -17,8 +17,9 @@ Web.py permet d'une façon très simple d'utiliser les méthodes de dépot/récu
 
 ###Déposer des cookies
 ####Vue d'ensemble
-    setcookie(name, value, expires="", domain=None, secure=False): 
-       
+
+    setcookie(name, value, expires="", domain=None, secure=False):
+
 * *name* `(string)` - Le véritable nom du cookie, tel qu'il est stocké par le navigateur, et retourné vers le serveur.
 * *value* `(string)` - La valeur que vous voulez stocker sous ce nom.
 * *expires* `(int)` - Optionnel. C'est le temps en secondes jusqu'à ce que le navigateur voit le cookie expirer. *Note: ce doit être un entier, pas une chaîne*
@@ -48,7 +49,7 @@ Le troisième (et optionnel) argument de `web.setcookie()`, "expires", vous perm
 Il existe de nombreuses méthodes pour retrouver des cookies, en fonction de la réaction souhaitée à un cookie manquant.
 
 #####Méthode 1 (Renvoi None si le cookie n'est pas trouvé):
-    web.cookies().get(cookieName)  
+    web.cookies().get(cookieName)
         #cookieName est le nom du cookie présenté par le navigateur
 #####Méthode  2 (Lève une exception AttributeError si le cookie n'est pas trouvé):
     foo = web.cookies()
@@ -74,7 +75,7 @@ Parfois, vous voudrez savoir concrètement si quelque chose n'existe pas, auquel
 
     class CookieGet:
         def GET(self):
-            try: 
+            try:
                  return "Votre age : " + web.cookies().age
             except:
                  # Faites ce que vous avez besoin ici

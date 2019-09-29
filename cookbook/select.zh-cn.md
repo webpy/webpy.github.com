@@ -79,16 +79,16 @@ results = db.select("mytable", order="post_date DESC")
 
 ```
 # 实际执行的 SQL 语句： SELECT * FROM mytable GROUP BY color
-results = db.select("mytable", group="color")    
+results = db.select("mytable", group="color")
 ```
 
 ### limit
 
 `limit` 指明返回多少条结果：
- 
+
 ```
 # 实际执行的 SQL 语句： SELECT * FROM mytable LIMIT 10
-results = db.select("mytable", limit=10) 
+results = db.select("mytable", limit=10)
 ```
 
 ### offset
@@ -97,7 +97,7 @@ results = db.select("mytable", limit=10)
 
 ```
 # 实际执行的 SQL 语句： SELECT * FROM mytable OFFSET 10
-results = db.select("mytable", offset=10) 
+results = db.select("mytable", offset=10)
 ```
 
 ### _test
@@ -106,5 +106,5 @@ results = db.select("mytable", offset=10)
 
 ```
 # `results` 是一个 string：<sql: 'SELECT * FROM mytable OFFSET 10'>
-results = db.select("mytable", offset=10, _test=True) 
+results = db.select("mytable", offset=10, _test=True)
 ```

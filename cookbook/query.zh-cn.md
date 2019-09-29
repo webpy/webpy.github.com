@@ -5,11 +5,11 @@ title: 使用 db.query 执行较为复杂的数据库查询
 
 # 使用 `db.query` 执行较为复杂的数据库查询
 
-### 问题：
+## 问题
 
 您要执行的 SQL 语句如：高级的联接或计数。
 
-### 解决：
+## 方案
 
 webpy 没有尝试在数据库之上建立一层模型，而是以尽可能简单的方式查询数据库，
 做复杂的查询也很容易。例如：
@@ -31,7 +31,6 @@ print(results[0].total_users)
 ```
 results = db.query("SELECT * FROM entries JOIN users WHERE entries.author_id = users.id")
 ```
-
 
 为了防止 SQL 注入攻击，`db.query` 也支持 [db.select](select.zh-cn) 一节介绍的 `vars` 参数:
 

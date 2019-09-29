@@ -14,7 +14,7 @@ How do I use a site-wide base template that displays across every page? (In othe
 ### Solution
 
 This can be done using the base attribute:
-    
+
     render = web.template.render('templates/', base='layout')
 
 Now if you do something like `render.foo()` it will render the `templates/foo.html` template and then wrap it in the `templates/layout.html` template.
@@ -34,7 +34,7 @@ The format for "layout.html" should be a simple template that takes one variable
 If you don't want to use the base template for something, just create a second render object without the base attribute, like:
 
     render_plain = web.template.render('templates/')
-    
+
 ###Tip: Page title is set in other template files which are then used by the layout (layout.html). Example:
 
 #####templates/index.html

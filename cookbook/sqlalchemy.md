@@ -31,7 +31,7 @@ create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy
 
     def load_sqla(handler):
         web.ctx.orm = Session()
-        
+
         try:
             return handler()
         except OperationalError:

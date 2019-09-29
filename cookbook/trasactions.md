@@ -30,11 +30,11 @@ The web.DB class has a method `transaction` which returns a transaction object. 
 With python 2.5+, transaction can be used as with statement also.
 
     db = web.databse(dbn="postgres", db="webpy", user="foo", pw="")
-     
+
     with db.transaction():
         db.insert('person', name='foo')
         db.insert('person', name='bar')
-        
+
 
 It is also possible to have nested transactions.
 
