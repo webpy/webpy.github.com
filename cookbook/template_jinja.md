@@ -44,7 +44,7 @@ if __name__ == "__main__":
 ### Template file: templates/hello.html
 
 ```
-Hello, {{ name }}.
+Hello, \{\{ name \}\}.
 ```
 
 ### Solution 2
