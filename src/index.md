@@ -5,17 +5,16 @@ title: Code samples
 
 # Code samples
 
-## Simple samples:
-All samples are in the public domain.  They are intentionally unstyled, and they usually lack features that make them usable.  They are intended to show how common patterns are performed in web.py.
+## Simple samples
 
+All samples are in the public domain. They are intentionally unstyled, and
+they usually lack features that make them usable.  They are intended to show
+how common patterns are performed in web.py.
 
-* [Skeleton code](/skeleton/0.3). The very basics required to get started.
-* [Todo-list](/src/todo-list/0.3). The simplest database-driven app possible.
-* [Blog](/src/blog/0.3). A very simple blog, showing basic CRUD functionality.
-* [wiki](/src/wiki/0.3). A very basic wiki engine.
-* [zbox_wiki](https://github.com/shuge/zbox_wiki). A lightweight wiki system ([demo](http://wiki.shuge-lab.org/zbox-wiki/about-zboxwiki))
-
-
+* [Skeleton code](https://github.com/webpy/webpy-examples/tree/master/skeleton-code). The very basics required to get started.
+* [Todo-list](https://github.com/webpy/webpy-examples/tree/master/todo-list). The simplest database-driven app possible.
+* [Blog](https://github.com/webpy/webpy-examples/tree/master/blog). A very simple blog, showing basic CRUD functionality.
+* [wiki](https://github.com/webpy/webpy-examples/tree/master/wiki). A very basic wiki engine.
 
 ## Deprecated Samples:
 
