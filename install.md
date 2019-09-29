@@ -10,7 +10,6 @@ Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [c
 ## Summary
 
 * <a href="#install">Install</a>
-	* <a href="#macosx">.. on MacOS X</a>
 * <a href="#dev">Development</a>
 * <a href="#prod">Production</a>
 	* <a href="#lighttpd">LightTPD</a>
@@ -24,13 +23,11 @@ Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [c
 		* <a href="#apachemodwsgi">.. with mod_wsgi</a>
 		* <a href="#apachemodrewrite">.. with mod_rewrite</a>
 
-
 <a name="install"></a>
 ## Install
 
+To install web.py for Python 2.7 or Python >= 3.4, download:
 
-To install web.py for Python-2, download:
-    
     https://github.com/webpy/webpy/archive/0.40.tar.gz
 
 or the get the latest dev version:
@@ -38,28 +35,22 @@ or the get the latest dev version:
     https://github.com/webpy/webpy/tarball/master
 
 extract it and copy the _web_ folder into a directory where your application is. Or, to make it accessible to all applications, run:
-    
-    python setup.py install
-
-Note: on some unix like systems you may need to switch to root or run:
 
     python setup.py install
+
+Note: on some unix like systems you may need `sudo` to get root privilege:
+
+    sudo python setup.py install
 
 see [recommended setup](/recommended_setup).
 
 Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Once Easy Install is properly setup:
 
-
     easy_install web.py
-    
+
 Or [PIP](http://packages.python.org/distribute/)
 
-    pip install web.py
-
-<a name="macosx"></a>
-### MacOS X
-
-To install web.py on  [mac os x](/install_macosx). Web.py 0.1 only...
+    pip install web.py==0.40
 
 <a name="dev"></a>
 ## Development
@@ -73,7 +64,15 @@ Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to 
 <a name="prod"></a>
 ## Production
 
-The web server that gets started when you run a web.py program is nice, but for popular sites you're going to want something a little more serious. web.py implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with everything that is compatible to it. WSGI is a common API between web servers and applications, analogous to Java's Servlet Interface. To run web.py with CGI, FastCGI or SCGI you will need to install [flup](https://www.saddi.com/software/flup/) ([download here](https://pypi.org/project/flup/#history)), which provides WSGI interfaces for those APIs. 
+The web server that gets started when you run a web.py program is nice, but
+for popular sites you're going to want something a little more serious. web.py
+implements [WSGI](http://www.python.org/dev/peps/pep-0333/) and runs with
+everything that is compatible to it. WSGI is a common API between web servers
+and applications, analogous to Java's Servlet Interface. To run web.py with
+CGI, FastCGI or SCGI you will need to install
+[flup](https://www.saddi.com/software/flup/)
+([download here](https://pypi.org/project/flup/#history)), which provides WSGI
+interfaces for those APIs.
 
 For all the CGI variants, add this to the top of your `code.py`:
 
@@ -82,38 +81,39 @@ For all the CGI variants, add this to the top of your `code.py`:
 And run `chmod +x code.py` to make it executable.
 
 <a name="lighttpd"></a>
-### LightTPD
+### Lighttpd
 
 <a name="lighttpdfastcgi"></a>
+
 #### .. with FastCGI
 
 FastCGI with lighttpd is the recommended way of using web.py in production. [reddit.com][3] handles millions of hits this way.
 
    [3]: http://reddit.com/
-   
+
 Your lighttpd config can be something like:
-    
+
      server.modules = ("mod_fastcgi", "mod_rewrite")
-     server.document-root = "/path/to/root/"     
-     fastcgi.server = ( "/code.py" =>     
+     server.document-root = "/path/to/root/"
+     fastcgi.server = ( "/code.py" =>
      (( "socket" => "/tmp/fastcgi.socket",
         "bin-path" => "/path/to/root/code.py",
         "max-procs" => 1
      ))
      )
-    
+
      url.rewrite-once = (
        "^/favicon.ico$" => "/static/favicon.ico",
        "^/static/(.*)$" => "/static/$1",
        "^/(.*)$" => "/code.py/$1"
      )
-    
+
 With some versions of lighttpd, it is important to ensure the "check-local" property of the fastcgi.server entry is set to "false", especially if your `code.py` is located outside of the document root.
 
 If you get error messages about not being able to import flup, install it by typing "easy_install flup" at the command line.
 
 Since revision 145, it is necessary to set a bin-environment variable on the fastcgi configuration if your code uses redirects.  If when your code redirects to http://domain.com/ and in the url bar you see http://domain.com/code.py/, you'll need to set the environment variable. This will cause your fastcgi.server configuration above to look something like this:
-     
+
     fastcgi.server = ( "/code.py" =>
     ((
        "socket" => "/tmp/fastcgi.socket",
@@ -125,7 +125,7 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
        "check-local" => "disable"
     ))
     )
-    
+
 <a name="apache"></a>
 ### Apache
 
@@ -150,22 +150,20 @@ Add this to your `.htaccess`:
 and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
 
 Note: The way `web.py` is implemented breaks the `cgitb` module because it captures `stdout`. I worked around the issue by using this:
-    
+
     import cgitb; cgitb.enable()
     import sys
-    
+
     # ... import web etc here...
-    
+
     def cgidebugerror():
-        """
-        """        
         _wrappedstdout = sys.stdout
-    
+
         sys.stdout = web._oldstdout
         cgitb.handler()
-    
+
         sys.stdout = _wrappedstdout
-    
+
     web.internalerror = cgidebugerror
 
 
@@ -175,15 +173,15 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
 FastCGI is easy to configure and performs as well as mod_python.
 
 Add this to your `.htaccess`:
-    
-    <Files code.py>      
+
+    <Files code.py>
     SetHandler fastcgi-script
     </Files>
 
 Unfortunately, unlike lighttpd, Apache gives no hint that it wants your web.py script to act as a FastCGI server so you have to tell web.py explicitly. Add this to `code.py` before your `if __name__ == "__main__":` line:
-    
+
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
-    
+
 and point your browser to `http://example.com/code.py/`. Don't forget the trailing slash, otherwise you'll see a `not found` message (because the `urls` list you defined do not match anything). To make things work without having to enter `code.py`, enable mod_rewrite rules (see below).
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
@@ -193,7 +191,7 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 #### .. with SCGI
 https://www.mems-exchange.org/software/scgi/
 download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
-windows apache user: 
+windows apache user:
 edit your httpd.conf:
 
     LoadModule scgi_module Modules/mod_scgi.so
@@ -204,7 +202,7 @@ restart apache and then start your code.py in the command below:
     python code.py 127.0.0.1:8080 scgi
 
 and open you browser,visit 127.0.0.1
-It's ok! 
+It's ok!
 
 
 <a name="apachemodpython"></a>
@@ -226,21 +224,19 @@ For Python <2.5 do this:
     svn co svn://svn.eby-sarna.com/svnroot/wsgiref/wsgiref
     cd wsgiref
     wget -O modpython_gateway.py http://svn.aminus.net/misc/modpython_gateway.py
-    # or fetch the file from that address using your browser  
+    # or fetch the file from that address using your browser
 
 
 Rename your `code.py` to something like `codep.py` and add:
-    
+
     app = web.application(urls, globals())
     main = app.wsgifunc()
 
 In your `.htaccess`, add:
-    
-    
+
     AddHandler python-program .py
     PythonHandler wsgiref.modpython_gateway::handler
     PythonOption wsgi.application codep::main
-    
 
 You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
@@ -282,7 +278,7 @@ It should then be accessible at `http://example.com/code.py/` as usual.
 
 If you want web.py to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
 
-    <IfModule mod_rewrite.c>      
+    <IfModule mod_rewrite.c>
       RewriteEngine on
       RewriteBase /
       RewriteCond %{REQUEST_URI} !^/icons

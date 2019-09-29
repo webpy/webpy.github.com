@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 安装
+title: 安装 web.py
 ---
 
 # 安装
@@ -24,17 +24,21 @@ title: 安装
 <a name="install"></a>
 ## 安装
 
-安装web.py, 请先下载：
+可以先下载源码包，再本地安装。下载：
     
-    http://webpy.org/static/web.py-0.37.tar.gz
-
-或者获取最新的开发版：
-
-    https://github.com/webpy/webpy/tarball/master
-
-解压并拷贝 _web_ 文件夹到你的应用程序目录下。 或者，为了让所有的应用程序都可以使用，运行：
-    
+    wget http://webpy.org/static/webpy-0.40.zip
+    unzip webpy-0.40.zip
+    cd webpy-0.40/
     python setup.py install
+
+也可以获取最新的开发版本，再本地安装：
+
+    git clone https://github.com/webpy/webpy.git
+    cd webpy
+    python setup.py install
+
+也可以直接将 webpy 源码目录里的 `web` 文件夹到你的 Python 应用程序目录下，作为
+一个独立的 `package` 使用。
 
 注意: 在某些类unix系统上你可能需要切换到root用户或者运行：
 
@@ -42,19 +46,19 @@ title: 安装
 
 查看 [推荐设置](/recommended_setup).
 
-另外一个选择是使用[Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Easy Install 使用如下：
-
+另外一个选择是使用 `easy_install` or `pip` 命令直接从 PyPi 在线安装：
 
     easy_install web.py
 
 或者 [PIP](http://packages.python.org/distribute/)
 
-    sudo pip install web.py
+    pip install web.py==0.40
 
 <a name="dev"></a>
 ## 开发
 
-web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/tutorial2) 学习如何写一个Web应用。 写完后，将你的代码放到 `code.py` 并如下面的方法来启动服务器：
+web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/docs/0.3/tutorial)
+学习如何写一个 Web 应用。 写完后，将你的代码放到 `code.py` 并如下面的方法来启动服务器：
 
      python code.py
 
