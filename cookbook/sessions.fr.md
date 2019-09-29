@@ -13,7 +13,7 @@ Comment utiliser les sessions dans web.py.
 
 ### Solution
 
-*Les sessions ne fonctionnent pas en mode [debug](/tutorial3.fr#debug) parce qu'elles interfèrent avec reloading. Veuillez lire [session_with_reloader](/session_with_reloader) pour plus de détail.*
+* Les sessions ne fonctionnent pas en mode [debug](./tutorial.fr#debug) parce qu'elles interfèrent avec reloading. Veuillez lire [session_with_reloader](/session_with_reloader) pour plus de détail.*
 
 Le module `web.session` fournit un support session. Voici une application simple de compteur utilisant les sessions.
 
@@ -39,7 +39,7 @@ Le module `web.session` fournit un support session. Voici une application simple
     if __name__ == "__main__":
         app.run()
 
-L'objet session est chargé avec des données session avant le traitement de la requête et sauve des données session après avoir traité la requête, si il est modifié. Notez que dans la version du 22-11-2008 de web.py, il faut désactiver le [débogage](/tutorial3.fr#debug) pour utiliser le serveur de développement avec les sessions.
+L'objet session est chargé avec des données session avant le traitement de la requête et sauve des données session après avoir traité la requête, si il est modifié. Notez que dans la version du 22-11-2008 de web.py, il faut désactiver le [débogage](./tutorial.fr#debug) pour utiliser le serveur de développement avec les sessions.
 
 L'argument optionnel `initializer` de Session spécifie la session initiale.
 

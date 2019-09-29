@@ -21,7 +21,7 @@ web.py的URL控制模式是简单的、强大的、灵活的。在每个应用�
         "/tasks/signup", "signup"
     )
 
-这些元组的格式是: _URL路径_, _处理类_ 这组定义有多少可以定义多少。如果你并不知道URL路径和处理类之间的关系，请在阅读cookbook之前先阅读[Hello World example](/helloworld)，或者[快速入门](/tutorial3.zh-cn)。
+这些元组的格式是: _URL路径_, _处理类_ 这组定义有多少可以定义多少。如果你并不知道URL路径和处理类之间的关系，请在阅读cookbook之前先阅读[Hello World example](/helloworld)，或者[快速入门](./tutorial.zh-cn)。
 
 `路径匹配`
 

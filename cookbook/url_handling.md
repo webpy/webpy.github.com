@@ -5,7 +5,7 @@ title: Understanding URL Handling
 
 # Understanding URL Handling
 
-Other languages : [français](/../cookbook/url_handling.fr) | ...
+Other languages : [français](./url_handling.fr) | ...
 
 ## Problem: how to design a url handling / dispatching scheme for the entire site
 
@@ -31,7 +31,7 @@ The format of this tuple is: `url-path-pattern_`, `handler-class`.
 This pattern will repeat as more url patterns are defined.  If you don't
 understand the relationship between url pattern and handler classes,
 please read the [Hello World example](/cookbook/helloworld) or
-[Quick Start Tutorial](/tutorial3.en) before reading any other cookbook recipes.
+[Quick Start Tutorial](./tutorial) before reading any other cookbook recipes.
 
 ### URL Pattern and Path Matching
 

@@ -5,11 +5,11 @@ title: Utiliser les sessions avec reloader
 
 # Utiliser les sessions avec reloader
 
-Autre langages: [english](/../session_with_reloader) | ...
+Autre langages: [english](./session_with_reloader) | ...
 
 # Probleme
 
-Il ya quelques problèmes en utilisant les sessions lors de l'exécution de l'application en mode [débogage](/tutorial3.fr#debug). Existe-t-il une  méthode permettant de les contourner?
+Il ya quelques problèmes en utilisant les sessions lors de l'exécution de l'application en mode [débogage](./tutorial.fr#debug). Existe-t-il une  méthode permettant de les contourner?
 
 # Solution
 

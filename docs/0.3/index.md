@@ -12,11 +12,11 @@ Other languages : [français](/docs/0.3.fr) | ...
 
 ## Tutorial
 
-* [Quick tutorial](/tutorial3.en). Getting started with your first application.
+* [Quick tutorial](./tutorial). Getting started with your first application.
 
 ## Example Code
 
-* [Cookbook](/cookbook). How to perform basic and common tasks.
+* [Cookbook](./cookbook). How to perform basic and common tasks.
 * [Code samples](/src). Example code of how to write some basic applications.
 
 ## Component Documentation

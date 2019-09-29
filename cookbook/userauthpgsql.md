@@ -41,7 +41,7 @@ There will be 2 states during the login/logout session:
 - "Login" is for the login page
 - "Reset" for the logout page.
 
-*sessions doesn't work in [debug](/tutorial3.en#developing) mode because it interfere with reloading. see [session_with_reloader](session_with_reloader) for more details.*
+*sessions doesn't work in [debug](./tutorial#developing) mode because it interfere with reloading. see [session_with_reloader](session_with_reloader) for more details.*
 
 ```
 import web

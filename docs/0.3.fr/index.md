@@ -12,7 +12,7 @@ Autre langages : [english](/docs/0.3) | ...
 
 ## Tutorial
 
-* [Tutorial rapide](/tutorial3.fr). Commençez  votre première application.
+* [Tutorial rapide](./tutorial.fr). Commençez  votre première application.
 
 ## Exemples de code
 

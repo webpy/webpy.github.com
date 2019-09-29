@@ -46,7 +46,7 @@ Une autre option est d'utiliser [Easy Install](http://peak.telecommunity.com/Dev
 <a name="dev"></a>
 ## Développement:
 
-webpy intègre son propre serveur web.  Apprenez comment écrire une application en suivant le [tutoriel](/tutorial3.fr).  Quand votre application est écrite, insérez votre code dans `code.py` et démarrez le serveur avec la commande:
+webpy intègre son propre serveur web.  Apprenez comment écrire une application en suivant le [tutoriel](./tutorial.fr).  Quand votre application est écrite, insérez votre code dans `code.py` et démarrez le serveur avec la commande:
 
      python code.py
 

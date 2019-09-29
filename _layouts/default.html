@@ -1,56 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html><head> 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>{{page.title}} (web.py)</title> 
-  <link rel="stylesheet" type="text/css" href="/static/webpy-new.css"/> 
-  <link rel="SHORTCUT ICON" href="/static/favicon.ico"/> 
-</head><body> 
- 
-        <div id="header"><table class="header"><tr>
-                <td class="logo"><a href="/" title="Home"><img src="/static/webpy.gif" alt="" /></a></td> 
-<td class="blurb">&ldquo;Think about the ideal way to write a web app.<br />Write the code to make it happen.&rdquo; [<a href="/philosophy">more...</a>]</td> </tr>
-</table>
-        </div> 
-        <div id="location"> 
-                <a href="/">home</a> &gt; {{page.title}}
-        </div> 
-<div id="container"> 
-<div id="sidebar">
-<strong>get started:</strong>
-<ul class="body">
-  <li><a href="/install">install</a></li>
-  <li><a href="/docs/0.3/tutorial">tutorial</a></li>
-</ul>
-<strong>learn more:</strong>
-<ul class="body">
-<li><a href="/docs/0.3/api">api reference</a></li>
-<li><a href="/cookbook/">cookbook</a></li>
-<li><a href="/src/">code examples</a></li>
-</ul>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{{page.title}} (web.py)</title>
+        <link rel="stylesheet" type="text/css" href="/static/webpy-new.css"/>
+        <link rel="SHORTCUT ICON" href="/static/favicon.ico"/>
+    </head>
 
-<strong>dive in:</strong>
-<ul class="body"> 
-<li><a href="https://github.com/webpy/webpy">source code</a></li>
-<li><a href="http://groups.google.com/group/webpy/">mailing list</a></li>
-<li><a href="https://github.com/webpy/webpy/issues">issue tracker</a></li>
-</ul>
-</div>
+    <body>
 
-<div id="main"> 
-<div id="content" class="body"> 
-{{content}}
-<div style="clear: both;"></div> 
- 
-</div> 
- 
-</div> 
-</div>
-        <div id="footer"> 
-    <p>started by <a style="color: gray;" href="http://www.aaronsw.com/">Aaron Swartz</a> (<a style="color: black;" href="mailto:webpy@aaronsw.com">webpy@aaronsw.com</a>)</p>
+        <div id="header">
+            <table class="header">
+                <tr>
+                    <td class="logo"><a href="/" title="Home"><img src="/static/webpy.gif" alt="" /></a></td>
+                    <td class="blurb">&ldquo;Think about the ideal way to write a web app.<br />Write the code to make it happen.&rdquo; [<a href="/philosophy">more...</a>]</td>
+                </tr>
+            </table>
+        </div>
 
-<p><a href="https://github.com/webpy/webpy.github.com/blob/master{{page.url|replace:".html",".md"}}">fork this page on GitHub</a></p>
-</div> 
- 
-</body> 
-</html> 
+        <div id="location">
+            <a href="/">home</a> &gt; {{page.title}}
+        </div>
+
+        <div id="container">
+            <div id="sidebar">
+                <strong>Get started:</strong>
+                <ul class="body">
+                    <li><a href="/install">Install</a></li>
+                    <li><a href="/docs/0.3/tutorial">Tutorial</a></li>
+                </ul>
+
+                <strong>Learn more:</strong>
+                <ul class="body">
+                    <li><a href="/docs/0.3/api">API Reference</a></li>
+                    <li><a href="/cookbook/">Cookbook</a></li>
+                    <li><a href="/src/">Code Examples</a></li>
+                </ul>
+
+                <strong>Dive in:</strong>
+                <ul class="body">
+                    <li><a href="https://github.com/webpy/webpy">source code</a></li>
+                    <li><a href="http://groups.google.com/group/webpy/">mailing list</a></li>
+                    <li><a href="https://github.com/webpy/webpy/issues">issue tracker</a></li>
+                </ul>
+            </div>
+
+            <div id="main">
+                <div id="content" class="body">
+                {{content}}
+                <div style="clear: both;"></div>
+                </div>
+            </div>
+        </div><!-- .container -->
+
+        <div id="footer">
+            <p>Started by <a style="color: gray;" href="http://www.aaronsw.com/">Aaron Swartz</a> (<a style="color: black;" href="mailto:webpy@aaronsw.com">webpy@aaronsw.com</a>)</p>
+            <p><a href="https://github.com/webpy/webpy.github.com/blob/master{{page.url|replace:".html",".md"}}">fork this page on GitHub</a></p>
+        </div>
+    </body>
+</html>
