@@ -40,6 +40,7 @@ class hello:
 
 if __name__ == "__main__":
     app.run()
+```
 
 ### 模板文件: templates/hello.html
 
