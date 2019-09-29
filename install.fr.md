@@ -10,7 +10,6 @@ Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/ins
 ## Sommaire
 
 * <a href="#installation">Installation</a>
-	* <a href="#macosx">.. sur MacOS X</a>
 * <a href="#dev">Développement</a>
 * <a href="#prod">Production</a>
 	* <a href="#lighttpd">LightTPD</a>
@@ -43,12 +42,6 @@ Une autre option est d'utiliser [Easy Install](http://peak.telecommunity.com/Dev
 
 
     easy_install web.py
-
-<a name="macosx"></a>
-### ... Sur MacOS X
-
-La procédure d'installation sur MacOS X n'a pas encore été traduite. Vous pouvez cependant visionner la version anglaise pour la version 0.1 : [Install MacOS X](/install_macosx) 
-
 
 <a name="dev"></a>
 ## Développement:
