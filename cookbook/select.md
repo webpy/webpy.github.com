@@ -11,20 +11,21 @@ You want to select data from a database
 
 ## Solution
 
-With version 0.3, databases are defined like this:
+With web.py version 0.3 and 0.40, databases are defined like this:
 
 ```
 db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
 ```
 
-Once the database is defined as such, performing selects can be performed like this:
+Once the database is defined as such, you can perform selects like this:
 
 ```
 # Select all rows from table 'mytable'.
 results = db.select('mytable')
 ```
 
-The query result (`results` in above example) is an iterator of dict-like storage items, you can access them like below:
+The query result (`results` in above example) is an iterator of dict-like
+storage items, you can access them like below:
 
 ```
 len(results)        # number of rows returned
@@ -49,20 +50,26 @@ The vars variable is used to populate the rest of the statements.  For example:
 
 ```
 myvar = dict(name="Bob")
-results = db.select('mytable', myvar, where="name = $name")
+
+# Same as SQL statement: SELECT * FROM mytable WHERE name="Bob"
+results = db.select('mytable', vars=myvar, where="name = $name")
 ```
 
 ### what
 
 The what variable defaults to `*`, but can take a list of items you want selected if the entire entry isn't desired.
 
-```results = db.select('mytable', what="id,name")```
+```
+# Same as SQL statement: SELECT id, name FROM mytable
+results = db.select('mytable', what="id,name")
+```
 
 ### where
 
 The where variable lets you pass where clauses to the SQL select, such as:
 
 ```
+# Same as SQL statement: SELECT * FROM mytable WHERE id>100
 results = db.select('mytable', where="id>100")
 ```
 
@@ -70,30 +77,48 @@ results = db.select('mytable', where="id>100")
 
 The order variable lets the order be specified.  For instance:
 
-```results = db.select('mytable', order="post_date DESC")```
+```
+# Same as SQL statement: SELECT * FROM mytable ORDER BY post_date DESC
+results = db.select('mytable', order="post_date DESC")
+```
 
 ### group
 
 Grouping lets you combine things that are common.
 
-```results = db.select('mytable', group="color")```
+```
+# Same as SQL statement: SELECT * FROM mytable GROUP BY color
+results = db.select('mytable', group="color")
+```
 
 ### limit
 
 Limits set how many results are returned. 
  
-```results = db.select('mytable', limit=10)```
+```
+# Same as SQL statement: SELECT * FROM mytable LIMIT 10
+results = db.select('mytable', limit=10)
+```
 
 ### offset
 
-Offsets start returning results after a certain point; they're often used with limits to do something like show 10 entries per page, and then see the next 10.   
+Offsets start returning results after a certain point; they're often used with
+limits to do something like show 10 entries per page, and then see the next 10.
 
-```results = db.select('mytable', offset=10)```
+```
+# Same as SQL statement: SELECT * FROM mytable OFFSET 10 LIMIT 20
+results = db.select('mytable', offset=10, limit=20)
+
+# Same as SQL statement: SELECT * FROM mytable OFFSET 30 LIMIT 20
+results = db.select('mytable', offset=30, limit=20)
+```
 
 ### _test
 
-The `_test` variable lets you see the SQL produced by the statement, no statement is actually performed:
+The `_test` variable lets you see the SQL produced by the statement, no
+statement is actually performed:
 
-```results = db.select('mytable', offset=10, _test=True)
-<sql: 'SELECT * FROM mytable OFFSET 10'>
+```
+results = db.select('mytable', offset=10, _test=True)
+# `results` is a string: <sql: 'SELECT * FROM mytable OFFSET 10'>
 ```

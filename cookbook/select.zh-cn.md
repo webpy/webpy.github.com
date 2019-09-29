@@ -3,24 +3,28 @@ layout: default
 title: db.select 查询
 ---
 
-# db.select 查询
+# 使用 `db.select` 执行简单 SQL 查询
 
-##问题:
+## 问题
 
 怎样执行数据库查询？
 
-##解决方案: 
+## 解决方案
 
-如果是0.3版本, 连接部分大致如下:
+在 web.py 0.3x 和 0.40 版本, 建立数据库大致如下:
 
-    db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
+```
+db = web.database(dbn="postgres", host="localhost", port=5432, db="mytable", user="db_user", pw="db_password")
+```
 
-当获取数据库连接后, 可以这样执行查询数据库:
-    
-    # Select all entries from table 'mytable'
-    entries = db.select('mytable')
+成功建立数据库连接后, 可以这样执行查询数据库:
 
-select方法有下面几个参数:
+```
+# Select all entries from table `mytable`
+results = db.select("mytable")
+```
+
+`db.select` 支持以下几个关键字参数:
 
 * vars
 * what
@@ -31,44 +35,76 @@ select方法有下面几个参数:
 * offset
 * _test
 
-###vars
-vars变量用来填充查询条件.  如:
+### vars
 
-    myvar = dict(name="Bob")
-    results = db.select('mytable', myvar, where="name = $name")
+`vars` 是一个 dict，保存 SQL 查询语句里需要用到的变量，在实际构造 SQL 语句时会被用于替换 `WHERE` 语句里以 `$` 开头的变量。如:
 
-###what
-what是标明需要查询的列名, 默认是*, 但是你可以标明需要查询哪些列.
+```
+myvars = dict(name="Bob")
 
-    results = db.select('mytable', what="id,name")
+# `name=$name` 将被替换为 `name="Bob"`
+results = db.select("mytable", vars=myvars, where="name = $name")
+```
 
-###where
-where查询条件, 如:
+### what
 
-    results = db.select('mytable', where="id>100")
+`what` 指明要查询的 SQL 字段名。如果省略则默认查询所有字段（即 `SELECT * FROM ...`)。
 
-###order
-排序方式:
+```
+# 实际执行的 SQL 语句： SELECT id, name FROM mytable
+results = db.select("mytable", what="id, name")
+```
 
-    results = db.select('mytable', order="post_date DESC")
+### where
 
-###group
-按group组排列.
+`where` 用于指定 SQL 语句里的查询条件, 如:
 
-    results = db.select('mytable', group="color")    
+```
+# 实际执行的 SQL 语句： SELECT id FROM mytable WHERE id > 100
+results = db.select("mytable", what=id, where="id > 100")
+```
 
-###limit
-从多行中返回limit查询. 
+### order
+
+`order` 指明查询结果要以何种方式排序。
+
+```
+# 实际执行的 SQL 语句： SELECT * FROM mytable ORDER BY post_date DESC
+results = db.select("mytable", order="post_date DESC")
+```
+
+### group
+
+`group` 指明以何种方式对查询结果分组统计：
+
+```
+# 实际执行的 SQL 语句： SELECT * FROM mytable GROUP BY color
+results = db.select("mytable", group="color")    
+```
+
+### limit
+
+`limit` 指明返回多少条结果：
  
-    results = db.select('mytable', limit=10) 
+```
+# 实际执行的 SQL 语句： SELECT * FROM mytable LIMIT 10
+results = db.select("mytable", limit=10) 
+```
 
-###offset
-偏移量, 从第几行开始.   
+### offset
 
-    results = db.select('mytable', offset=10) 
+`offset` 指明偏移量，即从第几行开始查询：
 
-###_test
-查看运行时执行的SQL语句:
+```
+# 实际执行的 SQL 语句： SELECT * FROM mytable OFFSET 10
+results = db.select("mytable", offset=10) 
+```
 
-    results = db.select('mytable', offset=10, _test=True) 
-    <sql: 'SELECT * FROM mytable OFFSET 10'>
+### _test
+
+设置 `_test=True` 时，`db.select` 只是构造 SQL 语句，并不实际执行：
+
+```
+# `results` 是一个 string：<sql: 'SELECT * FROM mytable OFFSET 10'>
+results = db.select("mytable", offset=10, _test=True) 
+```
