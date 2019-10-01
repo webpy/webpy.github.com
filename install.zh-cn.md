@@ -10,16 +10,16 @@ title: 安装 web.py
 * <a href="#install">安装</a>
 * <a href="#dev">开发</a>
 * <a href="#prod">产品</a>
-	* <a href="#lighttpd">LightTPD</a>
-		* <a href="#lighttpdfastcgi">.. 使用 FastCGI</a>
-	* <a href="#apache">Apache</a>
-		* <a href="#apachecgi">.. 使用 CGI</a>
-		* <a href="#apachecgihtaccess"> .. 使用 CGI using .htaccess</a>
-		* <a href="#apachefastcgi">.. 使用 FastCGI</a>
-		* <a href="#apachescgi">.. 使用 SCGI</a>
-		* <a href="#apachemodpython">.. 使用 mod_python</a>
-		* <a href="#apachemodwsgi">.. 使用 mod_wsgi</a>
-		* <a href="#apachemodrewrite">.. 使用 mod_rewrite</a>
+    * <a href="#lighttpd">LightTPD</a>
+        * <a href="#lighttpdfastcgi">.. 使用 FastCGI</a>
+    * <a href="#apache">Apache</a>
+        * <a href="#apachecgi">.. 使用 CGI</a>
+        * <a href="#apachecgihtaccess"> .. 使用 CGI using .htaccess</a>
+        * <a href="#apachefastcgi">.. 使用 FastCGI</a>
+        * <a href="#apachescgi">.. 使用 SCGI</a>
+        * <a href="#apachemodpython">.. 使用 mod_python</a>
+        * <a href="#apachemodwsgi">.. 使用 mod_wsgi</a>
+        * <a href="#apachemodrewrite">.. 使用 mod_rewrite</a>
 
 <a name="install"></a>
 ## 安装

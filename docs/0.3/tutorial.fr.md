@@ -298,4 +298,4 @@ Vous pourrez trouver pleins de détails de tout ceci ainsi que de toutes les fon
 * [Formulaires](/docs/0.3/form.fr) 
 * [Templator: le modèle de gabarit de web.py](/docs/0.3/templetor.fr)
 * [Cookbook](/cookbook/fr)
-* [Exemples de codes](/src)
+* [Exemples de codes](https://github.com/webpy/webpy-examples/)

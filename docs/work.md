@@ -26,7 +26,7 @@ When finishing working on something, delete it from the list. If a code block re
 
 
 ***
-#Code samples: [Code samples](/src)
+#Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
 * Move url to /samples
 
 ## Samples

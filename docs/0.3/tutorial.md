@@ -281,6 +281,6 @@ The debug is not enabled when the application is run in a real webserver. If you
 <a name="whatnext"> </a>
 ## What Next ?
 
-This ends the tutorial for now. Take a look at the [cookbook](/cookbook/) and the [code examples](/src/)  for lots more cool stuff you can do with web.py.
+This ends the tutorial for now. Take a look at the [cookbook](/cookbook/) and the [code examples](https://github.com/webpy/webpy-examples/)  for lots more cool stuff you can do with web.py.
 Also don't forget about the [api reference](/docs/0.3/api)
 

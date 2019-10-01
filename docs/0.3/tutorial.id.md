@@ -363,6 +363,6 @@ Anda dapat menambahkan kode berikut sebelum membuat aplikasi/template:
 ## Berikutnya?
 
 Sampai di sini dulu tutorial kita. Kunjungilah [buku resep](/cookbook/) 
-dan [contoh kode](/src/) untuk contoh-contoh keren yang dapat Anda 
+dan [contoh kode](https://github.com/webpy/webpy-examples/) untuk contoh-contoh keren yang dapat Anda 
 lakukan dengan web.py. Dan, jangan lupakan juga [referensi 
 api](/docs/0.3/api).

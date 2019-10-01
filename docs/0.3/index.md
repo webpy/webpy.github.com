@@ -17,7 +17,7 @@ Other languages : [français](/docs/0.3.fr) | ...
 ## Example Code
 
 * [Cookbook](./cookbook). How to perform basic and common tasks.
-* [Code samples](/src). Example code of how to write some basic applications.
+* [Code samples](https://github.com/webpy/webpy-examples/). Example code of how to write some basic applications.
 
 ## Component Documentation
 * [Applications](/docs/0.3/apps). How to map urls to python code paths.

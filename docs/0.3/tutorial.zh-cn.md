@@ -91,8 +91,6 @@ title: web.py 0.3 新手指南
         app = web.application(urls, globals())
         app.run()
 
-		
-
 <a name="start"> </a>
 ## 启动服务
 
@@ -105,8 +103,6 @@ title: web.py 0.3 新手指南
 **注意:** 如果你不能或者不想使用默认端口，你可以使用这样的命令来指定端口号:
 
     $ python code.py 1234
-
-	
 
 <a name="templating"> </a>
 ## 模板
@@ -235,7 +231,7 @@ web.py的form模块能够帮助你生成HTML表单；获取用户的输入，并
         def POST(self):
             i = web.input()
             n = db.insert('todo', title=i.title)
-    	    raise web.seeother('/')
+            raise web.seeother('/')
 
 (注意现在我们正在使用 `POST`)
 
@@ -269,4 +265,4 @@ web.py 还有一些帮助我们debug的工具。当它在内建的服务器中�
 
 * [更多文档](/docs/0.3)
 * [Cookbook](/cookbook)
-* [code samples](/src)
+* [Code Examples](https://github.com/webpy/webpy-examples/)

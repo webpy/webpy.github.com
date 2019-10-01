@@ -17,7 +17,7 @@ Autre langages : [english](/docs/0.3) | ...
 ## Exemples de code
 
 * [Cookbook](/cookbook/fr). Comment effectuer des tâches basiques et communes. 
-* [Code samples](/src). Example code of how to write some basic applications. (traduction demandée)
+* [Code samples](https://github.com/webpy/webpy-examples/). Example code of how to write some basic applications. (traduction demandée)
 
 ## Documentation des composants
 * [Applications](/docs/0.3/apps/fr). Comment mapper des urls à du code python.

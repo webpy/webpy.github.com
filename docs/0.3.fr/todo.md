@@ -32,7 +32,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 ### Exemples de code
 
-* [Code samples](/src). - traduction demandée
+* [Code samples](https://github.com/webpy/webpy-examples/). - traduction demandée
 
 ### Documentation des composants
 
