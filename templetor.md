@@ -18,8 +18,8 @@ met by nothing else:
 
 And requirements for the implementation as well: 
 
-4. Sandboxable so that you can let untrusted users write templates. 
-5. Simple and fast implementation. 
+5. Sandboxable so that you can let untrusted users write templates. 
+6. Simple and fast implementation. 
 
 So here's my entry. 
 
