@@ -45,7 +45,7 @@ Si prefiere descargar la última versión de desarrollo de git:
 
 ## Quién utiliza web.py?
 
-web.py fue publicado originalmente cuando Aaron Swartz trabajaba en [reddit.com][20], donde el sitio lo utilizó para crecer hasta convertirse en uno de los 1000 primeros sitios de acuerdo a Alexa, sirviendo millones de páginas diariamente. "Es el framework anti-framework. web.py no se interpone en tu camino," explicó el fundador Steve Huffman. (El sitio fue reescrito usando otras herramientas después de su adquisición por Condé Nast.)
+web.py fue publicado originalmente cuando Aaron Swartz trabajaba en [reddit.com][20], donde lo fue utilizado para crecer hasta convertirse en uno de los 1000 primeros sitios de acuerdo a Alexa, sirviendo millones de páginas diariamente. "Es el framework anti-framework. web.py no se interpone en tu camino," explicó el fundador Steve Huffman. (El sitio fue reescrito usando otras herramientas después de su adquisición por Condé Nast.)
 
    [20]: http://reddit.com/
 
