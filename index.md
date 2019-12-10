@@ -3,7 +3,7 @@ layout: default
 title: Welcome to web.py!
 ---
 
-Other langages : [French](/index.fr.html) | ...
+Other langages : [French](/index.fr.html) | [Español](/index.es.html) | ...
 
 ## About web.py
 
