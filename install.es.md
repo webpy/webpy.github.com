@@ -12,6 +12,7 @@ Otros idiomas : [english](/install) | [Japan 日本語 ](/install.ja) | [chinese
 * <a href="#install">Instalación</a>
 * <a href="#dev">Desarrollo</a>
 * <a href="#prod">Producción</a>
+    * <a href="#nginx">Nginx</a>
     * <a href="#lighttpd">LightTPD</a>
         * <a href="#lighttpdfastcgi">.. con FastCGI</a>
     * <a href="#apache">Apache</a>
@@ -79,6 +80,12 @@ Para todas las variantes CGI, adicione esto al inicio de su archivo `code.py`:
     #!/usr/bin/env python
 
 Y corra `chmod +x code.py` para hacerlo ejecutable.
+
+### Nginx
+
+* [Despliegue con Nginx del servicio uWSGI sobre Linux](http://webpy.org/cookbook/uwsgi-nginx)
+* [Despliegue de mod_wsgi mediante Nginx](http://webpy.org/cookbook/mod_wsgi-nginx)
+* [Despliegue de Fastcgi mediante Nginx](http://webpy.org/cookbook/fastcgi-nginx)
 
 <a name="lighttpd"></a>
 ### Lighttpd
