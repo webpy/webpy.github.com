@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 使用nginx加mod_wsgi模块部署web.py
+title: 使用 Nginx 加 mod_wsgi 模块部署 web.py
 ---
 
-# 使用nginx加mod_wsgi模块部署web.py
+# 使用 Nginx 加 mod_wsgi 模块部署 web.py
 
-与Apache加载模块部署web.py程序类似，通过nginx加mod_wsgi模块也可以部署web.py程序。
+与 Apache 加载模块部署 web.py 程序类似，通过 Nginx 加 mod_wsgi 模块也可以部署 web.py 程序。
 
-在编译并安装好nginx的mod_wsgi模块后，使用下面配置文件提供的形式(注意需要修改相应的配置和路径)，即可部署一个web.py应用程序。
+在编译并安装好 Nginx 的 mod_wsgi 模块后，使用下面配置文件提供的形式(注意需要修改相应的配置和路径)，即可部署一个 web.py 应用程序。
 
 
     wsgi_python_executable  /usr/bin/python;
@@ -24,8 +24,8 @@ title: 使用nginx加mod_wsgi模块部署web.py
     }
 
 
-*注意：本段配置是mod_wsgi方式部署Web应用程序的示例，不是nginx配置的完整信息。
+*注意：本段配置是 mod_wsgi 方式部署Web应用程序的示例，不是 Nginx 配置的完整信息。
 
 参考链接:<br />
-[ nginx website](http://nginx.net/ )<br />
-[ wiki page on mod_wsgi](http://wiki.codemongers.com/NginxNgxWSGIModule )
+[ Nginx Website](http://nginx.net/ )<br />
+[ Wiki page on mod_wsgi](http://wiki.codemongers.com/NginxNgxWSGIModule )
