@@ -304,7 +304,7 @@ If your error isn't mentioned here, feel free to report it by creating an
 issue with sample code used to reproduce it:
 <https://github.com/webpy/webpy.github.com/issues>
 
-#### `TypeError: __template__() got an unexpected keyword argument 'myvar'`
+## Error: `TypeError: __template__() got an unexpected keyword argument 'myvar'`
 
 The `render` calls the template file with unexpected keyword argument `myvar`.
 
@@ -330,7 +330,7 @@ render.my_template_file(var1=..., var2=..., myvar=...)
 render.my_template_file(var1=..., var2=...)
 ```
 
-#### `TypeError: __template__() takes 0 positional arguments but 1 was given`
+## Error: `TypeError: __template__() takes 0 positional arguments but 1 was given`
 
 Template file doesn't have `$def with (...)` line (which indicates it doesn't use any variables), but 1 variable name is passed to the template while calling the `render` function.
 
@@ -349,7 +349,7 @@ render.my_template_file(myvar=...)
 render.my_template_file()
 ```
 
-#### `TypeError: __template__() missing 1 required positional argument: 'myvar'`
+## Error: `TypeError: __template__() missing 1 required positional argument: 'myvar'`
 
 Template file uses variable name `myvar`, but it's not passed while calling the `render`.
 
