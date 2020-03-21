@@ -300,6 +300,10 @@ The following are still supported but not preferred.
 <a name="errors"></a>
 # Errors you may experience
 
+If your error isn't mentioned here, feel free to report it by creating an
+issue with sample code used to reproduce it:
+<https://github.com/webpy/webpy.github.com/issues>
+
 #### `TypeError: __template__() got an unexpected keyword argument 'myvar'`
 
 The `render` calls the template file with unexpected keyword argument `myvar`.
