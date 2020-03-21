@@ -26,6 +26,7 @@ Other languages : [français](/docs/0.3/templetor.fr) | ...
 * <a href="#builtins">Builtins and globals</a>
 * <a href="#security">Security</a>
 * <a href="#upgrading">Upgrading from web.py 0.2 templates</a>
+* <a href="#errors">Errors you may experience</a>
 
 
 <a name="introduction"></a>
@@ -288,10 +289,80 @@ The new implementation is mostly compatible with the earlier implementation. How
 
 * Template output is always storage like `TemplateResult` object, however converting it to `unicode` or `str` gives the result as unicode/string.
 * Reassigning a global value will not work. The following will not work if x is a global.
-    
-        $ x = x + 1
-    
+
+    $ x = x + 1
+
 The following are still supported but not preferred.
 
 * Using `\$` for escaping dollar. Use `$$` instead.
 * Modifying `web.template.Template.globals`. pass globals to `web.template.render` as argument instead.
+
+<a name="errors"></a>
+# Errors you may experience
+
+#### `TypeError: __template__() got an unexpected keyword argument 'myvar'`
+
+The `render` calls the template file with unexpected keyword argument `myvar`.
+
+Template file:
+```
+$def with (var1, var2)
+
+My content:
+$:var1
+$:var2
+```
+
+Python code.
+
+```
+import web
+render = web.template.render()
+
+# WRONG. `myvar` should be removed.
+render.my_template_file(var1=..., var2=..., myvar=...)
+
+# CORRECT.
+render.my_template_file(var1=..., var2=...)
+```
+
+#### `TypeError: __template__() takes 0 positional arguments but 1 was given`
+
+Template file doesn't have `$def with (...)` line (which indicates it doesn't use any variables), but 1 variable name is passed to the template while calling the `render` function.
+
+Template file:
+```
+My sample content here without using any variable.
+```
+
+Python code:
+
+```
+# WRONG.
+render.my_template_file(myvar=...)
+
+# CORRECT.
+render.my_template_file()
+```
+
+#### `TypeError: __template__() missing 1 required positional argument: 'myvar'`
+
+Template file uses variable name `myvar`, but it's not passed while calling the `render`.
+
+Template file:
+
+```
+$def with (myvar)
+
+Render the value:
+$:myvar
+```
+
+Python code.
+```
+# WRONG.
+render.my_template_file()
+
+# CORRECT
+render.my_template_file(myvar=...)
+```
