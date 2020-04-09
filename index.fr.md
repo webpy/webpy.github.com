@@ -31,9 +31,9 @@ Autre langages : [english](/) | [Español](/index.es.html) | ...
 
 ## Pour commençer
 
-web.py 0.40 a été réalisé le 2019-09-27: [web.py-0.40.tar.gz][16]
+web.py 0.51 a été réalisé le 2019-09-27: [web.py-0.51.tar.gz][16]
 
-   [16]: https://github.com/webpy/webpy/archive/0.40.zip
+   [16]: https://github.com/webpy/webpy/archive/0.51.zip
 
 Pour avoir toujours la dernière version de web.py, exécutez:
     
