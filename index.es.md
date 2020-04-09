@@ -36,7 +36,7 @@ Para instalar la última versión de web.py, corra en un terminal:
 
     pip install web.py
 
-La última versión `0.40` soporta tanto Python 2.7 como Python >= 3.5.
+La última versión `0.51` soporta tanto Python 2.7 como Python >= 3.5.
 
 Si prefiere descargar la última versión de desarrollo de git:
     

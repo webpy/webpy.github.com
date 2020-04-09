@@ -36,7 +36,7 @@ To install the latest web.py, please run:
 
     pip install web.py
 
-The latest `0.40` release supports both Python 2.7 and Python >= 3.5.
+The latest `0.51` release supports both Python 2.7 and Python >= 3.5.
 
 Or to get the latest development version from git:
     

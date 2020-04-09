@@ -27,9 +27,9 @@ Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [c
 <a name="install"></a>
 ## Install
 
-To install web.py for Python 2.7 or Python >= 3.4, download:
+To install web.py for Python 2.7 or Python >= 3.5, download:
 
-    https://github.com/webpy/webpy/archive/0.40.tar.gz
+    https://github.com/webpy/webpy/archive/0.51.tar.gz
 
 or the get the latest dev version:
 
@@ -51,7 +51,7 @@ Another option is to use [Easy Install](http://peak.telecommunity.com/DevCenter/
 
 Or [PIP](http://packages.python.org/distribute/)
 
-    pip install web.py==0.40
+    pip install web.py==0.51
 
 <a name="dev"></a>
 ## Development
