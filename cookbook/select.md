@@ -35,6 +35,22 @@ results[0]          # first row returned
 results[0]['name']  # value of sql column `name` in first row returned
 ```
 
+Note: since the query result is a iterator, you cannot access it repeatly:
+
+```
+print(results[0])   # first access works.
+print(results[1])   # FAILED with IndexError
+```
+
+If you need to access it repeatly, please convert it to a list first:
+
+```
+qr = db.select('mytable')
+results = list(qr)
+print(results[0])   # it works
+print(results[1])   # works too
+```
+
 The select statement takes the following keyword arguments:
 
 * `vars`
