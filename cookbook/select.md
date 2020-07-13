@@ -51,7 +51,7 @@ print(results[0])   # it works
 print(results[1])   # works too
 ```
 
-If SQL column is defined as binary format, e.g. `VARBINARY` in MySQL/MariaDB, returned value will be a `bytes` string, not `str`. For example:
+If SQL column is defined as binary format, e.g. `VARBINARY` in MySQL/MariaDB, `BYTEA` in PostgreSQL, returned value will be a `bytes` string, not `str`. For example:
 
 1. Create a SQL table in MySQL/MariaDB with command: `CREATE TABLE mytable (email VARBINARY(255));`
 1. Insert a sample record: `INSERT INTO mytable (email) VALUES ("test@domain.com");`
