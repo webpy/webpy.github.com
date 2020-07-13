@@ -13,7 +13,7 @@ You want to select data from a database
 
 ## Solution
 
-With web.py version 0.3 and 0.40, databases are defined like this:
+With web.py version 0.3 and later releases, databases are defined like this:
 
 ```
 db = web.database(dbn='postgres', db='mydata', user='dbuser', pw='')
@@ -49,6 +49,18 @@ qr = db.select('mytable')
 results = list(qr)
 print(results[0])   # it works
 print(results[1])   # works too
+```
+
+If SQL column is defined as binary format, e.g. `VARBINARY` in MySQL/MariaDB, returned value will be a `bytes` string, not `str`. For example:
+
+1. Create a SQL table in MySQL/MariaDB with command: `CREATE TABLE mytable (email VARBINARY(255));`
+1. Insert a sample record: `INSERT INTO mytable (email) VALUES ("test@domain.com");`
+1. Query it with web.py db module:
+
+```
+qr = db.select("mytable", what="email", limit=1)
+email = qr[0]['email']
+print(email)         // result is bytes: b'test@domain.com', not str 'test@domain.com'
 ```
 
 The select statement takes the following keyword arguments:
