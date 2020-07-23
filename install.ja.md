@@ -6,12 +6,12 @@ title: インストールガイド
 # インストールガイド
 
 web.pyをダウンロードします。
-    
-    https://github.com/webpy/webpy/archive/0.40.tar.gz
+
+    https://github.com/webpy/webpy/archive/0.60.tar.gz
 
 ダウンロードファイルを展開し、あなたのアプリケーションがあるディレクトリに展開したフォルダ`webpy`の直下にある `web` フォルダをコピーしてください。
 もしくは以下のコマンドを実行し、すべてのアプリケーションからのアクセスを可能にします。
-    
+
     python setup.py install
 
 ノート: Ubuntuなどrootを許可していない unix/linux などでは以下のコマンドで実行する必要があるかもしれません。

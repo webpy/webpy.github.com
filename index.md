@@ -36,10 +36,14 @@ To install the latest web.py, please run:
 
     pip install web.py
 
-The latest `0.51` release supports both Python 2.7 and Python >= 3.5.
+The latest `0.60` release supports Python >= 3.5.
+
+To use it with Python 2.7, please use version `0.51`.
+
+    python2 -m pip install web.py==0.51
 
 Or to get the latest development version from git:
-    
+
     git clone git://github.com/webpy/webpy.git
     ln -s `pwd`/webpy/web .
 

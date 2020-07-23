@@ -14,14 +14,14 @@ The easiest way to install web.py is using [easy_install](http://peak.telecommun
 
 If you don't have `easy_install`, try downloading the source package from
 [pypi](https://pypi.org/project/web.py/), then install manually. We use
-version `0.40` for example here:
+version `0.60` for example here:
 
-    $ tar xvzf web.py-0.40.tar.gz
-    $ cd web.py-0.40
+    $ tar xvzf web.py-0.60.tar.gz
+    $ cd web.py-0.60
     $ sudo python setup.py install
 
 If you don't want to install web.py system-wide, or if you want to bundle
-web.py with your application, you can simply copy `web.py-0.40/web/` to your
+web.py with your application, you can simply copy `web.py-0.60/web/` to your
 application directory.
 
 If you are on Ubuntu Linux or Debian, you can install web.py with `apt-get`,
