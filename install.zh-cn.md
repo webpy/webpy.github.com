@@ -26,9 +26,9 @@ title: 安装 web.py
 
 可以先下载源码包，再本地安装。下载：
     
-    wget http://webpy.org/static/webpy-0.40.zip
-    unzip webpy-0.40.zip
-    cd webpy-0.40/
+    wget http://webpy.org/static/webpy-0.61.zip
+    unzip webpy-0.61.zip
+    cd webpy-0.61/
     python setup.py install
 
 也可以获取最新的开发版本，再本地安装：
@@ -52,7 +52,7 @@ title: 安装 web.py
 
 或者 [PIP](http://packages.python.org/distribute/)
 
-    pip install web.py==0.40
+    pip install web.py==0.61
 
 <a name="dev"></a>
 ## 开发
