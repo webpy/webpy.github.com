@@ -7,7 +7,7 @@ title: Installazione
 
 Prima di installare web.py dobbiamo scaricare i sorgenti:
 
-    https://github.com/webpy/webpy/archive/0.60.tar.gz
+    https://github.com/webpy/webpy/archive/0.61.tar.gz
 
 estraiamolo e copiamo la cartella "_web_" in una directory dove risiede la nostra applicazione.
 Se invece vogliamo rendere web.py accessibile a tutte le applicazioni, dobbiamo installarlo in modo che sia reperibile nella cartella dei moduli di python.

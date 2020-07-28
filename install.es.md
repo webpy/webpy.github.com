@@ -29,7 +29,7 @@ Otros idiomas : [english](/install) | [Japan 日本語 ](/install.ja) | [chinese
 
 Para instalar web.py para Python >= 3.5, descargue:
 
-    https://github.com/webpy/webpy/archive/0.60.tar.gz
+    https://github.com/webpy/webpy/archive/0.61.tar.gz
 
 o bien obtenga la última versión de desarrollo:
 
@@ -51,7 +51,7 @@ Otra opción es utilizar [Easy Install](http://peak.telecommunity.com/DevCenter/
 
 O [PIP](http://packages.python.org/distribute/)
 
-    pip install web.py==0.60
+    pip install web.py==0.61
 
 <a name="dev"></a>
 ## Desarrollo
