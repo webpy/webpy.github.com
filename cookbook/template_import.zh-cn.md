@@ -1,40 +1,59 @@
 ---
 layout: default
-title: Import functions into templates
+title: 导入函数到模板中
 ---
 
-# Import functions into templates
+# 导入函数到模板中
 
-`Problem`: How can I import a python module in template?
+### 问题
 
-`Solution`:
+如何导入函数到模板中？
 
-While you write templates, inevitably you will need to write some functions which is related to display logic only.  web.py gives you the flexibility to write large blocks of code, including defining functions, directly in the template using `$code` blocks (if you don't know what is $code block, please read the [tutorial for Templator](/docs/0.3/templetor) first).  For example, the following code block will translate a status code from database to a human readable status message:
+### 方案
 
-    def status(c):
-        st = {}
-        st[0] = 'Not Started'
-        st[1] = 'In Progress'
-        st[2] = 'Finished'
-        return st[c]
+在编写模板时，你不可避免地需要编写一些仅与显示逻辑相关的函数。web.py使您
+可以使用 `$code` 块直接在模板中编写大型代码块，包括定义函数(如果您不知道
+什么是 `$code` 块，请阅读 [模板的教程](/docs/0.3/templetor)  )。
+例如，以下代码块会将状态代码从数字转换为人类可读的状态信息：
 
-As you do more web.py development, you will write more such functions here and there in your templates. This makes the template messy and is a violation of the DRY (Don't Repeat Yourself) principle.
+```
+def status(c):
+    st = {}
+    st[0] = 'Not Started'
+    st[1] = 'In Progress'
+    st[2] = 'Finished'
+    return st[c]
+```
 
-Naturally, you will want to write a module, say _displayLogic.py_ and import that module into every templates that needs such functionalities.  Unfortunately, `import` is disabled in template for security reason.  However, it is easy to solve this problem, you can import any function via the global namespace into the template:
+当您进行更多的web.py开发时，您将在模板中的各种地方编写更多此类函数。这会使
+模板凌乱，并且违反DRY（Don't Repeat Yourself，不要重复自己）原则。
 
-    #in your application.py:
-    def status(c):
-        st = {}
-        st[0] = 'Not Started'
-        st[1] = 'In Progress'
-        st[2] = 'Finished'
-        return st[c]
 
-    render = web.template.render('templates', globals={'stat':status})
+自然地，您可能需要编写一个模块，叫做 `displayLogic.py` ，并将该模块导入每个
+需要这些函数的模板中。不幸的是，出于安全原因，`import` 在模板已被禁用。不过，
+通过全局命名空间向模板中导入所需的函数，解决此问题很容易：
 
-    #in the template:
-    $def with(status)
-    ... ...
-    <div>Status: $stat(status)</div>
+```
+#
+# in your app.py:
+#
+def status(c):
+    st = {}
+    st[0] = 'Not Started'
+    st[1] = 'In Progress'
+    st[2] = 'Finished'
+    return st[c]
 
-Remember that you can import more than one name into the _globals_ dict. This trick is also used in [importing session variable into template](session_in_template.zh-cn).
+# Import function `status` to global namespace with same name.
+render = web.template.render('templates', globals={'status': status})
+
+#
+# in the template file:
+#
+$def with(mystatus)
+...
+<div>Status: $status(mystatus)</div>
+```
+
+你可以向 `globals` 字典导入多个变量名。此技巧
+还用于[在template中使用session](session_in_template.zh-cn) 。

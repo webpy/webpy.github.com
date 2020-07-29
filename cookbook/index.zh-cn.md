@@ -63,7 +63,7 @@ title: Web.py Cookbook 简体中文版
 * [Templetor: web.py 模板系统](/docs/0.3/templetor.zh-cn)
 * [使用站点布局模板](layout_template.zh-cn)
 * [交替式风格 (未译)](alternating_style.zh-cn)
-* [导入函数到模板中 (未译)](template_import.zh-cn)
+* [导入函数到模板中](template_import.zh-cn)
 * [模板文件中的i18n支持](i18n_support_in_template_file.zh-cn)
 * [在web.py中使用Mako模板引擎 ](template_mako.zh-cn)
 * [在web.py中使用Cheetah模板引擎](template_cheetah.zh-cn)
