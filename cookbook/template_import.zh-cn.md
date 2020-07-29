@@ -55,5 +55,5 @@ $def with(mystatus)
 <div>Status: $status(mystatus)</div>
 ```
 
-你可以向 `globals` 字典导入多于一个变量名。此技巧
+你可以向 `globals` 字典导入多个变量名。此技巧
 还用于[在template中使用session](session_in_template.zh-cn) 。
