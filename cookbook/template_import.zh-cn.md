@@ -26,7 +26,7 @@ def status(c):
 
 
 自然地，您可能需要编写一个模块，例如 `display_logic.py` ，并将该模块导入每个
-需要这些函数的模板中。遗憾的是，出于安全原因，模版里禁止使用 `import`。不过，
+需要这些函数的模板中。遗憾的是，出于安全原因，模板里禁止使用 `import`。不过，
 可以通过将需要的函数导入全局命名空间来解决此问题：
 
 ```
@@ -41,7 +41,7 @@ def status(c):
 render = web.template.render('templates', globals={'status': status})
 
 #
-# 在模版文件里可以调用导入的函数 `status`：
+# 在模板文件里可以调用导入的函数 `status`：
 #
 $def with(mystatus)
 ...
