@@ -7,10 +7,26 @@ Other langages : [French](/index.fr.html) | [Español](/index.es.html) | ...
 
 ## About web.py
 
-**web.py** is a web framework for Python that is as simple as it is powerful. web.py is in the public domain; you can use it for whatever purpose with absolutely no restrictions.
+web.py is a web framework for Python that is as simple as it is powerful.
+web.py is in the public domain, you can use it for whatever purpose with
+absolutely no restrictions.
 
-<div style="float: right; margin: 1em">
-<pre>
+## Install web.py
+
+To install the latest web.py for Python 3, please run:
+
+```
+pip3 install web.py
+```
+
+The latest `0.61` release supports Python >= 3.5.
+Version `0.51` is the last release with Python 2.7 support.
+
+## A minimal web.py application
+
+Save code below in file `app.py`:
+
+```
 import web
 
 urls = (
@@ -26,26 +42,14 @@ class hello:
 
 if __name__ == "__main__":
     app.run()
-</pre>
-<em>A complete web.py application.</em>
-</div>
+```
 
-## Get Started
+Start the application with command below, it listens on `http://0.0.0.0:8080/`
+by default.
 
-To install the latest web.py, please run:
-
-    pip install web.py
-
-The latest `0.60` release supports Python >= 3.5.
-
-To use it with Python 2.7, please use version `0.51`.
-
-    python2 -m pip install web.py==0.51
-
-Or to get the latest development version from git:
-
-    git clone git://github.com/webpy/webpy.git
-    ln -s `pwd`/webpy/web .
+```
+python3 app.py
+```
 
 ## Who uses web.py?
 
@@ -55,21 +59,16 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 ### Some user testimonials:
 
-* "In the ecosystem of web frameworks, something must occupy the niche of 'small, light, and fast': web.py does this."*  
+* "In the ecosystem of web frameworks, something must occupy the niche of 'small, light, and fast': web.py does this."*
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Lloyd Dalton, [colr.org](http://colr.org)</span>
 
-* "We finished rewriting our server in only a fews days with web.py and it was everything we hoped for."*  
-<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Sam Hsiung, [YouOS][25]</span>
-
-   [25]: http://www.youos.com/
-
-* "[Web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."*  
+* "[Web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."*
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://backchannel.org/blog/google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
 
-* "Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."*  
+* "Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."*
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Alice Atlas</span>
 
-* "Guido* [van Rossum, creator of Python]*, you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you __would__ like."*   
+* "Guido* [van Rossum, creator of Python]*, you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you __would__ like."*
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]</span>
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
