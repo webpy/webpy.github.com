@@ -5,36 +5,60 @@ title: Import functions into templates
 
 # Import functions into templates
 
-`Problem`: How can I import a python module in template?
+### Problem
 
-`Solution`:
+How can I import a Python module in template?
 
-While you write templates, inevitably you will need to write some functions which is related to display logic only.  web.py gives you the flexibility to write large blocks of code, including defining functions, directly in the template using `$code` blocks (if you don't know what is $code block, please read the [tutorial for Templator](/docs/0.3/templetor) first).  For example, the following code block will translate a status code from database to a human readable status message:
+### Solution`
 
-    def status(c):
-        st = {}
-        st[0] = 'Not Started'
-        st[1] = 'In Progress'
-        st[2] = 'Finished'
-        return st[c]
+While you write templates, inevitably you will need to write some functions
+which is related to display logic only.  web.py gives you the flexibility to
+write large blocks of code, including defining functions, directly in the
+template using `$code` blocks (if you don't know what is `$code` block, please
+read the [tutorial for Templator](/docs/0.3/templetor)). For example, the
+following code block will translate a status code from database to a human
+readable status message:
 
-As you do more web.py development, you will write more such functions here and there in your templates. This makes the template messy and is a violation of the DRY (Don't Repeat Yourself) principle.
+```
+def status(c):
+    st = {}
+    st[0] = 'Not Started'
+    st[1] = 'In Progress'
+    st[2] = 'Finished'
+    return st[c]
+```
 
-Naturally, you will want to write a module, say _displayLogic.py_ and import that module into every templates that needs such functionalities.  Unfortunately, `import` is disabled in template for security reason.  However, it is easy to solve this problem, you can import any function via the global namespace into the template:
+As you do more web.py development, you will write more such functions here and
+there in your templates. This makes the template messy and is a violation of
+the DRY (Don't Repeat Yourself) principle.
 
-    #in your application.py:
-    def status(c):
-        st = {}
-        st[0] = 'Not Started'
-        st[1] = 'In Progress'
-        st[2] = 'Finished'
-        return st[c]
+Naturally, you will want to write a module, say `display_logic.py` and import
+that module into every templates that needs such functionalities.
+Unfortunately, `import` is disabled in template for security reason. However,
+it is easy to solve this problem by importing the functions you need into the
+template via the global namespace:
 
-    render = web.template.render('templates', globals={'stat':status})
+```
+#
+# in your app.py:
+#
+def status(c):
+    st = {}
+    st[0] = 'Not Started'
+    st[1] = 'In Progress'
+    st[2] = 'Finished'
+    return st[c]
 
-    #in the template:
-    $def with(status)
-    ... ...
-    <div>Status: $stat(status)</div>
+# Import function `status` to global namespace with same name.
+render = web.template.render('templates', globals={'status': status})
 
-Remember that you can import more than one name into the _globals_ dict. This trick is also used in [importing session variable into template](/cookbook/session_in_template).
+#
+# in the template file:
+#
+$def with(mystatus)
+...
+<div>Status: $status(mystatus)</div>
+```
+
+You can import more than one name into the `globals` dict. This trick is also
+used in [importing session variable into template](/cookbook/session_in_template).
