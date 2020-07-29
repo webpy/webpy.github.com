@@ -20,12 +20,9 @@ following code block will translate a status code from database to a human
 readable status message:
 
 ```
+# Your function.
 def status(c):
-    st = {}
-    st[0] = 'Not Started'
-    st[1] = 'In Progress'
-    st[2] = 'Finished'
-    return st[c]
+    ...
 ```
 
 As you do more web.py development, you will write more such functions here and
@@ -43,11 +40,7 @@ template via the global namespace:
 # in your app.py:
 #
 def status(c):
-    st = {}
-    st[0] = 'Not Started'
-    st[1] = 'In Progress'
-    st[2] = 'Finished'
-    return st[c]
+    ...
 
 # Import function `status` to global namespace with same name.
 render = web.template.render('templates', globals={'status': status})

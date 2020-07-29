@@ -18,42 +18,35 @@ title: 导入函数到模板中
 
 ```
 def status(c):
-    st = {}
-    st[0] = 'Not Started'
-    st[1] = 'In Progress'
-    st[2] = 'Finished'
-    return st[c]
+    ...
 ```
 
 当您进行更多的web.py开发时，您将在模板中的各种地方编写更多此类函数。这会使
 模板凌乱，并且违反DRY（Don't Repeat Yourself，不要重复自己）原则。
 
 
-自然地，您可能需要编写一个模块，叫做 `displayLogic.py` ，并将该模块导入每个
-需要这些函数的模板中。不幸的是，出于安全原因，`import` 在模板已被禁用。不过，
-通过全局命名空间向模板中导入所需的函数，解决此问题很容易：
+自然地，您可能需要编写一个模块，例如 `display_logic.py` ，并将该模块导入每个
+需要这些函数的模板中。遗憾的是，出于安全原因，模版里禁止使用 `import`。不过，
+可以通过将需要的函数导入全局命名空间来解决此问题：
 
 ```
 #
-# in your app.py:
+# 在主程序 app.py 里:
 #
 def status(c):
-    st = {}
-    st[0] = 'Not Started'
-    st[1] = 'In Progress'
-    st[2] = 'Finished'
-    return st[c]
+    ...
 
-# Import function `status` to global namespace with same name.
+# 将自定义的 `status` 函数导入到全局命名空间 `globals` 字典里，导入后的名字
+# 也是 `status`（字典的 key）。
 render = web.template.render('templates', globals={'status': status})
 
 #
-# in the template file:
+# 在模版文件里可以调用导入的函数 `status`：
 #
 $def with(mystatus)
 ...
 <div>Status: $status(mystatus)</div>
 ```
 
-你可以向 `globals` 字典导入多个变量名。此技巧
-还用于[在template中使用session](session_in_template.zh-cn) 。
+可以根据需要在 `globals` 字典里导入更多函数。此技巧还用于
+[在 template 中使用 session](session_in_template.zh-cn) 。
