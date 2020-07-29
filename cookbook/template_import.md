@@ -49,7 +49,8 @@ def status(c):
     st[2] = 'Finished'
     return st[c]
 
-render = web.template.render('templates', globals={'status':status})
+# Import function `status` to global namespace with same name.
+render = web.template.render('templates', globals={'status': status})
 
 #
 # in the template file:
