@@ -9,7 +9,7 @@ title: Import functions into templates
 
 How can I import a Python module in template?
 
-### Solution`
+### Solution
 
 While you write templates, inevitably you will need to write some functions
 which is related to display logic only.  web.py gives you the flexibility to
