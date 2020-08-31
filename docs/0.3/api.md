@@ -2141,7 +2141,7 @@ pyexpr -&gt; &lt;python expression&gt;
 print render.foo()
 </code></pre>
 
-<p>Optional parameter can be <code>base</code> can be used to pass output of 
+<p>Optional parameter <code>base</code> can be used to pass output of 
 every template through the base template.</p>
 
 <pre><code>render = web.template.render('templates', base='layout')
@@ -2155,7 +2155,7 @@ every template through the base template.</p>
 print render.foo()
 </code></pre>
 
-<p>Optional parameter can be <code>base</code> can be used to pass output of 
+<p>Optional parameter <code>base</code> can be used to pass output of 
 every template through the base template.</p>
 
 <pre><code>render = web.template.render('templates', base='layout')
