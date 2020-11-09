@@ -26,7 +26,7 @@ Other languages : [français](/docs/0.3.fr) | ...
     * [Subdir app](/docs/0.3/apps/subdir). Host multiple apps based on the sub-directory.
     * [Subdomain app](/docs/0.3/apps/subdomain). Host multiple apps based on the subdomain.
 * [Templates](/docs/0.3/templetor). Templetor, the web.py templating system
-* [Forms](/form). Dealing with user input
+* [Forms](/cookbook/forms). Dealing with user input
 * [Application processors](/docs/0.3/app_processors). Run code before each request.
 * [Sessions](/docs/0.3/sessions). Store persistent data per user across requests. 
 * Database
