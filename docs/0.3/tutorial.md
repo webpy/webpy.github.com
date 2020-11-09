@@ -171,7 +171,7 @@ If you wish to learn more about web.py templates, visit the <a href="/docs/0.3/t
 ## Forms
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
-If you want to learn more about using the module forms web.py, see the [Documentation](/docs/0.3) or direct link to [Form Library](/form)
+If you want to learn more about using the module forms web.py, see the [Documentation](/docs/0.3) or direct link to [Form Library](/cookbook/forms)
 
 <a name="databasing"> </a>
 ## Databasing
