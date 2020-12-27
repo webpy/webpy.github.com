@@ -33,14 +33,14 @@ title: 站点布局模板
 
     render_plain = web.template.render('templates/')
 
-###Tip: 在布局文件（layout.html）中定义的页面标题变量，如何在其他模板文件中赋值，如下:
+### Tip: 在布局文件（layout.html）中定义的页面标题变量，如何在其他模板文件中赋值，如下:
 
-#####templates/index.html
+##### templates/index.html
     $var title: This is title.
 
     <h3>Hello, world</h3>
 
-#####templates/layout.html
+##### templates/layout.html
     $def with (content)
     <html>
     <head>
@@ -51,14 +51,14 @@ title: 站点布局模板
     </body>
     </html>
 
-###Tip: 在其他模板中引用css文件，如下:
-####templates/login.html
+### Tip: 在其他模板中引用css文件，如下:
+#### templates/login.html
 
     $var cssfiles: static/login.css static/login2.css
 
     hello, world.
 
-####templates/layout.html
+#### templates/layout.html
 
     $def with (content)
     <html>
