@@ -19,7 +19,7 @@ To install the latest web.py for Python 3, please run:
 pip3 install web.py
 ```
 
-The latest `0.61` release supports Python >= 3.5.
+The latest `0.62` release supports Python >= 3.5.
 Version `0.51` is the last release with Python 2.7 support.
 
 ## A minimal web.py application
