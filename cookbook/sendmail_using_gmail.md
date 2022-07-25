@@ -7,11 +7,11 @@ title: Sending mail using gmail
 
 Other languages: [français](/../cookbook/sendmail_using_gmail.fr) | ...
 
-##Problem:
+## Problem:
 
 How to send mail using gmail.
 
-##Solution:
+## Solution:
 
 Often it is tedious to setup and maintain a mail server. If you have a
 gmail accout, you can use gmail as SMTP server to send mail. To do

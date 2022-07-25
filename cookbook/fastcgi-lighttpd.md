@@ -11,7 +11,7 @@ Other languages: [français](/../cookbook/fastcgi-lighttpd.fr) | ...
 
 *The following applies on lighttpd version 1.4.18*
 
-##Note:
+## Note:
 * You may replace <code>code.py</code> with your own file name.
 * <code>/path-to/webpy-app</code> found below refers to the path to the directory contains your <code>code.py</code>
 * <code>/path-to/webpy-app/code.py</code> is the full path to your **python file**
@@ -48,12 +48,12 @@ Enabling and disabling modules could be done by provided
 For web py you should enable mod_fastcgi and mod_rewrite, thus run: <code>/usr/sbin/lighty-enable-mod</code> and supply <code>fastcgi</code>
 (mod_rewrite will be enabled within <code>10-fastcgi.conf</code> file as you will see in a moment).
 
-##Below are instructions for the following files:
+## Below are instructions for the following files:
 * <code>/etc/lighttpd/lighttpd.conf</code>
 * <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 * <code>code.py</code>
 
-###<code>/etc/lighttpd/lighttpd.conf</code>
+### <code>/etc/lighttpd/lighttpd.conf</code>
 
 <pre>
 server.modules              = (
@@ -71,7 +71,7 @@ In my case I used postgresql and therefore runs lighttpd as postgres in order to
 server.username = "postgres"
 </pre>
 
-###<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+### <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 
 <pre>
 server.modules   += ( "mod_fastcgi" )
@@ -95,7 +95,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-###<code>/code.py</code>
+### <code>/code.py</code>
 At the top of the file add:
 
 <pre>

@@ -23,7 +23,7 @@ title: Привет мир!!!
     if __name__ == "__main__":
         app.run()
 
-###Tip: Make url ending with or without '/' going to the same class.
+### Tip: Make url ending with or without '/' going to the same class.
 
 добавьте следующую строчкув начало списка urls.
 

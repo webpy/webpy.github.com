@@ -5,7 +5,7 @@ title: Exploit sessions stored in a postgresql database.
 
 # Exploit sessions stored in a postgresql database.
 
-##Problem:
+## Problem:
 
 When using session and storing some ids or any kind of stuff referencing a database, you'll do a lot of queries like this one:
 "select foo, bar from foobar_table where id=%s and id_foor=%s" % (session.id, session.id_foo)
@@ -17,7 +17,7 @@ At the other end, this is also weird to take data in your database to bring them
 A cleaner approach would be to access directly these informations in postgresql to read and/or write them.
 
 
-##Solution:
+## Solution:
 
 To apply this recipe, you'll need to use postgresql DBStore for your sessions.
 You'll also need to install the plpythonu in your database.

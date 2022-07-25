@@ -5,7 +5,7 @@ title: web.input
 
 # web.input
 
-##web.input
+## web.input
 
 ### 问题
 如何从form或是url参数接受用户数据.

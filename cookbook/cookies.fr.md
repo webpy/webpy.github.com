@@ -7,16 +7,16 @@ title: Travailler avec les cookies
 
 Autre langages: [english](/../cookies) | ...
 
-##Problème:
+## Problème:
 
 Comment déposer et récupérer les cookies d'un utilisateur qui navigue sur le site?
 
-##Solution:
+## Solution:
 
 Web.py permet d'une façon très simple d'utiliser les méthodes de dépot/récupération de cookies (setting/getting).
 
-###Déposer des cookies
-####Vue d'ensemble
+### Déposer des cookies
+#### Vue d'ensemble
 
     setcookie(name, value, expires="", domain=None, secure=False):
 
@@ -26,7 +26,7 @@ Web.py permet d'une façon très simple d'utiliser les méthodes de dépot/récu
 * *domain* `(string)` - Le nom de domaine pour lequel le cookie est valide. Par défaut, réglé sur le site d'accueil, cela vous permet de définir le domaine, plutôt que simplement un hôte(tel que `.webpy.org`).
 * *secure* `(bool)`- Si vrai, exige que le cookie soit envoyé via HTTPS.
 
-####Exemple
+#### Exemple
 
 `web.setcookie()` peut être utilisé pour déposer un cookie à un utilisateur, comme ceci:
 
@@ -43,23 +43,23 @@ L'appel de la classe ci-dessus avec GET déposera un cookie nommé "age" ayant p
 Le troisième (et optionnel) argument de `web.setcookie()`, "expires", vous permet de définir quand vous voulez que votre cookie expire. Tout nombre négatif expirera le cookie immédiatement. Un nombre positif est le nombre de secondes durant lequel le cookie va durer (3600 se traduirait en une heure de durée du cookie). Laisser cet argument vide a pour conséquence, d'expirer le cookie session quand le navigateur s'arrête. Pour créer un cookie permanent, mettez à jour le temps d'expiration du cookie à intervalles réguliers (exemple : quand un utilisateur s'est connecté)
 
 
-###Récuperer des cookies
-####Vue d'ensemble
+### Récuperer des cookies
+#### Vue d'ensemble
 
 Il existe de nombreuses méthodes pour retrouver des cookies, en fonction de la réaction souhaitée à un cookie manquant.
 
-#####Méthode 1 (Renvoi None si le cookie n'est pas trouvé):
+##### Méthode 1 (Renvoi None si le cookie n'est pas trouvé):
     web.cookies().get(cookieName)
         #cookieName est le nom du cookie présenté par le navigateur
-#####Méthode  2 (Lève une exception AttributeError si le cookie n'est pas trouvé):
+##### Méthode  2 (Lève une exception AttributeError si le cookie n'est pas trouvé):
     foo = web.cookies()
     foo.cookieName
-#####Méthode  3 (Evite la levée d'exception en attribuant une valeur par défaut au cookie qui n'a pas été trouvé):
+##### Méthode  3 (Evite la levée d'exception en attribuant une valeur par défaut au cookie qui n'a pas été trouvé):
     foo = web.cookies(cookieName=defaultValue)
     foo.cookieName   # renvoi la valeur (qui pourrait être par défaut)
         #cookieName est le nom du cookie présenté par le navigateur
 
-####Exemple
+#### Exemple
 
 
 `web.cookies()` peut être utilisé pour accéder à un cookie déjà défini. Si un cookie est créé en utilisant le code `web.setcookie()` plus haut, il peut être retrouvé de cette façon:

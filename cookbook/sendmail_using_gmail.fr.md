@@ -8,11 +8,11 @@ title: Envoi de mails en utilisant Gmail
 Autre langages: [english](/../sendmail_using_gmail) | ...
 
 
-##Problème:
+## Problème:
 
 Comment envoyer un mail en utilisant Gmail ?
 
-##Solution:
+## Solution:
 
 Il est souvent fastidieux de configurer et de maintenir un serveur de messagerie. Si vous possédez un compte Gmail, vous pouvez utiliser Gmail comme serveur SMTP pour envoyer des mails. Pour cela, vous aurez besoin de spécifier le nom d'utilisateur et le mot de passe du compte Gmail dans `web.config`.
 

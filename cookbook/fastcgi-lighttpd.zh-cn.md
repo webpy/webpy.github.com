@@ -21,7 +21,7 @@ http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
 
 Note: 较早版本的lighttpd可能会按照不同的方式组织.conf文件，但是它们应该遵循的是相同的原则。
 
-###lighttpd 在 Debian GNU/Linux 下的配置文件
+### lighttpd 在 Debian GNU/Linux 下的配置文件
 
 <pre>
 Files and Directories in /etc/lighttpd:

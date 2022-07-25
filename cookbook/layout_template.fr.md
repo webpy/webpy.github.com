@@ -43,14 +43,14 @@ Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deu
 
     render_plain = web.template.render('templates/')
 
-###Astuce: Le titre de page est défini dans d'autres fichiers gabarits qui sont ensuite utilisés par la mise en page (layout.html). Par exemple:
+### Astuce: Le titre de page est défini dans d'autres fichiers gabarits qui sont ensuite utilisés par la mise en page (layout.html). Par exemple:
 
-#####templates/index.html
+##### templates/index.html
     $var title: This is title.
 
     <h3>Hello, world</h3>
 
-#####templates/layout.html
+##### templates/layout.html
     $def with (content)
     <html>
     <head>
@@ -62,15 +62,15 @@ Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deu
     </html>
 
 
-###Astuce: Ajouter des fichiers css dans d'autres fichiers gabarits. Exemple:
+### Astuce: Ajouter des fichiers css dans d'autres fichiers gabarits. Exemple:
 
-####templates/login.html
+#### templates/login.html
 
     $var cssfiles: static/login.css static/login2.css
 
     hello, world.
 
-####templates/layout.html
+#### templates/layout.html
 
     $def with (content)
     <html>

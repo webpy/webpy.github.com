@@ -50,7 +50,7 @@ Steps:
 
 * Point your browser to 'http://your_server_name/appname' to verify whether it works for you.
 
-#Note: mod_wsgi + sessions
+# Note: mod_wsgi + sessions
 
 If you use sessions with mod_wsgi, you should change you code like below:
 
@@ -61,7 +61,7 @@ If you use sessions with mod_wsgi, you should change you code like below:
 
     application = app.wsgifunc()
 
-#mod_wsgi performance:
+# mod_wsgi performance:
 For mod_wsgi performance, please refer to mod_wsgi wiki page:
 
 <http://code.google.com/p/modwsgi/wiki/PerformanceEstimates>

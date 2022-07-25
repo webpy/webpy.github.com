@@ -12,7 +12,7 @@ We need both reporters (tell us what's wrong!) and fixers (write code, make cont
 When adding work to be done, please place it in a section devoted to the page and/or parent page, and a link to that page. For example:
 
 ***
-#Cookbook: [Cookbook](/cookbook)
+# Cookbook: [Cookbook](/cookbook)
 * database select example code is incorrect
 
 ***
@@ -26,7 +26,7 @@ When finishing working on something, delete it from the list. If a code block re
 
 
 ***
-#Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
+# Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
 * Move url to /samples
 
 ## Samples

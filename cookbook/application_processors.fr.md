@@ -42,7 +42,7 @@ Vous pouvez écrire ou utiliser les variables globales dans les fonctions hook, 
     app.add_processor(web.loadhook(my_loadhook))
 
 
-###Tip: et vous pouvez également utiliser web.ctx ou web.input() dans un hook.
+### Tip: et vous pouvez également utiliser web.ctx ou web.input() dans un hook.
 
     def my_loadhook():
         input = web.input()

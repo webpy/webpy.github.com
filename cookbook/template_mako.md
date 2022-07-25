@@ -49,7 +49,7 @@ Template file:
 
     Hello, ${name}.
 
-###Note:
+### Note:
 
 if you use Apache + mod_wsgi to deploy webpy apps, you may get the similar error msg in your apache error log:
 
@@ -69,13 +69,13 @@ You can use relative paths in order to make it easier too. e.g.
             )
 
 
-#Reference:
+# Reference:
 * http://code.google.com/p/modwsgi/wiki/ApplicationIssues
 
-#i18n support in Mako template file:
+# i18n support in Mako template file:
 Please refer to cookbook 'i18n support in webpy template file' for i18n support in mako template file:
 
 * Cookbook: [i18n support in webpy template file](i18n_support_in_template_file )
 
-#Note:
+# Note:
 Babel is only needed to generate the .mo files.

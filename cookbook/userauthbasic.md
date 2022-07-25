@@ -5,13 +5,13 @@ title: Basic authentication
 
 # Basic authentication
 
-##Problem
+## Problem
 This is a proof of concept implementation of doing basic authentication
 with web.py.
 You may want to read [RFC 2617](http://www.ietf.org/rfc/rfc2617.txt) or
 [http://en.wikipedia.org/wiki/Basic_access_authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) for reference.
 
-##Solution
+## Solution
 Create a python file containing the code below and start the script.
 When you enter the url [http://localhost:8080/](http://localhost:8080/) you will be redirected
 to the url [http://localhost:8080/login](http://localhost:8080/login).
@@ -63,5 +63,5 @@ index page.
     if __name__=='__main__':
         app.run()
 
-##Notes
+## Notes
 Do not use this code on real site - this is only for illustration.

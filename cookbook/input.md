@@ -7,7 +7,7 @@ title: web.input
 
 Other languages: [français](/../cookbook/input.fr) | ...
 
-##web.input
+## web.input
 
 ### Problem
 You want user data from a form, or a url encoded parameter.

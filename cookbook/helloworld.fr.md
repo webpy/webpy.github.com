@@ -26,7 +26,7 @@ Comment écrire un "Hello World" avec web.py
     if __name__ == "__main__":
         app.run()
 
-###Tip: Ecrire une url avec ou sans "/", pointe sur la même classe.
+### Tip: Ecrire une url avec ou sans "/", pointe sur la même classe.
 
 Ajoutez ce qui suit au début des urls.
 

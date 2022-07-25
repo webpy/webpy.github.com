@@ -44,7 +44,7 @@ That's it. Your application is accessible via `http://server/app/app.py/`. Addit
 
 Here it is assumed that your application is called index.py. The above htaccess checks if some static file/directory exists failing which it routes the data to your index.py. Change the Rewrite Base to a sub-directory if needed.
 
-#Hiding the script name using mod_rewrite (tested with webpy 0.33)
+# Hiding the script name using mod_rewrite (tested with webpy 0.33)
 
 (warning: this section written by someone new to webpy; it works, but may not follow prescribed practices)
 

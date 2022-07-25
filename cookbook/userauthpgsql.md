@@ -13,7 +13,7 @@ You want a system to authenticate users, with a postgresql database.
 
 A user authentication system could have a lot of functions. For this example, we're only going to manage the authentication process, through a postgresql database.
 
-##Needed
+## Needed
 
 web.py for all the web functions, and `hashlib` to store the passwords securely:
 

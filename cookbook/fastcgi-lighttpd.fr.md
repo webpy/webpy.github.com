@@ -7,16 +7,16 @@ title: Webpy + LightTTPD avec FastCGi
 
 Autre langages: [english](/../fastcgi-lighttpd) | ...
 
-##Problème:
+## Problème:
 
 Comment configurer [lighttpd](http://www.lighttpd.net/) sous Debian GNU/Linux ?
 
-##Solution:
+## Solution:
 
 *Si vous avez des problèmes avec cette astuce, veuillez lire ce [fil](http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html).
 Ce qui suit s'applique à la version 1.4.18 de lighttpd.*
 
-###Note:
+### Note:
 * Vous devez remplacer <code>code.py</code> par le nom de votre propre fichier.
 * <code>/path-to/webpy-app</code> que vous trouverez ci-dessous, concerne le chemin vers le répertoire contenant votre <code>code.py</code>
 * <code>/path-to/webpy-app/code.py</code> est le chemin complet de votre **fichier python**
@@ -27,7 +27,7 @@ Si vous n'êtes pas certain de savoir quelle version de [lighttpd](http://www.li
 *Note: La version précédente de lighttpd organise les fichiers .conf différemment. Cependant, les mêmes principes s'appliquent aussi bien sur eux.*
 
 
-##Configuration de lighttpd sous Debian GNU/Linux
+## Configuration de lighttpd sous Debian GNU/Linux
 
 <pre>
 Fichiers er répertoires de /etc/lighttpd:
@@ -62,7 +62,7 @@ Pour web.py vous devrez activer mod_fastcgi et mod_rewrite en executant:
 (mod_rewrite sera activé dans le fichier <code>10-fastcgi.conf</code>, comme vous pourrez le voir dans un instant.)
 
 
-##Voici les instructions pour les fichiers suivants:
+## Voici les instructions pour les fichiers suivants:
 
 * <code>/etc/lighttpd/lighttpd.conf</code>
 * <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
@@ -87,7 +87,7 @@ server.document-root       = "/path-to/webpy-app"
 server.username = "postgres"
 </pre>
 
-###<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+### <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
 
 <pre>
 server.modules   += ( "mod_fastcgi" )
@@ -111,7 +111,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-###<code>code.py</code>
+### <code>code.py</code>
 En haut du fichier, ajoutez:
 
 <pre>

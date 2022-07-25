@@ -8,11 +8,11 @@ title: Utiliser session dans les gabarits
 Autre langages: [english](/../session_in_template) | ...
 
 
-##Problème:
+## Problème:
 
 Vous souhaitez utiliser session dans votre gabarit (par exemple pour obtenir session.username et l'afficher)
 
-##Solution:
+## Solution:
 
 Dans le code de votre application:
 
