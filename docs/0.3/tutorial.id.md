@@ -31,8 +31,7 @@ href="/install">install</a> untuk detilnya.
 
 Mari kita mulai.
 
-<a name="urlhandling"> </a>
-## Penanganan URL
+<h2 id="urlhandling">Penanganan URL</h2>
 
 Bagian paling penting dari setiap website adalah struktur URL yang 
 digunakan. URL yang Anda gunakan bukan saja merupakan sesuatu yang 
@@ -69,8 +68,7 @@ dilewatkan ke fungsi yang Anda buat.
 Baris ini menyatakan bahwa kita ingin agar URL `/` (contoh: halaman 
 depan sebuah website) akan ditangani oleh class dengan nama `index`. 
 
-<a name="getpost"> </a>
-## GET dan POST: perbedaannya
+<h2 id="getpost">GET dan POST: perbedaannya</h2>
 
 Sekarang kita ingin menulis class `index`. Walau sebagian besar 
 pengunjung tidak memperhatikan pada saat browsing, browser Anda 
@@ -134,8 +132,7 @@ Untuk lebih mudahnya, berikut adalah kode lengkapnya:
         app = web.application(urls, globals())
         app.run()
 
-<a name="start"> </a>
-## Memulai server
+<h2 id="start">Memulai server</h2>
 
 Apabila Anda ke command line dan mengetikkan:
 
@@ -156,8 +153,7 @@ nilai default:
     $ python code.py 1234
 
 
-<a name="templating"> </a>
-## Menggunakan template
+<h2 id="templating">Menggunakan template</h2>
 
 Menulis HTML di dalam Python bisa menjadi merepotkan; lebih nyaman 
 untuk menulis Python di dalam HTML. Untungnya, web.py membuatnya cukup 
@@ -231,8 +227,7 @@ dan harusnya, hello kepada Joe akan ditampilkan.
 Apabila Anda ingin belajar lebih lanjut tentang template, kunjungilah 
 <a href="/docs/0.3/templetor">halaman templetor</a>.
 
-<a name="forms"> </a>
-## Form
+<h2 id="forms">Form</h2>
 
 Modul form dari web.py memungkinkan pembuatan form HTML, mendapatkan 
 input dari user, dan melakukan validasi sebelum input diproses atau 
@@ -240,8 +235,7 @@ ditambahkan ke dalam database. Apabila Anda ingin belajar lebih lanjut
 tentang modul form web.py, bacalah [Dokumentasi](/docs/0.3) or 
 kunjungilah link langsung ke [Pustaka Form](/form).
 
-<a name="databasing"> </a>
-## Menggunakan database
+<h2 id="databasing">Menggunakan database</h2>
 
 **Catatan:** Sebelum Anda dapat mulai menggunakan database, 
 pastikanlah pustaka untuk mengakses database telah terinstall. Untuk 
@@ -344,8 +338,7 @@ bersih.
 Untuk detil lebih lanjut, termasuk untuk semua fungsi web.py, bacalah 
 [dokumentasi](/docs/0.3).
 
-<a name="developing"> </a>
-## Selama pengembangan
+<h2 id="developing">Selama pengembangan</h2>
 
 web.py juga memiliki beberapa alat bantu untuk membantu kita melakukan 
 debugging. Pada saat berjalan dengan web server bawaan, web.py akan 
@@ -359,8 +352,7 @@ Anda dapat menambahkan kode berikut sebelum membuat aplikasi/template:
 
     web.config.debug = False
 
-<a name="whatnext"> </a>
-## Berikutnya?
+<h2 id="whatnext">Berikutnya?</h2>
 
 Sampai di sini dulu tutorial kita. Kunjungilah [buku resep](/cookbook/) 
 dan [contoh kode](https://github.com/webpy/webpy-examples/) untuk contoh-contoh keren yang dapat Anda 

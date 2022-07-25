@@ -24,8 +24,7 @@ Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [c
         * <a href="#apachemodwsgi">.. with mod_wsgi</a>
         * <a href="#apachemodrewrite">.. with mod_rewrite</a>
 
-<a name="install"></a>
-## Install
+<h2 id="install">Install</h2>
 
 To install web.py for Python >= 3.5, download:
 
@@ -57,8 +56,7 @@ To install web.py for Python 2.7, please use the version `0.51`, the last suppor
 
     python2 -m pip install web.py==0.51
 
-<a name="dev"></a>
-## Development
+<h2 id="dev">Development</h2>
 
 web.py comes with a built-in webserver.  Learn how to write an application by following the [tutorial](http://webpy.org/tutorial).  When you have an application written, put your code into `code.py` and start the server like this:
 
@@ -66,8 +64,7 @@ web.py comes with a built-in webserver.  Learn how to write an application by fo
 
 Open your browser and go to [http://localhost:8080/](http://localhost:8080/) to view the page. To specify another port, use `python code.py 1234`.
 
-<a name="prod"></a>
-## Production
+<h2 id="prod">Production</h2>
 
 The web server that gets started when you run a web.py program is nice, but
 for popular sites you're going to want something a little more serious. web.py
@@ -91,12 +88,9 @@ And run `chmod +x code.py` to make it executable.
 * [mod_wsgi deployment through Nginx](http://webpy.org/cookbook/mod_wsgi-nginx)
 * [Fastcgi deployment through Nginx](http://webpy.org/cookbook/fastcgi-nginx)
 
-<a name="lighttpd"></a>
-### Lighttpd
+<h3 id="lighttpd">Lighttpd</h3>
 
-<a name="lighttpdfastcgi"></a>
-
-#### .. with FastCGI
+<h4 id="lighttpdfastcgi">.. with FastCGI</h4>
 
 FastCGI with lighttpd is the recommended way of using web.py in production. [reddit.com][3] handles millions of hits this way.
 
@@ -137,11 +131,9 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
     ))
     )
 
-<a name="apache"></a>
-### Apache
+<h3 id="apache">Apache</h3>
 
-<a name="apachecgi"></a>
-#### .. with CGI
+<h4 id="apachecgi">.. with CGI</h4>
 
 
 Add the following to `httpd.conf` or `apache2.conf`.
@@ -149,8 +141,7 @@ Add the following to `httpd.conf` or `apache2.conf`.
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-<a name="apachecgihtaccess"></a>
-#### .. with CGI using .htaccess
+<h4 id="apachecgihtaccess">.. with CGI using .htaccess</h4>
 
 CGI is easy to configure, but is not suitable for high-performance websites.
 Add this to your `.htaccess`:
@@ -178,8 +169,7 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
     web.internalerror = cgidebugerror
 
 
-<a name="apachefastcgi"></a>
-#### .. with FastCGI
+<h4 id="apachefastcgi">.. with FastCGI</h4>
 
 FastCGI is easy to configure and performs as well as mod_python.
 
@@ -198,8 +188,7 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
 
-<a name="apachescgi"></a>
-#### .. with SCGI
+<h4 id="apachescgi">.. with SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
 windows apache user:
@@ -216,8 +205,7 @@ and open you browser,visit 127.0.0.1
 It's ok!
 
 
-<a name="apachemodpython"></a>
-#### .. with mod_python
+<h4 id="apachemodpython">.. with mod_python</h4>
 
 mod_python performs as well as FastCGI, but is not as straight-forward to configure.
 
@@ -253,8 +241,7 @@ You also probably want to add a `RewriteRule` pointing `/` to `/codep.py/`
 
 Be sure to visit `/codep.py/` with the extra `/` on the end. Otherwise, you'll see an error message like `A server error occurred. Please contact the administrator.`
 
-<a name="apachemodwsgi"></a>
-#### .. with mod_wsgi
+<h4 id="apachemodwsgi">.. with mod_wsgi</h4>
 
 mod\_wsgi is a new Apache module which [typically outperforms mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) for hosting WSGI applications, and is very easy to set up.</div>
 
@@ -284,8 +271,7 @@ It should then be accessible at `http://example.com/code.py/` as usual.
 
 
 
-<a name="apachemodrewrite"></a>
-#### mod_rewrite Rules for Apache
+<h4 id="apachemodrewrite">mod_rewrite Rules for Apache</h4>
 
 If you want web.py to be accessible at 'http://example.com' instead of 'http://example.com/code.py/' add the following rules to the `.htaccess` file:
 

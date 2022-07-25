@@ -24,8 +24,7 @@ Otros idiomas : [english](/install) | [Japan 日本語 ](/install.ja) | [chinese
         * <a href="#apachemodwsgi">.. con mod_wsgi</a>
         * <a href="#apachemodrewrite">.. con mod_rewrite</a>
 
-<a name="install"></a>
-## Instalación
+<h2 id="install">Instalación</h2>
 
 Para instalar web.py para Python >= 3.5, descargue:
 
@@ -53,8 +52,7 @@ O [PIP](http://packages.python.org/distribute/)
 
     pip install web.py==0.61
 
-<a name="dev"></a>
-## Desarrollo
+<h2 id="dev">Desarrollo</h2>
 
 web.py trae incluido un servidor web. Puede aprender a escribir una aplicación siguiendo el [tutorial](http://webpy.org/tutorial). Cuando tenga su aplicación escrita, coloque su código en `code.py` e inicie el servidor así:
 
@@ -62,8 +60,7 @@ web.py trae incluido un servidor web. Puede aprender a escribir una aplicación 
 
 Abra su navegador web y vaya a [http://localhost:8080/](http://localhost:8080/) para visualizar la página. Para especificar otro puerto, use `python code.py 1234`.
 
-<a name="prod"></a>
-## Producción
+<h2 id="prod">Producción</h2>
 
 El servidor web que se inicia cuando se corre un programa en web.py está bien,
 pero para sitios web populares necesitará algo un poco más serio. web.py
@@ -87,12 +84,9 @@ Y corra `chmod +x code.py` para hacerlo ejecutable.
 * [Despliegue de mod_wsgi mediante Nginx](http://webpy.org/cookbook/mod_wsgi-nginx)
 * [Despliegue de Fastcgi mediante Nginx](http://webpy.org/cookbook/fastcgi-nginx)
 
-<a name="lighttpd"></a>
-### Lighttpd
+<h3 id="lighttpd">Lighttpd</h3>
 
-<a name="lighttpdfastcgi"></a>
-
-#### .. con FastCGI
+<h4 id="lighttpdfastcgi">.. con FastCGI</h4>
 
 FastCGI con lighttpd es la manera sugerida para usar web.py en producción. [reddit.com][3] maneja millones de hits con esta configuración.
 
@@ -133,11 +127,9 @@ A partir de la revisión 145, es necesario fijar una variable bin-environment en
     ))
     )
 
-<a name="apache"></a>
-### Apache
+<h3 id="apache">Apache</h3>
 
-<a name="apachecgi"></a>
-#### .. con CGI
+<h4 id="apachecgi">.. con CGI</h4>
 
 
 Adicione lo siguiente en `httpd.conf` o `apache2.conf`.
@@ -145,8 +137,7 @@ Adicione lo siguiente en `httpd.conf` o `apache2.conf`.
     Alias /foo/static/ /camino/a/static
     ScriptAlias /foo/ /camino/a/code.py
 
-<a name="apachecgihtaccess"></a>
-#### .. con CGI usando .htaccess
+<h4 id="apachecgihtaccess">.. con CGI usando .htaccess</h4>
 
 CGI es fácil de configurar, pero no es adecuado para sitios que requieren alto rendimiento.
 Adicione esto a su `.htaccess`:
@@ -174,8 +165,7 @@ Nota: Por la manera en que `web.py` está implementado, rompe el módulo `cgitb`
     web.internalerror = cgidebugerror
 
 
-<a name="apachefastcgi"></a>
-#### .. con FastCGI
+<h4 id="apachefastcgi">.. con FastCGI</h4>
 
 FastCGI es sencillo de configurar y funciona tan bien como mod_python.
 
@@ -194,8 +184,7 @@ y apunte su navegador a `http://ejemplo.com/code.py/`. No olvide el slash del fi
 [Walter tiene consejos adicionales](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
 
-<a name="apachescgi"></a>
-#### .. con SCGI
+<h4 id="apachescgi">.. con SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 Descargue el código fuente de  `mod_scgi` aquí: http://www.mems-exchange.org/software/files/mod_scgi/
 Usuario de Apache en Windows:
@@ -212,8 +201,7 @@ abra su navegador, visite 127.0.0.1.
 Funciona!
 
 
-<a name="apachemodpython"></a>
-#### .. con mod_python
+<h4 id="apachemodpython">.. con mod_python</h4>
 
 mod_python funciona tan bien como FastCGI, pero no es tan sencillo de configurar.
 
@@ -249,8 +237,7 @@ Probablemente desee añadir una regla de reescritura (`RewriteRule`) apuntando `
 
 Asegúrese de visitar `/codep.py/` con el `/` al final. De otra forma, verá un mensaje de error como `A server error occurred. Please contact the administrator.`
 
-<a name="apachemodwsgi"></a>
-#### .. con mod_wsgi
+<h4 id="apachemodwsgi">.. con mod_wsgi</h4>
 
 mod\_wsgi es un nuevo módulo de Apache que  [típicamente mejora el rendimiento respecto a mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) a la hora de alojar aplicaciones WSGI, y que además es muy fácil de configurar.</div>
 
@@ -278,8 +265,7 @@ También, puede que desee leer la sección "Directorio de trabajo de la aplicaci
 
 El sitio debe estar accesible en `http://ejemplo.com/code.py/` como es habitual.
 
-<a name="apachemodrewrite"></a>
-#### Reglas mod_rewrite para Apache
+<h4 id="apachemodrewrite">Reglas mod_rewrite para Apache</h4>
 
 Si desea que web.py sea accesible en 'http://ejemplo.com' en vez de en 'http://ejemplo.com/code.py/', adicione las reglas siguientes en su archivo .htaccess:
 

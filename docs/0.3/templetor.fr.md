@@ -28,8 +28,7 @@ Autre langues : [English](/docs/0.3/templetor) | ...
 * <a href="#upgrading">Mise à jour depuis le gabarit web.py 0.2</a>
 
 
-<a name="introduction"></a>
-# Introduction
+<h1 id="introduction">Introduction</h1>
 
 Le langage de gabarit de web.py, appelé 'Templator', est conçu pour apporter la puissance de python aux modèles de gabarits.
 Au lieu d'inventer une nouvelle syntaxe pour les gabarits, il réutilise la syntaxe de python.
@@ -46,8 +45,7 @@ Voici un gabarit tout simple:
 La première ligne indique que le gabarit est défini avec un argument appelé 'name'.
 `$name` dans la seconde ligne sera remplacé par la valeur de name lorsque le template sera rendu.
 
-<a name="using"></a>
-# Utiliser un modèle de gabarit
+<h1 id="using">Utiliser un modèle de gabarit</h1>
 
 La façon la plus imple d'utiliser le rendu de gabarits est celle-ci :
 
@@ -68,11 +66,9 @@ Ou encore à partir d'une chaîne de caractères:
     hello = web.template.Template(template)
     print hello('world')
 
-<a name="syntax"></a>
-# Syntaxe
+<h1 id="syntax">Syntaxe</h1>
 
-<a name="expressionsubstitution"></a>
-## Substitution d'expression
+<h2 id="expressionsubstitution">Substitution d'expression</h2>
 
 Le caractère spécial '$' est utilisé pour spécifier des expressions python. Les expressions peuvent être jointent dans '()' ou '{}' pour un regroupement explicite.
 
@@ -81,8 +77,7 @@ Le caractère spécial '$' est utilisé pour spécifier des expressions python. 
     Gawk, a $dictionary[key].function('argument'). 
     Cool, a $(limit)ing.
 
-<a name="attribut"></a>
-## Attribution
+<h2 id="attribut">Attribution</h2>
 
 Vous aurez parfois besoin de définir de nouvelles variables et de réattribuer certaines d'entre elles.
     
@@ -94,8 +89,7 @@ Vous aurez parfois besoin de définir de nouvelles variables et de réattribuer 
      
 Notez l'espace après '$' dans l'attribution. Il est requis pour différencier l'attribution à la substitution d'expression.
 
-<a name="filtrering"></a>
-## Filtrage 
+<h2 id="filtrering">Filtrage </h2>
 
 Par defaut, Templator utilise le filtre 'web.websafe' pour encoder le HTML.
 
@@ -107,8 +101,7 @@ Pour désactiver le filtre, utilisez ':' après '$'. Par exemple:
     Ce qui suit ne sera pas remplacé par une chaîne HTML ("&" par "&amp;" par exemple).
     $:form.render()
 
-<a name="newlinesuppression"></a>
-## Suppression d'un retour à la ligne
+<h2 id="newlinesuppression">Suppression d'un retour à la ligne</h2>
 
 Un retour à la ligne peut-être supprimé en ajoutant l'anti-slash '\' à la fin de la ligne.
 
@@ -117,23 +110,20 @@ Un retour à la ligne peut-être supprimé en ajoutant l'anti-slash '\' à la fi
     (comme ceci) \ 
     alors il n'y aura pas de retour à la ligne.
     
-<a name="escaping"></a>
-## Caractère d'échappement '$'
+<h2 id="escaping">Caractère d'échappement '$'</h2>
 
 Utilisez `$$` pour avoir `$` (signe dollars) à l'affichage.
 
     Can you lend me $$50?
     
-<a name="comments"></a>
-## Commentaires
+<h2 id="comments">Commentaires</h2>
 
 '$#' est utilisé comme indicateur de commentaires. Tout ce qui commence par '$#' jusqu'à la fin de la ligne sera ignoré.
 
     $# Ceci est un commentaire
     Hello $name.title()! $# Affiche le nom comme titre
 
-<a name="controlstructure"></a>
-## Structures de contrôles
+<h2 id="controlstructure">Structures de contrôles</h2>
 
 Le système de gabarit accepte les instructions `for`, `while`, `if`, `elif` et `else`.
 Tout comme en Python, le corps de la déclaration est indenté.
@@ -172,11 +162,9 @@ Parfois, celles-ci peuvent être très pratique.
         </tr>
     </table>
     
-<a name="otherstatements"></a>
-## Autres déclarations
+<h2 id="otherstatements">Autres déclarations</h2>
 
-<a name="def"></a>
-### $def
+<h3 id="def">$def</h3>
 
 Vous pouvez définir une nouvelle fonction de gabarit en utilisant `$def`. les arguments-clés sont aussi supportés.
 
@@ -203,8 +191,7 @@ Autre exemple
     $ data = [['a', 'b', 'c'], [1, 2, 3], [2, 4, 6], [3, 6, 9] ]
     $:table([tr(d) for d in data])
     
-<a name="code"></a>
-### $code
+<h3 id="code">$code</h3>
 
 Du code python arbitraire peut être écrit en utilisant le bloc '$code'.
 
@@ -224,8 +211,7 @@ Du code python arbitraire peut être écrit en utilisant le bloc '$code'.
     Les variables définies dans le bloc '$code' peuvent être utilisées ici.
     Par exemple, $limit(x)
   
-<a name="var"></a>  
-### $var
+<h3 id="var">$var</h3>
 
 Le bloc '$var' peut être utilisé pour définir des propriétés additionnelles dans les résultats du gabarit.
 
@@ -248,8 +234,7 @@ Les résultat du modèle ci-dessus peuvent être utilisés comme suit:
     >>> str(out)
     '\n\n<div>\nhello world\n</div>\n'
 
-<a name="builtins"></a>
-# Objets internes et variables globales
+<h1 id="builtins">Objets internes et variables globales</h1>
 
 Comme toutes fonctions python, le gabarit peut également accèder aux objets internes avec ses arguments et ses variables locales.
 Quelques fonctions internes communes telles que 'range', 'max', 'min', etc... et les valeurs booléennes 'True' et 'False' sont accessibles à tous les gabarits.
@@ -269,8 +254,7 @@ Les objets internes qui sont exposés dans les gabarits peuvent aussi être cont
     # disable all builtins
     render = web.template.render('templates', builtins={})
 
-<a name="security"></a>
-# Securité
+<h1 id="security">Securité</h1>
 
 L'un des objectifs de conception de Templetor est de permettre à des utilisateurs non épprouvés d'écrire des gabarits.
 
@@ -282,8 +266,7 @@ Pour rendre l'exécution du gabarit sûre, ce qui suit n'est pas autorisé dans 
 
 `SecurityException` est déclenchée si votre modèle utilise l'une de celles-ci.
 
-<a name="upgrading"></a>
-# Mise à jour depuis le gabarit web.py 0.2
+<h1 id="upgrading">Mise à jour depuis le gabarit web.py 0.2</h1>
 
 La nouvelle implémentation est totalement compatible avec la mise en œuvre plus haut. Cependant, certains cas pourraient ne pas fonctionner pour les raisons suivantes:
 

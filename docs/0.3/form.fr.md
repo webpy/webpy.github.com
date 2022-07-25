@@ -15,8 +15,7 @@ Autres langues : [English](/form) | ...
 * <a href="#parti">Particularités des formulaires</a>
 * <a href="#exemple">Exemple</a>
 
-<a name="introduction"></a>
-## Introduction
+<h2 id="introduction">Introduction</h2>
 
 Le module de formulaire de web.py permet de générer des formulaires HTML, de récuperer les entrées des utilisateurs, et les valider avant de les traiter ou les ajouter à une base de donnée.
 
@@ -64,8 +63,7 @@ Ce qui donnera:
     <tr><th><label for="Login"></label></th><td><button id="Login" name="Login">Login</button><div class="post" style="display: none;"></div></td></tr>
 </table>
 
-<a name="carac"></a>
-## Caracteristiques des entrées formulaires
+<h2 id="carac">Caracteristiques des entrées formulaires</h2>
 Les entrées formulaires offrent quelques attributs additionnels. Par exemple :
 
 
@@ -87,15 +85,13 @@ En plus des attributs ci-dessus, tous les attributs HTML peuvent être entré de
             maxlength="12"        )
     )
 
-<a name="listes"></a>
-##Listes déroulantes  (Dropdown) 
+<h2 id="listes">Listes déroulantes  (Dropdown) </h2>
 
 Les entrées des listes déroulantes permettent une description et une valeur uniques de chaque élément dans la liste déroulante. Pour ce faire, créez la liste déroulante avec les tuples comme ceci:
     
     form.Dropdown('mydrop', [('value1', 'description1'), ('value2', 'description2')])
 
-<a name="introduction"></a>
-## Particularités des formulaires
+<h2 id="introduction">Particularités des formulaires</h2>
 En plus des champs de saisie individuels, form.py permet une complète validation de formulaire qui autorise la comparaison des champs. Les validations sont passées sous forme de liste dans une variable 'validators'. Par exemple :
 
     signup = form.Form(
@@ -115,8 +111,7 @@ Une fois les données du formulaire postées, elles peuvent facilement être mis
         else:
             render.foo(f)
 
-<a name="exemple"></a>
-## Exemple
+<h2 id="exemple">Exemple</h2>
 
     import web
     from web import form
