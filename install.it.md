@@ -45,7 +45,7 @@ ed esegui `chmod +x code.py` per renderlo eseguibile.
 
 ### LightTPD
 
-#### ... con FastCGI
+#### ...con FastCGI
 
 FastCGI con lighttpd è la soluzione raccomandata di usare web.py in fase di produzione. [reddit.com][3] gestisce milioni di richieste con questa configurazione!
 
@@ -91,14 +91,14 @@ Questo comporta una variazione della tua configurazione del webserver ala voce f
     
 ### Apache
 
-#### .. con CGI
+#### ...con CGI
 
 Aggiungi le seguenti righe al tuo file `httpd.conf` o `apache2.conf`.
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-#### .. con CGI usando il file .htaccess
+#### ...con CGI usando il file .htaccess
 
 CGI è facile da configurare, ma non è adeguato per i siti che richiedono elevate prestazioni.
 Per usare web.py con CGI aggiungi le seguenti righe al tuo `.htaccess`:
@@ -126,7 +126,7 @@ Nota: Il modo in cui `web.py` è implementato non lavora con il modulo `cgitb` p
     
     web.internalerror = cgidebugerror
 
-#### .. con FastCGI
+#### ...con FastCGI
 
 FastCGI è facile da configurare e agisce come mod_python.
 Aggiungi quanto segue al tuo `.htaccess`:
@@ -142,7 +142,7 @@ e indirizza il tuo browser a `http://example.com/code.py/`. Non dimenticare lo s
 
 [Walter ha altri consigli](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html)[e](http://www.dofollownet.com/).
 
-#### .. con SCGI
+#### ...con SCGI
 https://www.mems-exchange.org/software/scgi/
 scarica i sorgenti di `mod_scgi` da qui: http://www.mems-exchange.org/software/files/mod_scgi/
 Per gli utenti apache su Windows: 
@@ -158,7 +158,7 @@ riavvia il webserver apache e poi avvia la tua applicazione code.py con il segue
 e apri il tuo browser, visita 127.0.0.1
 E' tutto a posto! 
 
-#### .. con mod_python
+#### ...con mod_python
 
 mod_python funziona come FastCGI, ma non è semplice da configurare.
 
@@ -194,7 +194,7 @@ Probabilmente tu vorrai aggiungere una `RewriteRule` che punta `/` a `/codep.py/
 
 Sii sicuro di visitare `/codep.py/` con lo slash `/` extra alla fine. Altrimenti vedrai un messaggio di errore come `A server error occurred. Please contact the administrator.`
 
-#### .. con mod_wsgi
+#### ...con mod_wsgi
 
 mod\_wsgi è un nuovo modulo Apache che [tipicamente supera le peformance di mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates)per hostare applicazioni WSGI, ed è veramente semplice da settare.
 

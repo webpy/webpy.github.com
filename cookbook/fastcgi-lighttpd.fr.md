@@ -110,7 +110,7 @@ En haut du fichier, ajoutez:
 #!/usr/bin/env python
 ```
 
-.. et n'oubliez pas de le rendre executable (Autrement, vous aurez une erreur "permission denied"):
+...et n'oubliez pas de le rendre executable (Autrement, vous aurez une erreur "permission denied"):
 
 ```
 $ chmod 755 /path-to/webpy-app/code.py

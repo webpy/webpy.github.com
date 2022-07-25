@@ -14,15 +14,15 @@ Otros idiomas : [english](/install) | [Japan 日本語 ](/install.ja) | [chinese
 * [Producción](#prod)
     * [Nginx](#nginx)
     * [LightTPD](#lighttpd)
-        * [.. con FastCGI](#lighttpdfastcgi)
+        * [...con FastCGI](#lighttpdfastcgi)
     * [Apache](#apache)
-        * [.. con CGI](#apachecgi)
-        * [ .. con CGI usando .htaccess](#apachecgihtaccess)
-        * [.. con FastCGI](#apachefastcgi)
-        * [.. con SCGI](#apachescgi)
-        * [.. con mod_python](#apachemodpython)
-        * [.. con mod_wsgi](#apachemodwsgi)
-        * [.. con mod_rewrite](#apachemodrewrite)
+        * [...con CGI](#apachecgi)
+        * [...con CGI usando .htaccess](#apachecgihtaccess)
+        * [...con FastCGI](#apachefastcgi)
+        * [...con SCGI](#apachescgi)
+        * [...con mod_python](#apachemodpython)
+        * [...con mod_wsgi](#apachemodwsgi)
+        * [...con mod_rewrite](#apachemodrewrite)
 
 <h2 id="install">Instalación</h2>
 
@@ -86,7 +86,7 @@ Y corra `chmod +x code.py` para hacerlo ejecutable.
 
 <h3 id="lighttpd">Lighttpd</h3>
 
-<h4 id="lighttpdfastcgi">.. con FastCGI</h4>
+<h4 id="lighttpdfastcgi">...con FastCGI</h4>
 
 FastCGI con lighttpd es la manera sugerida para usar web.py en producción. [reddit.com][3] maneja millones de hits con esta configuración.
 
@@ -129,14 +129,14 @@ A partir de la revisión 145, es necesario fijar una variable bin-environment en
 
 <h3 id="apache">Apache</h3>
 
-<h4 id="apachecgi">.. con CGI</h4>
+<h4 id="apachecgi">...con CGI</h4>
 
 Adicione lo siguiente en `httpd.conf` o `apache2.conf`.
 
     Alias /foo/static/ /camino/a/static
     ScriptAlias /foo/ /camino/a/code.py
 
-<h4 id="apachecgihtaccess">.. con CGI usando .htaccess</h4>
+<h4 id="apachecgihtaccess">...con CGI usando .htaccess</h4>
 
 CGI es fácil de configurar, pero no es adecuado para sitios que requieren alto rendimiento.
 Adicione esto a su `.htaccess`:
@@ -163,7 +163,7 @@ Nota: Por la manera en que `web.py` está implementado, rompe el módulo `cgitb`
 
     web.internalerror = cgidebugerror
 
-<h4 id="apachefastcgi">.. con FastCGI</h4>
+<h4 id="apachefastcgi">...con FastCGI</h4>
 
 FastCGI es sencillo de configurar y funciona tan bien como mod_python.
 
@@ -181,7 +181,7 @@ y apunte su navegador a `http://ejemplo.com/code.py/`. No olvide el slash del fi
 
 [Walter tiene consejos adicionales](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-<h4 id="apachescgi">.. con SCGI</h4>
+<h4 id="apachescgi">...con SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 Descargue el código fuente de  `mod_scgi` aquí: http://www.mems-exchange.org/software/files/mod_scgi/
 Usuario de Apache en Windows:
@@ -197,7 +197,7 @@ reinicie apache y luego corra su code.py con el comando siguiente:
 abra su navegador, visite 127.0.0.1.
 Funciona!
 
-<h4 id="apachemodpython">.. con mod_python</h4>
+<h4 id="apachemodpython">...con mod_python</h4>
 
 mod_python funciona tan bien como FastCGI, pero no es tan sencillo de configurar.
 
@@ -232,7 +232,7 @@ Probablemente desee añadir una regla de reescritura (`RewriteRule`) apuntando `
 
 Asegúrese de visitar `/codep.py/` con el `/` al final. De otra forma, verá un mensaje de error como `A server error occurred. Please contact the administrator.`
 
-<h4 id="apachemodwsgi">.. con mod_wsgi</h4>
+<h4 id="apachemodwsgi">...con mod_wsgi</h4>
 
 mod\_wsgi es un nuevo módulo de Apache que  [típicamente mejora el rendimiento respecto a mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) a la hora de alojar aplicaciones WSGI, y que además es muy fácil de configurar.</div>
 

@@ -11,15 +11,15 @@ title: 安装 web.py
 * [开发](#dev)
 * [产品](#prod)
     * [LightTPD](#lighttpd)
-        * [.. 使用 FastCGI](#lighttpdfastcgi)
+        * [...使用 FastCGI](#lighttpdfastcgi)
     * [Apache](#apache)
-        * [.. 使用 CGI](#apachecgi)
-        * [ .. 使用 CGI using .htaccess](#apachecgihtaccess)
-        * [.. 使用 FastCGI](#apachefastcgi)
-        * [.. 使用 SCGI](#apachescgi)
-        * [.. 使用 mod_python](#apachemodpython)
-        * [.. 使用 mod_wsgi](#apachemodwsgi)
-        * [.. 使用 mod_rewrite](#apachemodrewrite)
+        * [...使用 CGI](#apachecgi)
+        * [ ...使用 CGI using .htaccess](#apachecgihtaccess)
+        * [...使用 FastCGI](#apachefastcgi)
+        * [...使用 SCGI](#apachescgi)
+        * [...使用 mod_python](#apachemodpython)
+        * [...使用 mod_wsgi](#apachemodwsgi)
+        * [...使用 mod_rewrite](#apachemodrewrite)
 
 <h2 id="install">安装</h2>
 
@@ -74,7 +74,7 @@ web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/docs/0.3
 
 <h3 id="lighttpd">LightTPD</h3>
 
-<h4 id="lighttpdfastcgi">.. 使用 FastCGI</h4>
+<h4 id="lighttpdfastcgi">...使用 FastCGI</h4>
 
 在产品中通过FastCGI结合lighttpd是web.py使用的一种推荐方法。 [reddit.com][3] 通过该方法来处理百万次的点击。
 
@@ -118,14 +118,14 @@ lighttpd config设置参考如下：
 
 <h3 id="apache">Apache</h3>
 
-<h4 id="apachecgi">.. 使用 CGI</h4>
+<h4 id="apachecgi">...使用 CGI</h4>
 
 添加以下到 `httpd.conf` 或 `apache2.conf`。
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-<h4 id="apachecgihtaccess">.. 使用 CGI .htaccess</h4>
+<h4 id="apachecgihtaccess">...使用 CGI .htaccess</h4>
 
 CGI很容易配置， 但不适合高性能网站。
 添加以下到你的 `.htaccess`：
@@ -153,7 +153,7 @@ CGI很容易配置， 但不适合高性能网站。
     
     web.internalerror = cgidebugerror
 
-<h4 id="apachefastcgi">.. 使用 FastCGI</h4>
+<h4 id="apachefastcgi">...使用 FastCGI</h4>
 
 FastCGI很容易配置，运行方式如同mod_python。
 
@@ -170,7 +170,7 @@ FastCGI很容易配置，运行方式如同mod_python。
 
 [Walter 还有一些额外建议](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-<h4 id="apachescgi">.. 使用 SCGI</h4>
+<h4 id="apachescgi">...使用 SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 从 http://www.mems-exchange.org/software/files/mod_scgi/ 下载 `mod_scgi` 代码
 windows apache 用户： 
@@ -186,7 +186,7 @@ windows apache 用户：
 打开你的浏览器，访问127.0.0.1
 It's ok! 
 
-<h4 id="apachemodpython">.. 使用 mod_python</h4>
+<h4 id="apachemodpython">...使用 mod_python</h4>
 
 mod_python 运行方式如同FastCGI， 但不是那么方便配置。
 
@@ -223,7 +223,7 @@ mod_python 运行方式如同FastCGI， 但不是那么方便配置。
 
 确保访问 `/codep.py/` 的时候有添加最后的 `/`。  否则，你将会看到一条错误信息，比如 `A server error occurred. Please contact the administrator.`
 
-<h4 id="apachemodwsgi">.. 使用 mod_wsgi</h4>
+<h4 id="apachemodwsgi">...使用 mod_wsgi</h4>
 
 mod\_wsgi 是一个新的Apache模块 [通常优于mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) 用于架设WSGI应用，它非常容易配置。
 

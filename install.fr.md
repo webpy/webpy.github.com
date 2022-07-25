@@ -16,12 +16,12 @@ Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/ins
         * [...avec FastCGI](#lighttpdfastcgi)
     * [Apache](#apache)
         * [...avec CGI](#apachecgi)
-        * [.. avec CGI en utilisant .htaccess](#apachecgihtaccess)
-        * [.. avec FastCGI](#apachefastcgi)
-        * [.. avec SCGI](#apachescgi)
-        * [.. avec mod_python](#apachemodpython)
-        * [.. avec mod_wsgi](#apachemodwsgi)
-        * [.. avec mod_rewrite](#apachemodrewrite)
+        * [...avec CGI en utilisant .htaccess](#apachecgihtaccess)
+        * [...avec FastCGI](#apachefastcgi)
+        * [...avec SCGI](#apachescgi)
+        * [...avec mod_python](#apachemodpython)
+        * [...avec mod_wsgi](#apachemodwsgi)
+        * [...avec mod_rewrite](#apachemodrewrite)
 
 <h2 id="installation">Installation</h2>
 Pour installer web.py, commencez par télécharger l'archive:
@@ -62,7 +62,7 @@ N'oubliez pas de le rendre exécutable: `chmod +x code.py`.
 
 <h3 id="lighttpd">LightTPD</h3>
 
-<h4 id="lighttpdfastcgi">.. avec FastCGI</h4>
+<h4 id="lighttpdfastcgi">...avec FastCGI</h4>
 
 FastCGI associé à lighttpd est la manière recommandée d'utiliser web.py en production. [reddit.com][3] gère des millions de visites de cette façon.
 
@@ -105,14 +105,14 @@ Depuis la revision 145, il est nécessaire de définir une variable  "bin-enviro
     
 <h3 id="apache">Apache</h3>
 
-<h4 id="apachecgi">.. avec CGI</h4>
+<h4 id="apachecgi">...avec CGI</h4>
 
 Ajoutez les lignes suivante à `httpd.conf` ou `apache2.conf`.
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-<h4 id="apachecgihtaccess">.. avec CGI en utilisant .htaccess</h4>
+<h4 id="apachecgihtaccess">...avec CGI en utilisant .htaccess</h4>
 
 CGI est facile à configurer mais ce n'est pas la meilleure des solutions pour les sites à très fort trafic.
 
@@ -141,7 +141,7 @@ Note: la manière dont `web.py` est implémenté provoque une erreur du module `
     
     web.internalerror = cgidebugerror
 
-<h4 id="apachefastcgi">.. avec FastCGI</h4>
+<h4 id="apachefastcgi">...avec FastCGI</h4>
 
 FastCGI est facile à configurer et est aussi performant que 'mod_python'.
 
@@ -155,7 +155,7 @@ Malheureusement, et contrairement à lighttpd, Apache ne donne aucune indication
     
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     
-<h4 id="apachescgi">.. avec SCGI</h4>
+<h4 id="apachescgi">...avec SCGI</h4>
 
 Téléchargez et installez le [module mod_scgi](http://www.mems-exchange.org/software/files/mod_scgi/)
 
@@ -171,7 +171,7 @@ redémarrez le serveur Apache et lancer votre 'code.py' avec la commande suivant
 lancez votre navigateur et visitez l'adresse suivante 127.0.0.1
 C'est aussi simple que ça...enfin, si ça marche du premier coup ;-) 
 
-<h4 id="apachemodpython">.. avec mod_python</h4>
+<h4 id="apachemodpython">...avec mod_python</h4>
 
 mod_python est aussi performant que FastCGI, mais il n'est pas aussi évident à configurer. Suivez le guide:
 
@@ -205,7 +205,7 @@ Dans votre fichier `.htaccess`, ajoutez:
 
 Vous aurez surement aussi besoin d'ajouter une `RewriteRule` pour rediriger  `/` vers `/codep.py/`
 
-<h4 id="apachemodwsgi">.. avec mod_wsgi</h4>
+<h4 id="apachemodwsgi">...avec mod_wsgi</h4>
 
 mod\_wsgi est un nouveau module Apache  [plus performant que mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) pour l'hébergement d'applications WSGI, et très facile à mettre en place.
 

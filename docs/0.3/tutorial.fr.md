@@ -49,7 +49,7 @@ Maintenant, Nous devons donner à web.py notre structure URL. Commençons avec q
             '/', 'index'
             )
 
-La première partie est une expression régulière que l'on applique à une chaîne de caractère (l'URL), telle que /, /help/faq, /item/(\d+), etc.. (Note: \d+ n'admettra qu'une séquence de chiffre). Les parenthèses signifient qu'il faut capturer la séquence pour s'en servir plus tard. La seconde partie est le nom d'une Classe vers laquelle la requête sera envoyée, comme 'index', 'view', 'welcome.hello' (qui recherchera la Classe hello du module welcome.), ou get_\1.
+La première partie est une expression régulière que l'on applique à une chaîne de caractère (l'URL), telle que /, /help/faq, /item/(\d+), etc... (Note: \d+ n'admettra qu'une séquence de chiffre). Les parenthèses signifient qu'il faut capturer la séquence pour s'en servir plus tard. La seconde partie est le nom d'une Classe vers laquelle la requête sera envoyée, comme 'index', 'view', 'welcome.hello' (qui recherchera la Classe hello du module welcome.), ou get_\1.
 /1 est remplacé par la première capture de l'expression régulière; toutes les captures restantes seront passées à votre fonction. [Note traducteur : A préciser]
 
 Cette ligne signifie que nous souhaitons l'URL / (Note: la page d'accueil) qui doit être traitée par la classe nommée 'index'.

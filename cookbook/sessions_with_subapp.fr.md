@@ -22,14 +22,14 @@ Dans votre application principale (code.py par defaut), initialisez votre sessio
     session = web.session.Session(app, web.session.DiskStore('sessions'),
     initializer = {'test': 'woot', 'foo':''})
 
-.. puis créez un processor via web.loadhook
+...puis créez un processor via web.loadhook
 
     def session_hook():
         web.ctx.session = session
 
     app.add_processor(web.loadhook(session_hook))
 
-.. et maintenant dans votre sous-application (par exemple sub-app.py) vous pouvez accèder aux informations de session de cette manière:
+...et maintenant dans votre sous-application (par exemple sub-app.py) vous pouvez accèder aux informations de session de cette manière:
 
     print web.ctx.session.test
     web.ctx.session.foo = 'bar'
