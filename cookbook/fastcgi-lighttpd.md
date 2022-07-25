@@ -12,11 +12,11 @@ Other languages: [français](/../cookbook/fastcgi-lighttpd.fr) | ...
 *The following applies on lighttpd version 1.4.18*
 
 ## Note:
-* You may replace <code>code.py</code> with your own file name.
-* <code>/path-to/webpy-app</code> found below refers to the path to the directory contains your <code>code.py</code>
-* <code>/path-to/webpy-app/code.py</code> is the full path to your **python file**
+* You may replace `code.py` with your own file name.
+* `/path-to/webpy-app` found below refers to the path to the directory contains your `code.py`
+* `/path-to/webpy-app/code.py` is the full path to your **python file**
 
-If you are not certain what version you are running simply type: <code>lighttpd -v</code> at your console.
+If you are not certain what version you are running simply type: `lighttpd -v` at your console.
 
 Note: Earlier version of lighttpd may organize the .conf files differently. Yet, the same principles applied on them as well.
 
@@ -49,11 +49,11 @@ For web py you should enable mod_fastcgi and mod_rewrite, thus run: <code>/usr/s
 (mod_rewrite will be enabled within <code>10-fastcgi.conf</code> file as you will see in a moment).
 
 ## Below are instructions for the following files:
-* <code>/etc/lighttpd/lighttpd.conf</code>
-* <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
-* <code>code.py</code>
+* `/etc/lighttpd/lighttpd.conf`
+* `/etc/lighttpd/conf-available/10-fastcgi.conf`
+* `code.py`
 
-### <code>/etc/lighttpd/lighttpd.conf</code>
+### `/etc/lighttpd/lighttpd.conf`
 
 <pre>
 server.modules              = (
@@ -71,7 +71,7 @@ In my case I used postgresql and therefore runs lighttpd as postgres in order to
 server.username = "postgres"
 </pre>
 
-### <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+### `/etc/lighttpd/conf-available/10-fastcgi.conf`
 
 <pre>
 server.modules   += ( "mod_fastcgi" )
@@ -95,7 +95,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-### <code>/code.py</code>
+### `/code.py`
 At the top of the file add:
 
 <pre>

@@ -10,7 +10,7 @@ web.pyのサーバーに静的ファイルを配置したいのですが？
 
 ### 解決手段
 
-web.pyサーバを実行するスクリプトファイル(チュートリアルでは <code>code.py</code> を指す)のディレクトリに、新しく静的ファイル用のディレクトリ <code>static</code> を作成してください。
-次に、作成したディレクトリに静的ファイル <code>logo.png</code> を配置してください。
+web.pyサーバを実行するスクリプトファイル(チュートリアルでは `code.py` を指す)のディレクトリに、新しく静的ファイル用のディレクトリ `static` を作成してください。
+次に、作成したディレクトリに静的ファイル `logo.png` を配置してください。
 
-たとえば、画像のURLが <code>http://localhost:8080/static/logo.png</code> ならば <code>./static/logo.png</code> がクライアントに送られます。
+たとえば、画像のURLが `http://localhost:8080/static/logo.png` ならば `./static/logo.png` がクライアントに送られます。

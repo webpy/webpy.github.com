@@ -26,7 +26,7 @@ Créez votre gabarit XML avec le fichier XML que vous souhaitez servir (par exem
     </RequestNotification-Response>
 
 
-Pour servir ce fichier, créez un programme standard web.py ( par exemple: response.py) et utilisez le code suivant. Soyez conscient que vous devez utiliser <code>web.header('Content-Type', 'text/xml')</code> pour dire au client que vous envoyez un fichier XML. (Vous n'avez pas besoin de définir explicitement l'en-tête des fichiers XML si votre fichier gabarit a l'extension '.xml' )
+Pour servir ce fichier, créez un programme standard web.py ( par exemple: response.py) et utilisez le code suivant. Soyez conscient que vous devez utiliser `web.header('Content-Type', 'text/xml')` pour dire au client que vous envoyez un fichier XML. (Vous n'avez pas besoin de définir explicitement l'en-tête des fichiers XML si votre fichier gabarit a l'extension '.xml' )
 
     import web
 

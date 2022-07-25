@@ -13,9 +13,9 @@ http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
 
 ## 注意事项
 
-* 你可以重命名 <code>code.py</code>为任何你自己愿意的名字，该例子还是以code.py为例。
-* <code>/path-to/webpy-app</code> 为包含你的 <code>code.py</code>代码的路径。
-* <code>/path-to/webpy-app/code.py</code> 应该是你的**python file**的完整路径。
+* 你可以重命名 `code.py`为任何你自己愿意的名字，该例子还是以code.py为例。
+* `/path-to/webpy-app` 为包含你的 `code.py`代码的路径。
+* `/path-to/webpy-app/code.py` 应该是你的**python file**的完整路径。
 
 如果你还不确定你的lighttpd版本的话，你可以在命令行中使用<code>lighttpd -v</vode>查看相应的版本信息。
 
@@ -50,13 +50,13 @@ Enabling and disabling modules could be done by provided
 (mod_rewrite 模块可能需要启用 <code>10-fastcgi.conf</code>文件).
 
 ##下面是文件的基本结构（Mac OS X不同）:
-* <code>/etc/lighttpd/lighttpd.conf</code>
-* <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
-* <code>code.py</code>
+* `/etc/lighttpd/lighttpd.conf`
+* `/etc/lighttpd/conf-available/10-fastcgi.conf`
+* `code.py`
 
 对于Mac OS X或任何以Mac Ports邓方式安装的lighttpd，可以直接在路径下编写.conf文件并用lighttpd -f xxx.conf启动lighttpd，而无需去修改或考虑任何文件结构。
 
-<code>/etc/lighttpd/lighttpd.conf</code>
+`/etc/lighttpd/lighttpd.conf`
 
 <pre>
 server.modules              = (
@@ -74,7 +74,7 @@ server.document-root       = "/path-to/webpy-app"
 server.username = "postgres"
 </pre>
 
-<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+`/etc/lighttpd/conf-available/10-fastcgi.conf`
 
 <pre>
 server.modules   += ( "mod_fastcgi" )
@@ -100,7 +100,7 @@ server.modules   += ( "mod_rewrite" )
  )
 </pre>
 
-<code>/code.py</code>
+`/code.py`
 在代码头部添加以下代码，让系统环境使用系统环境中当前的python
 
 <pre>

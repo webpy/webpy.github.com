@@ -13,7 +13,7 @@ title: 提供静态文件 (诸如js脚本, css样式表和图象文件)
 ### web.py 服务器
 在当前应用的目录下，创建一个名为static的目录，把要提供访问的静态文件放在里面即可。
 
-例如, 网址 <code>http://localhost/static/logo.png</code> 将发送 <code>./static/logo.png</code> 给客户端。
+例如, 网址 `http://localhost/static/logo.png` 将发送 `./static/logo.png` 给客户端。
 
 ### Apache
 在 Apache 中可以使用 [Alias](http://httpd.apache.org/docs/2.2/mod/mod_alias.html#alias) 指令，在处理 web.py 之前将请求映射到指定的目录。
