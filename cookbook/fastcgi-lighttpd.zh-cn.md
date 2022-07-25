@@ -45,9 +45,7 @@ Enabling and disabling modules could be done by provided
 /usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
 </pre>
 
-<strong>
-对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: <code>/usr/sbin/lighty-enable-mod</code> 启用 <code>fastcgi</code> （Mac OS X可能不需要）
-(mod_rewrite 模块可能需要启用 <code>10-fastcgi.conf</code>文件).
+**对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: `/usr/sbin/lighty-enable-mod` 启用 `fastcgi` （Mac OS X可能不需要）(mod_rewrite 模块可能需要启用 `10-fastcgi.conf`文件).**
 
 ##下面是文件的基本结构（Mac OS X不同）:
 * `/etc/lighttpd/lighttpd.conf`

@@ -55,11 +55,7 @@ l'Activation et désactivation des modules peut se faire en lançant:
  	/usr/sbin/lighty-disable-mod scripts.
 </pre>
 
-<strong>
-
-Pour web.py vous devrez activer mod_fastcgi et mod_rewrite en executant:
-<code>/usr/sbin/lighty-enable-mod</code> et en fournissant <code>fastcgi</code>
-(mod_rewrite sera activé dans le fichier <code>10-fastcgi.conf</code>, comme vous pourrez le voir dans un instant.)
+**Pour web.py vous devrez activer mod_fastcgi et mod_rewrite en executant: `/usr/sbin/lighty-enable-mod` et en fournissant `fastcgi` (mod_rewrite sera activé dans le fichier `10-fastcgi.conf`, comme vous pourrez le voir dans un instant.)**
 
 
 ## Voici les instructions pour les fichiers suivants:
