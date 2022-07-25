@@ -9,24 +9,24 @@ Other languages : [français](/docs/0.3/templetor.fr) | ...
 
 ## Summary
 
-* <a href="#introduction">Introduction</a>
-* <a href="#using">Using the template system</a>
-* <a href="#syntax">Syntax</a>
-    * <a href="#expressionsubstitution">Expression Substitution</a>
-    * <a href="#assignments">Assignments</a>
-    * <a href="#filtering">Filtering</a>
-    * <a href="#newlinesuppression">Newline suppression</a>
-    * <a href="#escaping">Escaping '$'</a>
-    * <a href="#comments">Comments</a>
-    * <a href="#controlstructure">Control Structures</a>
-* <a href="#otherstatements">Other Statements</a>
-    * <a href="#def">$def : define a new template function using $def</a>
-    * <a href="#code">$code : arbitrary python code can be written</a>
-    * <a href="#var">$var : can be used to define additional properties</a>
-* <a href="#builtins">Builtins and globals</a>
-* <a href="#security">Security</a>
-* <a href="#upgrading">Upgrading from web.py 0.2 templates</a>
-* <a href="#errors">Errors you may experience</a>
+* [Introduction](#introduction)
+* [Using the template system](#using)
+* [Syntax](#syntax)
+    * [Expression Substitution](#expressionsubstitution)
+    * [Assignments](#assignments)
+    * [Filtering](#filtering)
+    * [Newline suppression](#newlinesuppression)
+    * [Escaping '$'](#escaping)
+    * [Comments](#comments)
+    * [Control Structures](#controlstructure)
+* [Other Statements](#otherstatements)
+    * [$def : define a new template function using $def](#def)
+    * [$code : arbitrary python code can be written](#code)
+    * [$var : can be used to define additional properties](#var)
+* [Builtins and globals](#builtins)
+* [Security](#security)
+* [Upgrading from web.py 0.2 templates](#upgrading)
+* [Errors you may experience](#errors)
 
 
 <h1 id="introduction">Introduction</h1>

@@ -7,11 +7,11 @@ title: How to upgrade from earlier versions of web.py to 0.3
 
 Web.py 0.3 has some backward-incompatible changes. 
 
-* <a href="#return">prints are replaced by return statements</a>
-* <a href="#app">new application framework</a>
-* <a href="#db">new database system</a>
-* <a href="#exceptions">http errors are exceptions</a>
-* <a href="#others">other incompatible changes</a>
+* [prints are replaced by return statements](#return)
+* [new application framework](#app)
+* [new database system](#db)
+* [http errors are exceptions](#exceptions)
+* [other incompatible changes](#others)
 
 <h2 id="return">prints are replaced by return statements</h2>
 

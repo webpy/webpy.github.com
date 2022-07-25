@@ -7,19 +7,19 @@ title: 安装 web.py
 
 ## Summary
 
-* <a href="#install">安装</a>
-* <a href="#dev">开发</a>
-* <a href="#prod">产品</a>
-    * <a href="#lighttpd">LightTPD</a>
-        * <a href="#lighttpdfastcgi">.. 使用 FastCGI</a>
-    * <a href="#apache">Apache</a>
-        * <a href="#apachecgi">.. 使用 CGI</a>
-        * <a href="#apachecgihtaccess"> .. 使用 CGI using .htaccess</a>
-        * <a href="#apachefastcgi">.. 使用 FastCGI</a>
-        * <a href="#apachescgi">.. 使用 SCGI</a>
-        * <a href="#apachemodpython">.. 使用 mod_python</a>
-        * <a href="#apachemodwsgi">.. 使用 mod_wsgi</a>
-        * <a href="#apachemodrewrite">.. 使用 mod_rewrite</a>
+* [安装](#install)
+* [开发](#dev)
+* [产品](#prod)
+    * [LightTPD](#lighttpd)
+        * [.. 使用 FastCGI](#lighttpdfastcgi)
+    * [Apache](#apache)
+        * [.. 使用 CGI](#apachecgi)
+        * [ .. 使用 CGI using .htaccess](#apachecgihtaccess)
+        * [.. 使用 FastCGI](#apachefastcgi)
+        * [.. 使用 SCGI](#apachescgi)
+        * [.. 使用 mod_python](#apachemodpython)
+        * [.. 使用 mod_wsgi](#apachemodwsgi)
+        * [.. 使用 mod_rewrite](#apachemodrewrite)
 
 <h2 id="install">安装</h2>
 

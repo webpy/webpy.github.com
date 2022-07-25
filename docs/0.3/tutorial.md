@@ -23,7 +23,7 @@ Other languages : [chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [français
 
 So you know Python and want to make a website. web.py provides the code to make that easy.
 
-If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). (See <a href="/install">install</a> for details.)
+If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). (See [install](/install) for details.)
 
 Let's get started.
 
@@ -161,7 +161,7 @@ and change the definition of the method `GET` to:
 
 and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
 
-If you wish to learn more about web.py templates, visit the <a href="/docs/0.3/templetor">templetor page</a>.
+If you wish to learn more about web.py templates, visit the [templetor page](/docs/0.3/templetor).
 
 <h2 id="forms">Forms</h2>
 

@@ -225,7 +225,7 @@ Dan hapuslah baris yang mengatur name. Sekarang, kunjungilah `/Joe`
 dan harusnya, hello kepada Joe akan ditampilkan. 
 
 Apabila Anda ingin belajar lebih lanjut tentang template, kunjungilah 
-<a href="/docs/0.3/templetor">halaman templetor</a>.
+[halaman templetor](/docs/0.3/templetor).
 
 <h2 id="forms">Form</h2>
 

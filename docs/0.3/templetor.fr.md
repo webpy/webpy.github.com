@@ -9,23 +9,23 @@ Autre langues : [English](/docs/0.3/templetor) | ...
 
 ## Sommaire
 
-* <a href="#introduction">Introduction</a>
-* <a href="#using">Utiliser un modèle de gabarit</a>
-* <a href="#syntax">Syntaxe</a>
-	* <a href="#expressionsubstitution">Substitution d'expression</a>
-	* <a href="#attribut">Attribution</a>
-	* <a href="#filtrering">Filtrage</a>
-	* <a href="#newlinesuppression">Suppression d'un retour à la ligne</a>
-	* <a href="#escaping">Caractère d'échappement '$'</a>
-	* <a href="#comments">Commentaires</a>
-	* <a href="#controlstructure">Structures de contrôle</a>
-* <a href="#otherstatements">Autres déclarations</a>
-	* <a href="#def">$def : définir une nouvelle fonction de gabarit</a>
-	* <a href="#code">$code : écrire du code python dans le gabarit</a>
-	* <a href="#var">$var : définir des propriétés additionnelles dans les résultats du gabarit</a>
-* <a href="#builtins">Objets internes et variables globales</a>
-* <a href="#security">Sécurité</a>
-* <a href="#upgrading">Mise à jour depuis le gabarit web.py 0.2</a>
+* [Introduction](#introduction)
+* [Utiliser un modèle de gabarit](#using)
+* [Syntaxe](#syntax)
+	* [Substitution d'expression](#expressionsubstitution)
+	* [Attribution](#attribut)
+	* [Filtrage](#filtrering)
+	* [Suppression d'un retour à la ligne](#newlinesuppression)
+	* [Caractère d'échappement '$'](#escaping)
+	* [Commentaires](#comments)
+	* [Structures de contrôle](#controlstructure)
+* [Autres déclarations](#otherstatements)
+	* [$def : définir une nouvelle fonction de gabarit](#def)
+	* [$code : écrire du code python dans le gabarit](#code)
+	* [$var : définir des propriétés additionnelles dans les résultats du gabarit](#var)
+* [Objets internes et variables globales](#builtins)
+* [Sécurité](#security)
+* [Mise à jour depuis le gabarit web.py 0.2](#upgrading)
 
 
 <h1 id="introduction">Introduction</h1>

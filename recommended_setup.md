@@ -9,10 +9,10 @@ Other languages : [français](/recommended_setup/fr) | ...
 
 ### Summary
 
-* <a href="#web-servers">Web Server</a>
-* <a href="#databases">Databases</a>
-* <a href="#connection-pooling">Connection Pooling</a>
-* <a href="#templates">Templates</a>
+* [Web Server](#web-servers)
+* [Databases](#databases)
+* [Connection Pooling](#connection-pooling)
+* [Templates](#templates)
 
 web.py recommends the following software for production servers:
 

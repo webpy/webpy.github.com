@@ -9,11 +9,11 @@ Autre langages : [english](/recommended_setup) | ...
 
 ### Sommaire
 
-* <a href="#webserver">Serveurs web</a>
-* <a href="#database">Bases de données</a>
-* <a href="#pool">Pool de connexions</a>
-* <a href="#template">Modèles, gabarits</a>
-* <a href="#userinput">Entrées utilisateurs</a>
+* [Serveurs web](#webserver)
+* [Bases de données](#database)
+* [Pool de connexions](#pool)
+* [Modèles, gabarits](#template)
+* [Entrées utilisateurs](#userinput)
 
 
 Web.py recommande les logiciels suivants pour les serveurs de production:

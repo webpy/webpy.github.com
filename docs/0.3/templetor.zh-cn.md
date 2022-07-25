@@ -38,7 +38,7 @@ web.py 的模板语言叫做 `Templetor`，它能负责将 python 的强大功�
 第二行中的 `$name` 将会用 `name` 的值来替换。
 
 <div class="warning">
-如果是从 web.py 0.2 升级请看这里 <a href="#upgrading">升级</a> 部分。
+如果是从 web.py 0.2 升级请看这里 [升级](#upgrading) 部分。
 </div>
 
 <h1 id="using">使用模板系统</h1>

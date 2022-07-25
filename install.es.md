@@ -9,20 +9,20 @@ Otros idiomas : [english](/install) | [Japan 日本語 ](/install.ja) | [chinese
 
 ## Índice
 
-* <a href="#install">Instalación</a>
-* <a href="#dev">Desarrollo</a>
-* <a href="#prod">Producción</a>
-    * <a href="#nginx">Nginx</a>
-    * <a href="#lighttpd">LightTPD</a>
-        * <a href="#lighttpdfastcgi">.. con FastCGI</a>
-    * <a href="#apache">Apache</a>
-        * <a href="#apachecgi">.. con CGI</a>
-        * <a href="#apachecgihtaccess"> .. con CGI usando .htaccess</a>
-        * <a href="#apachefastcgi">.. con FastCGI</a>
-        * <a href="#apachescgi">.. con SCGI</a>
-        * <a href="#apachemodpython">.. con mod_python</a>
-        * <a href="#apachemodwsgi">.. con mod_wsgi</a>
-        * <a href="#apachemodrewrite">.. con mod_rewrite</a>
+* [Instalación](#install)
+* [Desarrollo](#dev)
+* [Producción](#prod)
+    * [Nginx](#nginx)
+    * [LightTPD](#lighttpd)
+        * [.. con FastCGI](#lighttpdfastcgi)
+    * [Apache](#apache)
+        * [.. con CGI](#apachecgi)
+        * [ .. con CGI usando .htaccess](#apachecgihtaccess)
+        * [.. con FastCGI](#apachefastcgi)
+        * [.. con SCGI](#apachescgi)
+        * [.. con mod_python](#apachemodpython)
+        * [.. con mod_wsgi](#apachemodwsgi)
+        * [.. con mod_rewrite](#apachemodrewrite)
 
 <h2 id="install">Instalación</h2>
 

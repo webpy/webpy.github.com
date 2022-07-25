@@ -10,19 +10,19 @@ Autre langages : [english](./tutorial) | [chinese](./tutorial.zh-cn)
 # Sommaire
 
 
-* <a href="#introduction">Prérequis</a>
-* <a href="#manipurl">Manipuler les URLs</a>
-* <a href="#gereurl">Gérer les URLs</a>
-* <a href="#getpost">GET et POST : la différence</a>
-* <a href="#index">Page index - ma première classe</a>
-* <a href="#lance">Lancer le serveur</a>
-* <a href="#template">Modèles, gabarits</a>
-* <a href="#formulaires">Formulaires</a>
-* <a href="#bd">Base de données</a>
-* <a href="#affbd">Afficher le contenu d'une base de données</a>
-* <a href="#ecrbd">Ecrire dans une base de données</a>
-* <a href="#debug">Debugger</a>
-* <a href="#apres">Et Après ?</a>
+* [Prérequis](#introduction)
+* [Manipuler les URLs](#manipurl)
+* [Gérer les URLs](#gereurl)
+* [GET et POST : la différence](#getpost)
+* [Page index - ma première classe](#index)
+* [Lancer le serveur](#lance)
+* [Modèles, gabarits](#template)
+* [Formulaires](#formulaires)
+* [Base de données](#bd)
+* [Afficher le contenu d'une base de données](#affbd)
+* [Ecrire dans une base de données](#ecrbd)
+* [Debugger](#debug)
+* [Et Après ?](#apres)
 
 <h1 id="introduction">Prérequis</h1>
 

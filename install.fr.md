@@ -9,19 +9,19 @@ Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/ins
 
 ## Sommaire
 
-* <a href="#installation">Installation</a>
-* <a href="#dev">Développement</a>
-* <a href="#prod">Production</a>
-    * <a href="#lighttpd">LightTPD</a>
-        * <a href="#lighttpdfastcgi">...avec FastCGI</a>
-    * <a href="#apache">Apache</a>
-        * <a href="#apachecgi">...avec CGI</a>
-        * <a href="#apachecgihtaccess">.. avec CGI en utilisant .htaccess</a>
-        * <a href="#apachefastcgi">.. avec FastCGI</a>
-        * <a href="#apachescgi">.. avec SCGI</a>
-        * <a href="#apachemodpython">.. avec mod_python</a>
-        * <a href="#apachemodwsgi">.. avec mod_wsgi</a>
-        * <a href="#apachemodrewrite">.. avec mod_rewrite</a>
+* [Installation](#installation)
+* [Développement](#dev)
+* [Production](#prod)
+    * [LightTPD](#lighttpd)
+        * [...avec FastCGI](#lighttpdfastcgi)
+    * [Apache](#apache)
+        * [...avec CGI](#apachecgi)
+        * [.. avec CGI en utilisant .htaccess](#apachecgihtaccess)
+        * [.. avec FastCGI](#apachefastcgi)
+        * [.. avec SCGI](#apachescgi)
+        * [.. avec mod_python](#apachemodpython)
+        * [.. avec mod_wsgi](#apachemodwsgi)
+        * [.. avec mod_rewrite](#apachemodrewrite)
 
 
 <h2 id="installation">Installation</h2>

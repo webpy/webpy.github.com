@@ -9,11 +9,11 @@ Autres langues : [English](/form) | ...
 
 # Sommaire
 
-* <a href="#introduction">Introduction</a>
-* <a href="#carac">Caracteristiques des entrées formulaires</a>
-* <a href="#listes">Listes déroulantes</a>
-* <a href="#parti">Particularités des formulaires</a>
-* <a href="#exemple">Exemple</a>
+* [Introduction](#introduction)
+* [Caracteristiques des entrées formulaires](#carac)
+* [Listes déroulantes](#listes)
+* [Particularités des formulaires](#parti)
+* [Exemple](#exemple)
 
 <h2 id="introduction">Introduction</h2>
 
