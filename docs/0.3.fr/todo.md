@@ -20,22 +20,17 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 # En cours
 
-
-
-
 ---
 
 # A faire
 
 ## Documentation de web.py 0.3
 
-
 ### Exemples de code
 
 * [Code samples](https://github.com/webpy/webpy-examples/). - traduction demandée
 
 ### Documentation des composants
-
 
 * [Subdir app](/docs/0.3/apps/subdir). - traduction demandée
 * [Subdomain app](/docs/0.3/apps/subdomain). - traduction demandée
@@ -48,9 +43,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 * [API documentation](/docs/0.3/api) -  traduction demandée
 
-
 ## Cookbook
-
 
 ### Avancé
 
@@ -64,9 +57,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 ### Sessions et état des utilisateurs:
 
-
 * [Authentification des utilisateurs avec base de données Postgresql](/cookbook/userauthpgsql). - traduction demandée
-
 
 ### Utils:
 
@@ -74,7 +65,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 * [Webservice en utilisant soaplib + WSDL](/cookbook/webservice). - traduction demandée
 
 ### Modèles de mise en forme, gabarits de mise en page:
-
 
 * [Alterner un style](/cookbook/alternating_style). - traduction demandée
 * [Importer des fonctions dans les gabarits](/cookbook/template_import). - traduction demandée
@@ -90,7 +80,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 * [RESTful doctesting using an application's request method](/cookbook/restful_doctesting_using_request). - traduction demandée
 
 ### Entrées utilisateurs:
-
 
 * [Rendu individuel des champs de formulaires](/cookbook/form_fields). - traduction demandée
 

@@ -36,12 +36,9 @@ Web.py permet d'une façon très simple d'utiliser les méthodes de dépot/récu
             web.setcookie('age', i.age, 3600)
             return "Age set in your cookie"
 
-
 L'appel de la classe ci-dessus avec GET déposera un cookie nommé "age" ayant pour valeur par défaut "25" (cette valeur par défaut provient en fait de web.input et non de la fonction setcookie), et qui expirera dans une heure (3600 secondes).
 
-
 Le troisième (et optionnel) argument de `web.setcookie()`, "expires", vous permet de définir quand vous voulez que votre cookie expire. Tout nombre négatif expirera le cookie immédiatement. Un nombre positif est le nombre de secondes durant lequel le cookie va durer (3600 se traduirait en une heure de durée du cookie). Laisser cet argument vide a pour conséquence, d'expirer le cookie session quand le navigateur s'arrête. Pour créer un cookie permanent, mettez à jour le temps d'expiration du cookie à intervalles réguliers (exemple : quand un utilisateur s'est connecté)
-
 
 ### Récuperer des cookies
 #### Vue d'ensemble
@@ -60,7 +57,6 @@ Il existe de nombreuses méthodes pour retrouver des cookies, en fonction de la 
         #cookieName est le nom du cookie présenté par le navigateur
 
 #### Exemple
-
 
 `web.cookies()` peut être utilisé pour accéder à un cookie déjà défini. Si un cookie est créé en utilisant le code `web.setcookie()` plus haut, il peut être retrouvé de cette façon:
 

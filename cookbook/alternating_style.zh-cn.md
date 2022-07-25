@@ -33,11 +33,9 @@ web.template.Template.globals['int'] = int
         ">$track.title</li>
     </ul>
 
-
 ## New Templetor ##
 
 In the new implementation of templetor (which will be the default when version .3 is released), within any template loop you have access to a $loop variable.  This works like so:
-
 
     <ul>
     $for foo in foos:

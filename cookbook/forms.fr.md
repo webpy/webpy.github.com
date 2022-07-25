@@ -16,7 +16,6 @@ Comment utiliser les formulaires ?
 Le module `web.form`  fournit un support pour créer, valider et interpréter les formulaires.
 Ce module contient une classe `Form` et des classes pour diverses entrées de type `Textbox`, `Password`, etc...
 
-
 Chaque entrée peut prendre une liste de validateurs comme arguments qui sont validées par rapport à l'entrée lorsque `form.validates ()` est appelée.
 
 La classe `Form` peut aussi prendre le mot-clé supplémentaire `validators` en arguments pour valider le formulaire en utilisant la saisie complète.

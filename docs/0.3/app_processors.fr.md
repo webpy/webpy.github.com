@@ -9,7 +9,6 @@ Autres langues : [english](/../app_processors) | ...
 
 les Application processors permettent au programmeur d'executer du code commun avant que chaque requête soit traitée. Ceci est utile pour les schémas d'authentification ou pour organiser l'état des utilisateurs à chaque requête. Des processors multiples peuvent être ajoutés par application, et ils seront executés dans l'ordre ou ils ont été ajoutés. Le plus basique processor ressemble à ça:
 
-
     def proc(handle):
         # faire tout ce dont vous avez besoin ici
         web.ctx.user = web.cookies(user=None).user
@@ -29,9 +28,7 @@ Le "handle" de l'application processor se réfère au code qui sera envoyé à l
                 log_error('Uh oh')
             return ret
 
-
 Voici un exemple de base sur la façon dont un système d'authentification est créé en utilisant les applications processors. Ce n'est pas sécurisé pour une utilisation réelle; Cela ne vise qu'à démontrer comment les application processors pouvent vérifier quelque chose avant que chaque URL ne soit traitée.
-
 
 ## Exemple
     """ Application processors dans web.py """

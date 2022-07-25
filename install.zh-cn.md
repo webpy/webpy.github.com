@@ -120,12 +120,10 @@ lighttpd config设置参考如下：
 
 <h4 id="apachecgi">.. 使用 CGI</h4>
 
-
 添加以下到 `httpd.conf` 或 `apache2.conf`。
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
-
 
 <h4 id="apachecgihtaccess">.. 使用 CGI .htaccess</h4>
 
@@ -207,7 +205,6 @@ mod_python 运行方式如同FastCGI， 但不是那么方便配置。
     cd wsgiref
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
-
 
 重命名 `code.py` 为 `codep.py` 或别的名字， 添加：
     

@@ -28,7 +28,6 @@ We need 4 things:
 
 1. Add `<input type="hidden" name="csrf_token" value="$csrf_token()"/>` to the forms in the templates.
 
-
 We define `csrf_token()` like this:
 
     def csrf_token():

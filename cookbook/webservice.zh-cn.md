@@ -12,8 +12,6 @@ title: 用soaplib实现webservice
 ### 解法
 Optio的[soaplib](http://trac.optio.webfactional.com/)通过用装饰器指定类型，从而直接编写SOAP web service。而且它也是到目前为止，唯一为web service提供WSDL文档的Python类库。
 
-
-
     import web
     from soaplib.wsgi_soap import SimpleWSGISoapApp
     from soaplib.service import soapmethod
@@ -58,9 +56,6 @@ Optio的[soaplib](http://trac.optio.webfactional.com/)通过用装饰器指定�
 
     if __name__ == "__main__":
         app.run()
-
-
-
 
 可以用soaplib客户端测试一下：
 

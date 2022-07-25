@@ -11,7 +11,6 @@ Autre langages : [english](/../helloworld) | ...
 
 Comment écrire un "Hello World" avec web.py
 
-
 ## Solution
 
     import web
@@ -31,7 +30,6 @@ Comment écrire un "Hello World" avec web.py
 Ajoutez ce qui suit au début des urls.
 
     '/(.*)/', 'redirect',
-
 
 et vous utiliserez la classe suivante pour traiter ces urls.
 

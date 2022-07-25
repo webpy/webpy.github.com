@@ -68,7 +68,6 @@ You can use relative paths in order to make it easier too. e.g.
             output_encoding='utf-8',
             )
 
-
 # Reference:
 * http://code.google.com/p/modwsgi/wiki/ApplicationIssues
 

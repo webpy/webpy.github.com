@@ -24,7 +24,6 @@ code {
 }
 </style>
 
-
 web.py 的模板语言叫做 `Templetor`，它能负责将 python 的强大功能传递给模板系统。
 在模板中没有重新设计语法，它是类 python 的。 
 如果你会 python，你可以顺手拈来。

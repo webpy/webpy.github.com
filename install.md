@@ -135,7 +135,6 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
 
 <h4 id="apachecgi">.. with CGI</h4>
 
-
 Add the following to `httpd.conf` or `apache2.conf`.
 
     Alias /foo/static/ /path/to/static
@@ -168,7 +167,6 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
 
     web.internalerror = cgidebugerror
 
-
 <h4 id="apachefastcgi">.. with FastCGI</h4>
 
 FastCGI is easy to configure and performs as well as mod_python.
@@ -187,7 +185,6 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 
 [Walter has some additional advice](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-
 <h4 id="apachescgi">.. with SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
@@ -203,7 +200,6 @@ restart apache and then start your code.py in the command below:
 
 and open you browser,visit 127.0.0.1
 It's ok!
-
 
 <h4 id="apachemodpython">.. with mod_python</h4>
 
@@ -224,7 +220,6 @@ For Python <2.5 do this:
     cd wsgiref
     wget -O modpython_gateway.py http://svn.aminus.net/misc/modpython_gateway.py
     # or fetch the file from that address using your browser
-
 
 Rename your `code.py` to something like `codep.py` and add:
 
@@ -268,8 +263,6 @@ If you get an "ImportError: No module named web" in your apache error.log file, 
 Also, you might want to read the "Application Working Directory" section from [Common problems with WSGI application](http://code.google.com/p/modwsgi/wiki/ApplicationIssues).
 
 It should then be accessible at `http://example.com/code.py/` as usual.
-
-
 
 <h4 id="apachemodrewrite">mod_rewrite Rules for Apache</h4>
 

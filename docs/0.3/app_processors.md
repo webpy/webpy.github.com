@@ -28,7 +28,6 @@ The "handle" of the app processor refers to the code that will be dispatched by 
                 log_error('Uh oh')
             return ret
 
-
 Here's a basic example of how an authentication scheme is created using app processors.  This is not secure for actual use; it is only meant to demonstrate how app processors can check something before each url is processed.
 
 ## Example

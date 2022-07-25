@@ -25,7 +25,6 @@ Create your XML template with the XML file you want to serve (i.e. response.xml)
 
 To serve this file, create a standard Web.Py program (i.e. response.py) and use the following code. Be aware that you should use `web.header('Content-Type', 'text/xml')` to tell the client that you are sending a XML file. (You don't need to set the header explicitly for XML files if your template file has the ``.xml`` extension.)
 
-
     import web
 
     render = web.template.render('templates/', cache=False)

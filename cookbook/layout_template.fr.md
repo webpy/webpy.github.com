@@ -7,24 +7,17 @@ title: Mise en page selon un gabarit
 
 Autres langages : [english](/../layout_template) | ...
 
-
-
 ### Problème
-
 
 Comment puis-je utiliser un modèle/gabarit de site qui s'affiche dans chaque page? (Dans d'autres frameworks, cela s'appelle l'héritage des templates - template inheritance)
 
 ### Solution
 
-
 Cela peut être fait en utilisant l'attribut de base:
 
     render = web.template.render('templates/', base='layout')
 
-
 Maintenant si vous faites quelque chose comme `render.foo ()` il cherchera le gabarit `templates/foo.html`, puis l'enveloppera dans le gabarit `templates/layout.html`
-
-
 
 Le format de "layout.html" doit être un simple gabarit qui contient une variable. Par exemple:
 
@@ -37,7 +30,6 @@ Le format de "layout.html" doit être un simple gabarit qui contient une variabl
     $:content
     </body>
     </html>
-
 
 Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deuxième objet, sans l'attribut "base", ainsi:
 
@@ -60,7 +52,6 @@ Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deu
     $:content
     </body>
     </html>
-
 
 ### Astuce: Ajouter des fichiers css dans d'autres fichiers gabarits. Exemple:
 

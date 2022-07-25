@@ -21,11 +21,9 @@ Ce qui suit s'applique à la version 1.4.18 de lighttpd.*
 * `/path-to/webpy-app` que vous trouverez ci-dessous, concerne le chemin vers le répertoire contenant votre `code.py`
 * `/path-to/webpy-app/code.py` est le chemin complet de votre **fichier python**
 
-
 Si vous n'êtes pas certain de savoir quelle version de [lighttpd](http://www.lighttpd.net/) s'execute, tapez : `lighttpd -v` dans la console.
 
 *Note: La version précédente de lighttpd organise les fichiers .conf différemment. Cependant, les mêmes principes s'appliquent aussi bien sur eux.*
-
 
 ## Configuration de lighttpd sous Debian GNU/Linux
 
@@ -56,7 +54,6 @@ l'Activation et désactivation des modules peut se faire en lançant:
 ```
 
 **Pour web.py vous devrez activer mod_fastcgi et mod_rewrite en executant: `/usr/sbin/lighty-enable-mod` et en fournissant `fastcgi` (mod_rewrite sera activé dans le fichier `10-fastcgi.conf`, comme vous pourrez le voir dans un instant.)**
-
 
 ## Voici les instructions pour les fichiers suivants:
 

@@ -22,7 +22,6 @@ Un simple correctif pour ceci, est de désactiver le mode debug, ce qui peut êt
 
     # Le reste de votre code
 
-
 Si vous voulez utiliser les sessions en mode debug, voici une solution de fortune.
 
 Depuis que le mode de débogage permet le module reloading, le reloader charge le module principal à deux reprises (une fois comme __main__ et une fois avec son nom), deux objets session sont créés. Cela peut être évité en stockant la session dans un emplacement global afin d'éviter la création de la seconde.

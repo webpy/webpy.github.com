@@ -33,7 +33,6 @@ title: 如何操作Cookie
             web.setcookie('age', i.age, 3600)
             return "Age set in your cookie"
 
-
 用 GET方式调用上面的类将设置一个名为age,默认值是25的cookie(实际上，默认值25是在web.input中赋予i.age的，从而间接赋予 cookie，而不是在setcookie函式中直接赋予cookie的)。这个cookie将在一小时后(即3600秒)过期。
 
 `web.setcookie()`的第三个参数－"expires"是一个可选参数，它用来设定cookie过期的时间。如果是负数，cookie将立刻过期。如果是正数，就表示cookie的有效时间是多久，以秒为单位。如果该参数为空，cookie就永不过期。

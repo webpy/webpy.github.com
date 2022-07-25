@@ -36,7 +36,6 @@ Autre langages : [english](/docs/0.3) | ...
 
 * [Upgrade to 0.3 versions of web.py](/docs/0.3/upgrade)  - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
-
 ## API Documentation 
 
 * [API documentation](/docs/0.3/api) - traduction demandée, voir [Todo](/docs/0.3.fr/todo)

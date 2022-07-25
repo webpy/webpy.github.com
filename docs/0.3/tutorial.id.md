@@ -152,7 +152,6 @@ nilai default:
 
     $ python code.py 1234
 
-
 <h2 id="templating">Menggunakan template</h2>
 
 Menulis HTML di dalam Python bisa menjadi merepotkan; lebih nyaman 

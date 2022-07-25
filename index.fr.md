@@ -7,7 +7,6 @@ title: A propos de Web.py
 
 Autre langages : [english](/) | [Español](/index.es.html) | ...
 
-
 **web.py** est un framework pour python qui est aussi simple qu'il est puissant. Web.py est dans le domaine publique; vous pouvez l'utiliser à toutes fins sans aucunes restrictions.
 
 ## Une application complète web.py
@@ -27,7 +26,6 @@ Autre langages : [english](/) | [Español](/index.es.html) | ...
     
     if __name__ == "__main__":
         app.run()
-
 
 ## Pour commençer
 

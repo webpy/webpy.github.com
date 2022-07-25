@@ -24,7 +24,6 @@ When finishing working on something, delete it from the list. If a code block re
 1. put new code at /foo/0.3
 1. delete content at /foo, and update any urls that link to it
 
-
 ***
 # Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
 * Move url to /samples
@@ -35,7 +34,6 @@ When finishing working on something, delete it from the list. If a code block re
 * simple delicious: 0.2
 * alternate tutorial SQLite & SQLObject: 0.2
 * templating with genshi: should be part of larger 'templating' section
-
 
 ## tips & tricks
 
@@ -50,7 +48,6 @@ vhost, metaclass and multiple apps should have separate section, but this setup 
 * test web app: need separate testing section
 * serving images: 0.2, should use mimetypes module?
 * multiple apps: not needed
-
 
 ## Real web apps
 

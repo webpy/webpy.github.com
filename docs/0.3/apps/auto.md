@@ -20,9 +20,7 @@ The auto application acts like the [basic application](/docs/0.3/apps/basic), on
      if __name__ == '__main__':
          app.run() # goto http://hostname:8080/hello
 
-
 You can also override the default path (which is the name of the class) by setting a class variable "path".  See below:
-
 
 ## More Example code 
 

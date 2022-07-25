@@ -28,7 +28,6 @@ sequence_id = db.insert('mytable', firstname="Bob",lastname="Smith",joindate=web
 * _test
 * \**values
 
-
 ## tablename
 表名，即你希望向哪个表新增数据。
 

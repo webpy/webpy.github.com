@@ -12,8 +12,6 @@ Si vous voulez faire l’ensemble de ce tutoriel vous devrez installer Python, w
 
 Si vous avez un projet web.py existant, regardez la page de [upgrade](http://webpy.infogami.com/upgrade_to_point2) pour plus d’informations sur la migration vers la nouvelle version.
 
-
-
 ## Gestion des URLs
 La partie la plus importante pour chaque site web  est la structure des URLs. Les URLs ne sont pas seulement ce que les visiteurs regarde et partage avec d’autres amis, mais ils sont aussi un modèle mental qui indique comment un Site Web fonctionne. (Dans les sites populaires comme [del.icio.us](http://del.icio.us/), les URLs font partie de l’interface de l’utilisateur). Pour cela Web.py facilite la création et la gestion des URL.
 
@@ -27,7 +25,6 @@ Maintenant on implémente la structure de nos URLs, on commence par quelque chos
 
     urls = (
       '/', 'index'    )
-
 
 La première partie est l’[expression régulière](http://osteele.com/tools/rework/)  qui représente un chemin. Par exemple : ‘/’, ‘/aide/faq’, ‘/article/(\d+)’, etc. Le \d+ représente une séquence de chiffres. Les parenthèses (..) servent à capturer les éléments retournés pour plus tard. La deuxième partie est le nom d’une classe à laquelle envoyer la requête, comme view, welcomes.hello (qui utilise la classe hello du module welcomes), ou bien get_\1. \1 est remplacé par la première capture de l’expression régulière. Toutes captures restantes seront passées à la fonction.
 

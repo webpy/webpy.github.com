@@ -17,7 +17,6 @@ This is an example of how you can use web.py to stream large files. You'll find 
 
 You can't mix basic string and yield returns in the same method.  If you use yield, you'll have to use yield for everything because your function becomes a generator.
 
-
 ## Simple Example
 
 ```

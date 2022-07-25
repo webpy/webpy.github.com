@@ -22,7 +22,6 @@ web.pyをダウンロードします。
 
 [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall)を使えばワンステップでインストールすることが可能です。
 
-
     easy_install web.py
 
 ## 開発
@@ -104,7 +103,6 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-
 #### .. with CGI using .htaccess
 
 CGIは以下を`.htaccess`に追記するだけですので構築するのは簡単ですが、高性能なウェブサイトには向いていません。
@@ -149,7 +147,6 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 
 [Walterからの追加のアドバイスはこちら](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-
 #### .. with SCGI
 https://www.mems-exchange.org/software/scgi/
 download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
@@ -184,7 +181,6 @@ Python 2.5以前のバージョンを使用している場合:
     cd wsgiref
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
-
 
 `code.py`のファイル名を`codep.py`に変更してください。
     

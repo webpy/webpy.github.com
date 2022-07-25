@@ -15,7 +15,6 @@ Autre langages : [english](/recommended_setup) | ...
 * [Modèles, gabarits](#template)
 * [Entrées utilisateurs](#userinput)
 
-
 Web.py recommande les logiciels suivants pour les serveurs de production:
 
 <h2 id="webserver">Serveurs web:</h2>
@@ -28,7 +27,6 @@ Webpy dispose d'un serveur web interne, mais il devrait être utilisé pour le d
 <h2 id="database">Bases de données:</h2>
 
 Webpy ne nécessite pas de base de données pour fonctionner. Il supporte néanmoins les bases suivantes:
-
 
 *  [postgresql](http://www.postgresql.org/download/) [BSD] [(doc)](http://www.postgresql.org/docs/) avec [psycopg2](http://initd.org/pub/software/psycopg/) [BSD] [(doc)](http://www.initd.org/tracker/psycopg/wiki/PsycopgTwo) comme client python. ('easy_install psycopg2')
 *  [mysql](http://dev.mysql.com/downloads/mysql/5.0.html) [GPL] [(doc)](http://www.mysql.org/doc/) avec [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) [CNRI] [(doc)](http://mysql-python.sourceforge.net/MySQLdb.html) comme client python ('easy_install MySQL-python')

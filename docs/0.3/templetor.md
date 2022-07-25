@@ -28,7 +28,6 @@ Other languages : [français](/docs/0.3/templetor.fr) | ...
 * [Upgrading from web.py 0.2 templates](#upgrading)
 * [Errors you may experience](#errors)
 
-
 <h1 id="introduction">Introduction</h1>
 
 The web.py template language, called `Templetor` is designed to bring the power of Python to templates.
@@ -44,7 +43,6 @@ Here is a simple template:
 
 The first line says that the template is defined with one argument called `name`.
 `$name` in the second line will be replaced with the value of name when the template is rendered.
-
 
 <h1 id="using">Using the template system</h1>
 

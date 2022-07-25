@@ -23,7 +23,6 @@ guarda il [setup raccomandato](/recommended_setup) -in inglese-.
 
 Un'altra opzione è quella di usare[Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Una volta che [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall) è stato settato correttamente, usare il seguente comando per installare automaticamente web.py:
 
-
     easy_install web.py
 
 ## Sviluppo
@@ -98,7 +97,6 @@ Aggiungi le seguenti righe al tuo file `httpd.conf` o `apache2.conf`.
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
-
 
 #### .. con CGI usando il file .htaccess
 
@@ -179,7 +177,6 @@ Per python < 2.5 (precedente a 2.5) fai questo:
     cd wsgiref
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # o richiedi il file dal tuo browser 
-
 
 Rinomina il tuo `code.py` a qualcosa come `codep.py` e aggiungi:
     

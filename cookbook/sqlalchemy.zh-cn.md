@@ -14,7 +14,6 @@ title: sqlalchemy
 创建一个钩子并使用sqlalchemy的scoped session
 (http://www.sqlalchemy.org/docs/05/session.html#unitofwork_contextual)
 
-
     import string
     import random
     import web
@@ -67,7 +66,6 @@ title: sqlalchemy
     if __name__ == "__main__":
         app.run()
 
-
 ### models.py
 
     from sqlalchemy import create_engine
@@ -101,6 +99,5 @@ title: sqlalchemy
 
     if __name__ == "__main__":
         metadata.create_all(engine)
-
 
 在跑程序之前,运行'python models.py'来初始化一次数据库.

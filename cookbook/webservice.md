@@ -7,8 +7,6 @@ title: Webservice + WSDL
 
 Optio's  [soaplib](http://trac.optio.webfactional.com/) makes it really straightforward to write SOAP web service views by using a decorator to specify types. Plus it's the only Python library, as of today, which is able to generate WSDL documents for your web service.
 
-
-
     import web
     from soaplib.wsgi_soap import SimpleWSGISoapApp
     from soaplib.service import soapmethod

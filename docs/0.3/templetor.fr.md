@@ -27,13 +27,11 @@ Autre langues : [English](/docs/0.3/templetor) | ...
 * [Sécurité](#security)
 * [Mise à jour depuis le gabarit web.py 0.2](#upgrading)
 
-
 <h1 id="introduction">Introduction</h1>
 
 Le langage de gabarit de web.py, appelé 'Templator', est conçu pour apporter la puissance de python aux modèles de gabarits.
 Au lieu d'inventer une nouvelle syntaxe pour les gabarits, il réutilise la syntaxe de python.
 Si vous connaissez le langage de programmation python, vous serez à l'aise. 
-
 
 Templator limite intentionnellement l'accès aux variables dans un gabarit. Un utilisateur a accès aux variables passées dans le modèle de gabarit ainsi qu'à certaines fonctions Python intégrées. Cela permet aux utilisateurs maladroits d'écrire des gabarits, sans vous soucier de causer des dommage au système en cours d'exécution. Vous pouvez, bien sûr, augmenter les variables globales disponibles, c'est ce que nous verrons plus tard.
 
@@ -53,7 +51,6 @@ La façon la plus imple d'utiliser le rendu de gabarits est celle-ci :
     print render.hello('world')
    
 La fonction 'render' prend comme argument le repertoire 'templates'. 'render.hello(..)' appelle le gabarit 'hello.html' avec les arguments donnés. En fait, il cherche les fichiers correspondants 'hello.*' dans le repertoire 'template' et sélectionne le premier fichier correspondant.
-
 
 Vous pouvez également créer des modèles à partir d'un fichier en utilisant 'frender'.
 

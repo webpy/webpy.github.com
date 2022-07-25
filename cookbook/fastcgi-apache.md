@@ -67,7 +67,6 @@ Note the following line is required: `web.wsgi.runwsgi = lambda func, addr=None:
     if __name__ == "__main__":
         app.run()
 
-
 ### Run
 
 1. Start your server.

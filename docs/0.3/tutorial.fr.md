@@ -9,7 +9,6 @@ Autre langages : [english](./tutorial) | [chinese](./tutorial.zh-cn)
 
 # Sommaire
 
-
 * [Prérequis](#introduction)
 * [Manipuler les URLs](#manipurl)
 * [Gérer les URLs](#gereurl)
@@ -26,17 +25,13 @@ Autre langages : [english](./tutorial) | [chinese](./tutorial.zh-cn)
 
 <h1 id="introduction">Prérequis</h1>
 
-
-
 Vous connaissez Python et vous désirez construire un site web. Webpy vous permettra de le faire facilement.
 
 Si vous décidez de suivre l'ensemble de ce tutorial, vous aurez besoin d'installer Python, [web.py] (/install/fr) , flup, psycopg2 et Postgres (ou une base de donnée equivalente et les pilotes python). Pour plus de détails, veuillez consulter [webpy.org](http://webpy.org/)
 
 Si vous possédez déjà un projet web.py existant, jetez un oeil à la page de [mise à jour](http://webpy.org/docs/0.3/upgrade) pour plus d'informations sur la migration.
 
-
 # Commençons
-
 
 <h2 id="manipurl">Manipuler les URLs</h2>
 
@@ -73,7 +68,6 @@ Alors que la plupart des gens ne le remarquent pas en naviguant simplement, votr
 
 GET est celle que nous connaissons tous, celle qui sert à demander le texte d'une page web. Lorsque vous tapez 'harvard.edu' dans votre navigateur, cela demande littéralement au serveur web de Harvard de fournir /. La seconde fonction très célèbre, POST, est souvent utilisée lorsque vous utilisez certains types de formulaires, comme une demande d'achat d'un produit. Vous utilisez POST chaque fois que vous soumettez une demande (comme le débit de votre carte de crédit et le traitement d'une commande). Cela est essentiel, parce que GET URLs peut être transmis et indexé par les moteurs de recherche, que vous voulez certainement pour la plupart de vos pages, mais ne désirez certainement pas pour des choses comme le traitement des ordres (imaginez si Google essaye de tout acheter sur votre site!)
 
-
 <h2 id="index">Page index - ma première classe</h2>
 
 Dans notre code web.py, nous faisons la distinction entre les deux clairement. Maintenant, il est nécessaire d'écrire la Classe 'index'.
@@ -109,8 +103,6 @@ En visitant cette URL, vous devriez voir "Hello, world!" dans votre navigateur. 
 Note: Vous pouvez spécifier le numéro de port à utiliser dans la ligne de commande, si vous ne souhaitez pas utiliser le port par défaut :
 
      $ python code.py 1234
-
-
 
 <h1 id="template">Modèles, gabarits</h1>
 
@@ -260,10 +252,8 @@ Note: Afin d'accéder aux données à partir de plusieurs éléments identiqueme
 Quelques notes additionnelles: 
 
 `db.update` fonctionne comme `db.insert` excepté qu'au lieu de renvoyer l'ID, il doit recevoir en argument, après le nom de la table, soit l'ID soit une clause `WHERE` permettant d'identifier la ligne à modifier.
-
     
     db.update('todo', where="id = 10", title = "web.py pour les nuls")
-
 
 `web.input`, `db.query`, et d'autres fonctions dans web.py renvoient des Objets de Stockage (Storage objects), qui sont comme des dictionnaires mis à part que vous pouvez écrire `d.foo` en plus de `d['foo']`. Cela rend le code plus clair.
 

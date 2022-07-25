@@ -34,7 +34,6 @@ This code works for wsgilog version 0.2
                 backups = config.log_backups
                 )
 
-
 Then when you run your app, you pass a reference to to the class e.g. (if the above was part of the module 'mylog')
 
     from mylog import Log

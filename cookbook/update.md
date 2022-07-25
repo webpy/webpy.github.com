@@ -18,5 +18,4 @@ You want to update data that's been entered into a database.
 
 See the [select](/cookbook/select) for more information on arguments that are accepted by update.
 
-
 The update method returns the number of rows updated.

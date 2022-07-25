@@ -7,7 +7,6 @@ title: web.redirect et web.seeother
 
 Autres langages [english](/../redirect+seeother/) | ...
 
-
 ### Probleme
 
 Après le traitement des entrées utilisateurs (depuis un formulaire, par exemple), vous souhaitez les rediriger vers une autre page.
@@ -18,7 +17,6 @@ Après le traitement des entrées utilisateurs (depuis un formulaire, par exempl
         def POST(self):
             # Executez une application logique ici, puis:
             raise web.seeother('/someotherpage')
-
 
 Quand un post est envoyé à cette fonction, à la fin il enverra au navigateur un code HTTP 303, et le nouvel emplacement. Le navigateur va alors effectuer un GET sur l'emplacement défini dans l'argument seeother.
 

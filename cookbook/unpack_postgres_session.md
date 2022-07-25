@@ -16,7 +16,6 @@ At the other end, this is also weird to take data in your database to bring them
 
 A cleaner approach would be to access directly these informations in postgresql to read and/or write them.
 
-
 ## Solution:
 
 To apply this recipe, you'll need to use postgresql DBStore for your sessions.
@@ -78,7 +77,6 @@ With a plpythonu function, we are able to unpack these informations and use them
     return (uid, current_page, user_role)
     $$
     language plpythonu;
-
 
 This function should be as simple as this to use:
 

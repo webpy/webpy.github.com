@@ -48,7 +48,6 @@ CREATE TABLE example_users (
 		'/reset', 'reset',
     )
 
-
 ## 第三步：判断用户是否登录
 
 要判断用户是否已登录，是非常简单的，只要有个变量记录用户登录的状态即可。在login/reset类中使用这段代码:

@@ -99,7 +99,6 @@ title: 实时语言切换
 
     if __name__ == "__main__": app.run()
 
-
 模板文件: templates/index.html.
 
     $_('Hello')

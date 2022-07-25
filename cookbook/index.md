@@ -87,7 +87,6 @@ Other languages: [简体中文](/cookbook/index.zh-cn) | [日本語](/cookbook/i
 * [Integrating SQLite UDF (user-defined-functions) with webpy database layer](/cookbook/sqlite-udf)
 * [Using a dictionary as where clause](/cookbook/where_dict)
 
-
 ## Deployment
 
 * [Fastcgi deployment through lighttpd](/cookbook/fastcgi-lighttpd)

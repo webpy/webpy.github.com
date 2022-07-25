@@ -18,5 +18,4 @@ title: db.upate 数据更新
 
 在 [查询](/cookbook/select/zh-cn) 中有更多关于可用参数的信息。
 
-
 该更新操作会返回更新的影响行数。

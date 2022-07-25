@@ -7,12 +7,9 @@ title: Authentification des utilisateurs
 
 Autres langages : [english](/../userauth) | ...
 
-
-
 ## Problème
 
 Vous souhaitez mettre en place un système pour authentifier les utilisateurs.
-
 
 ## Solution
 

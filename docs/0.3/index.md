@@ -36,7 +36,6 @@ Other languages : [français](/docs/0.3.fr) | ...
 
 * [Upgrade to 0.3 versions of web.py](/docs/0.3/upgrade)
 
-
 ## API Documentation
 
 * [API documentation](/docs/0.3/api)

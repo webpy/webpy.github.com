@@ -23,7 +23,6 @@ title: 提供XML访问
 
 为了提供这个XML，需要创建一个单独的web.py程序(如response.py)，它要包含下面的代码。注意：要用"web.header('Content-Type', 'text/xml')"来告知客户端－－正在发送的是一个XML文件。
 
-
     import web
 
     render = web.template.render('templates/', cache=False)

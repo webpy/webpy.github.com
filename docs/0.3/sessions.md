@@ -25,7 +25,6 @@ web.py sessions allow for multiple ways to store the session data.  These method
 
 The storage methods have various performance and setup tradeoffs, so the options allow you to choose what's best for your application.
 
-
 ## Example
 The following code shows how to use a basic DiskStore session.
 
@@ -61,7 +60,6 @@ The following code shows how to use a basic DiskStore session.
     
     if __name__ == '__main__':
         app.run()
-
 
 ## Sessions and Reloading/Debug Mode
 Is your session data disappearing for seemingly no reason? This can happen when using the web.py app reloader (local debug mode), which will not persist the session object between reloads. Here's a nifty hack to get around this.

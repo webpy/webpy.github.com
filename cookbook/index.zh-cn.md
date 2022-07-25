@@ -51,7 +51,6 @@ title: Web.py Cookbook 简体中文版
 * [一个在postgreSQL数据库环境下的用户认证的例子](userauthpgsql.zh-cn)
 * [如何在子应用中操作Session](sessions_with_subapp.zh-cn)
 
-
 ## Utils 实用工具
 
 * [如何发送邮件](sendmail.zh-cn)

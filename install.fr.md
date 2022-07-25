@@ -23,7 +23,6 @@ Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/ins
         * [.. avec mod_wsgi](#apachemodwsgi)
         * [.. avec mod_rewrite](#apachemodrewrite)
 
-
 <h2 id="installation">Installation</h2>
 Pour installer web.py, commencez par télécharger l'archive:
 
@@ -38,7 +37,6 @@ Note: sur certains systèmes Unix (ou Linux), il vous faudra vous connecter en t
     sudo python setup.py install
 
 Une autre option est d'utiliser [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Une fois Easy Install correctement paramétré, exécutez:
-
 
     easy_install web.py
 
@@ -108,7 +106,6 @@ Depuis la revision 145, il est nécessaire de définir une variable  "bin-enviro
 <h3 id="apache">Apache</h3>
 
 <h4 id="apachecgi">.. avec CGI</h4>
-
 
 Ajoutez les lignes suivante à `httpd.conf` ou `apache2.conf`.
 
@@ -193,7 +190,6 @@ Pour Python <2.5, procéder plutôt ceci:
     cd wsgiref
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
-
 
 renommez votre script `code.py` en quelque chose comme `codep.py` et ajoutez le code suivant:
     

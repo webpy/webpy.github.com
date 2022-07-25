@@ -33,7 +33,6 @@ La version actuelle 0.3 est la branche développement.
 * [Servir du XML](/xmlfiles/fr).
 * [Lire les données brutes d'un post](/postbasic/fr).
 
-
 ## Avancé
 * [web.ctx](/ctx/fr).
 * [Application processors, charger et décharger des hooks](/application_processors/fr).
@@ -52,7 +51,6 @@ La version actuelle 0.3 est la branche développement.
 * [Authentification des utilisateurs](/userauth/fr).
 * [Authentification des utilisateurs avec base de données Postgresql](/userauthpgsql). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Utiliser les sessions avec les sous-applications](/sessions_with_subapp/fr).
-
 
 ## Utils:
 * [Envoi de Mail](/sendmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -93,7 +91,6 @@ La version actuelle 0.3 est la branche développement.
 * [Comment utiliser sqlalchemy](/sqlalchemy). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Intégrer SQLite UDF (user-defined-functions) à la couche de base de données webpy](/sqlite-udf). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Utiliser un dictionnaire comme clause where](/where_dict). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
-
 
 ## Déploiement:
 * [Déploiement Fastcgi au travers lighttpd](/fastcgi-lighttpd/fr).

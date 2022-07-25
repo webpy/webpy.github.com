@@ -11,7 +11,6 @@ Other languages: [français](/../cookbook/postbasic.fr) | ...
 
 Sometimes, the client sends a lot of data by the POST method. In webpy, you can handle it like this.
 
-
 ## Code
 
     class RequestHandler(object):

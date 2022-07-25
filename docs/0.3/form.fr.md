@@ -25,7 +25,6 @@ Les formulaires sont instanciés avec une ou plusieurs entrées, et des validate
 
 La classe Input est sous-classée dans les entrées html suivantes (type HTML dans les parenthèses):
 
-
 * Textbox     - Champ de saisie de texte d'une ligne (input type="text")
 * Password   - Champ de saisie de texte d'une ligne qui cache ce qui est entré (input type="password")
 * Textarea   - Champ de saisie de texte multiligne (textarea)
@@ -65,7 +64,6 @@ Ce qui donnera:
 
 <h2 id="carac">Caracteristiques des entrées formulaires</h2>
 Les entrées formulaires offrent quelques attributs additionnels. Par exemple :
-
 
     form.textbox("firstname",
         form.notnull, # Place les validateurs en premier, suivi par des attributs facultatifs

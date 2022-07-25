@@ -15,7 +15,6 @@ Vous souhaitez utiliser web.py pour streamer de gros fichiers.
 
 Voici un exemple qui vous permettra d'utiliser web.py pour streamer de larges fichiers. Vous verrez qu'il fonctionne comme annoncé, mais vous devez vous assurer que vous avez ajouté 'chunked' dans l'en-tête Transfer-Encoding pour qu'il s'affiche correctement. Sinon, le navigateur va mettre en cache toutes les données avant de vous les afficher.
 
-
 Vous ne pouvez pas mélanger une chaîne de base et les retours [ Yield](http://fr.wikipedia.org/wiki/Yield_(instruction)) dans la même méthode. Si vous utilisez [ Yield](http://fr.wikipedia.org/wiki/Yield_(instruction)), vous devrez utiliser [ Yield](http://fr.wikipedia.org/wiki/Yield_(instruction)) pour tout, parce que votre fonction devient un générateur.
 
 ## Simple exemple

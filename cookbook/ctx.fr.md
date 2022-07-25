@@ -12,12 +12,10 @@ Probleme
 
 Vous souhaitez utiliser des variables contextuelles dans votre code comme la page référante ou le navigateur du client.
 
-
 Solution
 --------
 
 C'est possible en utilisant 'web.ctx'. D'abord un peu d'architecture: 'web.ctx' est basée sur la classe 'threadeddict', alias 'ThreadedDict'. Cette classe crée un objet de type dictionnaire qui possède des attributs spécifiques au processus id de thread. C'est élégant dans la mesure ou cela nous permet d'utiliser un objet de type dictionnaire, tandis que beaucoup d'utilisateurs accèdent au système simultanément, et l'objet ne contiendra que les données de la requête HTTP donnée. (aucune données n'est partagée donc l'objet est ["thread-safe"](http://fr.wikipedia.org/wiki/Threadsafe) -- _On dit qu’un programme ou qu'une portion de code est thread-safe s’il fonctionne correctement durant une exécution simultanée par plusieurs threads (processus légers)_.)
-
 
 'web.ctx' contient des variables pour chaque requête qui comprennent des informations spécifiques pour chaque demande, comme les variables environnement du client. En supposant que vous vouliez déterminer quelle était la page référante d'un utilisateur accédant à une page:
 
@@ -29,12 +27,9 @@ Exemple
             referer = web.ctx.env.get('HTTP_REFERER', 'http://google.com')
             raise web.seeother(referer)
 
-
 Ce code utilise 'web.ctx.env' pour accéder à l'environnement variables 'HTTP_REFERER'. Si il n'y en a pas, ce sera par défaut google.com. Enfin, il redirige l'utilisateur vers la page d'où il vient.
 
-
 'web.ctx' est aussi très pratique car il peut-être rêglé par un ['loadhook'] (../application_processors/fr). Les données session, par exemple, sont fixées chaque fois qu'une demande est traitée et les données sont stockées dans 'web.ctx'. Depuis que 'web.ctx' est ["thread-safe"](http://fr.wikipedia.org/wiki/Threadsafe), vous pouvez utiliser les données session comme si elles étaient un objet régulier python.
-
 
 Données que l'on trouve dans 'ctx'
 -------------------

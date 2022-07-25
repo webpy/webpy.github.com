@@ -45,9 +45,6 @@ Replace '/var/www/myapp/' with the path to your apps directory
           SetHandler None
       </Directory>
 
-
-
-
 # Hello World
 Note the following line is required:
 web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
@@ -66,7 +63,6 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     if __name__ == "__main__":
         app.run()
-
 
 # Run
 1. Start your server.

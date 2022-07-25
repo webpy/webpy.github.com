@@ -75,8 +75,5 @@ web.py 0.3 ベースのCookbookスタイルのドキュメントです。
 * [mod_wsgi deployment through Nginx](/mod_wsgi-nginx )
 * nginx deployment (requested)
 
-
-
-
 ## Subdomains:
 * サブドメインおよびユーザー名を使用してにアクセスする方法 (requested)

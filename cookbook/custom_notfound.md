@@ -27,7 +27,6 @@ How to customize notfound and other messages?
 
     app.notfound = notfound
 
-
 And to return the custom 404 from your code, just do:
 
     class example:

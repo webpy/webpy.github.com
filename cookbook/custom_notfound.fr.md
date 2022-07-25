@@ -27,7 +27,6 @@ Comment personnaliser les messages notfound et autres?
 
     app.notfound = notfound
 
-
 Puis, pour renvoyer la 404 personnalisée depuis votre code, faites juste:
 
     class example:

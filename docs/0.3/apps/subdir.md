@@ -7,9 +7,7 @@ title: Subdir application
 
 A subdir application lets you run various mount points on the same hostname, but switched based on directory mount point.
 
-
 This example assumes you have applications already working and called "app" defined in wiki.py, blog.py and auth.py. 
-
 
 ## Example code
 

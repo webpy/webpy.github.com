@@ -26,7 +26,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 ## Documentation de web.py 0.3
 
-
 ### Exemples de code
 * [Code samples](https://github.com/webpy/webpy-examples/). - traduction demandée
 
@@ -39,7 +38,6 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 
 	### API Documentation
 * [API documentation](/docs/0.3/api) - traduction demandée
-
 
 ## Cookbook
 

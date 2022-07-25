@@ -99,7 +99,6 @@ File: code.py
 
     if __name__ == "__main__": app.run()
 
-
 Template file: templates/index.html.
 
     $_('Hello')

@@ -27,7 +27,6 @@ web.input()方法返回一个包含从url(GET方法)或http header(POST方法,�
 
 注意,web.input()取得的值都会被当作string类型,即使你传递的是一些数字.
 
-
 如果你想传递一个多值变量,比如像这样:
 
 <select multiple size="3"><option>foo</option><option>bar</option><option>baz</option></select>

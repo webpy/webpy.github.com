@@ -49,7 +49,6 @@ I set up a website under IIS using the IIS Management Console. Since I was worki
 
 I decided to keep the PyISAPIe folder inside the folder where `code.py` rested. This PyISAPIe folder contained the `PyISAPIe.dll` file, and the `Http` folder. Inside the `Http` folder, I placed the most important file of all: the `Isapi.py`. That file could be thought of as the starting point for each request that is made, what glues the Request to the proper Handler and code. I worked with the `Examples\WSGI\Isapi.py` available as part of PyISAPIe. I tweaked the file to look like this:
 
-
     from Http.WSGI import RunWSGI
     from Http import Env
     #from md5 import md5

@@ -20,8 +20,6 @@ L'auto application agit comme la [basic application](/docs/0.3/apps/basic/fr), s
      if __name__ == '__main__':
          app.run() # goto http://hostname:8080/hello
 
-
-
 Vous pouvez également modifier le chemin par défaut (qui est le nom de la classe) en définissant une variable de classe "path". Voir ci-dessous:
 
 ## Exemple:

@@ -131,7 +131,6 @@ A partir de la revisión 145, es necesario fijar una variable bin-environment en
 
 <h4 id="apachecgi">.. con CGI</h4>
 
-
 Adicione lo siguiente en `httpd.conf` o `apache2.conf`.
 
     Alias /foo/static/ /camino/a/static
@@ -164,7 +163,6 @@ Nota: Por la manera en que `web.py` está implementado, rompe el módulo `cgitb`
 
     web.internalerror = cgidebugerror
 
-
 <h4 id="apachefastcgi">.. con FastCGI</h4>
 
 FastCGI es sencillo de configurar y funciona tan bien como mod_python.
@@ -183,7 +181,6 @@ y apunte su navegador a `http://ejemplo.com/code.py/`. No olvide el slash del fi
 
 [Walter tiene consejos adicionales](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-
 <h4 id="apachescgi">.. con SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 Descargue el código fuente de  `mod_scgi` aquí: http://www.mems-exchange.org/software/files/mod_scgi/
@@ -199,7 +196,6 @@ reinicie apache y luego corra su code.py con el comando siguiente:
 
 abra su navegador, visite 127.0.0.1.
 Funciona!
-
 
 <h4 id="apachemodpython">.. con mod_python</h4>
 
@@ -220,7 +216,6 @@ Para Python <2.5 haga lo siguiente:
     cd wsgiref
     wget -O modpython_gateway.py http://svn.aminus.net/misc/modpython_gateway.py
     # u obtenga el fichero de esa dirección utilizando su navegador
-
 
 Renombre su `code.py` a algo así como `codep.py` y adicione:
 

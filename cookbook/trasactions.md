@@ -9,7 +9,6 @@ title: How to use database transactions
 
 How to use database transactions
 
-
 ### Solution
 
 The web.DB class has a method `transaction` which returns a transaction object. The transaction object can be used to commit or rollback a transaction.
@@ -35,7 +34,6 @@ With python 2.5+, transaction can be used as with statement also.
         db.insert('person', name='foo')
         db.insert('person', name='bar')
 
-
 It is also possible to have nested transactions.
 
     def post(title, body, tags):
@@ -57,6 +55,5 @@ It is also possible to have nested transactions.
             t.rollback()
         else:
             t.commit()
-
 
 Nested transactions are ignored for sqlite as they are not supported.

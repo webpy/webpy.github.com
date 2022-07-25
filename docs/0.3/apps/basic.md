@@ -13,7 +13,6 @@ When a user access a resource, runs through the list of url regular expressions.
 
 If the requested url doesn't match any regex, a 404 is returned.
 
-
 ## Example
 
     import web
