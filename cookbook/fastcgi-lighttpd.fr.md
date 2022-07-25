@@ -29,7 +29,7 @@ Si vous n'êtes pas certain de savoir quelle version de [lighttpd](http://www.li
 
 ## Configuration de lighttpd sous Debian GNU/Linux
 
-<pre>
+```
 Fichiers er répertoires de /etc/lighttpd:
 ---------------------------------------
 
@@ -53,7 +53,7 @@ conf-enabled/
 l'Activation et désactivation des modules peut se faire en lançant:
 	/usr/sbin/lighty-enable-mod
  	/usr/sbin/lighty-disable-mod scripts.
-</pre>
+```
 
 **Pour web.py vous devrez activer mod_fastcgi et mod_rewrite en executant: `/usr/sbin/lighty-enable-mod` et en fournissant `fastcgi` (mod_rewrite sera activé dans le fichier `10-fastcgi.conf`, comme vous pourrez le voir dans un instant.)**
 
@@ -66,7 +66,7 @@ l'Activation et désactivation des modules peut se faire en lançant:
 
 ### `/etc/lighttpd/lighttpd.conf`
 
-<pre>
+```
 server.modules              = (
             "mod_access",
             "mod_alias",
@@ -74,18 +74,17 @@ server.modules              = (
             "mod_compress",
 )
 server.document-root       = "/path-to/webpy-app"
-</pre>
-
+```
 
 *Dans mon cas, j'ai utilisé [postgreSQL](http://doc.ubuntu-fr.org/postgresql). Pour executer lighttpd avec postgres et afin d'accorder des autorisations à la base de donnée, j'ai ajouté la ligne:*
 
-<pre>
+```
 server.username = "postgres"
-</pre>
+```
 
 ### `/etc/lighttpd/conf-available/10-fastcgi.conf`
 
-<pre>
+```
 server.modules   += ( "mod_fastcgi" )
 server.modules   += ( "mod_rewrite" )
 
@@ -105,17 +104,17 @@ server.modules   += ( "mod_rewrite" )
    "^/static/(.*)$" => "/static/$1",
    "^/(.*)$" => "/code.py/$1",
  )
-</pre>
+```
 
 ### `code.py`
 En haut du fichier, ajoutez:
 
-<pre>
+```
 #!/usr/bin/env python
-</pre>
+```
 
 .. et n'oubliez pas de le rendre executable (Autrement, vous aurez une erreur "permission denied"):
 
-<pre>
+```
 $ chmod 755 /path-to/webpy-app/code.py
-</pre>
+```

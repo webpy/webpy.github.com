@@ -9,7 +9,8 @@ title: 在webpy中使用Mako模板引擎
 如何在webpy中使用Mako模板引擎?
 ### 解决方案
 首先需要安装Mako和web.py(0.3):http://www.makotemplates.org/ 然后尝试下面的代码:
-<pre>
+
+```
 # encoding: utf-8
 # File: code.py
 import web
@@ -35,15 +36,15 @@ class hello:
 
 if __name__ == "__main__":
     app.run()
-</pre>
+```
 
 ### 模板文件
 
-<pre>
+```
 ## File: templates/hello.html
 
 Hello, ${name}.
-</pre>
+```
 
 ### 注意:
 如果你使用Apache+mod_wsgi来部署webpy程序, 你也许会在Apache错误日志中得到下面的错误信息:
@@ -51,7 +52,8 @@ Hello, ${name}.
 
 你必须使用绝对路径指出模板的位置.
 你也可以使用相对路径来让它更简单一些:
-<pre>
+
+```
 import os
 
 render = render_mako(
@@ -59,6 +61,7 @@ render = render_mako(
         input_encoding='utf-8',
         output_encoding='utf-8',
         )
-</pre>
+```
+
 ### 参考:
 http://code.google.com/p/modwsgi/wiki/ApplicationIssues

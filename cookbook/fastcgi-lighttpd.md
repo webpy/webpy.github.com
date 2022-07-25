@@ -22,7 +22,7 @@ Note: Earlier version of lighttpd may organize the .conf files differently. Yet,
 
 ### lighttpd Configuration under Debian GNU/Linux
 
-<pre>
+```
 Files and Directories in /etc/lighttpd:
 ---------------------------------------
 
@@ -42,7 +42,7 @@ conf-enabled/
 
 Enabling and disabling modules could be done by provided
 /usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
-</pre>
+```
 
 **For web py you should enable mod_fastcgi and mod_rewrite, thus run: `/usr/sbin/lighty-enable-mod` and supply `fastcgi` (mod_rewrite will be enabled within `10-fastcgi.conf` file as you will see in a moment).**
 
@@ -53,7 +53,7 @@ Enabling and disabling modules could be done by provided
 
 ### `/etc/lighttpd/lighttpd.conf`
 
-<pre>
+```
 server.modules              = (
             "mod_access",
             "mod_alias",
@@ -61,17 +61,17 @@ server.modules              = (
             "mod_compress",
 )
 server.document-root       = "/path-to/webpy-app"
-</pre>
+```
 
 In my case I used postgresql and therefore runs lighttpd as postgres in order to grant permissions to the database, therefore I added the line:
 
-<pre>
+```
 server.username = "postgres"
-</pre>
+```
 
 ### `/etc/lighttpd/conf-available/10-fastcgi.conf`
 
-<pre>
+```
 server.modules   += ( "mod_fastcgi" )
 server.modules   += ( "mod_rewrite" )
 
@@ -91,17 +91,17 @@ server.modules   += ( "mod_rewrite" )
    "^/static/(.*)$" => "/static/$1",
    "^/(.*)$" => "/code.py/$1",
  )
-</pre>
+```
 
 ### `/code.py`
 At the top of the file add:
 
-<pre>
+```
 #!/usr/bin/env python
-</pre>
+```
 
 and don't forget to make it executable (otherwise you will get a "permission denied" error):
 
-<pre>
+```
 $ chmod 755 /path-to/webpy-app/code.py
-</pre>
+```

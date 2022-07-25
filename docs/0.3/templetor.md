@@ -291,6 +291,7 @@ issue with sample code used to reproduce it:
 The `render` calls the template file with unexpected keyword argument `myvar`.
 
 Template file:
+
 ```
 $def with (var1, var2)
 
@@ -317,6 +318,7 @@ render.my_template_file(var1=..., var2=...)
 Template file doesn't have `$def with (...)` line (which indicates it doesn't use any variables), but 1 variable name is passed to the template while calling the `render` function.
 
 Template file:
+
 ```
 My sample content here without using any variable.
 ```
@@ -345,6 +347,7 @@ $:myvar
 ```
 
 Python code.
+
 ```
 # WRONG.
 render.my_template_file()

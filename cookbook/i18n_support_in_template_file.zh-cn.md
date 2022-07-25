@@ -15,7 +15,7 @@ title: i18n support in template file
 
 项目目录结构:
 
-<pre>
+```
 proj/
    |- code.py
    |- i18n/
@@ -27,11 +27,11 @@ proj/
    |- templates/
        |- hello.html
 
-</pre>
+```
 
 文件: proj/code.py
 
-<pre>
+```
 #!/usr/bin/env python
 # encoding: utf-8
 
@@ -60,38 +60,45 @@ class hello:
 app = web.application(urls, globals())
 if __name__ == "__main__":
     app.run()
-</pre>
+```
 
 模板文件: proj/templates/hello.html.
-<pre>$_("Message")</pre>
+
+```
+$_("Message")
+```
 
 创建一个locale目录并使用python2.6内建的pygettext.py从python脚本和模板文件中导出翻译:
-<pre>
+
+```
 shell> cd /path/to/proj/
 shell> mkdir -p i18n/en_US/LC_MESSAGES/
 shell> python /path/to/pygettext.py -a -v -d messages -o i18n/messages.po *.py templates/*.html
 Working on code.py
 Working on templates/hello.html
-</pre>
+```
 
 你将会得到pot file: i18n/messages.po. 它的内容和下面的差不多
 ('msgstr'包含了翻译后的信息):
-<pre>
+
+```
  # 文件 code.py:40
 msgid "Message"
 msgstr "This is translated message in file: code.py."
-</pre>
+```
 
 拷贝文件'i18n/messages.po'到目录'i18n/en_US/LC_MESSAGES/'下, 然后翻译它. 使用gettext包的msgfmt工具或者使用python2.6内建的'msgfmt.py'文件将一个pot文件编译称mo文件:
-<pre>
+
+```
 shell> msgfmt -o i18n/en_US/LC_MESSAGES/messages.mo i18n/en_US/LC_MESSAGES/messages.po
-</pre>
+```
 
 运行web.py的服务器:
 
-<pre>
+```
 shell> cd /path/to/proj/
 shell> python code.py
 http://0.0.0.0:8000/
-</pre>
+```
+
 打开你的浏览器, 比如说firefox, 然后访问地址: http://192.168.0.3:8000/, 你将会看过翻译过的信息.
