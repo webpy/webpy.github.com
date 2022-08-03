@@ -8,6 +8,7 @@ title: Documentation de web.py 0.3
 Autre langages: [English](/docs/0.3) | ...
 
 ## Installation
+
 * [Installation](/install/fr). Installer web.py, configurer LightTPD, Apache, Nginx ...(CGI, FastCgi, ...)
 
 ## Tutorial
@@ -20,6 +21,7 @@ Autre langages: [English](/docs/0.3) | ...
 * [Code samples](https://github.com/webpy/webpy-examples/). Example code of how to write some basic applications. (traduction demandée)
 
 ## Documentation des composants
+
 * [Applications](/docs/0.3/apps/fr). Comment mapper des urls à du code python.
     * [Basic app](/docs/0.3/apps/basic/fr). Mapper des expressions régulières à des classes.
     * [Auto app](/docs/0.3/apps/auto/fr). Webpy suit les urls basées sur le nom des classes.

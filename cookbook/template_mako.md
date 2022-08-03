@@ -6,6 +6,7 @@ title: Use Mako template engine in webpy
 # Use Mako template engine in webpy
 
 ### Problem
+
 How to use Mako template engine in webpy?
 
 ### Solution
@@ -69,12 +70,15 @@ You can use relative paths in order to make it easier too. e.g.
             )
 
 # Reference:
+
 * http://code.google.com/p/modwsgi/wiki/ApplicationIssues
 
 # i18n support in Mako template file:
+
 Please refer to cookbook 'i18n support in webpy template file' for i18n support in mako template file:
 
 * Cookbook: [i18n support in webpy template file](i18n_support_in_template_file )
 
 # Note:
+
 Babel is only needed to generate the .mo files.

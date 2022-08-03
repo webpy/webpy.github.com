@@ -14,6 +14,7 @@ title: 如何操作Cookie
 对web.py而言，设置/获取Cookie非常方便。
 
 ### 设置 Cookies
+
 #### 概述
 
     setcookie(name, value, expires="", domain=None, secure=False):
@@ -38,6 +39,7 @@ title: 如何操作Cookie
 `web.setcookie()`的第三个参数－"expires"是一个可选参数，它用来设定cookie过期的时间。如果是负数，cookie将立刻过期。如果是正数，就表示cookie的有效时间是多久，以秒为单位。如果该参数为空，cookie就永不过期。
 
 ### 获得Cookies
+
 #### 概述
 
 获取Cookie的值有很多方法，它们的区别就在于找不到cookie时如何处理。
@@ -59,6 +61,7 @@ title: 如何操作Cookie
         #cookieName is the name of the cookie submitted by the browser
 
 #### 示例：
+
 用`web.cookies()` 访问cookie.  如果已经用`web.setcookie()`设置了Cookie, 就可以象下面这样获得Cookie:
 
     class CookieGet:

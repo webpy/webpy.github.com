@@ -13,6 +13,7 @@ When adding work to be done, please place it in a section devoted to the page an
 
 ***
 # Cookbook: [Cookbook](/cookbook)
+
 * database select example code is incorrect
 
 ***
@@ -26,9 +27,11 @@ When finishing working on something, delete it from the list. If a code block re
 
 ***
 # Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
+
 * Move url to /samples
 
 ## Samples
+
 * simple-wiki: 0.2, external
 * simple-wiki num 2: 0.2, external
 * simple delicious: 0.2

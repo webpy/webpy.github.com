@@ -6,6 +6,7 @@ title: web.py 0.2 tutorial
 # web.py 0.2 tutorial
 
 ## Installation
+
 Vous  connaissez Python et vous voulez construire un site web. Web.py fournit le code pour faire cela d'une manière simple.
 
 Si vous voulez faire l’ensemble de ce tutoriel vous devrez installer Python, web.py, flup, psycopg2 et Postgres (ou une autre base de données avec son driver pour Python, par exemple : MySQL et mysqldb). Pour plus de détails voir le site de [webpy.org](http://webpy.org/).
@@ -13,6 +14,7 @@ Si vous voulez faire l’ensemble de ce tutoriel vous devrez installer Python, w
 Si vous avez un projet web.py existant, regardez la page de [upgrade](http://webpy.infogami.com/upgrade_to_point2) pour plus d’informations sur la migration vers la nouvelle version.
 
 ## Gestion des URLs
+
 La partie la plus importante pour chaque site web  est la structure des URLs. Les URLs ne sont pas seulement ce que les visiteurs regarde et partage avec d’autres amis, mais ils sont aussi un modèle mental qui indique comment un Site Web fonctionne. (Dans les sites populaires comme [del.icio.us](http://del.icio.us/), les URLs font partie de l’interface de l’utilisateur). Pour cela Web.py facilite la création et la gestion des URL.
 
 Pour commencer l’application  web.py , Créez un nouveau fichier et appelez le code.py par exemple et écrivez ceci dedans:

@@ -35,6 +35,7 @@ Data Found in `ctx`
 -------------------
 
 ### Request ###
+
 *   `environ` a.k.a. `env` &ndash; a dictionary containing the standard [WSGI environment variables](http://www.python.org/dev/peps/pep-0333/#environ-variables)
 *   `home` &ndash; the base path for the application, including any parts "consumed" by outer applications *http://example.org/admin*
 *   `homedomain` &ndash; ? (appears to be protocol + host) *http://example.org*
@@ -48,6 +49,7 @@ Data Found in `ctx`
 *   `fullpath` a.k.a. `path + query` &ndash; the path requested *including* query arguments but *not* including `homepath`. E.g. */articles/845?fourlegs=good&twolegs=bad*
 
 ### Response ###
+
 *   `status` &ndash; the HTTP status code (default '200 OK') *401 Unauthorized*
 *   `headers` &ndash; a list of 2-tuples containing HTTP headers
 *   `output` &ndash; a string containing the response entity

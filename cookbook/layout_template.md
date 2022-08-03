@@ -38,11 +38,13 @@ If you don't want to use the base template for something, just create a second r
 ### Tip: Page title is set in other template files which are then used by the layout (layout.html). Example:
 
 ##### templates/index.html
+
     $var title: This is title.
 
     <h3>Hello, world</h3>
 
 ##### templates/layout.html
+
     $def with (content)
     <html>
     <head>
@@ -54,6 +56,7 @@ If you don't want to use the base template for something, just create a second r
     </html>
 
 ### Tip: Add css files in other template files. Example:
+
 #### templates/login.html
 
     $var cssfiles: static/login.css static/login2.css

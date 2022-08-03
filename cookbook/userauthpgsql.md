@@ -147,6 +147,7 @@ For the reset function, we just kill the session, and redirect to the logout.htm
 	        return render.logout()
 
 ## 6th: HTML templates help
+
 Well, I think that nobody will need this, but, I prefer to give all the informations. The most important is the login.html.
 
 	<form action="/login" method="POST">

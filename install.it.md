@@ -143,6 +143,7 @@ e indirizza il tuo browser a `http://example.com/code.py/`. Non dimenticare lo s
 [Walter ha altri consigli](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html)[e](http://www.dofollownet.com/).
 
 #### ...con SCGI
+
 https://www.mems-exchange.org/software/scgi/
 scarica i sorgenti di `mod_scgi` da qui: http://www.mems-exchange.org/software/files/mod_scgi/
 Per gli utenti apache su Windows: 

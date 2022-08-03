@@ -8,9 +8,11 @@ title: Sessions with Sub-apps
 Other languages: [Français](/../cookbook/sessions_with_subapp.fr) | ...
 
 ### Note
+
 *This solutions is taken from [this](http://www.mail-archive.com/webpy@googlegroups.com/msg02557.html) post on the web.py mailing list.*
 
 ## Problem
+
 In its default behavior, session information can only be shared from within the main application, even if you 'import' the session from other modules. You need to be able to access session information from 'sub applications' but how?
 
 ## Solution

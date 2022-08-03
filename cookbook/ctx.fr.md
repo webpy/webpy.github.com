@@ -35,6 +35,7 @@ Données que l'on trouve dans 'ctx'
 -------------------
 
 ### Request ###
+
 *   `environ` alias 'env' &ndash; un dictionnaire contenant les variables environnement standard de [WSGI](http://www.python.org/dev/peps/pep-0333/#environ-variables)
 *   `home` &ndash; le chemin de base pour l'application, y compris tout élément «consommée» par les applications extérieures *http://example.org/admin*
 *   `homedomain` &ndash; ? (semble être le protocole + l'hôte) *http://example.org*
@@ -49,6 +50,7 @@ Données que l'on trouve dans 'ctx'
 *   `fullpath` alias 'path + query' &ndash; Le chemin demandé inclut les arguments de requête mais n'inclut *pas* 'homepath'. Exemple : */articles/845?fourlegs=good&twolegs=bad*
 
 ### Response ###
+
 *   `status` &ndash; Le code statut HTTP (par defaut '200 OK') *401 Unauthorized*
 *   `headers` &ndash; Une liste de deux tuples contenant les en-têtes HTTP (headers)
 *   `output` &ndash; Une chaîne contenant l'entité de réponse

@@ -17,6 +17,7 @@ This cookbook entry explains how to run web.py as a google app engine applicatio
 * [Google App Engine](https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 
 ###  Notes
+
 * The mechanisms for running GAE in python2.7 and 2.5 are different, change the app.yaml accordingly
 * code.py is the main file of your application (2.5)
 * code.app is the object that cointains the return value of gaerun() (2.7)

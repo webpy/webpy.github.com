@@ -16,6 +16,7 @@ Comment déposer et récupérer les cookies d'un utilisateur qui navigue sur le 
 Web.py permet d'une façon très simple d'utiliser les méthodes de dépot/récupération de cookies (setting/getting).
 
 ### Déposer des cookies
+
 #### Vue d'ensemble
 
     setcookie(name, value, expires="", domain=None, secure=False):
@@ -41,17 +42,21 @@ L'appel de la classe ci-dessus avec GET déposera un cookie nommé "age" ayant p
 Le troisième (et optionnel) argument de `web.setcookie()`, "expires", vous permet de définir quand vous voulez que votre cookie expire. Tout nombre négatif expirera le cookie immédiatement. Un nombre positif est le nombre de secondes durant lequel le cookie va durer (3600 se traduirait en une heure de durée du cookie). Laisser cet argument vide a pour conséquence, d'expirer le cookie session quand le navigateur s'arrête. Pour créer un cookie permanent, mettez à jour le temps d'expiration du cookie à intervalles réguliers (exemple : quand un utilisateur s'est connecté)
 
 ### Récuperer des cookies
+
 #### Vue d'ensemble
 
 Il existe de nombreuses méthodes pour retrouver des cookies, en fonction de la réaction souhaitée à un cookie manquant.
 
 ##### Méthode 1 (Renvoi None si le cookie n'est pas trouvé):
+
     web.cookies().get(cookieName)
         #cookieName est le nom du cookie présenté par le navigateur
 ##### Méthode  2 (Lève une exception AttributeError si le cookie n'est pas trouvé):
+
     foo = web.cookies()
     foo.cookieName
 ##### Méthode  3 (Evite la levée d'exception en attribuant une valeur par défaut au cookie qui n'a pas été trouvé):
+
     foo = web.cookies(cookieName=defaultValue)
     foo.cookieName   # renvoi la valeur (qui pourrait être par défaut)
         #cookieName est le nom du cookie présenté par le navigateur

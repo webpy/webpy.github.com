@@ -31,6 +31,7 @@ Le "handle" de l'application processor se réfère au code qui sera envoyé à l
 Voici un exemple de base sur la façon dont un système d'authentification est créé en utilisant les applications processors. Ce n'est pas sécurisé pour une utilisation réelle; Cela ne vise qu'à démontrer comment les application processors pouvent vérifier quelque chose avant que chaque URL ne soit traitée.
 
 ## Exemple
+
     """ Application processors dans web.py """
     import web
     

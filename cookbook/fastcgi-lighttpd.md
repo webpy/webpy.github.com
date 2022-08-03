@@ -12,6 +12,7 @@ Other languages: [Français](/../cookbook/fastcgi-lighttpd.fr) | ...
 *The following applies on lighttpd version 1.4.18*
 
 ## Note:
+
 * You may replace `code.py` with your own file name.
 * `/path-to/webpy-app` found below refers to the path to the directory contains your `code.py`
 * `/path-to/webpy-app/code.py` is the full path to your **python file**
@@ -47,6 +48,7 @@ Enabling and disabling modules could be done by provided
 **For web py you should enable mod_fastcgi and mod_rewrite, thus run: `/usr/sbin/lighty-enable-mod` and supply `fastcgi` (mod_rewrite will be enabled within `10-fastcgi.conf` file as you will see in a moment).**
 
 ## Below are instructions for the following files:
+
 * `/etc/lighttpd/lighttpd.conf`
 * `/etc/lighttpd/conf-available/10-fastcgi.conf`
 * `code.py`
@@ -94,6 +96,7 @@ server.modules   += ( "mod_rewrite" )
 ```
 
 ### `/code.py`
+
 At the top of the file add:
 
 ```

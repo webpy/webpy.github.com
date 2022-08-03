@@ -38,11 +38,13 @@ Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deu
 ### Astuce: Le titre de page est défini dans d'autres fichiers gabarits qui sont ensuite utilisés par la mise en page (layout.html). Par exemple:
 
 ##### templates/index.html
+
     $var title: This is title.
 
     <h3>Hello, world</h3>
 
 ##### templates/layout.html
+
     $def with (content)
     <html>
     <head>

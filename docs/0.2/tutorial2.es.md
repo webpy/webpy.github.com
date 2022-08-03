@@ -6,6 +6,7 @@ title: tutorial2.es
 # tutorial2.es
 
 ## Tutorial de web.py 0.2
+
 Esta es la versión en español del tutorial en [Inglés](http://webpy.infogami.com/tutorial2.en) de web.py v 0.2, que se encuentra en este mismo sitio. El trabajo de traducción está en desarrollo. Todo aquel que desee colaborar sólo debe crear su cuenta.
 
 ## Iniciando.

@@ -8,9 +8,11 @@ title: web.input
 ## web.input
 
 ### 问题
+
 如何从form或是url参数接受用户数据.
 
 ### 解决方法
+
 web.input()方法返回一个包含从url(GET方法)或http header(POST方法,即表单POST)获取的变量的web.storage对象(类似字典).举个例子,如果你访问页面http://example.com/test?id=10,在Python后台你想取得 id=10 ,那么通过web.input()那就是小菜一碟:
 
     class SomePage:

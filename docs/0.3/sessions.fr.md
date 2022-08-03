@@ -28,6 +28,7 @@ Les sessions de web.py permettent différents procédés de stockage des donnée
 Les méthodes de stockage ont des performances variées et des ajustement d'installation, donc les options vous permettent de choisir ce qui convient le mieux pour votre appplication.
 
 ## Exemple
+
 Le code suivant montre comment utiliser une session de base DiskStore.
 
     import web

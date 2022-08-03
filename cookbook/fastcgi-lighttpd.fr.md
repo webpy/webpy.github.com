@@ -17,6 +17,7 @@ Comment configurer [lighttpd](http://www.lighttpd.net/) sous Debian GNU/Linux ?
 Ce qui suit s'applique à la version 1.4.18 de lighttpd.*
 
 ### Note:
+
 * Vous devez remplacer `code.py` par le nom de votre propre fichier.
 * `/path-to/webpy-app` que vous trouverez ci-dessous, concerne le chemin vers le répertoire contenant votre `code.py`
 * `/path-to/webpy-app/code.py` est le chemin complet de votre **fichier python**
@@ -104,6 +105,7 @@ server.modules   += ( "mod_rewrite" )
 ```
 
 ### `code.py`
+
 En haut du fichier, ajoutez:
 
 ```

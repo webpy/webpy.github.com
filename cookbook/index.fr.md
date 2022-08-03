@@ -25,6 +25,7 @@ La version actuelle 0.3 est la branche développement.
 -------------------------------------------------
 
 ## Basique:
+
 * [Hello World](/helloworld/fr).
 * [Servir des fichiers statiques](/staticfiles/fr).
 * [Comprendre la gestion des URLs](/url_handling/fr).
@@ -34,6 +35,7 @@ La version actuelle 0.3 est la branche développement.
 * [Lire les données brutes d'un post](/postbasic/fr).
 
 ## Avancé
+
 * [web.ctx](/ctx/fr).
 * [Application processors, charger et décharger des hooks](/application_processors/fr).
 * [Comment utiliser web.background](/background). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -44,6 +46,7 @@ La version actuelle 0.3 est la branche développement.
 * [Run-time language switch](/runtime-language-switch). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Sessions et état des utilisateurs:
+
 * [Travailler avec les sessions](/sessions/fr).
 * [Utiliser session avec reloader](/session_with_reloader/fr).
 * [Utiliser session dans les gabarits](/session_in_template/fr).
@@ -53,11 +56,13 @@ La version actuelle 0.3 est la branche développement.
 * [Utiliser les sessions avec les sous-applications](/sessions_with_subapp/fr).
 
 ## Utils:
+
 * [Envoi de Mail](/sendmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Envoi de Mail en utilisant Gmail](/sendmail_using_gmail/fr).
 * [Webservice en utilisant soaplib + WSDL](/webservice). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Modèles de mise en forme, gabarits de mise en page:
+
 * [Templetor: le système de gabarits de web.py](/docs/0.3/templetor.fr )
 * [Mise en page selon un gabarit](/layout_template/fr).
 * [Alterner un style](/alternating_style). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -69,10 +74,12 @@ La version actuelle 0.3 est la branche développement.
 * [Comment utiliser les gabarits sur Google App Engine](/templates_on_gae). - traduction demandée, voir [Todo](/docs/0.3.fr/todo))
 
 ## Essais:
+
 * [Tester avec Paste et Nose](/testing_with_paste_and_nose). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [RESTful doctesting using an application's request method](/restful_doctesting_using_request). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Entrées utilisateurs:
+
 * [Uploader un fichier](/fileupload/fr).
 * [Stocker un fichier uploadé](/storeupload/fr).
 * [Comment limiter la taille des fichiers uploadés](/limiting_upload_size/fr).
@@ -81,6 +88,7 @@ La version actuelle 0.3 est la branche développement.
 * [Rendu individuel des champs de formulaires](/form_fields). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Base de données:
+
 * [Multiples bases de données](/multidbs). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Select: Récupérer les entrées d'une base de données](/select). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Update: Mettre à jour les entrées d'une base de données](/update). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -93,6 +101,7 @@ La version actuelle 0.3 est la branche développement.
 * [Utiliser un dictionnaire comme clause where](/where_dict). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Déploiement:
+
 * [Déploiement Fastcgi au travers lighttpd](/fastcgi-lighttpd/fr).
 * [Déploiement Fastcgi au travers Apache](/fastcgi-apache).  - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Déploiement CGI au travers Apache](/cgi-apache). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -102,4 +111,5 @@ La version actuelle 0.3 est la branche développement.
 * [Déploiement Fastcgi au travers Nginx](/fastcgi-nginx). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
 ## Sous-domaines:
+
 * Sous-domaines et comment accéder au nom utilisateur (requis)

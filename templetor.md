@@ -185,6 +185,7 @@ Here's an example:
 The first line imports templetor. The second says that our templates are in the directory `templates/`. The third give all our templates access to the `len` function. The fourth grabs the template `message.html`, passes it the argument `'Hello, world!'`, passes the result of rendering it to [mcitp](http://www.buyitcert.com/mcitp.html) the template `base.html` and prints the result. (If your templates don't end in `.html` or `.xml`, templetor will still find them, but it won't do its automatic HTML-encoding.)
 
 ## Turning Off Filter
+
 By default `template.render` will use `web.websafe` filter to do HTML-encoding. To turn it off, put a : after the $ as in:
 
     $:form.render()
@@ -196,6 +197,7 @@ Output from form.render() will be displayed as is.
 Output from variable in template will be displayed as is.
 
 ## Including / nesting templates
+
 If you want to nest one template within another, you nest the `render()` calls, and then include the variable (unfiltered) in the page.
 In your handler:
     
