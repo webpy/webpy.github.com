@@ -5,7 +5,7 @@ title: Custom NotFound message
 
 # Custom NotFound message
 
-Other languages:  [français](/../cookbook/custom_notfound.fr) | ...
+Other languages:  [Français](/../cookbook/custom_notfound.fr) | ...
 
 ## Problem
 

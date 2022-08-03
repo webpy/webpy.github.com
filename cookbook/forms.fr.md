@@ -5,7 +5,7 @@ title: Comment utiliser les formulaires
 
 # Comment utiliser les formulaires
 
-Autre langages: [english](/../forms) | ...
+Autre langages: [English](/../forms) | ...
 
 ## Problème:
 

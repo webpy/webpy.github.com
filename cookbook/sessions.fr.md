@@ -5,7 +5,7 @@ title: Travailler avec les sessions
 
 # Travailler avec les sessions
 
-Autre langages: [english](/../sessions) | ...
+Autre langages: [English](/../sessions) | ...
 
 ### Problème
 

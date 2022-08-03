@@ -5,7 +5,7 @@ title: cookies
 
 # cookies
 
-Other languages: [français](/../cookbook/cookies.fr) | ...
+Other languages: [Français](/../cookbook/cookies.fr) | ...
 
 ## Problem
 

@@ -5,7 +5,7 @@ title: Sessions with Sub-apps
 
 # Sessions with Sub-apps
 
-Other languages: [français](/../cookbook/sessions_with_subapp.fr) | ...
+Other languages: [Français](/../cookbook/sessions_with_subapp.fr) | ...
 
 ### Note
 *This solutions is taken from [this](http://www.mail-archive.com/webpy@googlegroups.com/msg02557.html) post on the web.py mailing list.*

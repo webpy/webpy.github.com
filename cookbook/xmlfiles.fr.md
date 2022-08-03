@@ -5,7 +5,7 @@ title: Servir du XML
 
 # Servir du XML
 
-Autres langages [english](/../xmlfiles) | ...
+Autres langages: [English](/../xmlfiles) | ...
 
 ### Probleme
 

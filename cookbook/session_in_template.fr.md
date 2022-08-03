@@ -5,7 +5,7 @@ title: Utiliser session dans les gabarits
 
 # Utiliser session dans les gabarits
 
-Autre langages: [english](/../session_in_template) | ...
+Autre langages: [English](/../session_in_template) | ...
 
 ## Problème:
 

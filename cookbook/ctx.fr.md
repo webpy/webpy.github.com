@@ -5,7 +5,7 @@ title: web.ctx
 
 # web.ctx
 
-Autre langages: [english](/../ctx) | ...
+Autre langages: [English](/../ctx) | ...
 
 Probleme
 -------

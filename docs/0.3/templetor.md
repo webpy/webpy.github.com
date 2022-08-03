@@ -5,7 +5,7 @@ title: Templetor - The web.py templating system
 
 # Templetor: The web.py templating system
 
-Other languages : [français](/docs/0.3/templetor.fr) | ...
+Other languages: [Français](/docs/0.3/templetor.fr) | ...
 
 ## Summary
 

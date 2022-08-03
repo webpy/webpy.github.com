@@ -5,7 +5,7 @@ title: Servir des fichiers statiques (tels que .js, .css et des images)
 
 # Servir des fichiers statiques (tels que .js, .css et des images)
 
-Autre langages : [english](/../staticfiles) | ...
+Autre langages: [English](/../staticfiles) | ...
 
 Probleme
 -------

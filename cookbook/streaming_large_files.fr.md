@@ -5,7 +5,7 @@ title: Comment streamer de gros fichiers
 
 # Comment streamer de gros fichiers
 
-Autre langages: [english](/../streaming_large_files) | ...
+Autre langages: [English](/../streaming_large_files) | ...
 
 ## Problème:
 

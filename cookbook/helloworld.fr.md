@@ -5,7 +5,7 @@ title: Hello World!
 
 # Hello World!
 
-Autre langages : [english](/../helloworld) | ...
+Autre langages: [English](/../helloworld) | ...
 
 ## Probleme
 

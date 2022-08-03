@@ -5,7 +5,7 @@ title: web.py Sessions
 
 # web.py Sessions
 
-Other languages : [français](/sessions/fr) | ...
+Other languages: [Français](/sessions/fr) | ...
 
 Sessions are a way to store information between requests, thereby making http stateful.  They work by sending the user a cookie, which maps to a session storage object on the server.  When the user requests a page, the client sends the cookie back with the request, web.py loads the session based on the key, and code can request and store information in it.
 

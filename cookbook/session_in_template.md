@@ -5,7 +5,7 @@ title: Using session in template
 
 # Using session in template
 
-Other languages: [français](/../cookbook/session_in_template.fr) | ...
+Other languages: [Français](/../cookbook/session_in_template.fr) | ...
 
 ## Problem:
 

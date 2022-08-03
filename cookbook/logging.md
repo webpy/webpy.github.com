@@ -5,7 +5,7 @@ title: Logging
 
 # Logging
 
-Other languages: [français](/../cookbook/logging.fr) | ...
+Other languages: [Français](/../cookbook/logging.fr) | ...
 
 ## Problem:
 

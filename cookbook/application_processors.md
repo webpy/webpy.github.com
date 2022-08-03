@@ -5,7 +5,7 @@ title: Application processors, hooks
 
 # Application processors, hooks
 
-Other languages : [français](/../cookbook/application_processors.fr) | ...
+Other languages: [Français](/../cookbook/application_processors.fr) | ...
 
 ##  Problem
 

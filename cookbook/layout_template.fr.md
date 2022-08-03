@@ -5,7 +5,7 @@ title: Mise en page selon un gabarit
 
 # Mise en page selon un gabarit
 
-Autres langages : [english](/../layout_template) | ...
+Autres langages: [English](/../layout_template) | ...
 
 ### Problème
 

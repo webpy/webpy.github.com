@@ -5,7 +5,7 @@ title: Authentification des utilisateurs
 
 # Authentification des utilisateurs
 
-Autres langages : [english](/../userauth) | ...
+Autres langages: [English](/../userauth) | ...
 
 ## Problème
 

@@ -5,7 +5,7 @@ title: Basic Application
 
 # Basic Application
 
-Autres langages : [français](/../basic) | ...
+Autres langages: [Français](/../basic) | ...
 
 La basic application définit un appariement des urls à des mappings de classe. Dans l'exemple ci-dessous, les variables URL définissent un appariement d'une expression régulière à un nom de classe.
 

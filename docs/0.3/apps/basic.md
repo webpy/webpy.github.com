@@ -5,7 +5,7 @@ title: Basic Application
 
 # Basic Application
 
-Other languages : [français](/docs/0.3/apps/basic/fr) | ...
+Other languages: [Français](/docs/0.3/apps/basic/fr) | ...
 
 The basic application defines a pairing of urls to class mappings.  In the example below, the urls variable defines a pairing of a regular expression to a class name. 
 

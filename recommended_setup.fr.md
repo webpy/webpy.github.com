@@ -5,7 +5,7 @@ title: Configuration recommandée
 
 # Configuration recommandée
 
-Autre langages : [english](/recommended_setup) | ...
+Autre langages: [English](/recommended_setup) | ...
 
 ### Sommaire
 

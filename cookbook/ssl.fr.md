@@ -5,7 +5,7 @@ title: Configurer le support SSL dans le serveur intégré
 
 # Configurer le support SSL dans le serveur intégré
 
-Autre langages: [english](/../ssl) | ...
+Autre langages: [English](/../ssl) | ...
 
 ## Probleme
 

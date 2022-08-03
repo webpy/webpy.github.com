@@ -5,7 +5,7 @@ title: Applications webpy
 
 # Applications webpy
 
-Autres langages : [english](/../apps) | ...
+Autres langages: [English](/../apps) | ...
 
 Les Applications webpy apparient les urls et les traitements qui sont mappés vers elles. Elles se répartissent en plusieurs catégories:
 

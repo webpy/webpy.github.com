@@ -5,7 +5,7 @@ title: Accéder aux entrées utilisateurs par le biais de web.input
 
 # Accéder aux entrées utilisateurs par le biais de web.input
 
-Autre langages: [english](/../input) | ...
+Autre langages: [English](/../input) | ...
 
 ### Problème:
 

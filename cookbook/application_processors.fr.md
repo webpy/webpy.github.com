@@ -5,7 +5,7 @@ title: Application processors, hooks
 
 # Application processors, hooks
 
-Autre langages [english](/../application_processors) | ...
+Autre langages: [English](/../application_processors) | ...
 
 ##  Probleme
 

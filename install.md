@@ -5,7 +5,7 @@ title: Install guide
 
 # Install guide
 
-Other languages : [español](/install.es) | [Japan 日本語 ](/install.ja) | [chinese 简体中文 ](/install.zh-cn) | [italiano](/install.it) | [français](/install.fr) | [Serbo-Croatian](http://science.webhostinggeeks.com/webpy-vodic-za-instalaciju)
+Other languages: [Español](/install.es) | [Japan 日本語 ](/install.ja) | [Chinese 简体中文 ](/install.zh-cn) | [Italiano](/install.it) | [Français](/install.fr) | [Serbo-Croatian](http://science.webhostinggeeks.com/webpy-vodic-za-instalaciju)
 
 ## Summary
 

@@ -5,7 +5,7 @@ title: Comment limiter la taille des fichiers uploadés
 
 # Comment limiter la taille des fichiers uploadés
 
-Autre langages: [english](/../limiting_upload_size) | ...
+Autre langages: [English](/../limiting_upload_size) | ...
 
 ## Problème:
 

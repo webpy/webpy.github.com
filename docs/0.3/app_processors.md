@@ -5,7 +5,7 @@ title: Application processors
 
 # Application processors
 
-Other languages : [français](/app_processors/fr) | ...
+Other languages: [Français](/app_processors/fr) | ...
 
 Application processors allow the programmer to execute common code before each request is processed.  This is helpful for authentication schemes or for setting up user state on each request.  Multiple processors can be added per application, and they will be executed in the order which they are added.  The most basic processor looks like this:
 

@@ -5,7 +5,7 @@ title: Utiliser les sous-applications
 
 # Utiliser les sous-applications
 
-Autre langages: [english](/../subapp) | ...
+Autre langages: [English](/../subapp) | ...
 
 ## Probleme
 

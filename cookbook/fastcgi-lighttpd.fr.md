@@ -5,7 +5,7 @@ title: Webpy + LightTTPD avec FastCGi
 
 # Webpy + LightTTPD avec FastCGi
 
-Autre langages: [english](/../fastcgi-lighttpd) | ...
+Autre langages: [English](/../fastcgi-lighttpd) | ...
 
 ## Problème:
 

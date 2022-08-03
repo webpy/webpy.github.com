@@ -5,7 +5,7 @@ title: Travailler avec les cookies
 
 # Travailler avec les cookies
 
-Autre langages: [english](/../cookies) | ...
+Autre langages: [English](/../cookies) | ...
 
 ## Problème:
 

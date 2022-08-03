@@ -5,7 +5,7 @@ title: Utiliser les sessions avec les sous-applications
 
 # Utiliser les sessions avec les sous-applications
 
-Autre langages: [english](/../sessions_with_subapp) | ...
+Autre langages: [English](/../sessions_with_subapp) | ...
 
 ### Note
 

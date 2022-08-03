@@ -5,7 +5,7 @@ title: Webpy + LightTTPD with FastCGi
 
 # Webpy + LightTTPD with FastCGi
 
-Other languages: [français](/../cookbook/fastcgi-lighttpd.fr) | ...
+Other languages: [Français](/../cookbook/fastcgi-lighttpd.fr) | ...
 
 *If you have problems with this recipe read this [thread](http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html)*
 

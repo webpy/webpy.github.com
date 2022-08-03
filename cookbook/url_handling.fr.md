@@ -5,7 +5,7 @@ title: Comprendre la gestion des urls
 
 # Comprendre la gestion des urls
 
-Autres langages [english](/../url_handling) | ...
+Autres langages: [English](/../url_handling) | ...
 
 ## Probleme: Comment conçevoir un gestionnaire d'url / distribuer un schéma pour l'ensemble du site
 

@@ -5,7 +5,7 @@ title: Installation
 
 # Installation
 
-Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/install/zh-cn) | [italiano](/install/it) | [english](/install) 
+Autre langages: [Español](/install/es) | [Japan](/install/ja) | [Chinese](/install/zh-cn) | [Italiano](/install/it) | [English](/install) 
 
 ## Sommaire
 

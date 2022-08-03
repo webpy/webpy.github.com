@@ -5,7 +5,7 @@ title: Recommended Setup
 
 # Recommended Setup
 
-Other languages : [français](/recommended_setup/fr) | ...
+Other languages: [Français](/recommended_setup/fr) | ...
 
 ### Summary
 

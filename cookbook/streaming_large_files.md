@@ -5,7 +5,7 @@ title: How to Stream Large Files
 
 # How to Stream Large Files
 
-Other languages: [français](/../cookbook/streaming_large_files.fr) | ...
+Other languages: [Français](/../cookbook/streaming_large_files.fr) | ...
 
 ## Problem
 

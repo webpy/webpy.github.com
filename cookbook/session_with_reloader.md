@@ -5,7 +5,7 @@ title: Using session with reloader
 
 # Using session with reloader
 
-Other languages: [français](/../cookbook/session_with_reloader.fr) | ...
+Other languages: [Français](/../cookbook/session_with_reloader.fr) | ...
 
 # Problem
 

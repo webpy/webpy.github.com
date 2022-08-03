@@ -5,7 +5,7 @@ title: Site Layout Template
 
 # Site Layout Template
 
-Other languages : [français](/layout_template.fr) | ...
+Other languages: [Français](/layout_template.fr) | ...
 
 ### Problem
 

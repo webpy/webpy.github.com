@@ -5,7 +5,7 @@ title: Understanding URL Handling
 
 # Understanding URL Handling
 
-Other languages : [français](./url_handling.fr) | ...
+Other languages: [Français](./url_handling.fr) | ...
 
 ## Problem: how to design a url handling / dispatching scheme for the entire site
 

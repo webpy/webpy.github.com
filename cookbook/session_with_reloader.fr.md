@@ -5,7 +5,7 @@ title: Utiliser les sessions avec reloader
 
 # Utiliser les sessions avec reloader
 
-Autre langages: [english](./session_with_reloader) | ...
+Autre langages: [English](./session_with_reloader) | ...
 
 # Probleme
 

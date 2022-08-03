@@ -5,7 +5,7 @@ title: Auto Application
 
 # Auto Application
 
-Autre langages : [english](/docs/0.3/apps/auto) | ...
+Autre langages: [English](/docs/0.3/apps/auto) | ...
 
 L'auto application agit comme la [basic application](/docs/0.3/apps/basic/fr), seulement il ne nécessite pas un mapping d'url pour être créé. Le mapping est dérivé des noms de classe (utilisant les métaclasses). Dans sa forme la plus basique :
 

@@ -5,7 +5,7 @@ title: Envoi de mails en utilisant Gmail
 
 # Envoi de mails en utilisant Gmail
 
-Autre langages: [english](/../sendmail_using_gmail) | ...
+Autre langages: [English](/../sendmail_using_gmail) | ...
 
 ## Problème:
 
