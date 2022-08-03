@@ -13,6 +13,7 @@ title: Web.py using FastCGI and Apache 2
 * [Flup](http://trac.saddi.com/flup)
 
 Note, on CentOS compiling mod_fcgid requires apache-devel be installed (available via yum).
+
 # Apache Configuration
 
 Replace '/var/www/myapp/' with the path to your apps directory
@@ -70,31 +71,27 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 # Run
 
 1. Start your server.
-1. Open your application with your browser
-1. To confirm your application is running try:
+2. Open your application with your browser
+3. To confirm your application is running try:
 
-<code>
+```
  ps aux | grep code.py
-</code>
+```
 
 # Troubleshooting
 
-<br>
 ### Check your apache error log for information!
 
-<br>
 ## Common problems
-
-<br>
 
 ### File permissions.
 
 You might see error code 255 in your logs.
 Ensure the directory is readable and that code. py is executable:
 
-<code>
+```
 chmod +x code.py
-</code>
+```
 
 ### 404 Not Found.
 

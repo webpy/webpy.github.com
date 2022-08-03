@@ -70,8 +70,8 @@ Note the following line is required: `web.wsgi.runwsgi = lambda func, addr=None:
 ### Run
 
 1. Start your server.
-1. Open your application with your browser
-1. To confirm your application is running try:
+2. Open your application with your browser
+3. To confirm your application is running try:
 
 ```
 ps aux | grep code.py

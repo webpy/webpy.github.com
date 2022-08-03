@@ -22,9 +22,9 @@ When adding work to be done, please place it in a section devoted to the page an
 When finishing working on something, delete it from the list. If a code block refers to old (version 0.2 for example) code, please add it to a separate url.  Also, add new content at new url (and delete old link when done) For instance:
 
 1. /foo is out of date with version 0.2 code
-1. move /foo to /foo/0.2
-1. put new code at /foo/0.3
-1. delete content at /foo, and update any urls that link to it
+2. move /foo to /foo/0.2
+3. put new code at /foo/0.3
+4. delete content at /foo, and update any urls that link to it
 
 ---
 

@@ -52,20 +52,20 @@ web.py fue publicado originalmente cuando Aaron Swartz trabajaba en [reddit.com]
 ### Algunos testimonios de usuarios:
 
 * "En el ecosistema de los frameworks web, alguno debe ocupar el nicho de 'pequeño, ligero y rápido': web.py hace eso."*  
-<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Lloyd Dalton, [colr.org](http://colr.org)</span>
+<span class="cite">&mdash; Lloyd Dalton, [colr.org](http://colr.org)</span>
 
 * "Hemos terminado de reescribir nuestro servidor en apenas unos días con la ayuda de web.py y tuvo todo lo que esperábamos."*  
-<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Sam Hsiung, [YouOS][25]</span>
+<span class="cite">&mdash; Sam Hsiung, [YouOS][25]</span>
 
    [25]: http://www.youos.com/
 
 * "[Web.py inspiró] el web framework que usamos en FriendFeed [y] el framework para aplicaciones web que se entrega con App Engine..."*  
-<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://backchannel.org/blog/google-app-engine), co-fundador de FriendFeed y líder técnico original en Google App Engine</span>
+<span class="cite">&mdash; Brett Taylor](http://backchannel.org/blog/google-app-engine), co-fundador de FriendFeed y líder técnico original en Google App Engine</span>
 
 * "Django te permite escribir aplicaciones web en Django. TurboGears te permite escribir aplicaciones web en TurboGears. Web.py te permite escribir aplicaciones web en Python."*  
-<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Alice Atlas</span>
+<span class="cite">&mdash; Alice Atlas</span>
 
 * "Guido* [van Rossum, creador de Python]*, probablemente encuentres que web.py es el que mejor se ajusta a tu estilo. ... Si no te gusta, no puedo imaginarme cual de la otra docena de frameworks existentes te __puede__ gustar."*   
-<span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Phillip J. Eby, creador de Python Web Server Gateway Interface (WSGI) [#][30]</span>
+<span class="cite">&mdash; Phillip J. Eby, creador de Python Web Server Gateway Interface (WSGI) [#][30]</span>
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15

@@ -38,8 +38,8 @@ First of all, we need a table for the users. This scheme is very simple, but is 
 
 There will be 2 states during the login/logout session:
 
-- "Login" is for the login page
-- "Reset" for the logout page.
+* "Login" is for the login page
+* "Reset" for the logout page.
 
 *sessions doesn't work in [debug](./tutorial#developing) mode because it interfere with reloading. see [session_with_reloader](session_with_reloader) for more details.*
 
@@ -97,8 +97,8 @@ def create_render(privilege):
 
 Now, let's have fun:
 
-- If you are already logged, you are redirecting to the login_double.html template file
-- Else, to the login.html.
+* If you are already logged, you are redirecting to the login_double.html template file
+* Else, to the login.html.
 
 ```
 class Login:
@@ -111,10 +111,10 @@ class Login:
             return '%s' % render.login()
 ```
 
-- Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row.
-- For security, we don't store passwords in the database directly, but store the hash of the password + salt; this is kind of line one-way encryption, so we can tell if the user's passwords match, but an attacker couldn't figure out what the password was to start with.
-- If the login/pass is ok, redirect to the login_ok.html.
-- If not, redirect to the login_error.html.
+* Ok, ok. Now, for the POST(). According to the .html file, we recover the variables posted in the form (see the login.html), and we compare it to the example_users.user row.
+* For security, we don't store passwords in the database directly, but store the hash of the password + salt; this is kind of line one-way encryption, so we can tell if the user's passwords match, but an attacker couldn't figure out what the password was to start with.
+* If the login/pass is ok, redirect to the login_ok.html.
+* If not, redirect to the login_error.html.
 
 	    def POST(self):
 	        name, passwd = web.input().name, web.input().passwd
@@ -169,7 +169,7 @@ Well, I think that nobody will need this, but, I prefer to give all the informat
 
 ## 7th: Some problems or questions ?
 
-- Mail: you can contact me at guillaume(at)process-evolution(dot)fr
-- IRC: #webpy on irc.freenode.net (pseudo: Ephedrax)
-- Translations: I'm french, and my english is bad...you can edit my work
-- Revision: Vayn <vayn at vayn dot de>
+* Mail: you can contact me at guillaume(at)process-evolution(dot)fr
+* IRC: #webpy on irc.freenode.net (pseudo: Ephedrax)
+* Translations: I'm french, and my english is bad...you can edit my work
+* Revision: Vayn <vayn at vayn dot de>
