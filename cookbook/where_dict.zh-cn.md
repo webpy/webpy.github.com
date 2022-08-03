@@ -5,13 +5,11 @@ title: 使用字典动态构造where子句
 
 # 使用字典动态构造where子句
 
-问题
--------
+## 问题
 
 你希望创建一个字典来构造动态的where子句并且希望能够在查询语句中使用。
 
-解决
---------
+## 解决
 
     >>> import web
     >>> db = web.database(dbn='postgres', db='mydb', user='postgres')
@@ -19,8 +17,7 @@ title: 使用字典动态构造where子句
     >>> db.delete('mytable', where=web.db.sqlwhere(where_dict), _test=True)
     <sql: "DELETE FROM mytable WHERE col1 = 1 AND col2 = 'sometext'">
 
-解释
------------
+## 解释
 
 `web.db.sqlwhere` takes a Python dictionary as an argument and converts it into a string useful for where clause in different queries. You can also use an optional `grouping` argument to define the exact gouping of the individual keys. For instance:
 

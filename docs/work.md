@@ -11,12 +11,13 @@ We need both reporters (tell us what's wrong!) and fixers (write code, make cont
 
 When adding work to be done, please place it in a section devoted to the page and/or parent page, and a link to that page. For example:
 
-***
+---
+
 # Cookbook: [Cookbook](/cookbook)
 
 * database select example code is incorrect
 
-***
+---
 
 When finishing working on something, delete it from the list. If a code block refers to old (version 0.2 for example) code, please add it to a separate url.  Also, add new content at new url (and delete old link when done) For instance:
 
@@ -25,7 +26,8 @@ When finishing working on something, delete it from the list. If a code block re
 1. put new code at /foo/0.3
 1. delete content at /foo, and update any urls that link to it
 
-***
+---
+
 # Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
 
 * Move url to /samples
@@ -56,4 +58,4 @@ vhost, metaclass and multiple apps should have separate section, but this setup 
 
 * Leave them external, but annotate which version of webpy they use.
 
-***
+---

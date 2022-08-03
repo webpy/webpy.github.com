@@ -16,7 +16,7 @@ Ici sera réunie la liste des travaux à réaliser et ceux en cours de réalisat
 1. Les chemins des pages traduites devront ressembler à l'exemple ci-dessous et respecter la hierarchie du schéma anglais:
 	*cookbook/helloworld* --> *cookbook/helloworld/fr*
 
--------------------------------------------------
+---
 
 # En cours
 

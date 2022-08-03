@@ -22,7 +22,7 @@ La version actuelle 0.3 est la branche développement.
 
 1. Cette documentation est finalement pour la version 0.3, donc veuillez ajouter du code qui ne fonctionne qu'avec cette version.
 
--------------------------------------------------
+---
 
 ## Basique:
 

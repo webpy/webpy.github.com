@@ -7,12 +7,10 @@ title: Servir des fichiers statiques (tels que .js, .css et des images)
 
 Autre langages: [English](/../staticfiles) | ...
 
-Probleme
--------
+## Probleme
 Comment servir des fichiers statiques ?
 
-Solution
---------
+## Solution
 
 ### Serveur web.py
 

@@ -5,20 +5,17 @@ title: web.ctx
 
 # web.ctx
 
-问题
--------
+## 问题
 
 如何在代码中得到客户端信息？比如：来源页面(referring page)或是客户端浏览器类型
 
-解法
---------
+## 解法
 
 使用web.ctx即可。首先讲一点架构的东西：web.ctx基于threadeddict类，又被叫做ThreadDict。这个类创建了一个类似字典(dictionary-like)的对象，对象中的值都是与线程id相对应的。这样做很妙,因为很多用户同时访问系统时，这个字典对象能做到仅为某一特定的HTTP请求提供数据(因为没有数据共享，所以对象是线程安全的)
 
 web.ctx保存每个HTTP请求的特定信息，比如客户端环境变量。假设，我们想知道正在访问某页面的用户是从哪个网页跳转而来的：
 
-例子
--------
+## 例子
 
     class example:
         def GET(self):
@@ -29,8 +26,7 @@ web.ctx保存每个HTTP请求的特定信息，比如客户端环境变量。假
 
 web.ctx另一个特性，是它可以被loadhook赋值。例如：当一个请求被处理时，会话(Session)就会被设置并保存在web.ctx中。由于web.ctx是线程安全的，所以我们可以象使用普通的python对象一样，来操作会话(Session)。
 
-'ctx'中的数据成员
--------------------
+## 'ctx'中的数据成员
 
 ### Request ###
 * `environ` 又被写做. `env` &ndash; 包含标准WSGI环境变量的字典。
