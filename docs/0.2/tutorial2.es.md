@@ -6,6 +6,7 @@ title: tutorial2.es
 # tutorial2.es
 
 ## Tutorial de web.py 0.2
+
 Esta es la versión en español del tutorial en [Inglés](http://webpy.infogami.com/tutorial2.en) de web.py v 0.2, que se encuentra en este mismo sitio. El trabajo de traducción está en desarrollo. Todo aquel que desee colaborar sólo debe crear su cuenta.
 
 ## Iniciando.
@@ -38,7 +39,6 @@ La primera partes es una [expresión regular](http://osteele.com/tools/rework/) 
 Esta linea dice que queremos que el URL `/` (ej: la página principal) debe ser manejada por la clase llamada `index`.
 
 Por lo tanto, todo lo que se require es escribir la clase `index`. Aunque la mayoría de las personas no lo saben, su navegador web, utiliza un lenguaje conocido como HTTP para comunicarse con la World Wide Web. Los detalles no son relevantes, pero la idea básica es que los visitantes de su sitio web le solicitan al servidor de web que realice una función especifica (como `GET` o `POST`) con las URLs (como en `/` o `/foo?f=1`).
-
 
 `GET` es el que nos resulta familiar a todos, es el que se usa para pedir el texto de una página web. Cuando escribe `harvard.edu` en su navegador web, éste le pide literarmente al servidor web de Harvard que `GET /`. El segundo más famoso, `POST`, se usa a menudo para enviar ciertos tipos de formularios, como una petición de compra de algún artículo. Usted usa `POST` siempre que el acto de enviar un formulario _hace algo_ (como utilizar su tarjeta de crédito y procesar un recibo). Esta es la clave, porque las `GET` URLs pueden circular y se indexadas por los motores de búsqueda, lo que realmente quieres para la mayoría de tus páginas pero, definitivamente, _no quieres_ que procesen recibos (¡imagina que Google intentase comprar todo lo que hay en tu sitio web!).
 

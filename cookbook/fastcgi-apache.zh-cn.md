@@ -5,14 +5,17 @@ title: Web.py using FastCGI and Apache 2
 
 # Web.py using FastCGI and Apache 2
 
-#Requirements
+# Requirements
+
 * Apache 2.x
 * [mod_fcgid](http://fastcgi.coremail.cn/)
 * [mod_rewrite](http://httpd.apache.org/docs/2.0/rewrite/)
 * [Flup](http://trac.saddi.com/flup)
 
 Note, on CentOS compiling mod_fcgid requires apache-devel be installed (available via yum).
-#Apache Configuration
+
+# Apache Configuration
+
 Replace '/var/www/myapp/' with the path to your apps directory
 
     LoadModule rewrite_module modules/mod_rewrite.so
@@ -45,10 +48,8 @@ Replace '/var/www/myapp/' with the path to your apps directory
           SetHandler None
       </Directory>
 
+# Hello World
 
-
-
-#Hello World
 Note the following line is required:
 web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
 
@@ -67,41 +68,44 @@ web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     if __name__ == "__main__":
         app.run()
 
+# Run
 
-#Run
 1. Start your server.
-1. Open your application with your browser
-1. To confirm your application is running try:
+2. Open your application with your browser
+3. To confirm your application is running try:
 
-<code>
+```
  ps aux | grep code.py
-</code>
+```
 
-#Troubleshooting
+# Troubleshooting
 
-<br>
-###Check your apache error log for information!
+### Check your apache error log for information!
 
-<br>
-##Common problems
-<br>
+## Common problems
 
-###File permissions.
+### File permissions.
+
 You might see error code 255 in your logs.
 Ensure the directory is readable and that code. py is executable:
 
-<code>
+```
 chmod +x code.py
-</code>
+```
 
-###404 Not Found.
+### 404 Not Found.
+
 Is your Alias path correct in your apache configuration?
 
-###Other problems
+### Other problems
+
 Web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing.
 Did you add this line?
-<pre>
+
+```
  web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
-</pre>
-#Misc
+```
+
+# Misc
+
 After updating your application you may need to restart your web server to see the changes.

@@ -5,7 +5,7 @@ title: Téléchargement
 
 # Téléchargement
 
-Autre langages : [english](/download) | ...
+Autre langages: [English](/download) | ...
 
 ## Obtenir la dernière version stable
 

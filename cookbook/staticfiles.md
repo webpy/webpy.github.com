@@ -5,7 +5,7 @@ title: Serving Static Files (such as js, css and images)
 
 # Serving Static Files (such as js, css and images)
 
-Other languages : [français](/staticfiles.fr) | ...
+Other languages: [Français](/staticfiles.fr) | ...
 
 # Problem
 
@@ -15,12 +15,12 @@ How to serve static files?
 
 ## web.py server
 
-Create a directory (also known as a folder) called <code>static</code> in the
+Create a directory (also known as a folder) called `static` in the
 location of the script that runs the web.py server. Then place the static
 files you wish to serve in the static folder.
 
-For example, the URL <code>http://localhost/static/logo.png</code> will send
-the image <code>./static/logo.png</code> to the client.
+For example, the URL `http://localhost/static/logo.png` will send
+the image `./static/logo.png` to the client.
 
 ## Apache
 

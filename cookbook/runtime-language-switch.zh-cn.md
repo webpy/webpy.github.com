@@ -6,6 +6,7 @@ title: 实时语言切换
 # 实时语言切换
 
 ## 问题:
+
 如何实现实时语言切换？
 
 ## 解法:
@@ -98,7 +99,6 @@ title: 实时语言切换
             return render.index()
 
     if __name__ == "__main__": app.run()
-
 
 模板文件: templates/index.html.
 

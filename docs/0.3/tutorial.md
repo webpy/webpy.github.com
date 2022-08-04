@@ -5,7 +5,7 @@ title: Tutorial
 
 # Tutorial
 
-Other languages : [chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [français](/docs/0.3/tutorial.fr) | [Bahasa Indonesia](/docs/0.3/tutorial.id) | ...
+Other languages: [Chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [Français](/docs/0.3/tutorial.fr) | [Bahasa Indonesia](/docs/0.3/tutorial.id) | ...
 
 ## Summary
 
@@ -23,12 +23,11 @@ Other languages : [chinese 简体中文 ](/docs/0.3/tutorial.zh-cn) | [français
 
 So you know Python and want to make a website. web.py provides the code to make that easy.
 
-If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). (See <a href="/install">install</a> for details.)
+If you want to do the whole tutorial, you'll need to have installed Python, web.py, flup, psycopg2, and Postgres (or equivalent database and Python driver). (See [install](/install) for details.)
 
 Let's get started.
 
-<a name="urlhandling"> </a>
-## URL Handling
+<h2 id="urlhandling">URL Handling</h2>
 
 The most important part of any website is its URL structure. Your URLs aren't just the thing that your visitors see and email to their friends, they also provide a mental model of how your website works. On popular sites like [del.icio.us](http://del.icio.us/), the URLs are even part of the user interface. web.py makes it easy to make great URLs.
 
@@ -48,8 +47,7 @@ The first part is a [regular expressions](http://osteele.com/tools/rework/) that
 
 This line says we want the URL `/` (i.e. the front page) to be handled by the class named `index`.
 
-<a name="getpost"> </a>
-## GET and POST: the difference
+<h2 id="getpost">GET and POST: the difference</h2>
 
 Now we need to write the `index` class. While most people don't notice it just browsing around, your browser uses a language known as HTTP for communicating with the World Wide Web. The details aren't important, but the basic idea is that Web visitors ask web servers to perform certain functions (like `GET` or `POST`) on URLs (like `/` or `/foo?f=1`).
 
@@ -92,8 +90,7 @@ if __name__ == "__main__":
     app.run()
 ```
 
-<a name="start"> </a>
-## Start the server
+<h2 id="start">Start the server</h2>
 
 If you go to your command line and type:
 
@@ -112,8 +109,7 @@ $ python code.py 1234
 http://0.0.0.0:1234/
 ```
 
-<a name="templating"> </a>
-## Templating
+<h2 id="templating">Templating</h2>
 
 Writing HTML from inside Python can get cumbersome; it's much more fun to write Python from inside HTML. Luckily, web.py makes that pretty easy.
 
@@ -165,16 +161,14 @@ and change the definition of the method `GET` to:
 
 and delete the line setting name. Now visit `/Joe` and it should say hello to Joe.
 
-If you wish to learn more about web.py templates, visit the <a href="/docs/0.3/templetor">templetor page</a>.
+If you wish to learn more about web.py templates, visit the [templetor page](/docs/0.3/templetor).
 
-<a name="forms"> </a>
-## Forms
+<h2 id="forms">Forms</h2>
 
 The form module of web.py allows the ability to generate html forms, get user input, and validate it before processing it or adding it to a database.
 If you want to learn more about using the module forms web.py, see the [Documentation](/docs/0.3) or direct link to [Form Library](/cookbook/forms)
 
-<a name="databasing"> </a>
-## Databasing
+<h2 id="databasing">Databasing</h2>
 
 **Note:** Before you can start using a database, make sure you have the appropriate database library installed.  For MySQL databases, use [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) and for Postgres use [psycopg2](http://initd.org/pub/software/psycopg/).
 
@@ -269,8 +263,7 @@ Some quick additional notes: `db.update` works just like `db.insert` except inst
 
 You can find the full details on these and all the web.py functions in [the documentation](/docs/0.3).
 
-<a name="developing"> </a>
-## Developing
+<h2 id="developing">Developing</h2>
 
 web.py also has a few tools to help us with debugging. When running with the built-in webserver, it starts the application in debug mode. In debug mode any changes to code and templates are automatically reloaded and error messages will have more helpful information.
 
@@ -278,8 +271,7 @@ The debug is not enabled when the application is run in a real webserver. If you
 
     web.config.debug = False
 
-<a name="whatnext"> </a>
-## What Next ?
+<h2 id="whatnext">What Next ?</h2>
 
 This ends the tutorial for now. Take a look at the [cookbook](/cookbook/) and the [code examples](https://github.com/webpy/webpy-examples/)  for lots more cool stuff you can do with web.py.
 Also don't forget about the [api reference](/docs/0.3/api)

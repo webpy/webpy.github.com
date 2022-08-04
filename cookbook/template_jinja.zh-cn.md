@@ -44,6 +44,6 @@ if __name__ == "__main__":
 
 ### 模板文件: templates/hello.html
 
-~~~
+```
 Hello, {{ name }}.
-~~~
+```

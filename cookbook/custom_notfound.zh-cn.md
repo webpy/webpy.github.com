@@ -25,7 +25,6 @@ title: 自定义NotFound消息
 
     app.notfound = notfound
 
-
 要返回自定义的NotFound消息，这么做即可：
 
     class example:

@@ -67,12 +67,11 @@ Note the following line is required: `web.wsgi.runwsgi = lambda func, addr=None:
     if __name__ == "__main__":
         app.run()
 
-
 ### Run
 
 1. Start your server.
-1. Open your application with your browser
-1. To confirm your application is running try:
+2. Open your application with your browser
+3. To confirm your application is running try:
 
 ```
 ps aux | grep code.py
@@ -102,9 +101,11 @@ Is your Alias path correct in your apache configuration?
 web.py spawns http://0.0.0.0:8080, dies unexpectedly, or returns nothing.
 
 Did you add this line?
-<pre>
+
+```
  web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
-</pre>
+```
+
 #### Misc
 
 * After updating your application you may need to restart your web server to see the changes.

@@ -5,20 +5,18 @@ title: Servir des fichiers statiques (tels que .js, .css et des images)
 
 # Servir des fichiers statiques (tels que .js, .css et des images)
 
-Autre langages : [english](/../staticfiles) | ...
+Autre langages: [English](/../staticfiles) | ...
 
-Probleme
--------
+## Probleme
 Comment servir des fichiers statiques ?
 
-Solution
---------
+## Solution
 
 ### Serveur web.py
 
-Créez un répertoire (ou dossier) que vous nommerez <code>static</code> au même endroit ou se situe le script qui fait tourner web.py (par defaut code.py). Puis plaçez les fichiers statiques que vous servirez dans le repertoire "static".
+Créez un répertoire (ou dossier) que vous nommerez `static` au même endroit ou se situe le script qui fait tourner web.py (par defaut code.py). Puis plaçez les fichiers statiques que vous servirez dans le repertoire "static".
 
-Par exemple, l'url <code>http://localhost/static/logo.png</code> enverra l'image <code>./static/logo.png</code> au client.
+Par exemple, l'url `http://localhost/static/logo.png` enverra l'image `./static/logo.png` au client.
 
 ### Apache
 

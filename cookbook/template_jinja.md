@@ -6,6 +6,7 @@ title: Use Jinja2 template engine in webpy
 # Use Jinja2 template engine in webpy
 
 ### Problem
+
 How to use Jinja2 (http://jinja.pocoo.org/2/) template engine in webpy?
 
 ### Solution 1
@@ -43,9 +44,9 @@ if __name__ == "__main__":
 
 ### Template file: templates/hello.html
 
-~~~
+```
 Hello, {{ name }}.
-~~~
+```
 
 ### Solution 2
 

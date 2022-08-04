@@ -11,31 +11,34 @@ We need both reporters (tell us what's wrong!) and fixers (write code, make cont
 
 When adding work to be done, please place it in a section devoted to the page and/or parent page, and a link to that page. For example:
 
-***
-#Cookbook: [Cookbook](/cookbook)
+---
+
+# Cookbook: [Cookbook](/cookbook)
+
 * database select example code is incorrect
 
-***
+---
 
 When finishing working on something, delete it from the list. If a code block refers to old (version 0.2 for example) code, please add it to a separate url.  Also, add new content at new url (and delete old link when done) For instance:
 
 1. /foo is out of date with version 0.2 code
-1. move /foo to /foo/0.2
-1. put new code at /foo/0.3
-1. delete content at /foo, and update any urls that link to it
+2. move /foo to /foo/0.2
+3. put new code at /foo/0.3
+4. delete content at /foo, and update any urls that link to it
 
+---
 
-***
-#Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
+# Code samples: [Code samples](https://github.com/webpy/webpy-examples/)
+
 * Move url to /samples
 
 ## Samples
+
 * simple-wiki: 0.2, external
 * simple-wiki num 2: 0.2, external
 * simple delicious: 0.2
 * alternate tutorial SQLite & SQLObject: 0.2
 * templating with genshi: should be part of larger 'templating' section
-
 
 ## tips & tricks
 
@@ -51,9 +54,8 @@ vhost, metaclass and multiple apps should have separate section, but this setup 
 * serving images: 0.2, should use mimetypes module?
 * multiple apps: not needed
 
-
 ## Real web apps
 
 * Leave them external, but annotate which version of webpy they use.
 
-***
+---

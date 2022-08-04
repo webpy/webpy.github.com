@@ -5,32 +5,30 @@ title: Templetor - The web.py templating system
 
 # Templetor: The web.py templating system
 
-Other languages : [français](/docs/0.3/templetor.fr) | ...
+Other languages: [Français](/docs/0.3/templetor.fr) | ...
 
 ## Summary
 
-* <a href="#introduction">Introduction</a>
-* <a href="#using">Using the template system</a>
-* <a href="#syntax">Syntax</a>
-    * <a href="#expressionsubstitution">Expression Substitution</a>
-    * <a href="#assignments">Assignments</a>
-    * <a href="#filtering">Filtering</a>
-    * <a href="#newlinesuppression">Newline suppression</a>
-    * <a href="#escaping">Escaping '$'</a>
-    * <a href="#comments">Comments</a>
-    * <a href="#controlstructure">Control Structures</a>
-* <a href="#otherstatements">Other Statements</a>
-    * <a href="#def">$def : define a new template function using $def</a>
-    * <a href="#code">$code : arbitrary python code can be written</a>
-    * <a href="#var">$var : can be used to define additional properties</a>
-* <a href="#builtins">Builtins and globals</a>
-* <a href="#security">Security</a>
-* <a href="#upgrading">Upgrading from web.py 0.2 templates</a>
-* <a href="#errors">Errors you may experience</a>
+* [Introduction](#introduction)
+* [Using the template system](#using)
+* [Syntax](#syntax)
+    * [Expression Substitution](#expressionsubstitution)
+    * [Assignments](#assignments)
+    * [Filtering](#filtering)
+    * [Newline suppression](#newlinesuppression)
+    * [Escaping '$'](#escaping)
+    * [Comments](#comments)
+    * [Control Structures](#controlstructure)
+* [Other Statements](#otherstatements)
+    * [$def : define a new template function using $def](#def)
+    * [$code : arbitrary python code can be written](#code)
+    * [$var : can be used to define additional properties](#var)
+* [Builtins and globals](#builtins)
+* [Security](#security)
+* [Upgrading from web.py 0.2 templates](#upgrading)
+* [Errors you may experience](#errors)
 
-
-<a name="introduction"></a>
-# Introduction
+<h1 id="introduction">Introduction</h1>
 
 The web.py template language, called `Templetor` is designed to bring the power of Python to templates.
 Instead of inventing new syntax for templates, it re-uses python syntax. 
@@ -46,9 +44,7 @@ Here is a simple template:
 The first line says that the template is defined with one argument called `name`.
 `$name` in the second line will be replaced with the value of name when the template is rendered.
 
-
-<a name="using"></a>
-# Using the template system
+<h1 id="using">Using the template system</h1>
 
 The most common way of rendering templates is this:
 
@@ -69,11 +65,9 @@ And if you have the template as a string:
     hello = web.template.Template(template)
     print hello('world')
 
-<a name="syntax"></a>
-# Syntax
+<h1 id="syntax">Syntax</h1>
 
-<a name="expressionsubstitution"></a>
-## Expression Substitution
+<h2 id="expressionsubstitution">Expression Substitution</h2>
 
 Special character `$` is used to specify python expressions. Expression can be enclosed in `()` or `{}` for explicit grouping.
 
@@ -82,8 +76,7 @@ Special character `$` is used to specify python expressions. Expression can be e
     Gawk, a $dictionary[key].function('argument'). 
     Cool, a $(limit)ing.
 
-<a name="assignments"></a>
-## Assignments
+<h2 id="assignments">Assignments</h2>
 
 Sometimes you may want to define new variables and re-assign some variables.
     
@@ -95,8 +88,7 @@ Sometimes you may want to define new variables and re-assign some variables.
 
 Notice the space after `$` in the assignment. It is required to differentiate assignment from expression substitution.
 
-<a name="filtering"></a>
-## Filtering 
+<h2 id="filtering">Filtering </h2>
 
 By default, Templetor uses `web.websafe` filter to do HTML-encoding.
 
@@ -108,8 +100,7 @@ To turnoff filter use `:` after `$`. For example:
     The following will not be html escaped.
     $:form.render()
 
-<a name="newlinesuppression"></a>   
-## Newline suppression
+<h2 id="newlinesuppression">Newline suppression</h2>
 
 Newline can be suppressed by adding `\` character at the end of line. 
 
@@ -118,23 +109,20 @@ Newline can be suppressed by adding `\` character at the end of line.
     (like these) \ 
     then there will be no newline.
     
-<a name="escaping"></a> 
-## Escaping $
+<h2 id="escaping">Escaping $</h2>
 
 Use `$$` to get `$` in the output.
 
     Can you lend me $$50?
     
-<a name="comments"></a> 
-## Comments
+<h2 id="comments">Comments</h2>
 
 `$#` is used as comment indicator. Anything starting with $# till end of the line is ignored.
 
     $# this is a comment
     Hello $name.title()! $# display the name in title case
 
-<a name="controlstructure"></a> 
-## Control Structures
+<h2 id="controlstructure">Control Structures</h2>
 
 The template system supports `for`, `while`, `if`, `elif` and `else`.
 Just like in python, body of the statement is indented.
@@ -173,11 +161,9 @@ Sometimes these can be very handy.
         </tr>
     </table>
     
-<a name="otherstatements"></a> 
-## Other Statements
+<h2 id="otherstatements">Other Statements</h2>
 
-<a name="def"></a>
-### def
+<h3 id="def">def</h3>
 
 You can define a new template function using `$def`. Keyword arguments are also supported.
 
@@ -204,8 +190,7 @@ Another example:
     $ data = [['a', 'b', 'c'], [1, 2, 3], [2, 4, 6], [3, 6, 9] ]
     $:table([tr(d) for d in data])
     
-<a name="code"></a>
-### code
+<h3 id="code">code</h3>
 
 Arbitrary python code can be written using the `code` block.
 
@@ -225,8 +210,7 @@ Arbitrary python code can be written using the `code` block.
     The variables defined in the code block can be used here.
     For example, $limit(x)
     
-<a name="var"></a>
-### var
+<h3 id="var">var</h3>
 
 The `var` block can be used to define additional properties in the template result.
 
@@ -249,8 +233,7 @@ The result of the above template can be used as follows:
     >>> str(out)
     '\n\n<div>\nhello world\n</div>\n'
 
-<a name="builtins"></a>
-# builtins and globals
+<h1 id="builtins">builtins and globals</h1>
 
 Just like any Python function, template can also access builtins along with its arguments and local variables.
 Some common builtin functions like `range`, `min`, `max` etc. and boolean values `True` and `False` are made available to all the templates.
@@ -269,8 +252,7 @@ Builtins that are exposed in the templates can be controlled too.
     # disable all builtins
     render = web.template.render('templates', builtins={})
 
-<a name="security"></a>
-# Security
+<h1 id="security">Security</h1>
 
 One of the design goals of Templetor is to allow untrusted users to write templates.
 
@@ -282,8 +264,7 @@ To make the template execution safe, the following are not allowed in the templa
 
 `SecurityException` is raised if your template uses any of these.
 
-<a name="upgrading"></a>
-# Upgrading from web.py 0.2 templates
+<h1 id="upgrading">Upgrading from web.py 0.2 templates</h1>
 
 The new implementation is mostly compatible with the earlier implementation. However some cases might not work because of the following reasons.
 
@@ -297,8 +278,7 @@ The following are still supported but not preferred.
 * Using `\$` for escaping dollar. Use `$$` instead.
 * Modifying `web.template.Template.globals`. pass globals to `web.template.render` as argument instead.
 
-<a name="errors"></a>
-# Errors you may experience
+<h1 id="errors">Errors you may experience</h1>
 
 If your error isn't mentioned here, feel free to report it by creating an
 issue with sample code used to reproduce it:
@@ -309,6 +289,7 @@ issue with sample code used to reproduce it:
 The `render` calls the template file with unexpected keyword argument `myvar`.
 
 Template file:
+
 ```
 $def with (var1, var2)
 
@@ -335,6 +316,7 @@ render.my_template_file(var1=..., var2=...)
 Template file doesn't have `$def with (...)` line (which indicates it doesn't use any variables), but 1 variable name is passed to the template while calling the `render` function.
 
 Template file:
+
 ```
 My sample content here without using any variable.
 ```
@@ -363,6 +345,7 @@ $:myvar
 ```
 
 Python code.
+
 ```
 # WRONG.
 render.my_template_file()

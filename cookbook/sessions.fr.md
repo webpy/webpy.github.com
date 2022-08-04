@@ -5,7 +5,7 @@ title: Travailler avec les sessions
 
 # Travailler avec les sessions
 
-Autre langages: [english](/../sessions) | ...
+Autre langages: [English](/../sessions) | ...
 
 ### Problème
 
@@ -43,7 +43,6 @@ L'objet session est chargé avec des données session avant le traitement de la 
 
 L'argument optionnel `initializer` de Session spécifie la session initiale.
 
-
 Vous pouvez utiliser `DBStore` à la place de `DiskStore` si vous préférez stocker les sessions dans une base de donnée au lieu du disque. Pour utiliser DBStore, vous avez besoin d'une table avec la structure suivante:
 
      create table sessions (
@@ -57,7 +56,6 @@ Puis vous devez passer l'objet `db` et le nom de la table de session au constuct
     db = web.database(dbn='postgres', db='mydatabase', user='myname', pw='')
     store = web.session.DBStore(db, 'sessions')
     session = web.session.Session(app, store, initializer={'count': 0})
-
 
 Des options relatives aux sessions peuvent être modifiées en utilisant le dictionnaire `sessions_parameters` dans `web.config`. Les valeurs par défaut sont montrées ci-dessous:
 

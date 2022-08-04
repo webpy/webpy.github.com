@@ -7,14 +7,13 @@ title: How to upgrade from earlier versions of web.py to 0.3
 
 Web.py 0.3 has some backward-incompatible changes. 
 
-* <a href="#return">prints are replaced by return statements</a>
-* <a href="#app">new application framework</a>
-* <a href="#db">new database system</a>
-* <a href="#exceptions">http errors are exceptions</a>
-* <a href="#others">other incompatible changes</a>
+* [prints are replaced by return statements](#return)
+* [new application framework](#app)
+* [new database system](#db)
+* [http errors are exceptions](#exceptions)
+* [other incompatible changes](#others)
 
-<a name="return"></a>
-## prints are replaced by return statements
+<h2 id="return">prints are replaced by return statements</h2>
 
 In earlier versions of web.py the GET and POST methods used to print the data to be send to the client. Now instead of printing the data, the data must be returned from that function. This makes post-processing of returned data possible.
 
@@ -59,8 +58,7 @@ It should become:
     if __name__ == "__main__":
         app.run()
 
-<a name="db"></a>
-## new database system
+<h2 id="db">new database system</h2>
 
 The database module of web.py has been improved to make it more modular.
 
@@ -101,8 +99,7 @@ If you are using python 2.5 or later, transactions can be used with `with` state
 		    db.insert('t1', name='foo')
 		    db.insert('t2', name='bar')
             
-<a name="exceptions"></a>
-## http errors are exceptions
+<h2 id="exceptions">http errors are exceptions</h2>
 
 In 0.3, all http errors have been changed to exceptions.
 
@@ -124,8 +121,7 @@ It should become:
         else:
 	    ....
 
-<a name="others"></a>
-## Other incompatible changes
+<h2 id="others">Other incompatible changes</h2>
 
 In web.py 0.3, `web.input()` returns values in unicode. This may create trouble sometimes.
 

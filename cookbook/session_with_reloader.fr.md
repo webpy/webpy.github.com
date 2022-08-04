@@ -5,7 +5,7 @@ title: Utiliser les sessions avec reloader
 
 # Utiliser les sessions avec reloader
 
-Autre langages: [english](./session_with_reloader) | ...
+Autre langages: [English](./session_with_reloader) | ...
 
 # Probleme
 
@@ -21,7 +21,6 @@ Un simple correctif pour ceci, est de désactiver le mode debug, ce qui peut êt
     web.config.debug = False
 
     # Le reste de votre code
-
 
 Si vous voulez utiliser les sessions en mode debug, voici une solution de fortune.
 

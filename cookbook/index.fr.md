@@ -5,12 +5,12 @@ title: Web.py Cookbook
 
 # Web.py Cookbook
 
-Autres langages : [japan 日本語](/ja) | [chinese 简体中文](/zh-cn) | [english](/../cookbook) | ...
+Autres langages: [Japan 日本語](/ja) | [Chinese 简体中文](/zh-cn) | [English](/../cookbook) | ...
 
 Documentation de type Cookbook pour web.py 0.3. Veuillez noter que certaines de ces fonctions ne sont pas disponibles dans les versions précedentes.
 La version actuelle 0.3 est la branche développement.
 
-#Mise en forme
+# Mise en forme
 
 1. En termes de mise en forme, essayez d'utiliser un format de type cookbook... Comme ceci:
 
@@ -22,9 +22,10 @@ La version actuelle 0.3 est la branche développement.
 
 1. Cette documentation est finalement pour la version 0.3, donc veuillez ajouter du code qui ne fonctionne qu'avec cette version.
 
--------------------------------------------------
+---
 
-##Basique:
+## Basique:
+
 * [Hello World](/helloworld/fr).
 * [Servir des fichiers statiques](/staticfiles/fr).
 * [Comprendre la gestion des URLs](/url_handling/fr).
@@ -33,8 +34,8 @@ La version actuelle 0.3 est la branche développement.
 * [Servir du XML](/xmlfiles/fr).
 * [Lire les données brutes d'un post](/postbasic/fr).
 
+## Avancé
 
-##Avancé
 * [web.ctx](/ctx/fr).
 * [Application processors, charger et décharger des hooks](/application_processors/fr).
 * [Comment utiliser web.background](/background). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -44,7 +45,8 @@ La version actuelle 0.3 est la branche développement.
 * [Configurer le support SSL dans le serveur intégré](/ssl/fr).
 * [Run-time language switch](/runtime-language-switch). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
-##Sessions et état des utilisateurs:
+## Sessions et état des utilisateurs:
+
 * [Travailler avec les sessions](/sessions/fr).
 * [Utiliser session avec reloader](/session_with_reloader/fr).
 * [Utiliser session dans les gabarits](/session_in_template/fr).
@@ -53,13 +55,14 @@ La version actuelle 0.3 est la branche développement.
 * [Authentification des utilisateurs avec base de données Postgresql](/userauthpgsql). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Utiliser les sessions avec les sous-applications](/sessions_with_subapp/fr).
 
+## Utils:
 
-##Utils:
 * [Envoi de Mail](/sendmail). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Envoi de Mail en utilisant Gmail](/sendmail_using_gmail/fr).
 * [Webservice en utilisant soaplib + WSDL](/webservice). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
-##Modèles de mise en forme, gabarits de mise en page:
+## Modèles de mise en forme, gabarits de mise en page:
+
 * [Templetor: le système de gabarits de web.py](/docs/0.3/templetor.fr )
 * [Mise en page selon un gabarit](/layout_template/fr).
 * [Alterner un style](/alternating_style). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -70,11 +73,13 @@ La version actuelle 0.3 est la branche développement.
 * [Utiliser le moteur de gabarit  Jinja2 dans webpy](/template_jinja). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Comment utiliser les gabarits sur Google App Engine](/templates_on_gae). - traduction demandée, voir [Todo](/docs/0.3.fr/todo))
 
-##Essais:
+## Essais:
+
 * [Tester avec Paste et Nose](/testing_with_paste_and_nose). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [RESTful doctesting using an application's request method](/restful_doctesting_using_request). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
-##Entrées utilisateurs:
+## Entrées utilisateurs:
+
 * [Uploader un fichier](/fileupload/fr).
 * [Stocker un fichier uploadé](/storeupload/fr).
 * [Comment limiter la taille des fichiers uploadés](/limiting_upload_size/fr).
@@ -82,7 +87,8 @@ La version actuelle 0.3 est la branche développement.
 * [Comment utiliser les formulaires](/forms/fr).
 * [Rendu individuel des champs de formulaires](/form_fields). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
-##Base de données:
+## Base de données:
+
 * [Multiples bases de données](/multidbs). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Select: Récupérer les entrées d'une base de données](/select). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Update: Mettre à jour les entrées d'une base de données](/update). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -94,8 +100,8 @@ La version actuelle 0.3 est la branche développement.
 * [Intégrer SQLite UDF (user-defined-functions) à la couche de base de données webpy](/sqlite-udf). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Utiliser un dictionnaire comme clause where](/where_dict). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
+## Déploiement:
 
-##Déploiement:
 * [Déploiement Fastcgi au travers lighttpd](/fastcgi-lighttpd/fr).
 * [Déploiement Fastcgi au travers Apache](/fastcgi-apache).  - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Déploiement CGI au travers Apache](/cgi-apache). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
@@ -104,5 +110,6 @@ La version actuelle 0.3 est la branche développement.
 * [Déploiement mod_wsgi au travers Nginx](/mod_wsgi-nginx ). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 * [Déploiement Fastcgi au travers Nginx](/fastcgi-nginx). - traduction demandée, voir [Todo](/docs/0.3.fr/todo)
 
-##Sous-domaines:
+## Sous-domaines:
+
 * Sous-domaines et comment accéder au nom utilisateur (requis)

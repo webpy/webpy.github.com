@@ -5,7 +5,7 @@ title: Download
 
 # Download
 
-Other languages : [français](/download/fr) | ...
+Other languages: [Français](/download/fr) | ...
 ## Get the latest stable version
 
 The easiest way to install web.py is using [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall):

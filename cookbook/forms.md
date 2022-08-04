@@ -5,7 +5,7 @@ title: How to use forms
 
 # How to use forms
 
-Other languages: [français](/../cookbook/forms.fr) | ...
+Other languages: [Français](/../cookbook/forms.fr) | ...
 
 ## Problem
 

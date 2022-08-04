@@ -5,7 +5,7 @@ title: Uploader un fichier
 
 # Uploader un fichier
 
-Autre langages: [english](/../fileupload) | ...
+Autre langages: [English](/../fileupload) | ...
 
 ## Problème:
 

@@ -5,7 +5,7 @@ title: Contrôler les évènements sur le serveur intégré par défaut
 
 # Contrôler les évènements sur le serveur intégré par défaut
 
-Autre langages: [english](/../logging) | ...
+Autre langages: [English](/../logging) | ...
 
 ## Problème:
 

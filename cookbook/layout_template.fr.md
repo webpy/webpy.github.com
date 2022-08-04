@@ -5,26 +5,19 @@ title: Mise en page selon un gabarit
 
 # Mise en page selon un gabarit
 
-Autres langages : [english](/../layout_template) | ...
-
-
+Autres langages: [English](/../layout_template) | ...
 
 ### Problème
-
 
 Comment puis-je utiliser un modèle/gabarit de site qui s'affiche dans chaque page? (Dans d'autres frameworks, cela s'appelle l'héritage des templates - template inheritance)
 
 ### Solution
 
-
 Cela peut être fait en utilisant l'attribut de base:
 
     render = web.template.render('templates/', base='layout')
 
-
 Maintenant si vous faites quelque chose comme `render.foo ()` il cherchera le gabarit `templates/foo.html`, puis l'enveloppera dans le gabarit `templates/layout.html`
-
-
 
 Le format de "layout.html" doit être un simple gabarit qui contient une variable. Par exemple:
 
@@ -38,19 +31,20 @@ Le format de "layout.html" doit être un simple gabarit qui contient une variabl
     </body>
     </html>
 
-
 Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deuxième objet, sans l'attribut "base", ainsi:
 
     render_plain = web.template.render('templates/')
 
-###Astuce: Le titre de page est défini dans d'autres fichiers gabarits qui sont ensuite utilisés par la mise en page (layout.html). Par exemple:
+### Astuce: Le titre de page est défini dans d'autres fichiers gabarits qui sont ensuite utilisés par la mise en page (layout.html). Par exemple:
 
-#####templates/index.html
+##### templates/index.html
+
     $var title: This is title.
 
     <h3>Hello, world</h3>
 
-#####templates/layout.html
+##### templates/layout.html
+
     $def with (content)
     <html>
     <head>
@@ -61,16 +55,15 @@ Si vous ne souhaitez pas utiliser le modèle de base, il suffit de créer un deu
     </body>
     </html>
 
+### Astuce: Ajouter des fichiers css dans d'autres fichiers gabarits. Exemple:
 
-###Astuce: Ajouter des fichiers css dans d'autres fichiers gabarits. Exemple:
-
-####templates/login.html
+#### templates/login.html
 
     $var cssfiles: static/login.css static/login2.css
 
     hello, world.
 
-####templates/layout.html
+#### templates/layout.html
 
     $def with (content)
     <html>

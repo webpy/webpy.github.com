@@ -5,7 +5,7 @@ title: Lire les données brutes d un post
 
 # Lire les données brutes d un post
 
-Autres langages [english](/../postbasic) | ...
+Autres langages: [English](/../postbasic) | ...
 
 ## Probleme:
 

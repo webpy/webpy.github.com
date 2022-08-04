@@ -44,7 +44,7 @@ That's it. Your application is accessible via `http://server/app/app.py/`. Addit
 
 Here it is assumed that your application is called index.py. The above htaccess checks if some static file/directory exists failing which it routes the data to your index.py. Change the Rewrite Base to a sub-directory if needed.
 
-#Hiding the script name using mod_rewrite (tested with webpy 0.33)
+# Hiding the script name using mod_rewrite (tested with webpy 0.33)
 
 (warning: this section written by someone new to webpy; it works, but may not follow prescribed practices)
 
@@ -60,7 +60,7 @@ So now if you go to `http://server/app/` you'll hit `app.py`'s handler for `'/'`
 
 Are we done? Well, that's what I thought. There's still one problem: webpy doesn't know how things were rewritten on the way *in*, so it doesn't know how to rewrite them on the way *out*.
 
-For instance, one can normally use `web.url()` to compose urls such that the right content is found. Want `static/style.css`? Call `web.url('/static/style.css') and you'll get ... `/app/app.py/static/style.css` ... not what we wanted. That doesn't exist. Problem.
+For instance, one can normally use `web.url()` to compose urls such that the right content is found. Want `static/style.css`? Call `web.url('/static/style.css') and you'll get... `/app/app.py/static/style.css` ...not what we wanted. That doesn't exist. Problem.
 
 If you don't use `web.url()`, it can still bite you because *webpy* does. Say `raise web.seeother('/')` and you'll end up at `http://server/app/app.py/`, which defeats the purpose of hiding it using mod_rewrite.
 

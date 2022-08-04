@@ -40,14 +40,13 @@ CREATE TABLE example_users (
 
 登录和注销对应两个网址：
 
-- "Login" 对应登录页
-- "Reset" 对应注销页
+* "Login" 对应登录页
+* "Reset" 对应注销页
 
 	urls = (
 	 	'/login', 'login',
 		'/reset', 'reset',
     )
-
 
 ## 第三步：判断用户是否登录
 
@@ -96,8 +95,8 @@ CREATE TABLE example_users (
 ## 第五：登录(Login)和注销(Reset)的python类
 
 现在，让我们用个轻松的方法来解决：
-- 如果你已登录，就直接重定向到login_double.html模板文件
-- 否则，还是到login.html。
+* 如果你已登录，就直接重定向到login_double.html模板文件
+* 否则，还是到login.html。
 
 	class login:
 		def GET(self):
@@ -108,9 +107,9 @@ CREATE TABLE example_users (
 				render = create_render(session.privilege)
 				return "%s" % (render.login())
 
-- 好了。现在写POST()方法。从.html文件中，我们得到表单提交的变量值(见login.html)，并根据变量值得到example_users表中对应的user数据
-- 如果登录通过了，就重定向到login_ok.html。
-- 如果没通过，就重定向到login_error.html。
+* 好了。现在写POST()方法。从.html文件中，我们得到表单提交的变量值(见login.html)，并根据变量值得到example_users表中对应的user数据
+* 如果登录通过了，就重定向到login_ok.html。
+* 如果没通过，就重定向到login_error.html。
 
 		def POST(self):
 			user, passwd = web.input().user, web.input().passwd
@@ -166,5 +165,5 @@ CREATE TABLE example_users (
 
 ## 第七：问题或疑问？
 
-- 邮件：您可以联想我，我的邮箱是guillaume(at)process-evolution(dot)fr
-- IRC：#webpy on irc.freenode.net (pseudo: Ephedrax)
+* 邮件：您可以联想我，我的邮箱是guillaume(at)process-evolution(dot)fr
+* IRC：#webpy on irc.freenode.net (pseudo: Ephedrax)

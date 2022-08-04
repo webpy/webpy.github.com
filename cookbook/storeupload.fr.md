@@ -5,7 +5,7 @@ title: Stocker un fichier uploadé
 
 # Stocker un fichier uploadé
 
-Autre langages: [english](/../storeupload) | ...
+Autre langages: [English](/../storeupload) | ...
 
 ## Problème
 

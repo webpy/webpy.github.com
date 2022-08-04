@@ -22,7 +22,6 @@ web.pyをダウンロードします。
 
 [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall)を使えばワンステップでインストールすることが可能です。
 
-
     easy_install web.py
 
 ## 開発
@@ -53,7 +52,7 @@ CGI実行を行う場合はファイル`code.py`の先頭に以下を追記し�
 
 ### LightTPD
 
-#### .. with FastCGI
+#### ...with FastCGI
 
 web.pyでは、lighttpd + FastCGI方式が推奨されています。[reddit.com][3] はこの方式で何百万ものアクセスに応答しています。
 
@@ -97,15 +96,14 @@ Since revision 145, it is necessary to set a bin-environment variable on the fas
 
 ### Apache
 
-#### .. with CGI
+#### ...with CGI
 
 `httpd.conf`もしくは`apache2.conf`に以下を追記してください。
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-
-#### .. with CGI using .htaccess
+#### ...with CGI using .htaccess
 
 CGIは以下を`.htaccess`に追記するだけですので構築するのは簡単ですが、高性能なウェブサイトには向いていません。
 
@@ -132,7 +130,7 @@ Note: The way `web.py` is implemented breaks the `cgitb` module because it captu
     
     web.internalerror = cgidebugerror
 
-#### .. with FastCGI
+#### ...with FastCGI
 
 FastCGIを構築するのは簡単で、mod_pythonと同じ動作をします。
 
@@ -149,8 +147,8 @@ and point your browser to `http://example.com/code.py/`. Don't forget the traili
 
 [Walterからの追加のアドバイスはこちら](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
+#### ...with SCGI
 
-#### .. with SCGI
 https://www.mems-exchange.org/software/scgi/
 download `mod_scgi` source here: http://www.mems-exchange.org/software/files/mod_scgi/
 windows apache user: 
@@ -165,7 +163,7 @@ apacheの再起動とcode.pyを以下のコマンドで起動してください�
 
 起動後、ブラウザで 127.0.0.1を開いて確認してください。
 
-#### .. with mod_python
+#### ...with mod_python
 
 mod_pythonは、FastCGIと同様に動作しますが、構築するのは簡単ではありません。
 
@@ -185,7 +183,6 @@ Python 2.5以前のバージョンを使用している場合:
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
 
-
 `code.py`のファイル名を`codep.py`に変更してください。
     
     main = web.wsgifunc(web.webpyfunc(urls, globals()))
@@ -202,7 +199,7 @@ Python 2.5以前のバージョンを使用している場合:
 
 `/codep.py/` の末尾 `/`(スラッシュ)を忘れると、`エラー画面(Please contact the administrator.)`が表示されます。
 
-#### .. with mod_wsgi
+#### ...with mod_wsgi
 
 mod_wsgiは、特色として[mod_pythonより性能](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates)が優れており、構築が非常に簡単な新しいApacheモジュールです。
 

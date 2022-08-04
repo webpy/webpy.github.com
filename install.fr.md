@@ -5,27 +5,25 @@ title: Installation
 
 # Installation
 
-Autre langages : [español](/install/es) | [Japan](/install/ja) | [chinese](/install/zh-cn) | [italiano](/install/it) | [english](/install) 
+Autre langages: [Español](/install/es) | [Japan](/install/ja) | [Chinese](/install/zh-cn) | [Italiano](/install/it) | [English](/install) 
 
 ## Sommaire
 
-* <a href="#installation">Installation</a>
-* <a href="#dev">Développement</a>
-* <a href="#prod">Production</a>
-    * <a href="#lighttpd">LightTPD</a>
-        * <a href="#lighttpdfastcgi">...avec FastCGI</a>
-    * <a href="#apache">Apache</a>
-        * <a href="#apachecgi">...avec CGI</a>
-        * <a href="#apachecgihtaccess">.. avec CGI en utilisant .htaccess</a>
-        * <a href="#apachefastcgi">.. avec FastCGI</a>
-        * <a href="#apachescgi">.. avec SCGI</a>
-        * <a href="#apachemodpython">.. avec mod_python</a>
-        * <a href="#apachemodwsgi">.. avec mod_wsgi</a>
-        * <a href="#apachemodrewrite">.. avec mod_rewrite</a>
+* [Installation](#installation)
+* [Développement](#dev)
+* [Production](#prod)
+    * [LightTPD](#lighttpd)
+        * [...avec FastCGI](#lighttpdfastcgi)
+    * [Apache](#apache)
+        * [...avec CGI](#apachecgi)
+        * [...avec CGI en utilisant .htaccess](#apachecgihtaccess)
+        * [...avec FastCGI](#apachefastcgi)
+        * [...avec SCGI](#apachescgi)
+        * [...avec mod_python](#apachemodpython)
+        * [...avec mod_wsgi](#apachemodwsgi)
+        * [...avec mod_rewrite](#apachemodrewrite)
 
-
-<a name="installation"></a>
-## Installation
+<h2 id="installation">Installation</h2>
 Pour installer web.py, commencez par télécharger l'archive:
 
 [web.py-0.61.tar.gz](https://github.com/webpy/webpy/archive/0.61.tar.gz)
@@ -40,11 +38,9 @@ Note: sur certains systèmes Unix (ou Linux), il vous faudra vous connecter en t
 
 Une autre option est d'utiliser [Easy Install](http://peak.telecommunity.com/DevCenter/EasyInstall). Une fois Easy Install correctement paramétré, exécutez:
 
-
     easy_install web.py
 
-<a name="dev"></a>
-## Développement:
+<h2 id="dev">Développement:</h2>
 
 webpy intègre son propre serveur web.  Apprenez comment écrire une application en suivant le [tutoriel](./tutorial.fr).  Quand votre application est écrite, insérez votre code dans `code.py` et démarrez le serveur avec la commande:
 
@@ -52,8 +48,7 @@ webpy intègre son propre serveur web.  Apprenez comment écrire une application
 
 Ouvrez votre navigateur et allez à l'adresse [http://localhost:8080/](http://localhost:8080/) pour visualiser la page. Pour spécifier un port différent, utilisez simplement `python code.py 1234`.
 
-<a name="prod"></a>
-## Production
+<h2 id="prod">Production</h2>
 
 Le serveur web intégré à web.py est bien pratique en phase de développement, mais pour un site en production, il vaut mieux prévoir quelque chose de plus sérieux. web.py fonctionne avec n'importe quel serveur http compatible avec  [WSGI](http://www.python.org/dev/peps/pep-0333/). 
 
@@ -65,11 +60,9 @@ Pour utiliser une de ces variantes de CGI, ajoutez au début de votre `code.py` 
 
 N'oubliez pas de le rendre exécutable: `chmod +x code.py`.
 
-<a name="lighttpd"></a>
-### LightTPD
+<h3 id="lighttpd">LightTPD</h3>
 
-<a name="lighttpdfastcgi"></a>
-#### .. avec FastCGI
+<h4 id="lighttpdfastcgi">...avec FastCGI</h4>
 
 FastCGI associé à lighttpd est la manière recommandée d'utiliser web.py en production. [reddit.com][3] gère des millions de visites de cette façon.
 
@@ -110,20 +103,16 @@ Depuis la revision 145, il est nécessaire de définir une variable  "bin-enviro
     ))
     )
     
-<a name="apache"></a>
-### Apache
+<h3 id="apache">Apache</h3>
 
-<a name="apachecgi"></a>
-#### .. avec CGI
-
+<h4 id="apachecgi">...avec CGI</h4>
 
 Ajoutez les lignes suivante à `httpd.conf` ou `apache2.conf`.
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-<a name="apachecgihtaccess"></a>
-#### .. avec CGI en utilisant .htaccess
+<h4 id="apachecgihtaccess">...avec CGI en utilisant .htaccess</h4>
 
 CGI est facile à configurer mais ce n'est pas la meilleure des solutions pour les sites à très fort trafic.
 
@@ -152,8 +141,7 @@ Note: la manière dont `web.py` est implémenté provoque une erreur du module `
     
     web.internalerror = cgidebugerror
 
-<a name="apachefastcgi"></a>
-#### .. avec FastCGI
+<h4 id="apachefastcgi">...avec FastCGI</h4>
 
 FastCGI est facile à configurer et est aussi performant que 'mod_python'.
 
@@ -167,8 +155,7 @@ Malheureusement, et contrairement à lighttpd, Apache ne donne aucune indication
     
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     
-<a name="apachescgi"></a>
-#### .. avec SCGI
+<h4 id="apachescgi">...avec SCGI</h4>
 
 Téléchargez et installez le [module mod_scgi](http://www.mems-exchange.org/software/files/mod_scgi/)
 
@@ -184,8 +171,7 @@ redémarrez le serveur Apache et lancer votre 'code.py' avec la commande suivant
 lancez votre navigateur et visitez l'adresse suivante 127.0.0.1
 C'est aussi simple que ça...enfin, si ça marche du premier coup ;-) 
 
-<a name="apachemodpython"></a>
-#### .. avec mod_python
+<h4 id="apachemodpython">...avec mod_python</h4>
 
 mod_python est aussi performant que FastCGI, mais il n'est pas aussi évident à configurer. Suivez le guide:
 
@@ -205,7 +191,6 @@ Pour Python <2.5, procéder plutôt ceci:
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
 
-
 renommez votre script `code.py` en quelque chose comme `codep.py` et ajoutez le code suivant:
     
     main = web.wsgifunc(web.webpyfunc(urls, globals()))
@@ -220,8 +205,7 @@ Dans votre fichier `.htaccess`, ajoutez:
 
 Vous aurez surement aussi besoin d'ajouter une `RewriteRule` pour rediriger  `/` vers `/codep.py/`
 
-<a name="apachemodwsgi"></a>
-#### .. avec mod_wsgi
+<h4 id="apachemodwsgi">...avec mod_wsgi</h4>
 
 mod\_wsgi est un nouveau module Apache  [plus performant que mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) pour l'hébergement d'applications WSGI, et très facile à mettre en place.
 
@@ -248,8 +232,7 @@ Plus d'information dans la section "Application Working Directory"  sur [Common 
 
 Encore une fois, votre application devrait-être accessible à l'URL suivante: `http://example.com/code.py/` (sans oublier le slash final!!!).
 
-<a name="apachemodrewrite"></a>
-#### mod_rewrite pour Apache
+<h4 id="apachemodrewrite">mod_rewrite pour Apache</h4>
 
 Si vous voulez que webpy soit accessible par l'URL 'http://example.com' au lieu de  'http://example.com/code.py/' ajoutez les directives suivantes dans votre fichier `.htaccess`:
 

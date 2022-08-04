@@ -13,7 +13,6 @@ How to use sqlalchemy with web.py
 
 create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy.org/en/rel_0_8/orm/session.html#using-thread-local-scope-with-web-applications)
 
-
     import string
     import random
     import web
@@ -72,8 +71,7 @@ create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy
     if __name__ == "__main__":
         app.run()
 
-
-###models.py
+### models.py
 
     from sqlalchemy import create_engine
     from sqlalchemy import Column, Integer, String
@@ -106,7 +104,5 @@ create a load hook and use sqlalchemy's [scoped session] (http://docs.sqlalchemy
 
     if __name__ == "__main__":
         metadata.create_all(engine)
-
-
 
 before running the application. run `python models.py` to setup the sqlite database.

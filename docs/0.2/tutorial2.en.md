@@ -5,7 +5,7 @@ title: web.py 0.2 tutorial
 
 # web.py 0.2 tutorial
 
-**This documentation refers to an old version of web.py. <a href="/docs/0.3/tutorial">Checkout the new version</a>.
+**This documentation refers to an old version of web.py. [Checkout the new version](/docs/0.3/tutorial).
 
 ## Starting
 

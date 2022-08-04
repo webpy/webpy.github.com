@@ -18,7 +18,6 @@ title: 在调试模式下使用session
 
     # rest of your code
 
-
 如果非要用调试模式下使用session，可以用非主流的一些办法。哈哈
 
 因为调试模式支持模块重载入(重载入，绝非重载。是reload,而非override)，所以reloader会载入主模块两次，因此，就会创建两个session对象。但我们只要把session存储在全局的数据容器中，就能避免二次创建session。

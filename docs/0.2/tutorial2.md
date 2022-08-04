@@ -5,7 +5,7 @@ title: web.py 0.2 tutorial
 
 # web.py 0.2 tutorial
 
-* [english](./tutorial2)
+* [English](./tutorial2)
 * [简体中文](http://www.dup2.org/files/web.py%200.2%20tutorial.html)
 * [Español](./tutorial2.es)
 * [Português (Brasil)](./tutorial2.pt-br)
@@ -15,25 +15,3 @@ title: web.py 0.2 tutorial
 * [Françai](./tutorial2.fr)<a href="http://www.from-thailand.com/" title="Grossiste, Décoration asiatique, Thailande, Import Export" alt="Grossiste, Décoration asiatique, Import Export, Thailande">s</a>
 * [Polish](./tutorial2.pl)
 * [ελληνικά](./turorial2.el)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

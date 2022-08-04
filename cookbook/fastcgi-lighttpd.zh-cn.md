@@ -13,17 +13,17 @@ http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html
 
 ## 注意事项
 
-* 你可以重命名 <code>code.py</code>为任何你自己愿意的名字，该例子还是以code.py为例。
-* <code>/path-to/webpy-app</code> 为包含你的 <code>code.py</code>代码的路径。
-* <code>/path-to/webpy-app/code.py</code> 应该是你的**python file**的完整路径。
+* 你可以重命名 `code.py`为任何你自己愿意的名字，该例子还是以code.py为例。
+* `/path-to/webpy-app` 为包含你的 `code.py`代码的路径。
+* `/path-to/webpy-app/code.py` 应该是你的**python file**的完整路径。
 
 如果你还不确定你的lighttpd版本的话，你可以在命令行中使用<code>lighttpd -v</vode>查看相应的版本信息。
 
 Note: 较早版本的lighttpd可能会按照不同的方式组织.conf文件，但是它们应该遵循的是相同的原则。
 
-###lighttpd 在 Debian GNU/Linux 下的配置文件
+### lighttpd 在 Debian GNU/Linux 下的配置文件
 
-<pre>
+```
 Files and Directories in /etc/lighttpd:
 ---------------------------------------
 
@@ -43,22 +43,20 @@ conf-enabled/
 
 Enabling and disabling modules could be done by provided
 /usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
-</pre>
+```
 
-<strong>
-对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: <code>/usr/sbin/lighty-enable-mod</code> 启用 <code>fastcgi</code> （Mac OS X可能不需要）
-(mod_rewrite 模块可能需要启用 <code>10-fastcgi.conf</code>文件).
+**对于web py， 你需要允许 mod_fastcgi 模块和 mod_rewrite模块, 运行: `/usr/sbin/lighty-enable-mod` 启用 `fastcgi` （Mac OS X可能不需要）(mod_rewrite 模块可能需要启用 `10-fastcgi.conf`文件).**
 
 ##下面是文件的基本结构（Mac OS X不同）:
-* <code>/etc/lighttpd/lighttpd.conf</code>
-* <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
-* <code>code.py</code>
+* `/etc/lighttpd/lighttpd.conf`
+* `/etc/lighttpd/conf-available/10-fastcgi.conf`
+* `code.py`
 
 对于Mac OS X或任何以Mac Ports邓方式安装的lighttpd，可以直接在路径下编写.conf文件并用lighttpd -f xxx.conf启动lighttpd，而无需去修改或考虑任何文件结构。
 
-<code>/etc/lighttpd/lighttpd.conf</code>
+`/etc/lighttpd/lighttpd.conf`
 
-<pre>
+```
 server.modules              = (
             "mod_access",
             "mod_alias",
@@ -66,17 +64,17 @@ server.modules              = (
             "mod_compress",
 )
 server.document-root       = "/path-to/webpy-app"
-</pre>
+```
 
 对我来说，我使用 postgresql，因此需要授予对的数据库权限，可以添加行如下（如果不使用则不需要）。
 
-<pre>
+```
 server.username = "postgres"
-</pre>
+```
 
-<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+`/etc/lighttpd/conf-available/10-fastcgi.conf`
 
-<pre>
+```
 server.modules   += ( "mod_fastcgi" )
 server.modules   += ( "mod_rewrite" )
 
@@ -98,17 +96,17 @@ server.modules   += ( "mod_rewrite" )
    "^/static/(.*)$" => "/static/$1",
    "^/(.*)$" => "/code.py/$1",
  )
-</pre>
+```
 
-<code>/code.py</code>
+`/code.py`
 在代码头部添加以下代码，让系统环境使用系统环境中当前的python
 
-<pre>
+```
 #!/usr/bin/env python
-</pre>
+```
 
 最后不要忘记了要对需要执行的py代码设置执行权限，否则你可能会遇到“permission denied”错误。
 
-<pre>
+```
 $ chmod 755 /path-to/webpy-app/code.py
-</pre>
+```

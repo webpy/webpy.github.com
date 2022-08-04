@@ -7,22 +7,21 @@ title: 安装 web.py
 
 ## Summary
 
-* <a href="#install">安装</a>
-* <a href="#dev">开发</a>
-* <a href="#prod">产品</a>
-    * <a href="#lighttpd">LightTPD</a>
-        * <a href="#lighttpdfastcgi">.. 使用 FastCGI</a>
-    * <a href="#apache">Apache</a>
-        * <a href="#apachecgi">.. 使用 CGI</a>
-        * <a href="#apachecgihtaccess"> .. 使用 CGI using .htaccess</a>
-        * <a href="#apachefastcgi">.. 使用 FastCGI</a>
-        * <a href="#apachescgi">.. 使用 SCGI</a>
-        * <a href="#apachemodpython">.. 使用 mod_python</a>
-        * <a href="#apachemodwsgi">.. 使用 mod_wsgi</a>
-        * <a href="#apachemodrewrite">.. 使用 mod_rewrite</a>
+* [安装](#install)
+* [开发](#dev)
+* [产品](#prod)
+    * [LightTPD](#lighttpd)
+        * [...使用 FastCGI](#lighttpdfastcgi)
+    * [Apache](#apache)
+        * [...使用 CGI](#apachecgi)
+        * [ ...使用 CGI using .htaccess](#apachecgihtaccess)
+        * [...使用 FastCGI](#apachefastcgi)
+        * [...使用 SCGI](#apachescgi)
+        * [...使用 mod_python](#apachemodpython)
+        * [...使用 mod_wsgi](#apachemodwsgi)
+        * [...使用 mod_rewrite](#apachemodrewrite)
 
-<a name="install"></a>
-## 安装
+<h2 id="install">安装</h2>
 
 可以先下载源码包，再本地安装。下载：
     
@@ -54,8 +53,7 @@ title: 安装 web.py
 
     pip install web.py==0.61
 
-<a name="dev"></a>
-## 开发
+<h2 id="dev">开发</h2>
 
 web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/docs/0.3/tutorial)
 学习如何写一个 Web 应用。 写完后，将你的代码放到 `code.py` 并如下面的方法来启动服务器：
@@ -64,8 +62,7 @@ web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/docs/0.3
 
 打开你的浏览器输入 [http://localhost:8080/](http://localhost:8080/) 查看页面。 若要制定另外的端口，使用 `python code.py 1234`。
 
-<a name="prod"></a>
-## 产品
+<h2 id="prod">产品</h2>
 
 现在所运行 web.py 程序的web服务器是挺不错的， 但绝大多数网站还是需要更加专业一些的web服务器。web.py 实现了 [WSGI](http://www.python.org/dev/peps/pep-0333/) 并能在任何兼容它的服务器上运行。 WSGI 是一个web服务器与应用程序之间的通用API, 就如Java 的 Servlet 接口。 你需要安装 [flup](http://trac.saddi.com/flup) ([download here](http://www.saddi.com/software/flup/dist/)) 使web.py 支持with CGI， FastCGI 或 SCGI， flup提供了这些API的WSGI接口。
 
@@ -75,11 +72,9 @@ web.py 内置了web服务器。可以按照 [tutorial](http://webpy.org/docs/0.3
 
 并运行 `chmod +x code.py` 添加可执行属性。
 
-<a name="lighttpd"></a>
-### LightTPD
+<h3 id="lighttpd">LightTPD</h3>
 
-<a name="lighttpdfastcgi"></a>
-#### .. 使用 FastCGI
+<h4 id="lighttpdfastcgi">...使用 FastCGI</h4>
 
 在产品中通过FastCGI结合lighttpd是web.py使用的一种推荐方法。 [reddit.com][3] 通过该方法来处理百万次的点击。
 
@@ -121,21 +116,16 @@ lighttpd config设置参考如下：
     )
     
 
-<a name="apache"></a>
-### Apache
+<h3 id="apache">Apache</h3>
 
-<a name="apachecgi"></a>
-#### .. 使用 CGI
-
+<h4 id="apachecgi">...使用 CGI</h4>
 
 添加以下到 `httpd.conf` 或 `apache2.conf`。
 
     Alias /foo/static/ /path/to/static
     ScriptAlias /foo/ /path/to/code.py
 
-
-<a name="apachecgihtaccess"></a>
-#### .. 使用 CGI .htaccess
+<h4 id="apachecgihtaccess">...使用 CGI .htaccess</h4>
 
 CGI很容易配置， 但不适合高性能网站。
 添加以下到你的 `.htaccess`：
@@ -163,8 +153,7 @@ CGI很容易配置， 但不适合高性能网站。
     
     web.internalerror = cgidebugerror
 
-<a name="apachefastcgi"></a>
-#### .. 使用 FastCGI
+<h4 id="apachefastcgi">...使用 FastCGI</h4>
 
 FastCGI很容易配置，运行方式如同mod_python。
 
@@ -181,8 +170,7 @@ FastCGI很容易配置，运行方式如同mod_python。
 
 [Walter 还有一些额外建议](http://lemurware.blogspot.com/2006/05/webpy-apache-configuration-and-you.html).
 
-<a name="apachescgi"></a>
-#### .. 使用 SCGI
+<h4 id="apachescgi">...使用 SCGI</h4>
 https://www.mems-exchange.org/software/scgi/
 从 http://www.mems-exchange.org/software/files/mod_scgi/ 下载 `mod_scgi` 代码
 windows apache 用户： 
@@ -198,8 +186,7 @@ windows apache 用户：
 打开你的浏览器，访问127.0.0.1
 It's ok! 
 
-<a name="apachemodpython"></a>
-#### .. 使用 mod_python
+<h4 id="apachemodpython">...使用 mod_python</h4>
 
 mod_python 运行方式如同FastCGI， 但不是那么方便配置。
 
@@ -219,7 +206,6 @@ mod_python 运行方式如同FastCGI， 但不是那么方便配置。
     wget -O modpython_gateway.py http://projects.amor.org/misc/browser/modpython_gateway.py?format=raw
     # or fetch the file from that address using your browser  
 
-
 重命名 `code.py` 为 `codep.py` 或别的名字， 添加：
     
     app = web.application(urls, globals())
@@ -237,8 +223,7 @@ mod_python 运行方式如同FastCGI， 但不是那么方便配置。
 
 确保访问 `/codep.py/` 的时候有添加最后的 `/`。  否则，你将会看到一条错误信息，比如 `A server error occurred. Please contact the administrator.`
 
-<a name="apachemodwsgi"></a>
-#### .. 使用 mod_wsgi
+<h4 id="apachemodwsgi">...使用 mod_wsgi</h4>
 
 mod\_wsgi 是一个新的Apache模块 [通常优于mod_python](http://code.google.com/p/modwsgi/wiki/PerformanceEstimates) 用于架设WSGI应用，它非常容易配置。
 
@@ -266,8 +251,7 @@ mod\_wsgi 提供 [许多可行方法](http://code.google.com/p/modwsgi/wiki/Conf
 
 最终应该可以访问 `http://example.com/code.py/`。
 
-<a name="apachemodrewrite"></a>
-#### mod_rewrite 法则，Apache
+<h4 id="apachemodrewrite">mod_rewrite 法则，Apache</h4>
 
 如果希望 web.py 能够通过 'http://example.com' 访问，代替使用 'http://example.com/code.py/'， 添加以下法则到 `.htaccess` 文件：
 

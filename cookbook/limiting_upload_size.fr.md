@@ -5,7 +5,7 @@ title: Comment limiter la taille des fichiers uploadés
 
 # Comment limiter la taille des fichiers uploadés
 
-Autre langages: [english](/../limiting_upload_size) | ...
+Autre langages: [English](/../limiting_upload_size) | ...
 
 ## Problème:
 
@@ -22,7 +22,6 @@ Le code suivant limite la taille des données entrantes à 10 Mo.
     # Données entrantes maximum que nous acceptons lorsque REQUEST_METHOD est POST
     # 0 ==> Données entrantes illimitées
     cgi.maxlen = 10 * 1024 * 1024 # 10Mo
-
 
 Noter que cela limite la taille des données POST, pas des fichiers uploadés. Cependant, ce sera presque pareil s'il n'y a pas d'autre entrée.
 

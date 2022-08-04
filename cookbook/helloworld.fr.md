@@ -5,12 +5,11 @@ title: Hello World!
 
 # Hello World!
 
-Autre langages : [english](/../helloworld) | ...
+Autre langages: [English](/../helloworld) | ...
 
 ## Probleme
 
 Comment écrire un "Hello World" avec web.py
-
 
 ## Solution
 
@@ -26,12 +25,11 @@ Comment écrire un "Hello World" avec web.py
     if __name__ == "__main__":
         app.run()
 
-###Tip: Ecrire une url avec ou sans "/", pointe sur la même classe.
+### Tip: Ecrire une url avec ou sans "/", pointe sur la même classe.
 
 Ajoutez ce qui suit au début des urls.
 
     '/(.*)/', 'redirect',
-
 
 et vous utiliserez la classe suivante pour traiter ces urls.
 

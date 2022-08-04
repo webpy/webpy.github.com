@@ -18,7 +18,7 @@ title: Web.py Cookbook 简体中文版
 
 1. 该手册适用于0.3版本，所以您在添加代码时，请确认代码能在新版本中工作。
 
--------------------------------------------------
+---
 
 ## 基本应用
 
@@ -50,7 +50,6 @@ title: Web.py Cookbook 简体中文版
 * [用户认证](userauth.zh-cn)
 * [一个在postgreSQL数据库环境下的用户认证的例子](userauthpgsql.zh-cn)
 * [如何在子应用中操作Session](sessions_with_subapp.zh-cn)
-
 
 ## Utils 实用工具
 

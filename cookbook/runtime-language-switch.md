@@ -6,6 +6,7 @@ title: Run-time language switch
 # Run-time language switch
 
 ## Problem:
+
 How to implement run-time language switch?
 
 ## Solution:
@@ -98,7 +99,6 @@ File: code.py
             return render.index()
 
     if __name__ == "__main__": app.run()
-
 
 Template file: templates/index.html.
 

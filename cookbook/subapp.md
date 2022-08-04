@@ -5,7 +5,7 @@ title: using subapplications
 
 # using subapplications
 
-Other languages [français](/../cookbook/subapp.fr) | ...
+Other languages: [Français](/../cookbook/subapp.fr) | ...
 
 ## Problem
 

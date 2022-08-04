@@ -5,7 +5,7 @@ title: cookies
 
 # cookies
 
-Other languages: [français](/../cookbook/cookies.fr) | ...
+Other languages: [Français](/../cookbook/cookies.fr) | ...
 
 ## Problem
 
@@ -16,6 +16,7 @@ You want to set and retrieve cookies for a user browsing the site.
 Web.py *comes* with an easy to use method for setting/getting cookies.
 
 ### Setting Cookies
+
 #### Overview
 
 ```
@@ -46,6 +47,7 @@ Calling the above class with GET will set a cookie named `age` with a default va
 The third (and optional) argument to `web.setcookie()`, `expires`, allows you to set when you want your cookie to expire.  Any negative number will expire the cookie immediately.  Any positive number is the number of seconds that the cookie will last (3600 would result in an hour long cookie).  Leaving this argument empty results in a session cookie, which expires when your browser shuts down.  To make the cookie permanent, simply update cookie expiration time at regular interval (e.g. when user logged in).
 
 ### Retrieving Cookies
+
 #### Overview
 
 There are many methods to retrieve cookies, depending on the desired reaction to a missing cookie.

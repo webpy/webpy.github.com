@@ -25,8 +25,7 @@ title: web.py 0.3 新手指南
 
 准备开始。
 
-<a name="urlhandling"> </a>
-## URL 处理
+<h2 id="urlhandling">URL 处理</h2>
 
 任何网站最重要的部分就是它的URL结构。你的URL并不仅仅只是访问者所能看到并且能发给朋友的。它还规定了你网站运行的心智模型。在一些类似[del.icio.us](http://del.icio.us/)的流行网站 , URL甚至是UI的一部分。 web.py使这类强大的URL成为可能。
 
@@ -52,8 +51,7 @@ title: web.py 0.3 新手指南
 
 这会告诉web.py去创建一个基于我们刚提交的URL列表的application。这个application会在这个文件的全局命名空间中查找对应类。
 
-<a name="getpost"> </a>
-## GET和POST: 区别
+<h2 id="getpost">GET和POST: 区别</h2>
 
 现在我们需要来写`index`类。虽然大多数人只会看看，并不会注意你的浏览器在使用用于与万维网通信的HTTP语言。具体的细节并不重要，但是要理解web访问者请求web服务器去根据URL(像`/`、`/foo?f=1`)执行一个合适的函数（像`GET`、`POST`）的基本思想。
 
@@ -73,7 +71,6 @@ title: web.py 0.3 新手指南
 
 这会告诉web.py为我们启动上面我们写的应用。
 
-
 现在注意，即使我已经在这里说了很多，但我们真正有5行这些代码。这就是你需要编写的一个完整的web.py应用。
 为了更方便的使用，你的完整代码应该像下面这样:
 
@@ -91,8 +88,7 @@ title: web.py 0.3 新手指南
         app = web.application(urls, globals())
         app.run()
 
-<a name="start"> </a>
-## 启动服务
+<h2 id="start">启动服务</h2>
 
  如果你在命令行下面，请输入::
     $ python code.py
@@ -104,8 +100,7 @@ title: web.py 0.3 新手指南
 
     $ python code.py 1234
 
-<a name="templating"> </a>
-## 模板
+<h2 id="templating">模板</h2>
 
 在 Python 中写 HTML 不是聪明的选择，相反在 HTML 中写 Python 则有趣的多。幸运的是，`web.py` 让这件事情做得简单而又漂亮。
 
@@ -160,15 +155,12 @@ URL 的后面的 `?` 看起来不好看？修改下 URL 配置：
 
 如果学习更多关于 web.py 的模板处理，请访问 [web.py 模板](/docs/0.3/templetor).
 
-<a name="forms"> </a>
-## 表单
+<h2 id="forms">表单</h2>
 
 web.py的form模块能够帮助你生成HTML表单；获取用户的输入，并在处理或添加到数据库之前对其进行内容的验证。
 如果你要学习更多关于form模块的使用，请查看[帮助文档](/docs/0.3)或者[Form](/form)类库的链接
 
-
-<a name="databasing"> </a>
-## 数据库操作
+<h2 id="databasing">数据库操作</h2>
 
 **注意:** 在你开始使用数据库之前，确保你已经安装了合适的数据库访问库。比如对于MySQL数据库，使用 [MySQLdb](http://sourceforge.net/project/showfiles.php?group_id=22307) ，对于Postgres数据库使用[psycopg2](http://initd.org/pub/software/psycopg/)。
 
@@ -249,8 +241,7 @@ web.py的form模块能够帮助你生成HTML表单；获取用户的输入，并
 
 你可以在[the documentation](/docs/0.3)找到这方面具体的细节以及所有web.py的函数说明。
 
-<a name="developing"> </a>
-## 开发
+<h2 id="developing">开发</h2>
 
 web.py 还有一些帮助我们debug的工具。当它在内建的服务器中运行时，它会以debug模式启动程序。在debug模式中，任何代码、模板的修改，都会让服务器重新加载它们，然后还会输出有用的错误消息。
 
@@ -260,8 +251,7 @@ web.py 还有一些帮助我们debug的工具。当它在内建的服务器中�
 
 我们的指南就到这里了。如果要做更多很酷的东西，你可以先查看一下文档。
 
-<a name="whatnext"> </a>
-## 下一步是什么?
+<h2 id="whatnext">下一步是什么?</h2>
 
 * [更多文档](/docs/0.3)
 * [Cookbook](/cookbook)

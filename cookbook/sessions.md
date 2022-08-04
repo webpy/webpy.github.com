@@ -5,7 +5,7 @@ title: Sessions
 
 # Sessions
 
-Other languages: [français](./sessions.fr) | ...
+Other languages: [Français](./sessions.fr) | ...
 
 ### Problem
 

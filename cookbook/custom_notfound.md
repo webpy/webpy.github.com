@@ -5,7 +5,7 @@ title: Custom NotFound message
 
 # Custom NotFound message
 
-Other languages:  [français](/../cookbook/custom_notfound.fr) | ...
+Other languages:  [Français](/../cookbook/custom_notfound.fr) | ...
 
 ## Problem
 
@@ -26,7 +26,6 @@ How to customize notfound and other messages?
         #return web.notfound(str(render.notfound()))
 
     app.notfound = notfound
-
 
 And to return the custom 404 from your code, just do:
 

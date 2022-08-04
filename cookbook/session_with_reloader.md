@@ -5,7 +5,7 @@ title: Using session with reloader
 
 # Using session with reloader
 
-Other languages: [français](/../cookbook/session_with_reloader.fr) | ...
+Other languages: [Français](/../cookbook/session_with_reloader.fr) | ...
 
 # Problem
 
@@ -20,7 +20,6 @@ Simplest fix for this is to disable debug mode, which can be done by setting `we
     web.config.debug = False
 
     # rest of your code
-
 
 If you want to use sessions in debug mode then here is a work-around.
 

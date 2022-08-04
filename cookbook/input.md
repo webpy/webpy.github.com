@@ -5,14 +5,16 @@ title: web.input
 
 # web.input
 
-Other languages: [français](/../cookbook/input.fr) | ...
+Other languages: [Français](/../cookbook/input.fr) | ...
 
-##web.input
+## web.input
 
 ### Problem
+
 You want user data from a form, or a url encoded parameter.
 
 ### Solution
+
 The web.input() method returns a web.storage object (a dictionary-like object) that contains the variables from the url (in a GET) or in the http header (in a POST).  For example, if you go to the page http://example.com/test?id=10, on the Python backend you'll want to extract that the id=10.  Using web.input(), this becomes trivial:
 
     class SomePage:
@@ -28,7 +30,6 @@ Sometimes you may want to specify a default variable, in case none is given.  Th
             return "<h1>" + user_data.id + "</h1>"
 
 Note that the web.input() values will be strings even if there are numbers passed to it.
-
 
 What if you pass several of the same variable names, like this:
 

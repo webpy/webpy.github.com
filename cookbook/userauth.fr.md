@@ -5,14 +5,11 @@ title: Authentification des utilisateurs
 
 # Authentification des utilisateurs
 
-Autres langages : [english](/../userauth) | ...
-
-
+Autres langages: [English](/../userauth) | ...
 
 ## Problème
 
 Vous souhaitez mettre en place un système pour authentifier les utilisateurs.
-
 
 ## Solution
 

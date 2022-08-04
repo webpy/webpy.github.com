@@ -5,24 +5,25 @@ title: Webpy + LightTTPD with FastCGi
 
 # Webpy + LightTTPD with FastCGi
 
-Other languages: [français](/../cookbook/fastcgi-lighttpd.fr) | ...
+Other languages: [Français](/../cookbook/fastcgi-lighttpd.fr) | ...
 
 *If you have problems with this recipe read this [thread](http://www.mail-archive.com/webpy@googlegroups.com/msg02800.html)*
 
 *The following applies on lighttpd version 1.4.18*
 
-##Note:
-* You may replace <code>code.py</code> with your own file name.
-* <code>/path-to/webpy-app</code> found below refers to the path to the directory contains your <code>code.py</code>
-* <code>/path-to/webpy-app/code.py</code> is the full path to your **python file**
+## Note:
 
-If you are not certain what version you are running simply type: <code>lighttpd -v</code> at your console.
+* You may replace `code.py` with your own file name.
+* `/path-to/webpy-app` found below refers to the path to the directory contains your `code.py`
+* `/path-to/webpy-app/code.py` is the full path to your **python file**
+
+If you are not certain what version you are running simply type: `lighttpd -v` at your console.
 
 Note: Earlier version of lighttpd may organize the .conf files differently. Yet, the same principles applied on them as well.
 
 ### lighttpd Configuration under Debian GNU/Linux
 
-<pre>
+```
 Files and Directories in /etc/lighttpd:
 ---------------------------------------
 
@@ -42,20 +43,19 @@ conf-enabled/
 
 Enabling and disabling modules could be done by provided
 /usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.
-</pre>
+```
 
-<strong>
-For web py you should enable mod_fastcgi and mod_rewrite, thus run: <code>/usr/sbin/lighty-enable-mod</code> and supply <code>fastcgi</code>
-(mod_rewrite will be enabled within <code>10-fastcgi.conf</code> file as you will see in a moment).
+**For web py you should enable mod_fastcgi and mod_rewrite, thus run: `/usr/sbin/lighty-enable-mod` and supply `fastcgi` (mod_rewrite will be enabled within `10-fastcgi.conf` file as you will see in a moment).**
 
-##Below are instructions for the following files:
-* <code>/etc/lighttpd/lighttpd.conf</code>
-* <code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
-* <code>code.py</code>
+## Below are instructions for the following files:
 
-###<code>/etc/lighttpd/lighttpd.conf</code>
+* `/etc/lighttpd/lighttpd.conf`
+* `/etc/lighttpd/conf-available/10-fastcgi.conf`
+* `code.py`
 
-<pre>
+### `/etc/lighttpd/lighttpd.conf`
+
+```
 server.modules              = (
             "mod_access",
             "mod_alias",
@@ -63,17 +63,17 @@ server.modules              = (
             "mod_compress",
 )
 server.document-root       = "/path-to/webpy-app"
-</pre>
+```
 
 In my case I used postgresql and therefore runs lighttpd as postgres in order to grant permissions to the database, therefore I added the line:
 
-<pre>
+```
 server.username = "postgres"
-</pre>
+```
 
-###<code>/etc/lighttpd/conf-available/10-fastcgi.conf</code>
+### `/etc/lighttpd/conf-available/10-fastcgi.conf`
 
-<pre>
+```
 server.modules   += ( "mod_fastcgi" )
 server.modules   += ( "mod_rewrite" )
 
@@ -93,17 +93,18 @@ server.modules   += ( "mod_rewrite" )
    "^/static/(.*)$" => "/static/$1",
    "^/(.*)$" => "/code.py/$1",
  )
-</pre>
+```
 
-###<code>/code.py</code>
+### `/code.py`
+
 At the top of the file add:
 
-<pre>
+```
 #!/usr/bin/env python
-</pre>
+```
 
 and don't forget to make it executable (otherwise you will get a "permission denied" error):
 
-<pre>
+```
 $ chmod 755 /path-to/webpy-app/code.py
-</pre>
+```

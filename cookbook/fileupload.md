@@ -5,7 +5,7 @@ title: File Upload Recipe
 
 # File Upload Recipe
 
-Other languages: [français](/../cookbook/fileupload.fr) | ...
+Other languages: [Français](/../cookbook/fileupload.fr) | ...
 
 ## Problem
 

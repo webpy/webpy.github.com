@@ -54,8 +54,8 @@ print(results[1])   # works too
 If SQL column is defined as binary format, e.g. `VARBINARY` in MySQL/MariaDB, `BYTEA` in PostgreSQL, returned value will be a `bytes` string, not `str`. For example:
 
 1. Create a SQL table in MySQL/MariaDB with command: `CREATE TABLE mytable (email VARBINARY(255));`
-1. Insert a sample record: `INSERT INTO mytable (email) VALUES ("test@domain.com");`
-1. Query it with web.py db module:
+2. Insert a sample record: `INSERT INTO mytable (email) VALUES ("test@domain.com");`
+3. Query it with web.py db module:
 
 ```
 qr = db.select("mytable", what="email", limit=1)

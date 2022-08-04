@@ -40,7 +40,6 @@ Nun müssen wir die `index`-Klasse schreiben. Die meisten Leute bemerken es beim
 
 `GET` ist die bekannteste Funktion. Sie wird verwendet, um den Text oder Inhalt einer Webseite anzufordern. Wenn du in deinem Browser `harvard.edu` eintippst, dann forderst du im wahrsten Sinne des Wortes den Harvard Webserver auf "to `GET /`". Am zweit bekanntesten ist `POST`. POST wird oft verwendet, wenn man ein Formular abschickt, wie zum Beispiel eine Anfrage etwas zu kaufen. Du benutzt `POST` immer dann, wenn das Abschicken der Anfrage etwas bewirkt (wenn du die Kreditkarte belastest oder eine Bestellung aufgibst). Das ist sehr wichtig, denn `GET` URLs können herum gereicht werden und von Suchmaschinen indexiert werden. Das ist zwar etwas, was du für einen Großteil deiner Seite willst, aber bestimmt _nicht_ für Dinge wie Bestellungen aufgeben. (Stell dir vor, Google würde versuchen alles auf deiner Seite zu kaufen).
 
-
 In unserem web.py-Quellcode können wir diese zwei Funktionen unterscheiden:
 
     class index:
@@ -67,7 +66,6 @@ Dann wird deine web.py-Applikation einen Webserver auf deinem Computer laufen la
 **Hinweis:** Du kannst den Port beim Aufruf von 'code.py' angeben, wenn du den Standardwert 8080 nicht benutzen willst oder kannst:
 
     $ python code.py 1234
-
 
 ## Developing
 

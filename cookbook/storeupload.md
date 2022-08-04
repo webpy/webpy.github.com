@@ -5,7 +5,7 @@ title: Store an uploaded file
 
 # Store an uploaded file
 
-Other languages: [français](/../cookbook/storeupload/fr) | ...
+Other languages: [Français](/../cookbook/storeupload/fr) | ...
 
 ## Problem
 

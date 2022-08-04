@@ -5,12 +5,11 @@ title: A propos de Web.py
 
 # A propos de Web.py
 
-Autre langages : [english](/) | [Español](/index.es.html) | ...
-
+Autre langages: [English](/) | [Español](/index.es.html) | ...
 
 **web.py** est un framework pour python qui est aussi simple qu'il est puissant. Web.py est dans le domaine publique; vous pouvez l'utiliser à toutes fins sans aucunes restrictions.
 
-##Une application complète web.py
+## Une application complète web.py
 
     import web
             
@@ -27,7 +26,6 @@ Autre langages : [english](/) | [Español](/index.es.html) | ...
     
     if __name__ == "__main__":
         app.run()
-
 
 ## Pour commençer
 
@@ -77,44 +75,44 @@ web.py a été publié alors que Aaron Swartz travaillait sur [reddit.com][20], 
 
 ### Appréciations des
 
-"Dans l'écosystème des frameworks web, quelque chose doit occuper le créneau du "petit, léger et rapide". web.py est celui-là."  
-- Lloyd Dalton, [colr.org](http://colr.org)
+* "Dans l'écosystème des frameworks web, quelque chose doit occuper le créneau du "petit, léger et rapide". web.py est celui-là."  
+<span class="cite">&mdash; Lloyd Dalton, [colr.org](http://colr.org)</span>
 
-"Nous avons terminé la réécriture de notre serveur il y a quelques jours avec web.py et c'était tout ce que nous souhaitions."  
-- Sam Hsiung, [YouOS][25]
+* "Nous avons terminé la réécriture de notre serveur il y a quelques jours avec web.py et c'était tout ce que nous souhaitions."  
+<span class="cite">&mdash; Sam Hsiung, [YouOS][25]</span>
 
    [25]: http://www.youos.com/
 
-"Django vous permet d'écrire des applications web en Django. TurboGears vous permet d'écrire des applications web en TurboGears. Web.py vous permet d'écrire des applications web en Python."  
-- Alice Atlas
+* "Django vous permet d'écrire des applications web en Django. TurboGears vous permet d'écrire des applications web en TurboGears. Web.py vous permet d'écrire des applications web en Python."  
+<span class="cite">&mdash; Alice Atlas</span>
 
-"Très élégant et concis (sans oublier que c'est écrit par Aaron Swartz, dont les compétences en codage sont impressionnantes), et ça ne m'a pas fait perdre de temps."   
-- Jonas Galvez, Aupeo [#][26]
+* "Très élégant et concis (sans oublier que c'est écrit par Aaron Swartz, dont les compétences en codage sont impressionnantes), et ça ne m'a pas fait perdre de temps."   
+<span class="cite">&mdash; Jonas Galvez, Aupeo [#][26]</span>
 
    [26]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149
 
-"Le premier framework ... sur lequel je peux bidouiller du code et voir quelque chose fonctionner sans même être obligé de comprendre la logique de celui-ci. Un plaisir à intégrer."   
-- Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it
+* "Le premier framework ... sur lequel je peux bidouiller du code et voir quelque chose fonctionner sans même être obligé de comprendre la logique de celui-ci. Un plaisir à intégrer."   
+<span class="cite">&mdash; Delaunay Antoine built [a photo gallery][28] and [an agenda][34] with it</span>
 
    [28]: http://github.com/antoine/ibrouteur/
    [34]: http://metagenda.org
 
-"Guido [van Rossum, Créateur de Python], vous constaterez probablement que web.py convient le mieux à votre style. ...Si vous ne l'aimez pas, je ne peux imaginer lequel des autres douzaines d'autres framework sortis vous *pourriez* aimer."   
-- Phillip J. Eby, créateur du Python Web Server Gateway Interface (WSGI) [#lien][30]
+* "Guido [van Rossum, Créateur de Python], vous constaterez probablement que web.py convient le mieux à votre style. ...Si vous ne l'aimez pas, je ne peux imaginer lequel des autres douzaines d'autres framework sortis vous *pourriez* aimer."   
+<span class="cite">&mdash; Phillip J. Eby, créateur du Python Web Server Gateway Interface (WSGI) [#lien][30]</span>
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
 
-"... l'exemple [Cheetah] que j'ai vu sur web.py à l'air "bon". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"  [ Note traducteur : A préciser]
-- Guido van Rossum, Créateur de Python [#Lien][31]
+* "... l'exemple [Cheetah] que j'ai vu sur web.py à l'air "bon". (web.py itself OTOH gets an "F", for undocumented code with too much magic behavior. upvars(), bah.)"  [ Note traducteur : A préciser]
+<span class="cite">&mdash; Guido van Rossum, Créateur de Python [#Lien][31]</span>
 
    [31]: http://www.artima.com/weblogs/viewpost.jsp?thread=146503
 
-"il suffit de dire je crois, que Aaron se dirige dans la bonne direction."   
-- Harry Fuecks: [un simple wiki avec web.py][32]
+* "il suffit de dire je crois, que Aaron se dirige dans la bonne direction."   
+<span class="cite">&mdash; Harry Fuecks: [un simple wiki avec web.py][32]</span>
 
    [32]: http://www.sitepoint.com/blogs/2006/01/06/a-simple-wiki-with-webpy/
 
-"un moment très fascinant pour moi. Le même sentiment que j'ai eu lorsque j'ai écrit pour la première fois un script PHP. il est certain que ça me permettra d'apprendre python de façon amusante. Bon travail Aaron !"   
-- Kamal [Un simple blog en webpy, apprendre python de façon amusante][33]
+* "un moment très fascinant pour moi. Le même sentiment que j'ai eu lorsque j'ai écrit pour la première fois un script PHP. il est certain que ça me permettra d'apprendre python de façon amusante. Bon travail Aaron !"   
+<span class="cite">&mdash; Kamal [Un simple blog en webpy, apprendre python de façon amusante][33]</span>
 
    [33]: http://www.k4ml.com/node/165
