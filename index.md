@@ -59,16 +59,16 @@ web.py was originally published while Aaron Swartz worked at [reddit.com][20], w
 
 ### Some user testimonials:
 
-* "In the ecosystem of web frameworks, something must occupy the niche of 'small, light, and fast': web.py does this."*
+* "In the ecosystem of web frameworks, something must occupy the niche of 'small, light, and fast': web.py does this."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Lloyd Dalton, [colr.org](http://colr.org)</span>
 
-* "[Web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."*
+* "[Web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; [Brett Taylor](http://backchannel.org/blog/google-app-engine), co-founder of FriendFeed and original tech lead on Google App Engine</span>
 
-* "Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."*
+* "Django lets you write web apps in Django. TurboGears lets you write web apps in TurboGears. Web.py lets you write web apps in Python."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Alice Atlas</span>
 
-* "Guido* [van Rossum, creator of Python]*, you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you __would__ like."*
+* "Guido [van Rossum, creator of Python], you'll probably find that web.py best suits your style. ... If you don't like it, I can't imagine which of the other dozens of frameworks out there you __would__ like."
 <span class="cite">&nbsp;&nbsp;&mdash;&nbsp; Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) [#][30]</span>
 
    [30]: http://www.artima.com/forums/flat.jsp?forum=106&thread=146149&start=30&msRange=15
